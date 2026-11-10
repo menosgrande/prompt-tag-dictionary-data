@@ -2379,7 +2379,7 @@
 2377,deerstalker,鹿撃ち帽,服装・装飾,装飾品,,[],verified,0,verified,verified
 2378,defeat,敗北,状態・状況,状態・変化,,[],verified,0,verified,verified
 2379,defloration,処女喪失,動作・接触,対人接触・動作,,[],verified,4,verified,verified
-2380,deformed,デフォルメされた,品質・ネガティブ,ネガティブ,,[],verified,0,verified,verified
+2380,deformed,形が崩れた,品質・ネガティブ,ネガティブ・除外指定,,[],verified,0,verified,verified
 2381,dehya (genshin impact),ディシア（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 2382,dei shirou,出井四郎,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
 2383,delicious party precure,デリシャスパーティ♡プリキュア,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
@@ -2398,7 +2398,7 @@
 2396,denim skirt,デニムスカート,服装・装飾,衣服,,[],verified,0,verified,verified
 2397,denji (chainsaw man),デンジ（チェンソーマン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 2398,depressed,落ち込んだ,状態・状況,状態・変化,,[],verified,0,verified,verified
-2399,depth of field,被写界深度,構図・カメラ,撮影手法,,[],verified,0,verified,verified
+2399,depth of field,被写界深度,光・演出,演出効果,,[],verified,0,verified,needs-review
 2400,desert,砂漠,背景・場所,自然・風景,,[],verified,0,verified,verified
 2401,desk,机,家具・設備・物品,家具,,[],verified,0,verified,verified
 2402,desk lamp,デスクライト,家具・設備・物品,設備,,[],verified,0,verified,verified
@@ -2563,9 +2563,9 @@
 2561,dragon ball super,ドラゴンボール超,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 2562,dragon ball z,ドラゴンボールZ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 2563,dragon boy,ドラゴンボーイ,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
-2564,dragon ears,ドラゴンの耳,人物の特徴,頭部の特徴,,[],verified,0,verified,verified
+2564,dragon ears,ドラゴンの耳,髪・頭部,頭部の特徴,,[],verified,0,verified,verified
 2565,dragon girl,ドラゴン娘,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
-2566,dragon horns,ドラゴンの角,人物の特徴,頭部の特徴,,[],verified,0,verified,verified
+2566,dragon horns,ドラゴンの角,髪・頭部,頭部の特徴,,[],verified,0,verified,verified
 2567,dragon print,ドラゴン柄,生物・動植物,動物,,[],verified,0,verified,unreviewed
 2568,dragon quest,ドラゴンクエスト,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 2569,dragon quest iii,ドラゴンクエスト3,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
@@ -2651,7 +2651,7 @@
 2649,duster,ダスター,家具・設備・物品,道具,,[],verified,0,verified,verified
 2650,dutch angle,ダッチアングル（傾いたカメラアングル）,構図・カメラ,カメラアングル,,[],verified,0,verified,verified
 2651,dvd cover,DVDカバー,構図・カメラ,構図・配置,,[],verified,0,verified,verified
-2652,dwarf,ドワーフ,人物の特徴,種族,,[],verified,0,verified,verified
+2652,dwarf,ドワーフ,生物・動植物,種族,,[],verified,0,verified,verified
 2653,dyed bangs,染めた前髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified
 2654,dynamax band,Dynamaxバンド,服装・装飾,装飾品,,[],verified,0,verified,verified
 2655,dynamic angle,ダイナミックなカメラアングル,構図・カメラ,カメラアングル,,[],verified,0,verified,verified
@@ -2725,12 +2725,12 @@
 2723,electrical outlet,コンセント,家具・設備・物品,日用品,,[],verified,0,verified,verified
 2724,electricity,電気,光・演出,演出効果,,[],verified,0,verified,verified
 2725,electrokinesis,電気を操る能力,人物の特徴,人物属性,,[],verified,0,verified,verified
-2726,elegant,優雅な,画風・描写,雰囲気,,[],verified,0,verified,verified
+2726,elegant,優雅な,光・演出,雰囲気,,[],verified,0,verified,verified
 2727,elephant,象,生物・動植物,動物,,[],verified,0,verified,verified
 2728,elesa (pokemon),カミツレ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 2729,elevator,エレベーター,家具・設備・物品,機械・装置,,[],verified,0,verified,verified
 2730,elezen,エレゼン,生物・動植物,種族,,[],verified,0,verified,verified
-2731,elf,エルフ,人物の特徴,種族,,[],verified,0,verified,verified
+2731,elf,エルフ,生物・動植物,種族,,[],verified,0,verified,verified
 2732,elf (stroll in the woods),森を散策するエルフ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 2733,elio (pokemon),ヨウ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 2734,elira pendora (Nijisanji),エリーラ・ペンドラ（にじさんじ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
