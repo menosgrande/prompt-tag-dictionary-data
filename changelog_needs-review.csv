@@ -3833,3 +3833,11 @@
 10994,lpip,classification_review_status,unreviewed,verified
 10994,lpip,expression_level,,0
 10994,lpip,expression_level_review_status,unreviewed,verified
+5240,kono lolicon domome,expression_level,,not-applicable
+5240,kono lolicon domome,expression_level_review_status,unreviewed,not-applicable
+6769,onee-loli,expression_level,2,not-applicable
+6769,onee-loli,expression_level_review_status,verified,not-applicable
+6770,onee-shota,expression_level,2,not-applicable
+6770,onee-shota,expression_level_review_status,verified,not-applicable
+6777,onii-shota,expression_level,2,not-applicable
+6777,onii-shota,expression_level_review_status,verified,not-applicable
