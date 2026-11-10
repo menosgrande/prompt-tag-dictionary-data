@@ -1,4 +1,4 @@
-﻿index,tag,column,old,new
+﻿﻿index,tag,column,old,new
 10329,very long beard,translation_status,unreviewed,verified
 10330,very long fingernails,translation_status,unreviewed,verified
 10331,very long hair,translation_status,unreviewed,verified
@@ -691,3 +691,18 @@
 2148,creayus,translation_status,needs-review,verified
 3821,gurande (g-size),ja,グランデ（G-size）,ぐらんで(ありがタイツ！)
 3821,gurande (g-size),translation_status,needs-review,verified
+112,afrobull,ja,アフロブル,Afrobull(作者)
+112,afrobull,translation_status,needs-review,verified
+163,akairiot,ja,アカイオット,AkaiRiot(イラストレーター)
+163,akairiot,translation_status,needs-review,verified
+518,asamura hiori,ja,Asamura Hiori（固有名詞・表記要確認）,朝叢ひおり(作者)
+518,asamura hiori,translation_status,needs-review,verified
+539,asteroid ill,ja,Asteroid Ill（意味・固有名詞要確認）,あすてろid(イラストレーター)
+539,asteroid ill,translation_status,needs-review,verified
+1512,butcha-u,ja,ブッチャーU(せっかチ),ブッチャーU(漫画家)
+2148,creayus,ja,嵐月(風色幻想),嵐月(作者)
+3821,gurande (g-size),ja,ぐらんで(ありがタイツ！),ぐらんで(漫画家)
+4269,himura kiseki,ja,比村奇石(月曜日のたわわ),比村奇石(漫画家)
+6052,misaki kurehito,ja,深崎暮人(冴えない彼女の育てかた),深崎暮人(イラストレーター)
+8264,sayori (neko works),ja,さより(ネコぱら),さより(イラストレーター)
+9893,torotei,ja,とろ亭(Backbeako),とろ亭(作者)
