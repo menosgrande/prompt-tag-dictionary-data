@@ -1,4 +1,4 @@
-﻿index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level,expression_level_review_status,classification_review_status
+﻿﻿index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level,expression_level_review_status,classification_review_status
 0,!,感嘆符,文字・記号,記号・図形,,[],verified,0,verified,verified
 1,!!,二重感嘆符,文字・記号,記号・図形,,[],verified,0,verified,verified
 2,!?,感嘆符と疑問符,文字・記号,記号・図形,,[],verified,0,verified,verified
@@ -2143,7 +2143,7 @@
 2141,crazy straw,クレイジーストロー,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 2142,cream,クリーム,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 2143,cream on face,顔に付いたクリーム,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
-2144,creator connection,クリエイター連携（意味要確認）,動作・接触,対人接触・動作,,[],needs-review,0,verified,verified
+2144,creator connection,同一作者によるクロスオーバー,動作・接触,対人接触・動作,,[],verified,0,verified,verified
 2145,creature,生き物,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
 2146,creature and personification,生物・怪物の擬人化,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
 2147,creature on head,頭の上に乗った生物,ポーズ・姿勢,身体の配置,,[],verified,0,verified,verified
@@ -9102,7 +9102,7 @@
 9100,square-end necktie,先端が四角いネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified
 9101,squatting,しゃがむ,動作・接触,身体動作,,[],verified,0,verified,verified
 9102,squatting cowgirl position,しゃがみ騎乗位,動作・接触,性的行為・接触,,[],verified,4,verified,verified
-9103,squeans,Squeans（意味要確認）,顔・表情,顔・表情,,[],needs-review,0,verified,verified
+9103,squeans,眠気・酩酊を示す記号,顔・表情,顔・表情,,[],verified,0,verified,verified
 9104,squeezing,絞る・握る動作,動作・接触,身体動作,,[],verified,0,verified,verified
 9105,squid,イカ,生物・動植物,動物,,[],verified,0,verified,verified
 9106,squidbeak splatoon,カラストンビ隊（スプラトゥーン）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
