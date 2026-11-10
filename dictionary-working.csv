@@ -4920,7 +4920,7 @@
 4918,jin (mugenjin),ジン(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4919,jingasa,陣笠,服装・装飾,装飾品,,[],verified,,unreviewed,unreviewed
 4920,jingle bell,鈴,家具・設備・物品,日用品,,[],verified,,unreviewed,unreviewed
-4921,jinguu (4839ms),神宮（4839ms）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4921,jinguu (4839ms),Jinguu(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4922,jintsuu (kancolle),神通（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 4923,jinx (league of legends),ジンクス（リーグオブレジェンド）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 4924,jirai kei,地雷系ファッション,画風・描写,画風・表現様式,,[],verified,,unreviewed,unreviewed
@@ -5061,7 +5061,7 @@
 5059,kasumi (kancolle),霞（艦これ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5060,kasumi (skchkko),かすみ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5061,kasumi kai ni (kancolle),霞改二（艦これ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
-5062,katahira masashi,カタヒラマシャシ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5062,katahira masashi,Katahira Masashi(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5063,katana,刀,家具・設備・物品,武器,,[],verified,,unreviewed,unreviewed
 5064,katekyo hitman reborn!,家庭教師ヒットマンREBORN！,キャラクター・作品,タイトル（作品名）,,[],verified,,unreviewed,unreviewed
 5065,katori (kancolle),香取（艦これ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
@@ -5074,14 +5074,14 @@
 5072,kawaii,かわいい,画風・描写,画風・表現様式,,[],verified,,unreviewed,unreviewed
 5073,kawakaze (kancolle),江風（艦これ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5074,kawaragi momoka (Girls Band Cry),河原木桃香,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
-5075,kawashina (momen silicon),カワシナ（Momen Silicon）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5075,kawashina (momen silicon),カワシナ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5076,kawashiro nitori (touhou project),河城にとり（東方Project）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5077,kay (girls und panzer),ケイ（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5078,kayoko (blue archive),鬼方カヨコ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5079,kazama iroha (Hololive),風真いろは（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5080,kazama iroha (1st costume),風真いろは（1st衣装）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5081,kazami yuuka (Touhou Project),風見幽香,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
-5082,kazenokaze,カゼノカゼ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5082,kazenokaze,Kazenokaze(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5083,kazusa (blue archive),杏山カズサ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5084,keep out,立入禁止,文字・記号,文字,,[],verified,,unreviewed,unreviewed
 5085,keizoku military uniform,継続高校の軍服,キャラクター・作品,作品固有の衣装・要素,,[],verified,,unreviewed,unreviewed
@@ -5275,7 +5275,7 @@
 5273,koyorin,コヨリン,キャラクター・作品,作者・配信者,,[],verified,,unreviewed,verified
 5274,kris (pokemon),クリス（ポケモン）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5275,krista lenz (Attack on Titan),クリスタ・レンズ,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
-5276,kuavera,クアベラ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5276,kuavera,Kuavera(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5277,kuchiki rukia (Bleach),朽木ルキア（BLEACH）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5278,kudamaki tsukasa (touhou),菅牧典（東方Project）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5279,kugisaki nobara (jujutsu kaisen),釘崎野薔薇（呪術廻戦）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
@@ -5836,12 +5836,12 @@
 5834,masked,仮面を着けた,状態・状況,状態・変化,,[],verified,,unreviewed,unreviewed
 5835,masochism,マゾヒズム,動作・接触,性的行為・接触,,[],verified,,unreviewed,unreviewed
 5836,massage,マッサージ,動作・接触,身体への接触,,[],verified,,unreviewed,unreviewed
-5837,massakasama,マッサカサマ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5837,massakasama,まっさかさま(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5838,mast,帆柱,家具・設備・物品,日用品,,[],verified,,unreviewed,unreviewed
 5839,master sword,マスターソード,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 5840,masterpiece,傑作,品質・ネガティブ,高品質・傑作,,[],verified,,unreviewed,unreviewed
 5841,masu,升,家具・設備・物品,道具,,[],verified,,unreviewed,unreviewed
-5842,masukuza j,マスクザj,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5842,masukuza j,マスクザJ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5843,mat,マット,家具・設備・物品,日用品,,[],verified,,unreviewed,unreviewed
 5844,matara okina (touhou),摩多羅隠岐奈（東方Project）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5845,matching outfits,お揃いの服,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -5867,7 +5867,7 @@
 5865,matte painting,マットペインティング,画風・描写,画風・表現様式,,[],verified,,unreviewed,unreviewed
 5866,mature female,成熟した女性,人物の特徴,人物属性,,[],verified,,unreviewed,verified
 5867,mature male,成熟した男性,人物の特徴,人物属性,,[],verified,,unreviewed,verified
-5868,maturiuta sorato,マツリウタ・ソラト,キャラクター・作品,作者・配信者,,"[""Maturiuta Sorato""]",needs-review,0,verified,verified
+5868,maturiuta sorato,マツリウタ・ソラト(作者),キャラクター・作品,作者・配信者,,"[""Maturiuta Sorato""]",verified,0,verified,verified
 5869,mauve,モーブ,光・演出,色調・色彩,,[],verified,,unreviewed,unreviewed
 5870,may (pokemon),ハルカ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5871,maya (kancolle),摩耶（艦これ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
