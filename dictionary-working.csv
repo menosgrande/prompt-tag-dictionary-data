@@ -4560,7 +4560,7 @@
 4558,hoop,輪,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 4559,hoop earrings,フープピアス,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 4560,hooves,蹄,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,unreviewed
-4561,hori (hori no su),ほり（ほりの巣）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4561,hori (hori no su),ほり(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4562,horikawa raiko (touhou project),堀川雷鼓（東方Project）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 4563,horizon,地平線,背景・場所,自然・風景,,[],verified,,unreviewed,unreviewed
 4564,horizontal pupils,横長の瞳孔,人物の特徴,人物属性,,[],verified,,unreviewed,unreviewed
@@ -4688,7 +4688,7 @@
 4686,icing,アイシング,家具・設備・物品,日用品,,[],verified,,unreviewed,unreviewed
 4687,id card,身分証明書,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 4688,identity v,第五人格,キャラクター・作品,タイトル（作品名）,,[],verified,,unreviewed,unreviewed
-4689,ido (teketeke),いど（teketeke）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4689,ido (teketeke),いど(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4690,idol,アイドル,人物の特徴,人物属性,,[],verified,,unreviewed,unreviewed
 4691,idol clothes,アイドル衣装,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 4692,idolmaster,アイドルマスター,キャラクター・作品,タイトル（作品名）,,[],verified,,unreviewed,unreviewed
@@ -4843,7 +4843,7 @@
 4841,isekaijoucho,ヰ世界情緒,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4842,iseri nina (Girls Band Cry),井芹仁菜（ガールズバンドクライ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 4843,ishikei,石恵,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
-4844,ishiyumi,Ishiyumi（表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4844,ishiyumi,Ishiyumi(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4845,ishmael (project moon),イシュメール（Project Moon）,背景・場所,自然・風景,,[],verified,,unreviewed,unreviewed
 4846,ishtar (fate),イシュタル（Fate）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 4847,iskandar (fate),イスカンダル（Fate）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
@@ -4961,7 +4961,7 @@
 4959,k-pop,K-POP,文字・記号,ロゴ・ブランド表記,,"[""ケーポップ""]",verified,,unreviewed,unreviewed
 4960,k-suwabe,K・スワベ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4961,k/da (league of legends),K/DA（リーグ・オブ・レジェンド）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-4962,kaamin (mariarose753),かーみん（mariarose753）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4962,kaamin (mariarose753),Kaamin(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4963,kaban (kemono friends),かばん（けものフレンズ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 4964,kabedon,壁ドン,動作・接触,対人接触・動作,,[],verified,,unreviewed,unreviewed
 4965,kaburagi t. kotetsu (Tiger & Bunny),鏑木・T・虎徹（TIGER & BUNNY）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
@@ -5046,7 +5046,7 @@
 5044,karin (blue archive),角楯カリン（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5045,karin (bunny) (blue archive),カリン（バニーガール）（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5046,kariyushi shirt,かりゆしウェア,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
-5047,karukan (monjya),カルカン（モンジャ）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5047,karukan (monjya),かるかん(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5048,karyl (princess connect!),キャル（プリンセスコネクト！）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5049,kasane teto (UTAU),重音テト（UTAU）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5050,kasane teto (sv),重音テトSV,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
@@ -5087,7 +5087,7 @@
 5085,keizoku military uniform,継続高校の軍服,キャラクター・作品,作品固有の衣装・要素,,[],verified,,unreviewed,unreviewed
 5086,keizoku school uniform,継続高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,,unreviewed,unreviewed
 5087,kel (omori),ケル（OMORI）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
-5088,kemachiku,ケマチク,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5088,kemachiku,Kemachiku(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5089,kemomimi-chan (naga u),ケモミミちゃん（naga u）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5090,kemono friends,けものフレンズ,キャラクター・作品,タイトル（作品名）,,[],verified,,unreviewed,verified
 5091,kemono friends 3,けものフレンズ3,キャラクター・作品,タイトル（作品名）,,[],verified,,unreviewed,verified
@@ -5243,7 +5243,7 @@
 5241,kono subarashii sekai ni shukufuku wo!,この素晴らしい世界に祝福を！,キャラクター・作品,タイトル（作品名）,,[],verified,,unreviewed,unreviewed
 5242,konohagakure shinobi uniform,木ノ葉隠れの忍者服,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 5243,konohagakure symbol,木ノ葉隠れの里のマーク,文字・記号,記号・図形,,[],verified,,unreviewed,verified
-5244,konoshige (ryuun),コノシゲ（ryuun）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5244,konoshige (ryuun),コノシゲ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5245,konpaku youmu (Touhou Project),魂魄妖夢,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5246,konpaku youmu (ghost),魂魄妖夢（幽霊）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5247,korean clothes,韓服,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
