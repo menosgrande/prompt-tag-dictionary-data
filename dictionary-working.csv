@@ -1,4 +1,4 @@
-﻿﻿index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level,expression_level_review_status,classification_review_status
+﻿﻿﻿index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level,expression_level_review_status,classification_review_status
 0,!,感嘆符,文字・記号,記号・図形,,[],verified,0,verified,verified
 1,!!,二重感嘆符,文字・記号,記号・図形,,[],verified,0,verified,verified
 2,!?,感嘆符と疑問符,文字・記号,記号・図形,,[],verified,0,verified,verified
@@ -7946,8 +7946,8 @@
 7944,reflective water,反射する水面,背景・場所,自然・風景,,[],verified,,unreviewed,verified
 7945,refraction,屈折,光・演出,演出効果,,[],verified,0,verified,verified
 7946,refrigerator,冷蔵庫,家具・設備・物品,設備,,[],verified,,unreviewed,verified
-7947,rei no himo,例の紐（ネットミーム・意味要確認）,服装・装飾,装飾品,,[],needs-review,2,verified,verified
-7948,rei no pool,例のプール（ネットミーム・意味要確認）,背景・場所,場所・室内外,,[],needs-review,0,verified,verified
+7947,rei no himo,例の紐,服装・装飾,装飾品,,[],verified,2,verified,verified
+7948,rei no pool,例のプール,背景・場所,場所・室内外,,[],verified,0,verified,verified
 7949,reindeer,トナカイ,生物・動植物,動物,,[],verified,,unreviewed,verified
 7950,reindeer antlers,トナカイの角,髪・頭部,頭部の特徴,,[],verified,,unreviewed,verified
 7951,reindeer costume,トナカイの衣装,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -9632,7 +9632,7 @@
 9630,telekinesis,念動力,状態・状況,状況・関係性,,[],verified,0,verified,needs-review
 9631,telescope,望遠鏡,家具・設備・物品,道具,,[],verified,0,verified,verified
 9632,television,テレビ,家具・設備・物品,機械・装置,,[],verified,0,verified,verified
-9633,telstar,Telstar（サッカーボールの意匠・要確認）,家具・設備・物品,その他の物品,,[],needs-review,0,verified,verified
+9633,telstar,テルスター（サッカーボール）,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 9634,temari ball,手まり,家具・設備・物品,日用品,,[],verified,0,verified,verified
 9635,temple,寺院,背景・場所,建築・構造物,,[],verified,0,verified,verified
 9636,tempura,天ぷら,家具・設備・物品,日用品,,[],verified,0,verified,verified
