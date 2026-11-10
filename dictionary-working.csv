@@ -3873,7 +3873,7 @@
 3871,hair over breasts,胸にかかる髪,動作・接触,身体への接触,,[],verified,,unreviewed,verified
 3872,hair over eyes,目にかかる髪,顔・表情,目,,[],verified,,unreviewed,needs-review
 3873,hair over one breast,片胸にかかる髪,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
-3874,hair over one eye,片目にかかる髪,顔・表情,目,,[],verified,,unreviewed,unreviewed
+3874,hair over one eye,片目にかかる髪,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
 3875,hair over shoulder,肩にかかる髪,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
 3876,hair pulled back,後ろにまとめた髪,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
 3877,hair ribbon,髪のリボン飾り,服装・装飾,装飾品,,[],verified,,unreviewed,verified
@@ -3891,10 +3891,10 @@
 3889,hairband,ヘアバンド,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 3890,hairclip,ヘアクリップ,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 3891,hairdressing,ヘアスタイリング,動作・接触,身体動作,,[],verified,,unreviewed,verified
-3892,hairjob,髪コキ,動作・接触,対人接触・動作,,[],verified,,unreviewed,unreviewed
+3892,hairjob,髪コキ,動作・接触,性的行為・接触,,[],verified,,unreviewed,verified
 3893,hairpin,ヘアピン,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 3894,hairpods,ヘアポッド,服装・装飾,装飾品,,[],verified,,unreviewed,verified
-3895,hairy,毛深い,人物の特徴,人物属性,,[],verified,,unreviewed,unreviewed
+3895,hairy,毛深い,人物の特徴,人物属性,,[],verified,,unreviewed,verified
 3896,hakama,袴,服装・装飾,衣服,,[],verified,,unreviewed,verified
 3897,hakama pants,馬乗袴,服装・装飾,衣服,,[],verified,,unreviewed,verified
 3898,hakama short skirt,袴風ミニスカート,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -4003,7 +4003,7 @@
 4001,handkerchief,ハンカチ,服装・装飾,小物・道具,,[],verified,,unreviewed,verified
 4002,handprint,手形,家具・設備・物品,その他の物品,,[],verified,,unreviewed,needs-review
 4003,hands in hair,髪に手を入れる,動作・接触,手の動作,,[],verified,,unreviewed,verified
-4004,hands in opposite sleeves,反対側の袖に手を入れる,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
+4004,hands in opposite sleeves,反対側の袖に手を入れる,ポーズ・姿勢,手足の配置,,[],verified,,unreviewed,verified
 4005,hands in pocket,ポケットに手を入れる,ポーズ・姿勢,手足の配置,,[],verified,,unreviewed,verified
 4006,hands in pockets,ポケットに両手を入れる,ポーズ・姿勢,手足の配置,,[],verified,,unreviewed,verified
 4007,hands on feet,足に手を置く,動作・接触,身体への接触,,[],verified,,unreviewed,verified
