@@ -1,4 +1,4 @@
-﻿index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level,expression_level_review_status,classification_review_status
+﻿﻿index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level,expression_level_review_status,classification_review_status
 0,!,感嘆符,文字・記号,記号・図形,,[],verified,0,verified,verified
 1,!!,二重感嘆符,文字・記号,記号・図形,,[],verified,0,verified,verified
 2,!?,感嘆符と疑問符,文字・記号,記号・図形,,[],verified,0,verified,verified
@@ -5239,7 +5239,7 @@
 5237,komiya kaho (The Idolmaster Shiny Colors),小宮果穂,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5238,kongou (kancolle),金剛（艦これ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 5239,konjiki no yami (To Love-Ru),金色の闇（To LOVEる）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
-5240,kono lolicon domome,このロリコンどもめ,文字・記号,文字,,[],verified,,unreviewed,verified
+5240,kono lolicon domome,このロリコンどもめ,文字・記号,文字,,[],verified,,not-applicable,verified
 5241,kono subarashii sekai ni shukufuku wo!,この素晴らしい世界に祝福を！,キャラクター・作品,タイトル（作品名）,,[],verified,,unreviewed,unreviewed
 5242,konohagakure shinobi uniform,木ノ葉隠れの忍者服,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 5243,konohagakure symbol,木ノ葉隠れの里のマーク,文字・記号,記号・図形,,[],verified,,unreviewed,verified
@@ -9126,7 +9126,7 @@
 9124,stained clothes,汚れた服,服装・装飾,衣服の状態,,[],verified,0,verified,verified
 9125,stained glass,ステンドグラス,背景・場所,建築・構造物,,[],verified,0,verified,verified
 9126,stained panties,汚れたパンティー,服装・装飾,下着,,[],verified,2,verified,verified
-9127,stained sheets,汚れたシーツ,服装・装飾,衣服の状態,,[],verified,1,verified,verified
+9127,stained sheets,汚れたシーツ,家具・設備・物品,その他の物品,,[],verified,1,verified,verified
 9128,stairs,階段,背景・場所,建築・構造物,,[],verified,0,verified,verified
 9129,stakes of purgatory,煉獄の杭,家具・設備・物品,武器,,[],needs-review,0,verified,verified
 9130,stalk in mouth,口にくわえた茎,顔・表情,顔・表情,,[],verified,0,verified,verified
@@ -9495,7 +9495,7 @@
 9493,tail bell,尻尾の鈴,服装・装飾,装飾品,,[],verified,0,verified,verified
 9494,tail between legs,股の間に垂れた尻尾,生物・動植物,動物,,[],verified,0,verified,verified
 9495,tail bow,尻尾のリボン,服装・装飾,装飾品,,[],verified,0,verified,verified
-9496,tail censor,尻尾による局部隠し,生物・動植物,動物,,[],verified,2,verified,verified
+9496,tail censor,尻尾による局部隠し,光・演出,演出効果,,[],verified,2,verified,verified
 9497,tail grab,尻尾をつかむ,動作・接触,身体への接触,,[],verified,0,verified,verified
 9498,tail ornament,尻尾飾り,服装・装飾,装飾品,,[],verified,0,verified,verified
 9499,tail piercing,尻尾のピアス,服装・装飾,装飾品,,[],verified,0,verified,verified
@@ -9626,7 +9626,7 @@
 9624,teen titans,ティーン・タイタンズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 9625,teenager,10代,人物の特徴,人物属性,,[],verified,0,verified,verified
 9626,teeth,歯,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
-9627,teeth hold,歯でくわえる,顔・表情,顔・表情,,[],verified,0,verified,verified
+9627,teeth hold,歯でくわえる,動作・接触,身体動作,,[],verified,0,verified,verified
 9628,tegaki,手描き,画風・描写,描画技法,,[],verified,0,verified,verified
 9629,tekken,鉄拳,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 9630,telekinesis,念動力,状態・状況,状況・関係性,,[],verified,0,verified,needs-review
@@ -9706,7 +9706,7 @@
 9704,thighband pantyhose,太ももバンド付きパンスト,服装・装飾,衣服,,[],verified,0,verified,verified
 9705,thighhighs,ニーハイソックス,服装・装飾,靴・履物,,[],verified,1,verified,verified
 9706,thighhighs over pantyhose,パンストの上にニーハイ,服装・装飾,衣服,,[],verified,0,verified,verified
-9707,thighhighs pull,ニーハイを引っ張る,服装・装飾,靴・履物,,[],verified,1,verified,verified
+9707,thighhighs pull,ニーハイを引っ張る,動作・接触,衣服への接触,,[],verified,1,verified,verified
 9708,thighhighs under boots,ブーツの下に履いたニーハイ,服装・装飾,衣服,,[],verified,0,verified,verified
 9709,thighlet,太ももリング,服装・装飾,装飾品,,[],verified,0,verified,verified
 9710,thighs,太もも,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
@@ -10614,7 +10614,7 @@
 10612,white snake,白蛇,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
 10613,white socks,白い靴下,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 10614,white sports bra,白いスポーツブラ,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
-10615,white stripes,白い縞模様,画風・描写,描画技法,,[],verified,0,verified,verified
+10615,white stripes,白い縞模様,状態・状況,状態・変化,,[],verified,0,verified,verified
 10616,white suit,白いスーツ,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 10617,white sweater,白いセーター,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 10618,white tail,白い尾,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,unreviewed
