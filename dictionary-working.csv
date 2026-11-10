@@ -2458,7 +2458,7 @@
 2456,dio brando (JoJo's Bizarre Adventure),ディオ・ブランドー,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 2457,diorama,ジオラマ,背景・場所,空間・環境表現,,[],verified,0,verified,verified
 2458,dirndl,ディアンドル（アルプス地方の民族衣装）,服装・装飾,衣服,,[],verified,0,verified,verified
-2459,dirt,泥,家具・設備・物品,その他の物品,,[],verified,0,verified,unreviewed
+2459,dirt,泥,家具・設備・物品,その他の物品,,[],verified,0,verified,needs-review
 2460,dirty,汚れた状態,状態・状況,状態・変化,,[],verified,0,verified,verified
 2461,dirty clothes,汚れた服,服装・装飾,衣服,,[],verified,0,verified,verified
 2462,dirty face,汚れた顔,人物の特徴,人物属性,,[],verified,0,verified,verified
@@ -2489,7 +2489,7 @@
 2487,dizzy (guilty gear),ディズィー（ギルティギア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 2488,djeeta (granblue fantasy),ジータ（グランブルーファンタジー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 2489,do m kaeru,Do M Kaeru（作者名）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
-2490,dock,ドック,家具・設備・物品,日用品,,[],verified,0,verified,unreviewed
+2490,dock,ドック,家具・設備・物品,日用品,,[],verified,0,verified,needs-review
 2491,doctor,医師,人物の特徴,人物属性,,[],verified,0,verified,verified
 2492,doctor (arknights),ドクター（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 2493,dodging,回避する動作,動作・接触,身体動作,,[],verified,0,verified,verified
@@ -2566,7 +2566,7 @@
 2564,dragon ears,ドラゴンの耳,髪・頭部,頭部の特徴,,[],verified,0,verified,verified
 2565,dragon girl,ドラゴン娘,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
 2566,dragon horns,ドラゴンの角,髪・頭部,頭部の特徴,,[],verified,0,verified,verified
-2567,dragon print,ドラゴン柄,生物・動植物,動物,,[],verified,0,verified,unreviewed
+2567,dragon print,ドラゴン柄,生物・動植物,動物,,[],verified,0,verified,needs-review
 2568,dragon quest,ドラゴンクエスト,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 2569,dragon quest iii,ドラゴンクエスト3,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 2570,dragon quest iv,ドラゴンクエスト4,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
@@ -2585,7 +2585,7 @@
 2583,drawn ears,描かれた耳,人物の特徴,人物属性,,[],verified,0,verified,verified
 2584,drawstring,ドローストリング,服装・装飾,衣服,,[],verified,0,verified,verified
 2585,dreadlocks,ドレッドヘア,髪・頭部,髪・頭部,,[],verified,0,verified,verified
-2586,dream soul,夢の魂,状態・状況,状況・関係性,,[],verified,,unreviewed,unreviewed
+2586,dream soul,夢の魂,状態・状況,状況・関係性,,[],verified,,unreviewed,needs-review
 2587,dreaming,夢を見る・眠っている,状態・状況,状況・関係性,,[],verified,0,verified,verified
 2588,dress,ドレス,服装・装飾,衣服,,[],verified,0,verified,verified
 2589,dress bow,ドレスのリボン,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -2656,7 +2656,7 @@
 2654,dynamax band,Dynamaxバンド,服装・装飾,装飾品,,[],verified,0,verified,verified
 2655,dynamic angle,ダイナミックなカメラアングル,構図・カメラ,カメラアングル,,[],verified,0,verified,verified
 2656,dynamic pose,躍動感のあるポーズ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified
-2657,e.g.o (project moon),E.G.O（Project Moon）,背景・場所,自然・風景,,[],verified,0,verified,unreviewed
+2657,e.g.o (project moon),E.G.O（Project Moon）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 2658,eagle,ワシ,生物・動植物,動物,,[],verified,0,verified,verified
 2659,ear birthmark,耳のあざ,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 2660,ear blush,耳の赤み,顔・表情,顔・表情,,[],verified,0,verified,verified
@@ -2820,7 +2820,7 @@
 2818,exoskeleton,外骨格,服装・装飾,装備・防具,,[],verified,0,verified,verified
 2819,exploding clothes,爆発する衣服,服装・装飾,衣服,,[],verified,0,verified,verified
 2820,explosion,爆発,光・演出,演出効果,,[],verified,0,verified,verified
-2821,explosive,爆発物・爆発性の,状態・状況,状態・変化,,[],verified,,unreviewed,unreviewed
+2821,explosive,爆発物・爆発性の,状態・状況,状態・変化,,[],verified,,unreviewed,needs-review
 2822,exposed pocket,露出したポケット,服装・装飾,衣服の状態,,[],verified,0,verified,verified
 2823,expression chart,表情一覧,顔・表情,顔・表情,,[],verified,0,verified,verified
 2824,expressionless,無表情,顔・表情,顔・表情,,[],verified,0,verified,verified
@@ -2896,31 +2896,31 @@
 2894,fake cover,偽の表紙,構図・カメラ,構図・配置,,[],verified,0,verified,verified
 2895,fake facial hair,付けひげ,髪・頭部,髪・頭部,,[],verified,0,verified,verified
 2896,fake halo,偽の光輪,服装・装飾,装飾品,,[],verified,0,verified,verified
-2897,fake horns,作り物の角,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
-2898,fake magazine cover,架空の雑誌表紙,文字・記号,文字,,[],verified,,unreviewed,unreviewed
+2897,fake horns,作り物の角,生物・動植物,動物,,[],verified,,unreviewed,needs-review
+2898,fake magazine cover,架空の雑誌表紙,文字・記号,文字,,[],verified,,unreviewed,needs-review
 2899,fake mustache,付けひげ,服装・装飾,装飾品,,[],verified,,unreviewed,unreviewed
 2900,fake nails,付け爪,服装・装飾,装飾品,,[],verified,,unreviewed,unreviewed
-2901,fake phone screenshot,偽のスマートフォン画面,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-2902,fake screenshot,偽のスクリーンショット,構図・カメラ,構図・配置,,[],verified,,unreviewed,unreviewed
-2903,fake tail,付け尻尾,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
-2904,fake wings,作り物の翼,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
+2901,fake phone screenshot,偽のスマートフォン画面,家具・設備・物品,その他の物品,,[],verified,,unreviewed,needs-review
+2902,fake screenshot,偽のスクリーンショット,構図・カメラ,構図・配置,,[],verified,,unreviewed,needs-review
+2903,fake tail,付け尻尾,生物・動植物,動物,,[],verified,,unreviewed,needs-review
+2904,fake wings,作り物の翼,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 2905,falchion (fire emblem),ファルシオン（ファイアーエムブレム）,家具・設備・物品,武器,,[],verified,0,verified,verified
 2906,falin touden (Delicious in Dungeon),ファリン・トーデン,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 2907,fallen angel,堕天使,人物の特徴,人物属性,,[],verified,,unreviewed,verified
 2908,fallen down,倒れ込んだ状態,ポーズ・姿勢,基本姿勢,,[],verified,,unreviewed,verified
 2909,falling,落下,動作・接触,身体動作,,[],verified,,unreviewed,unreviewed
-2910,falling feathers,舞い落ちる羽根,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
+2910,falling feathers,舞い落ちる羽根,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 2911,falling leaves,舞い落ちる葉,背景・場所,自然・風景,,[],verified,,unreviewed,verified
-2912,falling petals,舞い落ちる花びら,背景・場所,自然・風景,,[],verified,,unreviewed,unreviewed
+2912,falling petals,舞い落ちる花びら,背景・場所,自然・風景,,[],verified,,unreviewed,needs-review
 2913,false smile,作り笑い,顔・表情,顔・表情,,[],verified,,unreviewed,unreviewed
-2914,family,家族,動作・接触,対人接触・動作,,[],verified,,unreviewed,unreviewed
+2914,family,家族,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
 2915,family crest,家紋,文字・記号,記号・図形,,[],verified,,unreviewed,unreviewed
 2916,fanbox username,Fanboxのユーザー名,キャラクター・作品,作者・配信者,,[],verified,,unreviewed,unreviewed
-2917,fang,牙,人物の特徴,人物属性,,[],verified,,unreviewed,unreviewed
-2918,fang out,牙を見せる,人物の特徴,人物属性,,[],verified,,unreviewed,unreviewed
+2917,fang,牙,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
+2918,fang out,牙を見せる,顔・表情,顔・表情,,[],verified,,unreviewed,verified
 2919,fanged bangs,牙のように尖った前髪,髪・頭部,髪・頭部,,[],verified,,unreviewed,unreviewed
-2920,fangs,牙,人物の特徴,人物属性,,[],verified,,unreviewed,unreviewed
-2921,fangs out,牙をむき出す,人物の特徴,人物属性,,[],verified,,unreviewed,unreviewed
+2920,fangs,牙,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
+2921,fangs out,牙をむき出す,顔・表情,顔・表情,,[],verified,,unreviewed,verified
 2922,fanning self,自分を扇ぐ,動作・接触,日常動作,,[],verified,,unreviewed,unreviewed
 2923,fanny pack,ウエストポーチ,服装・装飾,装飾品,,[],verified,,unreviewed,unreviewed
 2924,fantasy,ファンタジー,画風・描写,画風・表現様式,,[],verified,,unreviewed,unreviewed
@@ -2948,9 +2948,9 @@
 2946,fate/stay night,Fate/stay night,キャラクター・作品,タイトル（作品名）,,"[""フェイト／ステイナイト""]",verified,,unreviewed,verified
 2947,fate/zero,Fate/Zero,キャラクター・作品,タイトル（作品名）,,"[""フェイト／ゼロ""]",verified,,unreviewed,unreviewed
 2948,father and daughter,父と娘,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
-2949,father and son,父と息子,動作・接触,対人接触・動作,,[],verified,,unreviewed,unreviewed
+2949,father and son,父と息子,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
 2950,fatui coat,ファデュイのコート,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
-2951,faucet,蛇口,家具・設備・物品,日用品,,[],verified,,unreviewed,unreviewed
+2951,faucet,蛇口,家具・設備・物品,設備,,[],verified,,unreviewed,verified
 2952,faulds,腰鎧（フォールド）,服装・装飾,装備・防具,,[],verified,,unreviewed,unreviewed
 2953,faust (project moon),ファウスト（Project Moon）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 2954,faux figurine,フィギュア風の造形,画風・描写,画風・表現様式,,[],verified,,unreviewed,verified
@@ -2970,20 +2970,20 @@
 2968,feet up,足を上げた姿勢,ポーズ・姿勢,手足の配置,,[],verified,,unreviewed,verified
 2969,felicia (darkstalkers),フェリシア（ヴァンパイア）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 2970,female admiral (kancolle),女性提督（艦これ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
-2971,female butler,女性の執事,人数・人物構成,人数・人物構成,,[],verified,,unreviewed,unreviewed
-2972,female goblin,女性ゴブリン,人数・人物構成,人数・人物構成,,[],verified,,unreviewed,unreviewed
-2973,female pervert,女性の変態,人数・人物構成,人数・人物構成,,[],verified,,unreviewed,unreviewed
-2974,female pov,女性のPOV,人数・人物構成,人数・人物構成,,[],verified,,unreviewed,unreviewed
+2971,female butler,女性の執事,人物の特徴,人物属性,,[],verified,,unreviewed,verified
+2972,female goblin,女性ゴブリン,生物・動植物,種族,,[],verified,,unreviewed,verified
+2973,female pervert,女性の変態,人物の特徴,人物属性,,[],verified,,unreviewed,verified
+2974,female pov,女性のPOV,構図・カメラ,視点・視線,,[],verified,,unreviewed,verified
 2975,femdom,女攻め,動作・接触,性的行為・接触,,[],verified,,unreviewed,unreviewed
 2976,fence,フェンス,背景・場所,建築・構造物,,[],verified,,unreviewed,unreviewed
 2977,fender stratocaster,フェンダーストラトキャスター,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-2978,fennec (kemono friends),フェネック（ケモモの友達）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
+2978,fennec (kemono friends),フェネック（けものフレンズ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,verified
 2979,fern,シダ,背景・場所,自然・風景,,[],verified,,unreviewed,unreviewed
-2980,fern (sousou no frieren),シダ（sousou no frieren）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
+2980,fern (sousou no frieren),フェルン（葬送のフリーレン）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,verified
 2981,ferret,フェレット,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
 2982,ferris wheel,観覧車,家具・設備・物品,機械・装置,,[],verified,,unreviewed,unreviewed
 2983,fertilization,受精,動作・接触,性的行為・接触,,[],verified,,unreviewed,unreviewed
-2984,festival,祭り,背景・場所,自然・風景,,[],verified,,unreviewed,unreviewed
+2984,festival,祭り,背景・場所,自然・風景,,[],verified,,unreviewed,needs-review
 2985,fetal position,胎児のように丸まった姿勢,ポーズ・姿勢,基本姿勢,,[],verified,,unreviewed,unreviewed
 2986,fewer digits,指の本数が少ない,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,unreviewed
 2987,fidgeting,そわそわする仕草,動作・接触,日常動作,,[],verified,,unreviewed,unreviewed
@@ -2994,9 +2994,9 @@
 2992,fiery wings,炎のような翼,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
 2993,fighter jet,ジェット戦闘機,乗り物,航空機,,[],verified,,unreviewed,unreviewed
 2994,fighting,戦う動作,動作・接触,身体動作,,[],verified,,unreviewed,unreviewed
-2995,fighting stance,戦闘態勢,動作・接触,身体動作,,[],verified,,unreviewed,unreviewed
-2996,figure,フィギュア,家具・設備・物品,日用品,,[],verified,,unreviewed,unreviewed
-2997,film grain,フィルムグレイン,光・演出,照明・光源,,[],verified,,unreviewed,unreviewed
+2995,fighting stance,戦闘態勢,ポーズ・姿勢,基本姿勢,,[],verified,,unreviewed,verified
+2996,figure,フィギュア,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
+2997,film grain,フィルムグレイン,光・演出,照明・光源,,[],verified,,unreviewed,needs-review
 2998,final fantasy,ファイナルファンタジー,キャラクター・作品,タイトル（作品名）,,[],verified,,unreviewed,unreviewed
 2999,final fantasy iv,ファイナルファンタジーIV,キャラクター・作品,タイトル（作品名）,,[],verified,,unreviewed,unreviewed
 3000,final fantasy ix,ファイナルファンタジーIX,キャラクター・作品,タイトル（作品名）,,[],verified,,unreviewed,unreviewed
@@ -3061,14 +3061,14 @@
 3059,first aid kit,応急処置キット,家具・設備・物品,日用品,,[],verified,,unreviewed,unreviewed
 3060,fischl (genshin impact),フィッシュル（原神）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 3061,fish,魚,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
-3062,fish (food),魚料理,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
-3063,fish bone,魚の骨,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
-3064,fish boy,魚人の少年,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
-3065,fish girl,魚人の少女,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
+3062,fish (food),魚料理,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
+3063,fish bone,魚の骨,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
+3064,fish boy,魚人の少年,生物・動植物,種族,,[],verified,,unreviewed,verified
+3065,fish girl,魚人の少女,生物・動植物,種族,,[],verified,,unreviewed,verified
 3066,fish hair ornament,魚モチーフの髪飾り,服装・装飾,装飾品,,[],verified,,unreviewed,unreviewed
-3067,fish print,魚柄,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
+3067,fish print,魚柄,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 3068,fish tail,魚の尾,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
-3069,fish tank,水槽,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
+3069,fish tank,水槽,家具・設備・物品,設備,,[],verified,,unreviewed,verified
 3070,fisheye,魚眼レンズ,構図・カメラ,カメラアングル,,[],verified,,unreviewed,unreviewed
 3071,fishing,釣り,動作・接触,身体動作,,[],verified,,unreviewed,unreviewed
 3072,fishing line,釣り糸,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
@@ -3077,13 +3077,13 @@
 3075,fishnet gloves,網目の手袋,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 3076,fishnet pantyhose,網タイツ,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 3077,fishnet sleeves,網目の袖,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
-3078,fishnet socks,網目の靴下,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
+3078,fishnet socks,網目の靴下,服装・装飾,靴・履物,,[],verified,,unreviewed,verified
 3079,fishnet thighhighs,網目のサイハイソックス,服装・装飾,靴・履物,,[],verified,,unreviewed,verified
 3080,fishnet top,網目のトップス,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
-3081,fishnets,網目素材,服装・装飾,靴・履物,,[],verified,,unreviewed,unreviewed
+3081,fishnets,網目素材,服装・装飾,衣服,,[],verified,,unreviewed,verified
 3082,fist bump,拳を突き合わせる,動作・接触,対人接触・動作,,[],verified,,unreviewed,unreviewed
 3083,fist pump,拳を突き上げる,動作・接触,身体動作,,[],verified,,unreviewed,unreviewed
-3084,fitting room,試着室,背景・場所,建築・構造物,,[],verified,,unreviewed,unreviewed
+3084,fitting room,試着室,背景・場所,場所・室内外,,[],verified,,unreviewed,verified
 3085,fkey,fkey（エフキー）,キャラクター・作品,作者・配信者,,"[""fkey"",""エフキー""]",verified,,unreviewed,verified
 3086,flaccid,萎えた状態,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,unreviewed
 3087,flag,旗,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
@@ -3093,22 +3093,22 @@
 3091,flak jacket,防弾ベスト,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 3092,flame print,炎柄,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 3093,flame-tipped tail,先端が燃える尻尾,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
-3094,flamethrower,火炎放射器,背景・場所,自然・風景,,[],verified,,unreviewed,unreviewed
+3094,flamethrower,火炎放射器,家具・設備・物品,武器,,[],verified,,unreviewed,verified
 3095,flaming eye,燃える目,顔・表情,目,,[],verified,,unreviewed,unreviewed
-3096,flaming sword,炎をまとった剣,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3097,flaming weapon,炎をまとった武器,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
+3096,flaming sword,炎をまとった剣,家具・設備・物品,武器,,[],verified,,unreviewed,verified
+3097,flaming weapon,炎をまとった武器,家具・設備・物品,武器,,[],verified,,unreviewed,verified
 3098,flandre scarlet (Touhou Project),フランドール・スカーレット,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 3099,flapping,羽ばたく動作,動作・接触,身体動作,,[],verified,,unreviewed,unreviewed
-3100,flashback,回想シーン,背景・場所,空間・環境表現,,[],verified,,unreviewed,unreviewed
+3100,flashback,回想シーン,状態・状況,時間・前後関係,,[],verified,,unreviewed,verified
 3101,flashing,点滅,光・演出,演出効果,,[],verified,,unreviewed,unreviewed
-3102,flashlight,懐中電灯,家具・設備・物品,日用品,,[],verified,,unreviewed,unreviewed
+3102,flashlight,懐中電灯,家具・設備・物品,道具,,[],verified,,unreviewed,verified
 3103,flask,フラスコ,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3104,flat cap,ハンチング帽,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
+3104,flat cap,ハンチング帽,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 3105,flat chest,平らな胸（貧乳）,人物の特徴,体型・身体的特徴,,[],verified,,unreviewed,verified
 3106,flat chest grab,平らな胸をつかむ,動作・接触,身体への接触,,[],verified,,unreviewed,verified
 3107,flat color,ベタ塗り,画風・描写,描画技法,,[],verified,,unreviewed,unreviewed
 3108,flat design,フラットデザイン,画風・描写,画風・表現様式,,[],verified,,unreviewed,unreviewed
-3109,flats,フラットシューズ,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
+3109,flats,フラットシューズ,服装・装飾,靴・履物,,[],verified,,unreviewed,verified
 3110,fleeing,逃走する,動作・接触,身体動作,,[],verified,,unreviewed,unreviewed
 3111,fletcher (kancolle),フレッチャー（艦これ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 3112,fleur de lapin uniform,フルール・ド・ラパンの制服,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
@@ -3141,31 +3141,31 @@
 3139,floral print kimono,花柄の着物,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 3140,florence nightingale (fate),フローレンス・ナイチンゲール（Fate）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 3141,florian (pokemon),ハルト（ポケモン）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
-3142,flower,花,背景・場所,自然・風景,,[],verified,,unreviewed,unreviewed
-3143,flower (symbol),花のシンボル,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3144,flower bracelet,花のブレスレット,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3145,flower brooch,花のブローチ,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3146,flower choker,花のチョーカー,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3147,flower earrings,花のイヤリング,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
+3142,flower,花,生物・動植物,植物,,[],verified,,unreviewed,verified
+3143,flower (symbol),花のシンボル,文字・記号,記号・図形,,[],verified,,unreviewed,verified
+3144,flower bracelet,花のブレスレット,服装・装飾,装飾品,,[],verified,,unreviewed,verified
+3145,flower brooch,花のブローチ,服装・装飾,装飾品,,[],verified,,unreviewed,verified
+3146,flower choker,花のチョーカー,服装・装飾,装飾品,,[],verified,,unreviewed,verified
+3147,flower earrings,花のイヤリング,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 3148,flower field,花畑,背景・場所,自然・風景,,[],verified,,unreviewed,unreviewed
 3149,flower in eye,目の中の花,顔・表情,目,,[],verified,,unreviewed,unreviewed
 3150,flower in mouth,口にくわえた花,顔・表情,顔・表情,,[],verified,,unreviewed,unreviewed
-3151,flower knight girl,フラワーナイトガール,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
+3151,flower knight girl,フラワーナイトガール,キャラクター・作品,タイトル（作品名）,,[],verified,,unreviewed,verified
 3152,flower knot,花結び,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3153,flower necklace,フラワーネックレス,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
-3154,flower on head,頭に載せた花,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
+3153,flower necklace,フラワーネックレス,服装・装飾,装飾品,,[],verified,,unreviewed,verified
+3154,flower on head,頭に載せた花,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 3155,flower on liquid,液面に浮かぶ花,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3156,flower ornament,花飾り,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
+3156,flower ornament,花飾り,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 3157,flower over eye,目を覆う花,顔・表情,目,,[],verified,,unreviewed,unreviewed
 3158,flower pot,植木鉢,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3159,flower tattoo,花のタトゥー,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3160,flower wreath,花冠,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3161,flower-shaped pupils,花形の瞳孔,人物の特徴,人物属性,,[],verified,,unreviewed,unreviewed
+3159,flower tattoo,花のタトゥー,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
+3160,flower wreath,花冠,服装・装飾,装飾品,,[],verified,,unreviewed,verified
+3161,flower-shaped pupils,花形の瞳孔,顔・表情,目,,[],verified,,unreviewed,verified
 3162,fluffy,ふわふわした質感,状態・状況,状態・変化,,[],verified,,unreviewed,unreviewed
 3163,fluffy hair,ふわふわした髪,髪・頭部,髪・頭部,,[],verified,,unreviewed,unreviewed
 3164,fluorescent lamp,蛍光灯,家具・設備・物品,設備,,[],verified,,unreviewed,verified
 3165,flustered,動揺した様子,顔・表情,顔・表情,,[],verified,,unreviewed,verified
-3166,flute,笛,家具・設備・物品,日用品,,[],verified,,unreviewed,unreviewed
+3166,flute,笛,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
 3167,flying,飛行,ポーズ・姿勢,基本姿勢,,[],verified,,unreviewed,unreviewed
 3168,flying fish,トビウオ,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
 3169,flying kick,飛び蹴り,動作・接触,身体動作,,[],verified,,unreviewed,unreviewed
@@ -3173,7 +3173,7 @@
 3171,flying sweatdrops,飛び散る汗,光・演出,演出効果,,[],verified,,unreviewed,unreviewed
 3172,flying teardrops,飛び散る涙,顔・表情,顔・表情,,[],verified,,unreviewed,unreviewed
 3173,foam,泡,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3174,fog,霧,光・演出,照明・光源,,[],verified,,unreviewed,unreviewed
+3174,fog,霧,背景・場所,天候・時間帯,,[],verified,,unreviewed,verified
 3175,fold-over boots,折り返しブーツ,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 3176,folded,折り畳まれた状態,状態・状況,状態・変化,,[],verified,,unreviewed,verified
 3177,folded fan,閉じた扇子,家具・設備・物品,日用品,,[],verified,,unreviewed,unreviewed
@@ -3182,23 +3182,23 @@
 3180,folder,書類フォルダー,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 3181,folding chair,折りたたみ椅子,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 3182,folding fan,扇子,家具・設備・物品,日用品,,[],verified,,unreviewed,unreviewed
-3183,foliage,植物の葉,背景・場所,自然・風景,,[],verified,,unreviewed,unreviewed
+3183,foliage,植物の葉,生物・動植物,植物,,[],verified,,unreviewed,verified
 3184,food,食べ物,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 3185,food art,料理を使ったアート,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3186,food bite,食べ物をひと口かじる,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
+3186,food bite,食べ物をひと口かじる,動作・接触,日常動作,,[],verified,,unreviewed,verified
 3187,food focus,食べ物を主役にした構図,構図・カメラ,構図・配置,,[],verified,,unreviewed,unreviewed
 3188,food in mouth,口の中の食べ物,顔・表情,顔・表情,,[],verified,,unreviewed,unreviewed
-3189,food name,食べ物の名称,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
+3189,food name,食べ物の名称,家具・設備・物品,その他の物品,,[],verified,,unreviewed,needs-review
 3190,food on body,身体に付着した食べ物,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 3191,food on breasts,胸に付着した食べ物,動作・接触,身体への接触,,[],verified,,unreviewed,unreviewed
 3192,food on face,顔に付着した食べ物,人物の特徴,人物属性,,[],verified,,unreviewed,unreviewed
 3193,food on head,頭に載せた食べ物,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 3194,food packaging,食品の包装,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 3195,food print,食べ物柄,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3196,food stand,屋台,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
+3196,food stand,屋台,背景・場所,場所・室内外,,[],verified,,unreviewed,verified
 3197,food wrapper,食品の包み紙,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 3198,food-themed clothes,食べ物モチーフの服,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
-3199,food-themed earrings,食べ物モチーフのイヤリング,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
+3199,food-themed earrings,食べ物モチーフのイヤリング,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 3200,food-themed hair ornament,食べ物モチーフの髪飾り,服装・装飾,装飾品,,[],verified,,unreviewed,unreviewed
 3201,foot focus,足を強調した構図,構図・カメラ,構図・配置,,[],verified,,unreviewed,unreviewed
 3202,foot out of frame,足が画面外にある,構図・カメラ,フレーミング,,[],verified,,unreviewed,verified
@@ -3210,24 +3210,24 @@
 3208,forced smile,無理に作った笑顔,顔・表情,顔・表情,,[],verified,,unreviewed,unreviewed
 3209,forehead,額,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,unreviewed
 3210,forehead jewel,額の宝石,服装・装飾,装飾品,,[],verified,,unreviewed,unreviewed
-3211,forehead mark,額の印,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,unreviewed
-3212,forehead protector,額当て,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,unreviewed
-3213,forehead tattoo,額のタトゥー,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,unreviewed
+3211,forehead mark,額の印,顔・表情,顔の特徴,,[],verified,,unreviewed,verified
+3212,forehead protector,額当て,服装・装飾,装飾品,,[],verified,,unreviewed,verified
+3213,forehead tattoo,額のタトゥー,顔・表情,顔の特徴,,[],verified,,unreviewed,verified
 3214,forehead-to-forehead,額を寄せ合う,動作・接触,対人接触・動作,,[],verified,,unreviewed,unreviewed
-3215,foreplay,前戯,動作・接触,身体への接触,,[],verified,,unreviewed,unreviewed
+3215,foreplay,前戯,動作・接触,性的行為・接触,,[],verified,,unreviewed,verified
 3216,foreshortening,短縮遠近法,構図・カメラ,構図・配置,,[],verified,,unreviewed,unreviewed
 3217,foreskin,包皮,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,unreviewed
 3218,forest,森,背景・場所,自然・風景,,[],verified,,unreviewed,unreviewed
 3219,fork,フォーク,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3220,forked eyebrows,二股に分かれた眉,人物の特徴,人物属性,,[],verified,,unreviewed,unreviewed
+3220,forked eyebrows,二股に分かれた眉,顔・表情,顔の特徴,,[],verified,,unreviewed,verified
 3221,forked tail,二股の尾,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
-3222,forked tongue,先端が二股の舌,人物の特徴,人物属性,,[],verified,,unreviewed,unreviewed
+3222,forked tongue,先端が二股の舌,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 3223,formal clothes,フォーマルウェア,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 3224,formidable (azur lane),フォーミダブル（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 3225,fortissimo,フォルティッシモ（きわめて強く）,文字・記号,記号・図形,,[],verified,,unreviewed,verified
 3226,fou (fate),fou（Fate）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 3227,fountain,噴水,背景・場所,建築・構造物,,[],verified,,unreviewed,unreviewed
-3228,four-leaf clover,四つ葉のクローバー,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
+3228,four-leaf clover,四つ葉のクローバー,生物・動植物,植物,,[],verified,,unreviewed,verified
 3229,four-leaf clover hair ornament,四つ葉のクローバーの髪飾り,服装・装飾,装飾品,,[],verified,,unreviewed,unreviewed
 3230,fourth east high school uniform,第四東高校の制服,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 3231,fourth wall,第四の壁,状態・状況,状況・関係性,,[],verified,,unreviewed,unreviewed
@@ -3235,7 +3235,7 @@
 3233,fox boy,キツネの少年,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
 3234,fox ears,キツネ耳,人物の特徴,人物属性,,[],verified,,unreviewed,unreviewed
 3235,fox girl,キツネの少女,人物の特徴,人物属性,,[],verified,,unreviewed,unreviewed
-3236,fox mask,狐面,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
+3236,fox mask,狐面,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 3237,fox shadow puppet,キツネの影絵,光・演出,照明・光源,,[],verified,,unreviewed,unreviewed
 3238,fox tail,キツネの尻尾,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
 3239,framed breasts,胸を額縁で囲む構図,構図・カメラ,構図・配置,,[],verified,,unreviewed,unreviewed
@@ -3311,13 +3311,13 @@
 3309,frottage,兜合わせ,動作・接触,性的行為・接触,,[],verified,4,verified,verified
 3310,frown,しかめ面,顔・表情,顔・表情,,[],verified,,unreviewed,unreviewed
 3311,frozen,アナと雪の女王,キャラクター・作品,タイトル（作品名）,,[],verified,,unreviewed,unreviewed
-3312,frozen (disney),アナと雪の女王（ディズニー作品）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
+3312,frozen (disney),アナと雪の女王（ディズニー作品）,キャラクター・作品,タイトル（作品名）,,[],verified,,unreviewed,verified
 3313,fruit,フルーツ,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 3314,fruit hat ornament,果物モチーフの帽子飾り,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 3315,fruit on head,頭に載せた果物,ポーズ・姿勢,身体の配置,,[],verified,,unreviewed,verified
 3316,frying pan,フライパン,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 3317,fu hua (Honkai Impact 3rd),フカ（崩壊3rd）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
-3318,fu hua (herrscher of sentience),フカ（識の律者／崩壊3rd）,キャラクター・作品,作者・配信者,,[],verified,,unreviewed,unreviewed
+3318,fu hua (herrscher of sentience),フカ（識の律者／崩壊3rd）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,verified
 3319,fubuki (kancolle),吹雪（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 3320,fubuki (one-punch man),地獄のフブキ（ワンパンマン）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 3321,fubuki kai ni (kancolle),吹雪改二（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
@@ -3930,11 +3930,11 @@
 3928,halterneck,ホルターネック,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 3929,hamakaze (kancolle),浜風（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 3930,hamaya,破魔矢,家具・設備・物品,日用品,,[],verified,,unreviewed,unreviewed
-3931,hammer,ハンマー,服装・装飾,装備・防具,,[],verified,,unreviewed,unreviewed
+3931,hammer,ハンマー,家具・設備・物品,道具,,[],verified,,unreviewed,verified
 3932,hammer (sunset beach),ハンマー（サンセットビーチ）,背景・場所,自然・風景,,[],verified,,unreviewed,unreviewed
 3933,hammer and sickle,ハンマーと鎌,文字・記号,記号・図形,,[],verified,,unreviewed,unreviewed
 3934,hammock,ハンモック,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3935,hamster,ハムスター,背景・場所,自然・風景,,[],verified,,unreviewed,unreviewed
+3935,hamster,ハムスター,生物・動植物,動物,,[],verified,,unreviewed,verified
 3936,hamu koutarou,はむこーたろー,キャラクター・作品,作者・配信者,,[],verified,,unreviewed,verified
 3937,han juri (Street Fighter),ハン・ジュリ（ストリートファイター）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 3938,hana kazari,ハナ・カザリ,キャラクター・作品,作者・配信者,,[],verified,,unreviewed,verified
@@ -3998,7 +3998,7 @@
 3996,hand wraps,ハンドラップ,服装・装飾,装備・防具,,[],verified,,unreviewed,verified
 3997,handbag,ハンドバッグ,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 3998,handcuffs,手錠,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3999,handgun,拳銃,服装・装飾,装備・防具,,[],verified,,unreviewed,unreviewed
+3999,handgun,拳銃,家具・設備・物品,武器,,[],verified,,unreviewed,verified
 4000,handheld game console,携帯型ゲーム機,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 4001,handkerchief,ハンカチ,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 4002,handprint,手形,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
