@@ -44,7 +44,7 @@
 42,5boys,男の子5人,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified
 43,5girls,女の子5人,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified
 44,5koma,5コマ,構図・カメラ,構図・配置,,[],verified,0,verified,verified
-45,6 (yuchae),6（ユチェ）,キャラクター・作品,キャラクター,,[],needs-review,0,verified,verified
+45,6 (yuchae),6（Yuchae）(作者),キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 46,6+boys,6+男の子,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified
 47,6+girls,六人以上の女の子,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified
 48,6+others,その他の人物6人以上,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified
@@ -641,7 +641,7 @@
 639,baggy pants,ゆったりしたズボン,服装・装飾,衣服,,[],verified,0,verified,verified
 640,bags under eyes,目の下のクマ,顔・表情,目,,[],verified,0,verified,verified
 641,baguette,バゲット,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
-642,bai lao shu,バイラオシュ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+642,bai lao shu,Bai Lao Shu(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 643,bakemonogatari,化物語,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 644,baking,焼き菓子作り,動作・接触,身体動作,,[],verified,0,verified,verified
 645,bakugou katsuki (My Hero Academia),爆豪勝己,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -1039,7 +1039,7 @@
 1037,black wings,黒い翼,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
 1038,black wrist cuffs,黒いリストカフ,服装・装飾,装飾品,,[],verified,0,verified,verified
 1039,black-framed eyewear,黒縁眼鏡,服装・装飾,装飾品,,[],verified,0,verified,verified
-1040,blade (galaxist),ブレード（Galaxist）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+1040,blade (galaxist),ブレエド(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 1041,blade (honkai: star rail),刃（崩壊：スターレイル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 1042,blake belladonna (RWBY),ブレイク・ベラドンナ（RWBY）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 1043,blake bloom (wuthering waves),黒花（鳴潮）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
@@ -2381,7 +2381,7 @@
 2379,defloration,処女喪失,動作・接触,対人接触・動作,,[],verified,4,verified,verified
 2380,deformed,デフォルメされた,品質・ネガティブ,ネガティブ,,[],verified,0,verified,verified
 2381,dehya (genshin impact),ディシア（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-2382,dei shirou,Dei Shirou（表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+2382,dei shirou,Dei Shirou(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 2383,delicious party precure,デリシャスパーティ♡プリキュア,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 2384,delinquent,不良,人物の特徴,人物属性,,[],verified,0,verified,verified
 2385,demon,悪魔,人物の特徴,人物属性,,[],verified,0,verified,verified
@@ -3343,8 +3343,8 @@
 3341,full-length mirror,姿見,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 3342,full-length zipper,全長ファスナー,服装・装飾,衣服,,[],verified,,unreviewed,verified
 3343,fullmetal alchemist,鋼の錬金術師,キャラクター・作品,タイトル（作品名）,,[],verified,,unreviewed,unreviewed
-3344,fumihiko (fu mihi ko),ふみひこ（fu mihi ko）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
-3345,fumio (rsqkr),ふみお（rsqkr）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+3344,fumihiko (fu mihi ko),ふみひこ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
+3345,fumio (rsqkr),Fumio(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 3346,fumo (doll),ふもふもぬいぐるみ,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
 3347,funami yui (YuruYuri),船見結衣,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 3348,fundoshi,ふんどし,服装・装飾,下着,,[],verified,,unreviewed,unreviewed
@@ -3395,7 +3395,7 @@
 3393,fushiguro megumi (Jujutsu Kaisen),伏黒恵（呪術廻戦）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 3394,fusion,融合,状態・状況,状態・変化,,[],verified,,unreviewed,unreviewed
 3395,fusou (kancolle),扶桑（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
-3396,fusu (a95101221),ふす（a95101221）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+3396,fusu (a95101221),ふす(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 3397,fusuma,襖,背景・場所,建築・構造物,,[],verified,,unreviewed,unreviewed
 3398,futaba anzu (The Idolmaster Cinderella Girls),双葉杏,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 3399,futaba channel,ふたばちゃんねる,キャラクター・作品,タイトル（作品名）,,[],verified,,unreviewed,unreviewed
@@ -3584,7 +3584,7 @@
 3582,goldenglow (arknights),ゴールデングロー（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,,unreviewed,unreviewed
 3583,goldfish,金魚,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
 3584,golf club,ゴルフクラブ,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
-3585,goma (gomasamune),ゴマ（gomasamune）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+3585,goma (gomasamune),Goma(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 3586,goma (yoku yatta hou jane),ゴマ（yoku yatta hou jane）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
 3587,gomashio (goma feet),ゴマシオ（ゴマフィート）,キャラクター・作品,作者・配信者,,[],verified,,unreviewed,verified
 3588,gomennasai,ごめんなさい,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
