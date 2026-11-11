@@ -11743,3 +11743,14 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 11741,office after hours,残業,背景・場所,場所・室内外,,[],,,,,normal
 11742,hot spring,温泉,背景・場所,場所・室内外,,[],,,,,normal
 11743,apocalypse survival sex,終末,状態・状況,状況・関係性,,[],,,,,normal
+11744,front view,正面から,構図・カメラ,カメラアングル,,[],,,,,normal
+11745,back view,背面から,構図・カメラ,カメラアングル,,[],,,,,normal
+11746,top view,真上から見た構図,構図・カメラ,カメラアングル,,[],,,,,normal
+11747,overhead view,頭上から見下ろす視点,構図・カメラ,カメラアングル,,[],,,,,normal
+11748,cross section,断面図,構図・カメラ,構図・配置,,[],,,,,normal
+11749,internal,内部構造,人物の特徴,身体部位・身体状態,,[],,,,,normal
+11750,ovaries,卵巣,人物の特徴,身体部位・身体状態,,[],,,,,normal
+11751,identity censor,目線で隠す,光・演出,演出効果,,[],,,,,normal
+11752,bubble filter,幾何学模様フィルター,光・演出,演出効果,,[],,,,,normal
+11753,spoken,吹き出し内の発話,文字・記号,吹き出し,,[],,,,,normal
+11754,question mark,疑問符,文字・記号,記号・図形,,[],,,,,normal
