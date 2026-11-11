@@ -8348,7 +8348,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 8346,see-through jacket,シースルージャケット,服装・装飾,衣服,,[],verified,2,verified,verified
 8347,see-through legwear,透けるレッグウェア,服装・装飾,靴・履物,,[],verified,2,verified,verified
 8348,see-through leotard,シースルーレオタード,服装・装飾,衣服,,[],verified,2,verified,verified
-8349,see-through panties,透けるパンティー,服装・装飾,下着,,[],verified,2,verified,verified
+8349,see-through panties,透けるパンティー,服装・装飾,下着,,[],verified,3,verified,verified
 8350,see-through sarong,透けるサロン,服装・装飾,衣服の状態,,[],verified,1,verified,verified
 8351,see-through shirt,透けシャツ,服装・装飾,衣服,,[],verified,2,verified,verified
 8352,see-through silhouette,透けたシルエット,構図・カメラ,フレーミング,,[],verified,2,verified,verified
@@ -8372,7 +8372,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 8370,selene (pokemon),ミヅキ（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 8371,self cosplay,セルフコスプレ,人物の特徴,人物属性,,[],verified,0,verified,verified
 8372,self hug,自分を抱きしめる,動作・接触,対人接触・動作,,[],verified,0,verified,verified
-8373,self-harm,自傷行為,動作・接触,身体への接触,,[],verified,2,verified,verified
+8373,self-harm,自傷行為,動作・接触,身体への接触,,[],verified,0,verified,verified
 8374,self-harm scar,自傷痕,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 8375,selfcest,セルフセックス,動作・接触,性的行為・接触,,[],verified,4,verified,verified
 8376,selfie,自撮り,構図・カメラ,構図・配置,,[],verified,0,verified,verified
