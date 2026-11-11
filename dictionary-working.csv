@@ -11562,7 +11562,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 11560,cum swallow,精液を飲み込む,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11561,squirting face,潮吹き時の表情,顔・表情,顔・表情,,[],verified,4,verified,verified,normal
 11562,multiple orgasm,複数回の絶頂,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11563,mind break,精神が崩れた表情,状態・状況,状態・変化,,[],,4,verified,verified,normal
+11563,mind break,精神崩壊,状態・状況,状態・変化,,[],verified,4,verified,verified,normal
 11564,ecstasy,恍惚とした表情,顔・表情,顔・表情,,[],verified,4,verified,verified,normal
 11565,pleasure overload,快感に圧倒された表情,顔・表情,顔・表情,,[],verified,4,verified,verified,normal
 11566,laughing orgasm,笑いながらの絶頂,顔・表情,顔・表情,,[],verified,4,verified,verified,normal
@@ -11685,7 +11685,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 11683,inflatable doll,空気人形,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
 11684,tentacle dildo,触手ディルド,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
 11685,monster dildo,巨大,家具・設備・物品,道具,,[],,4,verified,verified,normal
-11686,horse dildo,馬,家具・設備・物品,道具,,[],,4,verified,verified,normal
+11686,horse dildo,馬型ディルド,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
 11687,knot dildo,結び目付きディルド,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
 11688,vibrating plug,振動プラグ,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
 11689,thrusting dildo,ピストン式ディルド,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
@@ -11750,7 +11750,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 11748,cross section,断面図,構図・カメラ,構図・配置,,[],verified,0,verified,verified,normal
 11749,internal,内部構造,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 11750,ovaries,卵巣,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
-11751,identity censor,目線で隠す,光・演出,演出効果,,[],,0,verified,verified,normal
+11751,identity censor,身元を隠す表現,光・演出,演出効果,,[],verified,0,verified,verified,normal
 11752,bubble filter,幾何学模様フィルター,光・演出,演出効果,,[],,0,verified,verified,normal
 11753,spoken,吹き出し内の発話,文字・記号,吹き出し,,[],verified,0,verified,verified,normal
 11754,question mark,疑問符,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
