@@ -258,7 +258,7 @@
 256,amputee,四肢欠損,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 257,amulet,お守り,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 258,amusement park,遊園地,背景・場所,自然・風景,,[],verified,0,verified,verified
-259,amy rose,エイミー・ローズ,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
+259,amy rose,エイミー・ローズ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 260,analog clock,アナログ時計,家具・設備・物品,日用品,,[],verified,0,verified,verified
 261,analogous colors,類似色,光・演出,色調・色彩,,[],verified,0,verified,verified
 262,anastasia (fate),アナスタシア（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -280,7 +280,7 @@
 278,android,アンドロイド,人物の特徴,人物属性,,[],verified,0,verified,verified
 279,android 18,人造人間18号（ドラゴンボール）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 280,android 21,人造人間21号（ドラゴンボール）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-281,anemone (flower),アネモネ（花）,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
+281,anemone (flower),アネモネ（花）,生物・動植物,植物,,[],verified,0,verified,verified
 282,ange katrina (Nijisanji),アンジュ・カトリーナ（にじさんじ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 283,angel,天使,人物の特徴,人物属性,,[],verified,0,verified,verified
 284,angel and devil,天使と悪魔,人物の特徴,人物属性,,[],verified,0,verified,verified
@@ -298,7 +298,7 @@
 296,animal costume,動物の着ぐるみ,服装・装飾,衣服,,[],verified,0,verified,verified
 297,animal crossing,どうぶつの森（ゲームシリーズ）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 298,animal ear fluff,獣耳の毛,人物の特徴,人物属性,,[],verified,0,verified,verified
-299,animal ear hairband,動物耳カチューシャ,人物の特徴,人物属性,,[],verified,0,verified,verified
+299,animal ear hairband,動物耳カチューシャ,服装・装飾,装飾品,,[],verified,0,verified,verified
 300,animal ear headphones,動物耳型ヘッドホン,服装・装飾,装飾品,,[],verified,0,verified,verified
 301,animal ear headwear,動物耳付きの帽子,服装・装飾,装飾品,,[],verified,0,verified,verified
 302,animal ear hood,動物耳付きフード,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -721,7 +721,7 @@
 719,bare legs,脚を露出した,服装・装飾,肌の露出,,[],verified,1,verified,verified
 720,bare pectorals,裸の胸,服装・装飾,肌の露出,,[],verified,0,verified,verified
 721,bare shoulders,肩出し,服装・装飾,肌の露出,,[],verified,1,verified,verified
-722,bare tree,裸の木,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
+722,bare tree,裸の木,生物・動植物,植物,,[],verified,0,verified,verified
 723,barefoot,裸足,服装・装飾,衣服,,[],verified,0,verified,verified
 724,barefoot sandals (jewelry),足用アクセサリー（裸足風サンダル）,服装・装飾,装飾品,,[],verified,0,verified,verified
 725,barghest (fate),バーゲスト（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -776,7 +776,7 @@
 774,bc freedom military uniform,BC自由学園の軍服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 775,bea (pokemon),サイトウ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 776,beach,海辺,背景・場所,自然・風景,,[],verified,0,verified,verified
-777,beach chair,ビーチチェア,背景・場所,自然・風景,,[],verified,0,verified,verified
+777,beach chair,ビーチチェア,家具・設備・物品,家具,,[],verified,0,verified,verified
 778,beach mat,ビーチマット,背景・場所,自然・風景,,[],verified,0,verified,verified
 779,beach towel,ビーチタオル,背景・場所,自然・風景,,[],verified,0,verified,verified
 780,beach umbrella,ビーチパラソル,背景・場所,自然・風景,,[],verified,0,verified,verified
@@ -865,7 +865,7 @@
 863,bibi (tokoyami towa),ビビ（常闇トワ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 864,biceps,上腕二頭筋,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 865,bicorne,双角帽,服装・装飾,装飾品,,[],verified,0,verified,verified
-866,bicycle,自転車,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
+866,bicycle,自転車,乗り物,陸上の乗り物,,[],verified,0,verified,verified
 867,bicycle basket,自転車バスケット,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 868,big belly,大きなお腹,人物の特徴,体型・身体的特徴,,[],verified,0,verified,verified
 869,big hair,ボリュームのある髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified
@@ -1210,7 +1210,7 @@
 1208,bo staff,棒術,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 1209,boar,イノシシ,生物・動植物,動物,,[],verified,0,verified,verified
 1210,board game,ボードゲーム,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
-1211,boat,ボート,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
+1211,boat,ボート,乗り物,船舶,,[],verified,0,verified,verified
 1212,boater hat,カンカン帽,服装・装飾,衣服,,[],verified,0,verified,verified
 1213,bob cut,ボブカット,髪・頭部,髪・頭部,,[],verified,0,verified,verified
 1214,bobby socks,ボビーソックス,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -3526,7 +3526,7 @@
 3524,glowing butterfly,光る蝶,生物・動植物,動物,,[],verified,,unreviewed,verified
 3525,glowing eye,光る目,顔・表情,目,,[],verified,,unreviewed,verified
 3526,glowing eyes,光る目,顔・表情,目,,[],verified,,unreviewed,verified
-3527,glowing flower,光る花,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
+3527,glowing flower,光る花,生物・動植物,植物,,[],verified,,unreviewed,verified
 3528,glowing hair,光る髪,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
 3529,glowing hand,光る手,光・演出,演出効果,,[],verified,,unreviewed,verified
 3530,glowing horns,光る角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
