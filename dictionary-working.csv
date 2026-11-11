@@ -8772,7 +8772,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 8770,sitting,座る,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 8771,sitting backwards,後ろ向きに座る,ポーズ・姿勢,身体の向き,,[],verified,0,verified,verified,normal
 8772,sitting in tree,木の上に座る,ポーズ・姿勢,身体の配置,,[],verified,0,verified,verified,normal
-8773,sitting on face,顔に座る,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
+8773,sitting on face,顔に座る,動作・接触,性的行為・接触,,"[""face sitting""]",verified,3,verified,verified,normal
 8774,sitting on lap,膝の上に座る,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
 8775,sitting on object,物の上に座る,ポーズ・姿勢,身体の配置,,[],verified,0,verified,verified,normal
 8776,sitting on person,人の上に座る,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
@@ -9974,7 +9974,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 9972,triangle print,三角形柄,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 9973,triangular eyewear,三角形の眼鏡,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 9974,triangular headpiece,三角形のヘッドピース,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
-9975,tribadism,トリバディズム（女性同士の性器接触）,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+9975,tribadism,トリバディズム（女性同士の性器接触）,動作・接触,性的行為・接触,,"[""scissoring""]",verified,4,verified,verified,normal
 9976,tribal,部族風（トライバル）,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 9977,tribal tattoo,トライバルタトゥー,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 9978,trick or treat,トリック・オア・トリート,文字・記号,文字,,[],verified,0,verified,verified,normal
@@ -11036,7 +11036,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 11034,asymmetrical breasts,左右非対称の胸,人物の特徴,体型・身体的特徴,,[],verified,2,verified,verified,normal
 11035,bodybuilder,ボディビルダー体型,人物の特徴,体型・身体的特徴,,[],verified,0,verified,verified,normal
 11036,adam's apple,喉仏,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
-11037,fellatio,フェラチオ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+11037,fellatio,フェラチオ,動作・接触,性的行為・接触,,"[""blowjob""]",verified,4,verified,verified,normal
 11038,deepthroat,ディープスロート,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11039,handjob,手コキ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11040,footjob,足コキ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
@@ -11781,3 +11781,17 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 11779,awe,畏敬の表情,顔・表情,顔・表情,,[],,,,,normal
 11780,penis awe,見せ槍,動作・接触,性的行為・接触,,[],,,,,normal
 11781,cum on food,食べ物に射精（食ザー）,動作・接触,性的行為・接触,,[],,,,,normal
+11782,outercourse,挿入を伴わない性的接触,動作・接触,性的行為・接触,,[],,,,,normal
+11783,fisting,拳を用いた挿入,動作・接触,性的行為・接触,,[],,,,,normal
+11784,hold penis over panties,パンティーの上から陰茎を押し当てる,動作・接触,性的行為・接触,,[],,,,,normal
+11785,penis under another’s panties,相手のパンティーの下に陰茎を差し入れる,動作・接触,性的行為・接触,,[],,,,,normal
+11786,panties on penis,陰茎にパンティーをかぶせる,動作・接触,性的行為・接触,,[],,,,,normal
+11787,tailjob,尻尾を使った愛撫,動作・接触,性的行為・接触,,[],,,,,normal
+11788,foot licking,足を舐める,動作・接触,性的行為・接触,,[],,,,,normal
+11789,mutual foot licking,互いに足を舐め合う,動作・接触,性的行為・接触,,[],,,,,normal
+11790,straddling paizuri,またがった体勢でのパイズリ,動作・接触,性的行為・接触,,[],,,,,normal
+11791,paizuri under clothes,衣服越しのパイズリ,動作・接触,性的行為・接触,,[],,,,,normal
+11792,breast sucking handjob,授乳手コキ,動作・接触,性的行為・接触,,[],,,,,normal
+11793,food insertion,食べ物の挿入,動作・接触,性的行為・接触,,[],,,,,normal
+11794,nyotaimori,女体盛り,動作・接触,性的行為・接触,,[],,,,,normal
+11795,nipple penetration,乳首への挿入,動作・接触,性的行為・接触,,[],,,,,normal
