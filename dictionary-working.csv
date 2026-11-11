@@ -11698,7 +11698,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 11696,cooling toy,冷感,家具・設備・物品,道具,,[],,4,verified,verified,normal
 11697,extreme size toy,極大,家具・設備・物品,道具,,[],,4,verified,verified,normal
 11698,office seduction,オフィス誘惑,状態・状況,状況・関係性,,[],,2,verified,verified,normal
-11699,teacher student,教師生徒,状態・状況,状況・関係性,,[],,,,verified,minor-related
+11699,teacher student,教師生徒,状態・状況,状況・関係性,,[],,0,verified,verified,minor-related
 11700,doctor patient,医者患者,状態・状況,状況・関係性,,[],,0,verified,verified,normal
 11701,public restroom,公衆トイレ,背景・場所,場所・室内外,,[],,0,verified,verified,normal
 11702,train molestation,電車痴漢,動作・接触,性的行為・接触,,[],,4,verified,verified,normal
