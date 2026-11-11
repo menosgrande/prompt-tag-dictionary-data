@@ -1,4 +1,4 @@
-﻿index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level,expression_level_review_status,classification_review_status
+﻿﻿index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level,expression_level_review_status,classification_review_status
 0,!,感嘆符,文字・記号,記号・図形,,[],verified,0,verified,verified
 1,!!,二重感嘆符,文字・記号,記号・図形,,[],verified,0,verified,verified
 2,!?,感嘆符と疑問符,文字・記号,記号・図形,,[],verified,0,verified,verified
@@ -832,7 +832,7 @@
 830,belly grab,腹部をつかむ,動作・接触,対人接触・動作,,[],verified,0,verified,verified
 831,belt,ベルト,服装・装飾,衣服,,[],verified,0,verified,verified
 832,belt boots,ベルトブーツ,服装・装飾,衣服,,[],verified,0,verified,verified
-833,belt bra,ベルトブラ,服装・装飾,衣服,,[],verified,3,verified,verified
+833,belt bra,ベルトブラ,服装・装飾,下着,,[],verified,3,verified,verified
 834,belt buckle,ベルトのバックル,服装・装飾,衣服,,[],verified,0,verified,verified
 835,belt chain,ベルトチェーン,服装・装飾,衣服,,[],verified,0,verified,verified
 836,belt collar,ベルト状の首輪,服装・装飾,装飾品,,[],verified,0,verified,verified
@@ -941,7 +941,7 @@
 939,black border,黒枠,構図・カメラ,フレーミング,,[],verified,0,verified,verified
 940,black bow,黒いリボン,服装・装飾,装飾品,,[],verified,0,verified,verified
 941,black bowtie,黒い蝶ネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified
-942,black bra,黒ブラジャー,服装・装飾,衣服,,[],verified,3,verified,verified
+942,black bra,黒ブラジャー,服装・装飾,下着,,[],verified,3,verified,verified
 943,black bridal gauntlets,黒いブライダルガントレット,服装・装飾,装飾品,,[],verified,0,verified,verified
 944,black buruma,黒いブルマ,服装・装飾,下着,,[],verified,0,verified,verified
 945,black camisole,黒いキャミソール,服装・装飾,下着,,[],verified,1,verified,verified
@@ -987,8 +987,8 @@
 985,black leggings,黒レギンス,服装・装飾,衣服,,[],verified,0,verified,verified
 986,black leotard,黒レオタード,服装・装飾,衣服,,[],verified,1,verified,verified
 987,black lips,黒い唇,顔・表情,顔・表情,,[],verified,0,verified,verified
-988,black male swimwear,黒人男性用の水着,服装・装飾,水着,,[],verified,0,verified,verified
-989,black male underwear,黒人男性用の下着,服装・装飾,下着,,[],verified,3,verified,verified
+988,black male swimwear,黒い男性用水着,服装・装飾,水着,,[],verified,0,verified,verified
+989,black male underwear,黒い男性用下着,服装・装飾,下着,,[],verified,3,verified,verified
 990,black mask,黒いマスク,服装・装飾,装飾品,,[],verified,0,verified,verified
 991,black nails,黒い爪,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 992,black neckerchief,黒いネッカチーフ,服装・装飾,装飾品,,[],verified,0,verified,verified
@@ -1019,7 +1019,7 @@
 1017,black sleeves,黒い袖,服装・装飾,衣服,,[],verified,0,verified,verified
 1018,black slingshot swimsuit,黒いスリングショット水着,服装・装飾,衣服,,[],verified,2,verified,verified
 1019,black socks,黒い靴下,服装・装飾,衣服,,[],verified,0,verified,verified
-1020,black sports bra,ブラックスポーツブラ,服装・装飾,衣服,,[],verified,1,verified,verified
+1020,black sports bra,ブラックスポーツブラ,服装・装飾,下着,,[],verified,1,verified,verified
 1021,black suit,黒いスーツ,服装・装飾,衣服,,[],verified,0,verified,verified
 1022,black survival,Black Survival（ゲームタイトル）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 1023,black swan (honkai: star rail),ブラックスワン（崩壊：スターレイル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -1109,7 +1109,7 @@
 1107,blue brooch,青いブローチ,服装・装飾,装飾品,,[],verified,0,verified,verified
 1108,blue buruma,青いブルマ,服装・装飾,下着,,[],verified,0,verified,verified
 1109,blue butterfly,青い蝶,生物・動植物,動物,,[],verified,0,verified,verified
-1110,blue camisole,青いキャミソール,服装・装飾,衣服,,[],verified,1,verified,verified
+1110,blue camisole,青いキャミソール,服装・装飾,下着,,[],verified,1,verified,verified
 1111,blue cape,青いケープ,服装・装飾,衣服,,[],verified,0,verified,verified
 1112,blue capelet,青いケープレット,服装・装飾,衣服,,[],verified,0,verified,verified
 1113,blue cardigan,ブルーカーディガン,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -1176,7 +1176,7 @@
 1174,blue sky,青空,背景・場所,自然・風景,,[],verified,0,verified,verified
 1175,blue sleeves,青い袖,服装・装飾,衣服,,[],verified,0,verified,verified
 1176,blue socks,青い靴下,服装・装飾,靴・履物,,[],verified,0,verified,verified
-1177,blue sports bra,ブルースポーツブラ,服装・装飾,衣服,,[],verified,1,verified,verified
+1177,blue sports bra,ブルースポーツブラ,服装・装飾,下着,,[],verified,1,verified,verified
 1178,blue suit,青いスーツ,服装・装飾,衣服,,[],verified,0,verified,verified
 1179,blue sweater,青いセーター,服装・装飾,衣服,,[],verified,0,verified,verified
 1180,blue sweater vest,青いセーターベスト,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -1306,10 +1306,10 @@
 1304,boy sandwich,少年サンドイッチ,動作・接触,性的行為・接触,,[],verified,4,verified,verified
 1305,bra,ブラジャー,服装・装飾,下着,,[],verified,3,verified,verified
 1306,bra lift,ブラジャーをたくし上げる,動作・接触,衣服への接触,,[],verified,3,verified,verified
-1307,bra peek,服の上や隙間からブラジャーが見える状態,動作・接触,衣服への接触,,[],verified,1,verified,verified
+1307,bra peek,服の上や隙間からブラジャーが見える状態,動作・接触,衣服の状態,,[],verified,1,verified,verified
 1308,bra pull,ブラジャーを下げる動作,動作・接触,衣服への接触,,[],verified,3,verified,verified
 1309,bra strap,ブラストラップ,服装・装飾,衣服,,[],verified,1,verified,verified
-1310,bra visible through clothes,服から透けるブラジャー,服装・装飾,衣服,,[],verified,3,verified,verified
+1310,bra visible through clothes,服から透けるブラジャー,服装・装飾,衣服の状態,,[],verified,3,verified,verified
 1311,bracelet,ブレスレット,服装・装飾,装飾品,,[],verified,0,verified,verified
 1312,bracer,腕甲,服装・装飾,装備・防具,,[],verified,0,verified,verified
 1313,braces,歯列矯正器具,顔・表情,顔の特徴,,[],verified,0,verified,verified
@@ -3435,7 +3435,7 @@
 3433,gao,ガオー,文字・記号,文字,,[],verified,0,verified,verified
 3434,gaoo (frpjx283),がおー(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 3435,gap (touhou),ギャップ（touhou）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-3436,gaping,隙間,状態・状況,状態・変化,,[],verified,4,verified,verified
+3436,gaping,膣・肛門の開口状態,状態・状況,状態・変化,,[],verified,4,verified,verified
 3437,garden,庭園,背景・場所,自然・風景,,[],verified,0,verified,verified
 3438,gardevoir (Pokémon),サーナイト,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 3439,garreg mach monastery uniform,ガルグ＝マク大修道院の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
@@ -5768,7 +5768,7 @@
 5766,male maid,男性メイド,人物の特徴,人物属性,,[],verified,0,verified,verified
 5767,male penetrated,男性受け,動作・接触,性的行為・接触,,[],verified,4,verified,verified
 5768,male playboy bunny,男性のバニースーツ,服装・装飾,衣服,,[],verified,0,verified,verified
-5769,male swimwear,男性用水着,服装・装飾,衣服,,[],verified,0,verified,verified
+5769,male swimwear,男性用水着,服装・装飾,水着,,[],verified,0,verified,verified
 5770,male underwear,男性用下着,服装・装飾,下着,,[],verified,3,verified,verified
 5771,male underwear peek,男性の下着チラ見せ,服装・装飾,衣服の状態,,[],verified,2,verified,verified
 5772,male underwear pull,男性の下着を引っ張る,動作・接触,衣服への接触,,[],verified,2,verified,verified
@@ -6563,7 +6563,7 @@
 6561,niwatari kutaka (Touhou Project),庭渡久侘歌（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6562,niwatazumi,にわたずみ,キャラクター・作品,作者・配信者,,"[""Niwatazumi""]",verified,0,verified,verified
 6563,no blindfold,目隠しなし,服装・装飾,衣服の状態,,[],verified,0,verified,verified
-6564,no bra,ノーブラ,服装・装飾,衣服,,[],verified,2,verified,verified
+6564,no bra,ノーブラ,服装・装飾,衣服の状態,,[],verified,2,verified,verified
 6565,no eyebrows,眉毛なし,顔・表情,顔の特徴,,[],verified,0,verified,verified
 6566,no eyepatch,眼帯なし,服装・装飾,衣服の状態,,[],verified,0,verified,verified
 6567,no eyes,目なし,顔・表情,目,,[],verified,0,verified,verified
@@ -6582,7 +6582,7 @@
 6580,no mouth,口なし,顔・表情,顔の特徴,,[],verified,0,verified,verified
 6581,no nipples,乳首なし,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 6582,no nose,鼻なし,顔・表情,顔の特徴,,[],verified,0,verified,verified
-6583,no panties,パンツなし,服装・装飾,下着,,[],verified,2,verified,verified
+6583,no panties,パンツなし,服装・装飾,衣服の状態,,[],verified,2,verified,verified
 6584,no pants,ズボンなし,服装・装飾,衣服の状態,,[],verified,0,verified,verified
 6585,no pupils,瞳孔なし,顔・表情,目,,[],verified,0,verified,verified
 6586,no sclera,強膜なし,顔・表情,目,,[],verified,0,verified,verified
@@ -7280,7 +7280,7 @@
 7278,pink sky,ピンクの空,背景・場所,自然・風景,,[],verified,0,verified,verified
 7279,pink sleeves,ピンクの袖,服装・装飾,衣服,,[],verified,0,verified,verified
 7280,pink socks,ピンク色の靴下,服装・装飾,衣服,,[],verified,0,verified,verified
-7281,pink sports bra,ピンクのスポーツブラ,服装・装飾,衣服,,[],verified,1,verified,verified
+7281,pink sports bra,ピンクのスポーツブラ,服装・装飾,下着,,[],verified,1,verified,verified
 7282,pink sweater,ピンクのセーター,服装・装飾,衣服,,[],verified,0,verified,verified
 7283,pink tail,ピンク色の尻尾,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 7284,pink tank top,ピンクのタンクトップ,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -7457,7 +7457,7 @@
 7455,polka dot background,水玉の背景,背景・場所,空間・環境表現,,[],verified,0,verified,verified
 7456,polka dot bikini,水玉ビキニ,服装・装飾,衣服,,[],verified,1,verified,verified
 7457,polka dot bow,水玉模様のリボン,服装・装飾,装飾品,,[],verified,0,verified,verified
-7458,polka dot bra,水玉模様のブラジャー,服装・装飾,衣服,,[],verified,3,verified,verified
+7458,polka dot bra,水玉模様のブラジャー,服装・装飾,下着,,[],verified,3,verified,verified
 7459,polka dot dress,水玉ドレス,服装・装飾,衣服,,[],verified,0,verified,verified
 7460,polka dot headwear,水玉模様の帽子,服装・装飾,衣服,,[],verified,0,verified,verified
 7461,polka dot legwear,水玉模様のレッグウェア,服装・装飾,靴・履物,,[],verified,0,verified,verified
@@ -7556,7 +7556,7 @@
 7554,print bikini,柄入りビキニ,服装・装飾,衣服,,[],verified,1,verified,verified
 7555,print bow,柄入りリボン,服装・装飾,装飾品,,[],verified,0,verified,verified
 7556,print bowtie,柄入り蝶ネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified
-7557,print bra,柄入りブラジャー,服装・装飾,衣服,,[],verified,3,verified,verified
+7557,print bra,柄入りブラジャー,服装・装飾,下着,,[],verified,3,verified,verified
 7558,print dress,プリントワンピース,服装・装飾,衣服,,[],verified,0,verified,verified
 7559,print gloves,柄入り手袋,服装・装飾,衣服,,[],verified,0,verified,verified
 7560,print headwear,柄入り帽子,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -7920,7 +7920,7 @@
 7918,red sky,赤い空,背景・場所,自然・風景,,[],verified,0,verified,verified
 7919,red sleeves,赤い袖,服装・装飾,衣服,,[],verified,0,verified,verified
 7920,red socks,赤い靴下,服装・装飾,衣服,,[],verified,0,verified,verified
-7921,red sports bra,レッドスポーツブラ,服装・装飾,衣服,,[],verified,1,verified,verified
+7921,red sports bra,レッドスポーツブラ,服装・装飾,下着,,[],verified,1,verified,verified
 7922,red star,赤い星,文字・記号,記号・図形,,[],verified,0,verified,verified
 7923,red suit,赤いスーツ,服装・装飾,衣服,,[],verified,0,verified,verified
 7924,red sweater,赤いセーター,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -10192,7 +10192,7 @@
 10190,unworn bikini bottom,着用していないビキニボトム,服装・装飾,衣服,,[],verified,2,verified,verified
 10191,unworn bikini top,着用していないビキニトップ,服装・装飾,衣服,,[],verified,2,verified,verified
 10192,unworn boots,履いていないブーツ,服装・装飾,衣服,,[],verified,0,verified,verified
-10193,unworn bra,着用していないブラジャー,服装・装飾,衣服,,[],verified,3,verified,verified
+10193,unworn bra,着用していないブラジャー,服装・装飾,下着,,[],verified,3,verified,verified
 10194,unworn clothes,着ていない服,服装・装飾,衣服,,[],verified,1,verified,verified
 10195,unworn coat,着ていないコート,服装・装飾,衣服,,[],verified,0,verified,verified
 10196,unworn dress,着ていないドレス,服装・装飾,衣服,,[],verified,0,verified,verified
