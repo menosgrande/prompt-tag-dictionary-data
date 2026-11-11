@@ -1306,7 +1306,7 @@
 1304,boy sandwich,少年サンドイッチ,動作・接触,性的行為・接触,,[],verified,4,verified,verified
 1305,bra,ブラジャー,服装・装飾,下着,,[],verified,3,verified,verified
 1306,bra lift,ブラジャーをたくし上げる,動作・接触,衣服への接触,,[],verified,3,verified,verified
-1307,bra peek,服の上や隙間からブラジャーが見える状態,動作・接触,衣服の状態,,[],verified,1,verified,verified
+1307,bra peek,服の上や隙間からブラジャーが見える状態,服装・装飾,衣服の状態,,[],verified,1,verified,verified
 1308,bra pull,ブラジャーを下げる動作,動作・接触,衣服への接触,,[],verified,3,verified,verified
 1309,bra strap,ブラストラップ,服装・装飾,衣服,,[],verified,1,verified,verified
 1310,bra visible through clothes,服から透けるブラジャー,服装・装飾,衣服の状態,,[],verified,3,verified,verified
