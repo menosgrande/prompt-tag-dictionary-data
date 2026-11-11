@@ -3246,7 +3246,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 3244,freediving,フリーダイビング,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 3245,french flag,フランスの旗,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
 3246,french fries,フライドポテト,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
-3247,french kiss,フレンチ・キス,動作・接触,対人接触・動作,,"[""deep kissing""]",verified,2,verified,verified,normal
+3247,french kiss,フレンチ・キス,動作・接触,対人接触・動作,,[],verified,2,verified,verified,normal
 3248,french text,フランス語,文字・記号,文字,,[],verified,0,verified,verified,normal
 3249,fresh precure!,フレッシュプリキュア！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 3250,fried chicken,フライドチキン,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
