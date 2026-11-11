@@ -832,7 +832,7 @@
 830,belly grab,腹部をつかむ,動作・接触,対人接触・動作,,[],verified,0,verified,verified
 831,belt,ベルト,服装・装飾,衣服,,[],verified,0,verified,verified
 832,belt boots,ベルトブーツ,服装・装飾,衣服,,[],verified,0,verified,verified
-833,belt bra,ベルトブラ,服装・装飾,衣服,,[],verified,2,verified,verified
+833,belt bra,ベルトブラ,服装・装飾,衣服,,[],verified,3,verified,verified
 834,belt buckle,ベルトのバックル,服装・装飾,衣服,,[],verified,0,verified,verified
 835,belt chain,ベルトチェーン,服装・装飾,衣服,,[],verified,0,verified,verified
 836,belt collar,ベルト状の首輪,服装・装飾,装飾品,,[],verified,0,verified,verified
@@ -1299,7 +1299,7 @@
 1297,box art,パッケージイラスト,画風・描写,媒体,,[],verified,0,verified,verified
 1298,box of chocolates,チョコレートの箱,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 1299,boxcutter,カッターナイフ,家具・設備・物品,道具,,[],verified,0,verified,verified
-1300,boxer briefs,ボクサーブリーフ,服装・装飾,下着,,[],verified,0,verified,verified
+1300,boxer briefs,ボクサーブリーフ,服装・装飾,下着,,[],verified,3,verified,verified
 1301,boxers,ボクサーパンツ,服装・装飾,下着,,[],verified,0,verified,verified
 1302,boxing gloves,ボクシンググローブ,服装・装飾,衣服,,[],verified,0,verified,verified
 1303,boy on top,男性が相手の上にいる状態,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified
@@ -1383,7 +1383,7 @@
 1381,bridget (guilty gear),ブリジット（GUILTY GEAR）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 1382,bridle,頭絡,家具・設備・物品,道具,,[],verified,0,verified,verified
 1383,briefcase,ブリーフケース,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
-1384,briefs,ブリーフ,服装・装飾,下着,,[],verified,0,verified,verified
+1384,briefs,ブリーフ,服装・装飾,下着,,[],verified,3,verified,verified
 1385,bright pupils,虹彩より明るい瞳孔,顔・表情,目,,[],verified,0,verified,verified
 1386,broccoli,ブロッコリー,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 1387,broken,壊れた状態,状態・状況,状態・変化,,[],verified,0,verified,verified
@@ -2255,7 +2255,7 @@
 2253,cup ramen,カップ麺,家具・設備・物品,日用品,,[],verified,0,verified,verified
 2254,cupboard,食器棚,家具・設備・物品,家具,,[],verified,0,verified,verified
 2255,cupcake,カップケーキ,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
-2256,cupless bra,カップレスブラ,服装・装飾,下着,,[],verified,2,verified,verified
+2256,cupless bra,カップレスブラ,服装・装飾,下着,,[],verified,3,verified,verified
 2257,cupping hands,両手で包み込む,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified
 2258,cure peace (Smile Precure!),キュアピース,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 2259,curled fingers,曲げた指,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified
@@ -9238,7 +9238,7 @@
 9236,strapless,ストラップレス,服装・装飾,衣服,,[],verified,0,verified,verified
 9237,strapless bikini,ストラップレスビキニ,服装・装飾,水着,,[],verified,1,verified,verified
 9238,strapless bottom,ストラップのないボトム,服装・装飾,下着,,[],verified,1,verified,verified
-9239,strapless bra,ストラップレスブラ,服装・装飾,下着,,[],verified,1,verified,verified
+9239,strapless bra,ストラップレスブラ,服装・装飾,下着,,[],verified,3,verified,verified
 9240,strapless dress,ストラップレスドレス,服装・装飾,衣服,,[],verified,1,verified,verified
 9241,strapless leotard,ストラップレスレオタード,服装・装飾,衣服,,[],verified,1,verified,verified
 9242,strapless one-piece swimsuit,ストラップレスのワンピース水着,服装・装飾,水着,,[],verified,1,verified,verified
@@ -9267,7 +9267,7 @@
 9265,striker unit,ストライカーユニット（ストライクウィッチーズ）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 9266,string,紐,服装・装飾,装飾品,,[],verified,0,verified,verified
 9267,string bikini,紐ビキニ,服装・装飾,水着,,[],verified,1,verified,verified
-9268,string bra,紐ブラ,服装・装飾,下着,,[],verified,1,verified,verified
+9268,string bra,紐ブラ,服装・装飾,下着,,[],verified,3,verified,verified
 9269,string of fate,運命の糸,状態・状況,状況・関係性,,[],verified,0,verified,verified
 9270,string of flags,旗の連なり,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 9271,string panties,紐パンツ,服装・装飾,下着,,[],verified,3,verified,verified
@@ -10157,7 +10157,7 @@
 10155,undersized clothes,小さめの服,服装・装飾,衣服,,[],verified,0,verified,verified
 10156,undertale,Undertale,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 10157,underwater,水中,背景・場所,自然・風景,,[],verified,0,verified,verified
-10158,underwear,下着,服装・装飾,下着,,[],verified,1,verified,verified
+10158,underwear,下着,服装・装飾,下着,,[],verified,3,verified,verified
 10159,underwear only,下着のみ,服装・装飾,衣服の状態,,[],verified,2,verified,verified
 10160,undone neck ribbon,外れたネックリボン,服装・装飾,装飾品,,[],verified,0,verified,verified
 10161,undone necktie,緩んだネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified
