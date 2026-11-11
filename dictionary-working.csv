@@ -944,7 +944,7 @@
 942,black bra,黒ブラジャー,服装・装飾,衣服,,[],verified,3,verified,verified
 943,black bridal gauntlets,黒いブライダルガントレット,服装・装飾,装飾品,,[],verified,0,verified,verified
 944,black buruma,黒いブルマ,服装・装飾,下着,,[],verified,0,verified,verified
-945,black camisole,黒いキャミソール,服装・装飾,下着,,[],verified,0,verified,verified
+945,black camisole,黒いキャミソール,服装・装飾,下着,,[],verified,1,verified,verified
 946,black cape,黒いマント,服装・装飾,衣服,,[],verified,0,verified,verified
 947,black capelet,黒いケープレット,服装・装飾,衣服,,[],verified,0,verified,verified
 948,black cardigan,黒いカーディガン,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -1109,7 +1109,7 @@
 1107,blue brooch,青いブローチ,服装・装飾,装飾品,,[],verified,0,verified,verified
 1108,blue buruma,青いブルマ,服装・装飾,下着,,[],verified,0,verified,verified
 1109,blue butterfly,青い蝶,生物・動植物,動物,,[],verified,0,verified,verified
-1110,blue camisole,青いキャミソール,服装・装飾,衣服,,[],verified,0,verified,verified
+1110,blue camisole,青いキャミソール,服装・装飾,衣服,,[],verified,1,verified,verified
 1111,blue cape,青いケープ,服装・装飾,衣服,,[],verified,0,verified,verified
 1112,blue capelet,青いケープレット,服装・装飾,衣服,,[],verified,0,verified,verified
 1113,blue cardigan,ブルーカーディガン,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -1277,12 +1277,12 @@
 1275,bow (music),弓（弦楽器用）,家具・設備・物品,道具,,[],verified,0,verified,verified
 1276,bow (weapon),弓（武器）,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 1277,bow bikini,リボン付きビキニ,服装・装飾,水着,,[],verified,1,verified,verified
-1278,bow bra,リボン付きブラジャー,服装・装飾,下着,,[],verified,1,verified,verified
+1278,bow bra,リボン付きブラジャー,服装・装飾,下着,,[],verified,3,verified,verified
 1279,bow choker,リボン付きチョーカー,服装・装飾,装飾品,,[],verified,0,verified,verified
 1280,bow earrings,リボン型イヤリング,服装・装飾,装飾品,,[],verified,0,verified,verified
 1281,bow hairband,リボン付きヘアバンド,服装・装飾,装飾品,,[],verified,0,verified,verified
 1282,bow legwear,リボン付きレッグウェア,服装・装飾,衣服,,[],verified,0,verified,verified
-1283,bow panties,リボン付きパンティー,服装・装飾,下着,,[],verified,1,verified,verified
+1283,bow panties,リボン付きパンティー,服装・装飾,下着,,[],verified,3,verified,verified
 1284,bow skirt,リボン付きスカート,服装・装飾,衣服,,[],verified,0,verified,verified
 1285,bow tie,蝶ネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified
 1286,bow-shaped hair,リボン形の髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified
@@ -1644,7 +1644,7 @@
 1642,cat ear hairband,猫耳カチューシャ,服装・装飾,装飾品,,[],verified,0,verified,verified
 1643,cat ear headphones,猫耳ヘッドホン,服装・装飾,装飾品,,[],verified,0,verified,verified
 1644,cat ear legwear,猫耳付きレッグウェア,服装・装飾,衣服,,[],verified,0,verified,verified
-1645,cat ear panties,猫耳付きパンティー,服装・装飾,下着,,[],verified,1,verified,verified
+1645,cat ear panties,猫耳付きパンティー,服装・装飾,下着,,[],verified,3,verified,verified
 1646,cat ears,猫耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 1647,cat girl,猫耳の少女,人物の特徴,人物属性,,[],verified,0,verified,verified
 1648,cat hair ornament,猫の髪飾り,服装・装飾,装飾品,,[],verified,0,verified,verified
@@ -6238,7 +6238,7 @@
 6236,mullet,マレットヘア,髪・頭部,髪・頭部,,[],verified,0,verified,verified
 6237,multi-strapped bikini bottom,ストラップ多めのビキニパンツ,服装・装飾,衣服,,[],verified,1,verified,verified
 6238,multi-strapped bikini top,複数ストラップのビキニトップ,服装・装飾,衣服,,[],verified,1,verified,verified
-6239,multi-strapped panties,複数のストラップ付きショーツ,服装・装飾,下着,,[],verified,0,verified,verified
+6239,multi-strapped panties,複数のストラップ付きショーツ,服装・装飾,下着,,[],verified,3,verified,verified
 6240,multi-tied hair,複数箇所で結んだ髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified
 6241,multicolored background,多色の背景,背景・場所,空間・環境表現,,[],verified,0,verified,verified
 6242,multicolored bikini,マルチカラービキニ,服装・装飾,衣服,,[],verified,1,verified,verified
@@ -6862,7 +6862,7 @@
 6860,orange nails,オレンジ色の爪,顔・表情,化粧・メイク,,[],verified,0,verified,verified
 6861,orange neckerchief,オレンジネッカチーフ,服装・装飾,装飾品,,[],verified,0,verified,verified
 6862,orange necktie,オレンジ色のネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified
-6863,orange panties,オレンジ色のパンティー,服装・装飾,下着,,[],verified,0,verified,verified
+6863,orange panties,オレンジ色のパンティー,服装・装飾,下着,,[],verified,3,verified,verified
 6864,orange pants,オレンジパンツ,服装・装飾,衣服,,[],verified,0,verified,verified
 6865,orange pantyhose,オレンジパンスト,服装・装飾,衣服,,[],verified,1,verified,verified
 6866,orange pekoe (girls und panzer),オレンジペコ（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -7230,7 +7230,7 @@
 7228,pink bow,ピンクのリボン,服装・装飾,装飾品,,[],verified,0,verified,verified
 7229,pink bowtie,ピンクの蝶ネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified
 7230,pink bra,ピンクのブラジャー,服装・装飾,下着,,[],verified,3,verified,verified
-7231,pink camisole,ピンクのキャミソール,服装・装飾,下着,,[],verified,0,verified,verified
+7231,pink camisole,ピンクのキャミソール,服装・装飾,下着,,[],verified,1,verified,verified
 7232,pink cape,ピンクのケープ,服装・装飾,衣服,,[],verified,0,verified,verified
 7233,pink capelet,ピンクのケープレット,服装・装飾,衣服,,[],verified,0,verified,verified
 7234,pink cardigan,ピンクのカーディガン,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -9247,7 +9247,7 @@
 9245,straw hat,麦わら帽子,服装・装飾,衣服,,[],verified,0,verified,verified
 9246,strawberry,イチゴ,生物・動植物,植物,,[],verified,0,verified,verified
 9247,strawberry hair ornament,イチゴの髪飾り,服装・装飾,装飾品,,[],verified,0,verified,verified
-9248,strawberry panties,イチゴ柄のパンティー,服装・装飾,下着,,[],verified,1,verified,verified
+9248,strawberry panties,イチゴ柄のパンティー,服装・装飾,下着,,[],verified,3,verified,verified
 9249,strawberry print,イチゴ柄,服装・装飾,衣服,,[],verified,0,verified,verified
 9250,strawberry shortcake,いちごのショートケーキ,家具・設備・物品,日用品,,[],verified,0,verified,verified
 9251,streaked hair,メッシュ入りの髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified
@@ -9275,7 +9275,7 @@
 9273,striped bikini,縞模様のビキニ,服装・装飾,水着,,[],verified,1,verified,verified
 9274,striped bow,縞模様のリボン,服装・装飾,装飾品,,[],verified,0,verified,verified
 9275,striped bowtie,縞模様の蝶ネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified
-9276,striped bra,縞模様のブラジャー,服装・装飾,下着,,[],verified,1,verified,verified
+9276,striped bra,縞模様のブラジャー,服装・装飾,下着,,[],verified,3,verified,verified
 9277,striped clothes,縞模様の服,服装・装飾,衣服,,[],verified,0,verified,verified
 9278,striped coat,縞模様のコート,服装・装飾,衣服,,[],verified,0,verified,verified
 9279,striped dress,縞模様のドレス,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -9290,7 +9290,7 @@
 9288,striped kimono,縞模様の着物,服装・装飾,衣服,,[],verified,0,verified,verified
 9289,striped necktie,縞模様のネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified
 9290,striped one-piece swimsuit,縞模様のワンピース水着,服装・装飾,衣服,,[],verified,0,verified,verified
-9291,striped panties,縞パン,服装・装飾,下着,,[],verified,1,verified,verified
+9291,striped panties,縞パン,服装・装飾,下着,,[],verified,3,verified,verified
 9292,striped pants,縞模様のパンツ,服装・装飾,衣服,,[],verified,0,verified,verified
 9293,striped pantyhose,縞模様のパンティストッキング,服装・装飾,下着,,[],verified,1,verified,verified
 9294,striped ribbon,縞模様のリボン,服装・装飾,装飾品,,[],verified,0,verified,verified
@@ -10317,7 +10317,7 @@
 10315,vertical-striped headwear,縦縞の帽子,服装・装飾,装飾品,,[],verified,0,verified,verified
 10316,vertical-striped jacket,縦縞のジャケット,服装・装飾,衣服,,[],verified,0,verified,verified
 10317,vertical-striped kimono,縦縞の着物,服装・装飾,衣服,,[],verified,0,verified,verified
-10318,vertical-striped panties,縦縞のパンティー,服装・装飾,下着,,[],verified,1,verified,verified
+10318,vertical-striped panties,縦縞のパンティー,服装・装飾,下着,,[],verified,3,verified,verified
 10319,vertical-striped pants,縦縞のズボン,服装・装飾,衣服,,[],verified,0,verified,verified
 10320,vertical-striped pantyhose,縦縞のパンティストッキング,服装・装飾,下着,,[],verified,1,verified,verified
 10321,vertical-striped shirt,縦縞のシャツ,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -10539,9 +10539,9 @@
 10537,white border,白い枠線,構図・カメラ,構図・配置,,[],verified,,unreviewed,verified
 10538,white bow,白いリボン,服装・装飾,装飾品,,[],verified,0,verified,verified
 10539,white bowtie,白いボウタイ,服装・装飾,装飾品,,[],verified,,unreviewed,verified
-10540,white bra,白いブラジャー,服装・装飾,下着,,[],verified,,unreviewed,verified
+10540,white bra,白いブラジャー,服装・装飾,下着,,[],verified,3,verified,verified
 10541,white butterfly,白い蝶,生物・動植物,動物,,[],verified,,unreviewed,verified
-10542,white camisole,白いキャミソール,服装・装飾,下着,,[],verified,,unreviewed,verified
+10542,white camisole,白いキャミソール,服装・装飾,下着,,[],verified,1,verified,verified
 10543,white cape,白いケープ,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10544,white capelet,白いケープレット,服装・装飾,衣服,,[],verified,0,verified,verified
 10545,white cardigan,白いカーディガン,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -10588,7 +10588,7 @@
 10586,white nightgown,白いナイトガウン,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10587,white one-piece swimsuit,白いワンピース水着,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10588,white outline,白い輪郭,構図・カメラ,構図・配置,,[],verified,,unreviewed,verified
-10589,white panties,白いパンティー,服装・装飾,下着,,[],verified,,unreviewed,verified
+10589,white panties,白いパンティー,服装・装飾,下着,,[],verified,3,verified,verified
 10590,white pants,白いズボン,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10591,white pantyhose,白いパンスト,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10592,white pupils,白い瞳,顔・表情,目,,[],verified,0,verified,verified
@@ -10810,9 +10810,9 @@
 10808,yellow border,黄色い枠線,構図・カメラ,構図・配置,,[],verified,,unreviewed,verified
 10809,yellow bow,黄色いリボン,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 10810,yellow bowtie,黄色いボウタイ,服装・装飾,装飾品,,[],verified,,unreviewed,verified
-10811,yellow bra,黄色いブラジャー,服装・装飾,下着,,[],verified,,unreviewed,verified
+10811,yellow bra,黄色いブラジャー,服装・装飾,下着,,[],verified,3,verified,verified
 10812,yellow butterfly,黄色の蝶,生物・動植物,動物,,[],verified,,unreviewed,verified
-10813,yellow camisole,黄色のキャミソール,服装・装飾,下着,,[],verified,,unreviewed,verified
+10813,yellow camisole,黄色のキャミソール,服装・装飾,下着,,[],verified,1,verified,verified
 10814,yellow cape,黄色のケープ,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10815,yellow cardigan,黄色のカーディガン,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10816,yellow choker,黄色のチョーカー,服装・装飾,装飾品,,[],verified,,unreviewed,verified
@@ -10838,7 +10838,7 @@
 10836,yellow necktie,黄色のネクタイ,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 10837,yellow one-piece swimsuit,黄色のワンピース水着,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10838,yellow outline,黄色い輪郭,構図・カメラ,構図・配置,,[],verified,,unreviewed,verified
-10839,yellow panties,黄色のパンティー,服装・装飾,下着,,[],verified,,unreviewed,verified
+10839,yellow panties,黄色のパンティー,服装・装飾,下着,,[],verified,3,verified,verified
 10840,yellow pants,黄色のズボン,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10841,yellow pantyhose,黄色のパンスト,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10842,yellow pupils,黄色い瞳,顔・表情,目,,[],verified,0,verified,verified
