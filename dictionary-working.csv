@@ -11506,7 +11506,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 11504,mixed fluids,混ざった体液,人物の特徴,身体部位・身体状態,,[],,,,verified,normal
 11505,cum and squirt mix,精液と潮の混合,人物の特徴,身体部位・身体状態,,[],,,,verified,normal
 11506,sticky saliva,粘り気のある唾液,人物の特徴,身体部位・身体状態,,[],,,,verified,normal
-11507,oily lotion,オイル状ローション,動作・接触,性的行為・接触,,[],,,,verified,normal
+11507,oily lotion,オイル状ローション,動作・接触,性的行為・接触,,[],,,,,normal
 11508,lotion drip,滴るローション,人物の特徴,身体部位・身体状態,,[],,,,,normal
 11509,urine,尿,人物の特徴,身体部位・身体状態,,[],,,,verified,normal
 11510,golden shower,ゴールデンシャワー,動作・接触,性的行為・接触,,[],,,,verified,normal
@@ -11719,7 +11719,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 11717,glory hole,グローリーホール,家具・設備・物品,設備,,[],,,,,normal
 11718,tentacle monster,触手,生物・動植物,架空生物・モンスター,,[],,,,,normal
 11719,alien abduction,宇宙人,状態・状況,状況・関係性,,[],,,,verified,normal
-11720,vampire bite,吸血鬼,動作・接触,身体への接触,,[],,,,,normal
+11720,vampire bite,吸血鬼,状態・状況,状況・関係性,,[],,,,,normal
 11721,demon contract,悪魔,状態・状況,状況・関係性,,[],,,,verified,normal
 11722,ghost possession,幽霊,状態・状況,状況・関係性,,[],,,,verified,normal
 11723,robot domination,ロボット,状態・状況,状況・関係性,,[],,,,verified,normal
@@ -11766,12 +11766,12 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 11764,condom,コンドーム,家具・設備・物品,日用品,,[],,,,verified,normal
 11765,used condom,使用済みコンドーム,家具・設備・物品,日用品,,[],,,,verified,normal
 11766,air mattress,エアマット,家具・設備・物品,家具,,[],,,,verified,normal
-11767,bandaid on pussy,女性器に貼られた絆創膏,服装・装飾,装飾品,,[],,,,verified,normal
+11767,bandaid on pussy,女性器に貼られた絆創膏,人物の特徴,身体部位・身体状態,,[],,,,,normal
 11768,clitoris piercing,クリトリスピアス,服装・装飾,装飾品,,[],,,,verified,normal
 11769,ofuda on nipples,乳首に貼られたお札,服装・装飾,装飾品,,[],,,,verified,normal
 11770,bunnysuit,バニースーツ,服装・装飾,衣服,,[],,,,verified,normal
 11771,womb tattoo,淫紋,人物の特徴,身体部位・身体状態,,[],,,,verified,normal
-11772,seductive,誘惑的な仕草・ポーズ,顔・表情,顔・表情,,[],,,,,normal
+11772,seductive,誘惑的な仕草・ポーズ,ポーズ・姿勢,基本姿勢,,[],,,,,normal
 11773,self fondle,自分で胸を揉む,動作・接触,身体への接触,,[],,,,verified,normal
 11774,ass grab,尻をつかむ,動作・接触,身体への接触,,[],,,,verified,normal
 11775,condom in mouth,口にくわえたコンドーム,動作・接触,身体動作,,[],,,,verified,normal
