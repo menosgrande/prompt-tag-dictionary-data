@@ -11702,7 +11702,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 11700,doctor patient,医者患者,状態・状況,状況・関係性,,[],,0,verified,verified,normal
 11701,public restroom,公衆トイレ,背景・場所,場所・室内外,,[],,0,verified,verified,normal
 11702,train molestation,電車痴漢,動作・接触,性的行為・接触,,[],,4,verified,verified,normal
-11703,school classroom,学校教室,背景・場所,場所・室内外,,[],,,,verified,minor-related
+11703,school classroom,学校教室,背景・場所,場所・室内外,,[],,0,verified,verified,minor-related
 11704,love hotel,ラブホ,背景・場所,場所・室内外,,[],,2,verified,verified,normal
 11705,bath sex,お風呂,背景・場所,場所・室内外,,[],,4,verified,verified,normal
 11706,shower sex,シャワー,背景・場所,場所・室内外,,[],,4,verified,verified,normal
@@ -11739,7 +11739,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 11737,dark alley,路地裏,背景・場所,場所・室内外,,[],,0,verified,verified,normal
 11738,spaceship,宇宙船,背景・場所,場所・室内外,,[],,0,verified,verified,normal
 11739,fantasy castle,ファンタジー城,背景・場所,場所・室内外,,[],,0,verified,verified,normal
-11740,school rooftop,学校屋上,背景・場所,場所・室内外,,[],,,,verified,minor-related
+11740,school rooftop,学校屋上,背景・場所,場所・室内外,,[],,0,verified,verified,minor-related
 11741,office after hours,残業,状態・状況,時間・前後関係,,[],,0,verified,,normal
 11742,hot spring,温泉,背景・場所,場所・室内外,,[],,1,verified,verified,normal
 11743,apocalypse survival sex,終末,状態・状況,状況・関係性,,[],,4,verified,,normal
