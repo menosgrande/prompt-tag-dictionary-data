@@ -207,7 +207,7 @@
 205,alien stage,エイリアンステージ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 206,all fours,四つん這い,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified
 207,alley,路地,背景・場所,場所・室内外,,[],verified,0,verified,verified
-208,alpaca ears,アルパカの耳,人物の特徴,人物属性,,[],verified,0,verified,needs-review
+208,alpaca ears,アルパカの耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 209,alphes (style),alphes塗り,画風・描写,画風・表現様式,,[],verified,0,verified,verified
 210,alternate body size,異なる体格の差分,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 211,alternate breast size,胸の大きさの違い,人物の特徴,体型・身体的特徴,,[],verified,0,verified,verified
@@ -297,14 +297,14 @@
 295,animal collar,動物用首輪,服装・装飾,装飾品,,[],verified,0,verified,verified
 296,animal costume,動物の着ぐるみ,服装・装飾,衣服,,[],verified,0,verified,verified
 297,animal crossing,どうぶつの森（ゲームシリーズ）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
-298,animal ear fluff,獣耳の毛,人物の特徴,人物属性,,[],verified,0,verified,needs-review
+298,animal ear fluff,獣耳の毛,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 299,animal ear hairband,動物耳カチューシャ,服装・装飾,装飾品,,[],verified,0,verified,verified
 300,animal ear headphones,動物耳型ヘッドホン,服装・装飾,装飾品,,[],verified,0,verified,verified
 301,animal ear headwear,動物耳付きの帽子,服装・装飾,装飾品,,[],verified,0,verified,verified
 302,animal ear hood,動物耳付きフード,服装・装飾,衣服,,[],verified,0,verified,verified
 303,animal ear legwear,動物耳モチーフのレッグウェア,服装・装飾,衣服,,[],verified,0,verified,verified
 304,animal ear piercing,動物耳のピアス,服装・装飾,装飾品,,[],verified,0,verified,verified
-305,animal ears,獣耳,人物の特徴,人物属性,,[],verified,0,verified,needs-review
+305,animal ears,獣耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 306,animal feet,動物の足,生物・動植物,動物,,[],verified,0,verified,verified
 307,animal focus,動物が主役,構図・カメラ,構図・配置,,[],verified,0,verified,verified
 308,animal hands,動物の手,生物・動植物,動物,,[],verified,0,verified,verified
@@ -744,7 +744,7 @@
 742,bass clef,ヘ音記号,文字・記号,記号・図形,,[],verified,0,verified,verified
 743,bass guitar,ベースギター,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 744,bat (animal),コウモリ,生物・動植物,動物,,[],verified,0,verified,verified
-745,bat ears,コウモリの耳,人物の特徴,人物属性,,[],verified,0,verified,needs-review
+745,bat ears,コウモリの耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 746,bat girl,コウモリ娘,人物の特徴,人物属性,,[],verified,0,verified,verified
 747,bat hair ornament,コウモリの髪飾り,服装・装飾,装飾品,,[],verified,0,verified,verified
 748,bat print,コウモリ柄,画風・描写,画風・表現様式,,[],verified,0,verified,verified
@@ -794,7 +794,7 @@
 792,bear,クマ,生物・動植物,動物,,[],verified,0,verified,verified
 793,bear boy,クマの少年,人物の特徴,人物属性,,[],verified,0,verified,verified
 794,bear costume,クマの衣装,生物・動植物,動物,,[],verified,0,verified,verified
-795,bear ears,クマ耳,人物の特徴,人物属性,,[],verified,0,verified,needs-review
+795,bear ears,クマ耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 796,bear girl,クマの少女,人物の特徴,人物属性,,[],verified,0,verified,verified
 797,bear hair ornament,クマの髪飾り,服装・装飾,装飾品,,[],verified,0,verified,verified
 798,bear hood,クマのフード,生物・動植物,動物,,[],verified,0,verified,verified
@@ -895,7 +895,7 @@
 893,bipod,バイポッド,服装・装飾,装備・防具,,[],verified,0,verified,verified
 894,bird,鳥,生物・動植物,動物,,[],verified,0,verified,verified
 895,bird boy,バードボーイ,生物・動植物,動物,,[],verified,0,verified,verified
-896,bird ears,鳥の耳,人物の特徴,人物属性,,[],verified,0,verified,needs-review
+896,bird ears,鳥の耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 897,bird girl,鳥の女の子,生物・動植物,動物,,[],verified,0,verified,verified
 898,bird legs,鳥の脚,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 899,bird mask,バードマスク,生物・動植物,動物,,[],verified,0,verified,verified
@@ -1645,7 +1645,7 @@
 1643,cat ear headphones,猫耳ヘッドホン,服装・装飾,装飾品,,[],verified,0,verified,verified
 1644,cat ear legwear,猫耳付きレッグウェア,服装・装飾,衣服,,[],verified,0,verified,verified
 1645,cat ear panties,猫耳付きパンティー,服装・装飾,下着,,[],verified,1,verified,verified
-1646,cat ears,猫耳,人物の特徴,人物属性,,[],verified,0,verified,needs-review
+1646,cat ears,猫耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 1647,cat girl,猫耳の少女,人物の特徴,人物属性,,[],verified,0,verified,verified
 1648,cat hair ornament,猫の髪飾り,服装・装飾,装飾品,,[],verified,0,verified,verified
 1649,cat hat,猫の帽子,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -1988,7 +1988,7 @@
 1986,color trace,色トレス,画風・描写,描画技法,,[],verified,0,verified,verified
 1987,colored extremities,手足の先端に色を付けた表現,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 1988,colored eyelashes,まつげ,顔・表情,目,,[],verified,0,verified,verified
-1989,colored inner animal ears,色付きの動物耳の内側,人物の特徴,人物属性,,[],verified,0,verified,needs-review
+1989,colored inner animal ears,色付きの動物耳の内側,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 1990,colored inner hair,インナーカラー,髪・頭部,髪・頭部,,[],verified,0,verified,verified
 1991,colored nipples,色付きの乳首,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified
 1992,colored sclera,強膜に色を付けた表現,顔・表情,目,,[],verified,0,verified,verified
@@ -2110,7 +2110,7 @@
 2108,covering with blanket,毛布を掛ける,動作・接触,物への接触,,[],verified,0,verified,verified
 2109,cow,牛,生物・動植物,動物,,[],verified,0,verified,verified
 2110,cow boy,牛の特徴を持つ男性,人物の特徴,人物属性,,[],verified,0,verified,verified
-2111,cow ears,牛耳,人物の特徴,人物属性,,[],verified,0,verified,needs-review
+2111,cow ears,牛耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 2112,cow girl,牛の特徴を持つ女性,人物の特徴,人物属性,,[],verified,0,verified,verified
 2113,cow horns,牛の角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
 2114,cow print,牛柄,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -2497,7 +2497,7 @@
 2495,dog,犬,生物・動植物,動物,,[],verified,0,verified,verified
 2496,dog boy,犬の少年,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
 2497,dog days,DOG DAYS（作品）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
-2498,dog ears,犬耳,人物の特徴,人物属性,,[],verified,0,verified,needs-review
+2498,dog ears,犬耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 2499,dog girl,犬耳の少女,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
 2500,dog tags,ドッグタグ,服装・装飾,装飾品,,[],verified,0,verified,verified
 2501,dog tail,犬の尻尾,生物・動植物,動物,,[],verified,0,verified,needs-review
@@ -2582,7 +2582,7 @@
 2580,drawing bow,弓を引く,動作・接触,身体動作,,[],verified,0,verified,verified
 2581,drawing sword,剣を抜く,動作・接触,身体動作,,[],verified,0,verified,verified
 2582,drawing tablet,描画タブレット,家具・設備・物品,道具,,[],verified,0,verified,verified
-2583,drawn ears,描かれた耳,人物の特徴,人物属性,,[],verified,0,verified,needs-review
+2583,drawn ears,描かれた耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 2584,drawstring,ドローストリング,服装・装飾,衣服,,[],verified,0,verified,verified
 2585,dreadlocks,ドレッドヘア,髪・頭部,髪・頭部,,[],verified,0,verified,verified
 2586,dream soul,夢の魂,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
@@ -2675,8 +2675,8 @@
 2673,earphones,イヤホン,家具・設備・物品,日用品,,[],verified,0,verified,verified
 2674,earpiece,イヤピース,家具・設備・物品,日用品,,[],verified,0,verified,verified
 2675,earrings,ピアス,服装・装飾,装飾品,,[],verified,0,verified,verified
-2676,ears down,垂れ耳,人物の特徴,人物属性,,[],verified,0,verified,needs-review
-2677,ears through headwear,帽子から出た耳,人物の特徴,人物属性,,[],verified,0,verified,needs-review
+2676,ears down,垂れ耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
+2677,ears through headwear,帽子から出た耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 2678,ears visible through hair,髪の隙間から見える耳,髪・頭部,髪・頭部,,[],verified,0,verified,needs-review
 2679,earth (ornament),地球モチーフの装飾,服装・装飾,装飾品,,[],verified,0,verified,verified
 2680,earth (planet),地球,背景・場所,自然・風景,,[],verified,0,verified,verified
@@ -2828,7 +2828,7 @@
 2826,expressive clothes,表情豊かな服,服装・装飾,衣服,,[],verified,0,verified,verified
 2827,expressive hair,表現力豊かな髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified
 2828,extra arms,余分な腕,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
-2829,extra ears,余分な耳,人物の特徴,人物属性,,[],verified,0,verified,needs-review
+2829,extra ears,余分な耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 2830,extra eyes,余分な目,顔・表情,目,,[],verified,0,verified,verified
 2831,extra faces,余分な顔,顔・表情,顔・表情,,[],verified,0,verified,verified
 2832,extra limbs,余分な四肢,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
@@ -2891,7 +2891,7 @@
 2889,fairy (kancolle),妖精（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 2890,fairy tail,フェアリーテイル,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 2891,fairy wings,妖精の翼,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
-2892,fake animal ears,付け耳（動物耳）,人物の特徴,人物属性,,[],verified,0,verified,needs-review
+2892,fake animal ears,付け耳（動物耳）,服装・装飾,装飾品,,[],verified,0,verified,verified
 2893,fake antlers,作り物の枝角,服装・装飾,装飾品,,[],verified,0,verified,verified
 2894,fake cover,偽の表紙,構図・カメラ,構図・配置,,[],verified,0,verified,verified
 2895,fake facial hair,付けひげ,髪・頭部,髪・頭部,,[],verified,0,verified,verified
@@ -3135,7 +3135,7 @@
 3133,floating weapon,宙に浮く武器,家具・設備・物品,武器,,[],verified,,unreviewed,verified
 3134,flock,群れ,生物・動植物,動物,,[],verified,,unreviewed,verified
 3135,floor,床,背景・場所,建築・構造物,,[],verified,,unreviewed,verified
-3136,floppy ears,垂れ耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+3136,floppy ears,垂れ耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 3137,floral background,花柄の背景,背景・場所,空間・環境表現,,[],verified,,unreviewed,verified
 3138,floral print,花柄,服装・装飾,衣服,,[],verified,,unreviewed,verified
 3139,floral print kimono,花柄の着物,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -3233,7 +3233,7 @@
 3231,fourth wall,第四の壁,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
 3232,fox,キツネ,生物・動植物,動物,,[],verified,,unreviewed,verified
 3233,fox boy,キツネの少年,生物・動植物,動物,,[],verified,,unreviewed,verified
-3234,fox ears,キツネ耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+3234,fox ears,キツネ耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 3235,fox girl,キツネの少女,人物の特徴,人物属性,,[],verified,,unreviewed,verified
 3236,fox mask,狐面,生物・動植物,動物,,[],verified,,unreviewed,unreviewed
 3237,fox shadow puppet,キツネの影絵,ポーズ・姿勢,手足の配置,,[],verified,,unreviewed,verified
@@ -3540,7 +3540,7 @@
 3538,go! princess precure,Go！プリンセスプリキュア,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 3539,goat,ヤギ,生物・動植物,動物,,[],verified,,unreviewed,verified
 3540,goat boy,ヤギの少年,人物の特徴,人物属性,,[],verified,,unreviewed,verified
-3541,goat ears,ヤギの耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+3541,goat ears,ヤギの耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 3542,goat girl,ヤギの少女,人物の特徴,人物属性,,[],verified,,unreviewed,verified
 3543,goat horns,ヤギの角,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 3544,goatee,あごひげ,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
@@ -4579,7 +4579,7 @@
 4577,horror,ホラー,画風・描写,画風・表現様式,,[],verified,,unreviewed,verified
 4578,horror (theme),ホラー（テーマ）,画風・描写,画風・表現様式,,[],verified,,unreviewed,verified
 4579,horse,馬,生物・動植物,動物,,[],verified,,unreviewed,verified
-4580,horse ears,馬耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+4580,horse ears,馬耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 4581,horse girl,ウマ娘,生物・動植物,動物,,[],verified,,unreviewed,verified
 4582,horse tail,馬の尻尾,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 4583,horseback riding,乗馬,動作・接触,身体動作,,[],verified,,unreviewed,verified
@@ -4655,7 +4655,7 @@
 4653,husband and wife,夫婦,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
 4654,hydrangea,アジサイ,生物・動植物,植物,,[],verified,,unreviewed,verified
 4655,hydrokinesis,水を操る能力,光・演出,演出効果,,[],verified,,unreviewed,verified
-4656,hyena ears,ハイエナの耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+4656,hyena ears,ハイエナの耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 4657,hyouka,氷菓,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 4658,hypnosis,催眠,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
 4659,hyur,ヒュール,人物の特徴,人物属性,,[],verified,,unreviewed,verified
@@ -4871,7 +4871,7 @@
 4869,izuna (blue archive),イズナ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4870,jack dempa,ジャックデンパ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4871,jack the ripper (fate/apocrypha),ジャック・ザ・リッパー（Fate/Apocrypha）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-4872,jackal ears,ジャッカルイヤー,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+4872,jackal ears,ジャッカルイヤー,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 4873,jacket,ジャケット,服装・装飾,衣服,,[],verified,,unreviewed,verified
 4874,jacket around waist,腰に巻いたジャケット,服装・装飾,衣服,,[],verified,,unreviewed,verified
 4875,jacket lift,ジャケットめくり,動作・接触,衣服への接触,,[],verified,,unreviewed,verified
@@ -4880,7 +4880,7 @@
 4878,jacket partially removed,ジャケットを半分脱いだ状態,服装・装飾,衣服の状態,,[],verified,,unreviewed,verified
 4879,jacket pull,ジャケットを引っ張る,動作・接触,衣服への接触,,[],verified,,unreviewed,verified
 4880,jaggy lines,ギザギザの線,文字・記号,記号・図形,,[],verified,,unreviewed,unreviewed
-4881,jaguar ears,ジャガーの耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+4881,jaguar ears,ジャガーの耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 4882,jaguar print,ジャガー柄,服装・装飾,衣服,,[],verified,,unreviewed,verified
 4883,jaguar tail,ジャガーの尻尾,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 4884,jako (jakoo21),じゃこ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
@@ -5368,7 +5368,7 @@
 5366,large areolae,大きな乳輪,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5367,large bow,大きなリボン,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 5368,large breasts,大きな胸,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
-5369,large ears,大きな耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+5369,large ears,大きな耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5370,large hands,大きな手,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5371,large hat,大きな帽子,服装・装飾,衣服,,[],verified,,unreviewed,verified
 5372,large insertion,大きなものの挿入,動作・接触,性的行為・接触,,[],verified,,unreviewed,verified
@@ -5458,7 +5458,7 @@
 5456,lens flare,レンズフレア,光・演出,照明・光源,,[],verified,,unreviewed,verified
 5457,leon (pokemon),ダンデ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5458,leonardo da vinci (fate),レオナルド・ダ・ヴィンチ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-5459,leopard ears,ヒョウの耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+5459,leopard ears,ヒョウの耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5460,leopard print,ヒョウ柄,服装・装飾,衣服,,[],verified,,unreviewed,verified
 5461,leopard tail,ヒョウの尻尾,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 5462,leotard,レオタード,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -5532,7 +5532,7 @@
 5530,lio fotia,リオ・フォーティア（プロメア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5531,lion,ライオン,生物・動植物,動物,,[],verified,,unreviewed,verified
 5532,lion boy,ライオンの少年,生物・動植物,動物,,[],verified,,unreviewed,verified
-5533,lion ears,ライオンの耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+5533,lion ears,ライオンの耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5534,lion girl,ライオン娘,生物・動植物,動物,,[],verified,,unreviewed,verified
 5535,lion tail,ライオンの尻尾,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 5536,lip piercing,リップピアス,服装・装飾,装飾品,,[],verified,,unreviewed,verified
@@ -5593,7 +5593,7 @@
 5591,long legs,長い脚,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5592,long neck,長い首,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5593,long nose,長い鼻,顔・表情,顔の特徴,,[],verified,,unreviewed,verified
-5594,long pointy ears,長く尖った耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+5594,long pointy ears,長く尖った耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5595,long ribbon,長いリボン,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 5596,long scarf,長いスカーフ,服装・装飾,衣服,,[],verified,,unreviewed,verified
 5597,long shirt,ロングシャツ,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -5630,7 +5630,7 @@
 5628,loose necktie,緩めたネクタイ,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 5629,loose shirt,ゆったりしたシャツ,服装・装飾,衣服,,[],verified,,unreviewed,verified
 5630,loose socks,ずり落ちた靴下,服装・装飾,衣服,,[],verified,,unreviewed,verified
-5631,lop rabbit ears,垂れ耳ウサギの耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+5631,lop rabbit ears,垂れ耳ウサギの耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5632,lopunny (pokemon),ミミロップ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5633,lord camelot (fate),ロード・キャメロット（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5634,lord el-melloi ii case files,ロード・エルメロイII世の事件簿,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
@@ -5884,7 +5884,7 @@
 5882,mechabare,メカバレ,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5883,mechanic,整備士,人物の特徴,人物属性,,[],verified,,unreviewed,verified
 5884,mechanical arms,機械の腕,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
-5885,mechanical ears,機械の耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+5885,mechanical ears,機械の耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5886,mechanical eye,機械の目,顔・表情,目,,[],verified,,unreviewed,verified
 5887,mechanical halo,機械の光輪,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 5888,mechanical hands,機械の手,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
@@ -6150,7 +6150,7 @@
 6148,monkey,猿,生物・動植物,動物,,[],verified,,unreviewed,verified
 6149,monkey boy,モンキーボーイ,生物・動植物,種族,,[],verified,,unreviewed,verified
 6150,monkey d. luffy,モンキー・D・ルフィ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-6151,monkey ears,猿耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+6151,monkey ears,猿耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 6152,monkey girl,猿娘,生物・動植物,種族,,[],verified,,unreviewed,verified
 6153,monkey tail,猿の尻尾,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 6154,monochrome,モノクロ,画風・描写,画風・表現様式,,[],verified,,unreviewed,verified
@@ -6174,7 +6174,7 @@
 6172,moon (ornament),月（装飾）,背景・場所,自然・風景,,[],verified,,unreviewed,unreviewed
 6173,moon phases,月相,背景・場所,自然・風景,,[],verified,,unreviewed,verified
 6174,moonlight,月明かり,光・演出,照明・光源,,[],verified,,unreviewed,verified
-6175,moose ears,ヘラジカの耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+6175,moose ears,ヘラジカの耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 6176,mop,モップ,家具・設備・物品,道具,,[],verified,,unreviewed,verified
 6177,mordred (fate),モードレッド（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6178,mordred (fate/apocrypha),モードレッド（Fate/Apocrypha）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -6217,7 +6217,7 @@
 6215,mountain (arknights),マウンテン（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6216,mountainous horizon,山の地平線,背景・場所,自然・風景,,[],verified,,unreviewed,verified
 6217,mouse (animal),ネズミ,生物・動植物,動物,,[],verified,,unreviewed,verified
-6218,mouse ears,ネズミ耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+6218,mouse ears,ネズミ耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 6219,mouse girl,ネズミ娘,人物の特徴,人物属性,,[],verified,,unreviewed,verified
 6220,mouse tail,ネズミの尻尾,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 6221,mouth drool,口からよだれ,顔・表情,顔・表情,,[],verified,,unreviewed,verified
@@ -6619,7 +6619,7 @@
 6617,noses touching,鼻と鼻が触れ合う,動作・接触,対人接触・動作,,[],verified,,unreviewed,verified
 6618,noshiro (kancolle),能代（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6619,nostrils,鼻孔,顔・表情,顔の特徴,,[],verified,,unreviewed,verified
-6620,notched ear,切れ込みのある耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+6620,notched ear,切れ込みのある耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 6621,notched lapels,ノッチドラペル,服装・装飾,衣服,,[],verified,,unreviewed,verified
 6622,note,音符,文字・記号,記号・図形,,[],verified,,unreviewed,verified
 6623,notebook,ノート,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
@@ -6918,7 +6918,7 @@
 6916,otonashi kotori,音無小鳥,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6917,otonokizaka school uniform,音ノ木坂学院の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 6918,otter,カワウソ,生物・動植物,動物,,[],verified,0,verified,verified
-6919,otter ears,カワウソの耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+6919,otter ears,カワウソの耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 6920,otter tail,カワウソの尾,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 6921,ouji fashion,王子様ファッション,服装・装飾,衣服,,[],verified,,unreviewed,verified
 6922,oumae kumiko,黄前久美子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -6961,7 +6961,7 @@
 6959,overwatch 1,オーバーウォッチ1,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 6960,ovum,卵子,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 6961,owl,フクロウ,生物・動植物,動物,,[],verified,,unreviewed,verified
-6962,owl ears,フクロウの耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+6962,owl ears,フクロウの耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 6963,owl girl,フクロウの女の子,生物・動植物,種族,,[],verified,,unreviewed,verified
 6964,own hands clasped,自分の両手を組む,ポーズ・姿勢,手足の配置,,[],verified,,unreviewed,verified
 6965,own hands together,自分の両手を合わせる,ポーズ・姿勢,手足の配置,,[],verified,,unreviewed,verified
@@ -6999,14 +6999,14 @@
 6997,pancake,パンケーキ,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
 6998,pancake stack,パンケーキの積み重ね,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
 6999,panda,パンダ,生物・動植物,動物,,[],verified,,unreviewed,verified
-7000,panda ears,パンダ耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+7000,panda ears,パンダ耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 7001,panda hood,パンダのフード,服装・装飾,衣服,,[],verified,,unreviewed,verified
 7002,pangya,パンヤ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 7003,pani poni dash!,ぱにぽにだっしゅ！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 7004,panicking,慌てる,状態・状況,状態・変化,,[],verified,,unreviewed,verified
 7005,panorama,パノラマ,構図・カメラ,構図・配置,,[],verified,,unreviewed,verified
 7006,pant suit,パンツスーツ,服装・装飾,衣服,,[],verified,,unreviewed,verified
-7007,panther ears,パンサーの耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+7007,panther ears,パンサーの耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 7008,panther girl,黒豹の女の子,生物・動植物,種族,,[],verified,,unreviewed,verified
 7009,panther tail,パンサーの尻尾,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
 7010,panties,パンティー,服装・装飾,下着,,[],verified,,unreviewed,verified
@@ -7194,7 +7194,7 @@
 7192,piercing,ピアス,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 7193,piers (pokemon),ネズ（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 7194,pig,ブタ,生物・動植物,動物,,[],verified,,unreviewed,verified
-7195,pig ears,豚の耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+7195,pig ears,豚の耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 7196,pigeon,ハト,生物・動植物,動物,,[],verified,,unreviewed,verified
 7197,pigeon-toed,内股,ポーズ・姿勢,身体の向き,,[],verified,,unreviewed,verified
 7198,piggyback,おんぶ,動作・接触,対人接触・動作,,[],verified,,unreviewed,verified
@@ -7393,7 +7393,7 @@
 7391,pointing up,上を指さす,動作・接触,手の動作,,[],verified,,unreviewed,verified
 7392,pointless censoring,無意味な検閲,光・演出,演出効果,,[],verified,,unreviewed,verified
 7393,pointy breasts,尖った乳房,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
-7394,pointy ears,尖った耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+7394,pointy ears,尖った耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 7395,pointy footwear,つま先の尖った靴,服装・装飾,靴・履物,,[],verified,,unreviewed,verified
 7396,pointy hair,逆立った髪,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
 7397,pointy hat,先のとがった帽子,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -7753,7 +7753,7 @@
 7751,rabbit tail,ウサギの尾,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 7752,rabbit-shaped pupils,ウサギ型の瞳,顔・表情,目,,[],verified,0,verified,verified
 7753,raccoon,アライグマ,生物・動植物,動物,,[],verified,,unreviewed,verified
-7754,raccoon ears,アライグマの耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+7754,raccoon ears,アライグマの耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 7755,raccoon girl,アライグマの女の子,生物・動植物,種族,,[],verified,,unreviewed,verified
 7756,raccoon tail,アライグマの尾,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 7757,race bib,ゼッケン,服装・装飾,装飾品,,[],verified,,unreviewed,verified
@@ -8464,7 +8464,7 @@
 8462,sheath,鞘,服装・装飾,装備・防具,,[],verified,,unreviewed,verified
 8463,sheathed,鞘に収められた状態,状態・状況,状態・変化,,[],verified,,unreviewed,verified
 8464,sheep,羊,生物・動植物,動物,,[],verified,,unreviewed,verified
-8465,sheep ears,羊の耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+8465,sheep ears,羊の耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 8466,sheep girl,羊娘,生物・動植物,種族,,[],verified,,unreviewed,verified
 8467,sheep horns,羊の角,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 8468,sheep tail,羊の尾,生物・動植物,動物,,[],verified,,unreviewed,needs-review
@@ -10473,7 +10473,7 @@
 10471,weapon focus,武器を強調した構図,構図・カメラ,構図・配置,,[],verified,,unreviewed,verified
 10472,weapon on back,背中に武器,家具・設備・物品,武器,,[],verified,,unreviewed,verified
 10473,weapon over shoulder,肩に武器,家具・設備・物品,武器,,[],verified,,unreviewed,verified
-10474,weasel ears,イタチの耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+10474,weasel ears,イタチの耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 10475,weasel girl,イタチ娘,生物・動植物,種族,,[],verified,,unreviewed,verified
 10476,weasel tail,イタチの尾,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 10477,web address,URL,文字・記号,文字,,[],verified,,unreviewed,verified
@@ -10662,7 +10662,7 @@
 10660,wine glass,ワイングラス,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
 10661,wing brooch,ウィングブローチ,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 10662,wing collar,ウィングカラー,服装・装飾,衣服,,[],verified,,unreviewed,verified
-10663,wing ears,翼の耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+10663,wing ears,翼の耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 10664,wing hair ornament,翼の髪の飾り,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 10665,wing ornament,翼の飾り,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 10666,winged arms,翼のある腕,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
@@ -10694,7 +10694,7 @@
 10692,wolf,オオカミ,生物・動植物,動物,,[],verified,,unreviewed,verified
 10693,wolf boy,オオカミの少年（獣人）,生物・動植物,種族,,[],verified,0,verified,verified
 10694,wolf cut,ウルフカット,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
-10695,wolf ears,オオカミの耳,人物の特徴,人物属性,,[],verified,,unreviewed,needs-review
+10695,wolf ears,オオカミの耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 10696,wolf girl,オオカミ娘,生物・動植物,種族,,[],verified,0,verified,verified
 10697,wolf tail,オオカミの尾,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 10698,wolverine (x-men),ウルヴァリン（X-MEN）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
