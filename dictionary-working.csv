@@ -4215,7 +4215,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 4213,hibiki (cheer squad) (blue archive),猫塚ヒビキ（応援団／ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4214,hibiki (kancolle),響（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4215,hibiscus,ハイビスカス,生物・動植物,植物,,[],verified,0,verified,verified
-4216,hickey,ヒッキー,人物の特徴,身体部位・身体状態,,[],verified,1,verified,verified
+4216,hickey,キスマーク,人物の特徴,身体部位・身体状態,,[],verified,1,verified,verified
 4217,hidamari sketch,ヒダマリスケッチ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 4218,hidefu kitayan,ひでふキタヤン(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4219,hiding,隠れている,動作・接触,身体動作,,[],verified,0,verified,verified
@@ -5694,7 +5694,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 5692,lynette (genshin impact),リネット（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5693,lynette bishop (strike witches),リネット・ビショップ（ストライクウィッチーズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5694,lyra (pokemon),コトネ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-5695,lyre,竪琴,家具・設備・物品,日用品,,[],verified,0,verified,verified
+5695,lyre,竪琴,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 5696,lyrica prismriver (touhou),リリカ・プリズムリバー（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5697,lyrical nanoha,魔法少女リリカルなのは,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 5698,lyrics,歌詞,文字・記号,文字,,[],verified,0,verified,verified
@@ -5745,7 +5745,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 5743,mahou shoujo lyrical nanoha,魔法少女リリカルなのは,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 5744,mahou shoujo lyrical nanoha strikers,魔法少女リリカルなのは StrikerS,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 5745,mahou shoujo madoka magica,魔法少女まどか☆マギカ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
-5746,mahou shoujo madoka magica (anime),魔法少女まどか☆マギカ,画風・描写,画風・表現様式,,[],verified,0,verified,verified
+5746,mahou shoujo madoka magica (anime),魔法少女まどか☆マギカ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 5747,mahou shoujo ni akogarete,魔法少女にあこがれて,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 5748,mahou tsukai no yoru,魔法使いの夜,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 5749,maid,メイド,人物の特徴,人物属性,,[],verified,0,verified,verified
@@ -5762,7 +5762,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 5760,makise kurisu (steins;gate),牧瀬紅莉栖（シュタインズ・ゲート）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5761,makizushi,巻き寿司,家具・設備・物品,日用品,,[],verified,0,verified,verified
 5762,makoto nanaya (blazblue),マコト＝ナナヤ（ブレイブルー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-5763,makoto shinkai,新海誠風,画風・描写,画風・表現様式,,[],verified,0,verified,verified
+5763,makoto shinkai,新海誠 (作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5764,makuwauri,マクワウリ,生物・動植物,植物,,[],verified,0,verified,verified
 5765,male focus,男性中心,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified
 5766,male maid,男性メイド,人物の特徴,人物属性,,[],verified,0,verified,verified
@@ -5781,7 +5781,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 5779,mane,たてがみ,髪・頭部,髪・頭部,,[],verified,0,verified,verified
 5780,maneki-neko,招き猫,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 5781,manga,漫画,画風・描写,画風・表現様式,,[],verified,0,verified,verified
-5782,manga (object),漫画本,画風・描写,画風・表現様式,,[],verified,0,verified,verified
+5782,manga (object),漫画本,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 5783,manga cover,漫画の表紙,画風・描写,画風・表現様式,,[],verified,,unreviewed,verified
 5784,manhattan cafe (umamusume),マンハッタンカフェ（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5785,manjuu (azur lane),饅頭（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
