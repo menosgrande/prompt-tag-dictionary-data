@@ -3756,7 +3756,7 @@
 3754,grey sky,灰色の空,背景・場所,自然・風景,,[],verified,0,verified,verified
 3755,grey sleeves,灰色の袖,服装・装飾,衣服,,[],verified,0,verified,verified
 3756,grey socks,灰色の靴下,服装・装飾,衣服,,[],verified,0,verified,verified
-3757,grey sports bra,灰色のスポーツブラ,服装・装飾,下着,,[],verified,3,verified,verified
+3757,grey sports bra,灰色のスポーツブラ,服装・装飾,下着,,[],verified,1,verified,verified
 3758,grey suit,灰色のスーツ,服装・装飾,衣服,,[],verified,0,verified,verified
 3759,grey sweater,灰色のセーター,服装・装飾,衣服,,[],verified,0,verified,verified
 3760,grey sweater vest,灰色のセーターベスト,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -7920,7 +7920,7 @@
 7918,red sky,赤い空,背景・場所,自然・風景,,[],verified,0,verified,verified
 7919,red sleeves,赤い袖,服装・装飾,衣服,,[],verified,0,verified,verified
 7920,red socks,赤い靴下,服装・装飾,衣服,,[],verified,0,verified,verified
-7921,red sports bra,レッドスポーツブラ,服装・装飾,衣服,,[],verified,3,verified,verified
+7921,red sports bra,レッドスポーツブラ,服装・装飾,衣服,,[],verified,1,verified,verified
 7922,red star,赤い星,文字・記号,記号・図形,,[],verified,0,verified,verified
 7923,red suit,赤いスーツ,服装・装飾,衣服,,[],verified,0,verified,verified
 7924,red sweater,赤いセーター,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -10613,7 +10613,7 @@
 10611,white sleeves,白い袖,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10612,white snake,白蛇,生物・動植物,動物,,[],verified,,unreviewed,verified
 10613,white socks,白い靴下,服装・装飾,衣服,,[],verified,,unreviewed,verified
-10614,white sports bra,白いスポーツブラ,服装・装飾,下着,,[],verified,,unreviewed,verified
+10614,white sports bra,白いスポーツブラ,服装・装飾,下着,,[],verified,1,verified,verified
 10615,white stripes,白い縞模様,画風・描写,描画技法,,[],verified,0,verified,verified
 10616,white suit,白いスーツ,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10617,white sweater,白いセーター,服装・装飾,衣服,,[],verified,,unreviewed,verified
