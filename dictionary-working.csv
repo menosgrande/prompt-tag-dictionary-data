@@ -44,7 +44,7 @@
 42,5boys,男の子5人,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified
 43,5girls,女の子5人,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified
 44,5koma,5コマ,構図・カメラ,構図・配置,,[],verified,0,verified,verified
-45,6 (yuchae),6（ユチェ）,キャラクター・作品,キャラクター,,[],needs-review,0,verified,verified
+45,6 (yuchae),6（Yuchae）(作者),キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 46,6+boys,6+男の子,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified
 47,6+girls,六人以上の女の子,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified
 48,6+others,その他の人物6人以上,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified
@@ -111,7 +111,7 @@
 109,affectionate,愛情深い,状態・状況,状況・関係性,,[],verified,0,verified,verified
 110,afloat,浮かんでいる,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified
 111,afro,アフロ,髪・頭部,髪・頭部,,[],verified,0,verified,verified
-112,afrobull,アフロブル,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+112,afrobull,Afrobull(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 113,after bathing,入浴後,状態・状況,時間・前後関係,,[],verified,0,verified,verified
 114,after kiss,キスの後,状態・状況,時間・前後関係,,[],verified,0,verified,verified
 115,after sex,事後,状態・状況,時間・前後関係,,[],verified,4,verified,verified
@@ -162,7 +162,7 @@
 160,akagi (kancolle),赤城（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 161,akagi miria (The Idolmaster Cinderella Girls),赤城みりあ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 162,akai haato (Hololive),赤井はあと（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-163,akairiot,アカイオット,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+163,akairiot,AkaiRiot(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 164,akamatsu kaede (Danganronpa V3),赤松楓,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 165,akanbe,あかんべえ,顔・表情,顔・表情,,[],verified,0,verified,verified
 166,akane (blue archive),アカネ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -178,7 +178,7 @@
 176,aki minoriko (Touhou Project),秋穣子（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 177,aki shizuha (Touhou Project),秋静葉,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 178,akigumo (kancolle),秋雲（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-179,akinbo (hyouka fuyou),アキンボ（hyoukafuyou）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+179,akinbo (hyouka fuyou),Akinbo(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 180,akitsu maru (kancolle),あきつ丸（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 181,akitsuki karasu,秋月からす,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 182,akiyama mio (K-On!),秋山澪（けいおん！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -338,12 +338,12 @@
 336,ankle strap,足首ストラップ,服装・装飾,衣服,,[],verified,0,verified,verified
 337,ankle wrap,足首の巻き布,服装・装飾,衣服,,[],verified,0,verified,verified
 338,anklet,アンクレット,服装・装飾,装飾品,,[],verified,0,verified,verified
-339,annin musou,アニン・ムソウ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+339,annin musou,Annin Musou(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 340,anniversary,記念日,背景・場所,空間・環境表現,,[],verified,0,verified,verified
 341,annoyed,イライラしている,顔・表情,顔・表情,,[],verified,0,verified,verified
 342,antenna hair,アンテナヘア,髪・頭部,髪・頭部,,[],verified,0,verified,verified
 343,antennae,触角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
-344,anti (untea9),アンティ（untea9）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+344,anti (untea9),Anti(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 345,anti-materiel rifle,対物ライフル,家具・設備・物品,武器,,[],verified,0,verified,verified
 346,antique firearm,アンティーク銃器,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 347,antique phone,アンティーク電話,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
@@ -355,10 +355,10 @@
 353,ao dai,アオザイ,服装・装飾,衣服,,[],verified,0,verified,verified
 354,ao isami (Brave Bang Bravern!),イサミ・アオ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 355,aoba (kancolle),青葉（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-356,aoki (fumomo),青木（フモモ）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+356,aoki (fumomo),Aoki(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 357,aoki hagane no arpeggio,蒼き鋼のアルペジオ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 358,aoki reika (Smile Precure!),青木れいか,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-359,aoshima,青島,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+359,aoshima,アオシマ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 360,apartment,アパート,背景・場所,建築・構造物,,[],verified,0,verified,verified
 361,apex legends,エーペックスレジェンズ（ゲームタイトル）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 362,apple,りんご,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
@@ -517,12 +517,12 @@
 515,asahina mikuru (The Melancholy of Haruhi Suzumiya),朝比奈みくる（涼宮ハルヒの憂鬱）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 516,asakura ryouko (The Melancholy of Haruhi Suzumiya),朝倉涼子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 517,asakura toru (The Idolmaster Shiny Colors),浅倉透（アイドルマスター シャイニーカラーズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-518,asamura hiori,Asamura Hiori（固有名詞・表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+518,asamura hiori,朝叢ひおり(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 519,asanagi,朝凪,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 520,asashimo (kancolle),朝霜（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 521,asashio (kancolle),朝潮（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 522,asashio kai ni (kancolle),朝潮改二（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-523,asaya minoru,Asaya Minoru（固有名詞・表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+523,asaya minoru,Asaya Minoru(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 524,ascot,アスコットタイ,服装・装飾,衣服,,[],verified,0,verified,verified
 525,ash ketchum (Pokémon),サトシ（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 526,ashford academy school uniform,アシュフォードアカデミーユニフォーム,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -538,7 +538,7 @@
 536,assault visor,アサルトバイザー,服装・装飾,装備・防具,,[],verified,0,verified,verified
 537,assertive female,積極的な女性,人物の特徴,人物属性,,[],verified,0,verified,verified
 538,assisted exposure,衣服をめくるのを手伝う,動作・接触,衣服への接触,,[],verified,3,verified,verified
-539,asteroid ill,Asteroid Ill（意味・固有名詞要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+539,asteroid ill,あすてろid(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 540,asticassia school uniform,アスティカシアスクールユニフォーム,服装・装飾,衣服,,[],verified,0,verified,verified
 541,astolfo (fate),アストルフォ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 542,astronaut,宇宙飛行士,人物の特徴,人物属性,,[],verified,0,verified,verified
@@ -567,7 +567,7 @@
 565,atelier ryza 1,ライザのアトリエ ～常闇の女王と秘密の隠れ家～（ゲームタイトル）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 566,athletic leotard,体操レオタード,服装・装飾,衣服,,[],verified,0,verified,verified
 567,atlanta (kancolle),アトランタ（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-568,atou haruki,Atou Haruki（固有名詞・表記要確認）,キャラクター・作品,キャラクター,,[],needs-review,0,verified,verified
+568,atou haruki,Atou Haruki(細胞神曲),キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 569,attack,攻撃,動作・接触,身体動作,,[],verified,0,verified,verified
 570,au ra,アウラ（ファイナルファンタジーXIV）,人物の特徴,人物属性,,[],verified,0,verified,verified
 571,aubrey (omori),オーブリー（OMORI）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -596,9 +596,9 @@
 594,ayanami rei (Neon Genesis Evangelion),綾波レイ（新世紀エヴァンゲリオン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 595,ayase eli (Love Live!),絢瀬絵里（ラブライブ！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 596,ayase momo (Dandadan),綾瀬桃（ダンダダン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-597,ayu (mog),あゆ（mog）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+597,ayu (mog),あゆ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 598,azki (hololive),AZKi（ホロライブ）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
-599,aztodio,アズトディオ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+599,aztodio,AztoDio(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 600,azumanga daioh,あずまんが大王,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 601,azur lane,アズールレーン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 602,azusa (blue archive),アズサ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -614,7 +614,7 @@
 612,back-print panties,バックプリントパンティー,服装・装飾,下着,,[],verified,3,verified,verified
 613,back-seamed legwear,後ろ縫い目入りのレッグウェア,服装・装飾,靴・履物,,[],verified,0,verified,verified
 614,back-to-back,背中合わせ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified
-615,backbeako (torotei),Backbeako（Torotei／固有名詞・表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+615,backbeako (torotei),ベア子(ゲゲゲの鬼太郎),キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 616,backboob,裏乳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 617,backless dress,背中の開いたドレス,服装・装飾,衣服,,[],verified,1,verified,verified
 618,backless leotard,背中の開いたレオタード,服装・装飾,衣服,,[],verified,1,verified,verified
@@ -641,7 +641,7 @@
 639,baggy pants,ゆったりしたズボン,服装・装飾,衣服,,[],verified,0,verified,verified
 640,bags under eyes,目の下のクマ,顔・表情,目,,[],verified,0,verified,verified
 641,baguette,バゲット,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
-642,bai lao shu,バイラオシュ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+642,bai lao shu,Bai Lao Shu(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 643,bakemonogatari,化物語,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 644,baking,焼き菓子作り,動作・接触,身体動作,,[],verified,0,verified,verified
 645,bakugou katsuki (My Hero Academia),爆豪勝己,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -662,7 +662,7 @@
 660,bamboo forest,竹林,背景・場所,自然・風景,,[],verified,0,verified,verified
 661,bamboo shoot,タケノコ,生物・動植物,植物,,[],verified,0,verified,verified
 662,bamboo steamer,蒸籠（せいろ）,家具・設備・物品,日用品,,[],verified,0,verified,verified
-663,ban! (bansankan),Ban!（Bansankan／固有名詞・表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+663,ban! (bansankan),ばん(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 664,banana,バナナ,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 665,banana peel,バナナの皮,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 666,band uniform,バンドユニフォーム,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -849,7 +849,7 @@
 847,beret,ベレー帽,服装・装飾,装飾品,,[],verified,0,verified,verified
 848,beretta 92,ベレッタ92,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 849,berry,ベリー,背景・場所,自然・風景,,[],verified,0,verified,verified
-850,berry (pokemon),ベリー（ポケモン）,キャラクター・作品,キャラクター,,[],needs-review,0,verified,verified
+850,berry (pokemon),きのみ(ポケモン),家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 851,berserk,ベルセルク（漫画タイトル）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 852,bespectacled,眼鏡をかけた,服装・装飾,装飾品,,[],verified,0,verified,verified
 853,best quality,最高品質,品質・ネガティブ,高品質・傑作,,[],verified,0,verified,verified
@@ -870,7 +870,7 @@
 868,big belly,大きなお腹,人物の特徴,体型・身体的特徴,,[],verified,0,verified,verified
 869,big hair,ボリュームのある髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified
 870,big nose,大きな鼻,顔・表情,顔・表情,,[],verified,0,verified,verified
-871,bigrbear,Bigrbear（固有名詞・表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+871,bigrbear,bigrbear(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 872,bike shorts,サイクルショーツ,服装・装飾,衣服,,[],verified,0,verified,verified
 873,bike shorts under shorts,ショートパンツの下にサイクルショーツ,服装・装飾,衣服,,[],verified,0,verified,verified
 874,bike shorts under skirt,スカートの下にサイクルショーツ,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -1039,7 +1039,7 @@
 1037,black wings,黒い翼,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
 1038,black wrist cuffs,黒いリストカフ,服装・装飾,装飾品,,[],verified,0,verified,verified
 1039,black-framed eyewear,黒縁眼鏡,服装・装飾,装飾品,,[],verified,0,verified,verified
-1040,blade (galaxist),ブレード（Galaxist）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+1040,blade (galaxist),ブレエド(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 1041,blade (honkai: star rail),刃（崩壊：スターレイル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 1042,blake belladonna (RWBY),ブレイク・ベラドンナ（RWBY）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 1043,blake bloom (wuthering waves),黒花（鳴潮）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
@@ -1471,7 +1471,7 @@
 1469,bubble skirt,バブルスカート,服装・装飾,衣服,,[],verified,0,verified,verified
 1470,bubble tea,タピオカティー,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 1471,bubble tea challenge,タピオカドリンクチャレンジ,家具・設備・物品,その他の物品,,[],verified,0,verified,unreviewed
-1472,bubukka,ブブッカ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+1472,bubukka,Bubukka(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 1473,buck teeth,出っ歯,顔・表情,顔の特徴,,[],verified,0,verified,verified
 1474,bucket,バケツ,家具・設備・物品,日用品,,[],verified,0,verified,verified
 1475,bucket hat,バケットハット,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -1511,7 +1511,7 @@
 1509,bust cup,ブラのカップ,服装・装飾,下着,,[],verified,2,verified,verified
 1510,buster sword,バスターソード,家具・設備・物品,武器,,[],verified,0,verified,verified
 1511,bustier,ビスチェ,服装・装飾,下着,,[],verified,1,verified,verified
-1512,butcha-u,ブッチャーU,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+1512,butcha-u,ブッチャーU(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 1513,butler,執事,人物の特徴,人物属性,,[],verified,0,verified,verified
 1514,butt crack,臀裂,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified
 1515,butt plug,アナルプラグ,家具・設備・物品,道具,,[],verified,4,verified,verified
@@ -1718,7 +1718,7 @@
 1716,chando (ado),チャンド（Ado）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 1717,changli (wuthering waves),長離（鳴潮）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 1718,changpao,長袍,服装・装飾,衣服,,[],verified,0,verified,verified
-1719,chanta (ayatakaoisii),チャンタ（ayatakaoisii）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+1719,chanta (ayatakaoisii),Chanta(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 1720,chaps,チャップス,服装・装飾,衣服,,[],verified,0,verified,verified
 1721,character age,キャラクターの年齢,人物の特徴,人物属性,,[],verified,0,verified,verified
 1722,character censor,キャラクター部分の検閲,光・演出,演出効果,,[],verified,0,verified,verified
@@ -1875,7 +1875,7 @@
 1873,clawed gauntlets,爪付きガントレット,服装・装飾,装備・防具,,[],verified,0,verified,verified
 1874,claws,爪,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 1875,claymation,クレイアニメ,画風・描写,画風・表現様式,,[],verified,0,verified,verified
-1876,cle masahiro,クレサヒロ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+1876,cle masahiro,呉マサヒロ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 1877,cleaning,掃除,動作・接触,身体動作,,[],verified,0,verified,verified
 1878,cleaning rag,ぞうきん,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 1879,clear sky,晴天,背景・場所,天候・時間帯,,[],verified,0,verified,verified
@@ -2076,7 +2076,7 @@
 2074,costume switch,衣装チェンジ,服装・装飾,衣服,,[],verified,0,verified,verified
 2075,cotton candy,綿菓子,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 2076,couch,ソファ,家具・設備・物品,家具,,[],verified,0,verified,verified
-2077,cougar (cougar1404),クーガー（cougar1404）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+2077,cougar (cougar1404),クーガー(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 2078,countdown,秒読み,背景・場所,空間・環境表現,,[],verified,0,verified,verified
 2079,counter,カウンター,家具・設備・物品,家具,,[],verified,0,verified,verified
 2080,counter:side,カウンター：サイド,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
@@ -2143,11 +2143,11 @@
 2141,crazy straw,クレイジーストロー,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 2142,cream,クリーム,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 2143,cream on face,顔に付いたクリーム,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
-2144,creator connection,クリエイター連携（意味要確認）,動作・接触,対人接触・動作,,[],needs-review,0,verified,verified
+2144,creator connection,同一作者によるクロスオーバー,動作・接触,対人接触・動作,,[],verified,0,verified,verified
 2145,creature,生き物,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
 2146,creature and personification,生物・怪物の擬人化,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
 2147,creature on head,頭の上に乗った生物,ポーズ・姿勢,身体の配置,,[],verified,0,verified,verified
-2148,creayus,クリーユ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+2148,creayus,嵐月(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 2149,credits,クレジット,文字・記号,文字,,[],verified,0,verified,verified
 2150,credits page,クレジットページ,構図・カメラ,構図・配置,,[],verified,0,verified,verified
 2151,crepe,クレープ,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
@@ -2381,7 +2381,7 @@
 2379,defloration,処女喪失,動作・接触,対人接触・動作,,[],verified,4,verified,verified
 2380,deformed,デフォルメされた,品質・ネガティブ,ネガティブ,,[],verified,0,verified,verified
 2381,dehya (genshin impact),ディシア（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-2382,dei shirou,Dei Shirou（表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+2382,dei shirou,Dei Shirou(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 2383,delicious party precure,デリシャスパーティ♡プリキュア,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 2384,delinquent,不良,人物の特徴,人物属性,,[],verified,0,verified,verified
 2385,demon,悪魔,人物の特徴,人物属性,,[],verified,0,verified,verified
@@ -2449,7 +2449,7 @@
 2447,digital media player,デジタルメディアプレーヤー,家具・設備・物品,機械・装置,,[],verified,0,verified,verified
 2448,digital painting,デジタルペイント,画風・描写,画風・表現様式,,[],verified,0,verified,verified
 2449,digitigrade,趾行性,人物の特徴,体型・身体的特徴,,[],verified,0,verified,verified
-2450,dikko,ディッコ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+2450,dikko,Dikko(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 2451,dilation tape,拡張テープ,家具・設備・物品,日用品,,[],verified,0,verified,verified
 2452,diluc (genshin impact),ディルック（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 2453,dimitri alexandre blaiddyd (Fire Emblem: Three Houses),ディミトリ＝アレクサンドル＝ブレーダッド（ファイアーエムブレム 風花雪月）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -3343,8 +3343,8 @@
 3341,full-length mirror,姿見,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
 3342,full-length zipper,全長ファスナー,服装・装飾,衣服,,[],verified,,unreviewed,verified
 3343,fullmetal alchemist,鋼の錬金術師,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
-3344,fumihiko (fu mihi ko),ふみひこ（fu mihi ko）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
-3345,fumio (rsqkr),ふみお（rsqkr）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+3344,fumihiko (fu mihi ko),ふみひこ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
+3345,fumio (rsqkr),Fumio(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 3346,fumo (doll),ふもふもぬいぐるみ,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
 3347,funami yui (YuruYuri),船見結衣,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 3348,fundoshi,ふんどし,服装・装飾,下着,,[],verified,,unreviewed,verified
@@ -3395,7 +3395,7 @@
 3393,fushiguro megumi (Jujutsu Kaisen),伏黒恵（呪術廻戦）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 3394,fusion,融合,状態・状況,状態・変化,,[],verified,,unreviewed,verified
 3395,fusou (kancolle),扶桑（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-3396,fusu (a95101221),ふす（a95101221）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+3396,fusu (a95101221),ふす(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 3397,fusuma,襖,背景・場所,建築・構造物,,[],verified,,unreviewed,verified
 3398,futaba anzu (The Idolmaster Cinderella Girls),双葉杏,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 3399,futaba channel,ふたばちゃんねる,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
@@ -3406,7 +3406,7 @@
 3404,futatsuiwa mamizou (Touhou Project),二ッ岩マミゾウ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 3405,futon,布団,家具・設備・物品,家具,,[],verified,,unreviewed,verified
 3406,fuuin no tsue,封印の杖,家具・設備・物品,道具,,[],verified,,unreviewed,unreviewed
-3407,fuuzasa,フーザサ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+3407,fuuzasa,フウザサ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 3408,fuwawa abyssgard (Hololive),フワワ・アビスガード（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 3409,fuwawa abyssgard (1st costume),フワワ・アビスガード（1着目の衣装）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 3410,g-string,Gストリング,服装・装飾,下着,,[],verified,,unreviewed,verified
@@ -3433,7 +3433,7 @@
 3431,gangut (kancolle),Гангут（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 3432,ganyu (genshin impact),甘雨（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 3433,gao,ガオー,文字・記号,文字,,[],verified,,unreviewed,verified
-3434,gaoo (frpjx283),がおー（frpjx283）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+3434,gaoo (frpjx283),がおー(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 3435,gap (touhou),ギャップ（touhou）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 3436,gaping,隙間,状態・状況,状態・変化,,[],verified,,unreviewed,verified
 3437,garden,庭園,背景・場所,自然・風景,,[],verified,,unreviewed,verified
@@ -3552,7 +3552,7 @@
 3550,god rays,薄明光線,光・演出,照明・光源,,[],verified,,unreviewed,verified
 3551,goddess of victory: nikke,勝利の女神：NIKKE,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 3552,godzilla (series),ゴジラシリーズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
-3553,gofu,ゴフ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+3553,gofu,Gofu(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 3554,goggles,ゴーグル,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 3555,goggles around neck,首に掛けたゴーグル,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 3556,goggles on head,頭に載せたゴーグル,服装・装飾,装飾品,,[],verified,,unreviewed,verified
@@ -3584,8 +3584,8 @@
 3582,goldenglow (arknights),ゴールデングロー（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 3583,goldfish,金魚,生物・動植物,動物,,[],verified,,unreviewed,verified
 3584,golf club,ゴルフクラブ,家具・設備・物品,道具,,[],verified,,unreviewed,verified
-3585,goma (gomasamune),ゴマ（gomasamune）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
-3586,goma (yoku yatta hou jane),ゴマ（yoku yatta hou jane）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+3585,goma (gomasamune),Goma(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
+3586,goma (yoku yatta hou jane),Goma(Yoku Yatta Hou Jane)(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 3587,gomashio (goma feet),ゴマシオ（ゴマフィート）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 3588,gomennasai,ごめんなさい,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 3589,gonzarez,ゴンザレス,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
@@ -3778,7 +3778,7 @@
 3776,grilling,焼く,動作・接触,身体動作,,[],verified,,unreviewed,verified
 3777,grimace,顔をしかめる,顔・表情,顔・表情,,[],verified,,unreviewed,verified
 3778,grimoire,魔導書（グリモワール）,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
-3779,grimoire of alice,アリスのグリモア,キャラクター・作品,タイトル（作品名）,,[],needs-review,0,verified,verified
+3779,grimoire of alice,アリスのグリモア(東方怪綺談),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 3780,grin,歯を見せて笑う,顔・表情,顔・表情,,[],verified,,unreviewed,verified
 3781,grinding,グラインディング,動作・接触,性的行為・接触,,[],verified,,unreviewed,verified
 3782,groceries,食料品,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
@@ -3819,10 +3819,10 @@
 3817,gundam tekketsu no orphans,機動戦士ガンダム 鉄血のオルフェンズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 3818,gundam unicorn,機動戦士ガンダムUC,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 3819,gundam zz,機動戦士ガンダムZZ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
-3820,gunjyou (gunjyou 00),群青（gunjyou 00）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
-3821,gurande (g-size),グランデ（G-size）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+3820,gunjyou (gunjyou 00),群青(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
+3821,gurande (g-size),ぐらんで(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 3822,gusset,マチ（衣類）,服装・装飾,下着,,[],verified,,unreviewed,verified
-3823,gweda,グウェダ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+3823,gweda,Gweda(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 3824,gyaru,ギャル,服装・装飾,衣服,,[],verified,,unreviewed,verified
 3825,gyaru v,ギャルピース,ポーズ・姿勢,手足の配置,,[],verified,,unreviewed,verified
 3826,gyee,サンクタス戦記-GYEE-,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
@@ -3834,7 +3834,7 @@
 3832,gymnastics,体操競技,動作・接触,身体動作,,[],verified,,unreviewed,verified
 3833,h&k hk416,HK416（H&K製アサルトライフル）,家具・設備・物品,武器,,"[""H&K HK416"",""HK416""]",verified,0,verified,verified
 3834,h&k ump,UMP（H&K製サブマシンガン）,家具・設備・物品,武器,,"[""H&K UMP"",""UMP""]",verified,0,verified,verified
-3835,ha akabouzu,ハ・アカボウズ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+3835,ha akabouzu,ハ・アカボウズ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 3836,habit,癖,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
 3837,hachigatsu no cinderella nine,八月のシンデレラナイン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 3838,hachimaki,はちまき,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -4049,7 +4049,7 @@
 4047,happy sex,幸せなセックス,動作・接触,性的行為・接触,,[],verified,4,verified,verified
 4048,happy tears,幸せな涙,顔・表情,顔・表情,,[],verified,,unreviewed,verified
 4049,happy valentine,ハッピーバレンタインデー,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
-4050,hara (harayutaka),ハラ（Harayutaka）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4050,hara (harayutaka),はら(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4051,harada minoru (Saibou Shinkyoku),原田実（細胞神曲）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4052,harada takehito,原田たけひと,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4053,haramaki,腹巻き,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -4217,7 +4217,7 @@
 4215,hibiscus,ハイビスカス,生物・動植物,植物,,[],verified,,unreviewed,verified
 4216,hickey,ヒッキー,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 4217,hidamari sketch,ヒダマリスケッチ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
-4218,hidefu kitayan,ひでふキタヤン,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4218,hidefu kitayan,ひでふキタヤン(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4219,hiding,隠れている,動作・接触,身体動作,,[],verified,,unreviewed,verified
 4220,hieda no akyuu (Touhou Project),稗田阿求,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4221,hiei (kancolle),比叡（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -4268,12 +4268,12 @@
 4266,himekaidou hatate (Touhou Project),姫海棠はたて,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4267,himemori luna (Hololive),姫森ルーナ（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4268,himeno (chainsaw man),姫野（チェンソーマン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-4269,himura kiseki,ヒムラ・キセキ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4269,himura kiseki,比村奇石(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4270,hina (blue archive),空崎ヒナ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4271,hina (swimsuit) (blue archive),ヒナ（水着）（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4272,hinanawi tenshi (Touhou Project),比那名居天子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4273,hinata hajime (Danganronpa 2: Goodbye Despair),日向創（スーパーダンガンロンパ2 さよなら絶望学園）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-4274,hinghoi,ヒンゴイ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4274,hinghoi,Hinghoi(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4275,hino akane (smile precure!),日野あかね（スマイルプリキュア！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4276,hino rei (Sailor Moon),火野レイ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4277,hinoshita kaho (Love Live! Hasunosora),日野下花帆（ラブライブ！蓮ノ空女学院スクールアイドルクラブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -4286,14 +4286,14 @@
 4284,hiro (darling in the franxx),ヒロ（ダーリン・イン・ザ・フランキス）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4285,hirogaru sky! precure,ひろがるスカイ！プリキュア,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 4286,hiroi kikuri (Bocchi the Rock!),廣井きくり（ぼっち・ざ・ろっく！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-4287,hiroki (yyqw7151),ひろき（yyqw7151）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4287,hiroki (yyqw7151),ヒロき(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4288,hiryuu (kancolle),飛龍（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4289,hisahiko,ヒサヒコ,キャラクター・作品,作者・配信者,,"[""Hisahiko""]",verified,0,verified,verified
 4290,hisakawa hayate (The Idolmaster Cinderella Girls),久川颯（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4291,hisakawa nagi (The Idolmaster Cinderella Girls),久川凪,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4292,hishaku,柄杓,家具・設備・物品,日用品,,[],verified,0,verified,verified
 4293,hishikawa rikka (DokiDoki! PreCure),菱川六花（ドキドキ！プリキュア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-4294,hisona (suaritesumi),Hisona（suaritesumi／表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4294,hisona (suaritesumi),Hisona(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4295,historical name connection,歴史上の同一人物に由来するキャラクター同士の関連,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
 4296,hitachi magic wand,日立の魔法の杖,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
 4297,hitodama,人魂,家具・設備・物品,その他の物品,,[],verified,,unreviewed,unreviewed
@@ -4560,7 +4560,7 @@
 4558,hoop,輪,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
 4559,hoop earrings,フープピアス,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 4560,hooves,蹄,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
-4561,hori (hori no su),ほり（ほりの巣）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4561,hori (hori no su),ほり(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4562,horikawa raiko (touhou project),堀川雷鼓（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4563,horizon,地平線,背景・場所,自然・風景,,[],verified,,unreviewed,verified
 4564,horizontal pupils,横長の瞳孔,顔・表情,目,,[],verified,,unreviewed,verified
@@ -4601,7 +4601,7 @@
 4599,hoshino ruby (Oshi no Ko),星野ルビー（推しの子）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4600,hoshizora miyuki (Smile PreCure!),星空みゆき,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4601,hoshizora rin (Love Live! School Idol Project),星空凛（ラブライブ！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-4602,hoshizuki (seigetsu),Hoshizuki（Seigetsu／表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4602,hoshizuki (seigetsu),Hoshizuki(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4603,hospital,病院,背景・場所,建築・構造物,,[],verified,,unreviewed,verified
 4604,hospital bed,病院のベッド,家具・設備・物品,家具,,[],verified,,unreviewed,verified
 4605,hospital gown,病院着,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -4620,7 +4620,7 @@
 4618,houshou marine (Hololive),宝鐘マリン（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4619,houshou marine (1st costume),宝鐘マリン（初期衣装）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4620,houshou marine (summer),宝鐘マリン（夏衣装）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-4621,houtengeki,ほうてんげき,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4621,houtengeki,方天戟(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4622,how to,手順・方法,文字・記号,文字,,[],verified,,unreviewed,verified
 4623,hoyofair,ホヨフェア,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
 4624,hozuki momiji (onii-chan wa oshimai!),穂月もみじ（お兄ちゃんはおしまい！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -4688,7 +4688,7 @@
 4686,icing,アイシング,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
 4687,id card,身分証明書,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
 4688,identity v,第五人格,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
-4689,ido (teketeke),いど（teketeke）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4689,ido (teketeke),いど(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4690,idol,アイドル,人物の特徴,人物属性,,[],verified,,unreviewed,verified
 4691,idol clothes,アイドル衣装,服装・装飾,衣服,,[],verified,,unreviewed,verified
 4692,idolmaster,アイドルマスター,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
@@ -4704,27 +4704,27 @@
 4702,idolmaster side-m,アイドルマスターSideM,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 4703,iesupa,Iesupa（イエスパ）,キャラクター・作品,作者・配信者,,"[""Iesupa"",""イエスパ""]",verified,0,verified,verified
 4704,if they mated,彼らが交尾した場合,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
-4705,igarashi futaba (shiromanta),五十嵐双葉（しろまんた）,キャラクター・作品,キャラクター,,[],needs-review,0,verified,verified
+4705,igarashi futaba (shiromanta),五十嵐双葉(先輩がうざい後輩の話),キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4706,igote,射籠手,服装・装飾,衣服,,[],verified,,unreviewed,verified
 4707,iizuki tasuku,唯々月たすく,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4708,iizunamaru megumu (Touhou Project),飯綱丸龍,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4709,ijichi nijika (Bocchi the Rock!),伊地知虹夏（ぼっち・ざ・ろっく！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4710,ijiranaide nagatoro-san,イジらないで、長瀞さん,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 4711,ikamusume (Squid Girl),イカ娘,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-4712,ikari manatsu,イカリマナツ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4712,ikari manatsu,イカリマナツ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4713,ikari shinji (Neon Genesis Evangelion),碇シンジ（新世紀エヴァンゲリオン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4714,ikazuchi (kancolle),雷（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4715,ike (fire emblem),アイク（ファイアーエムブレム 蒼炎の軌跡／暁の女神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-4716,ikeuchi tanuma,Ikeuchi Tanuma（表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4716,ikeuchi tanuma,池内たぬま(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4717,ikkitousen,一騎当千,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
-4718,ikuchan kaoru,いくちゃんかおる,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4718,ikuchan kaoru,郁(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4719,illustration,イラスト,画風・描写,画風・表現様式,,[],verified,,unreviewed,verified
 4720,illustrious (azur lane),イラストリアス（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4721,illyasviel von einzbern (Fate),イリヤスフィール・フォン・アインツベルン,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4722,ilya kuvshinov,イリヤ・クブシノフ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4723,imagining,想像する,顔・表情,顔・表情,,[],verified,,unreviewed,verified
 4724,imaizumi kagerou (Touhou Project),今泉影狼,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-4725,imizu (nitro unknown),イミズ（ニトロ不明）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4725,imizu (nitro unknown),イミズ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4726,imminent kiss,キス寸前,動作・接触,対人接触・動作,,[],verified,,unreviewed,verified
 4727,imminent penetration,挿入寸前,動作・接触,性的行為・接触,,[],verified,3,verified,verified
 4728,imminent vaginal,膣への挿入寸前,動作・接触,性的行為・接触,,[],verified,3,verified,verified
@@ -4777,14 +4777,14 @@
 4775,indoors,屋内,背景・場所,場所・室内外,,[],verified,,unreviewed,verified
 4776,industrial piercing,インダストリアルピアス,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 4777,industrial pipe,工業用パイプ,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
-4778,infection monitor (arknights),感染モニター（Arknights）,キャラクター・作品,キャラクター,,[],needs-review,0,verified,verified
+4778,infection monitor (arknights),感染モニター(アークナイツ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4779,infinite stratos,インフィニット・ストラトス,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 4780,infinity symbol,無限大記号,文字・記号,記号・図形,,[],verified,,unreviewed,verified
 4781,infirmary,医務室,背景・場所,建築・構造物,,[],verified,,unreviewed,verified
 4782,inflatable raft,ゴムボート,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
 4783,inflatable toy,空気で膨らませる玩具,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
 4784,inflation,膨張,状態・状況,状態・変化,,[],verified,,unreviewed,verified
-4785,ini (inunabe00),いに（inunabe00）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4785,ini (inunabe00),いに(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4786,injury,負傷,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 4787,ink,インク,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
 4788,ink tank (splatoon),インクタンク（スプラトゥーン）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
@@ -4843,27 +4843,27 @@
 4841,isekaijoucho,ヰ世界情緒,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4842,iseri nina (Girls Band Cry),井芹仁菜（ガールズバンドクライ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4843,ishikei,石恵,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
-4844,ishiyumi,Ishiyumi（表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4844,ishiyumi,Ishiyumi(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4845,ishmael (project moon),イシュメール（Project Moon）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4846,ishtar (fate),イシュタル（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4847,iskandar (fate),イスカンダル（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4848,island,島,背景・場所,自然・風景,,[],verified,,unreviewed,verified
-4849,isoi reiji,磯井れいじ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4849,isoi reiji,磯井れいじ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4850,isokaze (kancolle),磯風（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4851,isometric,アイソメトリック構図,画風・描写,画風・表現様式,,[],verified,,unreviewed,verified
 4852,isonami (kancolle),磯波（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-4853,isshiki (ffmania7),一色（ffmania7）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4853,isshiki (ffmania7),一色(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4854,isuzu (kancolle),五十鈴（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4855,isuzu hana (Girls und Panzer),五十鈴華（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4856,itadori yuuji (Jujutsu Kaisen),虎杖悠仁（呪術廻戦）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4857,italian flag,イタリア国旗,文字・記号,記号・図形,,[],verified,,unreviewed,verified
 4858,italian text,イタリア語の文字,文字・記号,文字,,[],verified,,unreviewed,verified
 4859,ito noizi,いとうのいぢ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
-4860,itomugi-kun,いとむぎくん,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4860,itomugi-kun,いとむぎくん(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4861,itsumi erika (Girls und Panzer),逸見エリカ（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4862,ivy,ツタ,生物・動植物,植物,,[],verified,,unreviewed,verified
-4863,ixy,イクシー,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
-4864,izawa (bhive003),伊沢（bhive003）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4863,ixy,いくしー（Ixy）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
+4864,izawa (bhive003),Izawa(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4865,izayoi sakuya (Touhou Project),十六夜咲夜,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4866,izumi konata (Lucky Star),泉こなた（らき☆すた）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4867,izumi sagiri (Eromanga Sensei),和泉紗霧（エロマンガ先生）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -4883,7 +4883,7 @@
 4881,jaguar ears,ジャガーの耳,人物の特徴,人物属性,,[],verified,,unreviewed,verified
 4882,jaguar print,ジャガー柄,服装・装飾,衣服,,[],verified,,unreviewed,verified
 4883,jaguar tail,ジャガーの尻尾,生物・動植物,動物,,[],verified,,unreviewed,verified
-4884,jako (jakoo21),ジャコ（jakoo21）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4884,jako (jakoo21),じゃこ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4885,jakuzure nonon (Kill la Kill),蛇崩乃音（キルラキル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4886,jam,ジャム,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
 4887,james (pokemon),コジロウ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -4917,10 +4917,10 @@
 4915,jiangshi costume,キョンシー衣装,服装・装飾,衣服,,[],verified,,unreviewed,verified
 4916,jigglypuff (Pokémon),プリン（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4917,jimiko,地味子,人物の特徴,人物属性,,[],verified,,unreviewed,verified
-4918,jin (mugenjin),ジン（ムゲンジン）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4918,jin (mugenjin),ジン(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4919,jingasa,陣笠,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 4920,jingle bell,鈴,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
-4921,jinguu (4839ms),神宮（4839ms）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4921,jinguu (4839ms),Jinguu(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4922,jintsuu (kancolle),神通（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4923,jinx (league of legends),ジンクス（リーグオブレジェンド）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4924,jirai kei,地雷系ファッション,画風・描写,画風・表現様式,,[],verified,,unreviewed,verified
@@ -4932,7 +4932,7 @@
 4930,jojo no kimyou na bouken,ジョジョの奇妙な冒険,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 4931,jojo pose,ジョジョ立ち,ポーズ・姿勢,基本姿勢,,[],verified,,unreviewed,verified
 4932,jojolion,ジョジョリオン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
-4933,jokanhiyou,ジョカンヒユー,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4933,jokanhiyou,jokanhiyou(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4934,jolly roger,海賊旗,文字・記号,記号・図形,,[],verified,,unreviewed,verified
 4935,jonathan joestar (JoJo's Bizarre Adventure),ジョナサン・ジョースター,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4936,joseph joestar (JoJo's Bizarre Adventure),ジョセフ・ジョースター,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -4961,7 +4961,7 @@
 4959,k-pop,K-POP,文字・記号,ロゴ・ブランド表記,,"[""ケーポップ""]",verified,,unreviewed,unreviewed
 4960,k-suwabe,K・スワベ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4961,k/da (league of legends),K/DA（リーグ・オブ・レジェンド）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-4962,kaamin (mariarose753),かーみん（mariarose753）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4962,kaamin (mariarose753),Kaamin(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 4963,kaban (kemono friends),かばん（けものフレンズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4964,kabedon,壁ドン,動作・接触,対人接触・動作,,[],verified,,unreviewed,verified
 4965,kaburagi t. kotetsu (Tiger & Bunny),鏑木・T・虎徹（TIGER & BUNNY）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -4998,7 +4998,7 @@
 4996,kamaboko,かまぼこ,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
 4997,kamado nezuko (Demon Slayer: Kimetsu no Yaiba),竈門禰豆子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 4998,kamado tanjirou (Demon Slayer: Kimetsu no Yaiba),竈門炭治郎,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-4999,kame (kamepan44231),かめ（kamepan44231）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+4999,kame (kamepan44231),かめぱすた(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5000,kamen rider,仮面ライダー,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 5001,kamijou touma (A Certain Magical Index),上条当麻,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5002,kamikaze (kancolle),神風（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -5046,7 +5046,7 @@
 5044,karin (blue archive),角楯カリン（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5045,karin (bunny) (blue archive),カリン（バニーガール）（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5046,kariyushi shirt,かりゆしウェア,服装・装飾,衣服,,[],verified,,unreviewed,verified
-5047,karukan (monjya),カルカン（モンジャ）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5047,karukan (monjya),かるかん(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5048,karyl (princess connect!),キャル（プリンセスコネクト！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5049,kasane teto (UTAU),重音テト（UTAU）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5050,kasane teto (sv),重音テトSV,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -5059,9 +5059,9 @@
 5057,kasugano sakura (Street Fighter),春日野さくら（ストリートファイター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5058,kasumi (doa),かすみ（DEAD OR ALIVE）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5059,kasumi (kancolle),霞（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-5060,kasumi (skchkko),かすみ（skchkko）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5060,kasumi (skchkko),かすみ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5061,kasumi kai ni (kancolle),霞改二（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-5062,katahira masashi,カタヒラマシャシ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5062,katahira masashi,Katahira Masashi(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5063,katana,刀,家具・設備・物品,武器,,[],verified,,unreviewed,verified
 5064,katekyo hitman reborn!,家庭教師ヒットマンREBORN！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 5065,katori (kancolle),香取（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -5074,20 +5074,20 @@
 5072,kawaii,かわいい,画風・描写,画風・表現様式,,[],verified,,unreviewed,verified
 5073,kawakaze (kancolle),江風（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5074,kawaragi momoka (Girls Band Cry),河原木桃香,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-5075,kawashina (momen silicon),カワシナ（Momen Silicon）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5075,kawashina (momen silicon),カワシナ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5076,kawashiro nitori (touhou project),河城にとり（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5077,kay (girls und panzer),ケイ（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5078,kayoko (blue archive),鬼方カヨコ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5079,kazama iroha (Hololive),風真いろは（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5080,kazama iroha (1st costume),風真いろは（1st衣装）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5081,kazami yuuka (Touhou Project),風見幽香,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-5082,kazenokaze,カゼノカゼ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5082,kazenokaze,Kazenokaze(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5083,kazusa (blue archive),杏山カズサ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5084,keep out,立入禁止,文字・記号,文字,,[],verified,,unreviewed,verified
 5085,keizoku military uniform,継続高校の軍服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 5086,keizoku school uniform,継続高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 5087,kel (omori),ケル（OMORI）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-5088,kemachiku,ケマチク,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5088,kemachiku,Kemachiku(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5089,kemomimi-chan (naga u),ケモミミちゃん（naga u）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5090,kemono friends,けものフレンズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 5091,kemono friends 3,けものフレンズ3,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
@@ -5243,7 +5243,7 @@
 5241,kono subarashii sekai ni shukufuku wo!,この素晴らしい世界に祝福を！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 5242,konohagakure shinobi uniform,木ノ葉隠れの忍者服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 5243,konohagakure symbol,木ノ葉隠れの里のマーク,文字・記号,記号・図形,,[],verified,,unreviewed,verified
-5244,konoshige (ryuun),コノシゲ（ryuun）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5244,konoshige (ryuun),コノシゲ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5245,konpaku youmu (Touhou Project),魂魄妖夢,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5246,konpaku youmu (ghost),魂魄妖夢（幽霊）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5247,korean clothes,韓服,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -5264,7 +5264,7 @@
 5262,kou hiyoyo,こうひよよ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5263,kouhaku nawa,紅白の縄,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
 5264,kouji (campus life),Kouji（キャンパスライフ）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
-5265,kouno (masao),こうの（まさお）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5265,kouno (masao),河野(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5266,kourindou tengu costume,香霖堂天狗装束,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,unreviewed
 5267,kousaka kirino (Oreimo),高坂桐乃,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5268,kousaka reina (Sound! Euphonium),高坂麗奈,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -5275,7 +5275,7 @@
 5273,koyorin,コヨリン,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5274,kris (pokemon),クリス（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5275,krista lenz (Attack on Titan),クリスタ・レンズ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-5276,kuavera,クアベラ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5276,kuavera,Kuavera(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5277,kuchiki rukia (Bleach),朽木ルキア（BLEACH）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5278,kudamaki tsukasa (touhou),菅牧典（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5279,kugisaki nobara (jujutsu kaisen),釘崎野薔薇（呪術廻戦）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -5297,8 +5297,8 @@
 5295,kurodani yamame (touhou),黒谷ヤマメ（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5296,kuroki tomoko (watamote),黒木智子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5297,kurokoma saki (touhou),驪駒早鬼（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-5298,kurokote,Kurokote（表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
-5299,kuromiya,クロミヤ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5298,kurokote,黒小手,服装・装飾,装備・防具,,[],verified,0,verified,verified
+5299,kuromiya,Kuromiya(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5300,kuromorimine military uniform,黒森峰女学園の軍服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 5301,kuromorimine school uniform,黒森峰女学園の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 5302,kurosaki ichigo (bleach),黒崎一護（BLEACH）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -5547,7 +5547,7 @@
 5545,listening to music,音楽を聴く,動作・接触,身体動作,,[],verified,,unreviewed,verified
 5546,little busters!,リトルバスターズ！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 5547,little busters! school uniform,リトルバスターズ！の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
-5548,little nuns (diva),リトルナン（歌姫）,キャラクター・作品,タイトル（作品名）,,[],needs-review,0,verified,verified
+5548,little nuns (diva),リトル・ナンズ(Diva作品),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 5549,little red riding hood (Fairy Tale),赤ずきん（童話）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5550,little red riding hood (grimm),赤ずきん（グリム童話）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5551,little red riding hood (grimm) (cosplay),赤ずきん（グリム童話）のコスプレ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -5836,12 +5836,12 @@
 5834,masked,仮面を着けた,状態・状況,状態・変化,,[],verified,,unreviewed,verified
 5835,masochism,マゾヒズム,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
 5836,massage,マッサージ,動作・接触,身体への接触,,[],verified,,unreviewed,verified
-5837,massakasama,マッサカサマ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5837,massakasama,まっさかさま(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5838,mast,帆柱,家具・設備・物品,日用品,,[],verified,,unreviewed,unreviewed
 5839,master sword,マスターソード,家具・設備・物品,武器,,[],verified,,unreviewed,verified
 5840,masterpiece,傑作,品質・ネガティブ,高品質・傑作,,[],verified,,unreviewed,verified
 5841,masu,升,家具・設備・物品,道具,,[],verified,,unreviewed,verified
-5842,masukuza j,マスクザj,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5842,masukuza j,マスクザJ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5843,mat,マット,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
 5844,matara okina (touhou),摩多羅隠岐奈（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5845,matching outfits,お揃いの服,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -5867,7 +5867,7 @@
 5865,matte painting,マットペインティング,画風・描写,画風・表現様式,,[],verified,,unreviewed,verified
 5866,mature female,成熟した女性,人物の特徴,人物属性,,[],verified,,unreviewed,verified
 5867,mature male,成熟した男性,人物の特徴,人物属性,,[],verified,,unreviewed,verified
-5868,maturiuta sorato,マツリウタ・ソラト,キャラクター・作品,作者・配信者,,"[""Maturiuta Sorato""]",needs-review,0,verified,verified
+5868,maturiuta sorato,マツリウタ・ソラト(作者),キャラクター・作品,作者・配信者,,"[""Maturiuta Sorato""]",verified,0,verified,verified
 5869,mauve,モーブ,光・演出,色調・色彩,,[],verified,,unreviewed,verified
 5870,may (pokemon),ハルカ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5871,maya (kancolle),摩耶（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -5938,7 +5938,7 @@
 5936,melusine (fate),メリュジーヌ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5937,meme,ミーム,文字・記号,文字,,[],verified,,unreviewed,unreviewed
 5938,meme attire,ミームを題材にした服装,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
-5939,menma (enaic31),メンマ（enaic31）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5939,menma (enaic31),えない(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5940,menu,メニュー,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
 5941,menu board,メニューボード,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
 5942,meow (nekodenki),MEOW（ねこでんき）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
@@ -5949,7 +5949,7 @@
 5947,merman,男性の人魚,生物・動植物,架空生物・モンスター,,[],verified,,unreviewed,verified
 5948,merry christmas,メリークリスマス,状態・状況,時間・前後関係,,[],verified,,unreviewed,verified
 5949,merunyaa,Merunyaa（メルニャー）,キャラクター・作品,作者・配信者,,"[""Merunyaa"",""メルニャー""]",verified,0,verified,verified
-5950,mery (yangmalgage),メリー（Yangmalgage）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5950,mery (yangmalgage),Mery(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5951,messenger bag,メッセンジャーバッグ,服装・装飾,衣服,,[],verified,,unreviewed,verified
 5952,messy,乱雑な,状態・状況,状態・変化,,[],verified,,unreviewed,verified
 5953,messy hair,乱れた髪,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
@@ -5990,14 +5990,14 @@
 5988,mihoyo,miHoYo,文字・記号,ロゴ・ブランド表記,,"[""ミホヨ""]",verified,,unreviewed,verified
 5989,mika (blue archive),聖園ミカ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5990,mika (girls und panzer),ミカ（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-5991,mikage takashi,御影たかし,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5991,mikage takashi,御影たかし(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5992,mikasa ackerman (attack on titan),ミカサ・アッカーマン（進撃の巨人）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5993,mikazuki munechika (Touken Ranbu),三日月宗近（刀剣乱舞）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5994,mikeou,みけおう,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5995,miki sayaka (puella magi madoka magica),美樹さやか（魔法少女まどか☆マギカ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5996,miki sayaka (magical girl),美樹さやか（魔法少女）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 5997,miko,巫女,人物の特徴,人物属性,,[],verified,,unreviewed,verified
-5998,mikozin,ミコジン,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+5998,mikozin,Mikozin(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 5999,miku day,ミクの日（3月9日）,状態・状況,状況・関係性,,[],verified,0,verified,verified
 6000,milestone celebration,マイルストーンのお祝い,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
 6001,military,軍隊,人物の特徴,人物属性,,[],verified,,unreviewed,verified
@@ -6012,16 +6012,16 @@
 6010,milk carton,牛乳パック,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
 6011,milking machine,搾乳機,家具・設備・物品,機械・装置,,[],verified,,unreviewed,verified
 6012,milkpanda,ミルクパンダ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
-6013,milkshakework,ミルクシェイクワーク,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6013,milkshakework,ミルクセーキ工房(サークル),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6014,milky way,天の川,背景・場所,自然・風景,,[],verified,,unreviewed,verified
 6015,millennium cheerleader outfit (blue archive),ミレニアムチアリーダー衣装（ブルーアーカイブ）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 6016,mima (touhou),魅魔（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6017,mimikaki,耳かき,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
 6018,mimikyu (Pokémon),ミミッキュ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6019,mimura kanako (the idolmaster cinderella girls),三村かな子（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-6020,minaba hideo,ミナバ・ヒドオ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
-6021,minakami (flyingman555),ミナカミ（FlyingMan555）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
-6022,minami (colorful palette),ミナミ（Colorful Palette）,キャラクター・作品,キャラクター,,[],needs-review,0,verified,verified
+6020,minaba hideo,皆葉英夫(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
+6021,minakami (flyingman555),Minakami(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
+6022,minami (colorful palette),みなみ(作者),キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6023,minami kotori (love live! school idol project),南ことり（ラブライブ！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6024,minamino kanade (Suite Precure),南野奏（スイートプリキュア♪）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6025,minamoto no raikou (fate),源頼光（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -6051,7 +6051,7 @@
 6049,mirror,鏡,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
 6050,mirror selfie,鏡自撮り,構図・カメラ,構図・配置,,[],verified,,unreviewed,verified
 6051,misaka mikoto (a certain scientific railgun),御坂美琴（とある科学の超電磁砲）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-6052,misaki kurehito,Misaki Kurehito（表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6052,misaki kurehito,深崎暮人(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6053,mishima kurone,三嶋くろね,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6054,mismatched bikini,左右で異なるビキニ,服装・装飾,衣服,,[],verified,,unreviewed,verified
 6055,mismatched earrings,不一致のイヤリング,服装・装飾,装飾品,,[],verified,,unreviewed,verified
@@ -6068,7 +6068,7 @@
 6066,missing tooth,歯の欠損,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 6067,missionary,正常位,動作・接触,性的行為・接触,,[],verified,,unreviewed,verified
 6068,misty (pokemon),カスミ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-6069,misumi (macaroni),ミズミ（マカロニ）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6069,misumi (macaroni),Misumi(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6070,misumi nagisa (futari wa pretty cure),美墨なぎさ（ふたりはプリキュア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6071,misunderstanding,誤解,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
 6072,mitaka asa (chainsaw man),三鷹アサ（チェンソーマン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -6077,9 +6077,9 @@
 6075,mithrun (delicious in dungeon),ミスルン（ダンジョン飯）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6076,mitre,司教冠,服装・装飾,衣服,,[],verified,,unreviewed,verified
 6077,mitsudomoe (shape),三つ巴,文字・記号,記号・図形,,[],verified,,unreviewed,verified
-6078,mitsumoto jouji,ミツモト・ジュジ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6078,mitsumoto jouji,Mitsumoto Jouji(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6079,mittens,ミトン,服装・装飾,衣服,,[],verified,,unreviewed,verified
-6080,mitya,マティヤ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6080,mitya,Mitya(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6081,miura azusa (the idolmaster),三浦あずさ（アイドルマスター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6082,mixed-language text,混合言語テキスト,文字・記号,文字,,[],verified,,unreviewed,verified
 6083,mixed-sex bathing,混浴,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
@@ -6090,17 +6090,17 @@
 6088,miyamoto frederica (the idolmaster cinderella girls),宮本フレデリカ（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6089,miyamoto musashi (fate),宮本武蔵（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6090,miyamoto musashi (swimsuit berserker) (fate),宮本武蔵（水着バーサーカー）（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-6091,miyo (ranthath),ミヨ（ランサス）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6091,miyo (ranthath),Miyo(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6092,miyu (blue archive),霞沢ミユ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6093,miyu edelfelt (fate/kaleid liner prisma illya),美遊・エーデルフェルト（Fate/kaleid liner プリズマ☆イリヤ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6094,miyuki (kancolle),深雪（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6095,mizu happi,水法被,服装・装飾,衣服,,[],verified,,unreviewed,verified
-6096,mizuhara aki,Mizuhara Aki（表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6096,mizuhara aki,Mizuhara Aki(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6097,mizuhashi parsee (Touhou Project),水橋パルスィ（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6098,mizuki hitoshi,ミズキ・ヒトシ,キャラクター・作品,作者・配信者,,"[""Mizuki Hitoshi""]",verified,0,verified,verified
 6099,mizuki makoto,ミズキ・マコト,キャラクター・作品,作者・配信者,,"[""Mizuki Makoto""]",verified,0,verified,verified
 6100,mizumizuni,ミズミズニ,キャラクター・作品,作者・配信者,,"[""Mizumizuni""]",verified,0,verified,verified
-6101,mizumoto tadashi,Mizumoto Tadashi（表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6101,mizumoto tadashi,水本正(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6102,mizuno ami (sailor moon),水野亜美（美少女戦士セーラームーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6103,mk (mod0),MK（mod0）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6104,mo (kireinamo),MO（kireinamo）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
@@ -6135,9 +6135,9 @@
 6133,mole under eye,目の下のほくろ,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 6134,mole under mouth,口の下のほくろ,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 6135,molestation,虐待,動作・接触,性的行為・接触,,[],verified,,unreviewed,verified
-6136,momo no sukebe,モモースケビー,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6136,momo no sukebe,Momo no Sukebe(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6137,momoi (blue archive),才羽モモイ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-6138,momoko (momopoco),ももこ（momopoco）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6138,momoko (momopoco),Momoko(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6139,momose ginko (hasunosora jogakuin school idol club),百生吟子（蓮ノ空女学院スクールアイドルクラブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6140,momosuzu nene (hololive),桃鈴ねね（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6141,momota kaito,百田解斗,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -6183,7 +6183,7 @@
 6181,mori calliope (1st costume),森カリオペ（初期衣装）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6182,morichika rinnosuke,森近霖之助,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6183,morikubo nono,森久保乃々,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-6184,morino hon,モリノホン,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6184,morino hon,Morino Hon(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6185,morino rinze,杜野凛世,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6186,moriya suwako,洩矢諏訪子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6187,morning,朝,背景・場所,天候・時間帯,,[],verified,,unreviewed,verified
@@ -6195,9 +6195,9 @@
 6193,mosaic,モザイク,画風・描写,画風・表現様式,,[],verified,,unreviewed,verified
 6194,mosaic censoring,モザイク検閲,服装・装飾,衣服,,[],verified,,unreviewed,unreviewed
 6195,moss,苔,生物・動植物,植物,,[],verified,,unreviewed,verified
-6196,mossacannibalis,モサカンニバリス,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6196,mossacannibalis,mossacannibalis(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6197,mostima (arknights),モスティマ（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-6198,mota,モタ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6198,mota,モタ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6199,moth,蛾,生物・動植物,動物,,[],verified,,unreviewed,verified
 6200,moth girl,蛾娘,生物・動植物,種族,,[],verified,,unreviewed,verified
 6201,mother (series),MOTHERシリーズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
@@ -6394,16 +6394,16 @@
 6392,name connection,名前の類似・共通点によるキャラクター同士の関連,状態・状況,状況・関係性,,[],verified,,unreviewed,verified
 6393,name tag,名札,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 6394,nami (one piece),ナミ（ONE PIECE）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-6395,namori,ナモリ,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6395,namori,なもり(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6396,nanairogaoka middle school uniform,七色ヶ丘中学校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
-6397,nanakusa suzuna,Nanakusa Suzuna（表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6397,nanakusa suzuna,Nanakusa Suzuna(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6398,nanami chiaki,七海千秋,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6399,nanami kento,七海建人,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6400,nanamori school uniform,七森中学校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 6401,nanao naru,ナナオ・ナル,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6402,nanasaki ai,七咲逢,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6403,nanase nao,ナナセ・ナオ,キャラクター・作品,作者・配信者,,"[""Nanase Nao""]",verified,0,verified,verified
-6404,nanashi (nlo),ナナシ（NLO）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6404,nanashi (nlo),ナナシ(NLO)(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6405,nanashi inc.,ななしいんく,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 6406,nanashi mumei,七詩ムメイ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6407,nanashi mumei (1st costume),七詩ムメイ（初期衣装）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -6518,7 +6518,7 @@
 6516,nightgown,ネグリジェ,服装・装飾,衣服,,[],verified,,unreviewed,verified
 6517,nihonga,日本画,画風・描写,画風・表現様式,,[],verified,,unreviewed,verified
 6518,niijima makoto,新島真,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-6519,niiko (gonnzou),にいこ（gonnzou）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6519,niiko (gonnzou),にいこ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6520,nijigasaki school uniform,虹ヶ咲学園の制服,服装・装飾,衣服,,[],verified,,unreviewed,verified
 6521,nijisanji,にじさんじ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6522,nijisanji en,にじさんじEN,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
@@ -6548,7 +6548,7 @@
 6546,nipples,乳首,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 6547,nisemonogatari,偽物語,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 6548,nishi kinuyo,西キヌヨ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-6549,nishi koutarou,Nishi Koutarou（表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6549,nishi koutarou,Nishi Koutarou(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6550,nishikigi chisato,錦木千束,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6551,nishikino maki (love live!),西木野真姫（ラブライブ！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6552,nishizumi maho (Girls und Panzer),西住まほ（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -6896,7 +6896,7 @@
 6894,oripathy lesion (arknights),鉱石病の病変（アークナイツ）,状態・状況,状態・変化,,[],verified,,unreviewed,verified
 6895,ornate border,装飾的な枠線,構図・カメラ,フレーミング,,[],verified,,unreviewed,verified
 6896,ornate ring,豪華な指輪,服装・装飾,装飾品,,[],verified,,unreviewed,verified
-6897,oryo (oryo04),おりょう（oryo04）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+6897,oryo (oryo04),おりょう(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 6898,os-tan,OSたん,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6899,osaka shizuku (Love Live! Nijigasaki High School Idol Club),桜坂しずく（ラブライブ！虹ヶ咲学園スクールアイドル同好会）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 6900,osakabehime (fate),刑部姫,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -7135,7 +7135,7 @@
 7133,penlight (glowstick),ペンライト,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 7134,pennant,ペナント,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
 7135,pentacle,五芒星形の護符,文字・記号,記号・図形,,[],verified,,unreviewed,verified
-7136,pentagon (railgun ky1206),ペンタゴン（Railgun KY1206）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+7136,pentagon (railgun ky1206),ぺんたごん(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 7137,pentagram,五芒星,文字・記号,記号・図形,,[],verified,,unreviewed,verified
 7138,peony (flower),牡丹（花）,生物・動植物,植物,,[],verified,0,verified,verified
 7139,peony print,牡丹柄,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -7507,7 +7507,7 @@
 7505,potara earrings,ポタラ（ドラゴンボール）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 7506,potato,じゃがいも,生物・動植物,植物,,[],verified,,unreviewed,verified
 7507,potato chips,ポテトチップス,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
-7508,pote (ptkan),ぽて（ptkan）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+7508,pote (ptkan),ぽて(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 7509,potion,ポーション,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 7510,potted plant,鉢植えの植物,生物・動植物,植物,,[],verified,,unreviewed,verified
 7511,pouch,ポーチ,服装・装飾,装飾品,,[],verified,0,verified,verified
@@ -7802,8 +7802,8 @@
 7800,ranma-chan (ranma 1/2),女らんま（らんま1/2）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 7801,ranni the witch,魔女ラニ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 7802,rapier,レイピア,家具・設備・物品,武器,,[],verified,,unreviewed,verified
-7803,rappa (rappaya),ラッパ（ラッパヤ）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
-7804,rariatto (ganguri),ラリアット（ganguri）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+7803,rappa (rappaya),Rappa(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
+7804,rariatto (ganguri),Rariatto(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 7805,rash guard,ラッシュガード,服装・装飾,衣服,,[],verified,,unreviewed,verified
 7806,raspberry,ラズベリー,生物・動植物,植物,,[],verified,,unreviewed,verified
 7807,ray gun,光線銃,家具・設備・物品,武器,,[],verified,,unreviewed,verified
@@ -7821,7 +7821,7 @@
 7819,real world location,現実世界の場所,背景・場所,場所・室内外,,[],verified,0,verified,verified
 7820,realistic,写実的な,画風・描写,画風・表現様式,,[],verified,0,verified,verified
 7821,rebecca (cyberpunk),レベッカ（サイバーパンク）,画風・描写,画風・表現様式,,[],verified,0,verified,verified
-7822,rebecca (keinelove),レベッカ（ケイネロブ）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+7822,rebecca (keinelove),Rebecca(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 7823,rebuild of evangelion,ヱヴァンゲリヲン新劇場版,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 7824,reclining,横たわる,ポーズ・姿勢,基本姿勢,,[],verified,,unreviewed,verified
 7825,record,レコード盤,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
@@ -7946,8 +7946,8 @@
 7944,reflective water,反射する水面,背景・場所,自然・風景,,[],verified,,unreviewed,verified
 7945,refraction,屈折,光・演出,演出効果,,[],verified,0,verified,verified
 7946,refrigerator,冷蔵庫,家具・設備・物品,設備,,[],verified,,unreviewed,verified
-7947,rei no himo,例の紐（ネットミーム・意味要確認）,服装・装飾,装飾品,,[],needs-review,2,verified,verified
-7948,rei no pool,例のプール（ネットミーム・意味要確認）,背景・場所,場所・室内外,,[],needs-review,0,verified,verified
+7947,rei no himo,例の紐,服装・装飾,装飾品,,[],verified,2,verified,verified
+7948,rei no pool,例のプール,背景・場所,場所・室内外,,[],verified,0,verified,verified
 7949,reindeer,トナカイ,生物・動植物,動物,,[],verified,,unreviewed,verified
 7950,reindeer antlers,トナカイの角,髪・頭部,頭部の特徴,,[],verified,,unreviewed,verified
 7951,reindeer costume,トナカイの衣装,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -8040,12 +8040,12 @@
 8038,ringo (touhou),鈴瑚（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 8039,rio (blue archive),調月リオ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 8040,ripples,波紋,背景・場所,自然・風景,,[],verified,,unreviewed,verified
-8041,ririko (zhuoyandesailaer),リリコ（Zhuoyandesailaer）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+8041,ririko (zhuoyandesailaer),Ririko(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 8042,rising sun flag,旭日旗,文字・記号,記号・図形,,[],verified,,unreviewed,verified
 8043,rita rossweisse,リタ・ロスヴァイセ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 8044,ritual baton,儀式用の杖,家具・設備・物品,道具,,[],verified,,unreviewed,verified
 8045,river,川,背景・場所,自然・風景,,[],verified,,unreviewed,verified
-8046,riyo (lyomsnpmp),りよ（lyomsnpmp）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+8046,riyo (lyomsnpmp),Riyo(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 8047,riyo (lyomsnpmp) (style),riyo（lyomsnpmp）（スタイル）,画風・描写,画風・表現様式,,[],verified,0,verified,verified
 8048,ro-500 (kancolle),呂500（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 8049,road,道路,背景・場所,建築・構造物,,[],verified,,unreviewed,verified
@@ -8124,9 +8124,9 @@
 8122,rural,田舎,背景・場所,場所・室内外,,[],verified,,unreviewed,verified
 8123,russian text,ロシア語のテキスト,文字・記号,文字,,[],verified,,unreviewed,verified
 8124,rust,錆,状態・状況,状態・変化,,[],verified,,unreviewed,verified
-8125,ruu (tksymkw),るう（tksymkw）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+8125,ruu (tksymkw),るう(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 8126,rwby,RWBY,キャラクター・作品,タイトル（作品名）,,"[""ルビー""]",verified,0,verified,verified
-8127,ryoji (nomura ryouji),ryoji（nomura ryouji／表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+8127,ryoji (nomura ryouji),野村良治(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 8128,ryona,リョナ,動作・接触,性的行為・接触,,[],verified,,unreviewed,verified
 8129,ryougi shiki,両儀式,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 8130,ryoumen sukuna (jujutsu kaisen),両面宿儺（呪術廻戦）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -8166,7 +8166,7 @@
 8164,sailor shirt,セーラーシャツ,服装・装飾,衣服,,[],verified,,unreviewed,verified
 8165,sailor swimsuit (idolmaster),セーラー水着（アイドルマスター）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 8166,sailor uniform,セーラー服,服装・装飾,衣服,,[],verified,,unreviewed,verified
-8167,sainan high school uniform,Sainan High Schoolの制服（学校名の表記要確認）,キャラクター・作品,作品固有の衣装・要素,,[],needs-review,0,verified,verified
+8167,sainan high school uniform,彩南高校の制服(To LOVE-Ru),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 8168,saint quartz (fate),聖晶石（Fate/Grand Order）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 8169,saint seiya,聖闘士星矢,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 8170,saiyan,サイヤ人,生物・動植物,種族,,[],verified,,unreviewed,verified
@@ -8184,7 +8184,7 @@
 8182,saki achiga-hen,咲-Saki- 阿知賀編 episode of side-A,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 8183,sakiyamama,サキヤママ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 8184,saku usako (rabbit),サク・ウサコ（ウサギ）,生物・動植物,動物,,[],verified,0,verified,verified
-8185,sakugawa school uniform,Sakugawaの学校の制服（学校名の表記要確認）,キャラクター・作品,作品固有の衣装・要素,,[],needs-review,0,verified,verified
+8185,sakugawa school uniform,柵川中学の制服(とある科学の超電磁砲),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 8186,sakuma mayu,佐久間まゆ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 8187,sakura futaba,佐倉双葉,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 8188,sakura kyoko,佐倉杏子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -8263,7 +8263,7 @@
 8261,saw,のこぎり,家具・設備・物品,道具,,[],verified,,unreviewed,verified
 8262,sayagata,紗綾形,服装・装飾,衣服,,[],verified,,unreviewed,verified
 8263,sayonara zetsubou sensei,さよなら絶望先生,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
-8264,sayori (neko works),サヨリ（ネコワークス）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+8264,sayori (neko works),さより(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 8265,sazanami (kancolle),漣（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 8266,scabbard,鞘,服装・装飾,装備・防具,,[],verified,,unreviewed,verified
 8267,scale armor,スケールアーマー,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -8313,7 +8313,7 @@
 8311,scope,照準器,家具・設備・物品,機械・装置,,[],verified,,unreviewed,verified
 8312,scorbunny,ヒバニー,生物・動植物,動物,,[],verified,0,verified,verified
 8313,scott pilgrim (series),スコット・ピルグリム,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
-8314,scottie (phantom2),スコッティ（phantom2）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+8314,scottie (phantom2),スコッティ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 8315,scouter,スカウター,家具・設備・物品,機械・装置,,[],verified,,unreviewed,verified
 8316,scowl,しかめ面,顔・表情,顔・表情,,[],verified,0,verified,verified
 8317,scratches,引っかき傷,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
@@ -8490,7 +8490,7 @@
 8488,shield on back,背中に背負った盾,服装・装飾,装備・防具,,[],verified,0,verified,verified
 8489,shigure (kancolle),時雨（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 8490,shigure kai ni (kancolle),時雨改二（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-8491,shigure ui (vtuber),しぐれうい,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+8491,shigure ui (vtuber),しぐれうい,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 8492,shihouin yoruichi,四楓院夜一,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 8493,shiina taki,椎名立希,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 8494,shiina yuika,椎名唯華,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -9102,7 +9102,7 @@
 9100,square-end necktie,先端が四角いネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified
 9101,squatting,しゃがむ,動作・接触,身体動作,,[],verified,0,verified,verified
 9102,squatting cowgirl position,しゃがみ騎乗位,動作・接触,性的行為・接触,,[],verified,4,verified,verified
-9103,squeans,Squeans（意味要確認）,顔・表情,顔・表情,,[],needs-review,0,verified,verified
+9103,squeans,眠気・酩酊を示す記号,顔・表情,顔・表情,,[],verified,0,verified,verified
 9104,squeezing,絞る・握る動作,動作・接触,身体動作,,[],verified,0,verified,verified
 9105,squid,イカ,生物・動植物,動物,,[],verified,0,verified,verified
 9106,squidbeak splatoon,カラストンビ隊（スプラトゥーン）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
@@ -9128,7 +9128,7 @@
 9126,stained panties,汚れたパンティー,服装・装飾,下着,,[],verified,2,verified,verified
 9127,stained sheets,汚れたシーツ,服装・装飾,衣服の状態,,[],verified,1,verified,verified
 9128,stairs,階段,背景・場所,建築・構造物,,[],verified,0,verified,verified
-9129,stakes of purgatory,煉獄の杭,家具・設備・物品,武器,,[],needs-review,0,verified,verified
+9129,stakes of purgatory,煉獄の七姉妹(うみねこのなく頃に),キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 9130,stalk in mouth,口にくわえた茎,顔・表情,顔・表情,,[],verified,0,verified,verified
 9131,stand (jojo),スタンド（ジョジョの奇妙な冒険）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 9132,standard bearer,旗手,人物の特徴,人物属性,,[],verified,0,verified,verified
@@ -9237,7 +9237,7 @@
 9235,strap-on,ストラップオン,家具・設備・物品,その他の物品,,[],verified,4,verified,verified
 9236,strapless,ストラップレス,服装・装飾,衣服,,[],verified,0,verified,verified
 9237,strapless bikini,ストラップレスビキニ,服装・装飾,水着,,[],verified,1,verified,verified
-9238,strapless bottom,ストラップのないボトム（水着・下着／意味要確認）,服装・装飾,下着,,[],needs-review,1,verified,verified
+9238,strapless bottom,ストラップのないボトム,服装・装飾,下着,,[],verified,1,verified,verified
 9239,strapless bra,ストラップレスブラ,服装・装飾,下着,,[],verified,1,verified,verified
 9240,strapless dress,ストラップレスドレス,服装・装飾,衣服,,[],verified,1,verified,verified
 9241,strapless leotard,ストラップレスレオタード,服装・装飾,衣服,,[],verified,1,verified,verified
@@ -9334,7 +9334,7 @@
 9332,subtitled,字幕付き,文字・記号,文字,,[],verified,0,verified,verified
 9333,suction cups,吸盤,家具・設備・物品,道具,,[],verified,0,verified,verified
 9334,sugar cube,角砂糖,家具・設備・物品,日用品,,[],verified,0,verified,verified
-9335,sugar lyric,Sugar Lyric（作品名・要確認）,キャラクター・作品,タイトル（作品名）,,[],needs-review,0,verified,verified
+9335,sugar lyric,Sugar Lyric(774inc.),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 9336,suggestive fluid,示唆的な液体,動作・接触,性的行為・接触,,[],verified,3,verified,verified
 9337,suicide,自殺,状態・状況,状況・関係性,,[],verified,0,verified,verified
 9338,suigintou,水銀燈（ローゼンメイデン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -9471,7 +9471,7 @@
 9469,syringe,注射器,家具・設備・物品,道具,,[],verified,0,verified,verified
 9470,syrup,シロップ,家具・設備・物品,日用品,,[],verified,0,verified,verified
 9471,t-head admiral,T字頭の提督,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-9472,t-head trainer (umamusume),Tヘッドトレーナー（ウマ娘）,キャラクター・作品,キャラクター,,[],needs-review,0,verified,verified
+9472,t-head trainer (umamusume),Tヘッドトレーナー(ウマ娘),キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 9473,t-shirt,Tシャツ,服装・装飾,衣服,,[],verified,0,verified,verified
 9474,t.m. opera o (umamusume),テイエムオペラオー（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 9475,tabard,タバード,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -9632,7 +9632,7 @@
 9630,telekinesis,念動力,状態・状況,状況・関係性,,[],verified,0,verified,verified
 9631,telescope,望遠鏡,家具・設備・物品,道具,,[],verified,0,verified,verified
 9632,television,テレビ,家具・設備・物品,機械・装置,,[],verified,0,verified,verified
-9633,telstar,Telstar（サッカーボールの意匠・要確認）,家具・設備・物品,その他の物品,,[],needs-review,0,verified,verified
+9633,telstar,テルスター（サッカーボール）,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 9634,temari ball,手まり,家具・設備・物品,日用品,,[],verified,0,verified,verified
 9635,temple,寺院,背景・場所,建築・構造物,,[],verified,0,verified,verified
 9636,tempura,天ぷら,家具・設備・物品,日用品,,[],verified,0,verified,verified
@@ -9810,7 +9810,7 @@
 9808,toki (bunny) (blue archive),飛鳥馬トキ（バニー／ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 9809,tokin hat,頭襟（ときん）,服装・装飾,衣服,,[],verified,0,verified,verified
 9810,tokino sora,ときのそら,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-9811,tokisadame school uniform,Tokisadame校の制服（学校名の表記要確認）,キャラクター・作品,作品固有の衣装・要素,,[],needs-review,0,verified,verified
+9811,tokisadame school uniform,時定高校の制服(日常),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 9812,tokisaki kurumi,時崎狂三,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 9813,tokitsukaze (kancolle),時津風（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 9814,tokiwadai school uniform,常盤台中学の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
@@ -9833,7 +9833,7 @@
 9831,tomoe mami,巴マミ（魔法少女まどか☆マギカ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 9832,tomoe mami (magical girl),巴マミ（魔法少女形態）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 9833,tomoeda elementary school uniform,友枝小学校の制服（カードキャプターさくら）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
-9834,tomose shunsaku,トモセシュンサク,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+9834,tomose shunsaku,トモセシュンサク(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 9835,tonda,tonda,キャラクター・作品,作者・配信者,,"[""tonda""]",verified,0,verified,verified
 9836,tone (kancolle),利根（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 9837,toned,引き締まった体,人物の特徴,体型・身体的特徴,,[],verified,0,verified,verified
@@ -9892,7 +9892,7 @@
 9890,torn thighhighs,破れたニーハイ,服装・装飾,靴・履物,,[],verified,0,verified,verified
 9891,torn wings,破れた翼,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 9892,torogao,恍惚とした表情（とろ顔）,顔・表情,顔・表情,,[],verified,2,verified,verified
-9893,torotei,トロテイ,キャラクター・作品,作者・配信者,,"[""torotei""]",needs-review,0,verified,verified
+9893,torotei,とろ亭(作者),キャラクター・作品,作者・配信者,,"[""torotei""]",verified,0,verified,verified
 9894,torpedo,魚雷,家具・設備・物品,武器,,[],verified,0,verified,verified
 9895,torpedo launcher,魚雷発射管,家具・設備・物品,武器,,[],verified,0,verified,verified
 9896,torpedo tubes,魚雷発射管,家具・設備・物品,武器,,[],verified,0,verified,verified
@@ -9905,7 +9905,7 @@
 9903,touhou lostword,東方LostWord,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 9904,touhou tag dream,夢の東方タッグ編,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 9905,touken ranbu,刀剣乱舞,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
-9906,touqi guaitan,偷琪怪談,キャラクター・作品,タイトル（作品名）,,[],needs-review,0,verified,verified
+9906,touqi guaitan,頭七怪談,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 9907,toutetsu yuuma,饕餮尤魔,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 9908,towel,タオル,家具・設備・物品,日用品,,[],verified,0,verified,verified
 9909,towel around neck,首に掛けたタオル,服装・装飾,装飾品,,[],verified,0,verified,verified
@@ -10779,7 +10779,7 @@
 10777,yanfei (genshin impact),煙緋（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 10778,yang guifei (fate),楊貴妃（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 10779,yang xiao long,ヤン・シャオロン,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-10780,yano toshinori,Yano Toshinori（表記要確認）,キャラクター・作品,作者・配信者,,[],needs-review,0,verified,verified
+10780,yano toshinori,矢野トシノリ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 10781,yanyo (ogino atsuki),yanyo（ogino atsuki）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 10782,yaoyorozu momo,八百万百,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 10783,yarn,毛糸,家具・設備・物品,道具,,[],verified,,unreviewed,verified
@@ -10900,7 +10900,7 @@
 10898,youkai (youkai watch),妖怪（妖怪ウォッチ）,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
 10899,youkai watch,妖怪ウォッチ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 10900,youmu-kun,妖夢くん,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
-10901,youtou high school uniform,Youtou高校の制服（学校名の表記要確認）,キャラクター・作品,作品固有の衣装・要素,,[],needs-review,0,verified,verified
+10901,youtou high school uniform,陽東高校の制服(【推しの子】),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 10902,yowane haku,弱音ハク,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 10903,yu mei-ren (fate),虞美人（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 10904,yu-gi-oh!,遊☆戯☆王,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
