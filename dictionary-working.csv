@@ -347,7 +347,7 @@
 345,anti-materiel rifle,対物ライフル,家具・設備・物品,武器,,[],verified,0,verified,verified
 346,antique firearm,アンティーク銃器,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 347,antique phone,アンティーク電話,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
-348,antlers,枝角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
+348,antlers,枝角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 349,anya (spy x family),アーニャ・フォージャー（SPY×FAMILY）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 350,anyoji hime (hasunosora jogakuin school idol club),安養寺姫芽（蓮ノ空女学院スクールアイドルクラブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 351,anzio military uniform,アンツィオ高校の軍服（ガールズ＆パンツァー）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
@@ -554,7 +554,7 @@
 552,asymmetrical footwear,非対称の履物,服装・装飾,靴・履物,,[],verified,0,verified,verified
 553,asymmetrical gloves,非対称の手袋,服装・装飾,衣服,,[],verified,0,verified,verified
 554,asymmetrical hair,非対称の髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified
-555,asymmetrical horns,左右非対称の角,生物・動植物,動物,,[],verified,0,verified,needs-review
+555,asymmetrical horns,左右非対称の角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 556,asymmetrical legwear,非対称のレッグウェア,服装・装飾,衣服,,[],verified,0,verified,verified
 557,asymmetrical sidelocks,左右非対称のサイドロック,人物の特徴,人物属性,,[],verified,0,verified,verified
 558,asymmetrical sleeves,左右非対称の袖,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -978,7 +978,7 @@
 976,black hole,ブラックホール,背景・場所,自然・風景,,[],verified,0,verified,verified
 977,black hood,黒いフード,服装・装飾,衣服,,[],verified,0,verified,verified
 978,black hoodie,黒いパーカー,服装・装飾,衣服,,[],verified,0,verified,verified
-979,black horns,黒い角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
+979,black horns,黒い角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 980,black jacket,黒ジャケット,服装・装飾,衣服,,[],verified,0,verified,verified
 981,black jumpsuit,黒いジャンプスーツ,服装・装飾,衣服,,[],verified,0,verified,verified
 982,black kimono,黒い着物,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -1136,7 +1136,7 @@
 1134,blue helmet,青いヘルメット,服装・装飾,装備・防具,,[],verified,0,verified,verified
 1135,blue hood,青いフード,服装・装飾,衣服,,[],verified,0,verified,verified
 1136,blue hoodie,青いパーカー,服装・装飾,衣服,,[],verified,0,verified,verified
-1137,blue horns,青い角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
+1137,blue horns,青い角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 1138,blue hour,ブルーアワー（薄明の時間帯）,背景・場所,自然・風景,,[],verified,0,verified,verified
 1139,blue jacket,青いジャケット,服装・装飾,衣服,,[],verified,0,verified,verified
 1140,blue jumpsuit,青いジャンプスーツ,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -1393,7 +1393,7 @@
 1391,broken glass,割れたガラス,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 1392,broken halo,壊れたハロー,文字・記号,記号・図形,,[],verified,0,verified,verified
 1393,broken heart,壊れたハート,文字・記号,記号・図形,,[],verified,0,verified,verified
-1394,broken horn,壊れた角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
+1394,broken horn,壊れた角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 1395,broken mirror,割れた鏡,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 1396,broken sword,壊れた剣,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 1397,broken weapon,壊れた武器,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
@@ -1433,7 +1433,7 @@
 1431,brown hairband,茶色のヘアバンド,服装・装飾,装飾品,,[],verified,0,verified,verified
 1432,brown hat,茶色の帽子,服装・装飾,装備・防具,,[],verified,0,verified,verified
 1433,brown hoodie,茶色のパーカー,服装・装飾,衣服,,[],verified,0,verified,verified
-1434,brown horns,茶色の角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
+1434,brown horns,茶色の角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 1435,brown jacket,茶色のジャケット,服装・装飾,衣服,,[],verified,0,verified,verified
 1436,brown kimono,茶色の着物,服装・装飾,衣服,,[],verified,0,verified,verified
 1437,brown leotard,茶色のレオタード,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -2030,7 +2030,7 @@
 2028,condensation,結露,状態・状況,状態・変化,,[],verified,0,verified,verified
 2029,conductor baton,指揮棒,家具・設備・物品,道具,,[],verified,0,verified,verified
 2030,cone hair bun,円錐形のお団子ヘア,髪・頭部,髪・頭部,,[],verified,0,verified,verified
-2031,cone horns,円錐形の角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
+2031,cone horns,円錐形の角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 2032,confession,告白,動作・接触,対人接触・動作,,[],verified,0,verified,verified
 2033,confetti,紙吹雪,家具・設備・物品,その他の物品,,[],verified,0,verified,verified
 2034,confused,困惑した表情,顔・表情,顔・表情,,[],verified,0,verified,verified
@@ -2112,7 +2112,7 @@
 2110,cow boy,牛の特徴を持つ男性,人物の特徴,人物属性,,[],verified,0,verified,verified
 2111,cow ears,牛耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 2112,cow girl,牛の特徴を持つ女性,人物の特徴,人物属性,,[],verified,0,verified,verified
-2113,cow horns,牛の角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
+2113,cow horns,牛の角,生物・動植物,動物,,[],verified,0,verified,verified
 2114,cow print,牛柄,服装・装飾,衣服,,[],verified,0,verified,verified
 2115,cow print bikini,牛柄のビキニ,服装・装飾,水着,,[],verified,1,verified,verified
 2116,cow print gloves,牛柄の手袋,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -2259,7 +2259,7 @@
 2257,cupping hands,両手で包み込む,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified
 2258,cure peace (Smile Precure!),キュアピース,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 2259,curled fingers,曲げた指,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified
-2260,curled horns,巻いた角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
+2260,curled horns,巻いた角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 2261,curled up,丸まった姿勢,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified
 2262,curly eyebrows,巻き眉,顔・表情,顔の特徴,,[],verified,0,verified,verified
 2263,curly hair,巻き髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified
@@ -2372,7 +2372,7 @@
 2370,deep penetration,深い挿入,動作・接触,性的行為・接触,,[],verified,4,verified,verified
 2371,deep skin,皮膚の食い込み,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified
 2372,deer,シカ,生物・動植物,動物,,[],verified,0,verified,verified
-2373,deer antlers,シカの角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
+2373,deer antlers,シカの角,生物・動植物,動物,,[],verified,0,verified,verified
 2374,deer ears,シカ耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
 2375,deer girl,シカ耳の少女,生物・動植物,種族,,[],verified,0,verified,verified
 2376,deer tail,シカの尻尾,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
@@ -2387,7 +2387,7 @@
 2385,demon,悪魔,人物の特徴,人物属性,,[],verified,0,verified,verified
 2386,demon boy,悪魔の少年,人物の特徴,人物属性,,[],verified,0,verified,verified
 2387,demon girl,悪魔の少女,人物の特徴,人物属性,,[],verified,0,verified,verified
-2388,demon horns,悪魔の角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
+2388,demon horns,悪魔の角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 2389,demon slayer uniform,鬼殺隊隊服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified
 2390,demon tail,悪魔の尻尾,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
 2391,demon wings,悪魔の翼,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
@@ -2565,7 +2565,7 @@
 2563,dragon boy,ドラゴンボーイ,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
 2564,dragon ears,ドラゴンの耳,人物の特徴,頭部の特徴,,[],verified,0,verified,needs-review
 2565,dragon girl,ドラゴン娘,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
-2566,dragon horns,ドラゴンの角,人物の特徴,頭部の特徴,,[],verified,0,verified,needs-review
+2566,dragon horns,ドラゴンの角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 2567,dragon print,ドラゴン柄,服装・装飾,衣服,,[],verified,0,verified,verified
 2568,dragon quest,ドラゴンクエスト,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
 2569,dragon quest iii,ドラゴンクエスト3,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified
@@ -2685,7 +2685,7 @@
 2683,easter,イースター,背景・場所,空間・環境表現,,[],verified,0,verified,verified
 2684,easter egg,イースターエッグ（隠し要素）,背景・場所,空間・環境表現,,[],verified,0,verified,verified
 2685,eastern dragon,東洋の龍,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
-2686,eastern dragon horns,東洋龍の角,生物・動植物,架空生物・モンスター,,[],verified,0,verified,needs-review
+2686,eastern dragon horns,東洋龍の角,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified
 2687,eastern dragon tail,東洋龍の尻尾,生物・動植物,架空生物・モンスター,,[],verified,0,verified,needs-review
 2688,eating,食べる動作,動作・接触,身体動作,,[],verified,0,verified,verified
 2689,ebi 193,ebi 193（作者名）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
@@ -2989,7 +2989,7 @@
 2987,fidgeting,そわそわする仕草,動作・接触,日常動作,,[],verified,,unreviewed,verified
 2988,field,野原,背景・場所,自然・風景,,[],verified,,unreviewed,verified
 2989,fiery hair,炎のような髪,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
-2990,fiery horns,炎のような角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+2990,fiery horns,炎のような角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 2991,fiery tail,炎のような尻尾,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
 2992,fiery wings,炎のような翼,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
 2993,fighter jet,ジェット戦闘機,乗り物,航空機,,[],verified,,unreviewed,verified
@@ -3529,7 +3529,7 @@
 3527,glowing flower,光る花,生物・動植物,植物,,[],verified,,unreviewed,verified
 3528,glowing hair,光る髪,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
 3529,glowing hand,光る手,光・演出,演出効果,,[],verified,,unreviewed,verified
-3530,glowing horns,光る角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+3530,glowing horns,光る角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 3531,glowing sword,光る剣,家具・設備・物品,武器,,[],verified,,unreviewed,verified
 3532,glowing tattoo,光るタトゥー,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 3533,glowing weapon,光る武器,家具・設備・物品,武器,,[],verified,,unreviewed,verified
@@ -3542,7 +3542,7 @@
 3540,goat boy,ヤギの少年,人物の特徴,人物属性,,[],verified,,unreviewed,verified
 3541,goat ears,ヤギの耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 3542,goat girl,ヤギの少女,人物の特徴,人物属性,,[],verified,,unreviewed,verified
-3543,goat horns,ヤギの角,生物・動植物,動物,,[],verified,,unreviewed,needs-review
+3543,goat horns,ヤギの角,生物・動植物,動物,,[],verified,,unreviewed,verified
 3544,goatee,あごひげ,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
 3545,goatee stubble,顎の無精髭,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
 3546,goblin,ゴブリン,人物の特徴,人物属性,,[],verified,,unreviewed,verified
@@ -3605,7 +3605,7 @@
 3603,gradient dress,グラデーションドレス,服装・装飾,衣服,,[],verified,,unreviewed,verified
 3604,gradient eyes,グラデーションの瞳,顔・表情,目,,[],verified,,unreviewed,verified
 3605,gradient hair,グラデーションヘア,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
-3606,gradient horns,グラデーションの角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+3606,gradient horns,グラデーションの角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 3607,gradient legwear,グラデーションのレッグウェア,服装・装飾,衣服,,[],verified,,unreviewed,verified
 3608,gradient skin,グラデーションの肌,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 3609,gradient sky,グラデーションの空,背景・場所,自然・風景,,[],verified,,unreviewed,verified
@@ -3664,7 +3664,7 @@
 3662,green hat,緑色の帽子,服装・装飾,衣服,,[],verified,,unreviewed,verified
 3663,green headband,緑色のヘッドバンド,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 3664,green hoodie,緑色のパーカー,服装・装飾,衣服,,[],verified,,unreviewed,verified
-3665,green horns,緑色の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+3665,green horns,緑色の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 3666,green jacket,緑色のジャケット,服装・装飾,衣服,,[],verified,,unreviewed,verified
 3667,green jumpsuit,緑色のジャンプスーツ,服装・装飾,衣服,,[],verified,,unreviewed,verified
 3668,green kimono,緑色の着物,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -3735,7 +3735,7 @@
 3733,grey halo,灰色の光輪,光・演出,照明・光源,,[],verified,,unreviewed,verified
 3734,grey hat,灰色の帽子,服装・装飾,衣服,,[],verified,,unreviewed,verified
 3735,grey hoodie,灰色のパーカー,服装・装飾,衣服,,[],verified,,unreviewed,verified
-3736,grey horns,灰色の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+3736,grey horns,灰色の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 3737,grey jacket,灰色のジャケット,服装・装飾,衣服,,[],verified,,unreviewed,verified
 3738,grey kimono,灰色の着物,服装・装飾,衣服,,[],verified,,unreviewed,verified
 3739,grey leotard,灰色のレオタード,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -4573,8 +4573,8 @@
 4571,horn/wood,金管楽器・木管楽器,家具・設備・物品,その他の物品,,[],verified,,unreviewed,verified
 4572,horned headwear,角付きの頭飾り,服装・装飾,衣服,,[],verified,,unreviewed,verified
 4573,horned helmet,角付き兜,服装・装飾,衣服,,[],verified,,unreviewed,verified
-4574,horns,角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
-4575,horns through headwear,頭飾りを貫く角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+4574,horns,角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
+4575,horns through headwear,頭飾りを貫く角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 4576,horosuke,ホロスケ,キャラクター・作品,作者・配信者,,"[""Horosuke""]",verified,0,verified,verified
 4577,horror,ホラー,画風・描写,画風・表現様式,,[],verified,,unreviewed,verified
 4578,horror (theme),ホラー（テーマ）,画風・描写,画風・表現様式,,[],verified,,unreviewed,verified
@@ -5589,7 +5589,7 @@
 5587,long fingernails,長い爪,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5588,long hair,長髪,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
 5589,long hair between eyes,目の間に垂れる長い髪,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
-5590,long horns,長い角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+5590,long horns,長い角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5591,long legs,長い脚,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5592,long neck,長い首,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5593,long nose,長い鼻,顔・表情,顔の特徴,,[],verified,,unreviewed,verified
@@ -5888,7 +5888,7 @@
 5886,mechanical eye,機械の目,顔・表情,目,,[],verified,,unreviewed,verified
 5887,mechanical halo,機械の光輪,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 5888,mechanical hands,機械の手,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
-5889,mechanical horns,機械の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+5889,mechanical horns,機械の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5890,mechanical legs,機械の脚,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 5891,mechanical pencil,シャープペンシル,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
 5892,mechanical tail,機械の尻尾,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
@@ -6257,7 +6257,7 @@
 6255,multicolored hairband,多色ヘアバンド,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 6256,multicolored hat,多色の帽子,服装・装飾,衣服,,[],verified,,unreviewed,verified
 6257,multicolored hoodie,多色のパーカー,服装・装飾,衣服,,[],verified,,unreviewed,verified
-6258,multicolored horns,多色の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+6258,multicolored horns,多色の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 6259,multicolored jacket,多色のジャケット,服装・装飾,衣服,,[],verified,,unreviewed,verified
 6260,multicolored kimono,多色の着物,服装・装飾,衣服,,[],verified,,unreviewed,verified
 6261,multicolored leotard,多色のレオタード,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -6283,7 +6283,7 @@
 6281,multiple hair bows,たくさんのヘアリボン,髪・頭部,髪・頭部,,[],verified,,unreviewed,verified
 6282,multiple hairpins,複数のヘアピン,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 6283,multiple heads,複数の頭,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
-6284,multiple horns,複数の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+6284,multiple horns,複数の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 6285,multiple legs,複数の脚,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 6286,multiple moles,複数のほくろ,顔・表情,顔の特徴,,[],verified,,unreviewed,verified
 6287,multiple monochrome,複数のモノクロ,画風・描写,画風・表現様式,,[],verified,,unreviewed,verified
@@ -6854,7 +6854,7 @@
 6852,orange hat,オレンジ色の帽子,服装・装飾,衣服,,[],verified,,unreviewed,verified
 6853,orange headband,オレンジ色のヘッドバンド,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 6854,orange hoodie,オレンジ色のパーカー,服装・装飾,衣服,,[],verified,,unreviewed,verified
-6855,orange horns,オレンジ色の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+6855,orange horns,オレンジ色の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 6856,orange jacket,オレンジのジャケット,服装・装飾,衣服,,[],verified,,unreviewed,verified
 6857,orange jumpsuit,オレンジジャンプスーツ,服装・装飾,衣服,,[],verified,,unreviewed,verified
 6858,orange kimono,オレンジ色の着物,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -7251,7 +7251,7 @@
 7249,pink halo,ピンク色の光輪,光・演出,演出効果,,[],verified,,unreviewed,verified
 7250,pink hat,ピンクの帽子,服装・装飾,衣服,,[],verified,,unreviewed,verified
 7251,pink hoodie,ピンクのパーカー,服装・装飾,衣服,,[],verified,,unreviewed,verified
-7252,pink horns,ピンク色の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+7252,pink horns,ピンク色の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 7253,pink jacket,ピンクのジャケット,服装・装飾,衣服,,[],verified,,unreviewed,verified
 7254,pink kimono,ピンクの着物,服装・装飾,衣服,,[],verified,,unreviewed,verified
 7255,pink leotard,ピンクのレオタード,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -7675,7 +7675,7 @@
 7673,purple hat,紫色の帽子,服装・装飾,衣服,,[],verified,,unreviewed,verified
 7674,purple heart (neptunia),パープルハート,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
 7675,purple hoodie,紫色のパーカー,服装・装飾,衣服,,[],verified,,unreviewed,verified
-7676,purple horns,紫の角,生物・動植物,動物,,[],verified,,unreviewed,needs-review
+7676,purple horns,紫の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 7677,purple jacket,紫色のジャケット,服装・装飾,衣服,,[],verified,,unreviewed,verified
 7678,purple kimono,紫色の着物,服装・装飾,衣服,,[],verified,,unreviewed,verified
 7679,purple leotard,紫のレオタード,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -7881,7 +7881,7 @@
 7879,red helmet,赤いヘルメット,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 7880,red hood,赤いフード,服装・装飾,衣服,,[],verified,,unreviewed,verified
 7881,red hoodie,赤いパーカー,服装・装飾,衣服,,[],verified,,unreviewed,verified
-7882,red horns,赤い角,生物・動植物,動物,,[],verified,,unreviewed,needs-review
+7882,red horns,赤い角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 7883,red jacket,赤いジャケット,服装・装飾,衣服,,[],verified,,unreviewed,verified
 7884,red kimono,赤い着物,服装・装飾,衣服,,[],verified,,unreviewed,verified
 7885,red leotard,赤いレオタード,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -7949,7 +7949,7 @@
 7947,rei no himo,例の紐,服装・装飾,装飾品,,[],verified,2,verified,verified
 7948,rei no pool,例のプール,背景・場所,場所・室内外,,[],verified,0,verified,verified
 7949,reindeer,トナカイ,生物・動植物,動物,,[],verified,,unreviewed,verified
-7950,reindeer antlers,トナカイの角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+7950,reindeer antlers,トナカイの角,生物・動植物,動物,,[],verified,,unreviewed,verified
 7951,reindeer costume,トナカイの衣装,服装・装飾,衣服,,[],verified,,unreviewed,verified
 7952,reins,手綱,家具・設備・物品,道具,,[],verified,,unreviewed,verified
 7953,reisalin stout,ライザリン・シュタウト,キャラクター・作品,キャラクター,,[],verified,0,verified,verified
@@ -8466,7 +8466,7 @@
 8464,sheep,羊,生物・動植物,動物,,[],verified,,unreviewed,verified
 8465,sheep ears,羊の耳,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 8466,sheep girl,羊娘,生物・動植物,種族,,[],verified,,unreviewed,verified
-8467,sheep horns,羊の角,生物・動植物,動物,,[],verified,,unreviewed,needs-review
+8467,sheep horns,羊の角,生物・動植物,動物,,[],verified,,unreviewed,verified
 8468,sheep tail,羊の尾,生物・動植物,動物,,[],verified,,unreviewed,needs-review
 8469,sheet ghost,シーツのお化け,生物・動植物,架空生物・モンスター,,[],verified,,unreviewed,verified
 8470,sheet grab,シーツをつかむ,動作・接触,物への接触,,[],verified,,unreviewed,verified
@@ -8739,7 +8739,7 @@
 8737,single hair tube,一本ヘアチューブ,髪・頭部,髪・頭部,,[],verified,0,verified,verified
 8738,single head wing,片側だけの頭部の翼,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
 8739,single horizontal stripe,一本の横縞,画風・描写,描画技法,,[],verified,,unreviewed,verified
-8740,single horn,一本角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+8740,single horn,一本角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 8741,single knee pad,片膝のニーパッド,服装・装飾,装備・防具,,[],verified,0,verified,verified
 8742,single kneehigh,片足だけのニーハイソックス,服装・装飾,靴・履物,,[],verified,,unreviewed,verified
 8743,single leg pantyhose,片脚だけのパンティストッキング,服装・装飾,下着,,[],verified,1,verified,verified
@@ -8796,7 +8796,7 @@
 8794,skin fang,八重歯,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
 8795,skin fangs,八重歯,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
 8796,skin tight,ぴったりした服,服装・装飾,衣服,,[],verified,1,verified,verified
-8797,skin-covered horns,皮膚に覆われた角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+8797,skin-covered horns,皮膚に覆われた角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 8798,skindentation,皮膚に食い込んだ跡,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 8799,skinny,痩せ型,人物の特徴,体型・身体的特徴,,[],verified,,unreviewed,verified
 8800,skirt,スカート,服装・装飾,衣服,,[],verified,0,verified,verified
@@ -8873,7 +8873,7 @@
 8871,slit pupils,縦長の瞳孔,顔・表情,目,,[],verified,0,verified,verified
 8872,slugbox,スラッグボックス,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified
 8873,small breasts,小さな胸,人物の特徴,体型・身体的特徴,,[],verified,,unreviewed,verified
-8874,small horns,小さな角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
+8874,small horns,小さな角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 8875,small sweatdrop,小さな汗マーク,顔・表情,顔・表情,,[],verified,0,verified,verified
 8876,smartphone,スマートフォン,家具・設備・物品,機械・装置,,[],verified,,unreviewed,verified
 8877,smartphone case,スマートフォンケース,家具・設備・物品,日用品,,[],verified,,unreviewed,verified
@@ -9285,7 +9285,7 @@
 9283,striped hairband,縞模様のヘアバンド,服装・装飾,装飾品,,[],verified,0,verified,verified
 9284,striped headwear,縞模様の帽子,服装・装飾,装飾品,,[],verified,0,verified,verified
 9285,striped hoodie,縞模様のパーカー,服装・装飾,衣服,,[],verified,0,verified,verified
-9286,striped horns,縞模様の角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
+9286,striped horns,縞模様の角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 9287,striped jacket,ストライプ柄のジャケット,服装・装飾,衣服,,[],verified,0,verified,verified
 9288,striped kimono,縞模様の着物,服装・装飾,衣服,,[],verified,0,verified,verified
 9289,striped necktie,縞模様のネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified
@@ -10165,7 +10165,7 @@
 10163,undressing another,他人の服を脱がせる,動作・接触,衣服への接触,,[],verified,3,verified,verified
 10164,uneven eyes,左右非対称の目,顔・表情,目,,[],verified,0,verified,verified
 10165,uneven gloves,左右で異なる手袋,服装・装飾,装飾品,,[],verified,0,verified,verified
-10166,uneven horns,左右で形の異なる角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,needs-review
+10166,uneven horns,左右で形の異なる角,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified
 10167,uneven legwear,左右で異なるレッグウェア,服装・装飾,靴・履物,,[],verified,0,verified,verified
 10168,uneven sleeves,左右で異なる袖,服装・装飾,衣服,,[],verified,0,verified,verified
 10169,uneven twintails,左右非対称のツインテール,髪・頭部,髪・頭部,,[],verified,0,verified,verified
@@ -10571,7 +10571,7 @@
 10569,white headdress,白い頭飾り,服装・装飾,装飾品,,[],verified,,unreviewed,verified
 10570,white hood,白いフード,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10571,white hoodie,白いパーカー,服装・装飾,衣服,,[],verified,,unreviewed,verified
-10572,white horns,白い角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+10572,white horns,白い角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 10573,white jacket,白いジャケット,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10574,white jumpsuit,白いジャンプスーツ,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10575,white kimono,白い着物,服装・装飾,衣服,,[],verified,,unreviewed,verified
@@ -10829,7 +10829,7 @@
 10827,yellow halo,黄色い光輪,生物・動植物,架空生物・モンスター,,[],verified,,unreviewed,verified
 10828,yellow hat,黄色い帽子,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10829,yellow hoodie,黄色いパーカー,服装・装飾,衣服,,[],verified,,unreviewed,verified
-10830,yellow horns,黄色の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,needs-review
+10830,yellow horns,黄色の角,人物の特徴,身体部位・身体状態,,[],verified,,unreviewed,verified
 10831,yellow jacket,黄色のジャケット,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10832,yellow kimono,黄色の着物,服装・装飾,衣服,,[],verified,,unreviewed,verified
 10833,yellow leotard,黄色のレオタード,服装・装飾,衣服,,[],verified,,unreviewed,verified
