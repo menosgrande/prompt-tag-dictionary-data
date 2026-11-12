@@ -265,9 +265,9 @@
       const key = keyOf(row);
       let aliases = parseAliases(row.aliases_json).join("、");
       const polarity = state.polarity.get(key) || "none";
-      const polarityLabel = polarity === "positive" ? "＋" : polarity === "negative" ? "−" : "なし";
+      const polarityLabel = polarity === "positive" ? "＋" : polarity === "negative" ? "−" : "";
       return '<div class="tag-row" role="row" data-source="' + escapeHTML(row.source) + '">' +
-        '<span class="tag-select-cell"><button type="button" class="polarity-button polarity-' + polarity + '" data-polarity="' + escapeHTML(key) + '" aria-label="追加先：' + polarityLabel + '" title="クリックで なし → ポジティブ → ネガティブ"> ' + polarityLabel + '</button><button type="button" class="favorite-button' + (state.favorites.has(key) ? ' is-favorite' : '') + '" data-favorite="' + escapeHTML(key) + '" aria-label="お気に入り切替" title="お気に入り">★</button></span>' +
+        '<span class="tag-select-cell"><button type="button" class="polarity-button polarity-' + polarity + '" data-polarity="' + escapeHTML(key) + '" aria-label="追加先：' + (polarity || "未選択") + '" title="クリックで ポジティブ → ネガティブ → 未選択">' + polarityLabel + '</button><button type="button" class="favorite-button' + (state.favorites.has(key) ? ' is-favorite' : '') + '" data-favorite="' + escapeHTML(key) + '" aria-label="お気に入り切替" title="お気に入り">★</button></span>' +
         '<span class="tag-category" title="' + escapeHTML(row.index) + '">' + escapeHTML(row.index) + '</span>' +
         '<span class="tag-english" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</span>' +
         '<span class="tag-japanese" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</span>' +
