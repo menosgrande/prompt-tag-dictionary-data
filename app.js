@@ -9,7 +9,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
     classification: "all", review: "all", sort: "index",
-    selected: new Map(), activeScreen: "dictionary-screen", columnWidths: [54,220,180,150,150,130,180,100,80,110]
+    selected: new Map(), activeScreen: "dictionary-screen", columnWidths: [42,70,210,170,150,150,130,180,100,55,110,110,95]
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -60,7 +60,7 @@
     return true;
   }
   const COLUMN_WIDTHS_KEY = "ptd-dictionary-column-widths-v1";
-  const COLUMN_MIN_WIDTHS = [42, 90, 80, 80, 80, 80, 80, 76, 52, 76];
+  const COLUMN_MIN_WIDTHS = [36, 48, 90, 80, 80, 80, 70, 80, 76, 42, 76, 76, 64];
   const COLUMN_MAX_WIDTH = 520;
   function applyColumnWidths() {
     $(".table-scroll-shell").style.setProperty("--tag-list-columns", state.columnWidths.map(width => width + "px").join(" "));
@@ -119,17 +119,25 @@
     const pageRows = rows.slice(state.page * PAGE_SIZE, (state.page + 1) * PAGE_SIZE);
     $(".tag-results").innerHTML = pageRows.length ? pageRows.map(row => {
       const key = keyOf(row);
-      return '<div class="tag-row" role="row">' +
+      let aliases = row.aliases_json || "";
+      try {
+        const parsed = JSON.parse(aliases);
+        if (Array.isArray(parsed)) aliases = parsed.join("、");
+      } catch {}
+      return '<div class="tag-row" role="row" data-source="' + escapeHTML(row.source) + '">' +
         '<span class="tag-select-cell"><input type="checkbox" class="tag-select" data-key="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + 'を選択"' + (state.selected.has(key) ? ' checked' : '') + '></span>' +
+        '<span class="tag-category" title="' + escapeHTML(row.index) + '">' + escapeHTML(row.index) + '</span>' +
         '<span class="tag-english" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</span>' +
         '<span class="tag-japanese" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</span>' +
         '<span class="tag-category" title="' + escapeHTML(row.major) + '">' + escapeHTML(row.major || "—") + '</span>' +
         '<span class="tag-category" title="' + escapeHTML(row.minor) + '">' + escapeHTML(row.minor || "—") + '</span>' +
         '<span class="tag-category" title="' + escapeHTML(row.detail) + '">' + escapeHTML(row.detail || "—") + '</span>' +
-        '<span class="tag-category alias-cell" title="' + escapeHTML(row.aliases_json) + '">' + escapeHTML(row.aliases_json || "—") + '</span>' +
-        '<span class="tag-category">' + escapeHTML(statusLabel(row.translation_status)) + '</span>' +
-        '<span class="tag-category">' + escapeHTML(row.ero_level || "0") + '</span>' +
-        '<span class="tag-category">' + escapeHTML(row.sourceLabel) + '</span>' +
+        '<span class="tag-category alias-cell" title="' + escapeHTML(row.aliases_json) + '">' + escapeHTML(aliases || "—") + '</span>' +
+        '<span class="tag-category" title="' + escapeHTML(row.translation_status) + '">' + escapeHTML(statusLabel(row.translation_status)) + '</span>' +
+        '<span class="tag-category" title="' + escapeHTML(row.ero_level) + '">' + escapeHTML(row.ero_level ?? "0") + '</span>' +
+        '<span class="tag-category" title="' + escapeHTML(row.ero_review_status) + '">' + escapeHTML(statusLabel(row.ero_review_status)) + '</span>' +
+        '<span class="tag-category" title="' + escapeHTML(row.classification_review_status) + '">' + escapeHTML(statusLabel(row.classification_review_status)) + '</span>' +
+        '<span class="tag-category" title="' + escapeHTML(row.age_safety) + '">' + escapeHTML(row.age_safety || "—") + '</span>' +
       '</div>';
     }).join("") : '<div class="empty-state">条件に一致するタグはありません。</div>';
     const pages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
