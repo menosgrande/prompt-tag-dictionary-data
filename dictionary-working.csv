@@ -1479,7 +1479,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 1790,chibi,ちびキャラ,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 1791,chibi inset,ちびキャラの小窓表示,構図・カメラ,構図・配置,,[],verified,0,verified,verified,normal
 1792,chibi only,ちびキャラのみ,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
-1793,chibi usa,ちびうさ,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 1794,chick,ひよこ,生物・動植物,動物,,[],verified,0,verified,verified,normal
 1795,chicken,ニワトリ,生物・動植物,動物,,[],verified,0,verified,verified,normal
 1796,chicken (food),鶏肉,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
@@ -2031,7 +2030,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 2439,different reflection,異なる反射,光・演出,演出効果,,[],verified,0,verified,verified,normal
 2440,different shadow,異なる影,光・演出,照明・光源,,[],verified,0,verified,verified,normal
 2441,diffraction spikes,回折スパイク,光・演出,演出効果,,[],verified,0,verified,verified,normal
-2443,digimon (creature),デジモン（種族）,生物・動植物,動物,,[],verified,0,verified,verified,normal
 2445,digital clock,デジタル時計,家具・設備・物品,機械・装置,,[],verified,0,verified,verified,normal
 2446,digital dissolve,デジタル状に崩れる表現,光・演出,演出効果,,[],verified,0,verified,verified,normal
 2447,digital media player,デジタルメディアプレーヤー,家具・設備・物品,機械・装置,,[],verified,0,verified,verified,normal
@@ -2124,7 +2122,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 2573,dragon tail,ドラゴンの尻尾,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified,normal
 2574,dragon wings,ドラゴンの翼,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified,normal
 2575,dragonfly,トンボ,生物・動植物,動物,,[],verified,0,verified,verified,normal
-2576,draph,ドラフ（グランブルーファンタジーの種族）,生物・動植物,種族,,[],verified,0,verified,verified,normal
 2577,drawer,引き出し,家具・設備・物品,家具,,[],verified,0,verified,verified,normal
 2579,drawing (object),描かれた物体,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 2580,drawing bow,弓を引く,動作・接触,身体動作,,[],verified,0,verified,verified,normal
