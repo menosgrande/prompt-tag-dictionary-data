@@ -915,7 +915,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4693,idolmaster (classic),アイドルマスター（アーケード版）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4694,idolmaster 1,アイドルマスター（初代）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4695,idolmaster 2,アイドルマスター2,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-4696,idolmaster cinderella girls,アイドルマスター シンデレラガールズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+4696,idolmaster cinderella girls,アイドルマスター シンデレラガールズ,キャラクター・作品,タイトル（作品名）,,"[""The Idolmaster Cinderella Girls""]",verified,0,verified,verified,normal
 4697,idolmaster cinderella girls starlight stage,アイドルマスター シンデレラガールズ スターライトステージ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4698,idolmaster dearly stars,アイドルマスター ディアリースターズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4699,idolmaster million live!,アイドルマスター ミリオンライブ！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -1015,7 +1015,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4922,jintsuu (kancolle),神通（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4923,jinx (league of legends),ジンクス（リーグオブレジェンド）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4928,johnny joestar (JoJo's Bizarre Adventure: Steel Ball Run),ジョニィ・ジョースター,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4930,jojo no kimyou na bouken,ジョジョの奇妙な冒険,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+4930,jojo no kimyou na bouken,ジョジョの奇妙な冒険,キャラクター・作品,タイトル（作品名）,,"[""JoJo's Bizarre Adventure""]",verified,0,verified,verified,normal
 4932,jojolion,ジョジョリオン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4933,jokanhiyou,jokanhiyou(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4935,jonathan joestar (JoJo's Bizarre Adventure),ジョナサン・ジョースター,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1087,7 +1087,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5027,kanon (kurogane knights),カノン（クロガネナイツ）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5028,kanpa (campagne 9),カンパ（Campagne 9）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5029,kanroji mitsuri (Demon Slayer: Kimetsu no Yaiba),甘露寺蜜璃,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5031,kantai collection,艦隊これくしょん,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+5031,kantai collection,艦隊これくしょん,キャラクター・作品,タイトル（作品名）,,"[""KanColle""]",verified,0,verified,verified,normal
 5032,kantoku,カントク,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5033,kanzaki ranko (the idolmaster cinderella girls),神崎蘭子（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5037,kara no kyoukai,空の境界,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -2457,7 +2457,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9893,torotei,とろ亭(作者),キャラクター・作品,作者・配信者,,"[""torotei""]",verified,0,verified,verified,normal
 9899,toshinou kyouko,歳納京子（ゆるゆり）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9900,touhoku kiritan,東北きりたん,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-9901,touhou,東方Project,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+9901,touhou,東方Project,キャラクター・作品,タイトル（作品名）,,"[""Touhou Project""]",verified,0,verified,verified,normal
 9902,touhou (pc-98),東方旧作,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9903,touhou lostword,東方LostWord,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9904,touhou tag dream,夢の東方タッグ編,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
