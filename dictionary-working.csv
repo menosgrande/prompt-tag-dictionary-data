@@ -3891,7 +3891,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 4891,japanese armor,日本の甲冑,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
 4892,japanese clothes,和服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 4894,japanese flag,日本国旗,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
-4895,japari bun,ジャパリまん,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 4896,japari symbol,ジャパリパークのシンボル,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
 4897,jar,瓶,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 4899,jealous,嫉妬,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
@@ -4057,12 +4056,10 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 5343,ladle,おたま,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 5344,ladybug,てんとう虫,生物・動植物,動物,,[],verified,0,verified,verified,normal
 5348,lake,湖,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
-5349,lalafell,ララフェル,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 5350,lamia,ラミア,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 5351,lamp,ランプ,家具・設備・物品,設備,,[],verified,0,verified,verified,normal
 5352,lamppost,街灯,家具・設備・物品,設備,,[],verified,0,verified,verified,normal
 5354,lance,槍,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
-5355,lance of longinus (evangelion),ロンギヌスの槍（新世紀エヴァンゲリオン）,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 5356,landscape,風景,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
 5357,lane line,車線,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
 5358,lantern,ランタン,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
@@ -4419,12 +4416,10 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 5835,masochism,マゾヒズム,状態・状況,状況・関係性,,[],verified,2,verified,verified,normal
 5836,massage,マッサージ,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 5838,mast,帆柱,家具・設備・物品,設備,,[],verified,0,verified,verified,normal
-5839,master sword,マスターソード,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 5840,masterpiece,傑作,品質・ネガティブ,高品質・傑作,,[],verified,0,verified,verified,normal
 5841,masu,升,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 5843,mat,マット,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 5845,matching outfits,お揃いの服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-5846,materia,マテリア（FFVIIの魔法石）,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 5847,material growth,物質的成長,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 5848,math,数学,文字・記号,文字,,[],verified,0,verified,verified,normal
 5851,mating press,交尾プレス,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
