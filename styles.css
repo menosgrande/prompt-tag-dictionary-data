@@ -764,7 +764,7 @@ body:not(.admin-mode) .tag-edit-button{display:none!important}
 .results-panel{min-width:0;overflow:hidden}
 .table-head,.tag-row{
   display:grid;
-  grid-template-columns:var(--tag-list-columns,36px 190px 160px 120px 120px 120px 76px 58px 42px);
+  grid-template-columns:var(--tag-list-columns,42px 70px 210px 170px 150px 150px 130px 180px 100px 55px 110px 110px 95px);
   gap:0;
   align-items:stretch;
   width:max-content;
@@ -1032,7 +1032,7 @@ body:not(.admin-mode) .tag-edit-button{display:none!important}
 
 /* CSV-backed dictionary table: shared tracks for header and body, with drag handles. */
 .table-scroll-shell{
-  --tag-list-columns:54px 220px 180px 150px 150px 130px 180px 100px 80px 110px;
+  --tag-list-columns:42px 70px 210px 170px 150px 150px 130px 180px 100px 55px 110px 110px 95px;
   width:100%;
   min-width:0;
   overflow-x:auto;
