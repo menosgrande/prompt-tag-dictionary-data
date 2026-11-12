@@ -94,3 +94,26 @@ body{font-size:14px;line-height:1.65}
 /* Compact dictionary counters in the top header. */
 .topbar-meta{gap:10px}.header-stats{display:flex;align-items:center;gap:5px}.header-stats .stat-card{display:flex;align-items:baseline;gap:5px;min-width:0;padding:4px 7px;border:1px solid var(--line-soft);border-radius:6px;background:transparent}.header-stats .stat-card strong{font:500 12px var(--mono);letter-spacing:0}.header-stats .stat-card span{margin:0;color:var(--muted-2);font-size:9px;white-space:nowrap}
 @media(max-width:760px){.topbar-meta{gap:6px}.header-stats{gap:3px}.header-stats .stat-card{gap:3px;padding:3px 5px}.header-stats .stat-card strong{font-size:10px}.header-stats .stat-card span{font-size:8px}.topbar-meta>.button{min-height:30px;padding:5px 8px;font-size:9px}}
+
+
+/* Dense tag table: separate favorite column, hide internal row IDs. */
+.table-scroll-shell{--tag-list-columns:48px 42px 220px 190px 150px 150px 150px 180px 90px 100px}
+.table-head-cell{font-size:10px;font-weight:400}
+.table-head-cell code{display:none}
+.tag-results .tag-row{height:25px;min-height:25px}
+.tag-results .tag-row>*{padding:1px 7px;font-size:9px}
+.tag-results .tag-row .tag-english{font-size:10px;font-weight:500}
+.tag-results .tag-row .tag-japanese{font-size:10px}
+.tag-results .tag-row .tag-category{font-size:9px}
+.tag-select-cell{display:flex!important;justify-content:center;align-items:center;padding:0!important}
+.favorite-cell{display:flex!important;justify-content:center;align-items:center;padding:0!important}
+.favorite-button{width:22px;height:22px;font-size:13px}
+@media(max-width:760px){
+  .table-scroll-shell{--tag-list-columns:42px 36px 170px 150px 120px 120px 120px 140px 75px 85px}
+  .table-head-cell{font-size:9px;font-weight:400;padding:2px 5px}
+  .tag-results .tag-row{height:24px;min-height:24px}
+  .tag-results .tag-row>*{padding:1px 5px}
+  .tag-results .tag-row .tag-english{font-size:10px;font-weight:500}
+  .tag-results .tag-row .tag-japanese{font-size:9px}
+  .tag-results .tag-row .tag-category{font-size:8px}
+}
