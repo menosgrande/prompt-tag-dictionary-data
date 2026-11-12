@@ -280,7 +280,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 401,ar-15,AR-15（エーアール・フィフティーン）,家具・設備・物品,その他の物品,,"[""AR-15"",""エーアール15"",""エーアールフィフティーン""]",verified,0,verified,verified,normal
 402,arabian clothes,アラビアの服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 403,arachne,アラクネ,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
-404,araki hirohiko (style),荒木飛呂彦風,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 405,aran sweater,アランセーター,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 407,arcade cabinet,アーケードゲーム筐体,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 409,arch,アーチ,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
@@ -7382,7 +7381,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9864,torch,松明,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 9865,torii,鳥居,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
 9866,torii gate,鳥居,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
-9867,toriyama akira (style),鳥山明（画風）,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 9868,torn,破れた状態,服装・装飾,衣服の状態,,[],verified,0,verified,verified,normal
 9869,torn bike shorts,破れたバイクショーツ,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 9870,torn bodystocking,破れたボディストッキング,服装・装飾,下着,,[],verified,2,verified,verified,normal
