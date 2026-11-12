@@ -23,11 +23,11 @@ body{font-size:14px;line-height:1.65}
 .category-major-button{font-size:12px;padding:9px}
 .category-minor{font-size:11px;padding:7px 9px}
 .category-footnote{font-size:10px;line-height:1.65}
-.table-head{min-height:48px}
-.table-head-cell{padding:7px 9px;font-size:11px}
+.table-head{min-height:42px}
+.table-head-cell{padding:4px 9px;font-size:11px}
 .table-head-cell code{font-size:9px}
-.tag-results .tag-row{height:42px;min-height:42px}
-.tag-results .tag-row>*{padding:5px 9px;font-size:10px}
+.tag-results .tag-row{height:32px;min-height:32px}
+.tag-results .tag-row>*{padding:1px 9px;font-size:10px}
 .tag-results .tag-row .tag-english{font-size:12px;font-weight:600}
 .tag-results .tag-row .tag-japanese{font-size:11px}
 .tag-results .tag-row .tag-category{font-size:10px}
@@ -43,10 +43,10 @@ body{font-size:14px;line-height:1.65}
 .output-card textarea{font-size:12px;line-height:1.8}
 .footer{font-size:10px}
 @media(max-width:760px){
-  .table-head{min-height:46px}
-  .table-head-cell{padding:6px 7px;font-size:10px}
-  .tag-results .tag-row{height:40px;min-height:40px}
-  .tag-results .tag-row>*{padding:4px 6px}
+  .table-head{min-height:40px}
+  .table-head-cell{padding:3px 7px;font-size:10px}
+  .tag-results .tag-row{height:30px;min-height:30px}
+  .tag-results .tag-row>*{padding:1px 6px}
   .tag-results .tag-row .tag-english{font-size:11px}
   .tag-results .tag-row .tag-japanese{font-size:10px}
   .tag-results .tag-row .tag-category{font-size:9px}
