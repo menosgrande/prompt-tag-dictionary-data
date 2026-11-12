@@ -1227,8 +1227,6 @@ body:not(.admin-mode) .tag-edit-button{display:none!important}
 .table-scroll-shell .tag-results .tag-row{
   display:grid;
   grid-template-columns:var(--tag-list-columns);
-  grid-auto-flow:column;
-  grid-auto-columns:unset;
   column-gap:0;
   width:max-content;
   min-width:100%;
