@@ -178,3 +178,19 @@ body{font-size:14px;line-height:1.65}
  .panel-heading{padding:4px 8px}
  .output-header{padding:5px 8px}
 }
+
+
+/* Franchise-level nesting for related work titles. */
+.series-parent>summary{min-height:46px;background:rgba(35,45,56,.72)}
+.series-parent>.series-body{padding:4px 12px 12px 16px}
+.series-child{margin:5px 0;border:1px solid var(--line-soft);border-radius:7px}
+.series-child:last-child{border-bottom:1px solid var(--line-soft)}
+.series-child>summary{min-height:36px;padding:6px 10px}
+.series-child>.work-card-body{padding:0 10px 8px 14px}
+@media(max-width:700px){
+ .series-parent>summary{min-height:40px}
+ .series-parent>.series-body{padding:3px 6px 8px 8px}
+ .series-child{margin:4px 0}
+ .series-child>summary{min-height:34px;padding:6px 8px}
+ .series-child>.work-card-body{padding:0 7px 7px 9px}
+}
