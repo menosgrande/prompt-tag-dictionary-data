@@ -8,8 +8,8 @@
   const HEADERS = ["index","tag","ja","major","minor","detail","aliases_json","translation_status","ero_level","ero_review_status","classification_review_status","age_safety"];
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
-    classification: "all", review: "all", sort: "index",
-    selected: new Map(), activeScreen: "dictionary-screen", columnWidths: [58,82,220,210,150,150,150,190,130,100,190,190,120]
+    classification: "all", sort: "index",
+    selected: new Map(), activeScreen: "dictionary-screen", columnWidths: [50,70,220,190,150,150,150,180,90,100]
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -51,16 +51,14 @@
     if (state.minor && row.minor !== state.minor) return false;
     if (state.classification === "classified" && !row.major && !row.minor) return false;
     if (state.classification === "unclassified" && (row.major || row.minor)) return false;
-    if (state.review === "unconfirmed" && !["pending","unverified",""].includes(row.translation_status) && !["pending","unverified",""].includes(row.classification_review_status)) return false;
-    if (state.review === "needs" && !["needs_review","needs-review"].includes(row.translation_status) && !["needs_review","needs-review"].includes(row.classification_review_status) && !["needs_review","needs-review"].includes(row.ero_review_status)) return false;
     if (state.query) {
       const q = state.query.toLocaleLowerCase();
       if (![row.tag,row.ja,row.major,row.minor,row.detail,row.aliases_json].join(" ").toLocaleLowerCase().includes(q)) return false;
     }
     return true;
   }
-  const COLUMN_WIDTHS_KEY = "ptd-dictionary-column-widths-v2";
-  const COLUMN_MIN_WIDTHS = [42, 56, 100, 100, 90, 90, 90, 100, 90, 70, 120, 120, 90];
+  const COLUMN_WIDTHS_KEY = "ptd-dictionary-column-widths-v3";
+  const COLUMN_MIN_WIDTHS = [42, 56, 100, 100, 90, 90, 90, 100, 70, 90];
   const COLUMN_MAX_WIDTH = 520;
   function applyColumnWidths() {
     $(".table-scroll-shell").style.setProperty("--tag-list-columns", state.columnWidths.map(width => width + "px").join(" "));
@@ -133,10 +131,7 @@
         '<span class="tag-category" title="' + escapeHTML(row.minor) + '">' + escapeHTML(row.minor || "—") + '</span>' +
         '<span class="tag-category" title="' + escapeHTML(row.detail) + '">' + escapeHTML(row.detail || "—") + '</span>' +
         '<span class="tag-category alias-cell" title="' + escapeHTML(row.aliases_json) + '">' + escapeHTML(aliases || "—") + '</span>' +
-        '<span class="tag-category" title="' + escapeHTML(row.translation_status) + '">' + escapeHTML(statusLabel(row.translation_status)) + '</span>' +
         '<span class="tag-category" title="' + escapeHTML(row.ero_level) + '">' + escapeHTML(row.ero_level || "—") + '</span>' +
-        '<span class="tag-category" title="' + escapeHTML(row.ero_review_status) + '">' + escapeHTML(statusLabel(row.ero_review_status)) + '</span>' +
-        '<span class="tag-category" title="' + escapeHTML(row.classification_review_status) + '">' + escapeHTML(statusLabel(row.classification_review_status)) + '</span>' +
         '<span class="tag-category" title="' + escapeHTML(row.age_safety) + '">' + escapeHTML(row.age_safety || "—") + '</span>' +
       '</div>';
     }).join("") : '<div class="empty-state">条件に一致するタグはありません。</div>';
@@ -208,10 +203,9 @@
   function bindControls() {
     const search = $(".searchbox input");
     search.addEventListener("input", () => { state.query = search.value.trim(); applyFilters(); });
-    const selects = $$(".search-row select");
+    const selects = $(".search-row select");
     selects[0].addEventListener("change", () => { state.classification = selects[0].selectedIndex === 1 ? "classified" : selects[0].selectedIndex === 2 ? "unclassified" : "all"; applyFilters(); });
-    selects[1].addEventListener("change", () => { state.review = selects[1].selectedIndex === 1 ? "unconfirmed" : selects[1].selectedIndex === 2 ? "needs" : "all"; applyFilters(); });
-    selects[2].addEventListener("change", () => { state.sort = selects[2].selectedIndex === 1 ? "tag" : selects[2].selectedIndex === 2 ? "ja" : "index"; applyFilters(); });
+    selects[1].addEventListener("change", () => { state.sort = selects[1].selectedIndex === 1 ? "tag" : selects[1].selectedIndex === 2 ? "ja" : "index"; applyFilters(); });
     $(".category-tree").addEventListener("click", event => {
       const button = event.target.closest("[data-major]");
       if (!button) return;
@@ -220,7 +214,7 @@
     });
     $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; renderCategories(); applyFilters(); });
     $(".search-row > .button").addEventListener("click", () => {
-      search.value = ""; state.query = ""; state.major = ""; state.minor = ""; state.classification = "all"; state.review = "all"; state.sort = "index";
+      search.value = ""; state.query = ""; state.major = ""; state.minor = ""; state.classification = "all"; state.sort = "index";
       selects.forEach(select => select.selectedIndex = 0); renderCategories(); applyFilters();
     });
     $(".pagination").addEventListener("click", event => {
