@@ -164,7 +164,7 @@
     }
     return true;
   }
-  const COLUMN_WIDTHS_KEY = "ptd-dictionary-column-widths-v3";
+  const COLUMN_WIDTHS_KEY = "ptd-dictionary-column-widths-v4";
   const COLUMN_MIN_WIDTHS = [42, 34, 100, 100, 90, 90, 90, 100, 70, 90];
   const COLUMN_MAX_WIDTH = 520;
   function applyColumnWidths() {
