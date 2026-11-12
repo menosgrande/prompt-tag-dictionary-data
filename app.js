@@ -327,9 +327,10 @@
     $("#search-target").addEventListener("change", event => { state.searchTarget = event.target.value; applyFilters(); });
     $("#favorites-only").addEventListener("change", event => { state.favoritesOnly = event.target.checked; applyFilters(); });
     try { state.favorites = new Set(JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]")); } catch { state.favorites = new Set(); }
-    const selects = $$(".search-row select");
-    selects[0].addEventListener("change", () => { state.classification = selects[0].selectedIndex === 1 ? "classified" : selects[0].selectedIndex === 2 ? "unclassified" : "all"; applyFilters(); });
-    selects[1].addEventListener("change", () => { state.sort = selects[1].selectedIndex === 1 ? "tag" : selects[1].selectedIndex === 2 ? "ja" : "index"; applyFilters(); });
+    const classificationSelect = $("#classification-filter");
+    const sortSelect = $("#sort-filter");
+    classificationSelect.addEventListener("change", () => { state.classification = classificationSelect.selectedIndex === 1 ? "classified" : classificationSelect.selectedIndex === 2 ? "unclassified" : "all"; applyFilters(); });
+    sortSelect.addEventListener("change", () => { state.sort = sortSelect.selectedIndex === 1 ? "tag" : sortSelect.selectedIndex === 2 ? "ja" : "index"; applyFilters(); });
     $(".category-tree").addEventListener("click", event => {
       const button = event.target.closest("[data-major]");
       if (!button) return;
@@ -339,7 +340,7 @@
     $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; renderCategories(); applyFilters(); });
     $(".search-row > .button").addEventListener("click", () => {
       search.value = ""; state.query = ""; state.major = ""; state.minor = ""; state.classification = "all"; state.sort = "index"; state.searchTarget = "all"; state.favoritesOnly = false; $("#search-target").value = "all"; $("#favorites-only").checked = false;
-      selects.forEach(select => select.selectedIndex = 0); renderCategories(); applyFilters();
+      classificationSelect.selectedIndex = 0; sortSelect.selectedIndex = 0; renderCategories(); applyFilters();
     });
     $(".pagination").addEventListener("click", event => {
       const button = event.target.closest("[data-page]");
