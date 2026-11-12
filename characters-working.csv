@@ -3,7 +3,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 22,22/7,22/7（ナナブンノニジュウニ）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 23,2b (nier:automata),ヨルハ二号B型（ニーア オートマタ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 24,2b (nier:automata) (cosplay),2Bコス（ニーア オートマタ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-45,6 (yuchae),6（Yuchae）(作者),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+45,6 (yuchae),6 (Yuchae)(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 50,7th dragon (series),セブンスドラゴン（シリーズ）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 52,9s (nier:automata),ヨルハ九号S型（ニーア オートマタ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 53,a certain high school uniform,とある高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
@@ -1503,7 +1503,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6019,mimura kanako (the idolmaster cinderella girls),三村かな子（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6020,minaba hideo,皆葉英夫(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6021,minakami (flyingman555),Minakami(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-6022,minami (colorful palette),みなみ(作者),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+6022,minami (colorful palette),みなみ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6023,minami kotori (love live! school idol project),南ことり（ラブライブ！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6024,minamino kanade (Suite Precure),南野奏（スイートプリキュア♪）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6025,minamoto no raikou (fate),源頼光（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
