@@ -66,7 +66,7 @@
     $(".table-scroll-shell").style.setProperty("--tag-list-columns", state.columnWidths.map(width => width + "px").join(" "));
   }
   function setupColumnResizers() {
-    const headers = $(".table-head-cell");
+    const headers = $$(".table-head-cell");
     headers.forEach((cell, index) => {
       const handle = document.createElement("span");
       handle.className = "column-resize";
