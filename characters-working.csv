@@ -553,8 +553,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3008,final fantasy vii remake,ファイナルファンタジーVIIリメイク,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 3009,final fantasy viii,ファイナルファンタジーVIII,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 3010,final fantasy x,ファイナルファンタジーX,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-3011,final fantasy xi,ファイナルファンタジーXI,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-3012,final fantasy xiv,ファイナルファンタジーXIV,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+3011,final fantasy xi,ファイナルファンタジーXI,キャラクター・作品,タイトル（作品名）,,"[""FF11"",""FFXI""]",verified,0,verified,verified,normal
+3012,final fantasy xiv,ファイナルファンタジーXIV,キャラクター・作品,タイトル（作品名）,,"[""FF14"",""FFXIV""]",verified,0,verified,verified,normal
 3013,final fantasy xv,ファイナルファンタジーXV,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 3014,final fantasy xvi,ファイナルファンタジーXVI,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 3036,fire emblem,ファイアーエムブレム（ゲームシリーズ）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -1856,10 +1856,10 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 7339,plana (blue archive),プラナ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 7377,pochita (chainsaw man),ポチタ（チェーンソーマン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 7405,pokemoa,ポケモア,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-7406,pokemon,ポケモン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+7406,pokemon,ポケモン,キャラクター・作品,タイトル（作品名）,,"[""ポケットモンスター""]",verified,0,verified,verified,normal
 7410,pokemon adventures,ポケットモンスターSPECIAL,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 7411,pokemon bw,ポケットモンスター ブラック・ホワイト,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-7412,pokemon bw2,ポケットモンスター ブラック2・ホワイト2,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+7412,pokemon bw2,ポケットモンスター ブラック2・ホワイト2,キャラクター・作品,タイトル（作品名）,,"[""ポケモンBW2""]",verified,0,verified,verified,normal
 7413,pokemon dppt,ポケットモンスター ダイヤモンド・パール・プラチナ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 7416,pokemon frlg,ポケットモンスター ファイアレッド・リーフグリーン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 7417,pokemon go,Pokémon GO,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -2667,7 +2667,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 10906,yu-gi-oh! duel monsters,遊☆戯☆王デュエルモンスターズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 10907,yu-gi-oh! gx,遊☆戯☆王GX,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 10908,yua (checkmate),yua（checkmate）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-10909,yuffie kisaragi,ユフィ・キサラギ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+10909,yuffie kisaragi,ユフィ・キサラギ（ファイナルファンタジーVII）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10911,yugiri tsuzuri,夕霧綴理,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10912,yuichirou,ユイチロウ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 10913,yuigaoka school uniform,結ヶ丘女子高等学校の制服（ラブライブ！スーパースター!!）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
