@@ -217,3 +217,38 @@ body{font-size:14px;line-height:1.65}
     max-width:none;
   }
 }
+
+
+/* Mobile usability: make category navigation explicitly reachable and controls touch-friendly. */
+.category-mobile-toggle{display:none}
+@media(max-width:760px){
+  .category-mobile-toggle{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    width:100%;min-height:42px;margin:7px 0 0;padding:9px 12px;
+    border:1px solid var(--line);border-radius:7px;background:var(--surface);
+    color:var(--text);font-size:12px;font-weight:600;text-align:left;
+  }
+  .category-mobile-toggle span{color:var(--muted);font-size:10px;font-weight:400}
+  .category-mobile-toggle[aria-expanded="true"]{border-color:#526b66;background:#263632}
+  .category-mobile-toggle[aria-expanded="true"] + .workspace .categories-panel{display:block}
+  .categories-panel{display:none}
+  .category-tree{max-height:42vh;min-height:80px}
+  .category-major-button{min-height:40px}
+  .category-minor{min-height:38px}
+  .screen-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+  .screen-tab{justify-content:center;min-width:0;padding:9px 3px;font-size:10px;text-align:center;white-space:nowrap}
+  .search-row>#search-target,.filter-controls select{min-height:38px}
+  .favorite-filter{min-height:38px}
+  .pagination .page-number{min-width:34px;height:34px}
+  .related-tag-row{min-height:38px}
+  .related-tag-row input,.tag-select{width:18px;height:18px}
+  .output-card textarea{min-height:160px;font-size:16px}
+  .preview-add-row input{min-height:42px;font-size:16px}
+  .selected-dock{padding:7px;gap:6px}
+  .selected-dock-actions .button{min-height:36px}
+}
+@media(max-width:380px){
+  .screen-tab{font-size:9px}
+  .header-stats .stat-card span{display:none}
+  .topbar-meta>.button{font-size:8px}
+}
