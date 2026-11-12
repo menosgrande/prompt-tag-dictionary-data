@@ -6845,7 +6845,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9124,stained clothes,汚れた服,服装・装飾,衣服の状態,,[],verified,0,verified,verified,normal
 9125,stained glass,ステンドグラス,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
 9126,stained panties,汚れたパンティー,服装・装飾,下着,,[],verified,2,verified,verified,normal
-9127,stained sheets,汚れたシーツ,服装・装飾,衣服の状態,,[],verified,1,verified,verified,normal
+9127,stained sheets,汚れたシーツ,家具・設備・物品,その他の物品,,[],verified,1,verified,verified,normal
 9128,stairs,階段,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
 9130,stalk in mouth,口にくわえた茎,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 9132,standard bearer,旗手,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
@@ -7139,7 +7139,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9493,tail bell,尻尾の鈴,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 9494,tail between legs,股の間に垂れた尻尾,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 9495,tail bow,尻尾のリボン,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
-9496,tail censor,尻尾による局部隠し,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
+9496,tail censor,尻尾による局部隠し,光・演出,演出効果,,[],verified,2,verified,verified,normal
 9497,tail grab,尻尾をつかむ,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 9498,tail ornament,尻尾飾り,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 9499,tail piercing,尻尾のピアス,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
@@ -7212,7 +7212,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9622,teddy bear,テディベア,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 9625,teenager,10代,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 9626,teeth,歯,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
-9627,teeth hold,歯でくわえる,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
+9627,teeth hold,歯でくわえる,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 9628,tegaki,手描き,画風・描写,描画技法,,[],verified,0,verified,verified,normal
 9630,telekinesis,念動力,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
 9631,telescope,望遠鏡,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
@@ -7271,7 +7271,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9704,thighband pantyhose,太ももバンド付きパンスト,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 9705,thighhighs,ニーハイソックス,服装・装飾,靴・履物,,[],verified,0,verified,verified,normal
 9706,thighhighs over pantyhose,パンストの上にニーハイ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-9707,thighhighs pull,ニーハイを引っ張る,服装・装飾,靴・履物,,[],verified,1,verified,verified,normal
+9707,thighhighs pull,ニーハイを引っ張る,動作・接触,衣服への接触,,[],verified,1,verified,verified,normal
 9708,thighhighs under boots,ブーツの下に履いたニーハイ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 9709,thighlet,太ももリング,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 9710,thighs,太もも,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
@@ -7992,7 +7992,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 10612,white snake,白蛇,生物・動植物,動物,,[],verified,0,verified,verified,normal
 10613,white socks,白い靴下,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 10614,white sports bra,白いスポーツブラ,服装・装飾,下着,,[],verified,1,verified,verified,normal
-10615,white stripes,白い縞模様,画風・描写,描画技法,,[],verified,0,verified,verified,normal
+10615,white stripes,白い縞模様,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 10616,white suit,白いスーツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 10617,white sweater,白いセーター,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 10618,white tail,白い尾,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
