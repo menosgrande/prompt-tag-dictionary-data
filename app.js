@@ -199,7 +199,7 @@
     });
     state.columnWidths = widths;
     applyColumnWidths();
-    $(".column-resize").forEach((handle, index) => handle.setAttribute("aria-valuenow", String(widths[index])));
+    $$(".column-resize").forEach((handle, index) => handle.setAttribute("aria-valuenow", String(widths[index])));
     if (persist) {
       try { localStorage.setItem(COLUMN_WIDTHS_KEY, JSON.stringify(widths)); } catch {}
     }
@@ -352,7 +352,7 @@
     $(".column-fit-button").addEventListener("click", () => autoFitColumns(true));
     $("#works-search").addEventListener("input", event => { state.worksQuery = event.target.value.trim().toLocaleLowerCase(); renderWorkList(); });
     $("#authors-search").addEventListener("input", event => { state.authorsQuery = event.target.value.trim().toLocaleLowerCase(); renderAuthorList(); });
-    $(".related-list").forEach(root => root.addEventListener("change", event => {
+    $$(".related-list").forEach(root => root.addEventListener("change", event => {
       const input = event.target.closest(".related-select");
       if (!input) return;
       const row = state.all.find(item => keyOf(item) === input.dataset.key);
