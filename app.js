@@ -125,10 +125,12 @@
   function genericSeriesGroups() {
     const manualRoots = new Set(["overwatch", "kemonofriends", "streetfighter", "idolmaster", "leagueoflegends", "touhou"]);
     const entries = state.works.map(group => {
-      const tag = String(group.titles[0]?.tag || "");
-      const normalized = normalizeWorkName(tag);
-      const isRoot = /\\(series\\)\\s*$/i.test(tag) || manualRoots.has(normalized);
-      return { group, tag, normalized, isRoot };
+      const tags = group.titles.map(row => String(row.tag || ""));
+      const normalizedTags = tags.map(normalizeWorkName).filter(Boolean);
+      const rootTag = tags.find(tag => /\\(series\\)\\s*$/i.test(tag) || manualRoots.has(normalizeWorkName(tag)));
+      const normalized = rootTag ? normalizeWorkName(rootTag) : "";
+      const isRoot = Boolean(rootTag);
+      return { group, tags, normalizedTags, normalized, isRoot };
     });
     const roots = entries.filter(entry => entry.isRoot && entry.normalized);
     const rootFor = new Map();
@@ -140,14 +142,12 @@
       return parent ? rootAncestor(parent) : root;
     };
     entries.forEach(entry => {
-      const tagLower = entry.tag.toLocaleLowerCase();
-      const forcedRootKey = /^arcane:\\s*league of legends$/i.test(entry.tag) ? "leagueoflegends" :
-        /^gakuen idolmaster$/i.test(entry.tag) ? "idolmaster" :
-        /\\((?:touhou|touhou project)\\)/i.test(entry.tag) ? "touhou" : "";
+      const forcedRootKey = entry.tags.some(tag => /^arcane:\\s*league of legends$/i.test(tag)) ? "leagueoflegends" :
+        entry.tags.some(tag => /^gakuen idolmaster$/i.test(tag)) ? "idolmaster" :
+        entry.tags.some(tag => /\\((?:touhou|touhou project)\\)/i.test(tag)) ? "touhou" : "";
       const forcedRoot = forcedRootKey ? roots.find(root => root.normalized === forcedRootKey && root.group !== entry.group) : null;
       const candidate = forcedRoot || roots.filter(root => root.group !== entry.group &&
-        entry.normalized.startsWith(root.normalized) &&
-        entry.normalized.length > root.normalized.length)
+        entry.normalizedTags.some(tag => tag.startsWith(root.normalized) && tag.length > root.normalized.length))
         .sort((a,b) => b.normalized.length - a.normalized.length)[0];
       if (candidate) rootFor.set(entry.group.key, rootAncestor(candidate).group);
       else if (entry.isRoot) rootFor.set(entry.group.key, rootAncestor(entry).group);
