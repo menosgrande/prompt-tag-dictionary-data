@@ -9,7 +9,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
     classification: "all", sort: "index", worksQuery: "", authorsQuery: "",
-    selected: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], columnWidths: [50,70,220,190,150,150,150,180,90,100]
+    selected: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], columnWidths: [50,70,220,190,150,150,150,180,90,100]
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -31,13 +31,28 @@
     }
     return rows.map(row => ({ ...row, source: file.source, sourceLabel: file.label }));
   }
-  const normalizeWorkName = value => String(value || "").normalize("NFKC").toLocaleLowerCase().replace(/[\\s・:：!！?？"'’`~〜\\-‐‑–—_/／（）()［］\\[\\]「」『』.。、☆★]/g, "");
+  const normalizeWorkName = value => String(value || "").normalize("NFKD").replace(/\p{Diacritic}/gu, "").toLocaleLowerCase().replace(/[\s・:：!！?？"'’~〜\-‐‑–—_/／（）()\[\]「」『』.。、☆★]/g, "");
   function parseAliases(value) {
     try { const parsed = JSON.parse(value || "[]"); return Array.isArray(parsed) ? parsed.map(String) : []; } catch { return []; }
   }
-  function extractTrailingReference(value) {
-    const match = String(value || "").match(/（([^（）]+)）$/);
-    return match ? match[1].trim() : "";
+  function addWorkAlias(map, value, group) {
+    const normalized = normalizeWorkName(value);
+    if (!normalized) return;
+    if (!map.has(normalized)) map.set(normalized, new Set());
+    map.get(normalized).add(group);
+  }
+  function referenceTokens(value) {
+    return String(value || "").match(/[（(]([^（）()]+)[）)]/g)?.map(part => part.slice(1, -1).trim()) || [];
+  }
+  function findWorkCandidates(tokens, aliasMap) {
+    const matches = new Map();
+    tokens.forEach(token => {
+      const parts = [token, ...token.split(/[／]/).map(part => part.trim())].filter(Boolean);
+      parts.forEach(part => {
+        (aliasMap.get(normalizeWorkName(part)) || []).forEach(group => matches.set(group.key, group));
+      });
+    });
+    return [...matches.values()];
   }
   function buildRelatedIndexes() {
     const characterRows = state.all.filter(row => row.source === "characters-working.csv");
@@ -55,22 +70,30 @@
       }
       group.titles.push(row);
       [label, row.tag, ...parseAliases(row.aliases_json)].forEach(alias => {
-        const normalized = normalizeWorkName(alias);
-        if (normalized && !aliasMap.has(normalized)) aliasMap.set(normalized, group);
+        addWorkAlias(aliasMap, alias, group);
+        const englishBase = String(alias).replace(/\s*\((?:series|game|anime|manga|novel|film)\)\s*$/i, "");
+        if (englishBase !== alias) addWorkAlias(aliasMap, englishBase, group);
+        const japaneseBase = String(alias).replace(/シリーズ$/, "");
+        if (japaneseBase !== alias) addWorkAlias(aliasMap, japaneseBase, group);
       });
     });
     const reviewRows = [];
+    const ambiguousRows = [];
+    const creatorRows = characterRows.filter(row => row.minor === "作者・配信者" || /[（(](?:作者|漫画家|配信者)[）)]$/.test(row.ja));
     characterRows.filter(row => row.minor === "キャラクター" || row.minor === "作品固有の衣装・要素").forEach(row => {
-      const reference = extractTrailingReference(row.ja);
-      if (!reference) { reviewRows.push(row); return; }
-      const normalizedReference = normalizeWorkName(reference);
-      let group = aliasMap.get(normalizedReference);
-      if (!group) {
-        const candidates = [...aliasMap.entries()].filter(([alias]) => alias.length >= 3 && normalizedReference.endsWith(alias)).sort((a,b) => b[0].length-a[0].length);
-        if (candidates.length) group = candidates[0][1];
+      if (/[（(](?:作者|漫画家|配信者)[）)]$/.test(row.ja)) return;
+      const jaCandidates = findWorkCandidates(referenceTokens(row.ja), aliasMap);
+      const enCandidates = findWorkCandidates(referenceTokens(row.tag), aliasMap);
+      const candidates = jaCandidates.length ? jaCandidates : enCandidates;
+      if (candidates.length === 1) {
+        const group = candidates[0];
+        (row.minor === "キャラクター" ? group.characters : group.elements).push(row);
+        row.workTitle = group.name;
+      } else if (candidates.length > 1) {
+        ambiguousRows.push({ row, candidates: candidates.map(group => group.name) });
+      } else {
+        reviewRows.push(row);
       }
-      if (!group) { reviewRows.push(row); return; }
-      (row.minor === "キャラクター" ? group.characters : group.elements).push(row);
     });
     state.works = [...groupMap.values()].map(group => {
       group.characters.sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
@@ -79,12 +102,13 @@
       group.queryText = [group.name, ...group.titles.map(row => row.tag), ...group.characters.flatMap(row => [row.tag,row.ja]), ...group.elements.flatMap(row => [row.tag,row.ja])].join(" ").toLocaleLowerCase();
       return group;
     }).sort((a,b) => a.name.localeCompare(b.name, "ja"));
-    state.authors = characterRows.filter(row => row.minor === "作者・配信者").sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
+    state.authors = creatorRows.sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
     state.reviewRows = reviewRows.sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
+    state.ambiguousRows = ambiguousRows.sort((a,b) => a.row.ja.localeCompare(b.row.ja, "ja"));
   }
-  function relatedTagRow(row, groupName = "") {
+  function relatedTagRow(row, groupName = "", typeLabel = "") {
     const key = keyOf(row);
-    return '<div class="related-tag-row"><label><input type="checkbox" class="related-select" data-key="' + escapeHTML(key) + '"' + (state.selected.has(key) ? ' checked' : '') + '><span class="related-tag-copy"><strong>' + escapeHTML(row.ja || row.tag) + '</strong><small>' + escapeHTML(row.tag) + (groupName ? ' · ' + escapeHTML(groupName) : '') + '</small></span></label><span class="related-tag-type">' + escapeHTML(row.minor || "作品タイトル") + '</span></div>';
+    return '<div class="related-tag-row"><label><input type="checkbox" class="related-select" data-key="' + escapeHTML(key) + '"' + (state.selected.has(key) ? ' checked' : '') + '><span class="related-tag-copy"><strong>' + escapeHTML(row.ja || row.tag) + '</strong><small>' + escapeHTML(row.tag) + (groupName ? ' · ' + escapeHTML(groupName) : '') + '</small></span></label><span class="related-tag-type">' + escapeHTML(typeLabel || row.minor || "作品タイトル") + '</span></div>';
   }
   function renderWorkList() {
     const query = state.worksQuery.toLocaleLowerCase();
@@ -100,14 +124,15 @@
       ].join("");
       return '<details class="work-card"><summary><span class="work-card-title">' + escapeHTML(group.name) + '</span><span class="work-card-meta">' + count + '件 · タイトル ' + group.titles.length + '件</span></summary><div class="work-card-body">' + contents + '</div></details>';
     }).join("");
-    const review = !query ? '<details class="work-card review-card"><summary><span class="work-card-title">未紐付け・要確認</span><span class="work-card-meta">' + state.reviewRows.length + '件</span></summary><div class="work-card-body"><p class="related-note">作品名を既存タイトルと照合できない、または日本語訳に作品名の明示がないタグです。自動では作品に割り当てていません。</p>' + state.reviewRows.map(row => relatedTagRow(row)).join("") + '</div></details>' : "";
-    $("#works-list").innerHTML = cards + review || '<p class="empty-state">検索条件に一致する作品はありません。</p>';
+    const ambiguous = !query && state.ambiguousRows.length ? '<details class="work-card review-card"><summary><span class="work-card-title">複数候補・要確認</span><span class="work-card-meta">' + state.ambiguousRows.length + '件</span></summary><div class="work-card-body"><p class="related-note">複数の作品タイトルに一致したため、自動では割り当てていません。</p>' + state.ambiguousRows.map(item => relatedTagRow(item.row, "候補: " + item.candidates.join(" / "))).join("") + '</div></details>' : "";
+    const review = !query ? '<details class="work-card review-card"><summary><span class="work-card-title">未紐付け</span><span class="work-card-meta">' + state.reviewRows.length + '件</span></summary><div class="work-card-body"><p class="related-note">既存の作品タイトルと明確に照合できないタグです。作品名を推測して割り当てていません。</p>' + state.reviewRows.map(row => relatedTagRow(row)).join("") + '</div></details>' : "";
+    $("#works-list").innerHTML = cards + ambiguous + review || '<p class="empty-state">検索条件に一致する作品はありません。</p>';
   }
   function renderAuthorList() {
     const query = state.authorsQuery.toLocaleLowerCase();
     const rows = state.authors.filter(row => [row.ja,row.tag,row.aliases_json].join(" ").toLocaleLowerCase().includes(query));
-    $("#authors-count").textContent = rows.length.toLocaleString("ja-JP") + "人・タグ";
-    $("#authors-list").innerHTML = rows.length ? rows.map(row => relatedTagRow(row, "作者・配信者")).join("") : '<p class="empty-state">検索条件に一致する作者・配信者はいません。</p>';
+    $("#authors-count").textContent = rows.length.toLocaleString("ja-JP") + "件";
+    $("#authors-list").innerHTML = rows.length ? rows.map(row => relatedTagRow(row, "作者・配信者", "作者・配信者")).join("") : '<p class="empty-state">検索条件に一致する作者・配信者はいません。</p>';
   }
   function categoryCounts(rows, key) {
     const counts = new Map();
