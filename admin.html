@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#202329">
+  <title>タグ管理 | Prompt Tag Dictionary</title>
+  <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+<header><a href="./">← 辞書へ戻る</a><h1>タグ管理</h1><span>CSV管理画面</span></header>
+<main>
+<section class="notice">
+  <strong>この画面は辞書データの管理・確認作業用です。</strong>
+  <p>正本データは dictionary-working.csv と characters-working.csv です。現段階では画面構造のみを用意しています。CSVの読み込み・編集・検証・書き出し機能は未実装です。</p>
+</section>
+<section class="toolbar">
+  <label>タグ検索<input type="search" placeholder="英語タグ・日本語訳"></label>
+  <label>並び順<select><option>登録順</option><option>大分類 → 小分類 → タグ名</option><option>タグ名順</option></select></label>
+  <label>確認状態<select><option>すべて</option><option>未確認</option><option>要確認</option><option>暫定</option><option>確認済み</option></select></label>
+  <button type="button" disabled>CSVを読み込む</button>
+  <button type="button" disabled>編集を破棄</button>
+</section>
+<section class="card batch-work-card">
+  <div class="list-head"><strong>翻訳・分類のCSVバッチ作業</strong><span>未読み込み</span></div>
+  <p class="batch-help">未完了タグを小分けのCSVで出力し、編集済みCSVを検証して取り込みます。</p>
+  <div class="batch-controls">
+    <label>作業内容<select><option>翻訳</option><option>分類</option><option>表現レベル</option><option>未完了項目すべて</option></select></label>
+    <label>1回の件数<select><option>25</option><option>50</option><option selected>100</option><option>200</option><option>500</option><option>1000</option></select></label>
+    <label>対象<select><option>未完了</option><option>要確認のみ</option><option>すべて再確認</option></select></label>
+    <button type="button" disabled>バッチCSVを出力</button>
+  </div>
+  <div class="batch-progress">CSVデータの読み込み機能は次の工程で実装します。</div>
+  <div class="batch-import-row">
+    <label>編集済みCSV<input type="file" accept=".csv,text/csv" disabled></label>
+    <button type="button" disabled>CSVを検証して取り込む</button>
+    <button type="button" disabled>AI向け指示をコピー</button>
+  </div>
+  <div class="batch-final-row"><button type="button" disabled>全件CSVを出力</button></div>
+</section>
+<section class="card prompt-order-card">
+  <div class="list-head"><strong>プロンプト出力カテゴリ順</strong><span>未設定</span></div>
+  <p class="prompt-order-help">カテゴリの出力順を管理します。現在は表示枠のみです。</p>
+  <ol class="prompt-order-list"><li>CSV読み込み後にカテゴリを表示します。</li></ol>
+</section>
+<div class="layout">
+  <section class="card tag-list-card">
+    <div class="list-head"><strong>タグ一覧</strong><span>未読み込み</span></div>
+    <div class="results"><p>CSV読み込み後にタグ一覧を表示します。</p></div>
+    <div class="pager"><button disabled>前へ</button><span>—</span><button disabled>次へ</button></div>
+  </section>
+  <div class="list-resizer" role="separator" aria-orientation="vertical" aria-label="タグ一覧と編集フォームの幅を調整"></div>
+  <section class="card editor">
+    <div class="list-head"><strong>選択タグの編集</strong><span>未選択</span></div>
+    <label>英語タグ名<input type="text" disabled></label>
+    <label>日本語訳<input type="text" disabled></label>
+    <label>大分類<input type="text" disabled></label>
+    <label>小分類<input type="text" disabled></label>
+    <label>詳細分類<input type="text" disabled></label>
+    <label>別名・検索語<input type="text" disabled></label>
+    <label>翻訳の確認状態<select disabled><option>未確認</option></select></label>
+    <label>分類の確認状態<select disabled><option>未確認</option></select></label>
+    <label>表現レベル<select disabled><option>未判定</option></select></label>
+    <div class="diff"><strong>変更差分</strong><pre>タグを選択してください。</pre></div>
+    <div class="actions"><button disabled>変更を保存</button><button disabled>編集を戻す</button></div>
+  </section>
+</div>
+<section class="card export-help">
+  <strong>CSVの正式データへの反映</strong>
+  <p>編集後は dictionary-working.csv と characters-working.csv をそれぞれ書き出し、内容・列数・index・tagの重複を検証してからリポジトリへ反映する想定です。ブラウザからGitHubへ直接書き込む機能は設けません。</p>
+</section>
+</main>
+</body>
+</html>
