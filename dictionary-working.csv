@@ -296,7 +296,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 421,argyle pantyhose,アーガイル柄のパンティストッキング,服装・装飾,靴・履物,,[],verified,0,verified,verified,normal
 422,argyle sweater,アーガイルセーター,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 423,argyle thighhighs,アーガイル柄のニーハイソックス,服装・装飾,靴・履物,,[],verified,0,verified,verified,normal
-424,aria (manga),アリア,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 430,arm above head,頭上に上げた腕,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 431,arm across waist,腰の前を横切る腕,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 432,arm armor,腕用装甲,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
@@ -355,7 +354,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 485,arms up,腕を上げる,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 486,army,軍,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 488,aroused,興奮した,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
-489,arrancar,破面,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 490,arrow (projectile),矢（飛び道具）,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 491,arrow (symbol),矢印記号,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
 492,arrow through heart,ハートを貫く矢,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
@@ -397,7 +395,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 560,at computer,パソコンの前にいる,動作・接触,日常動作,,[],verified,0,verified,verified,normal
 566,athletic leotard,体操レオタード,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 569,attack,攻撃,動作・接触,身体動作,,[],verified,0,verified,verified,normal
-570,au ra,アウラ（ファイナルファンタジーXIV）,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 572,audience,観客,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified,normal
 573,audio jack,オーディオジャック,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 574,aunt and niece,叔母と姪,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
@@ -620,7 +617,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 847,beret,ベレー帽,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 848,beretta 92,ベレッタ92,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 849,berry,ベリー,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
-850,berry (pokemon),きのみ(ポケモン),家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 852,bespectacled,眼鏡をかけた,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 853,best quality,最高品質,品質・ネガティブ,高品質・傑作,,[],verified,0,verified,verified,normal
 854,bestiality,獣姦,動作・接触,対人接触・動作,,[],verified,4,verified,verified,normal
