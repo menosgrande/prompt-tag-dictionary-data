@@ -1029,3 +1029,28 @@ body:not(.admin-mode) .tag-edit-button{display:none!important}
 @media(max-width:720px){
   .table-scroll-shell .tag-results{max-height:65vh}
 }
+
+/* CSV-backed dictionary table */
+.table-scroll-shell .table-head,
+.table-scroll-shell .tag-results .tag-row{
+  display:grid;
+  grid-template-columns:54px minmax(190px,1.2fr) minmax(170px,1fr) minmax(145px,.9fr) minmax(145px,.9fr) minmax(120px,.8fr) minmax(150px,1fr) 95px 70px 95px;
+  gap:10px;
+  width:max-content;
+  min-width:100%;
+  align-items:center;
+}
+.table-scroll-shell .table-head{padding:9px 12px}
+.table-scroll-shell .tag-results .tag-row{padding:9px 12px}
+.table-scroll-shell .tag-results{max-height:580px;overflow-y:auto}
+.row-index{font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums}
+.tag-english,.tag-japanese,.tag-category{min-width:0;overflow-wrap:anywhere}
+.alias-cell{max-width:230px;white-space:normal}
+.load-error{color:var(--danger)}
+@media(max-width:720px){
+  .search-row{flex-wrap:wrap}
+  .searchbox{flex-basis:100%}
+  .search-row select{flex:1;max-width:none}
+  .workspace{grid-template-columns:minmax(0,1fr)}
+  .categories-panel{max-height:340px}
+}
