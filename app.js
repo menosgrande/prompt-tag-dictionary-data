@@ -9,7 +9,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
     classification: "all", review: "all", sort: "index",
-    selected: new Map(), activeScreen: "dictionary-screen"
+    selected: new Map(), activeScreen: "dictionary-screen", columnWidths: [54,220,180,150,150,130,180,100,80,110]
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -58,6 +58,62 @@
       if (![row.tag,row.ja,row.major,row.minor,row.detail,row.aliases_json].join(" ").toLocaleLowerCase().includes(q)) return false;
     }
     return true;
+  }
+  const COLUMN_WIDTHS_KEY = "ptd-dictionary-column-widths-v1";
+  const COLUMN_MIN_WIDTHS = [42, 90, 80, 80, 80, 80, 80, 76, 52, 76];
+  const COLUMN_MAX_WIDTH = 520;
+  function applyColumnWidths() {
+    $(".table-scroll-shell").style.setProperty("--tag-list-columns", state.columnWidths.map(width => width + "px").join(" "));
+  }
+  function setupColumnResizers() {
+    const headers = $(".table-head-cell");
+    headers.forEach((cell, index) => {
+      if (index >= headers.length - 1) return;
+      const handle = document.createElement("span");
+      handle.className = "column-resize";
+      handle.tabIndex = 0;
+      handle.setAttribute("role", "separator");
+      handle.setAttribute("aria-orientation", "vertical");
+      handle.setAttribute("aria-label", headers[index].textContent.trim() + "列の幅を変更");
+      handle.setAttribute("aria-valuemin", String(COLUMN_MIN_WIDTHS[index]));
+      handle.setAttribute("aria-valuemax", String(COLUMN_MAX_WIDTH));
+      handle.setAttribute("aria-valuenow", String(state.columnWidths[index]));
+      cell.append(handle);
+      const resizeTo = width => {
+        state.columnWidths[index] = Math.max(COLUMN_MIN_WIDTHS[index], Math.min(COLUMN_MAX_WIDTH, Math.round(width)));
+        handle.setAttribute("aria-valuenow", String(state.columnWidths[index]));
+        applyColumnWidths();
+        try { localStorage.setItem(COLUMN_WIDTHS_KEY, JSON.stringify(state.columnWidths)); } catch {}
+      };
+      handle.addEventListener("pointerdown", event => {
+        if (event.button !== 0) return;
+        event.preventDefault();
+        const startX = event.clientX;
+        const startWidth = state.columnWidths[index];
+        handle.setPointerCapture(event.pointerId);
+        const move = e => resizeTo(startWidth + e.clientX - startX);
+        const finish = () => {
+          handle.removeEventListener("pointermove", move);
+          handle.removeEventListener("pointerup", finish);
+          handle.removeEventListener("pointercancel", finish);
+        };
+        handle.addEventListener("pointermove", move);
+        handle.addEventListener("pointerup", finish);
+        handle.addEventListener("pointercancel", finish);
+      });
+      handle.addEventListener("keydown", event => {
+        if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+        event.preventDefault();
+        resizeTo(state.columnWidths[index] + (event.key === "ArrowRight" ? 10 : -10));
+      });
+    });
+    try {
+      const saved = JSON.parse(localStorage.getItem(COLUMN_WIDTHS_KEY) || "null");
+      if (Array.isArray(saved) && saved.length === headers.length && saved.every(Number.isFinite)) {
+        state.columnWidths = saved.map((width, index) => Math.max(COLUMN_MIN_WIDTHS[index], Math.min(COLUMN_MAX_WIDTH, Math.round(width))));
+      }
+    } catch {}
+    applyColumnWidths();
   }
   function renderRows() {
     const rows = state.filtered;
@@ -227,7 +283,7 @@
       const loaded = await Promise.all(DATA_FILES.map(loadCSV));
       state.all = loaded.flat();
       $$(".stats strong")[0].textContent = state.all.length.toLocaleString("ja-JP");
-      renderCategories(); bindControls(); applyFilters(); renderEditor();
+      renderCategories(); setupColumnResizers(); bindControls(); applyFilters(); renderEditor();
     } catch (error) {
       console.error(error);
       setMessage("CSVの読み込みに失敗しました。GitHub Pages上で開いているか、CSVファイルの配置と12列ヘッダーを確認してください。詳細: " + error.message, true);
