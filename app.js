@@ -203,7 +203,7 @@
   function bindControls() {
     const search = $(".searchbox input");
     search.addEventListener("input", () => { state.query = search.value.trim(); applyFilters(); });
-    const selects = $(".search-row select");
+    const selects = $$(".search-row select");
     selects[0].addEventListener("change", () => { state.classification = selects[0].selectedIndex === 1 ? "classified" : selects[0].selectedIndex === 2 ? "unclassified" : "all"; applyFilters(); });
     selects[1].addEventListener("change", () => { state.sort = selects[1].selectedIndex === 1 ? "tag" : selects[1].selectedIndex === 2 ? "ja" : "index"; applyFilters(); });
     $(".category-tree").addEventListener("click", event => {
