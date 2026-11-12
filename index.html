@@ -47,7 +47,7 @@
       </section>
     </section>
   </section>
-  <section id="editor-screen" class="app-screen editor-screen">
+  <section id="editor-screen" class="app-screen editor-screen" hidden>
     <aside class="panel builder-panel editor-builder-panel">
       <div class="panel-heading"><div><span class="eyebrow">PROMPT BUILDER</span><h2>プロンプト編集</h2></div><button class="text-button" type="button">全解除</button></div>
       <div class="preview-add-row"><label>タグを追加<input type="search" placeholder="英語タグ・日本語で検索" autocomplete="off"></label><button class="button button-quiet" type="button" disabled>＋追加</button></div>
@@ -63,9 +63,9 @@
       <div class="builder-controls"><label class="check-row"><input type="checkbox" checked> カテゴリ別に出力</label><label class="check-row"><input type="checkbox"> コメント行を付ける</label></div>
       <div class="output-stack">
         <div class="output-header"><label for="positive-output">ポジティブプロンプト</label></div><textarea id="positive-output" spellcheck="false" placeholder="選択したタグがここに表示されます。"></textarea>
-        <div class="output-actions"><button class="button button-primary" type="button" disabled>ポジティブをコピー</button><button class="button button-quiet" type="button" disabled>TXT保存</button></div>
+        <div class="output-actions"><button class="button button-primary" type="button" data-action="copy-positive" disabled>ポジティブをコピー</button><button class="button button-quiet" type="button" data-action="save-positive" disabled>TXT保存</button></div>
         <div class="output-header negative-output-header"><label for="negative-output">ネガティブプロンプト</label></div><textarea id="negative-output" spellcheck="false"></textarea>
-        <div class="output-actions negative-output-actions"><button class="button button-primary" type="button" disabled>ネガティブをコピー</button><button class="button button-quiet" type="button" disabled>TXT保存</button></div>
+        <div class="output-actions negative-output-actions"><button class="button button-primary" type="button" data-action="copy-negative" disabled>ネガティブをコピー</button><button class="button button-quiet" type="button" data-action="save-negative" disabled>TXT保存</button></div>
       </div>
     </aside>
   </section>
