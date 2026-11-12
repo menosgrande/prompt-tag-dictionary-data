@@ -68,7 +68,6 @@
   function setupColumnResizers() {
     const headers = $(".table-head-cell");
     headers.forEach((cell, index) => {
-      if (index >= headers.length - 1) return;
       const handle = document.createElement("span");
       handle.className = "column-resize";
       handle.tabIndex = 0;
