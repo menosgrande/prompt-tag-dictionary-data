@@ -126,12 +126,14 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 410,arch bishop (ragnarok online),アークビショップ（ラグナロクオンライン）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 414,archer (fate),アーチャー（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 418,arcueid brunestud (Tsukihime),アルクェイド・ブリュンスタッド（月姫）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+424,aria (manga),ARIA（漫画タイトル）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 425,aria company uniform,アリアカンパニーの制服（ARIA）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 426,arima kana (Oshi no Ko),有馬かな（推しの子）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 427,aris (blue archive),天童アリス（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 428,arknights,アークナイツ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 429,arlecchino (genshin impact),アルレッキーノ（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 487,arona (blue archive),アロナ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+489,arrancar,破面（BLEACH）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 502,artist name,作者名,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 503,artist self-insert,作者の自己投影,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 505,artoria caster (fate),アルトリア・キャスター（Fate/Grand Order）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -171,6 +173,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 565,atelier ryza 1,ライザのアトリエ ～常闇の女王と秘密の隠れ家～（ゲームタイトル）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 567,atlanta (kancolle),アトランタ（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 568,atou haruki,Atou Haruki(細胞神曲),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+570,au ra,アウラ（ファイナルファンタジーXIV）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 571,aubrey (omori),オーブリー（OMORI）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 580,avatar legends,アバター 伝説の少年アン（アニメシリーズ）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 581,aventurine (honkai: star rail),アベンチュリン（崩壊：スターレイル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -228,6 +231,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 839,bemani,BEMANIシリーズ（ゲームシリーズ）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 842,benghuai xueyuan,崩壊学園（ゲームタイトル）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 843,beni shake,紅シャケ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+850,berry (pokemon),きのみ（ポケモン）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 851,berserk,ベルセルク（漫画タイトル）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 861,bianca (pokemon),ベル（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 863,bibi (tokoyami towa),ビビ（常闇トワ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
