@@ -77,7 +77,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 94,adjusting panties,下着を直す,動作・接触,衣服への接触,,[],verified,3,verified,verified,normal
 95,adjusting scarf,スカーフを整える,動作・接触,衣服への接触,,[],verified,0,verified,verified,normal
 96,adjusting swimsuit,水着を直す,動作・接触,衣服への接触,,[],verified,1,verified,verified,normal
-103,aegis sword (xenoblade),聖杯の剣（ゼノブレイド2）,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 104,aegyo sal,涙袋,顔・表情,目,,[],verified,0,verified,verified,normal
 105,aerial fireworks,打ち上げ花火,光・演出,演出効果,,[],verified,0,verified,verified,normal
 109,affectionate,愛情深い,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
@@ -1269,7 +1268,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1553,cake slice,ケーキ一切れ,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 1554,calendar (medium),カレンダー（媒体）,画風・描写,媒体,,[],verified,0,verified,verified,normal
 1555,calendar (object),カレンダー,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
-1556,caliburn (fate),カリバーン（Fate）,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 1557,calico,カリコ,生物・動植物,動物,,[],verified,0,verified,verified,normal
 1561,calligraphy,書道,文字・記号,文字,,[],verified,0,verified,verified,normal
 1562,calligraphy brush,書道筆,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
@@ -1534,7 +1532,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1864,city lights,街の灯り,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
 1865,cityscape,街並み,背景・場所,場所・室内外,,[],verified,0,verified,verified,normal
 1867,clapping,拍手,動作・接触,身体動作,,[],verified,0,verified,verified,normal
-1868,clarent (fate),クラレント（Fate）,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 1869,classroom,教室,背景・場所,場所・室内外,,[],verified,0,verified,verified,normal
 1870,claw (weapon),爪（武器）,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 1871,claw pose,爪を立てたポーズ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
@@ -1716,7 +1713,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2059,copyright notice,著作権表示,文字・記号,文字,,[],verified,0,verified,verified,normal
 2060,coral,サンゴ,生物・動植物,動物,,[],verified,0,verified,verified,normal
 2061,corded phone,有線電話,家具・設備・物品,機械・装置,,[],verified,0,verified,verified,normal
-2062,core crystal (xenoblade),コアクリスタル（ゼノブレイド）,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 2063,cork,コルク,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 2064,corn,トウモロコシ,生物・動植物,植物,,[],verified,0,verified,verified,normal
 2065,corpse,死体,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
@@ -2254,9 +2250,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2726,elegant,優雅な,画風・描写,雰囲気,,[],verified,0,verified,verified,normal
 2727,elephant,象,生物・動植物,動物,,[],verified,0,verified,verified,normal
 2729,elevator,エレベーター,家具・設備・物品,機械・装置,,[],verified,0,verified,verified,normal
-2730,elezen,エレゼン,生物・動植物,種族,,[],verified,0,verified,verified,normal
 2731,elf,エルフ,人物の特徴,種族,,[],verified,0,verified,verified,normal
-2741,elvaan,エルヴァーン,生物・動植物,種族,,[],verified,0,verified,verified,normal
 2745,ema,絵馬,生物・動植物,動物,,[],verified,0,verified,verified,normal
 2746,embarrassed,恥ずかしがる,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 2747,embellished costume,装飾を施した衣装,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -2289,15 +2283,12 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2784,erection,勃起,人物の特徴,身体部位・身体状態,,[],verified,4,verified,verified,normal
 2785,erection under clothes,衣服越しに分かる勃起,服装・装飾,衣服,,[],verified,4,verified,verified,normal
 2789,erlenmeyer flask,三角フラスコ,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
-2793,erune,エルーン（グランブルーファンタジー）,生物・動植物,種族,,[],verified,0,verified,verified,normal
 2804,evening,夕方,背景・場所,天候・時間帯,,[],verified,0,verified,verified,normal
 2805,evening gown,イブニングドレス,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 2806,everyone,全員集合,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified,normal
 2807,evil grin,邪悪な笑み,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 2808,evil smile,邪悪な笑顔,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 2809,evolutionary line,進化系統,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
-2811,excalibur (fate/stay night),エクスカリバー（Fate/stay night）,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
-2812,excalibur morgan (fate),エクスカリバー・モルガン（Fate）,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 2813,excited,興奮した様子,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 2814,exercise ball,エクササイズボール,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 2815,exercising,運動する,動作・接触,身体動作,,[],verified,0,verified,verified,normal
@@ -2385,7 +2376,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2902,fake screenshot,偽のスクリーンショット,構図・カメラ,構図・配置,,[],verified,0,verified,verified,normal
 2903,fake tail,付け尻尾,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 2904,fake wings,作り物の翼,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
-2905,falchion (fire emblem),ファルシオン（ファイアーエムブレム）,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 2907,fallen angel,堕天使,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 2908,fallen down,倒れ込んだ状態,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 2909,falling,落下,動作・接触,身体動作,,[],verified,0,verified,verified,normal
@@ -2781,8 +2771,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3405,futon,布団,家具・設備・物品,家具,,[],verified,0,verified,verified,normal
 3406,fuuin no tsue,封印の杖,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 3410,g-string,Gストリング,服装・装飾,下着,,[],verified,3,verified,verified,normal
-3412,gae bolg (fate),ゲイ・ボルク（Fate）,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
-3413,gae dearg (fate),ゲイ・ジャルグ（Fate）,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 3415,gakuran,学ラン,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 3417,galaxy,銀河,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
 3422,game boy,ゲームボーイ,家具・設備・物品,機械・装置,,[],verified,0,verified,verified,normal
@@ -2817,7 +2805,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3466,german flag,ドイツ国旗,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
 3467,german flag bikini,ドイツ国旗柄のビキニ,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 3468,german text,ドイツ語の文字,文字・記号,文字,,[],verified,0,verified,verified,normal
-3470,gerudo,ゲルド族,生物・動植物,種族,,[],verified,0,verified,verified,normal
 3471,gesugao,ゲス顔,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 3472,geta,下駄,服装・装飾,靴・履物,,[],verified,0,verified,verified,normal
 3474,ghost,幽霊,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
@@ -3317,7 +3304,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4058,harness,ハーネス,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 4059,harp,ハープ,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 4060,harpy,ハーピー,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
-4071,harvin (Granblue Fantasy),ハーヴィン族（グランブルーファンタジー）,生物・動植物,種族,,[],verified,0,verified,verified,normal
 4072,hashtag,ハッシュタグ,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
 4077,hat,帽子,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 4078,hat belt,帽子ベルト,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -3833,7 +3819,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4784,inflation,膨張,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 4786,injury,負傷,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 4787,ink,インク,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
-4790,inkling boy,インクリング（男の子）,生物・動植物,種族,,[],verified,0,verified,verified,normal
 4793,inktober,インクトーバー,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
 4794,inkwell,インク壺,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 4795,inline skates,インラインスケート,服装・装飾,靴・履物,,[],verified,0,verified,verified,normal
@@ -4589,7 +4574,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6162,monster energy,モンスターエナジー,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 6163,monster girl,モンスター娘,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified,normal
 6169,monsterification,モンスター化,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
-6170,moogle,モーグリ,生物・動植物,種族,,[],verified,0,verified,verified,normal
 6171,moon,月,背景・場所,天候・時間帯,,[],verified,0,verified,verified,normal
 6172,moon (ornament),月（装飾）,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 6173,moon phases,月相,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
@@ -4916,7 +4900,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6667,objectification,物体化,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 6668,obliques,腹斜筋,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 6670,ocean,海洋,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
-6673,octoling player character,タコのプレイヤーキャラクター,生物・動植物,種族,,[],verified,0,verified,verified,normal
 6674,octopus,タコ,生物・動植物,動物,,[],verified,0,verified,verified,normal
 6677,oda uri,織田瓜紋,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
 6680,odd one out,一人だけ異なる,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
@@ -5099,7 +5082,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6888,orc,オーク,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 6889,orca,シャチ,生物・動植物,動物,,[],verified,0,verified,verified,normal
 6892,origami,折り紙,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
-6894,oripathy lesion (arknights),鉱石病の病変（アークナイツ）,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 6895,ornate border,装飾的な枠線,構図・カメラ,フレーミング,,[],verified,0,verified,verified,normal
 6896,ornate ring,豪華な指輪,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 6903,oshawott,ミジュマル,生物・動植物,動物,,[],verified,0,verified,verified,normal
@@ -6160,7 +6142,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8162,sailor senshi,セーラー戦士,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 8164,sailor shirt,セーラーシャツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 8166,sailor uniform,セーラー服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-8170,saiyan,サイヤ人,生物・動植物,種族,,[],verified,0,verified,verified,normal
 8178,sake,日本酒,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 8179,sake bottle,酒瓶,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 8184,saku usako (rabbit),サク・ウサコ（ウサギ）,生物・動植物,動物,,[],verified,0,verified,verified,normal
@@ -6241,7 +6222,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8303,schoolgirl,女子生徒,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 8305,sci-fi,SF,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 8306,science fiction,SF,画風・描写,画風・表現様式,,"[""SF"",""サイエンスフィクション""]",verified,0,verified,verified,normal
-8307,scissor blade (kill la kill),片太刀バサミ,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 8308,scissors,はさみ,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 8309,scoop neck,スクープネック,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 8310,scooter,スクーター,乗り物,陸上の乗り物,,[],verified,0,verified,verified,normal
@@ -6711,7 +6691,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8923,soap bottle,石鹸ボトル,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 8924,soap bubbles,シャボン玉,光・演出,演出効果,,[],verified,0,verified,verified,normal
 8925,soap censor,石鹸による検閲,光・演出,演出効果,,[],verified,0,verified,verified,normal
-8926,sobble,メッソン,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified,normal
 8928,soccer,サッカー,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 8929,soccer ball,サッカーボール,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 8930,soccer uniform,サッカーユニフォーム,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -6800,7 +6779,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9044,splash page,ページ全面イラスト（スプラッシュページ）,画風・描写,描画技法,,[],verified,0,verified,verified,normal
 9045,splashing,水しぶき,光・演出,演出効果,,[],verified,0,verified,verified,normal
 9050,splatter,飛び散り表現,光・演出,演出効果,,[],verified,0,verified,verified,normal
-9051,splattershot (splatoon),スプラシューター（スプラトゥーン）,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 9052,split,スプリット（開脚）,ポーズ・姿勢,手足の配置,,[],verified,1,verified,verified,normal
 9053,split mouth,裂けた口,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 9054,split ponytail,二股のポニーテール,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
@@ -6840,7 +6818,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9088,spread toes,足指を広げる,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 9089,spread wings,翼を広げる,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 9090,spreader bar,スプレッダーバー（両脚を開いたまま固定する拘束具）,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
-9091,sprigatito,ニャオハ,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified,normal
 9092,spring (season),春,背景・場所,天候・時間帯,,[],verified,0,verified,verified,normal
 9093,spring onion,青ねぎ,生物・動植物,植物,,[],verified,0,verified,verified,normal
 9094,sprinkles,カラースプレー（菓子のトッピング）,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
@@ -6859,7 +6836,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9110,squirrel ears,リス耳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 9111,squirrel girl,リス娘,生物・動植物,種族,,[],verified,0,verified,verified,normal
 9112,squirrel tail,リスの尻尾,生物・動植物,動物,,[],verified,0,verified,verified,normal
-9113,squirtle,ゼニガメ,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified,normal
 9117,stab,刺す,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 9118,stadium,スタジアム,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
 9119,staff,杖,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
@@ -7140,7 +7116,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9455,sword behind back,背中に差した剣,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 9458,sword on back,背中に背負った剣,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
 9459,sword over shoulder,肩に担いだ剣,ポーズ・姿勢,身体の配置,,[],verified,0,verified,verified,normal
-9460,sylveon,ニンフィア,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified,normal
 9461,symbol in eye,瞳の中のシンボル,顔・表情,目,,[],verified,0,verified,verified,normal
 9462,symbol-shaped pupils,記号形の瞳,顔・表情,目,,[],verified,0,verified,verified,normal
 9464,symbolism,象徴表現,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
@@ -7783,7 +7758,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 10340,victorian,ビクトリア朝風,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 10341,video camera,ビデオカメラ,家具・設備・物品,機械・装置,,[],verified,0,verified,verified,normal
 10342,video game,テレビゲーム,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
-10343,viera,ヴィエラ,生物・動植物,種族,,[],verified,0,verified,verified,normal
 10344,viewer holding leash,視聴者がリードを持つ構図,動作・接触,身体動作,,[],verified,1,verified,verified,normal
 10345,viewfinder,ファインダー,家具・設備・物品,設備,,[],verified,0,verified,verified,normal
 10346,vignetting,周辺減光,光・演出,演出効果,,[],verified,0,verified,verified,normal
@@ -8232,7 +8206,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 10885,yokozuwari,横座り,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 10887,yopparai oni,酔っ払い鬼,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified,normal
 10897,you gonna get raped,レイプされるぞ（ミーム）,状態・状況,状況・関係性,,[],verified,3,verified,verified,normal
-10898,youkai (youkai watch),妖怪（妖怪ウォッチ）,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified,normal
 10910,yugake,弓懸け,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 10914,yukata,浴衣,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 10927,yukkuri shiteitte ne,ゆっくりしていってね,文字・記号,文字,,[],verified,0,verified,verified,normal
