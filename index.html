@@ -24,12 +24,12 @@
       <a class="screen-tab" href="#editor-screen"><span>04</span> プロンプト編集</a>
     </nav>
     <section id="dictionary-screen" class="app-screen">
-      <section class="intro">
-        <div class="intro-main"><p class="eyebrow">DISCOVER · ORGANIZE · BUILD</p><h1>タグを探して、<em>組み立てる。</em></h1><p class="intro-copy">英語タグと日本語訳を検索。分類をたどって必要なタグを選び、プロンプトにまとめられます。</p></div>
+      <section class="intro compact-intro">
+        <div class="intro-main"><h1>タグ辞典</h1></div>
         <div class="stats" aria-label="辞書の統計"><div class="stat-card"><strong>—</strong><span>登録タグ</span></div><div class="stat-card"><strong>0</strong><span>選択中</span></div></div>
       </section>
       <section class="search-panel search-row" aria-label="タグ検索と絞り込み">
-        <label class="searchbox"><span class="search-icon" aria-hidden="true">⌕</span><input type="search" placeholder="タグを検索 — 日本語・英語・別名" autocomplete="off"><kbd>検索</kbd></label>
+        <label class="searchbox"><span class="search-icon" aria-hidden="true">⌕</span><input type="search" placeholder="タグ名・日本語訳・別名を検索" autocomplete="off"></label><select id="search-target" aria-label="検索対象"><option value="all">すべて検索</option><option value="tag">英語タグ</option><option value="ja">日本語訳</option><option value="alias">別名</option></select><label class="favorite-filter"><input id="favorites-only" type="checkbox"> お気に入り</label>
         <div class="filter-controls">
           <label class="sr-only" for="classification-filter">分類状態</label><select id="classification-filter" aria-label="分類状態"><option>分類：すべて</option><option>分類済み</option><option>未分類</option></select>
           <label class="sr-only" for="sort-filter">並び順</label><select id="sort-filter" aria-label="並び順"><option>登録順</option><option>英語 A–Z</option><option>日本語 あ–ん</option></select>
@@ -46,11 +46,11 @@
           <div class="panel-heading result-heading"><div><p class="eyebrow">TAG LIBRARY</p><h2>タグ一覧</h2></div><span class="count">—</span></div>
           <div class="table-scroll-shell" role="region" aria-label="タグ一覧。横スクロールできます" tabindex="0">
             <div class="table-head" role="row">
-              <div class="table-head-cell">選択</div><div class="table-head-cell">登録番号 <code>index</code></div><div class="table-head-cell">英語タグ <code>tag</code></div><div class="table-head-cell">日本語訳 <code>ja</code></div><div class="table-head-cell">大分類 <code>major</code></div><div class="table-head-cell">中分類 <code>minor</code></div><div class="table-head-cell">小分類 <code>detail</code></div><div class="table-head-cell">別名 <code>aliases_json</code></div><div class="table-head-cell">表現レベル <code>ero_level</code></div><div class="table-head-cell">年齢安全性 <code>age_safety</code></div>
+              <div class="table-head-cell">選択</div><div class="table-head-cell">登録番号 <code>index</code></div><div class="table-head-cell">英語タグ <code>tag</code></div><div class="table-head-cell">日本語訳 <code>ja</code></div><div class="table-head-cell">大分類 <code>major</code></div><div class="table-head-cell">中分類 <code>minor</code></div><div class="table-head-cell">小分類 <code>detail</code></div><div class="table-head-cell">別名</div><div class="table-head-cell">表現レベル <code>ero_level</code></div><div class="table-head-cell">年齢安全性 <code>age_safety</code></div>
             </div>
             <div class="tag-results"><div class="empty-state">CSVデータを読み込んでいます。</div></div>
           </div>
-          <div class="pagination"><button class="button button-ghost" type="button" disabled>前へ</button><span>—</span><button class="button button-ghost" type="button" disabled>次へ</button></div>
+          <div class="pagination"><span>—</span></div>
         </section>
       </section>
     </section>
@@ -69,7 +69,7 @@
       <section class="panel builder-panel editor-builder-panel">
         <div class="panel-heading"><div><p class="eyebrow">BUILD YOUR PROMPT</p><h2>選択したタグ</h2></div><button class="text-button" type="button">全解除</button></div>
         <div class="preview-add-row"><label>タグを直接追加<input type="search" placeholder="英語タグまたは日本語訳を完全一致で入力" autocomplete="off"></label><button class="button button-secondary" type="button" disabled>＋ 追加</button></div>
-        <p class="preview-help">辞典の一覧でチェックしたタグがここに追加されます。</p>
+        <p class="preview-help">一覧でタグの追加先を選択すると、ここに反映されます。</p>
         <div class="builder-controls"><label class="check-row"><input type="checkbox" checked> 分類順に並べて出力</label></div>
         <div class="output-grid">
           <section class="output-card"><div class="output-header"><label for="positive-output">ポジティブプロンプト</label><span>POSITIVE</span></div><textarea id="positive-output" spellcheck="false" placeholder="選択したタグがここに表示されます。"></textarea><div class="output-actions"><button class="button button-primary" type="button" data-action="copy-positive" disabled>コピー</button><button class="button button-ghost" type="button" data-action="save-positive" disabled>TXT保存</button></div></section>
