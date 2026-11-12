@@ -170,6 +170,40 @@
   function applyColumnWidths() {
     $(".table-scroll-shell").style.setProperty("--tag-list-columns", state.columnWidths.map(width => width + "px").join(" "));
   }
+  function autoFitColumns(persist = true) {
+    const headers = $(".table-head-cell");
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
+    const fields = [
+      row => "",
+      row => row.index,
+      row => row.tag,
+      row => row.ja,
+      row => row.major,
+      row => row.minor,
+      row => row.detail,
+      row => parseAliases(row.aliases_json).join("、"),
+      row => row.ero_level,
+      row => row.age_safety
+    ];
+    const fonts = ["10px 'DM Sans', 'Noto Sans JP', sans-serif","9px 'DM Mono', monospace","10px 'DM Sans', sans-serif","9px 'Noto Sans JP', sans-serif","8px 'Noto Sans JP', sans-serif","8px 'Noto Sans JP', sans-serif","8px 'Noto Sans JP', sans-serif","8px 'Noto Sans JP', sans-serif","8px 'DM Sans', sans-serif","8px 'DM Sans', sans-serif"];
+    const widths = headers.map((header, index) => {
+      if (index === 0) return 54;
+      context.font = fonts[index];
+      let widest = context.measureText(header.textContent.replace(/\\s+/g, " ").trim()).width;
+      for (const row of state.all) {
+        const value = String(fields[index](row) ?? "—") || "—";
+        widest = Math.max(widest, context.measureText(value).width);
+      }
+      return Math.max(COLUMN_MIN_WIDTHS[index], Math.min(COLUMN_MAX_WIDTH, Math.ceil(widest + 20)));
+    });
+    state.columnWidths = widths;
+    applyColumnWidths();
+    $(".column-resize").forEach((handle, index) => handle.setAttribute("aria-valuenow", String(widths[index])));
+    if (persist) {
+      try { localStorage.setItem(COLUMN_WIDTHS_KEY, JSON.stringify(widths)); } catch {}
+    }
+  }
   function setupColumnResizers() {
     const headers = $$(".table-head-cell");
     headers.forEach((cell, index) => {
@@ -211,13 +245,16 @@
         resizeTo(state.columnWidths[index] + (event.key === "ArrowRight" ? 10 : -10));
       });
     });
+    let hasSavedWidths = false;
     try {
       const saved = JSON.parse(localStorage.getItem(COLUMN_WIDTHS_KEY) || "null");
       if (Array.isArray(saved) && saved.length === headers.length && saved.every(Number.isFinite)) {
         state.columnWidths = saved.map((width, index) => Math.max(COLUMN_MIN_WIDTHS[index], Math.min(COLUMN_MAX_WIDTH, Math.round(width))));
+        hasSavedWidths = true;
       }
     } catch {}
-    applyColumnWidths();
+    if (hasSavedWidths) applyColumnWidths();
+    else autoFitColumns(false);
   }
   function renderRows() {
     const rows = state.filtered;
@@ -312,6 +349,7 @@
     catch { const area = document.createElement("textarea"); area.value = text; document.body.append(area); area.select(); document.execCommand("copy"); area.remove(); }
   }
   function bindControls() {
+    $(".column-fit-button").addEventListener("click", () => autoFitColumns(true));
     $("#works-search").addEventListener("input", event => { state.worksQuery = event.target.value.trim().toLocaleLowerCase(); renderWorkList(); });
     $("#authors-search").addEventListener("input", event => { state.authorsQuery = event.target.value.trim().toLocaleLowerCase(); renderAuthorList(); });
     $(".related-list").forEach(root => root.addEventListener("change", event => {
