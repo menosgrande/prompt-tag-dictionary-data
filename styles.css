@@ -1210,3 +1210,117 @@ body:not(.admin-mode) .tag-edit-button{display:none!important}
   white-space:nowrap;
   text-overflow:ellipsis;
 }
+
+
+/* Authoritative CSV table layout: 12 CSV fields + one UI selection column. */
+.table-scroll-shell{
+  --tag-list-columns:58px 82px 220px 210px 150px 150px 150px 190px 130px 100px 190px 190px 120px;
+  display:block;
+  width:100%;
+  min-width:0;
+  overflow-x:auto;
+  overflow-y:hidden;
+  overscroll-behavior-x:contain;
+  scrollbar-gutter:stable;
+}
+.table-scroll-shell .table-head,
+.table-scroll-shell .tag-results .tag-row{
+  display:grid;
+  grid-template-columns:var(--tag-list-columns);
+  grid-auto-flow:column;
+  grid-auto-columns:unset;
+  column-gap:0;
+  width:max-content;
+  min-width:100%;
+  box-sizing:border-box;
+}
+.table-scroll-shell .table-head{
+  align-items:stretch;
+  min-height:42px;
+  padding:0;
+  white-space:nowrap;
+}
+.table-scroll-shell .table-head-cell{
+  position:relative;
+  display:flex;
+  align-items:center;
+  min-width:0;
+  min-height:42px;
+  padding:0 8px;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  box-sizing:border-box;
+}
+.table-scroll-shell .tag-results{
+  display:block;
+  width:max-content;
+  min-width:100%;
+  max-width:none;
+  max-height:580px;
+  overflow-x:visible;
+  overflow-y:auto;
+}
+.table-scroll-shell .tag-results .tag-row{
+  min-height:34px;
+  height:34px;
+  padding:0;
+  align-items:stretch;
+}
+.table-scroll-shell .tag-results .tag-row>*{
+  display:flex;
+  align-items:center;
+  min-width:0;
+  margin:0;
+  padding:3px 8px;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  box-sizing:border-box;
+}
+.table-scroll-shell .tag-results .tag-row .tag-english,
+.table-scroll-shell .tag-results .tag-row .tag-japanese,
+.table-scroll-shell .tag-results .tag-row .tag-category{
+  display:block;
+  align-self:center;
+  min-width:0;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+.table-scroll-shell .tag-select-cell{justify-content:center;padding:0!important}
+.table-scroll-shell .tag-select{width:14px;height:14px;margin:0}
+.table-scroll-shell .column-resize{
+  position:absolute;
+  top:0;
+  right:-3px;
+  z-index:5;
+  width:7px;
+  height:100%;
+  cursor:col-resize;
+  touch-action:none;
+  user-select:none;
+}
+.table-scroll-shell .column-resize::after{
+  content:"";
+  position:absolute;
+  top:20%;
+  left:3px;
+  width:1px;
+  height:60%;
+  background:var(--line);
+}
+.table-scroll-shell .column-resize:hover::after,
+.table-scroll-shell .column-resize:focus-visible::after{
+  width:2px;
+  background:var(--accent);
+}
+.table-scroll-shell .column-resize:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:-2px;
+}
+@media(max-width:720px){
+  .table-scroll-shell .tag-results{max-height:65vh}
+  .table-scroll-shell .tag-results .tag-row{height:32px;min-height:32px}
+  .table-scroll-shell .tag-results .tag-row>*{padding:2px 5px}
+}
