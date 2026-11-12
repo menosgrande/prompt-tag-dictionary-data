@@ -4,7 +4,7 @@
     { url: "./dictionary-working.csv", source: "dictionary-working.csv", label: "一般" },
     { url: "./characters-working.csv", source: "characters-working.csv", label: "作品・人物" }
   ];
-  const PAGE_SIZE = 200;
+  const PAGE_SIZE = 300;
   const HEADERS = ["index","tag","ja","major","minor","detail","aliases_json","translation_status","ero_level","ero_review_status","classification_review_status","age_safety"];
   const FAVORITES_KEY = "ptd-favorites-v1";
   const state = {
