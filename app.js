@@ -8,8 +8,8 @@
   const HEADERS = ["index","tag","ja","major","minor","detail","aliases_json","translation_status","ero_level","ero_review_status","classification_review_status","age_safety"];
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
-    classification: "all", sort: "index",
-    selected: new Map(), activeScreen: "dictionary-screen", columnWidths: [50,70,220,190,150,150,150,180,90,100]
+    classification: "all", sort: "index", worksQuery: "", authorsQuery: "",
+    selected: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], columnWidths: [50,70,220,190,150,150,150,180,90,100]
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -30,6 +30,84 @@
       throw new Error(file.url + " のCSVヘッダーが想定する12列と一致しません。");
     }
     return rows.map(row => ({ ...row, source: file.source, sourceLabel: file.label }));
+  }
+  const normalizeWorkName = value => String(value || "").normalize("NFKC").toLocaleLowerCase().replace(/[\\s・:：!！?？"'’`~〜\\-‐‑–—_/／（）()［］\\[\\]「」『』.。、☆★]/g, "");
+  function parseAliases(value) {
+    try { const parsed = JSON.parse(value || "[]"); return Array.isArray(parsed) ? parsed.map(String) : []; } catch { return []; }
+  }
+  function extractTrailingReference(value) {
+    const match = String(value || "").match(/（([^（）]+)）$/);
+    return match ? match[1].trim() : "";
+  }
+  function buildRelatedIndexes() {
+    const characterRows = state.all.filter(row => row.source === "characters-working.csv");
+    const titleRows = characterRows.filter(row => row.minor === "タイトル（作品名）");
+    const groupMap = new Map();
+    const aliasMap = new Map();
+    titleRows.forEach(row => {
+      const label = row.ja.replace(/（(?:アニメ|ゲーム|漫画|小説|映画|メディアミックス|その他)?(?:タイトル|作品|シリーズ)）$/, "").trim() || row.ja;
+      const key = normalizeWorkName(label);
+      if (!key) return;
+      let group = groupMap.get(key);
+      if (!group) {
+        group = { key, name: label, titles: [], characters: [], elements: [], queryText: "" };
+        groupMap.set(key, group);
+      }
+      group.titles.push(row);
+      [label, row.tag, ...parseAliases(row.aliases_json)].forEach(alias => {
+        const normalized = normalizeWorkName(alias);
+        if (normalized && !aliasMap.has(normalized)) aliasMap.set(normalized, group);
+      });
+    });
+    const reviewRows = [];
+    characterRows.filter(row => row.minor === "キャラクター" || row.minor === "作品固有の衣装・要素").forEach(row => {
+      const reference = extractTrailingReference(row.ja);
+      if (!reference) { reviewRows.push(row); return; }
+      const normalizedReference = normalizeWorkName(reference);
+      let group = aliasMap.get(normalizedReference);
+      if (!group) {
+        const candidates = [...aliasMap.entries()].filter(([alias]) => alias.length >= 3 && normalizedReference.endsWith(alias)).sort((a,b) => b[0].length-a[0].length);
+        if (candidates.length) group = candidates[0][1];
+      }
+      if (!group) { reviewRows.push(row); return; }
+      (row.minor === "キャラクター" ? group.characters : group.elements).push(row);
+    });
+    state.works = [...groupMap.values()].map(group => {
+      group.characters.sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
+      group.elements.sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
+      group.titles.sort((a,b) => Number(a.index)-Number(b.index));
+      group.queryText = [group.name, ...group.titles.map(row => row.tag), ...group.characters.flatMap(row => [row.tag,row.ja]), ...group.elements.flatMap(row => [row.tag,row.ja])].join(" ").toLocaleLowerCase();
+      return group;
+    }).sort((a,b) => a.name.localeCompare(b.name, "ja"));
+    state.authors = characterRows.filter(row => row.minor === "作者・配信者").sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
+    state.reviewRows = reviewRows.sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
+  }
+  function relatedTagRow(row, groupName = "") {
+    const key = keyOf(row);
+    return '<div class="related-tag-row"><label><input type="checkbox" class="related-select" data-key="' + escapeHTML(key) + '"' + (state.selected.has(key) ? ' checked' : '') + '><span class="related-tag-copy"><strong>' + escapeHTML(row.ja || row.tag) + '</strong><small>' + escapeHTML(row.tag) + (groupName ? ' · ' + escapeHTML(groupName) : '') + '</small></span></label><span class="related-tag-type">' + escapeHTML(row.minor || "作品タイトル") + '</span></div>';
+  }
+  function renderWorkList() {
+    const query = state.worksQuery.toLocaleLowerCase();
+    const groups = state.works.filter(group => !query || group.queryText.includes(query));
+    const totalMembers = groups.reduce((sum,group) => sum + group.titles.length + group.characters.length + group.elements.length, 0);
+    $("#works-count").textContent = groups.length.toLocaleString("ja-JP") + "作品 · " + totalMembers.toLocaleString("ja-JP") + "タグ";
+    const cards = groups.map(group => {
+      const count = group.characters.length + group.elements.length;
+      const contents = [
+        group.titles.length ? '<div class="related-subsection"><h3>作品タイトル</h3>' + group.titles.map(row => relatedTagRow(row, group.name)).join("") + '</div>' : "",
+        group.characters.length ? '<div class="related-subsection"><h3>キャラクター <span>' + group.characters.length + '</span></h3>' + group.characters.map(row => relatedTagRow(row, group.name)).join("") + '</div>' : "",
+        group.elements.length ? '<div class="related-subsection"><h3>作品固有の衣装・要素 <span>' + group.elements.length + '</span></h3>' + group.elements.map(row => relatedTagRow(row, group.name)).join("") + '</div>' : ""
+      ].join("");
+      return '<details class="work-card"><summary><span class="work-card-title">' + escapeHTML(group.name) + '</span><span class="work-card-meta">' + count + '件 · タイトル ' + group.titles.length + '件</span></summary><div class="work-card-body">' + contents + '</div></details>';
+    }).join("");
+    const review = !query ? '<details class="work-card review-card"><summary><span class="work-card-title">未紐付け・要確認</span><span class="work-card-meta">' + state.reviewRows.length + '件</span></summary><div class="work-card-body"><p class="related-note">作品名を既存タイトルと照合できない、または日本語訳に作品名の明示がないタグです。自動では作品に割り当てていません。</p>' + state.reviewRows.map(row => relatedTagRow(row)).join("") + '</div></details>' : "";
+    $("#works-list").innerHTML = cards + review || '<p class="empty-state">検索条件に一致する作品はありません。</p>';
+  }
+  function renderAuthorList() {
+    const query = state.authorsQuery.toLocaleLowerCase();
+    const rows = state.authors.filter(row => [row.ja,row.tag,row.aliases_json].join(" ").toLocaleLowerCase().includes(query));
+    $("#authors-count").textContent = rows.length.toLocaleString("ja-JP") + "人・タグ";
+    $("#authors-list").innerHTML = rows.length ? rows.map(row => relatedTagRow(row, "作者・配信者")).join("") : '<p class="empty-state">検索条件に一致する作者・配信者はいません。</p>';
   }
   function categoryCounts(rows, key) {
     const counts = new Map();
@@ -53,7 +131,7 @@
     if (state.classification === "unclassified" && (row.major || row.minor)) return false;
     if (state.query) {
       const q = state.query.toLocaleLowerCase();
-      if (![row.tag,row.ja,row.major,row.minor,row.detail,row.aliases_json].join(" ").toLocaleLowerCase().includes(q)) return false;
+      if (![row.tag,row.ja,row.major,row.minor,row.detail,row.aliases_json,row.workTitle].join(" ").toLocaleLowerCase().includes(q)) return false;
     }
     return true;
   }
@@ -179,6 +257,8 @@
       tab.classList.toggle("active", active);
       if (active) tab.setAttribute("aria-current", "page"); else tab.removeAttribute("aria-current");
     });
+    if (id === "works-screen") renderWorkList();
+    if (id === "authors-screen") renderAuthorList();
     if (id === "editor-screen") renderEditor();
   }
   function addRow(row) {
@@ -201,6 +281,16 @@
     catch { const area = document.createElement("textarea"); area.value = text; document.body.append(area); area.select(); document.execCommand("copy"); area.remove(); }
   }
   function bindControls() {
+    $("#works-search").addEventListener("input", event => { state.worksQuery = event.target.value.trim().toLocaleLowerCase(); renderWorkList(); });
+    $("#authors-search").addEventListener("input", event => { state.authorsQuery = event.target.value.trim().toLocaleLowerCase(); renderAuthorList(); });
+    $(".related-list").forEach(root => root.addEventListener("change", event => {
+      const input = event.target.closest(".related-select");
+      if (!input) return;
+      const row = state.all.find(item => keyOf(item) === input.dataset.key);
+      if (!row) return;
+      if (input.checked) state.selected.set(input.dataset.key, row); else state.selected.delete(input.dataset.key);
+      renderEditor();
+    }));
     const search = $(".searchbox input");
     search.addEventListener("input", () => { state.query = search.value.trim(); applyFilters(); });
     const selects = $$(".search-row select");
@@ -283,7 +373,14 @@
     try {
       const loaded = await Promise.all(DATA_FILES.map(loadCSV));
       state.all = loaded.flat();
-      $$(".stats strong")[0].textContent = state.all.length.toLocaleString("ja-JP");
+      buildRelatedIndexes();
+      state.all.forEach(row => {
+        const match = state.reviewRows.find(item => keyOf(item) === keyOf(row));
+        if (match) return;
+        const group = state.works.find(item => item.characters.some(x => keyOf(x) === keyOf(row)) || item.elements.some(x => keyOf(x) === keyOf(row)));
+        if (group) row.workTitle = group.name;
+      });
+      $(".stats strong")[0].textContent = state.all.length.toLocaleString("ja-JP");
       renderCategories(); setupColumnResizers(); bindControls(); applyFilters(); renderEditor();
     } catch (error) {
       console.error(error);
