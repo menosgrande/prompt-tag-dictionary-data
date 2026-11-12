@@ -1,4 +1,4 @@
-index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level,expression_level_review_status,classification_review_status,age_safety
+index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_review_status,classification_review_status,age_safety
 0,!,感嘆符,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
 1,!!,二重感嘆符,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
 2,!?,感嘆符と疑問符,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
@@ -4502,7 +4502,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 5986,midriff sarashi,腹部のさらし,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 5988,mihoyo,miHoYo,文字・記号,ロゴ・ブランド表記,,"[""ミホヨ""]",verified,0,verified,verified,normal
 5997,miko,巫女,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
-5999,miku day,ミクの日（3月9日）,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
+5999,miku day,ミクの日（初音ミク）,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
 6000,milestone celebration,マイルストーンのお祝い,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
 6001,military,軍隊,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 6002,military combat uniform,軍用戦闘服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
