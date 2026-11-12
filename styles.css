@@ -1158,3 +1158,58 @@ body:not(.admin-mode) .tag-edit-button{display:none!important}
   .table-scroll-shell .tag-category{font-size:9px}
 }
 .load-error{color:var(--danger)}
+
+
+/* CSV-aligned table: keep all 13 tracks on one horizontal plane. */
+.table-scroll-shell{
+  overflow-x:auto;
+  overflow-y:hidden;
+  min-width:0;
+}
+.table-scroll-shell .table-head,
+.table-scroll-shell .tag-results{
+  width:max-content;
+  min-width:100%;
+}
+.table-scroll-shell .table-head,
+.table-scroll-shell .tag-results .tag-row{
+  grid-template-columns:var(--tag-list-columns);
+  column-gap:0;
+}
+.table-scroll-shell .table-head{
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:unset;
+  align-items:stretch;
+  white-space:nowrap;
+}
+.table-scroll-shell .table-head-cell{
+  min-width:0;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.table-scroll-shell .table-head-cell>button{
+  min-width:0;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.table-scroll-shell .tag-results{
+  overflow-x:visible;
+  overflow-y:visible;
+  max-height:none;
+}
+.table-scroll-shell .tag-results .tag-row{
+  display:grid;
+  width:100%;
+  min-width:max-content;
+  grid-auto-flow:column;
+  align-items:stretch;
+}
+.table-scroll-shell .tag-results .tag-row>*{
+  min-width:0;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
