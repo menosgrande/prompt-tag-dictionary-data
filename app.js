@@ -407,7 +407,7 @@
   }
   function promptTags() {
     const rows = [...state.selected.values()];
-    if ($(".builder-controls input")?.checked) rows.sort((a,b) => compareMajorCategories(a.major || "", b.major || "") || Number(a.index) - Number(b.index));
+    if ($(".builder-controls input")?.checked) rows.sort((a,b) => (a.major || "").localeCompare(b.major || "", "ja") || Number(a.index) - Number(b.index));
     return rows;
   }
   function renderEditor() {
