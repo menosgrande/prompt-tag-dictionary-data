@@ -1233,7 +1233,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1511,bustier,ビスチェ,服装・装飾,下着,,[],verified,1,verified,verified,normal
 1513,butler,執事,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 1514,butt crack,臀裂,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
-1515,butt plug,アナルプラグ,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
+1515,butt plug,アナルプラグ,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
 1516,butter,バター,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 1517,butterfly,蝶,生物・動植物,動物,,[],verified,0,verified,verified,normal
 1518,butterfly brooch,蝶のブローチ,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
@@ -3604,7 +3604,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4456,holding scissors,ハサミを持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 4457,holding scroll,巻物を持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 4458,holding scythe,大鎌を持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
-4459,holding sex toy,大人のおもちゃを持つ,動作・接触,身体動作,,[],verified,2,verified,verified,normal
+4459,holding sex toy,大人のおもちゃを持つ,動作・接触,身体動作,,[],verified,3,verified,verified,normal
 4460,holding sheath,鞘を持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 4461,holding shield,盾を持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 4462,holding shirt,シャツを持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
@@ -4864,7 +4864,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6625,notice lines,注目線,光・演出,演出効果,,[],verified,0,verified,verified,normal
 6627,novel cover,小説の表紙,構図・カメラ,フレーミング,,[],verified,0,verified,verified,normal
 6628,novelty censor,ユニークな局部隠し,光・演出,演出効果,,[],verified,2,verified,verified,normal
-6630,nsfw,成人向け,品質・ネガティブ,高品質・傑作,,[],verified,3,verified,verified,normal
+6630,nsfw,成人向け,品質・ネガティブ,高品質・傑作,,[],verified,3,verified,needs-review,normal
 6631,nude,ヌード,服装・装飾,裸体・露出,,[],verified,3,verified,verified,normal
 6632,nude cover,裸体で局部を隠す,ポーズ・姿勢,手足の配置,,[],verified,2,verified,verified,normal
 6633,nudist,ヌーディスト,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
@@ -6287,7 +6287,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8414,sewing needle,縫い針,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 8415,sex,性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 8416,sex from behind,後背位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-8417,sex machine,性行為用機械,家具・設備・物品,機械・装置,,[],verified,0,verified,verified,normal
+8417,sex machine,性行為用機械,家具・設備・物品,機械・装置,,[],verified,3,verified,verified,normal
 8418,sex toy,性具,家具・設備・物品,その他の物品,,[],verified,3,verified,verified,normal
 8419,sextuplets,六つ子,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified,normal
 8420,sexual coaching,性的な指導,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
@@ -6938,7 +6938,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9232,strap lift,肩紐を持ち上げる,動作・接触,衣服への接触,,[],verified,1,verified,verified,normal
 9233,strap pull,肩紐を引っ張る,動作・接触,衣服への接触,,[],verified,1,verified,verified,normal
 9234,strap slip,肩紐がずり落ちる,服装・装飾,衣服の状態,,[],verified,1,verified,verified,normal
-9235,strap-on,ストラップオン,家具・設備・物品,その他の物品,,[],verified,4,verified,verified,normal
+9235,strap-on,ストラップオン,家具・設備・物品,その他の物品,,[],verified,3,verified,verified,normal
 9236,strapless,ストラップレス,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 9237,strapless bikini,ストラップレスビキニ,服装・装飾,水着,,[],verified,1,verified,verified,normal
 9238,strapless bottom,ストラップのないボトム,服装・装飾,下着,,[],verified,1,verified,verified,normal
@@ -8305,11 +8305,11 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11075,grabbing another's ass,他人のお尻をつかむ,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
 11076,anal fingering,アナルへの指挿入,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11077,female ejaculation,潮吹き,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11078,vibrator,バイブレーター,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
-11079,vibrator under clothes,服の下のバイブ,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
-11080,dildo,ディルド,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
-11081,anal beads,アナルビーズ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11082,egg vibrator,ローター,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
+11078,vibrator,バイブレーター,家具・設備・物品,機械・装置,,[],verified,3,verified,verified,normal
+11079,vibrator under clothes,服の下のバイブ,家具・設備・物品,機械・装置,,[],verified,3,verified,verified,normal
+11080,dildo,ディルド,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11081,anal beads,アナルビーズ,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11082,egg vibrator,ローター,家具・設備・物品,機械・装置,,[],verified,3,verified,verified,normal
 11083,shibari,緊縛,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
 11084,bondage,拘束プレイ,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
 11085,maledom,男性優位プレイ,動作・接触,性的行為・接触,,[],verified,2,verified,verified,normal
@@ -8325,7 +8325,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11095,wheelbarrow sex,手押し車体位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11096,butterfly position,バタフライ位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11097,bridge position,ブリッジ位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11098,crab position,蟹位,動作・接触,性的行為・接触,,[],,4,verified,verified,normal
+11098,crab position,蟹位,動作・接触,性的行為・接触,,[],needs-review,4,verified,verified,normal
 11099,seashell position,貝殻位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11100,happy baby position,ハッピーベイビー位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11101,tabletop sex,テーブル上での性交,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
@@ -8333,7 +8333,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11103,pretzel position,プレッツェル位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11104,side entry,横からの挿入,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11105,face-to-face straddle,対面でまたがる体位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11106,back to front,背面抱き,動作・接触,性的行為・接触,,[],,4,verified,verified,normal
+11106,back to front,背面抱き,動作・接触,性的行為・接触,,[],needs-review,4,verified,verified,normal
 11107,anal missionary,アナル正常位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11108,bent over table,テーブルに前屈み,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 11109,wall press doggy,壁押しバック,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
@@ -8346,7 +8346,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11116,reverse piledriver,逆ピールドライバー,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11117,double penetration position,二重挿入の体位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11118,spitroast position,前後から同時に行う体位（スピットロースト）,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11119,gangbang pile,複数人の積み重ね,動作・接触,性的行為・接触,,[],,4,verified,verified,normal
+11119,gangbang pile,複数人の積み重ね,動作・接触,性的行為・接触,,[],needs-review,4,verified,verified,normal
 11120,ekiben carry,駅弁,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11121,I-shape balance,I字バランス,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 11122,M-shape open legs,M字開脚,ポーズ・姿勢,基本姿勢,,[],verified,3,verified,verified,normal
@@ -8359,7 +8359,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11129,slow grinding cowgirl,ゆっくり腰を動かす騎乗位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11130,rapid piston missionary,高速ピストン正常位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11131,anal spooning,アナルセックスのスプーニング体位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11132,double leg lock,両脚ロック位,動作・接触,性的行為・接触,,[],,4,verified,verified,normal
+11132,double leg lock,両脚ロック位,動作・接触,性的行為・接触,,[],needs-review,4,verified,verified,normal
 11133,overhead leg press,頭上まで脚を押し上げる体位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11134,top down bottom up,上半身を下げて尻を上げるポーズ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 11135,hands behind back,背中側に回した手,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
@@ -8384,12 +8384,12 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11154,torso twist,上半身をひねるポーズ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 11155,shoulder stand,肩立ち,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 11156,lotus fold,蓮華座,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
-11157,eagle spread,鷲開き,ポーズ・姿勢,基本姿勢,,[],,3,verified,verified,normal
+11157,eagle spread,鷲開き,ポーズ・姿勢,基本姿勢,,[],needs-review,3,verified,verified,normal
 11158,pretzel fold,プレッツェル状に体を折り曲げるポーズ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 11159,happy baby hold,ハッピーベイビーのポーズ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 11160,wheelbarrow hold,手押し車のポーズ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 11161,full nelson hold,フルネルソンの体勢,ポーズ・姿勢,基本姿勢,,[],verified,3,verified,verified,normal
-11162,amazon squat,アマゾネススクワット,ポーズ・姿勢,基本姿勢,,[],,0,verified,verified,normal
+11162,amazon squat,アマゾネススクワット,ポーズ・姿勢,基本姿勢,,[],needs-review,0,verified,verified,normal
 11163,reverse bridge,逆ブリッジ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 11164,legs behind head,脚を頭の後ろに回すポーズ,ポーズ・姿勢,基本姿勢,,[],verified,3,verified,verified,normal
 11165,arms pinned,腕を押さえられた状態,ポーズ・姿勢,基本姿勢,,[],verified,2,verified,verified,normal
@@ -8436,8 +8436,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11206,navel play,へそへの愛撫,動作・接触,性的行為・接触,,[],verified,2,verified,verified,normal
 11207,inner thigh kiss,太ももの内側へのキス,動作・接触,性的行為・接触,,[],verified,2,verified,verified,normal
 11208,toe sucking,足指しゃぶり,動作・接触,性的行為・接触,,[],verified,2,verified,verified,normal
-11209,vibrator tease,バイブレーターを使った愛撫,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
-11210,dildo foreplay,前戯でのディルド使用,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
+11209,vibrator tease,バイブレーターを使った愛撫,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+11210,dildo foreplay,前戯でのディルド使用,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11211,nipple clamp tease,乳首クリップを使った愛撫,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
 11212,wax drip,蝋を垂らすプレイ,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
 11213,blindfold tease,目隠しを使った愛撫,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
@@ -8463,10 +8463,10 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11233,facial gangbang,顔射輪姦,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11234,lesbian threesome,レズビアン3P,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11235,daisy chain,複数人が連なって行う性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11236,circle suck,輪になってのフェラ,動作・接触,性的行為・接触,,[],,4,verified,verified,normal
+11236,circle suck,輪になってのフェラ,動作・接触,性的行為・接触,,[],needs-review,4,verified,verified,normal
 11237,double blowjob,ダブルフェラ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11238,sandwich position,サンドイッチ体位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11239,airtight,密着した複数人プレイ,動作・接触,性的行為・接触,,[],,4,verified,,normal
+11239,airtight,密着した複数人プレイ,動作・接触,性的行為・接触,,[],needs-review,4,verified,needs-review,normal
 11240,reverse train,逆列車プレイ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11241,public gangbang,公共の場での複数人による性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11242,office gangbang,オフィスでの複数人による性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
@@ -8478,8 +8478,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11248,cum shower,精液シャワー,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11249,creampie pile,複数人への中出し,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11250,double creampie,二重中出し,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11251,anal train,アナル列車プレイ,動作・接触,性的行為・接触,,[],,4,verified,verified,normal
-11252,pussy train,膣への列車プレイ,動作・接触,性的行為・接触,,[],,4,verified,verified,normal
+11251,anal train,アナル列車プレイ,動作・接触,性的行為・接触,,[],needs-review,4,verified,verified,normal
+11252,pussy train,膣への列車プレイ,動作・接触,性的行為・接触,,[],needs-review,4,verified,verified,normal
 11253,handjob circle,輪になっての手コキ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11254,paizuri circle,輪になってのパイズリ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11255,kissing orgy,キスを伴う乱交,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
@@ -8496,8 +8496,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11266,pool gangbang,プールでの輪姦,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11267,beach orgy,ビーチでの乱交,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11268,tentacle multiple,複数の触手によるプレイ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11269,monster triple,モンスターを含む三穴プレイ,動作・接触,性的行為・接触,,[],,4,verified,verified,normal
-11270,futa double,ふたなりによる二穴プレイ,動作・接触,性的行為・接触,,[],,4,verified,verified,normal
+11269,monster triple,モンスターを含む三穴プレイ,動作・接触,性的行為・接触,,[],needs-review,4,verified,verified,normal
+11270,futa double,ふたなりによる二穴プレイ,動作・接触,性的行為・接触,,[],needs-review,4,verified,verified,normal
 11271,lesbian gang,レズビアンの複数人プレイ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11272,bukkake shower,ぶっかけシャワー,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11273,massive breasts,爆乳,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
@@ -8572,8 +8572,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11342,sensitive clit,敏感なクリトリス,人物の特徴,身体部位・身体状態,,[],verified,4,verified,verified,normal
 11343,throbbing cock,脈打つ陰茎,人物の特徴,身体部位・身体状態,,[],verified,4,verified,verified,normal
 11344,cum dripping cock,精液が滴る陰茎,人物の特徴,身体部位・身体状態,,[],verified,4,verified,verified,normal
-11345,ass to pussy,肛門から女性器への接触,動作・接触,性的行為・接触,,[],,4,verified,verified,normal
-11346,pussy to mouth,女性器から口への接触,動作・接触,性的行為・接触,,[],,4,verified,verified,normal
+11345,ass to pussy,肛門から女性器への接触,動作・接触,性的行為・接触,,[],needs-review,4,verified,verified,normal
+11346,pussy to mouth,女性器から口への接触,動作・接触,性的行為・接触,,[],needs-review,4,verified,verified,normal
 11347,cum swap,精液の交換,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11348,deep throat cock,喉奥まで挿入された陰茎,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11349,balls deep,根元まで挿入,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
@@ -8660,7 +8660,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11430,micro bikini panties,極小ビキニパンツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11431,transparent panties,透明なショーツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11432,glowing panties,光るパンツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
-11433,animated panties,アニメ柄のパンツ,服装・装飾,下着,,[],,3,verified,verified,normal
+11433,animated panties,アニメ柄のパンツ,服装・装飾,下着,,[],needs-review,3,verified,verified,normal
 11434,ripped fishnet panties,破れた網目状のショーツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11435,wet white cotton,濡れた白い綿パンツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11436,black thong pulled aside,ずらした黒いTバック,服装・装飾,下着,,[],verified,3,verified,verified,normal
@@ -8668,7 +8668,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11438,maid frill panties,メイド風フリルパンツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11439,cum dripping panties,精液が滴るパンツ,服装・装飾,下着,,[],verified,4,verified,verified,normal
 11440,squirt soaked,潮吹きで濡れた下着,服装・装飾,下着,,[],verified,4,verified,verified,normal
-11441,double layered wet,二重になった濡れパンツ,服装・装飾,下着,,[],,3,verified,verified,normal
+11441,double layered wet,二重になった濡れパンツ,服装・装飾,下着,,[],needs-review,3,verified,verified,normal
 11442,push-up bra,プッシュアップブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11443,open cup bra,オープンカップブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11444,front clasp bra,フロントホックブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
@@ -8693,7 +8693,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11463,pink micro bra,ピンクの極小ブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11464,red push-up,赤いプッシュアップブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11465,heart print bra,ハート柄のブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
-11466,school bra,スクールブラ,服装・装飾,下着,,[],,,,verified,minor-related
+11466,school bra,スクールブラ,服装・装飾,下着,,[],needs-review,,needs-review,verified,minor-related
 11467,maid bra,メイド風ブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11468,bunny bra,バニーガール風ブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11469,nurse bra,ナース風ブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
@@ -8749,7 +8749,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11519,overflowing mouth,口から液体があふれる,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
 11520,double creampie overflow,二重中出しによるあふれ,人物の特徴,身体部位・身体状態,,[],verified,4,verified,verified,normal
 11521,anal creampie drip,アナルから滴る精液,人物の特徴,身体部位・身体状態,,[],verified,4,verified,verified,normal
-11522,pussy to mouth cum,女性器から口への精液の移動,人物の特徴,身体部位・身体状態,,[],,4,verified,verified,normal
+11522,pussy to mouth cum,女性器から口への精液の移動,人物の特徴,身体部位・身体状態,,[],needs-review,4,verified,verified,normal
 11523,snowballing,精液の口移し,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11524,cum string,糸を引く精液,人物の特徴,身体部位・身体状態,,[],verified,4,verified,verified,normal
 11525,thick rope cum,太い糸状の精液,人物の特徴,身体部位・身体状態,,[],verified,4,verified,verified,normal
@@ -8840,7 +8840,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11610,no panties skirt,ノーパンのスカート,服装・装飾,衣服,,[],verified,3,verified,verified,normal
 11611,wet t-shirt,濡れたTシャツ,服装・装飾,衣服,,[],verified,2,verified,verified,normal
 11612,cum stained clothes,精液で汚れた服,服装・装飾,衣服,,[],verified,4,verified,verified,normal
-11613,ripped school uniform,破れた制服,服装・装飾,衣服,,[],verified,,,verified,minor-related
+11613,ripped school uniform,破れた制服,服装・装飾,衣服,,[],verified,,needs-review,verified,minor-related
 11614,public exposure outfit,露出度の高い衣装,服装・装飾,衣服,,[],verified,3,verified,verified,normal
 11615,hypnosis costume,催眠をテーマにした衣装,服装・装飾,衣服,,[],verified,2,verified,verified,normal
 11616,tentacle outfit,触手風の衣装,服装・装飾,衣服,,[],verified,2,verified,verified,normal
@@ -8887,18 +8887,18 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11657,sadist smile,サディストの笑み,顔・表情,顔・表情,,[],verified,2,verified,verified,normal
 11658,masochist begging,マゾヒストの懇願,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
 11659,extreme bondage,極度の拘束,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11660,prostate massager,前立腺マッサージ器,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
-11661,sybian,サイビアン,家具・設備・物品,機械・装置,,[],verified,4,verified,verified,normal
-11662,fleshlight,オナホール,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
-11663,onahole,オナホール,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
-11664,cock ring,コックリング,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
-11665,pussy pump,女性器用吸引ポンプ,家具・設備・物品,機械・装置,,[],verified,4,verified,verified,normal
-11666,clit sucker,クリトリス用吸引器,家具・設備・物品,機械・装置,,[],verified,4,verified,verified,normal
-11667,rabbit vibrator,ラビット型バイブレーター,家具・設備・物品,機械・装置,,[],verified,4,verified,verified,normal
-11668,wand vibrator,ワンド型バイブレーター,家具・設備・物品,機械・装置,,[],verified,4,verified,verified,normal
-11669,bullet vibrator,弾丸型バイブレーター,家具・設備・物品,機械・装置,,[],verified,4,verified,verified,normal
-11670,remote vibrator,リモコン式バイブレーター,家具・設備・物品,機械・装置,,[],verified,4,verified,verified,normal
-11671,double dildo,二頭ディルド,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
+11660,prostate massager,前立腺マッサージ器,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11661,sybian,サイビアン,家具・設備・物品,機械・装置,,[],verified,3,verified,verified,normal
+11662,fleshlight,オナホール,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11663,onahole,オナホール,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11664,cock ring,コックリング,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11665,pussy pump,女性器用吸引ポンプ,家具・設備・物品,機械・装置,,[],verified,3,verified,verified,normal
+11666,clit sucker,クリトリス用吸引器,家具・設備・物品,機械・装置,,[],verified,3,verified,verified,normal
+11667,rabbit vibrator,ラビット型バイブレーター,家具・設備・物品,機械・装置,,[],verified,3,verified,verified,normal
+11668,wand vibrator,ワンド型バイブレーター,家具・設備・物品,機械・装置,,[],verified,3,verified,verified,normal
+11669,bullet vibrator,弾丸型バイブレーター,家具・設備・物品,機械・装置,,[],verified,3,verified,verified,normal
+11670,remote vibrator,リモコン式バイブレーター,家具・設備・物品,機械・装置,,[],verified,3,verified,verified,normal
+11671,double dildo,二頭ディルド,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
 11672,ring gag,リングギャグ,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
 11673,flogger,多条鞭,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
 11674,urethral sound,尿道用プローブ,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
@@ -8908,23 +8908,23 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11678,vacuum pump,吸引ポンプ,家具・設備・物品,機械・装置,,[],verified,4,verified,verified,normal
 11679,electro stim,電極,家具・設備・物品,機械・装置,,[],verified,4,verified,verified,normal
 11680,tens unit,低周波,家具・設備・物品,機械・装置,,[],verified,4,verified,verified,normal
-11681,fucking machine,機械,家具・設備・物品,機械・装置,,[],verified,4,verified,verified,normal
-11682,sex doll,ラブドール,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
+11681,fucking machine,機械,家具・設備・物品,機械・装置,,[],verified,3,verified,verified,normal
+11682,sex doll,ラブドール,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
 11683,inflatable doll,空気人形,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
-11684,tentacle dildo,触手ディルド,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
-11685,monster dildo,巨大,家具・設備・物品,道具,,[],,4,verified,verified,normal
-11686,horse dildo,馬型ディルド,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
-11687,knot dildo,結び目付きディルド,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
-11688,vibrating plug,振動プラグ,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
-11689,thrusting dildo,ピストン式ディルド,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
-11690,suction cup dildo,吸盤付きディルド,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
-11691,double ended,両頭,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
+11684,tentacle dildo,触手ディルド,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11685,monster dildo,巨大,家具・設備・物品,道具,,[],needs-review,3,verified,verified,normal
+11686,horse dildo,馬型ディルド,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11687,knot dildo,結び目付きディルド,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11688,vibrating plug,振動プラグ,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11689,thrusting dildo,ピストン式ディルド,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11690,suction cup dildo,吸盤付きディルド,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11691,double ended,両頭,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
 11692,realistic skin,リアルな肌触り,画風・描写,レンダリング,,[],verified,4,verified,verified,normal
-11693,glowing toy,光る性具,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
-11694,flavored lube toy,味付き,家具・設備・物品,道具,,[],,4,verified,verified,normal
-11695,warming toy,温感機能付き性具,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
-11696,cooling toy,冷感機能付き性具,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
-11697,extreme size toy,巨大サイズの性具,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
+11693,glowing toy,光る性具,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11694,flavored lube toy,味付き,家具・設備・物品,道具,,[],needs-review,3,verified,verified,normal
+11695,warming toy,温感機能付き性具,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11696,cooling toy,冷感機能付き性具,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11697,extreme size toy,巨大サイズの性具,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
 11698,office seduction,オフィスでの誘惑,状態・状況,状況・関係性,,[],verified,2,verified,verified,normal
 11699,teacher student,教師と生徒の関係,状態・状況,状況・関係性,,[],verified,0,verified,verified,minor-related
 11700,doctor patient,医師と患者の関係,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
@@ -8938,7 +8938,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11708,beach sex,ビーチでの性行為,背景・場所,場所・室内外,,[],verified,4,verified,verified,normal
 11709,pool sex,プールでの性行為,背景・場所,場所・室内外,,[],verified,4,verified,verified,normal
 11710,tent sex,テント内での性行為,背景・場所,場所・室内外,,[],verified,4,verified,verified,normal
-11711,sleeping sex,睡眠姦,動作・接触,性的行為・接触,,[],,4,verified,verified,normal
+11711,sleeping sex,睡眠姦,動作・接触,性的行為・接触,,[],needs-review,4,verified,verified,normal
 11712,blackmail,脅迫,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
 11713,maid service,メイド奉仕,状態・状況,状況・関係性,,[],verified,2,verified,verified,normal
 11714,nurse night shift,夜勤中の看護師,状態・状況,時間・前後関係,,[],verified,0,verified,verified,normal
@@ -8979,7 +8979,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11749,internal,内部構造,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 11750,ovaries,卵巣,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 11751,identity censor,身元を隠す表現,光・演出,演出効果,,[],verified,0,verified,verified,normal
-11752,bubble filter,幾何学模様フィルター,光・演出,演出効果,,[],,0,verified,verified,normal
+11752,bubble filter,幾何学模様フィルター,光・演出,演出効果,,[],needs-review,0,verified,verified,normal
 11753,spoken,吹き出し内の発話,文字・記号,吹き出し,,[],verified,0,verified,verified,normal
 11754,question mark,疑問符,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
 11755,shiny,光沢のある表現,光・演出,演出効果,,[],verified,0,verified,verified,normal
@@ -8989,8 +8989,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11759,yaoi,やおい・男性同士の恋愛／性的表現,状態・状況,状況・関係性,,[],verified,2,verified,verified,normal
 11760,petrification,石化,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 11761,disembodied limb,胴体から切り離された手足,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
-11762,anal tail,アナル用の尻尾型器具,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
-11763,tenga,テンガ（男性向けセルフプレジャー器具）,家具・設備・物品,道具,,[],verified,4,verified,verified,normal
+11762,anal tail,アナル用の尻尾型器具,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
+11763,tenga,テンガ（男性向けセルフプレジャー器具）,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
 11764,condom,コンドーム,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 11765,used condom,使用済みコンドーム,家具・設備・物品,日用品,,[],verified,3,verified,verified,normal
 11766,air mattress,エアマット,家具・設備・物品,家具,,[],verified,0,verified,verified,normal
@@ -9007,7 +9007,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11777,looking pleasured,快感を感じているような表情,顔・表情,顔・表情,,[],verified,3,verified,verified,normal
 11778,disdain,軽蔑の表情,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 11779,awe,畏敬の表情,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
-11780,penis awe,見せ槍,顔・表情,顔・表情,,[],,4,verified,verified,normal
+11780,penis awe,見せ槍,顔・表情,顔・表情,,[],needs-review,4,verified,verified,normal
 11781,cum on food,食べ物に精液をかける,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11782,outercourse,挿入を伴わない性的接触,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11783,fisting,拳を用いた挿入,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
