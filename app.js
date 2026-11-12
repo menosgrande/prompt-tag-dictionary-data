@@ -115,45 +115,101 @@
     const key = keyOf(row);
     return '<div class="related-tag-row"><label><input type="checkbox" class="related-select" data-key="' + escapeHTML(key) + '"' + (state.selected.has(key) ? ' checked' : '') + '><span class="related-tag-copy"><strong>' + escapeHTML(row.ja || row.tag) + '</strong><small>' + escapeHTML(row.tag) + (groupName ? ' · ' + escapeHTML(groupName) : '') + '</small></span></label><span class="related-tag-type">' + escapeHTML(typeLabel || row.minor || "作品タイトル") + '</span></div>';
   }
-  function seriesNameForGroup(group) {
+  function specialSeriesName(group) {
     const tags = group.titles.map(row => String(row.tag || "").toLocaleLowerCase());
     if (tags.some(tag => tag === "pokemon" || tag.startsWith("pokemon "))) return "ポケットモンスター";
     if (tags.some(tag => tag === "final fantasy" || tag.startsWith("final fantasy ") || tag === "dissidia final fantasy")) return "ファイナルファンタジー";
     if (tags.some(tag => tag === "fire emblem" || tag.startsWith("fire emblem ") || tag.startsWith("fire emblem:"))) return "ファイアーエムブレム";
     return "";
   }
+  function genericSeriesGroups() {
+    const manualRoots = new Set(["overwatch", "kemono friends", "street fighter"]);
+    const entries = state.works.map(group => {
+      const tag = String(group.titles[0]?.tag || "");
+      const normalized = normalizeWorkName(tag);
+      const isRoot = /\\(series\\)\\s*$/i.test(tag) || manualRoots.has(normalized);
+      return { group, tag, normalized, isRoot };
+    });
+    const roots = entries.filter(entry => entry.isRoot && entry.normalized);
+    const rootFor = new Map();
+    const rootAncestor = root => {
+      const parent = roots.filter(candidate => candidate.group !== root.group &&
+        root.normalized.startsWith(candidate.normalized) &&
+        root.normalized.length > candidate.normalized.length)
+        .sort((a,b) => b.normalized.length - a.normalized.length)[0];
+      return parent ? rootAncestor(parent) : root;
+    };
+    entries.forEach(entry => {
+      const candidate = roots.filter(root => root.group !== entry.group &&
+        entry.normalized.startsWith(root.normalized) &&
+        entry.normalized.length > root.normalized.length)
+        .sort((a,b) => b.normalized.length - a.normalized.length)[0];
+      if (candidate) rootFor.set(entry.group.key, rootAncestor(candidate).group);
+      else if (entry.isRoot) rootFor.set(entry.group.key, rootAncestor(entry).group);
+    });
+    const grouped = new Map();
+    rootFor.forEach((root, key) => {
+      if (!grouped.has(root.key)) grouped.set(root.key, { root, members: [] });
+      const member = state.works.find(group => group.key === key);
+      if (member && !grouped.get(root.key).members.includes(member)) grouped.get(root.key).members.push(member);
+    });
+    return new Map([...grouped].filter(([,value]) => value.members.length > 1));
+  }
   function renderWorkList() {
     const query = state.worksQuery.toLocaleLowerCase();
-    const groups = state.works.filter(group => {
-      const seriesName = seriesNameForGroup(group).toLocaleLowerCase();
-      return !query || group.queryText.includes(query) || seriesName.includes(query);
+    const genericGroups = genericSeriesGroups();
+    const genericRootByMember = new Map();
+    genericGroups.forEach(({root,members}) => members.forEach(member => genericRootByMember.set(member.key, root)));
+    const parentQueryMatches = new Set();
+    genericGroups.forEach(({root,members}) => {
+      if (query && root.queryText.includes(query)) members.forEach(member => parentQueryMatches.add(member.key));
     });
+    const groups = state.works.filter(group =>
+      !query || group.queryText.includes(query) || parentQueryMatches.has(group.key) ||
+      (genericRootByMember.get(group.key)?.name || "").toLocaleLowerCase().includes(query) ||
+      specialSeriesName(group).toLocaleLowerCase().includes(query)
+    );
     const totalMembers = groups.reduce((sum,group) => sum + group.titles.length + group.characters.length + group.elements.length, 0);
     $("#works-count").textContent = groups.length.toLocaleString("ja-JP") + "作品 · " + totalMembers.toLocaleString("ja-JP") + "タグ";
 
+    const renderGroupBody = group => [
+      group.titles.length ? '<div class="related-subsection"><h3>作品タイトル</h3>' + group.titles.map(row => relatedTagRow(row, group.name)).join("") + '</div>' : "",
+      group.characters.length ? '<div class="related-subsection"><h3>キャラクター <span>' + group.characters.length + '</span></h3>' + group.characters.map(row => relatedTagRow(row, group.name)).join("") + '</div>' : "",
+      group.elements.length ? '<div class="related-subsection"><h3>作品固有の衣装・要素 <span>' + group.elements.length + '</span></h3>' + group.elements.map(row => relatedTagRow(row, group.name)).join("") + '</div>' : ""
+    ].join("");
     const renderGroupCard = (group, nested = false) => {
       const count = group.characters.length + group.elements.length;
-      const contents = [
-        group.titles.length ? '<div class="related-subsection"><h3>作品タイトル</h3>' + group.titles.map(row => relatedTagRow(row, group.name)).join("") + '</div>' : "",
-        group.characters.length ? '<div class="related-subsection"><h3>キャラクター <span>' + group.characters.length + '</span></h3>' + group.characters.map(row => relatedTagRow(row, group.name)).join("") + '</div>' : "",
-        group.elements.length ? '<div class="related-subsection"><h3>作品固有の衣装・要素 <span>' + group.elements.length + '</span></h3>' + group.elements.map(row => relatedTagRow(row, group.name)).join("") + '</div>' : ""
-      ].join("");
-      return '<details class="work-card' + (nested ? ' series-child' : '') + '"><summary><span class="work-card-title">' + escapeHTML(group.name) + '</span><span class="work-card-meta">' + count + '件 · タイトル ' + group.titles.length + '件</span></summary><div class="work-card-body">' + contents + '</div></details>';
+      return '<details class="work-card' + (nested ? ' series-child' : '') + '"><summary><span class="work-card-title">' + escapeHTML(group.name) + '</span><span class="work-card-meta">' + count + '件 · タイトル ' + group.titles.length + '件</span></summary><div class="work-card-body">' + renderGroupBody(group) + '</div></details>';
     };
 
-    const franchiseGroups = new Map();
+    const specialGroups = new Map();
+    const genericMembers = new Map();
     const standaloneGroups = [];
     groups.forEach(group => {
-      const seriesName = seriesNameForGroup(group);
-      if (!seriesName) { standaloneGroups.push(group); return; }
-      if (!franchiseGroups.has(seriesName)) franchiseGroups.set(seriesName, []);
-      franchiseGroups.get(seriesName).push(group);
+      const specialName = specialSeriesName(group);
+      if (specialName) {
+        if (!specialGroups.has(specialName)) specialGroups.set(specialName, []);
+        specialGroups.get(specialName).push(group);
+        return;
+      }
+      const genericRoot = genericRootByMember.get(group.key);
+      if (genericRoot) {
+        if (!genericMembers.has(genericRoot.key)) genericMembers.set(genericRoot.key, { root: genericRoot, members: [] });
+        genericMembers.get(genericRoot.key).members.push(group);
+        return;
+      }
+      standaloneGroups.push(group);
     });
-    const franchiseCards = [...franchiseGroups.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja")).map(([seriesName, members]) => {
+    const specialCards = [...specialGroups.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja")).map(([name,members]) => {
       const tagCount = members.reduce((sum,group) => sum + group.titles.length + group.characters.length + group.elements.length, 0);
-      return '<details class="work-card series-parent"><summary><span class="work-card-title">' + escapeHTML(seriesName) + '</span><span class="work-card-meta">' + members.length + '作品 · ' + tagCount + 'タグ</span></summary><div class="work-card-body series-body">' + members.map(group => renderGroupCard(group, true)).join("") + '</div></details>';
+      return '<details class="work-card series-parent"><summary><span class="work-card-title">' + escapeHTML(name) + '</span><span class="work-card-meta">' + members.length + '作品 · ' + tagCount + 'タグ</span></summary><div class="work-card-body series-body">' + members.map(group => renderGroupCard(group, true)).join("") + '</div></details>';
     }).join("");
-    const cards = franchiseCards + standaloneGroups.map(group => renderGroupCard(group)).join("");
+    const genericCards = [...genericMembers.values()].sort((a,b) => a.root.name.localeCompare(b.root.name, "ja")).map(({root,members}) => {
+      const children = members.filter(group => group.key !== root.key);
+      const tagCount = members.reduce((sum,group) => sum + group.titles.length + group.characters.length + group.elements.length, 0);
+      return '<details class="work-card series-parent"><summary><span class="work-card-title">' + escapeHTML(root.name) + '</span><span class="work-card-meta">' + members.length + '作品 · ' + tagCount + 'タグ</span></summary><div class="work-card-body series-body">' + renderGroupBody(root) + children.map(group => renderGroupCard(group, true)).join("") + '</div></details>';
+    }).join("");
+    const cards = specialCards + genericCards + standaloneGroups.map(group => renderGroupCard(group)).join("");
 
     const ambiguous = !query && state.ambiguousRows.length ? '<details class="work-card review-card"><summary><span class="work-card-title">複数候補・要確認</span><span class="work-card-meta">' + state.ambiguousRows.length + '件</span></summary><div class="work-card-body"><p class="related-note">複数の作品タイトルに一致したため、自動では割り当てていません。</p>' + state.ambiguousRows.map(item => relatedTagRow(item.row, "候補: " + item.candidates.join(" / "))).join("") + '</div></details>' : "";
     const review = !query ? '<details class="work-card review-card"><summary><span class="work-card-title">未紐付け</span><span class="work-card-meta">' + state.reviewRows.length + '件</span></summary><div class="work-card-body"><p class="related-note">既存の作品タイトルと明確に照合できないタグです。作品名を推測して割り当てていません。</p>' + state.reviewRows.map(row => relatedTagRow(row)).join("") + '</div></details>' : "";
