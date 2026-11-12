@@ -13,7 +13,7 @@
     <a class="brand brand-compact" href="./" aria-label="画像生成タグ辞典">
       <span class="brand-copy"><strong>画像生成タグ辞典</strong></span>
     </a>
-    <div class="topbar-meta"><a class="button button-secondary" href="./admin.html">タグ管理</a></div>
+    <div class="topbar-meta"><div class="stats header-stats" aria-label="辞書の統計"><div class="stat-card"><strong>—</strong><span>登録</span></div><div class="stat-card"><strong>0</strong><span>選択</span></div></div><a class="button button-secondary" href="./admin.html">タグ管理</a></div>
   </header>
   <main class="app-shell">
     <nav class="screen-nav" aria-label="画面切り替え">
@@ -25,7 +25,6 @@
     <section id="dictionary-screen" class="app-screen">
       <section class="intro compact-intro">
         <div class="intro-main"><h1>タグ辞典</h1></div>
-        <div class="stats" aria-label="辞書の統計"><div class="stat-card"><strong>—</strong><span>登録タグ</span></div><div class="stat-card"><strong>0</strong><span>選択中</span></div></div>
       </section>
       <section class="search-panel search-row" aria-label="タグ検索と絞り込み">
         <label class="searchbox"><span class="search-icon" aria-hidden="true">⌕</span><input type="search" placeholder="タグ名・日本語訳・別名を検索" autocomplete="off"></label><select id="search-target" aria-label="検索対象"><option value="all">すべて検索</option><option value="tag">英語タグ</option><option value="ja">日本語訳</option><option value="alias">別名</option></select><label class="favorite-filter"><input id="favorites-only" type="checkbox"> お気に入り</label>
