@@ -51,16 +51,22 @@
   </section>
   <div class="list-resizer" role="separator" aria-orientation="vertical" aria-label="タグ一覧と編集フォームの幅を調整"></div>
   <section class="card editor">
-    <div class="list-head"><strong>選択タグの編集</strong><span>未選択</span></div>
-    <label>英語タグ名<input type="text" disabled></label>
-    <label>日本語訳<input type="text" disabled></label>
-    <label>大分類<input type="text" disabled></label>
-    <label>小分類<input type="text" disabled></label>
-    <label>詳細分類<input type="text" disabled></label>
-    <label>別名・検索語<input type="text" disabled></label>
-    <label>翻訳の確認状態<select disabled><option>未確認</option></select></label>
-    <label>分類の確認状態<select disabled><option>未確認</option></select></label>
-    <label>表現レベル<select disabled><option>未判定</option></select></label>
+    <div class="list-head"><strong>選択タグの編集</strong><span>CSV 12列</span></div>
+    <p class="editor-source">データ元：<span>dictionary-working.csv / characters-working.csv</span>（CSV列外の管理情報）</p>
+    <div class="csv-field-grid">
+      <label for="field-index">登録番号 <code>index</code><input id="field-index" name="index" type="text" readonly disabled></label>
+      <label for="field-tag">英語タグ <code>tag</code><input id="field-tag" name="tag" type="text" disabled></label>
+      <label for="field-ja">日本語訳 <code>ja</code><input id="field-ja" name="ja" type="text" disabled></label>
+      <label for="field-major">大分類 <code>major</code><input id="field-major" name="major" type="text" disabled></label>
+      <label for="field-minor">中分類 <code>minor</code><input id="field-minor" name="minor" type="text" disabled></label>
+      <label for="field-detail">小分類 <code>detail</code><input id="field-detail" name="detail" type="text" disabled></label>
+      <label class="field-wide" for="field-aliases">別名（JSON配列） <code>aliases_json</code><textarea id="field-aliases" name="aliases_json" rows="3" disabled></textarea></label>
+      <label for="field-translation-status">翻訳状態 <code>translation_status</code><input id="field-translation-status" name="translation_status" type="text" disabled></label>
+      <label for="field-ero-level">表現レベル <code>ero_level</code><input id="field-ero-level" name="ero_level" type="text" inputmode="numeric" disabled></label>
+      <label for="field-ero-review-status">表現レベル確認状態 <code>ero_review_status</code><input id="field-ero-review-status" name="ero_review_status" type="text" disabled></label>
+      <label for="field-classification-review-status">分類確認状態 <code>classification_review_status</code><input id="field-classification-review-status" name="classification_review_status" type="text" disabled></label>
+      <label for="field-age-safety">年齢安全性 <code>age_safety</code><input id="field-age-safety" name="age_safety" type="text" disabled></label>
+    </div>
     <div class="diff"><strong>変更差分</strong><pre>タグを選択してください。</pre></div>
     <div class="actions"><button disabled>変更を保存</button><button disabled>編集を戻す</button></div>
   </section>
