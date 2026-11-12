@@ -481,13 +481,21 @@
     const sortSelect = $("#sort-filter");
     classificationSelect.addEventListener("change", () => { state.classification = classificationSelect.selectedIndex === 1 ? "classified" : classificationSelect.selectedIndex === 2 ? "unclassified" : "all"; applyFilters(); });
     sortSelect.addEventListener("change", () => { state.sort = sortSelect.selectedIndex === 1 ? "tag" : sortSelect.selectedIndex === 2 ? "ja" : "index"; applyFilters(); });
+    const categoryToggle = $(".category-mobile-toggle");
+    const setCategoryPanelOpen = open => {
+      categoryToggle.setAttribute("aria-expanded", String(open));
+      categoryToggle.querySelector("span").textContent = state.major ? state.major + " · " + (open ? "閉じる" : "開く") : (open ? "閉じる" : "タップして開閉");
+    };
+    categoryToggle.addEventListener("click", () => {
+      setCategoryPanelOpen(categoryToggle.getAttribute("aria-expanded") !== "true");
+    });
     $(".category-tree").addEventListener("click", event => {
       const button = event.target.closest("[data-major]");
       if (!button) return;
       state.major = button.dataset.major || ""; state.minor = button.dataset.minor || "";
-      renderCategories(); applyFilters();
+      renderCategories(); applyFilters(); setCategoryPanelOpen(false);
     });
-    $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; renderCategories(); applyFilters(); });
+    $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; renderCategories(); applyFilters(); setCategoryPanelOpen(false); });
     $(".search-row > .button").addEventListener("click", () => {
       search.value = ""; state.query = ""; state.major = ""; state.minor = ""; state.classification = "all"; state.sort = "index"; state.searchTarget = "all"; state.favoritesOnly = false; $("#search-target").value = "all"; $("#favorites-only").checked = false;
       classificationSelect.selectedIndex = 0; sortSelect.selectedIndex = 0; renderCategories(); applyFilters();
