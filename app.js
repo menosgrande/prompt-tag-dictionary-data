@@ -123,7 +123,7 @@
     return "";
   }
   function genericSeriesGroups() {
-    const manualRoots = new Set(["overwatch", "kemonofriends", "streetfighter", "idolmaster", "leagueoflegends", "touhou", "disney", "vocaloid", "yu-gi-oh!", "gundam", "neon genesis evangelion"]);
+    const manualRoots = new Set(["overwatch", "kemonofriends", "streetfighter", "idolmaster", "leagueoflegends", "touhou", "disney", "vocaloid", "yu-gi-oh!", "gundam", "neon genesis evangelion", "love live!", "persona", "dragon ball", "monster hunter (series)"]);
     const entries = state.works.map(group => {
       const tags = group.titles.map(row => String(row.tag || ""));
       const normalizedTags = tags.map(normalizeWorkName).filter(Boolean);
@@ -147,6 +147,7 @@
         (entry.tags.some(tag => /\\((?:touhou|touhou project)\\)/i.test(tag)) || /東方|touhou/i.test(entry.group.name)) ? "touhou" :
         (entry.tags.some(tag => /\\((?:vocaloid)\\)/i.test(tag) || /^(?:project diva(?: \\(series\\))?|project sekai)$/i.test(tag)) || /初音ミク|ボーカロイド/i.test(entry.group.name)) ? "vocaloid" :
         entry.tags.some(tag => /gundam/i.test(tag)) ? "gundam" :
+        entry.tags.some(tag => /^(?:monster hunter(?:\\s|$))/i.test(tag) && !/^monster hunter \\(series\\)$/i.test(tag)) ? "monsterhunterseries" :
         entry.tags.some(tag => /^(?:evangelion:|rebuild of evangelion$)/i.test(tag)) ? "neon genesis evangelion" :
         entry.tags.some(tag => /^(?:marvel(?: cinematic universe)?|star wars|kingdom hearts|frozen(?: \\(disney\\))?)$/i.test(tag)) ? "disney" : "";
       const forcedRoot = forcedRootKey ? roots.find(root => root.normalized === forcedRootKey && root.group !== entry.group) : null;
