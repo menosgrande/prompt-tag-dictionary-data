@@ -144,8 +144,8 @@
     entries.forEach(entry => {
       const forcedRootKey = entry.tags.some(tag => /^arcane:\\s*league of legends$/i.test(tag)) ? "leagueoflegends" :
         entry.tags.some(tag => /^gakuen idolmaster$/i.test(tag)) ? "idolmaster" :
-        entry.tags.some(tag => /\\((?:touhou|touhou project)\\)/i.test(tag)) ? "touhou" :
-        entry.tags.some(tag => /\\((?:vocaloid)\\)/i.test(tag) || /^(?:project diva(?: \\(series\\))?|project sekai)$/i.test(tag)) ? "vocaloid" :
+        (entry.tags.some(tag => /\\((?:touhou|touhou project)\\)/i.test(tag)) || /東方|touhou/i.test(entry.group.name)) ? "touhou" :
+        (entry.tags.some(tag => /\\((?:vocaloid)\\)/i.test(tag) || /^(?:project diva(?: \\(series\\))?|project sekai)$/i.test(tag)) || /初音ミク|ボーカロイド/i.test(entry.group.name)) ? "vocaloid" :
         entry.tags.some(tag => /gundam/i.test(tag)) ? "gundam" :
         entry.tags.some(tag => /^(?:evangelion:|rebuild of evangelion$)/i.test(tag)) ? "neon genesis evangelion" :
         entry.tags.some(tag => /^(?:marvel(?: cinematic universe)?|star wars|kingdom hearts|frozen(?: \\(disney\\))?)$/i.test(tag)) ? "disney" : "";
