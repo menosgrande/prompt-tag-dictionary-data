@@ -161,3 +161,20 @@ body{font-size:14px;line-height:1.65}
 .result-heading{min-height:34px}
 .result-heading-actions{gap:8px}
 .column-fit-button{padding:3px 6px}
+
+
+/* Reduce vertical whitespace consistently across section headings. */
+.editor-intro{padding:12px 0 8px}
+.editor-intro h1{font-size:22px;line-height:1.25}
+.editor-intro>p:last-child{margin-top:3px;line-height:1.45}
+.output-header{padding:6px 9px}
+.panel-heading{min-height:30px;padding:4px 9px;gap:7px}
+.panel-heading h2{font-size:12px;line-height:1.25}
+.result-heading{min-height:30px}
+.output-header label{font-size:11px}
+@media(max-width:760px){
+ .editor-intro{padding:8px 0 6px}
+ .editor-intro h1{font-size:20px}
+ .panel-heading{padding:4px 8px}
+ .output-header{padding:5px 8px}
+}
