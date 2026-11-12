@@ -6,6 +6,15 @@
   ];
   const PAGE_SIZE = 300;
   const HEADERS = ["index","tag","ja","major","minor","detail","aliases_json","translation_status","ero_level","ero_review_status","classification_review_status","age_safety"];
+  const MAJOR_CATEGORY_ORDER = [
+    "品質・ネガティブ", "人数・人物構成", "人物の特徴", "顔・表情", "髪・頭部",
+    "キャラクター・作品", "服装・装飾", "ポーズ・姿勢", "動作・接触", "状態・状況",
+    "背景・場所", "生物・動植物", "家具・設備・物品", "乗り物",
+    "構図・カメラ", "光・演出", "画風・描写", "文字・記号"
+  ];
+  const MAJOR_CATEGORY_RANK = new Map(MAJOR_CATEGORY_ORDER.map((name, index) => [name, index]));
+  const compareMajorCategories = (a, b) =>
+    (MAJOR_CATEGORY_RANK.get(a) ?? Number.MAX_SAFE_INTEGER) - (MAJOR_CATEGORY_RANK.get(b) ?? Number.MAX_SAFE_INTEGER) || a.localeCompare(b, "ja");
   const FAVORITES_KEY = "ptd-favorites-v1";
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
@@ -241,7 +250,7 @@
   function categoryCounts(rows, key) {
     const counts = new Map();
     rows.forEach(row => { if (row[key]) counts.set(row[key], (counts.get(row[key]) || 0) + 1); });
-    return [...counts.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja"));
+    return [...counts.entries()].sort((a,b) => key === "major" ? compareMajorCategories(a[0], b[0]) : a[0].localeCompare(b[0], "ja"));
   }
   function renderCategories() {
     const root = $(".category-tree");
@@ -398,7 +407,7 @@
   }
   function promptTags() {
     const rows = [...state.selected.values()];
-    if ($(".builder-controls input")?.checked) rows.sort((a,b) => (a.major || "").localeCompare(b.major || "", "ja") || Number(a.index) - Number(b.index));
+    if ($(".builder-controls input")?.checked) rows.sort((a,b) => compareMajorCategories(a.major || "", b.major || "") || Number(a.index) - Number(b.index));
     return rows;
   }
   function renderEditor() {
