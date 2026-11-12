@@ -6,9 +6,10 @@
   ];
   const PAGE_SIZE = 100;
   const HEADERS = ["index","tag","ja","major","minor","detail","aliases_json","translation_status","ero_level","ero_review_status","classification_review_status","age_safety"];
+  const FAVORITES_KEY = "ptd-favorites-v1";
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
-    classification: "all", sort: "index", worksQuery: "", authorsQuery: "",
+    classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
     selected: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], columnWidths: [50,70,220,190,150,150,150,180,90,100]
   };
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -154,9 +155,12 @@
     if (state.minor && row.minor !== state.minor) return false;
     if (state.classification === "classified" && !row.major && !row.minor) return false;
     if (state.classification === "unclassified" && (row.major || row.minor)) return false;
+    if (state.favoritesOnly && !state.favorites.has(keyOf(row))) return false;
     if (state.query) {
-      const q = state.query.toLocaleLowerCase();
-      if (![row.tag,row.ja,row.major,row.minor,row.detail,row.aliases_json,row.workTitle].join(" ").toLocaleLowerCase().includes(q)) return false;
+      const terms = state.query.toLocaleLowerCase().split(/\\s+/).filter(Boolean);
+      const fields = state.searchTarget === "tag" ? [row.tag] : state.searchTarget === "ja" ? [row.ja] : state.searchTarget === "alias" ? [row.aliases_json] : [row.tag,row.ja,row.aliases_json,row.major,row.minor,row.detail,row.workTitle];
+      const haystack = fields.join(" ").toLocaleLowerCase();
+      if (!terms.every(term => haystack.includes(term))) return false;
     }
     return true;
   }
@@ -217,16 +221,16 @@
   }
   function renderRows() {
     const rows = state.filtered;
+    const pages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
+    state.page = Math.min(state.page, pages - 1);
     const pageRows = rows.slice(state.page * PAGE_SIZE, (state.page + 1) * PAGE_SIZE);
     $(".tag-results").innerHTML = pageRows.length ? pageRows.map(row => {
       const key = keyOf(row);
-      let aliases = row.aliases_json || "";
-      try {
-        const parsed = JSON.parse(aliases);
-        if (Array.isArray(parsed)) aliases = parsed.join("、");
-      } catch {}
+      let aliases = parseAliases(row.aliases_json).join("、");
+      const polarity = state.polarity.get(key) || "none";
+      const polarityLabel = polarity === "positive" ? "＋" : polarity === "negative" ? "−" : "なし";
       return '<div class="tag-row" role="row" data-source="' + escapeHTML(row.source) + '">' +
-        '<span class="tag-select-cell"><input type="checkbox" class="tag-select" data-key="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + 'を選択"' + (state.selected.has(key) ? ' checked' : '') + '></span>' +
+        '<span class="tag-select-cell"><button type="button" class="polarity-button polarity-' + polarity + '" data-polarity="' + escapeHTML(key) + '" aria-label="追加先：' + polarityLabel + '" title="クリックで なし → ポジティブ → ネガティブ"> ' + polarityLabel + '</button><button type="button" class="favorite-button' + (state.favorites.has(key) ? ' is-favorite' : '') + '" data-favorite="' + escapeHTML(key) + '" aria-label="お気に入り切替" title="お気に入り">★</button></span>' +
         '<span class="tag-category" title="' + escapeHTML(row.index) + '">' + escapeHTML(row.index) + '</span>' +
         '<span class="tag-english" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</span>' +
         '<span class="tag-japanese" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</span>' +
@@ -238,9 +242,11 @@
         '<span class="tag-category" title="' + escapeHTML(row.age_safety) + '">' + escapeHTML(row.age_safety || "—") + '</span>' +
       '</div>';
     }).join("") : '<div class="empty-state">条件に一致するタグはありません。</div>';
-    const pages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
+    const start = Math.max(1, state.page - 2), end = Math.min(pages, Math.max(5, state.page + 3));
+    let nums = "";
+    for (let p = start; p <= end; p++) nums += '<button type="button" class="page-number' + (p - 1 === state.page ? ' active' : '') + '" data-page="' + (p - 1) + '" aria-current="' + (p - 1 === state.page ? 'page' : 'false') + '">' + p + '</button>';
     $(".count").textContent = rows.length.toLocaleString("ja-JP") + " 件";
-    $(".pagination").innerHTML = `<button class="button button-quiet" type="button" data-page="prev"${state.page === 0 ? " disabled" : ""}>前へ</button><span>${state.page + 1} / ${pages} ページ（${rows.length.toLocaleString("ja-JP")}件）</span><button class="button button-quiet" type="button" data-page="next"${state.page + 1 >= pages ? " disabled" : ""}>次へ</button>`;
+    $(".pagination").innerHTML = '<button class="page-number page-arrow" type="button" data-page="prev"' + (state.page === 0 ? ' disabled' : '') + '>前へ</button>' + (start > 1 ? '<span class="page-ellipsis">…</span>' : '') + nums + (end < pages ? '<span class="page-ellipsis">…</span><button class="page-number" type="button" data-page="' + (pages - 1) + '">' + pages + '</button>' : '') + '<button class="page-number page-arrow" type="button" data-page="next"' + (state.page >= pages - 1 ? ' disabled' : '') + '>次へ</button><span class="page-total">' + rows.length.toLocaleString("ja-JP") + '件</span>';
   }
   function applyFilters() {
     state.filtered = state.all.filter(matches);
@@ -252,27 +258,27 @@
   }
   function promptTags() {
     const rows = [...state.selected.values()];
-    if ($(".builder-controls input")?.checked) {
-      rows.sort((a,b) => (a.major || "").localeCompare(b.major || "", "ja") || Number(a.index) - Number(b.index));
-    }
+    if ($(".builder-controls input")?.checked) rows.sort((a,b) => (a.major || "").localeCompare(b.major || "", "ja") || Number(a.index) - Number(b.index));
     return rows;
   }
   function renderEditor() {
     const rows = promptTags();
-    const positive = $("#positive-output");
-    if (positive && document.activeElement !== positive) positive.value = rows.map(row => row.tag).join(", ");
+    const positiveRows = rows.filter(row => (state.polarity.get(keyOf(row)) || "positive") === "positive");
+    const negativeRows = rows.filter(row => state.polarity.get(keyOf(row)) === "negative");
+    const positive = $("#positive-output"), negative = $("#negative-output");
+    if (positive && document.activeElement !== positive) positive.value = positiveRows.map(row => row.tag).join(", ");
+    if (negative && document.activeElement !== negative && negativeRows.length) negative.value = negativeRows.map(row => row.tag).join(", ");
     const count = state.selected.size;
     $$(".stats strong")[1].textContent = String(count);
     const countLabel = $(".selected-dock-count");
     if (countLabel) countLabel.textContent = count + " 件選択中";
     const chips = $(".selected-dock-tags");
     if (chips) chips.innerHTML = rows.slice(0, 8).map(row => '<span class="selected-dock-chip"><span title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</span><button class="selected-dock-remove" type="button" data-remove="' + escapeHTML(keyOf(row)) + '" aria-label="削除">×</button></span>').join("") + (count > 8 ? '<span class="selected-dock-more">+' + (count - 8) + '件</span>' : '');
-    const dock = $(".selected-dock");
-    if (dock) dock.hidden = count === 0;
-    const copyPositive = $('[data-action="copy-positive"]');
-    const savePositive = $('[data-action="save-positive"]');
-    if (copyPositive) copyPositive.disabled = !positive?.value;
-    if (savePositive) savePositive.disabled = !positive?.value;
+    const dock = $(".selected-dock"); if (dock) dock.hidden = count === 0;
+    $('[data-action="copy-positive"]').disabled = !positive?.value;
+    $('[data-action="save-positive"]').disabled = !positive?.value;
+    $('[data-action="copy-negative"]').disabled = !negative?.value;
+    $('[data-action="save-negative"]').disabled = !negative?.value;
   }
   function setScreen(id) {
     state.activeScreen = id;
@@ -313,11 +319,14 @@
       if (!input) return;
       const row = state.all.find(item => keyOf(item) === input.dataset.key);
       if (!row) return;
-      if (input.checked) state.selected.set(input.dataset.key, row); else state.selected.delete(input.dataset.key);
+      if (input.checked) { state.selected.set(input.dataset.key, row); state.polarity.set(input.dataset.key, "positive"); } else { state.selected.delete(input.dataset.key); state.polarity.delete(input.dataset.key); }
       renderEditor();
     }));
-    const search = $(".searchbox input");
+    const search = $(".search-row .searchbox input");
     search.addEventListener("input", () => { state.query = search.value.trim(); applyFilters(); });
+    $("#search-target").addEventListener("change", event => { state.searchTarget = event.target.value; applyFilters(); });
+    $("#favorites-only").addEventListener("change", event => { state.favoritesOnly = event.target.checked; applyFilters(); });
+    try { state.favorites = new Set(JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]")); } catch { state.favorites = new Set(); }
     const selects = $$(".search-row select");
     selects[0].addEventListener("change", () => { state.classification = selects[0].selectedIndex === 1 ? "classified" : selects[0].selectedIndex === 2 ? "unclassified" : "all"; applyFilters(); });
     selects[1].addEventListener("change", () => { state.sort = selects[1].selectedIndex === 1 ? "tag" : selects[1].selectedIndex === 2 ? "ja" : "index"; applyFilters(); });
@@ -329,21 +338,34 @@
     });
     $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; renderCategories(); applyFilters(); });
     $(".search-row > .button").addEventListener("click", () => {
-      search.value = ""; state.query = ""; state.major = ""; state.minor = ""; state.classification = "all"; state.sort = "index";
+      search.value = ""; state.query = ""; state.major = ""; state.minor = ""; state.classification = "all"; state.sort = "index"; state.searchTarget = "all"; state.favoritesOnly = false; $("#search-target").value = "all"; $("#favorites-only").checked = false;
       selects.forEach(select => select.selectedIndex = 0); renderCategories(); applyFilters();
     });
     $(".pagination").addEventListener("click", event => {
       const button = event.target.closest("[data-page]");
       if (!button || button.disabled) return;
-      state.page += button.dataset.page === "next" ? 1 : -1; renderRows();
+      if (button.dataset.page === "prev") state.page--;
+      else if (button.dataset.page === "next") state.page++;
+      else state.page = Number(button.dataset.page);
+      renderRows();
     });
-    $(".tag-results").addEventListener("change", event => {
-      const input = event.target.closest(".tag-select");
-      if (!input) return;
-      const row = state.filtered.find(item => keyOf(item) === input.dataset.key) || state.all.find(item => keyOf(item) === input.dataset.key);
-      if (!row) return;
-      if (input.checked) state.selected.set(input.dataset.key, row); else state.selected.delete(input.dataset.key);
-      renderEditor();
+    $(".tag-results").addEventListener("click", event => {
+      const polarityButton = event.target.closest("[data-polarity]");
+      const favoriteButton = event.target.closest("[data-favorite]");
+      if (!polarityButton && !favoriteButton) return;
+      const key = (polarityButton || favoriteButton).dataset.polarity || (polarityButton || favoriteButton).dataset.favorite;
+      const row = state.all.find(item => keyOf(item) === key);
+      if (favoriteButton) {
+        if (state.favorites.has(key)) state.favorites.delete(key); else state.favorites.add(key);
+        try { localStorage.setItem(FAVORITES_KEY, JSON.stringify([...state.favorites])); } catch {}
+        if (state.favoritesOnly) applyFilters(); else renderRows();
+        return;
+      }
+      const current = state.polarity.get(key) || "none";
+      const next = current === "none" ? "positive" : current === "positive" ? "negative" : "none";
+      if (next === "none") { state.polarity.delete(key); state.selected.delete(key); }
+      else { state.polarity.set(key, next); state.selected.set(key, row); }
+      renderRows(); renderEditor();
     });
     $(".screen-nav").addEventListener("click", event => {
       const tab = event.target.closest(".screen-tab");
@@ -353,11 +375,11 @@
     $(".selected-dock").addEventListener("click", event => {
       const button = event.target.closest("[data-remove]");
       if (!button) return;
-      state.selected.delete(button.dataset.remove); renderRows(); renderEditor();
+      state.selected.delete(button.dataset.remove); state.polarity.delete(button.dataset.remove); renderRows(); renderEditor();
     });
     $(".selected-dock-actions [data-action='open-editor']").addEventListener("click", () => setScreen("editor-screen"));
     $(".editor-builder-panel .text-button").addEventListener("click", () => {
-      state.selected.clear(); renderRows(); renderEditor();
+      state.selected.clear(); state.polarity.clear(); renderRows(); renderEditor();
     });
     const addInput = $(".preview-add-row input");
     const addButton = $(".preview-add-row button");
@@ -369,7 +391,7 @@
     addInput.addEventListener("input", updateAddButton);
     addButton.addEventListener("click", () => {
       const row = state.all.find(item => keyOf(item) === addButton.dataset.key);
-      if (row) { addRow(row); addInput.value = ""; updateAddButton(); }
+      if (row) { state.polarity.set(keyOf(row), "positive"); addRow(row); addInput.value = ""; updateAddButton(); }
     });
     $(".builder-controls input").addEventListener("change", renderEditor);
     $("#positive-output").addEventListener("input", renderEditor);
