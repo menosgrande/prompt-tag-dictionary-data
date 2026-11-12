@@ -3,78 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#202329">
+  <meta name="theme-color" content="#15191f">
   <title>タグ管理 | Prompt Tag Dictionary</title>
   <link rel="stylesheet" href="./admin.css">
 </head>
 <body>
-<header><a href="./">← 辞書へ戻る</a><h1>タグ管理</h1><span>CSV管理画面</span></header>
-<main>
-<section class="notice">
-  <strong>この画面は辞書データの管理・確認作業用です。</strong>
-  <p>正本データは dictionary-working.csv と characters-working.csv です。現段階では画面構造のみを用意しています。CSVの読み込み・編集・検証・書き出し機能は未実装です。</p>
-</section>
-<section class="toolbar">
-  <label>タグ検索<input type="search" placeholder="英語タグ・日本語訳"></label>
-  <label>並び順<select><option>登録順</option><option>大分類 → 小分類 → タグ名</option><option>タグ名順</option></select></label>
-  <label>確認状態<select><option>すべて</option><option>未確認</option><option>要確認</option><option>暫定</option><option>確認済み</option></select></label>
-  <button type="button" disabled>CSVを読み込む</button>
-  <button type="button" disabled>編集を破棄</button>
-</section>
-<section class="card batch-work-card">
-  <div class="list-head"><strong>翻訳・分類のCSVバッチ作業</strong><span>未読み込み</span></div>
-  <p class="batch-help">未完了タグを小分けのCSVで出力し、編集済みCSVを検証して取り込みます。</p>
-  <div class="batch-controls">
-    <label>作業内容<select><option>翻訳</option><option>分類</option><option>表現レベル</option><option>未完了項目すべて</option></select></label>
-    <label>1回の件数<select><option>25</option><option>50</option><option selected>100</option><option>200</option><option>500</option><option>1000</option></select></label>
-    <label>対象<select><option>未完了</option><option>要確認のみ</option><option>すべて再確認</option></select></label>
-    <button type="button" disabled>バッチCSVを出力</button>
-  </div>
-  <div class="batch-progress">CSVデータの読み込み機能は次の工程で実装します。</div>
-  <div class="batch-import-row">
-    <label>編集済みCSV<input type="file" accept=".csv,text/csv" disabled></label>
-    <button type="button" disabled>CSVを検証して取り込む</button>
-    <button type="button" disabled>AI向け指示をコピー</button>
-  </div>
-  <div class="batch-final-row"><button type="button" disabled>全件CSVを出力</button></div>
-</section>
-<section class="card prompt-order-card">
-  <div class="list-head"><strong>プロンプト出力カテゴリ順</strong><span>未設定</span></div>
-  <p class="prompt-order-help">カテゴリの出力順を管理します。現在は表示枠のみです。</p>
-  <ol class="prompt-order-list"><li>CSV読み込み後にカテゴリを表示します。</li></ol>
-</section>
-<div class="layout">
-  <section class="card tag-list-card">
-    <div class="list-head"><strong>タグ一覧</strong><span>未読み込み</span></div>
-    <div class="results"><p>CSV読み込み後にタグ一覧を表示します。</p></div>
-    <div class="pager"><button disabled>前へ</button><span>—</span><button disabled>次へ</button></div>
-  </section>
-  <div class="list-resizer" role="separator" aria-orientation="vertical" aria-label="タグ一覧と編集フォームの幅を調整"></div>
-  <section class="card editor">
-    <div class="list-head"><strong>選択タグの編集</strong><span>CSV 12列</span></div>
-    <p class="editor-source">データ元：<span>dictionary-working.csv / characters-working.csv</span>（CSV列外の管理情報）</p>
-    <div class="csv-field-grid">
-      <label for="field-index">登録番号 <code>index</code><input id="field-index" name="index" type="text" readonly disabled></label>
-      <label for="field-tag">英語タグ <code>tag</code><input id="field-tag" name="tag" type="text" disabled></label>
-      <label for="field-ja">日本語訳 <code>ja</code><input id="field-ja" name="ja" type="text" disabled></label>
-      <label for="field-major">大分類 <code>major</code><input id="field-major" name="major" type="text" disabled></label>
-      <label for="field-minor">中分類 <code>minor</code><input id="field-minor" name="minor" type="text" disabled></label>
-      <label for="field-detail">小分類 <code>detail</code><input id="field-detail" name="detail" type="text" disabled></label>
-      <label class="field-wide" for="field-aliases">別名（JSON配列） <code>aliases_json</code><textarea id="field-aliases" name="aliases_json" rows="3" disabled></textarea></label>
-      <label for="field-translation-status">翻訳状態 <code>translation_status</code><input id="field-translation-status" name="translation_status" type="text" disabled></label>
-      <label for="field-ero-level">表現レベル <code>ero_level</code><input id="field-ero-level" name="ero_level" type="text" inputmode="numeric" disabled></label>
-      <label for="field-ero-review-status">表現レベル確認状態 <code>ero_review_status</code><input id="field-ero-review-status" name="ero_review_status" type="text" disabled></label>
-      <label for="field-classification-review-status">分類確認状態 <code>classification_review_status</code><input id="field-classification-review-status" name="classification_review_status" type="text" disabled></label>
-      <label for="field-age-safety">年齢安全性 <code>age_safety</code><input id="field-age-safety" name="age_safety" type="text" disabled></label>
-    </div>
-    <div class="diff"><strong>変更差分</strong><pre>タグを選択してください。</pre></div>
-    <div class="actions"><button disabled>変更を保存</button><button disabled>編集を戻す</button></div>
-  </section>
-</div>
-<section class="card export-help">
-  <strong>CSVの正式データへの反映</strong>
-  <p>編集後は dictionary-working.csv と characters-working.csv をそれぞれ書き出し、内容・列数・index・tagの重複を検証してからリポジトリへ反映する想定です。ブラウザからGitHubへ直接書き込む機能は設けません。</p>
-</section>
-</main>
+  <header class="admin-topbar">
+    <a class="admin-brand" href="./"><span class="brand-mark">PT</span><span><strong>Prompt Tag Dictionary</strong><small>画像生成タグ辞典</small></span></a>
+    <a class="back-link" href="./">← 辞典に戻る</a>
+  </header>
+  <main class="admin-shell">
+    <section class="page-intro"><div><p class="eyebrow">DATA WORKSPACE</p><h1>タグ管理</h1><p>CSV正本の確認・整備を行うための管理画面です。</p></div><span class="schema-badge">CSV SCHEMA · 12 FIELDS</span></section>
+    <section class="notice"><span class="notice-mark">i</span><div><strong>管理機能は現在、画面設計段階です。</strong><p>この画面は構成・入力項目の確認用です。CSVの読み込み、編集保存、検証、バッチ入出力はまだ実装されていません。ここからCSVやGitHubのデータは変更されません。</p></div></section>
+    <section class="toolbar panel">
+      <label>タグ検索<input type="search" placeholder="英語タグ・日本語訳" disabled></label>
+      <label>並び順<select disabled><option>登録順</option><option>大分類 → 中分類 → タグ名</option><option>タグ名順</option></select></label>
+      <label>確認状態<select disabled><option>すべて</option><option>未確認</option><option>要確認</option><option>暫定</option><option>確認済み</option></select></label>
+      <button class="button button-secondary" type="button" disabled>CSVを読み込む</button>
+      <button class="button button-ghost" type="button" disabled>編集を破棄</button>
+    </section>
+    <section class="panel batch-work-card">
+      <div class="section-heading"><div><p class="eyebrow">BATCH REVIEW</p><h2>翻訳・分類のCSVバッチ作業</h2></div><span class="state-label">未接続</span></div>
+      <p class="section-copy">未完了タグを指定件数で書き出し、編集済みCSVを検証して取り込む想定です。</p>
+      <div class="batch-controls">
+        <label>作業内容<select disabled><option>翻訳</option><option>分類</option><option>表現レベル</option><option>未完了項目すべて</option></select></label>
+        <label>1回の件数<select disabled><option>25</option><option>50</option><option selected>100</option><option>200</option><option>500</option><option>1000</option></select></label>
+        <label>対象<select disabled><option>未完了</option><option>要確認のみ</option><option>すべて再確認</option></select></label>
+        <button class="button button-secondary" type="button" disabled>バッチCSVを出力</button>
+      </div>
+      <div class="batch-progress">CSVデータの読み込み機能は未実装です。</div>
+      <div class="batch-import-row"><label>編集済みCSV<input type="file" accept=".csv,text/csv" disabled></label><button class="button button-secondary" type="button" disabled>検証して取り込む</button><button class="button button-ghost" type="button" disabled>AI向け指示をコピー</button></div>
+      <div class="batch-final-row"><button class="button button-ghost" type="button" disabled>全件CSVを出力</button></div>
+    </section>
+    <section class="panel prompt-order-card">
+      <div class="section-heading"><div><p class="eyebrow">PROMPT ORDER</p><h2>プロンプト出力カテゴリ順</h2></div><span class="state-label">未設定</span></div>
+      <p class="section-copy">分類定義を基準に、プロンプトへ出力するカテゴリ順を管理する想定です。</p>
+      <ol class="prompt-order-list"><li>CSV読み込み後にカテゴリを表示します。</li></ol>
+    </section>
+    <section class="layout">
+      <section class="panel tag-list-card">
+        <div class="section-heading"><div><p class="eyebrow">TAG RECORDS</p><h2>タグ一覧</h2></div><span class="state-label">未読み込み</span></div>
+        <div class="results"><p class="empty-state">CSV読み込み後にタグ一覧を表示します。</p></div>
+        <div class="pager"><button class="button button-ghost" disabled>前へ</button><span>—</span><button class="button button-ghost" disabled>次へ</button></div>
+      </section>
+      <div class="list-resizer" role="separator" aria-orientation="vertical" aria-label="タグ一覧と編集フォームの幅を調整" tabindex="0"></div>
+      <section class="panel editor">
+        <div class="section-heading"><div><p class="eyebrow">RECORD EDITOR</p><h2>選択タグの編集</h2></div><span class="state-label">12列</span></div>
+        <p class="editor-source">データ元：<code>dictionary-working.csv</code> / <code>characters-working.csv</code></p>
+        <div class="csv-field-grid">
+          <label for="field-index">登録番号 <code>index</code><input id="field-index" name="index" type="text" readonly disabled></label>
+          <label for="field-tag">英語タグ <code>tag</code><input id="field-tag" name="tag" type="text" disabled></label>
+          <label for="field-ja">日本語訳 <code>ja</code><input id="field-ja" name="ja" type="text" disabled></label>
+          <label for="field-major">大分類 <code>major</code><input id="field-major" name="major" type="text" disabled></label>
+          <label for="field-minor">中分類 <code>minor</code><input id="field-minor" name="minor" type="text" disabled></label>
+          <label for="field-detail">小分類 <code>detail</code><input id="field-detail" name="detail" type="text" disabled></label>
+          <label class="field-wide" for="field-aliases">別名（JSON配列） <code>aliases_json</code><textarea id="field-aliases" name="aliases_json" rows="3" disabled></textarea></label>
+          <label for="field-translation-status">翻訳状態 <code>translation_status</code><input id="field-translation-status" name="translation_status" type="text" disabled></label>
+          <label for="field-ero-level">表現レベル <code>ero_level</code><input id="field-ero-level" name="ero_level" type="text" inputmode="numeric" disabled></label>
+          <label for="field-ero-review-status">表現レベル確認状態 <code>ero_review_status</code><input id="field-ero-review-status" name="ero_review_status" type="text" disabled></label>
+          <label for="field-classification-review-status">分類確認状態 <code>classification_review_status</code><input id="field-classification-review-status" name="classification_review_status" type="text" disabled></label>
+          <label for="field-age-safety">年齢安全性 <code>age_safety</code><input id="field-age-safety" name="age_safety" type="text" disabled></label>
+        </div>
+        <div class="diff"><strong>変更差分</strong><pre>タグを選択してください。</pre></div>
+        <div class="actions"><button class="button button-primary" disabled>変更を保存</button><button class="button button-ghost" disabled>編集を戻す</button></div>
+      </section>
+    </section>
+    <section class="panel export-help"><strong>CSV正本への反映</strong><p>正式な変更はCSVを検証したうえでリポジトリへ反映します。ブラウザからGitHubへ直接書き込む仕組みは設けません。</p></section>
+    <footer class="footer"><span>Prompt Tag Dictionary · Admin</span><a href="./">辞典へ戻る</a></footer>
+  </main>
 </body>
 </html>
