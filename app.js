@@ -9,7 +9,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
     classification: "all", review: "all", sort: "index",
-    selected: new Map(), activeScreen: "dictionary-screen", columnWidths: [42,70,210,170,150,150,130,180,100,55,110,110,95]
+    selected: new Map(), activeScreen: "dictionary-screen", columnWidths: [58,82,220,210,150,150,150,190,130,100,190,190,120]
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -59,8 +59,8 @@
     }
     return true;
   }
-  const COLUMN_WIDTHS_KEY = "ptd-dictionary-column-widths-v1";
-  const COLUMN_MIN_WIDTHS = [36, 48, 90, 80, 80, 80, 70, 80, 76, 42, 76, 76, 64];
+  const COLUMN_WIDTHS_KEY = "ptd-dictionary-column-widths-v2";
+  const COLUMN_MIN_WIDTHS = [42, 56, 100, 100, 90, 90, 90, 100, 90, 70, 120, 120, 90];
   const COLUMN_MAX_WIDTH = 520;
   function applyColumnWidths() {
     $(".table-scroll-shell").style.setProperty("--tag-list-columns", state.columnWidths.map(width => width + "px").join(" "));
@@ -134,7 +134,7 @@
         '<span class="tag-category" title="' + escapeHTML(row.detail) + '">' + escapeHTML(row.detail || "—") + '</span>' +
         '<span class="tag-category alias-cell" title="' + escapeHTML(row.aliases_json) + '">' + escapeHTML(aliases || "—") + '</span>' +
         '<span class="tag-category" title="' + escapeHTML(row.translation_status) + '">' + escapeHTML(statusLabel(row.translation_status)) + '</span>' +
-        '<span class="tag-category" title="' + escapeHTML(row.ero_level) + '">' + escapeHTML(row.ero_level ?? "0") + '</span>' +
+        '<span class="tag-category" title="' + escapeHTML(row.ero_level) + '">' + escapeHTML(row.ero_level || "—") + '</span>' +
         '<span class="tag-category" title="' + escapeHTML(row.ero_review_status) + '">' + escapeHTML(statusLabel(row.ero_review_status)) + '</span>' +
         '<span class="tag-category" title="' + escapeHTML(row.classification_review_status) + '">' + escapeHTML(statusLabel(row.classification_review_status)) + '</span>' +
         '<span class="tag-category" title="' + escapeHTML(row.age_safety) + '">' + escapeHTML(row.age_safety || "—") + '</span>' +
