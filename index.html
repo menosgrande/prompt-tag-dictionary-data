@@ -34,8 +34,9 @@
         </div>
         <button class="button button-ghost compact-reset" type="button" aria-label="検索条件をリセット" title="検索条件をリセット">↺</button>
       </section>
+      <button class="category-mobile-toggle" type="button" aria-expanded="false" aria-controls="mobile-category-panel">分類から探す <span>タップして開閉</span></button>
       <section class="workspace">
-        <aside class="panel categories-panel">
+        <aside class="panel categories-panel" id="mobile-category-panel">
           <div class="panel-heading"><div><h2>分類から探す</h2></div><button class="text-button" type="button">解除</button></div>
           <div class="category-tree"><p class="empty-state">CSV読み込み後に分類を表示します。</p></div>
           <div class="category-footnote">分類名・件数はCSVの内容から自動生成されます。</div>
