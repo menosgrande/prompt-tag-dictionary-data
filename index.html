@@ -3,75 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#202329">
-  <meta name="description" content="画像生成タグを日本語・英語で探し、分類してプロンプトを組み立てるタグ辞典。">
-  <title>Prompt Tag Dictionary</title>
+  <meta name="theme-color" content="#15191f">
+  <meta name="description" content="画像生成タグを日本語・英語で検索し、分類から選んでプロンプトを組み立てるタグ辞典。">
+  <title>Prompt Tag Dictionary | 画像生成タグ辞典</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<header class="topbar">
-  <a class="brand" href="./"><span class="brand-mark">PT</span><span><strong>Prompt Tag Dictionary</strong><small>画像生成タグ辞典</small></span></a>
-  <div class="top-actions"><a class="button button-quiet" href="./admin.html">タグ管理</a></div>
-</header>
-<main class="app-shell">
-  <nav class="screen-nav" aria-label="作業画面">
-    <a class="screen-tab active" href="#dictionary-screen" aria-current="page">タグ辞典</a>
-    <a class="screen-tab" href="#editor-screen">プロンプト編集</a>
-  </nav>
-  <section id="dictionary-screen" class="app-screen">
-    <section class="intro">
-      <div><p class="eyebrow">PROMPT TAG DICTIONARY</p><h1>タグを選んでプロンプト作成</h1><p class="intro-copy">CSVデータを検索し、分類からタグを選択します。</p></div>
-      <div class="stats"><div><strong>—</strong><span>登録タグ</span></div><div><strong>0</strong><span>選択中</span></div></div>
-    </section>
-    <section class="search-row" aria-label="タグ検索">
-      <label class="searchbox"><span aria-hidden="true">⌕</span><input type="search" placeholder="日本語・英語で検索（例：笑顔 / smile）" autocomplete="off"><kbd>Enter</kbd></label>
-      <select aria-label="分類状態"><option>分類：すべて</option><option>分類済み</option><option>未分類</option></select>
-      <select aria-label="確認状態"><option>確認：すべて</option><option>未確認</option><option>要確認あり</option></select>
-      <select aria-label="並び順"><option>登録順</option><option>英語 A–Z</option><option>日本語 あ–ん</option></select>
-      <button class="button button-quiet" type="button" disabled>絞り込み解除</button>
-    </section>
-    <section class="workspace">
-      <aside class="panel categories-panel">
-        <div class="panel-heading"><div><span class="eyebrow">BROWSE</span><h2>分類から探す</h2></div><button class="text-button" type="button">解除</button></div>
-        <div class="category-tree"><p class="empty-state">CSV読み込み後に分類一覧を表示します。</p></div>
-      </aside>
-      <section class="panel results-panel" aria-label="タグ一覧">
-        <div class="panel-heading result-heading"><div><span class="eyebrow">DICTIONARY</span><h2>タグ一覧</h2></div><span class="count">—</span></div>
-        <div class="table-scroll-shell" role="region" aria-label="タグ一覧。横スクロールできます" tabindex="0">
-          <div class="table-head" role="row">
-            <div class="table-head-cell">選択</div><div class="table-head-cell">登録番号 (index)</div><div class="table-head-cell">英語タグ (tag)</div><div class="table-head-cell">日本語訳 (ja)</div><div class="table-head-cell">大分類 (major)</div><div class="table-head-cell">中分類 (minor)</div><div class="table-head-cell">小分類 (detail)</div><div class="table-head-cell">別名 (aliases_json)</div><div class="table-head-cell">翻訳状態 (translation_status)</div><div class="table-head-cell">表現レベル (ero_level)</div><div class="table-head-cell">表現レベル確認 (ero_review_status)</div><div class="table-head-cell">分類確認 (classification_review_status)</div><div class="table-head-cell">年齢安全性 (age_safety)</div>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Prompt Tag Dictionary ホーム">
+      <span class="brand-mark">PT</span>
+      <span class="brand-copy"><strong>Prompt Tag Dictionary</strong><small>画像生成タグ辞典</small></span>
+    </a>
+    <div class="topbar-meta"><span class="data-indicator"><i></i> CSV DATA</span><a class="button button-secondary" href="./admin.html">タグ管理 <span aria-hidden="true">↗</span></a></div>
+  </header>
+  <main class="app-shell">
+    <nav class="screen-nav" aria-label="画面切り替え">
+      <a class="screen-tab active" href="#dictionary-screen" aria-current="page"><span>01</span> タグ辞典</a>
+      <a class="screen-tab" href="#editor-screen"><span>02</span> プロンプト編集</a>
+    </nav>
+    <section id="dictionary-screen" class="app-screen">
+      <section class="intro">
+        <div class="intro-main"><p class="eyebrow">DISCOVER · ORGANIZE · BUILD</p><h1>タグを探して、<em>組み立てる。</em></h1><p class="intro-copy">英語タグと日本語訳を検索。分類をたどって必要なタグを選び、プロンプトにまとめられます。</p></div>
+        <div class="stats" aria-label="辞書の統計"><div class="stat-card"><strong>—</strong><span>登録タグ</span></div><div class="stat-card"><strong>0</strong><span>選択中</span></div></div>
+      </section>
+      <section class="search-panel search-row" aria-label="タグ検索と絞り込み">
+        <label class="searchbox"><span class="search-icon" aria-hidden="true">⌕</span><input type="search" placeholder="タグを検索 — 日本語・英語・別名" autocomplete="off"><kbd>検索</kbd></label>
+        <div class="filter-controls">
+          <label class="sr-only" for="classification-filter">分類状態</label><select id="classification-filter" aria-label="分類状態"><option>分類：すべて</option><option>分類済み</option><option>未分類</option></select>
+          <label class="sr-only" for="review-filter">確認状態</label><select id="review-filter" aria-label="確認状態"><option>確認：すべて</option><option>未確認</option><option>要確認あり</option></select>
+          <label class="sr-only" for="sort-filter">並び順</label><select id="sort-filter" aria-label="並び順"><option>登録順</option><option>英語 A–Z</option><option>日本語 あ–ん</option></select>
+        </div>
+        <button class="button button-ghost" type="button">条件をリセット</button>
+      </section>
+      <section class="workspace">
+        <aside class="panel categories-panel">
+          <div class="panel-heading"><div><p class="eyebrow">BROWSE BY CATEGORY</p><h2>分類から探す</h2></div><button class="text-button" type="button">解除</button></div>
+          <div class="category-tree"><p class="empty-state">CSV読み込み後に分類を表示します。</p></div>
+          <div class="category-footnote">分類名・件数はCSVの内容から自動生成されます。</div>
+        </aside>
+        <section class="panel results-panel" aria-label="タグ一覧">
+          <div class="panel-heading result-heading"><div><p class="eyebrow">TAG LIBRARY</p><h2>タグ一覧</h2></div><span class="count">—</span></div>
+          <div class="table-scroll-shell" role="region" aria-label="タグ一覧。横スクロールできます" tabindex="0">
+            <div class="table-head" role="row">
+              <div class="table-head-cell">選択</div><div class="table-head-cell">登録番号 <code>index</code></div><div class="table-head-cell">英語タグ <code>tag</code></div><div class="table-head-cell">日本語訳 <code>ja</code></div><div class="table-head-cell">大分類 <code>major</code></div><div class="table-head-cell">中分類 <code>minor</code></div><div class="table-head-cell">小分類 <code>detail</code></div><div class="table-head-cell">別名 <code>aliases_json</code></div><div class="table-head-cell">翻訳状態 <code>translation_status</code></div><div class="table-head-cell">表現レベル <code>ero_level</code></div><div class="table-head-cell">表現確認 <code>ero_review_status</code></div><div class="table-head-cell">分類確認 <code>classification_review_status</code></div><div class="table-head-cell">年齢安全性 <code>age_safety</code></div>
+            </div>
+            <div class="tag-results"><div class="empty-state">CSVデータを読み込んでいます。</div></div>
           </div>
-          <div class="tag-results"><div class="empty-state">CSVデータの読み込み機能は次の工程で実装します。</div></div>
-        </div>
-        <div class="pagination"><button class="button button-quiet" type="button" disabled>前へ</button><span>—</span><button class="button button-quiet" type="button" disabled>次へ</button></div>
+          <div class="pagination"><button class="button button-ghost" type="button" disabled>前へ</button><span>—</span><button class="button button-ghost" type="button" disabled>次へ</button></div>
+        </section>
       </section>
     </section>
-  </section>
-  <section id="editor-screen" class="app-screen editor-screen" hidden>
-    <aside class="panel builder-panel editor-builder-panel">
-      <div class="panel-heading"><div><span class="eyebrow">PROMPT BUILDER</span><h2>プロンプト編集</h2></div><button class="text-button" type="button">全解除</button></div>
-      <div class="preview-add-row"><label>タグを追加<input type="search" placeholder="英語タグ・日本語で検索" autocomplete="off"></label><button class="button button-quiet" type="button" disabled>＋追加</button></div>
-      <p class="preview-help">タグ一覧から選択したタグをここに並べ、プロンプトを組み立てます。</p>
-      <section class="starter-section"><div class="starter-heading"><h2>セット追加</h2><span>クリックでタグを追加</span></div>
-        <div class="starter-presets">
-          <button class="starter-preset" type="button"><strong>人物・ポートレート</strong><span>portrait · upper body · soft lighting</span><b>＋ 追加</b></button>
-          <button class="starter-preset" type="button"><strong>風景・背景</strong><span>landscape · scenery · sky · clouds</span><b>＋ 追加</b></button>
-          <button class="starter-preset" type="button"><strong>構図・ライティング</strong><span>wide shot · backlighting · depth of field</span><b>＋ 追加</b></button>
-          <button class="starter-preset" type="button"><strong>画風・品質</strong><span>masterpiece · best quality · illustration</span><b>＋ 追加</b></button>
+    <section id="editor-screen" class="app-screen editor-screen" hidden>
+      <section class="editor-intro"><p class="eyebrow">PROMPT WORKSPACE</p><h1>プロンプト編集</h1><p>辞典から選んだタグを並べ、コピーまたはテキストファイルに保存します。</p></section>
+      <section class="panel builder-panel editor-builder-panel">
+        <div class="panel-heading"><div><p class="eyebrow">BUILD YOUR PROMPT</p><h2>選択したタグ</h2></div><button class="text-button" type="button">全解除</button></div>
+        <div class="preview-add-row"><label>タグを直接追加<input type="search" placeholder="英語タグまたは日本語訳を完全一致で入力" autocomplete="off"></label><button class="button button-secondary" type="button" disabled>＋ 追加</button></div>
+        <p class="preview-help">辞典の一覧でチェックしたタグがここに追加されます。</p>
+        <div class="builder-controls"><label class="check-row"><input type="checkbox" checked> 分類順に並べて出力</label><label class="check-row"><input type="checkbox"> 分類名をコメントとして付ける</label></div>
+        <div class="output-grid">
+          <section class="output-card"><div class="output-header"><label for="positive-output">ポジティブプロンプト</label><span>POSITIVE</span></div><textarea id="positive-output" spellcheck="false" placeholder="選択したタグがここに表示されます。"></textarea><div class="output-actions"><button class="button button-primary" type="button" data-action="copy-positive" disabled>コピー</button><button class="button button-ghost" type="button" data-action="save-positive" disabled>TXT保存</button></div></section>
+          <section class="output-card"><div class="output-header"><label for="negative-output">ネガティブプロンプト</label><span>NEGATIVE</span></div><textarea id="negative-output" spellcheck="false" placeholder="ネガティブプロンプトを入力"></textarea><div class="output-actions negative-output-actions"><button class="button button-primary" type="button" data-action="copy-negative" disabled>コピー</button><button class="button button-ghost" type="button" data-action="save-negative" disabled>TXT保存</button></div></section>
         </div>
       </section>
-      <div class="builder-controls"><label class="check-row"><input type="checkbox" checked> カテゴリ別に出力</label><label class="check-row"><input type="checkbox"> コメント行を付ける</label></div>
-      <div class="output-stack">
-        <div class="output-header"><label for="positive-output">ポジティブプロンプト</label></div><textarea id="positive-output" spellcheck="false" placeholder="選択したタグがここに表示されます。"></textarea>
-        <div class="output-actions"><button class="button button-primary" type="button" data-action="copy-positive" disabled>ポジティブをコピー</button><button class="button button-quiet" type="button" data-action="save-positive" disabled>TXT保存</button></div>
-        <div class="output-header negative-output-header"><label for="negative-output">ネガティブプロンプト</label></div><textarea id="negative-output" spellcheck="false"></textarea>
-        <div class="output-actions negative-output-actions"><button class="button button-primary" type="button" data-action="copy-negative" disabled>ネガティブをコピー</button><button class="button button-quiet" type="button" data-action="save-negative" disabled>TXT保存</button></div>
-      </div>
-    </aside>
-  </section>
-  <footer class="footer"><span>Prompt Tag Dictionary</span><span>データ形式：CSV</span></footer>
-</main>
-<script src="./csv.js"></script>
-<script src="./app.js"></script>
+    </section>
+    <footer class="footer"><span>Prompt Tag Dictionary</span><span>CSVを正本として表示</span></footer>
+  </main>
+  <script src="./csv.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
