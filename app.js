@@ -123,7 +123,7 @@
     return "";
   }
   function genericSeriesGroups() {
-    const manualRoots = new Set(["overwatch", "kemono friends", "street fighter"]);
+    const manualRoots = new Set(["overwatch", "kemonofriends", "streetfighter", "idolmaster", "leagueoflegends", "touhou"]);
     const entries = state.works.map(group => {
       const tag = String(group.titles[0]?.tag || "");
       const normalized = normalizeWorkName(tag);
@@ -140,7 +140,12 @@
       return parent ? rootAncestor(parent) : root;
     };
     entries.forEach(entry => {
-      const candidate = roots.filter(root => root.group !== entry.group &&
+      const tagLower = entry.tag.toLocaleLowerCase();
+      const forcedRootKey = /^arcane:\\s*league of legends$/i.test(entry.tag) ? "leagueoflegends" :
+        /^gakuen idolmaster$/i.test(entry.tag) ? "idolmaster" :
+        /\\((?:touhou|touhou project)\\)/i.test(entry.tag) ? "touhou" : "";
+      const forcedRoot = forcedRootKey ? roots.find(root => root.normalized === forcedRootKey && root.group !== entry.group) : null;
+      const candidate = forcedRoot || roots.filter(root => root.group !== entry.group &&
         entry.normalized.startsWith(root.normalized) &&
         entry.normalized.length > root.normalized.length)
         .sort((a,b) => b.normalized.length - a.normalized.length)[0];
