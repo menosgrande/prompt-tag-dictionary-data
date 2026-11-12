@@ -466,7 +466,7 @@
         const group = state.works.find(item => item.characters.some(x => keyOf(x) === keyOf(row)) || item.elements.some(x => keyOf(x) === keyOf(row)));
         if (group) row.workTitle = group.name;
       });
-      $(".stats strong")[0].textContent = state.all.length.toLocaleString("ja-JP");
+      $(".stats strong").textContent = state.all.length.toLocaleString("ja-JP");
       renderCategories(); setupColumnResizers(); bindControls(); applyFilters(); renderEditor();
     } catch (error) {
       console.error(error);
