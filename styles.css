@@ -194,3 +194,26 @@ body{font-size:14px;line-height:1.65}
  .series-child>summary{min-height:34px;padding:6px 8px}
  .series-child>.work-card-body{padding:0 7px 7px 9px}
 }
+
+/* Mobile dictionary: keep the primary fields in view and scroll the remaining columns. */
+@media(max-width:760px){
+  .table-scroll-shell{
+    --tag-list-columns:36px 32px 150px 130px 120px 120px 120px 140px 75px 85px;
+    width:100%;
+    min-width:0;
+    overflow-x:auto;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-x:contain;
+  }
+  .table-scroll-shell .table-head,
+  .table-scroll-shell .tag-results .tag-row{
+    width:max-content;
+    min-width:100%;
+  }
+  .table-scroll-shell .tag-results{
+    width:max-content;
+    min-width:100%;
+    max-width:none;
+  }
+}
