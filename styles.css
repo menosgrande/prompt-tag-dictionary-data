@@ -1030,11 +1030,14 @@ body:not(.admin-mode) .tag-edit-button{display:none!important}
   .table-scroll-shell .tag-results{max-height:65vh}
 }
 
-/* CSV-backed dictionary table */
+/* CSV-backed dictionary table: header and every row use identical fixed tracks. */
+.table-scroll-shell{
+  --tag-list-columns:54px 220px 180px 150px 150px 130px 180px 100px 80px 100px;
+}
 .table-scroll-shell .table-head,
 .table-scroll-shell .tag-results .tag-row{
   display:grid;
-  grid-template-columns:54px minmax(190px,1.2fr) minmax(170px,1fr) minmax(145px,.9fr) minmax(145px,.9fr) minmax(120px,.8fr) minmax(150px,1fr) 95px 70px 95px;
+  grid-template-columns:var(--tag-list-columns);
   gap:10px;
   width:max-content;
   min-width:100%;
@@ -1048,6 +1051,7 @@ body:not(.admin-mode) .tag-edit-button{display:none!important}
 .alias-cell{max-width:230px;white-space:normal}
 .load-error{color:var(--danger)}
 @media(max-width:720px){
+  .table-scroll-shell{--tag-list-columns:42px 180px 145px 120px 120px 105px 145px 85px 60px 85px}
   .search-row{flex-wrap:wrap}
   .searchbox{flex-basis:100%}
   .search-row select{flex:1;max-width:none}
@@ -1059,12 +1063,8 @@ body:not(.admin-mode) .tag-edit-button{display:none!important}
 /* CSV selection and prompt editor connection */
 .tag-select-cell{display:flex;align-items:center;justify-content:center}
 .tag-select{width:14px;height:14px;margin:0;accent-color:var(--accent)}
-.tag-results .tag-row{grid-template-columns:54px minmax(190px,1.2fr) minmax(170px,1fr) minmax(145px,.9fr) minmax(145px,.9fr) minmax(120px,.8fr) minmax(150px,1fr) 95px 70px 95px}
 .selected-dock{font-size:12px}
 .selected-dock-count{white-space:nowrap}
 .selected-dock-tags{flex:1}
 .selected-dock-chip{max-width:180px}
 .preview-add-row input{width:100%;min-width:0}
-@media(max-width:720px){
-  .tag-results .tag-row{grid-template-columns:42px minmax(150px,1.2fr) minmax(130px,1fr) minmax(110px,.9fr) minmax(110px,.9fr) minmax(100px,.8fr) minmax(130px,1fr) 85px 55px 80px}
-}
