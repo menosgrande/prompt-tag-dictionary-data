@@ -1178,8 +1178,6 @@ body:not(.admin-mode) .tag-edit-button{display:none!important}
 }
 .table-scroll-shell .table-head{
   display:grid;
-  grid-auto-flow:column;
-  grid-auto-columns:unset;
   align-items:stretch;
   white-space:nowrap;
 }
@@ -1204,7 +1202,6 @@ body:not(.admin-mode) .tag-edit-button{display:none!important}
   display:grid;
   width:100%;
   min-width:max-content;
-  grid-auto-flow:column;
   align-items:stretch;
 }
 .table-scroll-shell .tag-results .tag-row>*{
