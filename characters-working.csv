@@ -312,6 +312,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 1785,cheval grand (umamusume),シュヴァルグラン（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1788,chi-chi (dragon ball),チチ（ドラゴンボール）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1789,chi-hatan military uniform,知波単学園の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+1793,chibi usa,ちびうさ（美少女戦士セーラームーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1797,chigusa minori,千種みのり,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 1799,chihaya anon (BanG Dream! It's MyGO!!!!!),千早愛音,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1800,chihuri,チフリ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
@@ -410,6 +411,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 2433,diamond wa kudakenai,ダイヤモンドは砕けない,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2436,diarmuid ua duibhne (lancer) (fate),ディルムッド・オディナ（ランサー／Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2442,digimon,デジモン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+2443,digimon (creature),デジモン（種族）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2444,digimon adventure,デジモンアドベンチャー,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2450,dikko,Dikko(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 2452,diluc (genshin impact),ディルック（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -450,6 +452,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 2570,dragon quest iv,ドラゴンクエスト4,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2571,dragon quest v,ドラゴンクエストv,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2572,dragon quest xi,ドラクエ11,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+2576,draph,ドラフ（グランブルーファンタジーの種族）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2578,drawfag,匿名絵師（海外画像掲示板の集合タグ）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 2633,duel academy uniform (yu-gi-oh! gx),デュエル・アカデミアの制服（遊☆戯☆王GX）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 2641,dungeon and fighter,アラド戦記（Dungeon Fighter）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
