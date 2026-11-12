@@ -125,3 +125,21 @@ body{font-size:14px;line-height:1.65}
 .search-row>.compact-reset{width:30px;min-width:30px;height:30px;min-height:30px;padding:0;border-radius:6px;font-size:16px;font-weight:400;line-height:1}
 @media(max-width:1100px){.search-row>.compact-reset{grid-column:auto;justify-self:end}}
 @media(max-width:760px){.search-row>.compact-reset{grid-column:2;grid-row:4;width:28px;min-width:28px;height:28px;min-height:28px}}
+
+
+/* Reduce vertical space above the search area. */
+.topbar{height:48px}
+.app-shell{padding-top:0}
+.screen-nav{padding-top:0}
+.screen-tab{padding:7px 11px 8px}
+.compact-intro{padding:3px 2px 4px}
+.compact-intro .intro-main h1{font-size:16px;line-height:1.2}
+.search-row{margin-top:0;padding:6px;gap:6px}
+@media(max-width:760px){
+  .topbar{height:44px}
+  .screen-nav{padding-top:0}
+  .screen-tab{padding:6px 8px 7px;font-size:11px}
+  .compact-intro{padding:2px 2px 3px}
+  .compact-intro .intro-main h1{font-size:15px}
+  .search-row{padding:6px;gap:5px}
+}
