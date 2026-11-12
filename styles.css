@@ -117,3 +117,11 @@ body{font-size:14px;line-height:1.65}
   .tag-results .tag-row .tag-japanese{font-size:9px}
   .tag-results .tag-row .tag-category{font-size:8px}
 }
+
+
+/* Minimal utility headers and compact reset control. */
+.table-head-cell[aria-label="追加先"],
+.table-head-cell[aria-label="お気に入り"]{padding:0}
+.search-row>.compact-reset{width:30px;min-width:30px;height:30px;min-height:30px;padding:0;border-radius:6px;font-size:16px;font-weight:400;line-height:1}
+@media(max-width:1100px){.search-row>.compact-reset{grid-column:auto;justify-self:end}}
+@media(max-width:760px){.search-row>.compact-reset{grid-column:2;grid-row:4;width:28px;min-width:28px;height:28px;min-height:28px}}
