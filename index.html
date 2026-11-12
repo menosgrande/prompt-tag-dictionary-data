@@ -19,7 +19,9 @@
   <main class="app-shell">
     <nav class="screen-nav" aria-label="画面切り替え">
       <a class="screen-tab active" href="#dictionary-screen" aria-current="page"><span>01</span> タグ辞典</a>
-      <a class="screen-tab" href="#editor-screen"><span>02</span> プロンプト編集</a>
+      <a class="screen-tab" href="#works-screen"><span>02</span> 作品一覧</a>
+      <a class="screen-tab" href="#authors-screen"><span>03</span> 作者一覧</a>
+      <a class="screen-tab" href="#editor-screen"><span>04</span> プロンプト編集</a>
     </nav>
     <section id="dictionary-screen" class="app-screen">
       <section class="intro">
@@ -51,6 +53,16 @@
           <div class="pagination"><button class="button button-ghost" type="button" disabled>前へ</button><span>—</span><button class="button button-ghost" type="button" disabled>次へ</button></div>
         </section>
       </section>
+    </section>
+    <section id="works-screen" class="app-screen related-screen" hidden>
+      <section class="editor-intro"><p class="eyebrow">WORKS INDEX</p><h1>作品一覧</h1><p>作品タイトルを起点に、関連するキャラクターと作品固有の衣装・要素をまとめます。関連付けを確認できないタグは未紐付けとして残します。</p></section>
+      <section class="search-panel related-search"><label class="searchbox"><span class="search-icon" aria-hidden="true">⌕</span><input id="works-search" type="search" placeholder="作品名・キャラクター名で検索" autocomplete="off><kbd>検索</kbd></label><span class="related-count" id="works-count">—</span></section>
+      <section class="panel related-list-panel"><div id="works-list" class="related-list"><p class="empty-state">CSV読み込み後に作品一覧を表示します。</p></div></section>
+    </section>
+    <section id="authors-screen" class="app-screen related-screen" hidden>
+      <section class="editor-intro"><p class="eyebrow">CREATORS INDEX</p><h1>作者一覧</h1><p>作者・配信者タグをキャラクターとは分けて表示します。</p></section>
+      <section class="search-panel related-search"><label class="searchbox"><span class="search-icon" aria-hidden="true">⌕</span><input id="authors-search" type="search" placeholder="作者名・配信者名で検索" autocomplete="off"><kbd>検索</kbd></label><span class="related-count" id="authors-count">—</span></section>
+      <section class="panel related-list-panel"><div id="authors-list" class="related-list"><p class="empty-state">CSV読み込み後に作者一覧を表示します。</p></div></section>
     </section>
     <section id="editor-screen" class="app-screen editor-screen" hidden>
       <section class="editor-intro"><p class="eyebrow">PROMPT WORKSPACE</p><h1>プロンプト編集</h1><p>辞典から選んだタグを並べ、コピーまたはテキストファイルに保存します。</p></section>
