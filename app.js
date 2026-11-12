@@ -85,7 +85,11 @@
       if (/[（(](?:作者|漫画家|配信者)[）)]$/.test(row.ja)) return;
       const jaCandidates = findWorkCandidates(referenceTokens(row.ja), aliasMap);
       const enCandidates = findWorkCandidates(referenceTokens(row.tag), aliasMap);
-      const candidates = jaCandidates.length ? jaCandidates : enCandidates;
+      const franchiseTokens = [];
+      if (/pokemon/i.test(row.tag) || /ポケモン|ポケットモンスター/i.test(row.ja)) franchiseTokens.push("ポケモン");
+      if (/final fantasy|ff(?:11|14)/i.test(row.tag) || /ファイナルファンタジー|FF(?:11|14)/i.test(row.ja)) franchiseTokens.push("ファイナルファンタジー");
+      const franchiseCandidates = findWorkCandidates(franchiseTokens, aliasMap);
+      const candidates = jaCandidates.length ? jaCandidates : enCandidates.length ? enCandidates : franchiseCandidates;
       if (candidates.length === 1) {
         const group = candidates[0];
         (row.minor === "キャラクター" ? group.characters : group.elements).push(row);
@@ -111,20 +115,45 @@
     const key = keyOf(row);
     return '<div class="related-tag-row"><label><input type="checkbox" class="related-select" data-key="' + escapeHTML(key) + '"' + (state.selected.has(key) ? ' checked' : '') + '><span class="related-tag-copy"><strong>' + escapeHTML(row.ja || row.tag) + '</strong><small>' + escapeHTML(row.tag) + (groupName ? ' · ' + escapeHTML(groupName) : '') + '</small></span></label><span class="related-tag-type">' + escapeHTML(typeLabel || row.minor || "作品タイトル") + '</span></div>';
   }
+  function seriesNameForGroup(group) {
+    const tags = group.titles.map(row => String(row.tag || "").toLocaleLowerCase());
+    if (tags.some(tag => tag === "pokemon" || tag.startsWith("pokemon "))) return "ポケットモンスター";
+    if (tags.some(tag => tag === "final fantasy" || tag.startsWith("final fantasy ") || tag === "dissidia final fantasy")) return "ファイナルファンタジー";
+    return "";
+  }
   function renderWorkList() {
     const query = state.worksQuery.toLocaleLowerCase();
-    const groups = state.works.filter(group => !query || group.queryText.includes(query));
+    const groups = state.works.filter(group => {
+      const seriesName = seriesNameForGroup(group).toLocaleLowerCase();
+      return !query || group.queryText.includes(query) || seriesName.includes(query);
+    });
     const totalMembers = groups.reduce((sum,group) => sum + group.titles.length + group.characters.length + group.elements.length, 0);
     $("#works-count").textContent = groups.length.toLocaleString("ja-JP") + "作品 · " + totalMembers.toLocaleString("ja-JP") + "タグ";
-    const cards = groups.map(group => {
+
+    const renderGroupCard = (group, nested = false) => {
       const count = group.characters.length + group.elements.length;
       const contents = [
         group.titles.length ? '<div class="related-subsection"><h3>作品タイトル</h3>' + group.titles.map(row => relatedTagRow(row, group.name)).join("") + '</div>' : "",
         group.characters.length ? '<div class="related-subsection"><h3>キャラクター <span>' + group.characters.length + '</span></h3>' + group.characters.map(row => relatedTagRow(row, group.name)).join("") + '</div>' : "",
         group.elements.length ? '<div class="related-subsection"><h3>作品固有の衣装・要素 <span>' + group.elements.length + '</span></h3>' + group.elements.map(row => relatedTagRow(row, group.name)).join("") + '</div>' : ""
       ].join("");
-      return '<details class="work-card"><summary><span class="work-card-title">' + escapeHTML(group.name) + '</span><span class="work-card-meta">' + count + '件 · タイトル ' + group.titles.length + '件</span></summary><div class="work-card-body">' + contents + '</div></details>';
+      return '<details class="work-card' + (nested ? ' series-child' : '') + '"><summary><span class="work-card-title">' + escapeHTML(group.name) + '</span><span class="work-card-meta">' + count + '件 · タイトル ' + group.titles.length + '件</span></summary><div class="work-card-body">' + contents + '</div></details>';
+    };
+
+    const franchiseGroups = new Map();
+    const standaloneGroups = [];
+    groups.forEach(group => {
+      const seriesName = seriesNameForGroup(group);
+      if (!seriesName) { standaloneGroups.push(group); return; }
+      if (!franchiseGroups.has(seriesName)) franchiseGroups.set(seriesName, []);
+      franchiseGroups.get(seriesName).push(group);
+    });
+    const franchiseCards = [...franchiseGroups.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja")).map(([seriesName, members]) => {
+      const tagCount = members.reduce((sum,group) => sum + group.titles.length + group.characters.length + group.elements.length, 0);
+      return '<details class="work-card series-parent"><summary><span class="work-card-title">' + escapeHTML(seriesName) + '</span><span class="work-card-meta">' + members.length + '作品 · ' + tagCount + 'タグ</span></summary><div class="work-card-body series-body">' + members.map(group => renderGroupCard(group, true)).join("") + '</div></details>';
     }).join("");
+    const cards = franchiseCards + standaloneGroups.map(group => renderGroupCard(group)).join("");
+
     const ambiguous = !query && state.ambiguousRows.length ? '<details class="work-card review-card"><summary><span class="work-card-title">複数候補・要確認</span><span class="work-card-meta">' + state.ambiguousRows.length + '件</span></summary><div class="work-card-body"><p class="related-note">複数の作品タイトルに一致したため、自動では割り当てていません。</p>' + state.ambiguousRows.map(item => relatedTagRow(item.row, "候補: " + item.candidates.join(" / "))).join("") + '</div></details>' : "";
     const review = !query ? '<details class="work-card review-card"><summary><span class="work-card-title">未紐付け</span><span class="work-card-meta">' + state.reviewRows.length + '件</span></summary><div class="work-card-body"><p class="related-note">既存の作品タイトルと明確に照合できないタグです。作品名を推測して割り当てていません。</p>' + state.reviewRows.map(row => relatedTagRow(row)).join("") + '</div></details>' : "";
     $("#works-list").innerHTML = cards + ambiguous + review || '<p class="empty-state">検索条件に一致する作品はありません。</p>';
