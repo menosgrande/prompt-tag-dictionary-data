@@ -117,9 +117,16 @@
   }
   function specialSeriesName(group) {
     const tags = group.titles.map(row => String(row.tag || "").toLocaleLowerCase());
+    const text = [group.name, ...tags, ...group.titles.map(row => row.ja)].join(" ").toLocaleLowerCase();
     if (tags.some(tag => tag === "pokemon" || tag.startsWith("pokemon "))) return "ポケットモンスター";
     if (tags.some(tag => tag === "final fantasy" || tag.startsWith("final fantasy ") || tag === "dissidia final fantasy")) return "ファイナルファンタジー";
     if (tags.some(tag => tag === "fire emblem" || tag.startsWith("fire emblem ") || tag.startsWith("fire emblem:"))) return "ファイアーエムブレム";
+    if (tags.some(tag => tag === "dragon quest" || tag.startsWith("dragon quest "))) return "ドラゴンクエスト";
+    if (tags.some(tag => tag.startsWith("toaru ") || /とある/.test(text))) return "とあるシリーズ";
+    if (tags.some(tag => tag === "sword art online" || tag.startsWith("sword art online:") || /\\bsao\\b/i.test(tag))) return "ソードアート・オンライン";
+    if (tags.some(tag => tag === "the legend of zelda" || tag.startsWith("the legend of zelda:") || /ゼルダの伝説/.test(text))) return "ゼルダの伝説";
+    if (tags.some(tag => tag.startsWith("tales of "))) return "テイルズ オブ シリーズ";
+    if (/jojo|ジョジョ/.test(text)) return "ジョジョの奇妙な冒険";
     return "";
   }
   function genericSeriesGroups() {
