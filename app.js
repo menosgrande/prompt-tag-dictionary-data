@@ -79,7 +79,7 @@
     }).join("") : '<div class="empty-state">条件に一致するタグはありません。</div>';
     const pages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
     $(".count").textContent = rows.length.toLocaleString("ja-JP") + " 件";
-    $(".pagination").innerHTML = '<button class="button button-quiet" type="button" data-page="prev"' + (state.page === 0 ? " disabled" : "") + '>前へ</button><span>' + (state.page + 1) + " / " + pages + " ページ（" + rows.length.toLocaleString("ja-JP") + "件）</span><button class="button button-quiet" type="button" data-page="next"' + (state.page + 1 >= pages ? " disabled" : "") + '>次へ</button>';
+    $(".pagination").innerHTML = `<button class="button button-quiet" type="button" data-page="prev"${state.page === 0 ? " disabled" : ""}>前へ</button><span>${state.page + 1} / ${pages} ページ（${rows.length.toLocaleString("ja-JP")}件）</span><button class="button button-quiet" type="button" data-page="next"${state.page + 1 >= pages ? " disabled" : ""}>次へ</button>`;
   }
   function applyFilters() {
     state.filtered = state.all.filter(matches);
