@@ -4,13 +4,13 @@
     { url: "./dictionary-working.csv", source: "dictionary-working.csv", label: "一般" },
     { url: "./characters-working.csv", source: "characters-working.csv", label: "作品・人物" }
   ];
-  const PAGE_SIZE = 100;
+  const PAGE_SIZE = 200;
   const HEADERS = ["index","tag","ja","major","minor","detail","aliases_json","translation_status","ero_level","ero_review_status","classification_review_status","age_safety"];
   const FAVORITES_KEY = "ptd-favorites-v1";
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], columnWidths: [50,70,220,190,150,150,150,180,90,100]
+    selected: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], columnWidths: [48,42,220,190,150,150,150,180,90,100]
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -165,7 +165,7 @@
     return true;
   }
   const COLUMN_WIDTHS_KEY = "ptd-dictionary-column-widths-v3";
-  const COLUMN_MIN_WIDTHS = [42, 56, 100, 100, 90, 90, 90, 100, 70, 90];
+  const COLUMN_MIN_WIDTHS = [42, 34, 100, 100, 90, 90, 90, 100, 70, 90];
   const COLUMN_MAX_WIDTH = 520;
   function applyColumnWidths() {
     $(".table-scroll-shell").style.setProperty("--tag-list-columns", state.columnWidths.map(width => width + "px").join(" "));
@@ -176,7 +176,7 @@
     const context = canvas.getContext("2d");
     const fields = [
       row => "",
-      row => row.index,
+      row => "",
       row => row.tag,
       row => row.ja,
       row => row.major,
@@ -267,8 +267,8 @@
       const polarity = state.polarity.get(key) || "none";
       const polarityLabel = polarity === "positive" ? "＋" : polarity === "negative" ? "−" : "";
       return '<div class="tag-row" role="row" data-source="' + escapeHTML(row.source) + '">' +
-        '<span class="tag-select-cell"><button type="button" class="polarity-button polarity-' + polarity + '" data-polarity="' + escapeHTML(key) + '" aria-label="追加先：' + (polarity === "none" ? "未選択" : polarity === "positive" ? "ポジティブ" : "ネガティブ") + '" title="クリックで ポジティブ → ネガティブ → 未選択">' + polarityLabel + '</button><button type="button" class="favorite-button' + (state.favorites.has(key) ? ' is-favorite' : '') + '" data-favorite="' + escapeHTML(key) + '" aria-label="お気に入り切替" title="お気に入り">★</button></span>' +
-        '<span class="tag-category" title="' + escapeHTML(row.index) + '">' + escapeHTML(row.index) + '</span>' +
+        '<span class="tag-select-cell"><button type="button" class="polarity-button polarity-' + polarity + '" data-polarity="' + escapeHTML(key) + '" aria-label="追加先：' + (polarity === "none" ? "未選択" : polarity === "positive" ? "ポジティブ" : "ネガティブ") + '" title="クリックで ポジティブ → ネガティブ → 未選択">' + polarityLabel + '</button></span>' +
+        '<span class="favorite-cell"><button type="button" class="favorite-button' + (state.favorites.has(key) ? ' is-favorite' : '') + '" data-favorite="' + escapeHTML(key) + '" aria-label="お気に入り切替" title="お気に入り">★</button></span>' +
         '<span class="tag-english" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</span>' +
         '<span class="tag-japanese" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</span>' +
         '<span class="tag-category" title="' + escapeHTML(row.major) + '">' + escapeHTML(row.major || "—") + '</span>' +
