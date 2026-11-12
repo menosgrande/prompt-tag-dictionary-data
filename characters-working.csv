@@ -1002,6 +1002,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 4887,james (pokemon),コジロウ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4888,jane doe (zenless zone zero),ジェーン・ドゥ（ゼンレスゾーンゼロ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4893,japanese crested ibis (kemono friends),トキ（けものフレンズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+4895,japari bun,ジャパリまん（けものフレンズ）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 4898,javelin (azur lane),ジャベリン（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4900,jean (genshin impact),ジン（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4901,jean pierre polnareff (JoJo's Bizarre Adventure),ジャン・ピエール・ポルナレフ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1290,7 +1291,9 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 5345,laevatein (touhou),レーヴァテイン（東方）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5346,laffey (azur lane),ラフィー（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5347,laios touden (dungeon meshi),ライオス・トーデン（ダンジョン飯）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5349,lalafell,ララフェル（ファイナルファンタジーXIV）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5353,lana (pokemon),スイレン（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5355,lance of longinus (evangelion),ロンギヌスの槍（新世紀エヴァンゲリオン）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5364,lappland (arknights),ラップランド（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5378,last order (toaru majutsu no index),打ち止め（とある魔術の禁書目録）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5379,last origin,ラストオリジン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -1418,8 +1421,10 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,expression_level
 5828,mash kyrielight (dangerous beast) (cosplay),マシュ・キリエライト（デンジャラス・ビースト）のコスプレ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5829,mash kyrielight (demi-servant),マシュ・キリエライト（デミ・サーヴァント）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5837,massakasama,まっさかさま(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+5839,master sword,マスターソード（ゼルダの伝説）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5842,masukuza j,マスクザJ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5844,matara okina (touhou),摩多羅隠岐奈（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5846,materia,マテリア（ファイナルファンタジーVII）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5849,matikane tannhauser (umamusume),マチカネタンホイザ（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5850,matikanefukukitaru (umamusume),マチカネフクキタル（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5852,matoi ryuuko (kill la kill),纏流子（キルラキル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
