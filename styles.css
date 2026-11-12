@@ -11,3 +11,43 @@
 @media(max-width:1100px){.search-panel{grid-template-columns:1fr}.filter-controls{flex-wrap:wrap}.filter-controls select{flex:1;max-width:none}.workspace{grid-template-columns:190px minmax(0,1fr)}.category-tree{max-height:65vh}}
 @media(max-width:760px){.topbar{height:58px;padding:0 14px}.data-indicator{display:none}.app-shell{padding-right:10px;padding-left:10px}.screen-nav{padding-top:10px}.intro{align-items:flex-start;flex-direction:column;padding:25px 2px 18px;gap:15px}.intro h1{font-size:27px}.stats{width:100%}.stat-card{flex:1}.search-panel{padding:9px}.filter-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.filter-controls select{width:100%;max-width:none}.search-panel>.button{width:100%}.workspace{grid-template-columns:1fr;gap:10px}.categories-panel{position:static}.category-tree{max-height:260px;min-height:80px}.table-scroll-shell .tag-results{max-height:65vh}.table-scroll-shell .tag-results .tag-row{height:33px;min-height:33px}.table-scroll-shell .tag-results .tag-row>*{padding:2px 5px}.output-grid{grid-template-columns:1fr;padding:0 10px}.preview-add-row{padding-right:10px;padding-left:10px}.builder-controls{padding-right:10px;padding-left:10px}.selected-dock{right:8px;bottom:8px;left:8px;max-width:none;gap:8px;padding:8px}.selected-dock-tags{display:none}.selected-dock-actions .button{padding:6px 8px;font-size:9px}.footer{padding:14px 2px 0}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Readability pass */
+body{font-size:14px;line-height:1.65}
+.intro-copy{font-size:13px;line-height:1.75}
+.stat-card span{font-size:11px}
+.searchbox input{font-size:13px}
+.filter-controls select{font-size:11px}
+.panel-heading h2{font-size:14px}
+.category-major-button{font-size:12px;padding:9px}
+.category-minor{font-size:11px;padding:7px 9px}
+.category-footnote{font-size:10px;line-height:1.65}
+.table-head{min-height:48px}
+.table-head-cell{padding:7px 9px;font-size:11px}
+.table-head-cell code{font-size:9px}
+.tag-results .tag-row{height:42px;min-height:42px}
+.tag-results .tag-row>*{padding:5px 9px;font-size:10px}
+.tag-results .tag-row .tag-english{font-size:12px;font-weight:600}
+.tag-results .tag-row .tag-japanese{font-size:11px}
+.tag-results .tag-row .tag-category{font-size:10px}
+.tag-select{width:15px;height:15px}
+.pagination{font-size:10px}
+.pagination .button{font-size:11px}
+.empty-state{font-size:12px}
+.editor-intro>p:last-child{font-size:12px}
+.preview-add-row label,.check-row{font-size:11px}
+.preview-add-row input{font-size:12px}
+.preview-help{font-size:11px}
+.output-header label{font-size:12px}
+.output-card textarea{font-size:12px;line-height:1.8}
+.footer{font-size:10px}
+@media(max-width:760px){
+  .table-head{min-height:46px}
+  .table-head-cell{padding:6px 7px;font-size:10px}
+  .tag-results .tag-row{height:40px;min-height:40px}
+  .tag-results .tag-row>*{padding:4px 6px}
+  .tag-results .tag-row .tag-english{font-size:11px}
+  .tag-results .tag-row .tag-japanese{font-size:10px}
+  .tag-results .tag-row .tag-category{font-size:9px}
+}
