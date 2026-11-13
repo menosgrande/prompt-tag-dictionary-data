@@ -681,3 +681,34 @@ body{font-size:14px;line-height:1.65}
     height: 14px;
   }
 }
+
+
+/* 2026-11-13: final responsive dictionary layout and editable expression-level UI. */
+.app-shell{width:100%;max-width:none;margin:0;padding:0 clamp(8px,1.1vw,18px) 24px}
+.workspace{grid-template-columns:minmax(190px,220px) minmax(0,1fr);gap:8px}
+.category-minors{display:block}
+.table-scroll-shell,.table-horizontal-scroll{width:100%;min-width:0;max-width:100%;overflow-x:hidden;overflow-y:visible}
+.table-horizontal-scroll .table-head,.table-horizontal-scroll .tag-results .tag-row{width:100%;min-width:0;max-width:100%;grid-template-columns:30px 26px minmax(0,1.15fr) minmax(0,1fr) minmax(0,.78fr) 104px 26px}
+.table-head-cell:nth-child(3),.table-head-cell:nth-child(4){justify-content:flex-start}
+.table-head-cell:nth-child(6){font-size:15px;color:var(--accent-strong)}
+.expression-level-cell{display:flex!important;align-items:center;justify-content:center;gap:2px;padding:0 2px!important}
+.expression-level-button{display:inline-flex;align-items:center;justify-content:center;flex:0 0 17px;width:17px;height:16px;padding:0;border:1px solid transparent;border-radius:3px;background:transparent;color:var(--muted-2);font:9px var(--mono);line-height:1;cursor:pointer}
+.expression-level-button:hover{border-color:var(--line);color:var(--text)}
+.expression-level-button.is-active{border-color:var(--accent);background:rgba(120,170,150,.18);color:var(--accent-strong);font-weight:700}
+.category-mobile-toggle[aria-expanded="true"]+.workspace .categories-panel{display:block}
+@media(min-width:761px){.category-mobile-toggle{display:none}.categories-panel{display:block}.category-tree{max-height:calc(100vh - 180px)}}
+@media(max-width:760px){
+  .app-shell{padding-right:5px;padding-left:5px}
+  .workspace{grid-template-columns:minmax(0,1fr);gap:7px}
+  .categories-panel{display:none;position:static}
+  .category-mobile-toggle[aria-expanded="true"]+.workspace .categories-panel{display:block}
+  .category-tree{max-height:45vh;min-height:0}
+  .category-minors{display:none}
+  .category-major.is-expanded .category-minors{display:block}
+  .table-scroll-shell,.table-horizontal-scroll{overflow-x:hidden}
+  .table-horizontal-scroll .table-head,.table-horizontal-scroll .tag-results .tag-row{min-width:0;grid-template-columns:24px 22px minmax(0,1.12fr) minmax(0,.95fr) minmax(0,.68fr) 94px 22px}
+  .table-head-cell{padding:2px 3px;font-size:9px}
+  .table-head-cell:nth-child(6){font-size:14px}
+  .expression-level-cell{gap:0;padding:0!important}
+  .expression-level-button{flex-basis:17px;width:17px;height:15px;font-size:9px}
+}
