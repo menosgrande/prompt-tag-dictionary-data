@@ -379,6 +379,8 @@
         '<span class="favorite-cell"><button type="button" class="favorite-button' + (state.favorites.has(key) ? ' is-favorite' : '') + '" data-favorite="' + escapeHTML(key) + '" aria-label="お気に入り切替" title="お気に入り">★</button></span>' +
         '<button type="button" class="tag-english tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</button>' +
         '<button type="button" class="tag-japanese tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</button>' +
+        '<span class="tag-major" title="大分類">' + escapeHTML(row.major || "未分類") + '</span>' +
+        '<span class="tag-polarity-cell"><button type="button" class="polarity-button ' + (!selected || state.polarity.get(key) === "negative" ? 'polarity-negative' : 'polarity-positive') + '" data-row-polarity="' + escapeHTML(key) + '" aria-label="ネガティブとして追加または出力先を切替" title="' + (selected ? (state.polarity.get(key) === "negative" ? "ネガティブ（クリックでポジティブ）" : "ポジティブ（クリックでネガティブ）") : "ネガティブとして追加") + '">' + (selected ? (state.polarity.get(key) === "negative" ? "N" : "P") : "N") + '</button></span>' +
         '<span class="tag-detail-cell"><button type="button" class="tag-detail-button" data-detail="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + ' の詳細" title="タグの詳細情報">ⓘ</button></span>' +
       '</div>';
     }).join("") : '<div class="empty-state">条件に一致するタグはありません。</div>';
@@ -443,6 +445,29 @@
     const key = keyOf(row);
     state.selected.set(key, row);
     state.polarity.set(key, state.polarity.get(key) || "positive");
+    renderRows();
+    renderEditor();
+  }
+  function toggleRow(row) {
+    const key = keyOf(row);
+    if (state.selected.has(key)) {
+      state.selected.delete(key);
+      state.polarity.delete(key);
+    } else {
+      state.selected.set(key, row);
+      state.polarity.set(key, "positive");
+    }
+    renderRows();
+    renderEditor();
+  }
+  function toggleRowPolarity(row) {
+    const key = keyOf(row);
+    if (!state.selected.has(key)) {
+      state.selected.set(key, row);
+      state.polarity.set(key, "negative");
+    } else {
+      state.polarity.set(key, state.polarity.get(key) === "negative" ? "positive" : "negative");
+    }
     renderRows();
     renderEditor();
   }
@@ -540,10 +565,16 @@
         if (row) showTagDetail(row);
         return;
       }
+      const polarity = event.target.closest("[data-row-polarity]");
+      if (polarity) {
+        const row = state.all.find(item => keyOf(item) === polarity.dataset.rowPolarity);
+        if (row) toggleRowPolarity(row);
+        return;
+      }
       const add = event.target.closest("[data-add]");
       if (add) {
         const row = state.all.find(item => keyOf(item) === add.dataset.add);
-        if (row) addRow(row);
+        if (row) toggleRow(row);
       }
     });
     $(".screen-nav").addEventListener("click", event => {
@@ -620,7 +651,7 @@
     dock.className = "selected-dock"; dock.hidden = true;
     dock.innerHTML = '<div class="selected-dock-content"><strong class="selected-dock-count">0 件選択中</strong><div class="selected-dock-tags"></div></div><div class="selected-dock-actions"><button class="button button-primary" type="button" data-action="open-editor">プロンプト編集へ</button><button class="button button-quiet" type="button" data-action="clear-selection">全解除</button></div>';
     document.body.append(dock);
-    dock.querySelector('[data-action="clear-selection"]').addEventListener("click", () => { state.selected.clear(); renderRows(); renderEditor(); });
+    dock.querySelector('[data-action="clear-selection"]').addEventListener("click", () => { state.selected.clear(); state.polarity.clear(); renderRows(); renderEditor(); });
   }
   async function init() {
     setScreen("dictionary-screen");
