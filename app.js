@@ -380,7 +380,7 @@
         '<button type="button" class="tag-english tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</button>' +
         '<button type="button" class="tag-japanese tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</button>' +
         '<span class="tag-major" title="大分類">' + escapeHTML(row.major || "未分類") + '</span>' +
-        '<span class="tag-polarity-cell"><button type="button" class="polarity-button ' + (selected && state.polarity.get(key) === "negative" ? 'polarity-negative' : 'polarity-positive') + '" data-row-polarity="' + escapeHTML(key) + '" aria-label="ネガティブとして追加または出力先を切替" title="' + (selected ? (state.polarity.get(key) === "negative" ? "ネガティブ（クリックでポジティブ）" : "ポジティブ（クリックでネガティブ）") : "ネガティブとして追加") + '">' + (selected ? (state.polarity.get(key) === "negative" ? "N" : "P") : "−") + '</button></span>' +
+        '<span class="tag-polarity-cell"><button type="button" class="polarity-button ' + (!selected || state.polarity.get(key) === "negative" ? 'polarity-negative' : 'polarity-positive') + '" data-row-polarity="' + escapeHTML(key) + '" aria-label="ネガティブとして追加または出力先を切替" title="' + (selected ? (state.polarity.get(key) === "negative" ? "ネガティブ（クリックでポジティブ）" : "ポジティブ（クリックでネガティブ）") : "ネガティブとして追加") + '">' + (selected ? (state.polarity.get(key) === "negative" ? "N" : "P") : "N") + '</button></span>' +
         '<span class="tag-detail-cell"><button type="button" class="tag-detail-button" data-detail="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + ' の詳細" title="タグの詳細情報">ⓘ</button></span>' +
       '</div>';
     }).join("") : '<div class="empty-state">条件に一致するタグはありません。</div>';
