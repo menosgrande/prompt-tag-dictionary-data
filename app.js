@@ -16,6 +16,46 @@
   const compareMajorCategories = (a, b) =>
     (MAJOR_CATEGORY_RANK.get(a) ?? Number.MAX_SAFE_INTEGER) - (MAJOR_CATEGORY_RANK.get(b) ?? Number.MAX_SAFE_INTEGER) || a.localeCompare(b, "ja");
   const FAVORITES_KEY = "ptd-favorites-v1";
+  const CSV_CACHE_DB = "ptd-csv-cache-v1";
+  const CSV_CACHE_TTL = 5 * 60 * 1000;
+
+  function openCSVCache() {
+    return new Promise((resolve, reject) => {
+      if (!("indexedDB" in window)) return reject(new Error("IndexedDB is unavailable"));
+      const request = indexedDB.open(CSV_CACHE_DB, 1);
+      request.onupgradeneeded = () => {
+        if (!request.result.objectStoreNames.contains("files")) {
+          request.result.createObjectStore("files", { keyPath: "url" });
+        }
+      };
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+    });
+  }
+  async function readCSVCache(url) {
+    let db;
+    try {
+      db = await openCSVCache();
+      return await new Promise((resolve, reject) => {
+        const request = db.transaction("files", "readonly").objectStore("files").get(url);
+        request.onsuccess = () => resolve(request.result || null);
+        request.onerror = () => reject(request.error);
+      });
+    } finally { db?.close(); }
+  }
+  async function writeCSVCache(url, rows) {
+    let db;
+    try {
+      db = await openCSVCache();
+      await new Promise((resolve, reject) => {
+        const transaction = db.transaction("files", "readwrite");
+        transaction.objectStore("files").put({ url, savedAt: Date.now(), rows });
+        transaction.oncomplete = resolve;
+        transaction.onerror = () => reject(transaction.error);
+        transaction.onabort = () => reject(transaction.error);
+      });
+    } finally { db?.close(); }
+  }
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
@@ -31,15 +71,27 @@
     $(".tag-results").innerHTML = '<div class="empty-state' + (error ? ' load-error' : '') + '">' + escapeHTML(message) + '</div>';
   }
   async function loadCSV(file) {
-    const response = await fetch(file.url, { cache: "no-store" });
-    if (!response.ok) throw new Error(file.url + " の読み込みに失敗しました (HTTP " + response.status + ")");
-    const rows = window.DictionaryCSV.parseCSV(await response.text());
-    if (!rows.length) throw new Error(file.url + " にデータ行がありません。");
-    const actual = Object.keys(rows[0]);
-    if (actual.length !== HEADERS.length || HEADERS.some((header, i) => actual[i] !== header)) {
-      throw new Error(file.url + " のCSVヘッダーが想定する12列と一致しません。");
+    let cached = null;
+    try { cached = await readCSVCache(file.url); } catch {}
+    if (cached?.rows?.length && Date.now() - cached.savedAt < CSV_CACHE_TTL) {
+      return cached.rows;
     }
-    return rows.map(row => ({ ...row, source: file.source, sourceLabel: file.label }));
+    try {
+      const response = await fetch(file.url, { cache: "no-store" });
+      if (!response.ok) throw new Error(file.url + " の読み込みに失敗しました (HTTP " + response.status + ")");
+      const rows = window.DictionaryCSV.parseCSV(await response.text());
+      if (!rows.length) throw new Error(file.url + " にデータ行がありません。");
+      const actual = Object.keys(rows[0]);
+      if (actual.length !== HEADERS.length || HEADERS.some((header, i) => actual[i] !== header)) {
+        throw new Error(file.url + " のCSVヘッダーが想定する12列と一致しません。");
+      }
+      const prepared = rows.map(row => ({ ...row, source: file.source, sourceLabel: file.label }));
+      try { await writeCSVCache(file.url, prepared); } catch {}
+      return prepared;
+    } catch (error) {
+      if (cached?.rows?.length) return cached.rows;
+      throw error;
+    }
   }
   const normalizeWorkName = value => String(value || "").normalize("NFKD").replace(/\p{Diacritic}/gu, "").toLocaleLowerCase().replace(/[\s・:：!！?？"'’~〜\-‐‑–—_/／（）()\[\]「」『』.。、☆★]/g, "");
   function parseAliases(value) {
