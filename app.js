@@ -642,7 +642,7 @@
     dock.className = "selected-dock"; dock.hidden = true;
     dock.innerHTML = '<div class="selected-dock-content"><strong class="selected-dock-count">0 件選択中</strong><div class="selected-dock-tags"></div></div><div class="selected-dock-actions"><button class="button button-primary" type="button" data-action="open-editor">プロンプト編集へ</button><button class="button button-quiet" type="button" data-action="clear-selection">全解除</button></div>';
     document.body.append(dock);
-    dock.querySelector('[data-action="clear-selection"]').addEventListener("click", () => { state.selected.clear(); state.polarity.clear(); renderRows(); renderEditor(); });
+    dock.querySelector('[data-action="clear-selection"]').addEventListener("click", () => { state.selected.clear(); renderRows(); renderEditor(); });
   }
   async function init() {
     setScreen("dictionary-screen");
