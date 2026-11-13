@@ -415,3 +415,15 @@ body{font-size:14px;line-height:1.65}
   .table-scroll-shell .table-head-cell:nth-child(4),.table-scroll-shell .tag-results .tag-row>*:nth-child(4){display:block!important}
   .table-scroll-shell .table-head-cell:nth-child(5),.table-scroll-shell .tag-results .tag-row>*:nth-child(5){display:flex!important}
 }
+
+
+/* Keep selected tags inspectable from the mobile picker dock. */
+@media(max-width:760px){
+  .selected-dock{align-items:center}
+  .selected-dock-content{flex:1;min-width:0}
+  .selected-dock-tags{display:flex;flex:1;min-width:0;max-width:42vw;overflow-x:auto;scrollbar-width:none}
+  .selected-dock-tags::-webkit-scrollbar{display:none}
+  .selected-dock-chip{flex:0 0 auto;max-width:120px}
+  .selected-dock-actions{gap:4px}
+  .selected-dock-actions .button{white-space:nowrap}
+}
