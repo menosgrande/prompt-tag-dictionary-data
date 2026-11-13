@@ -308,7 +308,7 @@ body{font-size:14px;line-height:1.65}
   .selected-dock-actions{gap:4px}
   .selected-dock-actions .button{white-space:nowrap}
 }
-.table-scroll-shell,.table-horizontal-scroll{width:100%;min-width:0;max-width:100%;overflow-x:hidden;overflow-y:visible}
+.table-scroll-shell{width:100%;min-width:0;max-width:100%;overflow:visible}.table-horizontal-scroll{width:100%;min-width:0;max-width:100%;overflow-x:auto;overflow-y:visible;scrollbar-width:thin}
 .table-head,.tag-results .tag-row{display:grid;grid-template-columns:30px 26px minmax(0,1.15fr) minmax(0,1fr) minmax(0,.78fr) 104px 26px;width:100%;min-width:0;max-width:100%;box-sizing:border-box}
 .table-head{position:sticky;top:0;z-index:2;min-height:34px;align-items:center;border-bottom:1px solid var(--line);background:#202833;color:var(--muted)}
 .table-head-cell{display:flex;align-items:center;justify-content:center;min-width:0;padding:2px 3px;overflow:hidden;border-right:1px solid #2b3541;font-size:10px;font-weight:400;white-space:nowrap}
@@ -347,4 +347,25 @@ body{font-size:14px;line-height:1.65}
   .tag-results .tag-row>.tag-japanese{font-size:9px}
   .expression-level-cell{gap:0;padding:0!important}
   .expression-level-button{flex-basis:17px;width:17px;height:15px;font-size:9px}
+}
+
+
+/* User-adjustable dictionary column widths. */
+.table-horizontal-scroll{--tag-list-columns:30px 26px 210px 170px 130px 96px 26px;min-width:0}
+.table-head,.tag-results .tag-row{grid-template-columns:var(--tag-list-columns);width:max-content;min-width:100%}
+.table-head{width:max(100%,max-content)}
+.tag-results{width:max-content;min-width:100%}
+.table-head-cell{position:relative;padding-right:8px}
+.table-head-cell:nth-child(3),.table-head-cell:nth-child(4),.table-head-cell:nth-child(5){padding-right:8px}
+.column-resize{position:absolute;top:0;right:-3px;z-index:3;width:8px;height:100%;cursor:col-resize;touch-action:none}
+.column-resize::after{position:absolute;top:25%;right:3px;width:1px;height:50%;background:var(--muted-2);content:"";opacity:.35}
+.column-resize:hover::after,.column-resize:focus-visible::after{width:2px;background:var(--accent);opacity:1}
+.result-heading-actions{gap:8px}
+.column-width-reset{white-space:nowrap;font-size:10px}
+@media(max-width:760px){
+  .table-horizontal-scroll{--tag-list-columns:24px 22px 160px 140px 110px 94px 22px}
+  .table-head,.tag-results .tag-row{grid-template-columns:var(--tag-list-columns);width:max-content;min-width:100%}
+  .table-head{width:max(100%,max-content)}
+  .tag-results{width:max-content;min-width:100%}
+  .column-width-reset{font-size:9px}
 }
