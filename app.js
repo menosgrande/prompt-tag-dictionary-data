@@ -404,7 +404,7 @@
   function renderSelectedTagList() {
     const root = $("#selected-tag-list");
     if (!root) return;
-    const rows = [...state.selected.values()];
+    const rows = promptTags();
     if (!rows.length) {
       root.innerHTML = '<p class="empty-state">まだタグが選択されていません。</p>';
       return;
