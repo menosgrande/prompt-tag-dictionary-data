@@ -713,16 +713,16 @@ body{font-size:14px;line-height:1.65}
   .expression-level-button{flex-basis:17px;width:17px;height:15px;font-size:9px}
 }
 
-/* 2026-11-13: reduce excess inset between table dividers and text. */
+/* 2026-11-13: remove horizontal inset between table dividers and text. */
 .table-horizontal-scroll .table-head-cell:nth-child(3),
 .table-horizontal-scroll .table-head-cell:nth-child(4),
 .table-horizontal-scroll .table-head-cell:nth-child(5) {
-  padding-left: 1px !important;
-  padding-right: 1px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 .table-list-content .tag-results .tag-row > .tag-english,
 .table-list-content .tag-results .tag-row > .tag-japanese,
 .table-list-content .tag-results .tag-row > .tag-major {
-  padding-left: 1px !important;
-  padding-right: 1px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
