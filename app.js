@@ -281,7 +281,7 @@
     $(".table-scroll-shell").style.setProperty("--tag-list-columns", state.columnWidths.map(width => width + "px").join(" "));
   }
   function autoFitColumns(persist = true) {
-    const headers = $(".table-head-cell");
+    const headers = $$(".table-head-cell");
     const canvas = document.createElement("canvas");
     const context = canvas.getContext("2d");
     const fields = [
@@ -302,7 +302,7 @@
     });
     state.columnWidths = widths;
     applyColumnWidths();
-    $(".column-resize").forEach((handle, index) => handle.setAttribute("aria-valuenow", String(widths[index])));
+    $$(".column-resize").forEach((handle, index) => handle.setAttribute("aria-valuenow", String(widths[index])));
     if (persist) {
       try { localStorage.setItem(COLUMN_WIDTHS_KEY, JSON.stringify(widths)); } catch {}
     }
