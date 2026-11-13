@@ -267,7 +267,7 @@
     if (state.minor && row.minor !== state.minor) return false;
     if (state.favoritesOnly && !state.favorites.has(keyOf(row))) return false;
     if (state.query) {
-      const terms = state.query.toLocaleLowerCase().split(/\\s+/).filter(Boolean);
+      const terms = state.query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
       const fields = [row.tag,row.ja,row.aliases_json,row.major,row.minor,row.detail,row.workTitle];
       const haystack = fields.join(" ").toLocaleLowerCase();
       if (!terms.every(term => haystack.includes(term))) return false;
@@ -483,7 +483,6 @@
     catch { const area = document.createElement("textarea"); area.value = text; document.body.append(area); area.select(); document.execCommand("copy"); area.remove(); }
   }
   function bindControls() {
-    $(".column-fit-button").addEventListener("click", () => autoFitColumns(true));
     $("#works-search").addEventListener("input", event => { state.worksQuery = event.target.value.trim().toLocaleLowerCase(); renderWorkList(); });
     $("#authors-search").addEventListener("input", event => { state.authorsQuery = event.target.value.trim().toLocaleLowerCase(); renderAuthorList(); });
     $$(".related-list").forEach(root => root.addEventListener("change", event => {
