@@ -318,3 +318,112 @@ body{font-size:14px;line-height:1.65}
   .header-stats .stat-card span{display:none}
   .topbar-meta>.button{font-size:8px}
 }
+
+
+/* Prompt-builder UI: compact bilingual picker and direct add controls. */
+.table-scroll-shell{--tag-list-columns:42px minmax(180px,1.15fr) minmax(150px,1fr) 42px}
+.table-scroll-shell .table-head,.table-scroll-shell .tag-results .tag-row{width:100%;min-width:0}
+.table-head{display:grid;grid-template-columns:var(--tag-list-columns);align-items:center}
+.tag-results .tag-row{display:grid;grid-template-columns:var(--tag-list-columns);align-items:center}
+.table-head-cell{min-width:0}
+.tag-select-cell,.tag-detail-cell{display:flex;align-items:center;justify-content:center;padding:0!important}
+.tag-add-button,.tag-detail-button{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--muted);font-size:15px;line-height:1;cursor:pointer}
+.tag-add-button:hover,.tag-detail-button:hover{border-color:var(--accent);color:var(--accent-strong)}
+.tag-add-button.is-added{border-color:#52786c;background:#29443d;color:#b6e2ce}
+.tag-add-link{display:block;width:100%;min-width:0;padding:3px 8px;border:0;background:transparent;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer}
+.tag-add-link:hover{color:var(--accent-strong);background:rgba(120,170,150,.07)}
+.tag-row.is-selected{background:rgba(75,116,99,.12)}
+.tag-row .tag-english{font-size:12px;font-weight:600;color:var(--text)}
+.tag-row .tag-japanese{font-size:11px;color:#aab6c4}
+.table-head-cell:last-child{text-align:center}
+.search-row{grid-template-columns:minmax(220px,1fr) auto 34px;align-items:center}
+.search-row .searchbox{min-width:0}
+.search-row .favorite-filter{padding:0 8px}
+@media(max-width:760px){
+  .table-scroll-shell{--tag-list-columns:34px minmax(0,1fr) minmax(0,1fr) 34px;overflow:visible}
+  .table-scroll-shell .table-head,.table-scroll-shell .tag-results .tag-row{display:grid;grid-template-columns:var(--tag-list-columns);width:100%;min-width:0;max-width:100%}
+  .table-scroll-shell .table-head-cell:nth-child(2),.table-scroll-shell .tag-results .tag-row>*:nth-child(2){display:block!important}
+  .table-scroll-shell .table-head-cell:nth-child(3),.table-scroll-shell .tag-results .tag-row>*:nth-child(3){display:block!important}
+  .table-scroll-shell .table-head-cell:nth-child(4),.table-scroll-shell .tag-results .tag-row>*:nth-child(4){display:flex!important}
+  .table-scroll-shell .tag-results .tag-row{height:40px;min-height:40px}
+  .table-scroll-shell .tag-results .tag-row>*{min-width:0;padding:4px 6px}
+  .tag-add-button,.tag-detail-button{width:28px;height:28px}
+  .tag-row .tag-english{font-size:12px!important}
+  .tag-row .tag-japanese{font-size:11px!important}
+  .search-row{grid-template-columns:minmax(0,1fr) auto 32px}
+  .search-row .searchbox{grid-column:1/-1}
+  .search-row .favorite-filter{grid-column:1/3;justify-self:start;min-height:32px}
+  .search-row>.compact-reset{grid-column:3;grid-row:2}
+}
+
+/* Selected tags are editable in place before prompt export. */
+.selected-tag-list{display:flex;flex-direction:column;gap:5px;padding:10px 12px;border-bottom:1px solid var(--line-soft)}
+.selected-tag-item{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:10px;min-height:38px;padding:5px 8px;border:1px solid var(--line-soft);border-radius:7px;background:rgba(255,255,255,.015)}
+.selected-tag-copy{display:flex;align-items:baseline;gap:10px;min-width:0}
+.selected-tag-copy strong{overflow:hidden;color:var(--text);font-size:11px;font-weight:600;text-overflow:ellipsis;white-space:nowrap}
+.selected-tag-copy small{overflow:hidden;color:var(--muted);font:10px var(--mono);text-overflow:ellipsis;white-space:nowrap}
+.selected-tag-polarity{min-height:30px;padding:3px 7px;border:1px solid var(--line);border-radius:5px;background:var(--surface);color:var(--text);font-size:10px}
+.selected-tag-actions{display:flex;gap:3px}
+.selected-tag-actions button{width:28px;height:28px;border:1px solid var(--line);border-radius:5px;background:transparent;color:var(--muted);font-size:13px}
+.selected-tag-actions button:hover:not(:disabled){border-color:var(--accent);color:var(--accent-strong)}
+.selected-tag-actions button:disabled{opacity:.25}
+.selected-tag-list.is-sorted .selected-tag-actions button[data-move]{display:none}
+.selected-tag-list>.empty-state{padding:8px 2px;text-align:center}
+@media(max-width:600px){
+  .selected-tag-list{padding:8px}
+  .selected-tag-item{grid-template-columns:minmax(0,1fr) auto;gap:6px}
+  .selected-tag-copy{align-items:flex-start;flex-direction:column;gap:1px}
+  .selected-tag-copy strong,.selected-tag-copy small{max-width:55vw}
+  .selected-tag-polarity{grid-column:1;grid-row:2;justify-self:start;min-height:28px}
+  .selected-tag-actions{grid-column:2;grid-row:1/3}
+}
+
+/* Tag detail is deliberately secondary to the picker. */
+.tag-detail-dialog{width:min(620px,calc(100vw - 28px));max-height:min(82vh,760px);padding:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--text);box-shadow:0 24px 80px #0009}
+.tag-detail-dialog::backdrop{background:rgba(5,9,14,.72);backdrop-filter:blur(3px)}
+.tag-detail-header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--line-soft)}
+.tag-detail-header h2{margin:0;font-size:14px}
+.detail-close{width:30px;height:30px;border:0;border-radius:6px;background:transparent;color:var(--muted);font-size:22px}
+.tag-detail-content{max-height:calc(82vh - 56px);padding:16px;overflow:auto}
+.tag-detail-main{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.tag-detail-main strong{font:600 15px var(--mono);overflow-wrap:anywhere}
+.tag-detail-main span{color:var(--accent-strong);font-size:13px}
+.tag-detail-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px;margin:0}
+.tag-detail-fields>div{display:grid;grid-template-columns:82px minmax(0,1fr);gap:8px;padding:8px 0;border-top:1px solid var(--line-soft)}
+.tag-detail-fields dt{color:var(--muted);font-size:10px}
+.tag-detail-fields dd{margin:0;font-size:11px;overflow-wrap:anywhere}
+.detail-related{margin-top:16px}
+.detail-related h3{margin:0 0 8px;color:var(--muted);font-size:11px;font-weight:600}
+.detail-related>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.detail-related button{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:0;padding:7px 9px;border:1px solid var(--line-soft);border-radius:6px;background:transparent;color:var(--text);text-align:left;font-size:11px}
+.detail-related button:hover{border-color:var(--accent)}
+.detail-related small{max-width:100%;overflow:hidden;color:var(--muted);font:9px var(--mono);text-overflow:ellipsis;white-space:nowrap}
+@media(max-width:520px){.tag-detail-fields{grid-template-columns:1fr}.detail-related>div{grid-template-columns:1fr}}
+
+
+/* Five-column picker: add, favorite, English, Japanese, detail. */
+.table-scroll-shell{--tag-list-columns:38px 32px minmax(180px,1.15fr) minmax(150px,1fr) 38px}
+.table-scroll-shell .table-head,.table-scroll-shell .tag-results .tag-row{grid-template-columns:var(--tag-list-columns);width:100%;min-width:0}
+.favorite-cell{display:flex!important;align-items:center;justify-content:center;padding:0!important}
+.favorite-button{width:24px;height:24px;border:0;background:transparent;color:#596575;font-size:13px}
+.favorite-button.is-favorite{color:#e5c36c}
+@media(max-width:760px){
+  .table-scroll-shell{--tag-list-columns:32px 28px minmax(0,1fr) minmax(0,1fr) 32px}
+  .table-scroll-shell .table-head-cell:nth-child(1),.table-scroll-shell .tag-results .tag-row>*:nth-child(1){display:flex!important}
+  .table-scroll-shell .table-head-cell:nth-child(2),.table-scroll-shell .tag-results .tag-row>*:nth-child(2){display:flex!important}
+  .table-scroll-shell .table-head-cell:nth-child(3),.table-scroll-shell .tag-results .tag-row>*:nth-child(3){display:block!important}
+  .table-scroll-shell .table-head-cell:nth-child(4),.table-scroll-shell .tag-results .tag-row>*:nth-child(4){display:block!important}
+  .table-scroll-shell .table-head-cell:nth-child(5),.table-scroll-shell .tag-results .tag-row>*:nth-child(5){display:flex!important}
+}
+
+
+/* Keep selected tags inspectable from the mobile picker dock. */
+@media(max-width:760px){
+  .selected-dock{align-items:center}
+  .selected-dock-content{flex:1;min-width:0}
+  .selected-dock-tags{display:flex;flex:1;min-width:0;max-width:42vw;overflow-x:auto;scrollbar-width:none}
+  .selected-dock-tags::-webkit-scrollbar{display:none}
+  .selected-dock-chip{flex:0 0 auto;max-width:120px}
+  .selected-dock-actions{gap:4px}
+  .selected-dock-actions .button{white-space:nowrap}
+}
