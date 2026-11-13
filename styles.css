@@ -497,3 +497,22 @@ body{font-size:14px;line-height:1.65}
   .tag-results .tag-row > .tag-english { font-size: 12px; }
   .tag-results .tag-row > .tag-japanese { font-size: 11px; }
 }
+
+
+/* Prompt picker repair: show major category and polarity controls in the tag list. */
+.table-scroll-shell { --tag-list-columns: 34px 30px minmax(120px,1.05fr) minmax(100px,1fr) minmax(110px,.9fr) 34px 34px; }
+.table-scroll-shell .table-head,
+.table-scroll-shell .tag-results .tag-row { grid-template-columns: var(--tag-list-columns); }
+.tag-results .tag-row > .tag-major {
+  display:flex;align-items:center;min-width:0;overflow:hidden;
+  color:var(--muted);font-size:10px;text-overflow:ellipsis;white-space:nowrap;
+}
+.tag-polarity-cell { display:flex;align-items:center;justify-content:center;min-width:0;padding:0 !important; }
+.tag-polarity-cell .polarity-button { width:24px;height:24px;font-size:10px;font-weight:700;cursor:pointer; }
+@media(max-width:760px) {
+  .table-scroll-shell { --tag-list-columns: 28px 26px minmax(95px,1fr) minmax(85px,1fr) minmax(86px,.9fr) 30px 30px; }
+  .table-scroll-shell .table-head,
+  .table-scroll-shell .tag-results .tag-row { grid-template-columns: var(--tag-list-columns); }
+  .tag-results .tag-row > .tag-major { font-size:9px;padding:3px 4px; }
+  .tag-polarity-cell .polarity-button { width:22px;height:22px; }
+}
