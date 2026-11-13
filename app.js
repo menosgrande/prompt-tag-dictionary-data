@@ -60,7 +60,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], columnWidths: [48,42,220,190,150,150,150,180,90,100]
+    selected: new Map(), expressionLevels: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], columnWidths: [30, 26, 210, 170, 130, 96, 26], columnWidthMode: "desktop"
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -340,45 +340,40 @@
     }
     return true;
   }
-  const COLUMN_WIDTHS_KEY = "ptd-dictionary-column-widths-v4";
-  const COLUMN_MIN_WIDTHS = [42, 34, 100, 100, 90, 90, 90, 100, 70, 90];
-  const COLUMN_MAX_WIDTH = 520;
-  function applyColumnWidths() {
-    $(".table-scroll-shell").style.setProperty("--tag-list-columns", state.columnWidths.map(width => width + "px").join(" "));
+  const COLUMN_WIDTH_KEYS = {
+    desktop: "ptd-dictionary-column-widths-v5-desktop",
+    mobile: "ptd-dictionary-column-widths-v5-mobile"
+  };
+  const COLUMN_DEFAULTS = {
+    desktop: [30, 26, 210, 170, 130, 96, 26],
+    mobile: [24, 22, 160, 140, 110, 94, 22]
+  };
+  const COLUMN_MIN_WIDTHS = [24, 22, 90, 90, 72, 90, 22];
+  const COLUMN_MAX_WIDTHS = [64, 56, 520, 520, 360, 140, 56];
+  function currentColumnMode() {
+    return window.matchMedia("(max-width: 760px)").matches ? "mobile" : "desktop";
   }
-  function autoFitColumns(persist = true) {
-    const headers = $$(".table-head-cell");
-    const canvas = document.createElement("canvas");
-    const context = canvas.getContext("2d");
-    const fields = [
-      row => "",
-      row => "",
-      row => row.tag,
-      row => row.ja,
-      row => row.major,
-      row => row.minor,
-      row => row.detail,
-      row => parseAliases(row.aliases_json).join("、"),
-      row => row.ero_level,
-      row => row.age_safety
-    ];
-    const fonts = ["10px 'DM Sans', 'Noto Sans JP', sans-serif","9px 'DM Mono', monospace","10px 'DM Sans', sans-serif","9px 'Noto Sans JP', sans-serif","8px 'Noto Sans JP', sans-serif","8px 'Noto Sans JP', sans-serif","8px 'Noto Sans JP', sans-serif","8px 'Noto Sans JP', sans-serif","8px 'DM Sans', sans-serif","8px 'DM Sans', sans-serif"];
-    const widths = headers.map((header, index) => {
-      if (index === 0) return 54;
-      context.font = fonts[index];
-      let widest = context.measureText(header.textContent.replace(/\\s+/g, " ").trim()).width;
-      for (const row of state.all) {
-        const value = String(fields[index](row) ?? "—") || "—";
-        widest = Math.max(widest, context.measureText(value).width);
+  function applyColumnWidths() {
+    const scroller = $(".table-horizontal-scroll");
+    if (!scroller) return;
+    scroller.style.setProperty("--tag-list-columns", state.columnWidths.map(width => width + "px").join(" "));
+  }
+  function saveColumnWidths() {
+    try { localStorage.setItem(COLUMN_WIDTH_KEYS[state.columnWidthMode], JSON.stringify(state.columnWidths)); } catch {}
+  }
+  function loadColumnWidths(mode = currentColumnMode()) {
+    state.columnWidthMode = mode;
+    const defaults = COLUMN_DEFAULTS[mode];
+    let widths = defaults;
+    try {
+      const saved = JSON.parse(localStorage.getItem(COLUMN_WIDTH_KEYS[mode]) || "null");
+      if (Array.isArray(saved) && saved.length === defaults.length && saved.every(Number.isFinite)) {
+        widths = saved.map((width, index) => Math.max(COLUMN_MIN_WIDTHS[index], Math.min(COLUMN_MAX_WIDTHS[index], Math.round(width))));
       }
-      return Math.max(COLUMN_MIN_WIDTHS[index], Math.min(COLUMN_MAX_WIDTH, Math.ceil(widest + 20)));
-    });
-    state.columnWidths = widths;
+    } catch {}
+    state.columnWidths = [...widths];
     applyColumnWidths();
-    $$(".column-resize").forEach((handle, index) => handle.setAttribute("aria-valuenow", String(widths[index])));
-    if (persist) {
-      try { localStorage.setItem(COLUMN_WIDTHS_KEY, JSON.stringify(widths)); } catch {}
-    }
+    $$(".column-resize").forEach((handle, index) => handle.setAttribute("aria-valuenow", String(state.columnWidths[index])));
   }
   function setupColumnResizers() {
     const headers = $$(".table-head-cell");
@@ -388,16 +383,15 @@
       handle.tabIndex = 0;
       handle.setAttribute("role", "separator");
       handle.setAttribute("aria-orientation", "vertical");
-      handle.setAttribute("aria-label", headers[index].textContent.trim() + "列の幅を変更");
+      handle.setAttribute("aria-label", (cell.textContent.trim() || ["状態","お気に入り","タグ（英語）","日本語訳","大分類","表現レベル","詳細"][index]) + "列の幅を変更");
       handle.setAttribute("aria-valuemin", String(COLUMN_MIN_WIDTHS[index]));
-      handle.setAttribute("aria-valuemax", String(COLUMN_MAX_WIDTH));
-      handle.setAttribute("aria-valuenow", String(state.columnWidths[index]));
+      handle.setAttribute("aria-valuemax", String(COLUMN_MAX_WIDTHS[index]));
       cell.append(handle);
       const resizeTo = width => {
-        state.columnWidths[index] = Math.max(COLUMN_MIN_WIDTHS[index], Math.min(COLUMN_MAX_WIDTH, Math.round(width)));
+        state.columnWidths[index] = Math.max(COLUMN_MIN_WIDTHS[index], Math.min(COLUMN_MAX_WIDTHS[index], Math.round(width)));
         handle.setAttribute("aria-valuenow", String(state.columnWidths[index]));
         applyColumnWidths();
-        try { localStorage.setItem(COLUMN_WIDTHS_KEY, JSON.stringify(state.columnWidths)); } catch {}
+        saveColumnWidths();
       };
       handle.addEventListener("pointerdown", event => {
         if (event.button !== 0) return;
@@ -421,16 +415,14 @@
         resizeTo(state.columnWidths[index] + (event.key === "ArrowRight" ? 10 : -10));
       });
     });
-    let hasSavedWidths = false;
-    try {
-      const saved = JSON.parse(localStorage.getItem(COLUMN_WIDTHS_KEY) || "null");
-      if (Array.isArray(saved) && saved.length === headers.length && saved.every(Number.isFinite)) {
-        state.columnWidths = saved.map((width, index) => Math.max(COLUMN_MIN_WIDTHS[index], Math.min(COLUMN_MAX_WIDTH, Math.round(width))));
-        hasSavedWidths = true;
-      }
-    } catch {}
-    if (hasSavedWidths) applyColumnWidths();
-    else autoFitColumns(false);
+    loadColumnWidths();
+    window.matchMedia("(max-width: 760px)").addEventListener("change", () => loadColumnWidths());
+    $(".column-width-reset")?.addEventListener("click", () => {
+      state.columnWidths = [...COLUMN_DEFAULTS[state.columnWidthMode]];
+      applyColumnWidths();
+      saveColumnWidths();
+      $$(".column-resize").forEach((handle, index) => handle.setAttribute("aria-valuenow", String(state.columnWidths[index])));
+    });
   }
   function renderRows() {
     const rows = state.filtered;
@@ -753,6 +745,7 @@
     setScreen("dictionary-screen");
     setMessage("CSVデータを読み込んでいます…");
     createDock();
+    setupColumnResizers();
     try {
       const loaded = await Promise.all(DATA_FILES.map(loadCSV));
       state.all = loaded.flat();
