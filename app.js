@@ -255,10 +255,12 @@
   function renderCategories() {
     const root = $(".category-tree");
     const majors = categoryCounts(state.all, "major");
-    root.innerHTML = '<button class="category-major-button' + (!state.major ? ' active' : '') + '" data-major="">すべての分類 <span class="count">' + state.all.length.toLocaleString("ja-JP") + '</span></button>' +
+    const favoriteCount = state.all.filter(row => state.favorites.has(keyOf(row))).length;
+    root.innerHTML = '<button class="category-major-button' + (state.favoritesOnly ? ' active' : '') + '" data-favorites="true">お気に入り <span class="count">' + favoriteCount.toLocaleString("ja-JP") + '</span></button>' +
+      '<button class="category-major-button' + (!state.major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="">すべての分類 <span class="count">' + state.all.length.toLocaleString("ja-JP") + '</span></button>' +
       majors.map(([major,count]) => {
         const minors = categoryCounts(state.all.filter(row => row.major === major), "minor");
-        return '<div class="category-major"><button class="category-major-button' + (state.major === major && !state.minor ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + count.toLocaleString("ja-JP") + '</span></button>' +
+        return '<div class="category-major"><button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + count.toLocaleString("ja-JP") + '</span></button>' +
           (state.major === major ? '<div class="category-minors">' + minors.map(([minor,n]) => '<button class="category-minor' + (state.minor === minor ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button>').join("") + '</div>' : '') + '</div>';
       }).join("");
   }
@@ -527,7 +529,7 @@
     const search = $(".search-row .searchbox input");
     search.addEventListener("input", () => { state.query = search.value.trim(); applyFilters(); });
 
-    $("#favorites-only").addEventListener("change", event => { state.favoritesOnly = event.target.checked; applyFilters(); });
+    $("#favorites-only").addEventListener("change", event => { state.favoritesOnly = event.target.checked; state.major = ""; state.minor = ""; renderCategories(); applyFilters(); });
     try { state.favorites = new Set(JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]")); } catch { state.favorites = new Set(); }
     const categoryToggle = $(".category-mobile-toggle");
     const setCategoryPanelOpen = open => {
@@ -538,9 +540,18 @@
       setCategoryPanelOpen(categoryToggle.getAttribute("aria-expanded") !== "true");
     });
     $(".category-tree").addEventListener("click", event => {
+      const favoriteCategory = event.target.closest("[data-favorites]");
+      if (favoriteCategory) {
+        state.favoritesOnly = !state.favoritesOnly;
+        state.major = ""; state.minor = "";
+        $("#favorites-only").checked = state.favoritesOnly;
+        renderCategories(); applyFilters(); setCategoryPanelOpen(false);
+        return;
+      }
       const button = event.target.closest("[data-major]");
       if (!button) return;
       state.major = button.dataset.major || ""; state.minor = button.dataset.minor || "";
+      state.favoritesOnly = false; $("#favorites-only").checked = false;
       renderCategories(); applyFilters(); setCategoryPanelOpen(false);
     });
     $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; renderCategories(); applyFilters(); setCategoryPanelOpen(false); });
@@ -562,6 +573,7 @@
         const key = favorite.dataset.favorite;
         if (state.favorites.has(key)) state.favorites.delete(key); else state.favorites.add(key);
         try { localStorage.setItem(FAVORITES_KEY, JSON.stringify([...state.favorites])); } catch {}
+        renderCategories();
         if (state.favoritesOnly) applyFilters(); else renderRows();
         return;
       }
