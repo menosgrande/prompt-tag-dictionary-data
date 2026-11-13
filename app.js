@@ -265,12 +265,10 @@
   function matches(row) {
     if (state.major && row.major !== state.major) return false;
     if (state.minor && row.minor !== state.minor) return false;
-    if (state.classification === "classified" && !row.major && !row.minor) return false;
-    if (state.classification === "unclassified" && (row.major || row.minor)) return false;
     if (state.favoritesOnly && !state.favorites.has(keyOf(row))) return false;
     if (state.query) {
       const terms = state.query.toLocaleLowerCase().split(/\\s+/).filter(Boolean);
-      const fields = state.searchTarget === "tag" ? [row.tag] : state.searchTarget === "ja" ? [row.ja] : state.searchTarget === "alias" ? [row.aliases_json] : [row.tag,row.ja,row.aliases_json,row.major,row.minor,row.detail,row.workTitle];
+      const fields = [row.tag,row.ja,row.aliases_json,row.major,row.minor,row.detail,row.workTitle];
       const haystack = fields.join(" ").toLocaleLowerCase();
       if (!terms.every(term => haystack.includes(term))) return false;
     }
@@ -375,20 +373,12 @@
     const pageRows = rows.slice(state.page * PAGE_SIZE, (state.page + 1) * PAGE_SIZE);
     $(".tag-results").innerHTML = pageRows.length ? pageRows.map(row => {
       const key = keyOf(row);
-      let aliases = parseAliases(row.aliases_json).join("、");
-      const polarity = state.polarity.get(key) || "none";
-      const polarityLabel = polarity === "positive" ? "＋" : polarity === "negative" ? "−" : "";
-      return '<div class="tag-row" role="row" data-source="' + escapeHTML(row.source) + '">' +
-        '<span class="tag-select-cell"><button type="button" class="polarity-button polarity-' + polarity + '" data-polarity="' + escapeHTML(key) + '" aria-label="追加先：' + (polarity === "none" ? "未選択" : polarity === "positive" ? "ポジティブ" : "ネガティブ") + '" title="クリックで ポジティブ → ネガティブ → 未選択">' + polarityLabel + '</button></span>' +
-        '<span class="favorite-cell"><button type="button" class="favorite-button' + (state.favorites.has(key) ? ' is-favorite' : '') + '" data-favorite="' + escapeHTML(key) + '" aria-label="お気に入り切替" title="お気に入り">★</button></span>' +
-        '<span class="tag-english" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</span>' +
-        '<span class="tag-japanese" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</span>' +
-        '<span class="tag-category" title="' + escapeHTML(row.major) + '">' + escapeHTML(row.major || "—") + '</span>' +
-        '<span class="tag-category" title="' + escapeHTML(row.minor) + '">' + escapeHTML(row.minor || "—") + '</span>' +
-        '<span class="tag-category" title="' + escapeHTML(row.detail) + '">' + escapeHTML(row.detail || "—") + '</span>' +
-        '<span class="tag-category alias-cell" title="' + escapeHTML(row.aliases_json) + '">' + escapeHTML(aliases || "—") + '</span>' +
-        '<span class="tag-category" title="' + escapeHTML(row.ero_level) + '">' + escapeHTML(row.ero_level || "—") + '</span>' +
-        '<span class="tag-category" title="' + escapeHTML(row.age_safety) + '">' + escapeHTML(row.age_safety || "—") + '</span>' +
+      const selected = state.selected.has(key);
+      return '<div class="tag-row' + (selected ? ' is-selected' : '') + '" role="row" data-key="' + escapeHTML(key) + '">' +
+        '<span class="tag-select-cell"><button type="button" class="tag-add-button' + (selected ? ' is-added' : '') + '" data-add="' + escapeHTML(key) + '" aria-label="' + (selected ? '選択済み' : 'プロンプトに追加') + '" title="' + (selected ? '選択済み' : 'プロンプトに追加') + '">' + (selected ? '✓' : '＋') + '</button></span>' +
+        '<button type="button" class="tag-english tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</button>' +
+        '<button type="button" class="tag-japanese tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</button>' +
+        '<span class="tag-detail-cell"><button type="button" class="tag-detail-button" data-detail="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + ' の詳細" title="タグの詳細情報">ⓘ</button></span>' +
       '</div>';
     }).join("") : '<div class="empty-state">条件に一致するタグはありません。</div>';
     const start = Math.max(1, state.page - 2), end = Math.min(pages, Math.max(5, state.page + 3));
@@ -407,8 +397,26 @@
   }
   function promptTags() {
     const rows = [...state.selected.values()];
-    if ($(".builder-controls input")?.checked) rows.sort((a,b) => (a.major || "").localeCompare(b.major || "", "ja") || Number(a.index) - Number(b.index));
+    if ($(".builder-controls input")?.checked) rows.sort((a,b) => compareMajorCategories(a.major || "", b.major || "") || Number(a.index) - Number(b.index));
     return rows;
+  }
+  function renderSelectedTagList() {
+    const root = $("#selected-tag-list");
+    if (!root) return;
+    const rows = [...state.selected.values()];
+    if (!rows.length) {
+      root.innerHTML = '<p class="empty-state">まだタグが選択されていません。</p>';
+      return;
+    }
+    const ordered = $(".builder-controls input")?.checked;
+    root.innerHTML = rows.map((row,index) => {
+      const key = keyOf(row), polarity = state.polarity.get(key) || "positive";
+      return '<div class="selected-tag-item" data-key="' + escapeHTML(key) + '">' +
+        '<div class="selected-tag-copy"><strong>' + escapeHTML(row.ja || row.tag) + '</strong><small>' + escapeHTML(row.tag) + '</small></div>' +
+        '<select class="selected-tag-polarity" data-polarity-select="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + ' の出力先"><option value="positive"' + (polarity === "positive" ? ' selected' : '') + '>ポジティブ</option><option value="negative"' + (polarity === "negative" ? ' selected' : '') + '>ネガティブ</option></select>' +
+        '<div class="selected-tag-actions"><button type="button" data-move="-1" data-key="' + escapeHTML(key) + '" aria-label="上へ移動"' + (ordered || index === 0 ? ' disabled' : '') + '>↑</button><button type="button" data-move="1" data-key="' + escapeHTML(key) + '" aria-label="下へ移動"' + (ordered || index === rows.length - 1 ? ' disabled' : '') + '>↓</button><button type="button" data-remove-selected="' + escapeHTML(key) + '" aria-label="削除">×</button></div></div>';
+    }).join("");
+    root.classList.toggle("is-sorted", Boolean(ordered));
   }
   function renderEditor() {
     const rows = promptTags();
@@ -416,7 +424,8 @@
     const negativeRows = rows.filter(row => state.polarity.get(keyOf(row)) === "negative");
     const positive = $("#positive-output"), negative = $("#negative-output");
     if (positive && document.activeElement !== positive) positive.value = positiveRows.map(row => row.tag).join(", ");
-    if (negative && document.activeElement !== negative && negativeRows.length) negative.value = negativeRows.map(row => row.tag).join(", ");
+    if (negative && document.activeElement !== negative) negative.value = negativeRows.map(row => row.tag).join(", ");
+    renderSelectedTagList();
     const count = state.selected.size;
     $$(".stats strong")[1].textContent = String(count);
     const countLabel = $(".selected-dock-count");
@@ -428,6 +437,25 @@
     $('[data-action="save-positive"]').disabled = !positive?.value;
     $('[data-action="copy-negative"]').disabled = !negative?.value;
     $('[data-action="save-negative"]').disabled = !negative?.value;
+  }
+  function addRow(row) {
+    const key = keyOf(row);
+    state.selected.set(key, row);
+    state.polarity.set(key, state.polarity.get(key) || "positive");
+    renderRows();
+    renderEditor();
+  }
+  function showTagDetail(row) {
+    const dialog = $("#tag-detail-dialog");
+    if (!dialog || !row) return;
+    const aliases = parseAliases(row.aliases_json);
+    const related = state.all.filter(item => item !== row && row.major && item.major === row.major && (row.minor ? item.minor === row.minor : true)).slice(0,8);
+    const fields = [["大分類",row.major],["中分類",row.minor],["小分類",row.detail],["別名",aliases.join("、")],["説明",row.description || ""],["表現レベル",row.ero_level],["年齢判定",row.age_safety],["翻訳状態",statusLabel(row.translation_status)],["分類確認",statusLabel(row.classification_review_status)]].filter(([,value]) => value);
+    $(".tag-detail-content").innerHTML =
+      '<div class="tag-detail-main"><strong>' + escapeHTML(row.tag) + '</strong><span>' + escapeHTML(row.ja) + '</span></div>' +
+      '<dl class="tag-detail-fields">' + fields.map(([label,value]) => '<div><dt>' + escapeHTML(label) + '</dt><dd>' + escapeHTML(value) + '</dd></div>').join("") + '</dl>' +
+      (related.length ? '<section class="detail-related"><h3>同じ分類のタグ</h3><div>' + related.map(item => '<button type="button" data-add="' + escapeHTML(keyOf(item)) + '">' + escapeHTML(item.ja || item.tag) + '<small>' + escapeHTML(item.tag) + '</small></button>').join("") + '</div></section>' : '');
+    if (typeof dialog.showModal === "function") dialog.showModal(); else dialog.setAttribute("open","");
   }
   function setScreen(id) {
     state.activeScreen = id;
@@ -477,10 +505,6 @@
     $("#search-target").addEventListener("change", event => { state.searchTarget = event.target.value; applyFilters(); });
     $("#favorites-only").addEventListener("change", event => { state.favoritesOnly = event.target.checked; applyFilters(); });
     try { state.favorites = new Set(JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]")); } catch { state.favorites = new Set(); }
-    const classificationSelect = $("#classification-filter");
-    const sortSelect = $("#sort-filter");
-    classificationSelect.addEventListener("change", () => { state.classification = classificationSelect.selectedIndex === 1 ? "classified" : classificationSelect.selectedIndex === 2 ? "unclassified" : "all"; applyFilters(); });
-    sortSelect.addEventListener("change", () => { state.sort = sortSelect.selectedIndex === 1 ? "tag" : sortSelect.selectedIndex === 2 ? "ja" : "index"; applyFilters(); });
     const categoryToggle = $(".category-mobile-toggle");
     const setCategoryPanelOpen = open => {
       categoryToggle.setAttribute("aria-expanded", String(open));
@@ -497,8 +521,8 @@
     });
     $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; renderCategories(); applyFilters(); setCategoryPanelOpen(false); });
     $(".search-row > .button").addEventListener("click", () => {
-      search.value = ""; state.query = ""; state.major = ""; state.minor = ""; state.classification = "all"; state.sort = "index"; state.searchTarget = "all"; state.favoritesOnly = false; $("#search-target").value = "all"; $("#favorites-only").checked = false;
-      classificationSelect.selectedIndex = 0; sortSelect.selectedIndex = 0; renderCategories(); applyFilters();
+      search.value = ""; state.query = ""; state.major = ""; state.minor = ""; state.favoritesOnly = false; $("#favorites-only").checked = false;
+      renderCategories(); applyFilters();
     });
     $(".pagination").addEventListener("click", event => {
       const button = event.target.closest("[data-page]");
@@ -509,22 +533,17 @@
       renderRows();
     });
     $(".tag-results").addEventListener("click", event => {
-      const polarityButton = event.target.closest("[data-polarity]");
-      const favoriteButton = event.target.closest("[data-favorite]");
-      if (!polarityButton && !favoriteButton) return;
-      const key = (polarityButton || favoriteButton).dataset.polarity || (polarityButton || favoriteButton).dataset.favorite;
-      const row = state.all.find(item => keyOf(item) === key);
-      if (favoriteButton) {
-        if (state.favorites.has(key)) state.favorites.delete(key); else state.favorites.add(key);
-        try { localStorage.setItem(FAVORITES_KEY, JSON.stringify([...state.favorites])); } catch {}
-        if (state.favoritesOnly) applyFilters(); else renderRows();
+      const detail = event.target.closest("[data-detail]");
+      if (detail) {
+        const row = state.all.find(item => keyOf(item) === detail.dataset.detail);
+        if (row) showTagDetail(row);
         return;
       }
-      const current = state.polarity.get(key) || "none";
-      const next = current === "none" ? "positive" : current === "positive" ? "negative" : "none";
-      if (next === "none") { state.polarity.delete(key); state.selected.delete(key); }
-      else { state.polarity.set(key, next); state.selected.set(key, row); }
-      renderRows(); renderEditor();
+      const add = event.target.closest("[data-add]");
+      if (add) {
+        const row = state.all.find(item => keyOf(item) === add.dataset.add);
+        if (row) addRow(row);
+      }
     });
     $(".screen-nav").addEventListener("click", event => {
       const tab = event.target.closest(".screen-tab");
@@ -539,6 +558,36 @@
     $(".selected-dock-actions [data-action='open-editor']").addEventListener("click", () => setScreen("editor-screen"));
     $(".editor-builder-panel .text-button").addEventListener("click", () => {
       state.selected.clear(); state.polarity.clear(); renderRows(); renderEditor();
+    });
+    $("#selected-tag-list").addEventListener("click", event => {
+      const remove = event.target.closest("[data-remove-selected]");
+      if (remove) {
+        state.selected.delete(remove.dataset.removeSelected); state.polarity.delete(remove.dataset.removeSelected);
+        renderRows(); renderEditor(); return;
+      }
+      const move = event.target.closest("[data-move]");
+      if (!move || move.disabled || $(".builder-controls input").checked) return;
+      const entries = [...state.selected.entries()];
+      const index = entries.findIndex(([key]) => key === move.dataset.key);
+      const target = index + Number(move.dataset.move);
+      if (index < 0 || target < 0 || target >= entries.length) return;
+      [entries[index],entries[target]] = [entries[target],entries[index]];
+      state.selected = new Map(entries); renderEditor();
+    });
+    $("#selected-tag-list").addEventListener("change", event => {
+      const select = event.target.closest("[data-polarity-select]");
+      if (!select) return;
+      state.polarity.set(select.dataset.polaritySelect, select.value); renderEditor();
+    });
+    $("#tag-detail-dialog").addEventListener("click", event => {
+      if (event.target === $("#tag-detail-dialog") || event.target.closest(".detail-close")) {
+        $("#tag-detail-dialog").close(); return;
+      }
+      const add = event.target.closest("[data-add]");
+      if (add) {
+        const row = state.all.find(item => keyOf(item) === add.dataset.add);
+        if (row) addRow(row);
+      }
     });
     const addInput = $(".preview-add-row input");
     const addButton = $(".preview-add-row button");
@@ -587,7 +636,7 @@
         if (group) row.workTitle = group.name;
       });
       $(".stats strong").textContent = state.all.length.toLocaleString("ja-JP");
-      renderCategories(); setupColumnResizers(); bindControls(); applyFilters(); renderEditor();
+      renderCategories(); bindControls(); applyFilters(); renderEditor();
     } catch (error) {
       console.error(error);
       setMessage("CSVの読み込みに失敗しました。GitHub Pages上で開いているか、CSVファイルの配置と12列ヘッダーを確認してください。詳細: " + error.message, true);
