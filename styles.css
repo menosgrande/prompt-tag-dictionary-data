@@ -427,3 +427,36 @@ body{font-size:14px;line-height:1.65}
   .selected-dock-actions{gap:4px}
   .selected-dock-actions .button{white-space:nowrap}
 }
+
+
+/* Action-column alignment hotfix: keep all five DOM cells in fixed grid slots. */
+.table-scroll-shell .table-head,
+.table-scroll-shell .tag-results .tag-row {
+  display: grid;
+  grid-template-columns: 38px 34px minmax(0, 1.15fr) minmax(0, 1fr) 38px;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+.table-scroll-shell .tag-results .tag-row > .tag-select-cell { grid-column: 1; display: flex !important; align-items: center; justify-content: center; padding: 0 !important; }
+.table-scroll-shell .tag-results .tag-row > .favorite-cell { grid-column: 2; display: flex !important; align-items: center; justify-content: center; padding: 0 !important; }
+.table-scroll-shell .tag-results .tag-row > .tag-english { grid-column: 3; display: block !important; min-width: 0; }
+.table-scroll-shell .tag-results .tag-row > .tag-japanese { grid-column: 4; display: block !important; min-width: 0; }
+.table-scroll-shell .tag-results .tag-row > .tag-detail-cell { grid-column: 5; display: flex !important; align-items: center; justify-content: center; padding: 0 !important; }
+.tag-add-button, .tag-detail-button { flex: 0 0 26px; width: 26px; height: 26px; padding: 0; }
+.favorite-button { flex: 0 0 24px; width: 24px; height: 24px; padding: 0; }
+@media (max-width: 760px) {
+  .table-scroll-shell .table-head,
+  .table-scroll-shell .tag-results .tag-row {
+    grid-template-columns: 32px 30px minmax(0, 1fr) minmax(0, 1fr) 32px;
+    width: 100%; min-width: 0; max-width: 100%;
+  }
+  .table-scroll-shell .table-head-cell:nth-child(1),
+  .table-scroll-shell .table-head-cell:nth-child(2),
+  .table-scroll-shell .table-head-cell:nth-child(5) { display: flex !important; }
+  .table-scroll-shell .tag-results .tag-row > .tag-select-cell,
+  .table-scroll-shell .tag-results .tag-row > .favorite-cell,
+  .table-scroll-shell .tag-results .tag-row > .tag-detail-cell { display: flex !important; }
+  .tag-add-button, .tag-detail-button { flex-basis: 24px; width: 24px; height: 24px; }
+  .favorite-button { flex-basis: 22px; width: 22px; height: 22px; }
+}
