@@ -31,7 +31,7 @@
     $(".tag-results").innerHTML = '<div class="empty-state' + (error ? ' load-error' : '') + '">' + escapeHTML(message) + '</div>';
   }
   async function loadCSV(file) {
-    const response = await fetch(file.url, { cache: "no-store" });
+    const response = await fetch(file.url);
     if (!response.ok) throw new Error(file.url + " の読み込みに失敗しました (HTTP " + response.status + ")");
     const rows = window.DictionaryCSV.parseCSV(await response.text());
     if (!rows.length) throw new Error(file.url + " にデータ行がありません。");
