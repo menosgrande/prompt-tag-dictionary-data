@@ -40,11 +40,13 @@
         </aside>
         <section class="panel results-panel" aria-label="タグ一覧">
           <div class="panel-heading result-heading"><div><h2>タグ一覧</h2></div><div class="result-heading-actions"><span class="count">—</span></div></div>
-          <div class="table-scroll-shell" role="region" aria-label="タグ一覧" tabindex="0">
-            <div class="table-head" role="row">
-              <div class="table-head-cell" aria-label="追加"></div><div class="table-head-cell" aria-label="お気に入り"></div><div class="table-head-cell">タグ（英語）</div><div class="table-head-cell">日本語訳</div><div class="table-head-cell">大分類</div><div class="table-head-cell" aria-label="出力先"></div><div class="table-head-cell" aria-label="詳細"></div>
+          <div class="table-scroll-shell">
+            <div class="table-horizontal-scroll" role="region" aria-label="タグ一覧（横スクロール可能）" tabindex="0">
+              <div class="table-head" role="row">
+                <div class="table-head-cell" aria-label="プロンプト状態"></div><div class="table-head-cell" aria-label="お気に入り"></div><div class="table-head-cell">タグ（英語）</div><div class="table-head-cell">日本語訳</div><div class="table-head-cell">大分類</div><div class="table-head-cell" aria-label="詳細"></div>
+              </div>
+              <div class="tag-results"><div class="empty-state">CSVデータを読み込んでいます。</div></div>
             </div>
-            <div class="tag-results"><div class="empty-state">CSVデータを読み込んでいます。</div></div>
           </div>
           <div class="pagination"><span>—</span></div>
         </section>
@@ -65,7 +67,7 @@
       <section class="panel builder-panel editor-builder-panel">
         <div class="panel-heading"><div><h2>選択したタグ</h2></div><button class="text-button" type="button">全解除</button></div>
         <div class="preview-add-row"><label>タグを直接追加<input type="search" placeholder="英語タグまたは日本語訳を完全一致で入力" autocomplete="off"></label><button class="button button-secondary" type="button" disabled>＋ 追加</button></div>
-        <p class="preview-help">タグ一覧から追加した表現をここで整理できます。順序変更・ポジティブ／ネガティブの切替も可能です。</p>
+        <p class="preview-help">タグ一覧で指定した出力状態を確認し、順序を整理できます。</p>
         <div id="selected-tag-list" class="selected-tag-list" aria-live="polite"><p class="empty-state">まだタグが選択されていません。</p></div>
         <div class="builder-controls"><label class="check-row"><input type="checkbox" checked> 分類順に並べて出力</label></div>
         <div class="output-grid">
