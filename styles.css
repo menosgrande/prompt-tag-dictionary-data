@@ -611,3 +611,73 @@ body{font-size:14px;line-height:1.65}
     grid-template-columns: 28px 26px minmax(0,1.05fr) minmax(0,1fr) minmax(0,.9fr) 30px;
   }
 }
+
+/* Ultra-compact dictionary rows: keep the tag list dense on desktop and mobile. */
+.table-list-content .tag-results .tag-row {
+  height: 21px !important;
+  min-height: 21px !important;
+}
+.table-list-content .tag-results .tag-row > * {
+  padding: 0 4px !important;
+  line-height: 1.1;
+  font-size: 9px;
+}
+.table-list-content .tag-results .tag-row > .tag-english {
+  font-size: 10px;
+  line-height: 1.1;
+}
+.table-list-content .tag-results .tag-row > .tag-japanese {
+  font-size: 9px;
+  line-height: 1.1;
+}
+.table-list-content .tag-results .tag-row > .tag-major {
+  padding: 0 3px !important;
+  font-size: 8px;
+  line-height: 1.1;
+}
+.table-list-content .tag-results .tag-row > .tag-state-cell,
+.table-list-content .tag-results .tag-row > .favorite-cell,
+.table-list-content .tag-results .tag-row > .tag-detail-cell {
+  padding: 0 !important;
+}
+.table-list-content .tag-state-button {
+  flex-basis: 15px;
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  font-size: 10px;
+}
+.table-list-content .favorite-button {
+  flex-basis: 15px;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  line-height: 1;
+}
+.table-list-content .tag-detail-button {
+  flex-basis: 15px;
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  font-size: 10px;
+  line-height: 1;
+}
+@media (max-width: 760px) {
+  .table-list-content .tag-results .tag-row {
+    height: 21px !important;
+    min-height: 21px !important;
+  }
+  .table-list-content .tag-results .tag-row > .tag-english {
+    font-size: 9px;
+  }
+  .table-list-content .tag-results .tag-row > .tag-japanese {
+    font-size: 8px;
+  }
+  .table-list-content .tag-state-button,
+  .table-list-content .favorite-button,
+  .table-list-content .tag-detail-button {
+    flex-basis: 14px;
+    width: 14px;
+    height: 14px;
+  }
+}
