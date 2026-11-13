@@ -219,38 +219,55 @@ body{font-size:14px;line-height:1.65}
 }
 
 
-/* Mobile dictionary: keep only the three primary data columns visible. */
+/* Mobile dictionary: keep all columns in one horizontally scrollable grid. */
 @media(max-width:760px){
   .table-scroll-shell{
-    --tag-list-columns:28px 24px minmax(112px,1.2fr) minmax(88px,1fr) minmax(88px,.95fr) !important;
-    width:100%;min-width:0;max-width:100%;
-    overflow-x:auto;overflow-y:hidden;
+    --tag-list-columns:36px 32px 150px 130px 120px 120px 120px 140px 75px 85px !important;
+    width:100%;
+    min-width:0;
+    max-width:100%;
+    overflow-x:auto;
+    overflow-y:hidden;
     -webkit-overflow-scrolling:touch;
+    overscroll-behavior-x:contain;
   }
   .table-scroll-shell .table-head,
   .table-scroll-shell .tag-results .tag-row{
-    display:grid;width:100%;min-width:340px;max-width:100%;
+    display:grid;
     grid-template-columns:var(--tag-list-columns);
+    column-gap:0;
+    width:max-content;
+    min-width:100%;
+    max-width:none;
     box-sizing:border-box;
   }
-  .table-scroll-shell .table-head-cell:nth-child(n+6),
-  .table-scroll-shell .tag-results .tag-row>*:nth-child(n+6){
-    display:none !important;
+  .table-scroll-shell .tag-results{
+    display:block;
+    width:max-content;
+    min-width:100%;
+    max-width:none;
   }
   .table-scroll-shell .table-head-cell,
   .table-scroll-shell .tag-results .tag-row>*{
-    min-width:0;padding-left:3px;padding-right:3px;
-    overflow:hidden;text-overflow:ellipsis;
+    min-width:0;
+    padding-left:5px;
+    padding-right:5px;
+    overflow:hidden;
+    text-overflow:ellipsis;
   }
-  .table-scroll-shell .tag-results .tag-row{height:28px;min-height:28px;}
+  .table-scroll-shell .tag-results .tag-row{height:28px;min-height:28px}
   .table-scroll-shell .tag-results .tag-row .tag-english,
   .table-scroll-shell .tag-results .tag-row .tag-japanese,
   .table-scroll-shell .tag-results .tag-row .tag-category{
-    min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+    min-width:0;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
   }
   .table-scroll-shell .tag-results .tag-row .tag-select-cell,
   .table-scroll-shell .tag-results .tag-row .favorite-cell{
-    justify-content:center;padding:0;
+    justify-content:center;
+    padding:0;
   }
   .table-scroll-shell .tag-results .tag-row .polarity-button{
     width:18px;height:18px;padding:0;font-size:10px;
