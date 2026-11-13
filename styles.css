@@ -516,3 +516,197 @@ body{font-size:14px;line-height:1.65}
   .tag-results .tag-row > .tag-major { font-size:9px;padding:3px 4px; }
   .tag-polarity-cell .polarity-button { width:22px;height:22px; }
 }
+
+
+/* Three-column dictionary picker: English tag, Japanese translation, classification/actions. */
+.table-scroll-shell {
+  --tag-list-columns: minmax(260px, 1.35fr) minmax(150px, .85fr) minmax(250px, 1fr);
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.table-scroll-shell .table-head,
+.table-scroll-shell .tag-results .tag-row {
+  display: grid;
+  grid-template-columns: var(--tag-list-columns);
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+.table-head-cell {
+  justify-content: flex-start;
+  padding: 6px 10px;
+}
+.table-head-cell:last-child { justify-content: flex-start; }
+.tag-results .tag-row {
+  display: grid;
+  min-height: 36px;
+  height: auto;
+  align-items: stretch;
+}
+.tag-results .tag-row > * {
+  min-width: 0;
+  border-right: 1px solid var(--line-soft);
+  box-sizing: border-box;
+}
+.tag-primary-cell {
+  display: grid;
+  grid-template-columns: 30px 28px minmax(0,1fr);
+  align-items: center;
+  gap: 2px;
+  min-width: 0;
+  padding: 3px 7px;
+}
+.tag-primary-cell .tag-select-cell,
+.tag-primary-cell .favorite-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 0;
+}
+.tag-primary-cell .tag-add-button {
+  width: 25px;
+  height: 25px;
+  flex-basis: 25px;
+  border: 0;
+  border-radius: 5px;
+  color: var(--muted);
+  font-size: 17px;
+}
+.tag-primary-cell .tag-add-button.is-added {
+  border: 1px solid #52786c;
+  background: #29443d;
+  color: #b6e2ce;
+}
+.tag-primary-cell .favorite-button {
+  width: 25px;
+  height: 25px;
+  flex-basis: 25px;
+  color: #687484;
+  font-size: 17px;
+}
+.tag-primary-cell .favorite-button.is-favorite { color: #e5c36c; }
+.tag-results .tag-row .tag-english {
+  display: block;
+  align-self: center;
+  min-width: 0;
+  padding: 4px 5px;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 650;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.tag-results .tag-row .tag-english:hover,
+.tag-results .tag-row .tag-japanese:hover {
+  color: var(--accent-strong);
+  background: rgba(120,170,150,.07);
+}
+.tag-results .tag-row .tag-japanese {
+  display: block;
+  align-self: center;
+  width: 100%;
+  min-width: 0;
+  padding: 4px 9px;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  color: #aab6c4;
+  font-size: 11px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.tag-meta-cell {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 34px 34px;
+  align-items: center;
+  gap: 2px;
+  min-width: 0;
+  padding: 3px 7px;
+  border-right: 0 !important;
+}
+.tag-meta-cell .tag-major {
+  display: block;
+  min-width: 0;
+  padding: 0 5px;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tag-meta-cell .tag-polarity-cell,
+.tag-meta-cell .tag-detail-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 0;
+}
+.tag-meta-cell .polarity-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: transparent;
+  color: transparent;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+}
+.tag-meta-cell .polarity-button:hover { border-color: var(--line); background: var(--surface-hover); }
+.tag-meta-cell .polarity-button.polarity-positive {
+  border-color: #52786c;
+  background: #29443d;
+  color: #b6e2ce;
+}
+.tag-meta-cell .polarity-button.polarity-negative {
+  border-color: #81525b;
+  background: #482d32;
+  color: #efb7bd;
+}
+.tag-meta-cell .tag-detail-cell { justify-content: flex-end; }
+.tag-meta-cell .tag-detail-button {
+  width: 25px;
+  height: 25px;
+  flex-basis: 25px;
+  border: 0;
+  border-radius: 50%;
+  color: var(--accent-strong);
+  font-size: 17px;
+  font-weight: 600;
+}
+.tag-meta-cell .tag-detail-button:hover {
+  background: var(--surface-hover);
+  border: 0;
+  color: var(--text);
+}
+@media (max-width: 760px) {
+  .table-scroll-shell { --tag-list-columns: minmax(180px, 1.2fr) minmax(110px, .8fr) minmax(160px, 1fr); }
+  .table-head { min-height: 38px; }
+  .table-head-cell { padding: 4px 7px; font-size: 10px; }
+  .tag-results .tag-row { min-height: 40px; height: auto; }
+  .tag-primary-cell { grid-template-columns: 27px 25px minmax(0,1fr); gap: 1px; padding: 3px 4px; }
+  .tag-primary-cell .tag-add-button,
+  .tag-primary-cell .favorite-button { width: 23px; height: 23px; flex-basis: 23px; }
+  .tag-results .tag-row .tag-english { padding: 4px 3px; font-size: 11px; }
+  .tag-results .tag-row .tag-japanese { padding: 4px 6px; font-size: 10px; }
+  .tag-meta-cell { grid-template-columns: minmax(0,1fr) 29px 29px; gap: 0; padding: 3px 3px; }
+  .tag-meta-cell .tag-major { padding: 0 3px; font-size: 9px; }
+  .tag-meta-cell .polarity-button,
+  .tag-meta-cell .tag-detail-button { width: 23px; height: 23px; }
+}
