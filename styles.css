@@ -578,3 +578,36 @@ body{font-size:14px;line-height:1.65}
   .tag-results .tag-row > .tag-state-cell { padding: 0 !important; }
   .tag-state-button { width: 24px; height: 24px; flex-basis: 24px; }
 }
+
+/* Responsive tag list: fit normally, scroll only below the usable minimum width. */
+.table-scroll-shell {
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
+}
+.table-horizontal-scroll {
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y;
+  scrollbar-width: thin;
+}
+.table-horizontal-scroll .table-head,
+.table-horizontal-scroll .tag-results .tag-row {
+  width: 100%;
+  min-width: 560px;
+  grid-template-columns: 30px 28px minmax(0,1.05fr) minmax(0,1fr) minmax(0,.9fr) 32px;
+}
+.table-horizontal-scroll .table-head-cell:nth-child(3),
+.table-horizontal-scroll .table-head-cell:nth-child(4) {
+  justify-content: flex-start;
+}
+@media (max-width: 760px) {
+  .table-horizontal-scroll .table-head,
+  .table-horizontal-scroll .tag-results .tag-row {
+    min-width: 420px;
+    grid-template-columns: 28px 26px minmax(0,1.05fr) minmax(0,1fr) minmax(0,.9fr) 30px;
+  }
+}
