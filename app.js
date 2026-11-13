@@ -376,6 +376,7 @@
       const selected = state.selected.has(key);
       return '<div class="tag-row' + (selected ? ' is-selected' : '') + '" role="row" data-key="' + escapeHTML(key) + '">' +
         '<span class="tag-select-cell"><button type="button" class="tag-add-button' + (selected ? ' is-added' : '') + '" data-add="' + escapeHTML(key) + '" aria-label="' + (selected ? '選択済み' : 'プロンプトに追加') + '" title="' + (selected ? '選択済み' : 'プロンプトに追加') + '">' + (selected ? '✓' : '＋') + '</button></span>' +
+        '<span class="favorite-cell"><button type="button" class="favorite-button' + (state.favorites.has(key) ? ' is-favorite' : '') + '" data-favorite="' + escapeHTML(key) + '" aria-label="お気に入り切替" title="お気に入り">★</button></span>' +
         '<button type="button" class="tag-english tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</button>' +
         '<button type="button" class="tag-japanese tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</button>' +
         '<span class="tag-detail-cell"><button type="button" class="tag-detail-button" data-detail="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + ' の詳細" title="タグの詳細情報">ⓘ</button></span>' +
@@ -469,13 +470,6 @@
     if (id === "authors-screen") renderAuthorList();
     if (id === "editor-screen") renderEditor();
   }
-  function addRow(row) {
-    const key = keyOf(row);
-    state.selected.set(key, row);
-    const checkbox = $('.tag-select[data-key="' + CSS.escape(key) + '"]');
-    if (checkbox) checkbox.checked = true;
-    renderEditor();
-  }
   function downloadText(filename, text) {
     const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
     const url = URL.createObjectURL(blob);
@@ -502,7 +496,7 @@
     }));
     const search = $(".search-row .searchbox input");
     search.addEventListener("input", () => { state.query = search.value.trim(); applyFilters(); });
-    $("#search-target").addEventListener("change", event => { state.searchTarget = event.target.value; applyFilters(); });
+
     $("#favorites-only").addEventListener("change", event => { state.favoritesOnly = event.target.checked; applyFilters(); });
     try { state.favorites = new Set(JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]")); } catch { state.favorites = new Set(); }
     const categoryToggle = $(".category-mobile-toggle");
@@ -533,6 +527,14 @@
       renderRows();
     });
     $(".tag-results").addEventListener("click", event => {
+      const favorite = event.target.closest("[data-favorite]");
+      if (favorite) {
+        const key = favorite.dataset.favorite;
+        if (state.favorites.has(key)) state.favorites.delete(key); else state.favorites.add(key);
+        try { localStorage.setItem(FAVORITES_KEY, JSON.stringify([...state.favorites])); } catch {}
+        if (state.favoritesOnly) applyFilters(); else renderRows();
+        return;
+      }
       const detail = event.target.closest("[data-detail]");
       if (detail) {
         const row = state.all.find(item => keyOf(item) === detail.dataset.detail);
