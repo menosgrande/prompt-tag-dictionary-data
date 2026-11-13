@@ -16,6 +16,7 @@
   const compareMajorCategories = (a, b) =>
     (MAJOR_CATEGORY_RANK.get(a) ?? Number.MAX_SAFE_INTEGER) - (MAJOR_CATEGORY_RANK.get(b) ?? Number.MAX_SAFE_INTEGER) || a.localeCompare(b, "ja");
   const FAVORITES_KEY = "ptd-favorites-v1";
+  const EXPRESSION_LEVELS_KEY = "ptd-expression-levels-v1";
   const CSV_CACHE_DB = "ptd-csv-cache-v1";
   const CSV_CACHE_TTL = 5 * 60 * 1000;
 
@@ -59,12 +60,23 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], columnWidths: [48,42,220,190,150,150,150,180,90,100]
+    selected: new Map(), expressionLevels: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], columnWidths: [48,42,220,190,150,150,150,180,90,100]
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
   const escapeHTML = value => String(value ?? "").replace(/[&<>"']/g, ch => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[ch]));
   const keyOf = row => [row.source, row.index, row.tag].join("::");
+  function baseExpressionLevel(row) {
+    const value = String(row.ero_level ?? "").trim();
+    return /^[0-4]$/.test(value) ? Number(value) : null;
+  }
+  function expressionLevelFor(row) {
+    const key = keyOf(row);
+    return state.expressionLevels.has(key) ? state.expressionLevels.get(key) : baseExpressionLevel(row);
+  }
+  function saveExpressionLevels() {
+    try { localStorage.setItem(EXPRESSION_LEVELS_KEY, JSON.stringify([...state.expressionLevels.entries()])); } catch {}
+  }
   const statusLabel = value => ({ verified:"確認済み", pending:"未確認", needs_review:"要確認", "needs-review":"要確認", provisional:"暫定", unverified:"未確認" })[value] || value || "—";
 
   function setMessage(message, error = false) {
@@ -312,8 +324,8 @@
       '<button class="category-major-button' + (!state.major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="">すべての分類 <span class="count">' + state.all.length.toLocaleString("ja-JP") + '</span></button>' +
       majors.map(([major,count]) => {
         const minors = categoryCounts(state.all.filter(row => row.major === major), "minor");
-        return '<div class="category-major"><button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + count.toLocaleString("ja-JP") + '</span></button>' +
-          (state.major === major ? '<div class="category-minors">' + minors.map(([minor,n]) => '<button class="category-minor' + (state.minor === minor ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button>').join("") + '</div>' : '') + '</div>';
+        return '<div class="category-major' + (state.major === major ? ' is-expanded' : '') + '><button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + count.toLocaleString("ja-JP") + '</span></button>' +
+          '<div class="category-minors">' + minors.map(([minor,n]) => '<button class="category-minor' + (state.minor === minor ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button>').join("") + '</div></div>';
       }).join("");
   }
   function matches(row) {
@@ -438,6 +450,7 @@
         '<button type="button" class="tag-english tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</button>' +
         '<button type="button" class="tag-japanese tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</button>' +
         '<span class="tag-major" title="大分類">' + escapeHTML(row.major || "未分類") + '</span>' +
+        '<span class="expression-level-cell" role="group" aria-label="表現レベル">' + [0,1,2,3,4].map(level => '<button type="button" class="expression-level-button' + (expressionLevelFor(row) === level ? ' is-active' : '') + '" data-expression-level="' + escapeHTML(key) + '" data-level="' + level + '" aria-pressed="' + (expressionLevelFor(row) === level ? 'true' : 'false') + '" title="表現レベル ' + level + '">' + level + '</button>').join("") + '</span>' +
         '<span class="tag-detail-cell"><button type="button" class="tag-detail-button" data-detail="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + ' の詳細" title="タグの詳細情報">ⓘ</button></span>' +
       '</div>';
     }).join("") : '<div class="empty-state">条件に一致するタグはありません。</div>';
@@ -536,7 +549,7 @@
     if (!dialog || !row) return;
     const aliases = parseAliases(row.aliases_json);
     const related = state.all.filter(item => item !== row && row.major && item.major === row.major && (row.minor ? item.minor === row.minor : true)).slice(0,8);
-    const fields = [["大分類",row.major],["中分類",row.minor],["小分類",row.detail],["別名",aliases.join("、")],["説明",row.description || ""],["表現レベル",row.ero_level],["年齢判定",row.age_safety],["翻訳状態",statusLabel(row.translation_status)],["分類確認",statusLabel(row.classification_review_status)]].filter(([,value]) => value);
+    const fields = [["大分類",row.major],["中分類",row.minor],["小分類",row.detail],["別名",aliases.join("、")],["説明",row.description || ""],["表現レベル", expressionLevelFor(row) === null ? "未判定" : expressionLevelFor(row)],["年齢判定",row.age_safety],["翻訳状態",statusLabel(row.translation_status)],["分類確認",statusLabel(row.classification_review_status)]].filter(([,value]) => value);
     $(".tag-detail-content").innerHTML =
       '<div class="tag-detail-main"><strong>' + escapeHTML(row.tag) + '</strong><span>' + escapeHTML(row.ja) + '</span></div>' +
       '<dl class="tag-detail-fields">' + fields.map(([label,value]) => '<div><dt>' + escapeHTML(label) + '</dt><dd>' + escapeHTML(value) + '</dd></div>').join("") + '</dl>' +
@@ -583,6 +596,10 @@
 
     $("#favorites-only").addEventListener("change", event => { state.favoritesOnly = event.target.checked; state.major = ""; state.minor = ""; renderCategories(); applyFilters(); });
     try { state.favorites = new Set(JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]")); } catch { state.favorites = new Set(); }
+    try {
+      const savedLevels = JSON.parse(localStorage.getItem(EXPRESSION_LEVELS_KEY) || "[]");
+      if (Array.isArray(savedLevels)) savedLevels.forEach(([key, value]) => { if (typeof key === "string" && (value === null || [0,1,2,3,4].includes(value))) state.expressionLevels.set(key, value); });
+    } catch { state.expressionLevels = new Map(); }
     const categoryToggle = $(".category-mobile-toggle");
     const setCategoryPanelOpen = open => {
       categoryToggle.setAttribute("aria-expanded", String(open));
@@ -602,9 +619,11 @@
       }
       const button = event.target.closest("[data-major]");
       if (!button) return;
-      state.major = button.dataset.major || ""; state.minor = button.dataset.minor || "";
+      const isMinor = button.hasAttribute("data-minor");
+      state.major = button.dataset.major || ""; state.minor = isMinor ? (button.dataset.minor || "") : "";
       state.favoritesOnly = false; $("#favorites-only").checked = false;
-      renderCategories(); applyFilters(); setCategoryPanelOpen(false);
+      renderCategories(); applyFilters();
+      if (isMinor) setCategoryPanelOpen(false); else setCategoryPanelOpen(true);
     });
     $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; renderCategories(); applyFilters(); setCategoryPanelOpen(false); });
     $(".search-row > .button").addEventListener("click", () => {
@@ -627,6 +646,18 @@
         try { localStorage.setItem(FAVORITES_KEY, JSON.stringify([...state.favorites])); } catch {}
         renderCategories();
         if (state.favoritesOnly) applyFilters(); else renderRows();
+        return;
+      }
+      const levelButton = event.target.closest("[data-expression-level]");
+      if (levelButton) {
+        const key = levelButton.dataset.expressionLevel;
+        const level = Number(levelButton.dataset.level);
+        const row = state.all.find(item => keyOf(item) === key);
+        if (row) {
+          state.expressionLevels.set(key, expressionLevelFor(row) === level ? null : level);
+          saveExpressionLevels();
+          renderRows();
+        }
         return;
       }
       const detail = event.target.closest("[data-detail]");
