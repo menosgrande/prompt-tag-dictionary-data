@@ -375,12 +375,10 @@
       const key = keyOf(row);
       const selected = state.selected.has(key);
       return '<div class="tag-row' + (selected ? ' is-selected' : '') + '" role="row" data-key="' + escapeHTML(key) + '">' +
-        '<span class="tag-select-cell"><button type="button" class="tag-add-button' + (selected ? ' is-added' : '') + '" data-add="' + escapeHTML(key) + '" aria-label="' + (selected ? '選択済み' : 'プロンプトに追加') + '" title="' + (selected ? '選択済み' : 'プロンプトに追加') + '">' + (selected ? '✓' : '＋') + '</button></span>' +
+        '<span class="tag-select-cell"><button type="button" class="tag-state-button ' + (selected ? (state.polarity.get(key) === "negative" ? 'is-negative' : 'is-positive') : '') + '" data-row-state="' + escapeHTML(key) + '" aria-label="' + (selected ? (state.polarity.get(key) === "negative" ? 'ネガティブ選択中' : 'ポジティブ選択中') : '未選択') + '" title="' + (selected ? (state.polarity.get(key) === "negative" ? 'ネガティブ（クリックで解除）' : 'ポジティブ（クリックでネガティブ）') : '未選択（クリックでポジティブ）') + '">' + (selected ? (state.polarity.get(key) === "negative" ? '×' : '✓') : '') + '</button></span>' +
         '<span class="favorite-cell"><button type="button" class="favorite-button' + (state.favorites.has(key) ? ' is-favorite' : '') + '" data-favorite="' + escapeHTML(key) + '" aria-label="お気に入り切替" title="お気に入り">★</button></span>' +
-        '<button type="button" class="tag-english tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</button>' +
-        '<button type="button" class="tag-japanese tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</button>' +
+        '<button type="button" class="tag-copy tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.tag) + ' / ' + escapeHTML(row.ja) + '"><strong>' + escapeHTML(row.tag) + '</strong><small>' + escapeHTML(row.ja) + '</small></button>' +
         '<span class="tag-major" title="大分類">' + escapeHTML(row.major || "未分類") + '</span>' +
-        '<span class="tag-polarity-cell"><button type="button" class="polarity-button ' + (!selected || state.polarity.get(key) === "negative" ? 'polarity-negative' : 'polarity-positive') + '" data-row-polarity="' + escapeHTML(key) + '" aria-label="ネガティブとして追加または出力先を切替" title="' + (selected ? (state.polarity.get(key) === "negative" ? "ネガティブ（クリックでポジティブ）" : "ポジティブ（クリックでネガティブ）") : "ネガティブとして追加") + '">' + (selected ? (state.polarity.get(key) === "negative" ? "N" : "P") : "N") + '</button></span>' +
         '<span class="tag-detail-cell"><button type="button" class="tag-detail-button" data-detail="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + ' の詳細" title="タグの詳細情報">ⓘ</button></span>' +
       '</div>';
     }).join("") : '<div class="empty-state">条件に一致するタグはありません。</div>';
@@ -460,13 +458,16 @@
     renderRows();
     renderEditor();
   }
-  function toggleRowPolarity(row) {
+  function cycleRowState(row) {
     const key = keyOf(row);
     if (!state.selected.has(key)) {
       state.selected.set(key, row);
+      state.polarity.set(key, "positive");
+    } else if (state.polarity.get(key) !== "negative") {
       state.polarity.set(key, "negative");
     } else {
-      state.polarity.set(key, state.polarity.get(key) === "negative" ? "positive" : "negative");
+      state.selected.delete(key);
+      state.polarity.delete(key);
     }
     renderRows();
     renderEditor();
@@ -565,10 +566,10 @@
         if (row) showTagDetail(row);
         return;
       }
-      const polarity = event.target.closest("[data-row-polarity]");
-      if (polarity) {
-        const row = state.all.find(item => keyOf(item) === polarity.dataset.rowPolarity);
-        if (row) toggleRowPolarity(row);
+      const rowState = event.target.closest("[data-row-state]");
+      if (rowState) {
+        const row = state.all.find(item => keyOf(item) === rowState.dataset.rowState);
+        if (row) cycleRowState(row);
         return;
       }
       const add = event.target.closest("[data-add]");
