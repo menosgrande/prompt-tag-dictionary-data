@@ -374,13 +374,16 @@
     $(".tag-results").innerHTML = pageRows.length ? pageRows.map(row => {
       const key = keyOf(row);
       const selected = state.selected.has(key);
+      const polarity = selected ? (state.polarity.get(key) || "positive") : "none";
+      const stateClass = polarity === "positive" ? "state-positive" : polarity === "negative" ? "state-negative" : "state-none";
+      const stateIcon = polarity === "positive" ? "✓" : polarity === "negative" ? "×" : "";
+      const stateLabel = polarity === "positive" ? "ポジティブ" : polarity === "negative" ? "ネガティブ" : "未指定";
       return '<div class="tag-row' + (selected ? ' is-selected' : '') + '" role="row" data-key="' + escapeHTML(key) + '">' +
-        '<span class="tag-select-cell"><button type="button" class="tag-add-button' + (selected ? ' is-added' : '') + '" data-add="' + escapeHTML(key) + '" aria-label="' + (selected ? '選択済み' : 'プロンプトに追加') + '" title="' + (selected ? '選択済み' : 'プロンプトに追加') + '">' + (selected ? '✓' : '＋') + '</button></span>' +
+        '<span class="tag-state-cell"><button type="button" class="tag-state-button ' + stateClass + '" data-row-state="' + escapeHTML(key) + '" aria-label="' + stateLabel + '（クリックで状態変更）" title="' + stateLabel + '：クリックで次の状態へ">' + stateIcon + '</button></span>' +
         '<span class="favorite-cell"><button type="button" class="favorite-button' + (state.favorites.has(key) ? ' is-favorite' : '') + '" data-favorite="' + escapeHTML(key) + '" aria-label="お気に入り切替" title="お気に入り">★</button></span>' +
         '<button type="button" class="tag-english tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</button>' +
         '<button type="button" class="tag-japanese tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</button>' +
         '<span class="tag-major" title="大分類">' + escapeHTML(row.major || "未分類") + '</span>' +
-        '<span class="tag-polarity-cell"><button type="button" class="polarity-button ' + (!selected || state.polarity.get(key) === "negative" ? 'polarity-negative' : 'polarity-positive') + '" data-row-polarity="' + escapeHTML(key) + '" aria-label="ネガティブとして追加または出力先を切替" title="' + (selected ? (state.polarity.get(key) === "negative" ? "ネガティブ（クリックでポジティブ）" : "ポジティブ（クリックでネガティブ）") : "ネガティブとして追加") + '">' + (selected ? (state.polarity.get(key) === "negative" ? "N" : "P") : "N") + '</button></span>' +
         '<span class="tag-detail-cell"><button type="button" class="tag-detail-button" data-detail="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + ' の詳細" title="タグの詳細情報">ⓘ</button></span>' +
       '</div>';
     }).join("") : '<div class="empty-state">条件に一致するタグはありません。</div>';
@@ -414,9 +417,9 @@
     const ordered = $(".builder-controls input")?.checked;
     root.innerHTML = rows.map((row,index) => {
       const key = keyOf(row), polarity = state.polarity.get(key) || "positive";
+      const stateLabel = polarity === "negative" ? "ネガティブ" : "ポジティブ";
       return '<div class="selected-tag-item" data-key="' + escapeHTML(key) + '">' +
-        '<div class="selected-tag-copy"><strong>' + escapeHTML(row.ja || row.tag) + '</strong><small>' + escapeHTML(row.tag) + '</small></div>' +
-        '<select class="selected-tag-polarity" data-polarity-select="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + ' の出力先"><option value="positive"' + (polarity === "positive" ? ' selected' : '') + '>ポジティブ</option><option value="negative"' + (polarity === "negative" ? ' selected' : '') + '>ネガティブ</option></select>' +
+        '<div class="selected-tag-copy"><strong>' + escapeHTML(row.ja || row.tag) + '</strong><small>' + escapeHTML(row.tag) + '</small><small class="selected-tag-state">' + stateLabel + '</small></div>' +
         '<div class="selected-tag-actions"><button type="button" data-move="-1" data-key="' + escapeHTML(key) + '" aria-label="上へ移動"' + (ordered || index === 0 ? ' disabled' : '') + '>↑</button><button type="button" data-move="1" data-key="' + escapeHTML(key) + '" aria-label="下へ移動"' + (ordered || index === rows.length - 1 ? ' disabled' : '') + '>↓</button><button type="button" data-remove-selected="' + escapeHTML(key) + '" aria-label="削除">×</button></div></div>';
     }).join("");
     root.classList.toggle("is-sorted", Boolean(ordered));
@@ -460,13 +463,16 @@
     renderRows();
     renderEditor();
   }
-  function toggleRowPolarity(row) {
+  function cycleRowState(row) {
     const key = keyOf(row);
     if (!state.selected.has(key)) {
       state.selected.set(key, row);
+      state.polarity.set(key, "positive");
+    } else if (state.polarity.get(key) === "positive") {
       state.polarity.set(key, "negative");
     } else {
-      state.polarity.set(key, state.polarity.get(key) === "negative" ? "positive" : "negative");
+      state.selected.delete(key);
+      state.polarity.delete(key);
     }
     renderRows();
     renderEditor();
@@ -565,10 +571,10 @@
         if (row) showTagDetail(row);
         return;
       }
-      const polarity = event.target.closest("[data-row-polarity]");
-      if (polarity) {
-        const row = state.all.find(item => keyOf(item) === polarity.dataset.rowPolarity);
-        if (row) toggleRowPolarity(row);
+      const stateButton = event.target.closest("[data-row-state]");
+      if (stateButton) {
+        const row = state.all.find(item => keyOf(item) === stateButton.dataset.rowState);
+        if (row) cycleRowState(row);
         return;
       }
       const add = event.target.closest("[data-add]");
@@ -605,11 +611,6 @@
       if (index < 0 || target < 0 || target >= entries.length) return;
       [entries[index],entries[target]] = [entries[target],entries[index]];
       state.selected = new Map(entries); renderEditor();
-    });
-    $("#selected-tag-list").addEventListener("change", event => {
-      const select = event.target.closest("[data-polarity-select]");
-      if (!select) return;
-      state.polarity.set(select.dataset.polaritySelect, select.value); renderEditor();
     });
     $("#tag-detail-dialog").addEventListener("click", event => {
       if (event.target === $("#tag-detail-dialog") || event.target.closest(".detail-close")) {
