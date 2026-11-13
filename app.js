@@ -19,7 +19,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], columnWidths: [48,42,220,190,150,150,150,180,90,100]
+    selected: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], columnWidths: [360,220,300]
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -274,42 +274,35 @@
     }
     return true;
   }
-  const COLUMN_WIDTHS_KEY = "ptd-dictionary-column-widths-v4";
-  const COLUMN_MIN_WIDTHS = [42, 34, 100, 100, 90, 90, 90, 100, 70, 90];
-  const COLUMN_MAX_WIDTH = 520;
+  const COLUMN_WIDTHS_KEY = "ptd-dictionary-column-widths-v5";
+  const COLUMN_MIN_WIDTHS = [170, 100, 190];
+  const COLUMN_MAX_WIDTH = 620;
   function applyColumnWidths() {
     $(".table-scroll-shell").style.setProperty("--tag-list-columns", state.columnWidths.map(width => width + "px").join(" "));
   }
   function autoFitColumns(persist = true) {
-    const headers = $$(".table-head-cell");
+    const headers = $(".table-head-cell");
     const canvas = document.createElement("canvas");
     const context = canvas.getContext("2d");
     const fields = [
-      row => "",
-      row => "",
-      row => row.tag,
+      row => "☐ ☆ " + row.tag,
       row => row.ja,
-      row => row.major,
-      row => row.minor,
-      row => row.detail,
-      row => parseAliases(row.aliases_json).join("、"),
-      row => row.ero_level,
-      row => row.age_safety
+      row => (row.major || "未分類") + "  ✓  ⓘ"
     ];
-    const fonts = ["10px 'DM Sans', 'Noto Sans JP', sans-serif","9px 'DM Mono', monospace","10px 'DM Sans', sans-serif","9px 'Noto Sans JP', sans-serif","8px 'Noto Sans JP', sans-serif","8px 'Noto Sans JP', sans-serif","8px 'Noto Sans JP', sans-serif","8px 'Noto Sans JP', sans-serif","8px 'DM Sans', sans-serif","8px 'DM Sans', sans-serif"];
+    const fonts = ["11px 'DM Sans', 'Noto Sans JP', sans-serif","10px 'Noto Sans JP', sans-serif","9px 'Noto Sans JP', sans-serif"];
     const widths = headers.map((header, index) => {
-      if (index === 0) return 54;
       context.font = fonts[index];
       let widest = context.measureText(header.textContent.replace(/\\s+/g, " ").trim()).width;
       for (const row of state.all) {
         const value = String(fields[index](row) ?? "—") || "—";
         widest = Math.max(widest, context.measureText(value).width);
       }
-      return Math.max(COLUMN_MIN_WIDTHS[index], Math.min(COLUMN_MAX_WIDTH, Math.ceil(widest + 20)));
+      const controlsAllowance = index === 0 ? 62 : index === 2 ? 76 : 20;
+      return Math.max(COLUMN_MIN_WIDTHS[index], Math.min(COLUMN_MAX_WIDTH, Math.ceil(widest + controlsAllowance)));
     });
     state.columnWidths = widths;
     applyColumnWidths();
-    $$(".column-resize").forEach((handle, index) => handle.setAttribute("aria-valuenow", String(widths[index])));
+    $(".column-resize").forEach((handle, index) => handle.setAttribute("aria-valuenow", String(widths[index])));
     if (persist) {
       try { localStorage.setItem(COLUMN_WIDTHS_KEY, JSON.stringify(widths)); } catch {}
     }
@@ -374,14 +367,20 @@
     $(".tag-results").innerHTML = pageRows.length ? pageRows.map(row => {
       const key = keyOf(row);
       const selected = state.selected.has(key);
+      const rowPolarity = state.polarity.get(key) || "";
+      const polarityLabel = rowPolarity === "positive" ? "Positive" : rowPolarity === "negative" ? "Negative" : "未指定";
       return '<div class="tag-row' + (selected ? ' is-selected' : '') + '" role="row" data-key="' + escapeHTML(key) + '">' +
-        '<span class="tag-select-cell"><button type="button" class="tag-add-button' + (selected ? ' is-added' : '') + '" data-add="' + escapeHTML(key) + '" aria-label="' + (selected ? '選択済み' : 'プロンプトに追加') + '" title="' + (selected ? '選択済み' : 'プロンプトに追加') + '">' + (selected ? '✓' : '＋') + '</button></span>' +
-        '<span class="favorite-cell"><button type="button" class="favorite-button' + (state.favorites.has(key) ? ' is-favorite' : '') + '" data-favorite="' + escapeHTML(key) + '" aria-label="お気に入り切替" title="お気に入り">★</button></span>' +
-        '<button type="button" class="tag-english tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</button>' +
+        '<div class="tag-primary-cell">' +
+          '<span class="tag-select-cell"><button type="button" class="tag-add-button' + (selected ? ' is-added' : '') + '" data-add="' + escapeHTML(key) + '" aria-label="' + (selected ? '選択済み' : 'プロンプトに追加') + '" title="' + (selected ? '選択済み' : 'プロンプトに追加') + '">' + (selected ? '☑' : '☐') + '</button></span>' +
+          '<span class="favorite-cell"><button type="button" class="favorite-button' + (state.favorites.has(key) ? ' is-favorite' : '') + '" data-favorite="' + escapeHTML(key) + '" aria-label="お気に入り切替" aria-pressed="' + state.favorites.has(key) + '" title="お気に入り">' + (state.favorites.has(key) ? '★' : '☆') + '</button></span>' +
+          '<button type="button" class="tag-english tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</button>' +
+        '</div>' +
         '<button type="button" class="tag-japanese tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</button>' +
-        '<span class="tag-major" title="大分類">' + escapeHTML(row.major || "未分類") + '</span>' +
-        '<span class="tag-polarity-cell"><button type="button" class="polarity-button ' + (!selected || state.polarity.get(key) === "negative" ? 'polarity-negative' : 'polarity-positive') + '" data-row-polarity="' + escapeHTML(key) + '" aria-label="ネガティブとして追加または出力先を切替" title="' + (selected ? (state.polarity.get(key) === "negative" ? "ネガティブ（クリックでポジティブ）" : "ポジティブ（クリックでネガティブ）") : "ネガティブとして追加") + '">' + (selected ? (state.polarity.get(key) === "negative" ? "N" : "P") : "N") + '</button></span>' +
-        '<span class="tag-detail-cell"><button type="button" class="tag-detail-button" data-detail="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + ' の詳細" title="タグの詳細情報">ⓘ</button></span>' +
+        '<div class="tag-meta-cell">' +
+          '<span class="tag-major" title="分類">' + escapeHTML(row.major || "未分類") + '</span>' +
+          '<span class="tag-polarity-cell"><button type="button" class="polarity-button' + (rowPolarity ? ' polarity-' + rowPolarity : '') + '" data-row-polarity="' + escapeHTML(key) + '" aria-label="P/N指定：' + polarityLabel + '。クリックで状態変更" aria-pressed="' + Boolean(rowPolarity) + '" title="P/N指定：' + polarityLabel + '">' + (rowPolarity ? '✓' : '') + '</button></span>' +
+          '<span class="tag-detail-cell"><button type="button" class="tag-detail-button" data-detail="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + ' の詳細情報" title="タグの詳細情報">ⓘ</button></span>' +
+        '</div>' +
       '</div>';
     }).join("") : '<div class="empty-state">条件に一致するタグはありません。</div>';
     const start = Math.max(1, state.page - 2), end = Math.min(pages, Math.max(5, state.page + 3));
@@ -444,30 +443,22 @@
   function addRow(row) {
     const key = keyOf(row);
     state.selected.set(key, row);
-    state.polarity.set(key, state.polarity.get(key) || "positive");
     renderRows();
     renderEditor();
   }
   function toggleRow(row) {
     const key = keyOf(row);
-    if (state.selected.has(key)) {
-      state.selected.delete(key);
-      state.polarity.delete(key);
-    } else {
-      state.selected.set(key, row);
-      state.polarity.set(key, "positive");
-    }
+    if (state.selected.has(key)) state.selected.delete(key);
+    else state.selected.set(key, row);
     renderRows();
     renderEditor();
   }
   function toggleRowPolarity(row) {
     const key = keyOf(row);
-    if (!state.selected.has(key)) {
-      state.selected.set(key, row);
-      state.polarity.set(key, "negative");
-    } else {
-      state.polarity.set(key, state.polarity.get(key) === "negative" ? "positive" : "negative");
-    }
+    const current = state.polarity.get(key) || "";
+    const next = current === "" ? "positive" : current === "positive" ? "negative" : "";
+    if (next) state.polarity.set(key, next);
+    else state.polarity.delete(key);
     renderRows();
     renderEditor();
   }
@@ -515,7 +506,7 @@
       if (!input) return;
       const row = state.all.find(item => keyOf(item) === input.dataset.key);
       if (!row) return;
-      if (input.checked) { state.selected.set(input.dataset.key, row); state.polarity.set(input.dataset.key, "positive"); } else { state.selected.delete(input.dataset.key); state.polarity.delete(input.dataset.key); }
+      if (input.checked) state.selected.set(input.dataset.key, row); else state.selected.delete(input.dataset.key);
       renderEditor();
     }));
     const search = $(".search-row .searchbox input");
@@ -585,16 +576,16 @@
     $(".selected-dock").addEventListener("click", event => {
       const button = event.target.closest("[data-remove]");
       if (!button) return;
-      state.selected.delete(button.dataset.remove); state.polarity.delete(button.dataset.remove); renderRows(); renderEditor();
+      state.selected.delete(button.dataset.remove); renderRows(); renderEditor();
     });
     $(".selected-dock-actions [data-action='open-editor']").addEventListener("click", () => setScreen("editor-screen"));
     $(".editor-builder-panel .text-button").addEventListener("click", () => {
-      state.selected.clear(); state.polarity.clear(); renderRows(); renderEditor();
+      state.selected.clear(); renderRows(); renderEditor();
     });
     $("#selected-tag-list").addEventListener("click", event => {
       const remove = event.target.closest("[data-remove-selected]");
       if (remove) {
-        state.selected.delete(remove.dataset.removeSelected); state.polarity.delete(remove.dataset.removeSelected);
+        state.selected.delete(remove.dataset.removeSelected);
         renderRows(); renderEditor(); return;
       }
       const move = event.target.closest("[data-move]");
@@ -631,7 +622,7 @@
     addInput.addEventListener("input", updateAddButton);
     addButton.addEventListener("click", () => {
       const row = state.all.find(item => keyOf(item) === addButton.dataset.key);
-      if (row) { state.polarity.set(keyOf(row), "positive"); addRow(row); addInput.value = ""; updateAddButton(); }
+      if (row) { addRow(row); addInput.value = ""; updateAddButton(); }
     });
     $(".builder-controls input").addEventListener("change", renderEditor);
     $("#positive-output").addEventListener("input", renderEditor);
