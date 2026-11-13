@@ -398,16 +398,15 @@
         event.preventDefault();
         const startX = event.clientX;
         const startWidth = state.columnWidths[index];
-        handle.setPointerCapture(event.pointerId);
         const move = e => resizeTo(startWidth + e.clientX - startX);
         const finish = () => {
-          handle.removeEventListener("pointermove", move);
-          handle.removeEventListener("pointerup", finish);
-          handle.removeEventListener("pointercancel", finish);
+          window.removeEventListener("pointermove", move);
+          window.removeEventListener("pointerup", finish);
+          window.removeEventListener("pointercancel", finish);
         };
-        handle.addEventListener("pointermove", move);
-        handle.addEventListener("pointerup", finish);
-        handle.addEventListener("pointercancel", finish);
+        window.addEventListener("pointermove", move);
+        window.addEventListener("pointerup", finish);
+        window.addEventListener("pointercancel", finish);
       });
       handle.addEventListener("keydown", event => {
         if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
