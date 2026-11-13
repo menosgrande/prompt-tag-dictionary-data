@@ -82,28 +82,31 @@
   function setMessage(message, error = false) {
     $(".tag-results").innerHTML = '<div class="empty-state' + (error ? ' load-error' : '') + '">' + escapeHTML(message) + '</div>';
   }
+  async function fetchCSV(file) {
+    const response = await fetch(file.url, { cache: "no-store" });
+    if (!response.ok) throw new Error(file.url + " の読み込みに失敗しました (HTTP " + response.status + ")");
+    const rows = window.DictionaryCSV.parseCSV(await response.text());
+    if (!rows.length) throw new Error(file.url + " にデータ行がありません。");
+    const actual = Object.keys(rows[0]);
+    if (actual.length !== HEADERS.length || HEADERS.some((header, i) => actual[i] !== header)) {
+      throw new Error(file.url + " のCSVヘッダーが想定する12列と一致しません。");
+    }
+    const prepared = rows.map(row => ({ ...row, source: file.source, sourceLabel: file.label }));
+    try { await writeCSVCache(file.url, prepared); } catch {}
+    return prepared;
+  }
   async function loadCSV(file) {
     let cached = null;
     try { cached = await readCSVCache(file.url); } catch {}
-    if (cached?.rows?.length && Date.now() - cached.savedAt < CSV_CACHE_TTL) {
-      return cached.rows;
+    if (cached?.rows?.length) {
+      // キャッシュを先に返し、最新CSVの取得はバックグラウンドで行う。
+      return { rows: cached.rows, refresh: fetchCSV(file).catch(error => {
+        console.warn(file.url + " のバックグラウンド更新に失敗しました。キャッシュを継続使用します。", error);
+        return null;
+      }) };
     }
-    try {
-      const response = await fetch(file.url, { cache: "no-store" });
-      if (!response.ok) throw new Error(file.url + " の読み込みに失敗しました (HTTP " + response.status + ")");
-      const rows = window.DictionaryCSV.parseCSV(await response.text());
-      if (!rows.length) throw new Error(file.url + " にデータ行がありません。");
-      const actual = Object.keys(rows[0]);
-      if (actual.length !== HEADERS.length || HEADERS.some((header, i) => actual[i] !== header)) {
-        throw new Error(file.url + " のCSVヘッダーが想定する12列と一致しません。");
-      }
-      const prepared = rows.map(row => ({ ...row, source: file.source, sourceLabel: file.label }));
-      try { await writeCSVCache(file.url, prepared); } catch {}
-      return prepared;
-    } catch (error) {
-      if (cached?.rows?.length) return cached.rows;
-      throw error;
-    }
+    // 初回だけはCSV取得完了後に表示する。
+    return { rows: await fetchCSV(file), refresh: Promise.resolve(null) };
   }
   const normalizeWorkName = value => String(value || "").normalize("NFKD").replace(/\p{Diacritic}/gu, "").toLocaleLowerCase().replace(/[\s・:：!！?？"'’~〜\-‐‑–—_/／（）()\[\]「」『』.。、☆★]/g, "");
   function parseAliases(value) {
@@ -747,16 +750,27 @@
     setupColumnResizers();
     try {
       const loaded = await Promise.all(DATA_FILES.map(loadCSV));
-      state.all = loaded.flat();
-      buildRelatedIndexes();
-      state.all.forEach(row => {
-        const match = state.reviewRows.find(item => keyOf(item) === keyOf(row));
-        if (match) return;
-        const group = state.works.find(item => item.characters.some(x => keyOf(x) === keyOf(row)) || item.elements.some(x => keyOf(x) === keyOf(row)));
-        if (group) row.workTitle = group.name;
+      const applyLoadedData = rowsByFile => {
+        state.all = rowsByFile.flat();
+        buildRelatedIndexes();
+        state.all.forEach(row => {
+          const match = state.reviewRows.find(item => keyOf(item) === keyOf(row));
+          if (match) return;
+          const group = state.works.find(item => item.characters.some(x => keyOf(x) === keyOf(row)) || item.elements.some(x => keyOf(x) === keyOf(row)));
+          if (group) row.workTitle = group.name;
+        });
+        $(".stats strong").textContent = state.all.length.toLocaleString("ja-JP");
+        renderCategories(); applyFilters(); renderEditor();
+      };
+      // まずキャッシュ（または初回取得分）で画面を構築する。
+      applyLoadedData(loaded.map(item => item.rows));
+      bindControls();
+      // 最新CSVが取得できた場合だけ、表示データを差し替える。
+      Promise.all(loaded.map(item => item.refresh)).then(refreshed => {
+        if (refreshed.some(Boolean)) {
+          applyLoadedData(loaded.map((item, index) => refreshed[index] || item.rows));
+        }
       });
-      $(".stats strong").textContent = state.all.length.toLocaleString("ja-JP");
-      renderCategories(); bindControls(); applyFilters(); renderEditor();
     } catch (error) {
       console.error(error);
       setMessage("CSVの読み込みに失敗しました。GitHub Pages上で開いているか、CSVファイルの配置と12列ヘッダーを確認してください。詳細: " + error.message, true);
