@@ -219,61 +219,69 @@ body{font-size:14px;line-height:1.65}
 }
 
 
-/* Mobile dictionary: keep all columns in one horizontally scrollable grid. */
+/* Mobile dictionary: vocabulary view with English and Japanese only. */
 @media(max-width:760px){
   .table-scroll-shell{
-    --tag-list-columns:36px 32px 150px 130px 120px 120px 120px 140px 75px 85px !important;
+    --tag-list-columns:minmax(0,1fr) minmax(0,1fr) !important;
     width:100%;
     min-width:0;
     max-width:100%;
-    overflow-x:auto;
-    overflow-y:hidden;
-    -webkit-overflow-scrolling:touch;
-    overscroll-behavior-x:contain;
+    overflow:visible;
   }
   .table-scroll-shell .table-head,
   .table-scroll-shell .tag-results .tag-row{
     display:grid;
     grid-template-columns:var(--tag-list-columns);
     column-gap:0;
-    width:max-content;
-    min-width:100%;
-    max-width:none;
+    width:100%;
+    min-width:0;
+    max-width:100%;
     box-sizing:border-box;
   }
   .table-scroll-shell .tag-results{
     display:block;
-    width:max-content;
-    min-width:100%;
-    max-width:none;
+    width:100%;
+    min-width:0;
+    max-width:100%;
+    max-height:none;
+    min-height:0;
+    overflow:visible;
+  }
+  /* DOM columns 1–2 are actions; 5–10 are classification metadata. */
+  .table-scroll-shell .table-head-cell:nth-child(-n+2),
+  .table-scroll-shell .tag-results .tag-row>*:nth-child(-n+2),
+  .table-scroll-shell .table-head-cell:nth-child(n+5),
+  .table-scroll-shell .tag-results .tag-row>*:nth-child(n+5){
+    display:none !important;
   }
   .table-scroll-shell .table-head-cell,
   .table-scroll-shell .tag-results .tag-row>*{
     min-width:0;
-    padding-left:5px;
-    padding-right:5px;
-    overflow:hidden;
-    text-overflow:ellipsis;
-  }
-  .table-scroll-shell .tag-results .tag-row{height:28px;min-height:28px}
-  .table-scroll-shell .tag-results .tag-row .tag-english,
-  .table-scroll-shell .tag-results .tag-row .tag-japanese,
-  .table-scroll-shell .tag-results .tag-row .tag-category{
-    min-width:0;
+    padding:6px 8px;
     overflow:hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
   }
-  .table-scroll-shell .tag-results .tag-row .tag-select-cell,
-  .table-scroll-shell .tag-results .tag-row .favorite-cell{
-    justify-content:center;
-    padding:0;
+  .table-scroll-shell .table-head{
+    position:sticky;
+    top:0;
+    z-index:2;
   }
-  .table-scroll-shell .tag-results .tag-row .polarity-button{
-    width:18px;height:18px;padding:0;font-size:10px;
+  .table-scroll-shell .tag-results .tag-row{
+    height:36px;
+    min-height:36px;
+    align-items:center;
   }
-  .table-scroll-shell .tag-results .tag-row .favorite-button{
-    width:18px;height:18px;padding:0;font-size:11px;
+  .table-scroll-shell .tag-results .tag-row .tag-english{
+    display:block;
+    color:var(--text);
+    font-size:12px;
+    font-weight:600;
+  }
+  .table-scroll-shell .tag-results .tag-row .tag-japanese{
+    display:block;
+    color:#aab6c4;
+    font-size:12px;
   }
 }
 
