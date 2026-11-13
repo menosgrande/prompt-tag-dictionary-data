@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#15191f">
   <meta name="description" content="画像生成タグを日本語・英語で検索し、分類から選んでプロンプトを組み立てるタグ辞典。">
   <title>画像生成タグ辞典</title>
-  <link rel="stylesheet" href="./styles.css?v=compact-rows-20261113">
+  <link rel="stylesheet" href="./styles.css?v=responsive-levels-20261113">
 </head>
 <body>
   <header class="topbar">
@@ -43,7 +43,7 @@
           <div class="table-scroll-shell">
             <div class="table-horizontal-scroll" role="region" aria-label="タグ一覧（横スクロール可能）" tabindex="0">
               <div class="table-head" role="row">
-                <div class="table-head-cell" aria-label="プロンプト状態"></div><div class="table-head-cell" aria-label="お気に入り"></div><div class="table-head-cell">タグ（英語）</div><div class="table-head-cell">日本語訳</div><div class="table-head-cell">大分類</div><div class="table-head-cell" aria-label="詳細"></div>
+                <div class="table-head-cell" aria-label="プロンプト状態"></div><div class="table-head-cell" aria-label="お気に入り"></div><div class="table-head-cell">タグ（英語）</div><div class="table-head-cell">日本語訳</div><div class="table-head-cell">大分類</div><div class="table-head-cell" aria-label="表現レベル">♥</div><div class="table-head-cell" aria-label="詳細"></div>
               </div>
               <div class="tag-results"><div class="empty-state">CSVデータを読み込んでいます。</div></div>
             </div>
@@ -83,6 +83,6 @@
   <footer class="footer"><span>CSVを正本として表示</span></footer>
   </main>
   <script src="./csv.js"></script>
-  <script src="./app.js?v=prompt-builder-fix-20261113"></script>
+  <script src="./app.js?v=responsive-levels-20261113"></script>
 </body>
 </html>
