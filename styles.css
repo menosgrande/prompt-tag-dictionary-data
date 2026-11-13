@@ -370,7 +370,7 @@ body{font-size:14px;line-height:1.65}
   width: 100%;
   min-width: 0;
   max-width: 100%;
-  max-height: calc(100vh - 310px);
+  max-height: none;
   min-height: 0;
   overflow: visible;
 }
@@ -488,7 +488,7 @@ body{font-size:14px;line-height:1.65}
   }
   .table-head { min-height: 40px; }
   .table-head-cell { padding: 3px 6px; font-size: 10px; }
-  .tag-results { max-height: 65vh; }
+  .tag-results { max-height: none; }
   .tag-results .tag-row { height: 40px; min-height: 40px; }
   .tag-results .tag-row > * { padding: 4px 6px; }
   .tag-results .tag-add-button,
