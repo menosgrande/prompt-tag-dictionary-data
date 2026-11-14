@@ -1457,6 +1457,7 @@
             setPromptItems(source.polarity, ensurePromptItems(source.polarity));
             setPromptItems(polarity, ensurePromptItems(polarity));
             if (moved.key && state.selected.has(moved.key)) state.polarity.set(moved.key, polarity);
+            state.activeBubble = null;
             renderRows(); renderEditor();
           }
         } catch {}
@@ -1488,7 +1489,10 @@
         const input = toolbar.querySelector("[data-bubble-edit-input]");
         if (input) { input.hidden = false; input.value = ensurePromptItems(polarity)[active.index]?.text || ""; input.focus(); }
       } else if (action === "save-edit") savePromptBubbleEdit(polarity);
-      else if (action === "cancel-edit") { state.activeBubble = { ...active, editing: false, creating: false }; renderEditor(); }
+      else if (action === "cancel-edit") {
+        state.activeBubble = active.creating ? null : { ...active, editing: false, creating: false };
+        renderEditor();
+      }
       else if (action === "move") movePromptBubble(polarity, active.index);
       else if (action === "move-up") reorderPromptBubble(polarity, active.index, active.index - 1);
       else if (action === "move-down") reorderPromptBubble(polarity, active.index, active.index + 1);
