@@ -92,6 +92,8 @@
     }
     const prepared = rows.map(row => ({ ...row, source: file.source, sourceLabel: file.label }));
     const unchanged = cachedRows && prepared.length === cachedRows.length && prepared.every((row, index) =>
+      row.source === cachedRows[index].source &&
+      row.sourceLabel === cachedRows[index].sourceLabel &&
       HEADERS.every(header => row[header] === cachedRows[index][header])
     );
     if (unchanged) return null;
