@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#15191f">
   <meta name="description" content="画像生成タグを日本語・英語で検索し、分類から選んでプロンプトを組み立てるタグ辞典。">
   <title>画像生成タグ辞典</title>
-  <link rel="stylesheet" href="./styles.css?v=category-visibility-20261115">
+  <link rel="stylesheet" href="./styles.css?v=prompt-editor-20261115">
 </head>
 <body>
   <header class="topbar">
@@ -69,38 +69,23 @@
       <section class="panel related-list-panel"><div id="authors-list" class="related-list"><p class="empty-state">CSV読み込み後に作者一覧を表示します。</p></div></section>
     </section>
     <section id="editor-screen" class="app-screen editor-screen" hidden>
-      <section class="editor-intro"><h1>プロンプト編集</h1><p>辞典から選んだタグを並べ、コピーまたはテキストファイルに保存します。</p></section>
+      <section class="editor-intro"><h1>プロンプト編集</h1><p>辞典から選んだタグを追加し、テキスト欄で内容や順序を自由に編集できます。</p></section>
       <details id="migration-unresolved-panel" class="migration-unresolved-panel" hidden>
         <summary id="migration-unresolved-summary">移行できなかった設定</summary>
         <p>旧形式の保存データから対応先を特定できなかった項目です。内容を確認するまで旧保存データは削除しないでください。</p>
         <ul id="migration-unresolved-list"></ul>
       </details>
       <section class="panel builder-panel editor-builder-panel">
-        <div class="panel-heading"><div><h2>選択したタグ</h2></div><button class="text-button" type="button">全解除</button></div>
-        <div class="preview-add-row"><label>タグを直接追加<input type="search" placeholder="英語・日本語・別名から検索" autocomplete="off" aria-controls="preview-add-candidates" aria-autocomplete="list"></label><button class="button button-secondary" type="button" disabled>＋ 追加</button></div>
-        <div id="preview-add-candidates" class="preview-add-candidates" role="listbox" aria-label="追加候補" hidden></div>
-        <p class="preview-help">英語タグ・日本語訳・別名から候補を選んで追加できます。</p>
-        <div id="selected-tag-list" class="selected-tag-list" aria-live="polite"><p class="empty-state">まだタグが選択されていません。</p></div>
-        <div class="builder-controls"><label class="check-row"><input type="checkbox" checked> 分類順に並べて出力</label></div>
-        <section class="output-settings" aria-label="出力設定">
-          <strong>出力設定</strong>
-          <label><input id="escape-parentheses" type="checkbox"> タグ内の丸括弧をエスケープ（\(series\)）</label>
-          <label><input id="apply-weight" type="checkbox"> 重み付けを適用</label>
-          <label class="weight-setting">重み <input id="weight-value" type="number" min="0.1" max="2" step="0.05" value="1.2"></label>
-        </section>
+        <div class="panel-heading"><div><h2>プロンプト</h2></div><button class="text-button" type="button">全解除</button></div>
         <div class="output-grid">
           <section class="output-card">
             <div class="output-header"><label for="positive-output">ポジティブプロンプト</label></div>
-            <textarea id="positive-output" spellcheck="false" readonly placeholder="選択したタグと追記内容がここに表示されます。"></textarea>
-            <label class="output-extra-label" for="positive-extra">直接追記（タグ操作では消えません）</label>
-            <textarea id="positive-extra" class="output-extra" spellcheck="false" placeholder="ここに追加の語句を入力"></textarea>
+            <textarea id="positive-output" spellcheck="false" placeholder="タグ一覧から選択するか、ここに直接入力してください。"></textarea>
             <div class="output-actions"><button class="button button-primary" type="button" data-action="copy-positive" disabled>コピー</button><button class="button button-ghost" type="button" data-action="save-positive" disabled>TXT保存</button></div>
           </section>
           <section class="output-card">
             <div class="output-header"><label for="negative-output">ネガティブプロンプト</label></div>
-            <textarea id="negative-output" spellcheck="false" readonly placeholder="ネガティブタグと追記内容がここに表示されます。"></textarea>
-            <label class="output-extra-label" for="negative-extra">直接追記（タグ操作では消えません）</label>
-            <textarea id="negative-extra" class="output-extra" spellcheck="false" placeholder="ここに追加の語句を入力"></textarea>
+            <textarea id="negative-output" spellcheck="false" placeholder="ネガティブタグを選択するか、ここに直接入力してください。"></textarea>
             <div class="output-actions negative-output-actions"><button class="button button-primary" type="button" data-action="copy-negative" disabled>コピー</button><button class="button button-ghost" type="button" data-action="save-negative" disabled>TXT保存</button></div>
           </section>
         </div>
@@ -113,6 +98,6 @@
   <footer class="footer"><span>CSVを正本として表示</span></footer>
   </main>
   <script src="./csv.js?v=csv-parser-20261114"></script>
-  <script src="./app.js?v=category-visibility-20261115"></script>
+  <script src="./app.js?v=prompt-editor-20261115"></script>
 </body>
 </html>
