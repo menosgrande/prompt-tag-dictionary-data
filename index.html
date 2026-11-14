@@ -7,6 +7,7 @@
   <meta name="description" content="画像生成タグを日本語・英語で検索し、分類から選んでプロンプトを組み立てるタグ辞典。">
   <title>画像生成タグ辞典</title>
   <link rel="stylesheet" href="./styles.css?v=prompt-bubble-frame-radius-20261115">
+  <link rel="stylesheet" href="./prompt-bubble-colors.css?v=ios-prompt-colors-20261115">
 </head>
 <body>
   <header class="topbar">
@@ -23,9 +24,7 @@
       <a class="screen-tab" href="#editor-screen">プロンプト編集</a>
     </nav>
     <section id="dictionary-screen" class="app-screen">
-      <section class="intro compact-intro">
-        <div class="intro-main"><h1>タグを選ぶ</h1></div>
-      </section>
+      <section class="intro compact-intro"><div class="intro-main"><h1>タグを選ぶ</h1></div></section>
       <section class="search-panel search-row" aria-label="タグ検索">
         <label class="searchbox"><span class="search-icon" aria-hidden="true">⌕</span><input type="search" placeholder="日本語・英語・別名から表現を探す" autocomplete="off"></label>
         <label class="favorite-filter"><input id="favorites-only" type="checkbox"> お気に入り</label>
@@ -40,20 +39,18 @@
         </aside>
         <section class="panel results-panel" aria-label="タグ一覧">
           <div class="panel-heading result-heading"><div><h2>タグ一覧</h2></div><div class="result-heading-actions"><span class="count">—</span><button class="text-button column-width-reset" type="button" title="列幅を初期値に戻す">列幅リセット</button></div></div>
-          <div class="table-scroll-shell">
-            <div class="table-horizontal-scroll" role="region" aria-label="タグ一覧（横スクロール可能）" tabindex="0">
-              <div class="table-head" role="row">
-                <div class="table-head-cell" aria-label="プロンプト状態"></div>
-                <div class="table-head-cell header-menu-cell favorite-header" data-column="favorites" aria-label="お気に入り"><details class="column-menu"><summary aria-label="お気に入りフィルター">★</summary><div class="column-menu-panel" data-menu-content></div></details></div>
-                <div class="table-head-cell header-menu-cell" data-column="tag"><details class="column-menu"><summary class="header-title" aria-label="タグの並び替え">タグ（英語）</summary><div class="column-menu-panel" data-menu-content></div></details></div>
-                <div class="table-head-cell header-menu-cell" data-column="ja"><details class="column-menu"><summary class="header-title" aria-label="日本語訳の並び替え">日本語訳</summary><div class="column-menu-panel" data-menu-content></div></details></div>
-                <div class="table-head-cell header-menu-cell" data-column="major"><details class="column-menu"><summary class="header-title" aria-label="大分類の並び替えと絞り込み">大分類</summary><div class="column-menu-panel" data-menu-content></div></details></div>
-                <div class="table-head-cell header-menu-cell" data-column="level" aria-label="表現レベル"><details class="column-menu"><summary class="header-title level-header-title" aria-label="表現レベルの並び替えと絞り込み">♥</summary><div class="column-menu-panel" data-menu-content></div></details></div>
-                <div class="table-head-cell" aria-label="詳細"></div>
-              </div>
-              <div class="tag-results"><div class="empty-state">CSVデータを読み込んでいます。</div></div>
+          <div class="table-scroll-shell"><div class="table-horizontal-scroll" role="region" aria-label="タグ一覧（横スクロール可能）" tabindex="0">
+            <div class="table-head" role="row">
+              <div class="table-head-cell" aria-label="プロンプト状態"></div>
+              <div class="table-head-cell header-menu-cell favorite-header" data-column="favorites" aria-label="お気に入り"><details class="column-menu"><summary aria-label="お気に入りフィルター">★</summary><div class="column-menu-panel" data-menu-content></div></details></div>
+              <div class="table-head-cell header-menu-cell" data-column="tag"><details class="column-menu"><summary class="header-title" aria-label="タグの並び替え">タグ（英語）</summary><div class="column-menu-panel" data-menu-content></div></details></div>
+              <div class="table-head-cell header-menu-cell" data-column="ja"><details class="column-menu"><summary class="header-title" aria-label="日本語訳の並び替え">日本語訳</summary><div class="column-menu-panel" data-menu-content></div></details></div>
+              <div class="table-head-cell header-menu-cell" data-column="major"><details class="column-menu"><summary class="header-title" aria-label="大分類の並び替えと絞り込み">大分類</summary><div class="column-menu-panel" data-menu-content></div></details></div>
+              <div class="table-head-cell header-menu-cell" data-column="level" aria-label="表現レベル"><details class="column-menu"><summary class="header-title level-header-title" aria-label="表現レベルの並び替えと絞り込み">♥</summary><div class="column-menu-panel" data-menu-content></div></details></div>
+              <div class="table-head-cell" aria-label="詳細"></div>
             </div>
-          </div>
+            <div class="tag-results"><div class="empty-state">CSVデータを読み込んでいます。</div></div>
+          </div></div>
           <div class="pagination"><span>—</span></div>
         </section>
       </section>
@@ -95,10 +92,10 @@
       </section>
     </section>
     <dialog id="tag-detail-dialog" class="tag-detail-dialog" aria-labelledby="tag-detail-title">
-    <div class="tag-detail-header"><h2 id="tag-detail-title">タグ詳細</h2><button type="button" class="detail-close" aria-label="閉じる">×</button></div>
-    <div class="tag-detail-content"></div>
-  </dialog>
-  <footer class="footer"><span>CSVを正本として表示</span></footer>
+      <div class="tag-detail-header"><h2 id="tag-detail-title">タグ詳細</h2><button type="button" class="detail-close" aria-label="閉じる">×</button></div>
+      <div class="tag-detail-content"></div>
+    </dialog>
+    <footer class="footer"><span>CSVを正本として表示</span></footer>
   </main>
   <script src="./csv.js?v=csv-parser-20261114"></script>
   <script src="./app.js?v=pointer-bubble-drag-20261115"></script>
