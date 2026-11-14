@@ -1191,11 +1191,11 @@
     $("#negative-output").addEventListener("input", event => {
       state.promptNegative = event.target.value; syncSelectedFromPromptText(); renderRows(); renderEditor();
     });
-    $("[data-editor-mode]").forEach(button=>button.addEventListener("click",()=>{
+    $$("[data-editor-mode]").forEach(button=>button.addEventListener("click",()=>{
       const target=button.dataset.editorMode;
       setPromptEditorMode(target,state.editorModes[target]==="text"?"bubble":"text");
     }));
-    $("[data-bubble-add]").forEach(button=>button.addEventListener("click",()=>addBubbleTag(button.dataset.bubbleAdd)));
+    $$("[data-bubble-add]").forEach(button=>button.addEventListener("click",()=>addBubbleTag(button.dataset.bubbleAdd)));
     ["positive","negative"].forEach(target=>{
       const input=$("#"+target+"-bubble-add");
       input.addEventListener("input",()=>updateBubbleSuggestions(input));
