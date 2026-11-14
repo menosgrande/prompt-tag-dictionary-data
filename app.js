@@ -207,7 +207,7 @@
     if (tags.some(tag => tag === "fire emblem" || tag.startsWith("fire emblem ") || tag.startsWith("fire emblem:"))) return "ファイアーエムブレム";
     if (tags.some(tag => tag === "dragon quest" || tag.startsWith("dragon quest "))) return "ドラゴンクエスト";
     if (tags.some(tag => tag.startsWith("toaru ") || /とある/.test(text))) return "とあるシリーズ";
-    if (tags.some(tag => tag === "sword art online" || tag.startsWith("sword art online:") || /\\bsao\\b/i.test(tag))) return "ソードアート・オンライン";
+    if (tags.some(tag => tag === "sword art online" || tag.startsWith("sword art online:") || /\bsao\b/i.test(tag))) return "ソードアート・オンライン";
     if (tags.some(tag => tag === "the legend of zelda" || tag.startsWith("the legend of zelda:") || /ゼルダの伝説/.test(text))) return "ゼルダの伝説";
     if (tags.some(tag => tag.startsWith("tales of "))) return "テイルズ オブ シリーズ";
     if (/jojo|ジョジョ/.test(text)) return "ジョジョの奇妙な冒険";
@@ -218,7 +218,7 @@
     const entries = state.works.map(group => {
       const tags = group.titles.map(row => String(row.tag || ""));
       const normalizedTags = tags.map(normalizeWorkName).filter(Boolean);
-      const rootTag = tags.find(tag => /\\(series\\)\\s*$/i.test(tag) || manualRoots.has(normalizeWorkName(tag)));
+      const rootTag = tags.find(tag => /\(series\)\s*$/i.test(tag) || manualRoots.has(normalizeWorkName(tag)));
       const normalized = rootTag ? normalizeWorkName(rootTag) : "";
       const isRoot = Boolean(rootTag);
       return { group, tags, normalizedTags, normalized, isRoot };
@@ -233,14 +233,14 @@
       return parent ? rootAncestor(parent) : root;
     };
     entries.forEach(entry => {
-      const forcedRootKey = entry.tags.some(tag => /^arcane:\\s*league of legends$/i.test(tag)) ? "leagueoflegends" :
+      const forcedRootKey = entry.tags.some(tag => /^arcane:\s*league of legends$/i.test(tag)) ? "leagueoflegends" :
         entry.tags.some(tag => /^gakuen idolmaster$/i.test(tag)) ? "idolmaster" :
-        (entry.tags.some(tag => /\\((?:touhou|touhou project)\\)/i.test(tag)) || /東方|touhou/i.test(entry.group.name)) ? "touhou" :
-        (entry.tags.some(tag => /\\((?:vocaloid)\\)/i.test(tag) || /^(?:project diva(?: \\(series\\))?|project sekai)$/i.test(tag)) || /初音ミク|ボーカロイド/i.test(entry.group.name)) ? "vocaloid" :
+        (entry.tags.some(tag => /\((?:touhou|touhou project)\)/i.test(tag)) || /東方|touhou/i.test(entry.group.name)) ? "touhou" :
+        (entry.tags.some(tag => /\((?:vocaloid)\)/i.test(tag) || /^(?:project diva(?: \(series\))?|project sekai)$/i.test(tag)) || /初音ミク|ボーカロイド/i.test(entry.group.name)) ? "vocaloid" :
         entry.tags.some(tag => /gundam/i.test(tag)) ? "gundam" :
-        entry.tags.some(tag => /^(?:monster hunter(?:\\s|$))/i.test(tag) && !/^monster hunter \\(series\\)$/i.test(tag)) ? "monsterhunterseries" :
+        entry.tags.some(tag => /^(?:monster hunter(?:\s|$))/i.test(tag) && !/^monster hunter \(series\)$/i.test(tag)) ? "monsterhunterseries" :
         entry.tags.some(tag => /^(?:evangelion:|rebuild of evangelion$)/i.test(tag)) ? "neon genesis evangelion" :
-        entry.tags.some(tag => /^(?:marvel(?: cinematic universe)?|star wars|kingdom hearts|frozen(?: \\(disney\\))?)$/i.test(tag)) ? "disney" : "";
+        entry.tags.some(tag => /^(?:marvel(?: cinematic universe)?|star wars|kingdom hearts|frozen(?: \(disney\))?)$/i.test(tag)) ? "disney" : "";
       const forcedRoot = forcedRootKey ? roots.find(root => root.normalized === forcedRootKey && root.group !== entry.group) : null;
       const candidate = forcedRoot || roots.filter(root => root.group !== entry.group &&
         entry.normalizedTags.some(tag => tag.startsWith(root.normalized) && tag.length > root.normalized.length))
@@ -339,7 +339,7 @@
       '<button class="category-major-button' + (!state.major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="">すべての分類 <span class="count">' + state.all.length.toLocaleString("ja-JP") + '</span></button>' +
       majors.map(([major,entry]) => {
         const minors = [...entry.minors.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja"));
-        return '<div class="category-major' + (state.major === major ? ' is-expanded' : '') + '><button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button>' +
+        return '<div class="category-major' + (state.major === major ? ' is-expanded' : '') + '"><button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button>' +
           '<div class="category-minors">' + minors.map(([minor,n]) => '<button class="category-minor' + (state.minor === minor ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button>').join("") + '</div></div>';
       }).join("");
   }
