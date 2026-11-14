@@ -515,3 +515,5 @@ body{font-size:14px;line-height:1.65}
 .prompt-bubble-action:hover{background:var(--accent);color:var(--bg)}
 .prompt-bubble-empty{color:var(--muted);font-size:11px}
 @media(max-width:600px){.prompt-bubble{gap:4px;padding:5px}.prompt-bubble-label{max-width:38vw}.prompt-bubble-action{padding:5px}}
+
+.editor-builder-panel .output-card>textarea[hidden]{display:none}
