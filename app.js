@@ -61,7 +61,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), positiveExtra: "", negativeExtra: "", escapeParentheses: false, applyWeight: false, weightValue: 1.2, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, hiddenMajorCategories: new Set(), columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, hiddenMajorCategories: new Set(), columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
   };
   let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -683,95 +683,70 @@
     renderRows();
     writeLocationState("replace");
   }
-  function promptTags() {
-    const rows = [...state.selected.values()];
-    if ($(".builder-controls input")?.checked) rows.sort((a,b) => compareMajorCategories(a.major || "", b.major || "") || Number(a.index) - Number(b.index));
-    return rows;
+  function promptTokens(value) {
+    return String(value || "").split(",").map(token => token.trim()).filter(Boolean);
   }
-  function renderSelectedTagList() {
-    const root = $("#selected-tag-list");
-    if (!root) return;
-    const rows = promptTags();
-    if (!rows.length) {
-      root.innerHTML = '<p class="empty-state">まだタグが選択されていません。</p>';
-      return;
-    }
-    const ordered = $(".builder-controls input")?.checked;
-    root.innerHTML = rows.map((row,index) => {
-      const key = keyOf(row), polarity = state.polarity.get(key) || "positive";
-      const stateLabel = polarity === "negative" ? "ネガティブ" : "ポジティブ";
-      return '<div class="selected-tag-item" data-key="' + escapeHTML(key) + '">' +
-        '<div class="selected-tag-copy"><strong>' + escapeHTML(row.ja || row.tag) + '</strong><small>' + escapeHTML(row.tag) + '</small><small class="selected-tag-state">' + stateLabel + '</small></div>' +
-        '<div class="selected-tag-actions"><button type="button" data-move="-1" data-key="' + escapeHTML(key) + '" aria-label="上へ移動"' + (ordered || index === 0 ? ' disabled' : '') + '>↑</button><button type="button" data-move="1" data-key="' + escapeHTML(key) + '" aria-label="下へ移動"' + (ordered || index === rows.length - 1 ? ' disabled' : '') + '>↓</button><button type="button" data-remove-selected="' + escapeHTML(key) + '" aria-label="削除">×</button></div></div>';
-    }).join("");
-    root.classList.toggle("is-sorted", Boolean(ordered));
+  function appendPromptTag(polarity, tag) {
+    const key = polarity === "negative" ? "promptNegative" : "promptPositive";
+    const tokens = promptTokens(state[key]);
+    if (!tokens.includes(tag)) tokens.push(tag);
+    state[key] = tokens.join(", ");
+    const output = $(polarity === "negative" ? "#negative-output" : "#positive-output");
+    if (output) output.value = state[key];
   }
-  function formatPromptTag(tag) {
-    let value = String(tag || "");
-    if (state.escapeParentheses) value = value.replace(/([()])/g, "\\$1");
-    if (state.applyWeight) {
-      const weight = Number(state.weightValue || 1.2).toFixed(2).replace(/0+$/, "").replace(/\.$/, "");
-      value = "(" + value + ":" + weight + ")";
-    }
-    return value;
-  }
-  function updatePromptOutputs() {
-    const rows = promptTags();
-    const positiveRows = rows.filter(row => (state.polarity.get(keyOf(row)) || "positive") === "positive");
-    const negativeRows = rows.filter(row => state.polarity.get(keyOf(row)) === "negative");
-    const positive = $("#positive-output"), negative = $("#negative-output");
-    if (positive) positive.value = [...positiveRows.map(row => formatPromptTag(row.tag)), state.positiveExtra.trim()].filter(Boolean).join(", ");
-    if (negative) negative.value = [...negativeRows.map(row => formatPromptTag(row.tag)), state.negativeExtra.trim()].filter(Boolean).join(", ");
+  function removePromptTag(polarity, tag) {
+    const key = polarity === "negative" ? "promptNegative" : "promptPositive";
+    state[key] = promptTokens(state[key]).filter(token => token !== tag).join(", ");
+    const output = $(polarity === "negative" ? "#negative-output" : "#positive-output");
+    if (output) output.value = state[key];
   }
   function saveBuilderState() {
-    try {
-      writeUserDataV2({ builderState: {
-        selected: [...state.selected.keys()], polarity: [...state.polarity.entries()],
-        positiveExtra: state.positiveExtra, negativeExtra: state.negativeExtra,
-        escapeParentheses: state.escapeParentheses, applyWeight: state.applyWeight, weightValue: state.weightValue
-      } });
-    } catch {}
+    writeUserDataV2({ builderState: {
+      selected: [...state.selected.keys()], polarity: [...state.polarity.entries()],
+      promptPositive: state.promptPositive, promptNegative: state.promptNegative
+    } });
   }
   function restoreBuilderState() {
     if (state.selectionRestored) return;
     state.selectionRestored = true;
     try {
       const saved = readUserDataV2()?.builderState || null;
-      if (!saved || typeof saved !== "object") return;
-      const rowsByKey = new Map(state.all.map(row => [keyOf(row), row]));
-      if (Array.isArray(saved.selected)) saved.selected.forEach(key => {
-        const row = rowsByKey.get(key);
-        if (row) state.selected.set(key, row);
-      });
-      if (Array.isArray(saved.polarity)) saved.polarity.forEach(([key, value]) => {
-        if (state.selected.has(key) && (value === "positive" || value === "negative")) state.polarity.set(key, value);
-      });
-      state.selected.forEach((row, key) => { if (!state.polarity.has(key)) state.polarity.set(key, "positive"); });
-      state.positiveExtra = typeof saved.positiveExtra === "string" ? saved.positiveExtra : "";
-      state.negativeExtra = typeof saved.negativeExtra === "string" ? saved.negativeExtra : "";
-      state.escapeParentheses = saved.escapeParentheses === true;
-      state.applyWeight = saved.applyWeight === true;
-      state.weightValue = Number.isFinite(Number(saved.weightValue)) ? Math.max(0.1, Math.min(2, Number(saved.weightValue))) : 1.2;
-    } catch {}
-    $("#positive-extra").value = state.positiveExtra;
-    $("#negative-extra").value = state.negativeExtra;
-    $("#escape-parentheses").checked = state.escapeParentheses;
-    $("#apply-weight").checked = state.applyWeight;
-    $("#weight-value").value = String(state.weightValue);
+      if (saved && typeof saved === "object") {
+        const rowsByKey = new Map(state.all.map(row => [keyOf(row), row]));
+        if (Array.isArray(saved.selected)) saved.selected.forEach(key => {
+          const row = rowsByKey.get(key);
+          if (row) state.selected.set(key, row);
+        });
+        if (Array.isArray(saved.polarity)) saved.polarity.forEach(([key, value]) => {
+          if (state.selected.has(key) && (value === "positive" || value === "negative")) state.polarity.set(key, value);
+        });
+        state.selected.forEach((row, key) => { if (!state.polarity.has(key)) state.polarity.set(key, "positive"); });
+        if (typeof saved.promptPositive === "string" && typeof saved.promptNegative === "string") {
+          state.promptPositive = saved.promptPositive;
+          state.promptNegative = saved.promptNegative;
+        } else {
+          const positive = [], negative = [];
+          state.selected.forEach((row, key) => (state.polarity.get(key) === "negative" ? negative : positive).push(row.tag));
+          if (typeof saved.positiveExtra === "string" && saved.positiveExtra.trim()) positive.push(saved.positiveExtra.trim());
+          if (typeof saved.negativeExtra === "string" && saved.negativeExtra.trim()) negative.push(saved.negativeExtra.trim());
+          state.promptPositive = positive.join(", ");
+          state.promptNegative = negative.join(", ");
+        }
+      }
+    } catch (error) { console.warn("プロンプト編集内容を復元できませんでした。", error); }
+    $("#positive-output").value = state.promptPositive;
+    $("#negative-output").value = state.promptNegative;
   }
   function renderEditor() {
-    updatePromptOutputs();
     saveBuilderState();
-    const rows = promptTags();
-    const positive = $("#positive-output"), negative = $("#negative-output");
-    renderSelectedTagList();
-    const count = state.selected.size;
+    const rows = [...state.selected.values()], count = state.selected.size;
     $$(".stats strong")[1].textContent = String(count);
     const countLabel = $(".selected-dock-count");
     if (countLabel) countLabel.textContent = count + " 件選択中";
     const chips = $(".selected-dock-tags");
-    if (chips) chips.innerHTML = rows.slice(0, 8).map(row => '<span class="selected-dock-chip"><span title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</span><button class="selected-dock-remove" type="button" data-remove="' + escapeHTML(keyOf(row)) + '" aria-label="削除">×</button></span>').join("") + (count > 8 ? '<span class="selected-dock-more">+' + (count - 8) + '件</span>' : '');
+    if (chips) chips.innerHTML = rows.slice(0, 8).map(row => '<span class="selected-dock-chip"><span title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</span><button class="selected-dock-remove" type="button" data-remove="' + escapeHTML(keyOf(row)) + '" aria-label="削除">×</button></span>').join("") + (count > 8 ? '<span class="selected-dock-more">+' + (count - 8) + '件</span>' : "");
     const dock = $(".selected-dock"); if (dock) dock.hidden = count === 0;
+    const positive = $("#positive-output"), negative = $("#negative-output");
     $('[data-action="copy-positive"]').disabled = !positive?.value;
     $('[data-action="save-positive"]').disabled = !positive?.value;
     $('[data-action="copy-negative"]').disabled = !negative?.value;
@@ -779,36 +754,36 @@
   }
   function addRow(row) {
     const key = keyOf(row);
-    state.selected.set(key, row);
-    state.polarity.set(key, state.polarity.get(key) || "positive");
-    renderRows();
-    renderEditor();
+    if (!state.selected.has(key)) {
+      state.selected.set(key, row); state.polarity.set(key, "positive");
+      appendPromptTag("positive", row.tag);
+    }
+    renderRows(); renderEditor();
   }
   function toggleRow(row) {
     const key = keyOf(row);
     if (state.selected.has(key)) {
-      state.selected.delete(key);
-      state.polarity.delete(key);
+      removePromptTag(state.polarity.get(key) || "positive", row.tag);
+      state.selected.delete(key); state.polarity.delete(key);
     } else {
-      state.selected.set(key, row);
-      state.polarity.set(key, "positive");
+      state.selected.set(key, row); state.polarity.set(key, "positive");
+      appendPromptTag("positive", row.tag);
     }
-    renderRows();
-    renderEditor();
+    renderRows(); renderEditor();
   }
   function cycleRowState(row) {
     const key = keyOf(row);
     if (!state.selected.has(key)) {
-      state.selected.set(key, row);
-      state.polarity.set(key, "positive");
+      state.selected.set(key, row); state.polarity.set(key, "positive");
+      appendPromptTag("positive", row.tag);
     } else if (state.polarity.get(key) === "positive") {
-      state.polarity.set(key, "negative");
+      removePromptTag("positive", row.tag); state.polarity.set(key, "negative");
+      appendPromptTag("negative", row.tag);
     } else {
-      state.selected.delete(key);
-      state.polarity.delete(key);
+      removePromptTag("negative", row.tag);
+      state.selected.delete(key); state.polarity.delete(key);
     }
-    renderRows();
-    renderEditor();
+    renderRows(); renderEditor();
   }
   function showTagDetail(row) {
     const dialog = $("#tag-detail-dialog");
@@ -1076,27 +1051,12 @@
     });
     $(".selected-dock-actions [data-action='open-editor']").addEventListener("click", () => setScreen("editor-screen"));
     $(".editor-builder-panel .text-button").addEventListener("click", () => {
-      if (!state.selected.size && !state.positiveExtra && !state.negativeExtra) return;
-      if (!window.confirm("選択タグと追記内容をすべて解除しますか？")) return;
+      if (!state.selected.size && !state.promptPositive && !state.promptNegative) return;
+      if (!window.confirm("選択タグとプロンプト本文をすべて解除しますか？")) return;
       state.selected.clear(); state.polarity.clear();
-      state.positiveExtra = ""; state.negativeExtra = "";
-      $("#positive-extra").value = ""; $("#negative-extra").value = "";
+      state.promptPositive = ""; state.promptNegative = "";
+      $("#positive-output").value = ""; $("#negative-output").value = "";
       renderRows(); renderEditor();
-    });
-    $("#selected-tag-list").addEventListener("click", event => {
-      const remove = event.target.closest("[data-remove-selected]");
-      if (remove) {
-        state.selected.delete(remove.dataset.removeSelected); state.polarity.delete(remove.dataset.removeSelected);
-        renderRows(); renderEditor(); return;
-      }
-      const move = event.target.closest("[data-move]");
-      if (!move || move.disabled || $(".builder-controls input").checked) return;
-      const entries = [...state.selected.entries()];
-      const index = entries.findIndex(([key]) => key === move.dataset.key);
-      const target = index + Number(move.dataset.move);
-      if (index < 0 || target < 0 || target >= entries.length) return;
-      [entries[index],entries[target]] = [entries[target],entries[index]];
-      state.selected = new Map(entries); renderEditor();
     });
     $("#tag-detail-dialog").addEventListener("click", event => {
       if (event.target === $("#tag-detail-dialog") || event.target.closest(".detail-close")) {
@@ -1108,57 +1068,11 @@
         if (row) addRow(row);
       }
     });
-    const addInput = $(".preview-add-row input");
-    const addButton = $(".preview-add-row button");
-    const addCandidates = $("#preview-add-candidates");
-    function updateAddButton() {
-      const q = normalizeSearchText(addInput.value.trim());
-      if (!q) {
-        addButton.disabled = true;
-        addButton.dataset.key = "";
-        addCandidates.hidden = true;
-        addCandidates.innerHTML = "";
-        return;
-      }
-      const ranked = state.all.map(row => {
-        const fields = [row.tag, row.ja, ...parseAliases(row.aliases_json)].map(normalizeSearchText).filter(Boolean);
-        const exact = fields.some(value => value === q);
-        const prefix = fields.some(value => value.startsWith(q));
-        const partial = fields.some(value => value.includes(q));
-        return { row, exact, prefix, partial };
-      }).filter(item => item.partial)
-        .sort((a,b) => Number(b.exact)-Number(a.exact) || Number(b.prefix)-Number(a.prefix) || a.row.ja.localeCompare(b.row.ja,"ja"))
-        .slice(0,8);
-      const exactMatches = ranked.filter(item => item.exact);
-      addButton.disabled = exactMatches.length !== 1;
-      addButton.dataset.key = exactMatches.length === 1 ? keyOf(exactMatches[0].row) : "";
-      addCandidates.hidden = ranked.length === 0;
-      addCandidates.innerHTML = ranked.map(({row,exact}) =>
-        '<button type="button" class="preview-add-candidate" role="option" data-add-candidate="' + escapeHTML(keyOf(row)) + '">' +
-        '<span><strong>' + escapeHTML(row.ja || row.tag) + '</strong><small>' + escapeHTML(row.tag) + '</small></span>' +
-        (exact ? '<small class="candidate-match">完全一致</small>' : '') + '</button>'
-      ).join("") || '<p class="empty-state">一致する候補はありません。</p>';
-    }
-    addInput.addEventListener("input", updateAddButton);
-    addButton.addEventListener("click", () => {
-      const row = state.all.find(item => keyOf(item) === addButton.dataset.key);
-      if (row) { addRow(row); addInput.value = ""; updateAddButton(); }
+    $("#positive-output").addEventListener("input", event => {
+      state.promptPositive = event.target.value; renderEditor();
     });
-    addCandidates.addEventListener("click", event => {
-      const candidate = event.target.closest("[data-add-candidate]");
-      if (!candidate) return;
-      const row = state.all.find(item => keyOf(item) === candidate.dataset.addCandidate);
-      if (row) { addRow(row); addInput.value = ""; updateAddButton(); addInput.focus(); }
-    });
-    $(".builder-controls input").addEventListener("change", renderEditor);
-    $("#positive-extra").addEventListener("input", event => { state.positiveExtra = event.target.value; renderEditor(); });
-    $("#negative-extra").addEventListener("input", event => { state.negativeExtra = event.target.value; renderEditor(); });
-    $("#escape-parentheses").addEventListener("change", event => { state.escapeParentheses = event.target.checked; renderEditor(); });
-    $("#apply-weight").addEventListener("change", event => { state.applyWeight = event.target.checked; renderEditor(); });
-    $("#weight-value").addEventListener("change", event => {
-      state.weightValue = Math.max(0.1, Math.min(2, Number(event.target.value) || 1.2));
-      event.target.value = String(state.weightValue);
-      renderEditor();
+    $("#negative-output").addEventListener("input", event => {
+      state.promptNegative = event.target.value; renderEditor();
     });
     $$("[data-action]").forEach(button => button.addEventListener("click", async () => {
       const action = button.dataset.action;
@@ -1181,11 +1095,11 @@
     dock.innerHTML = '<div class="selected-dock-content"><strong class="selected-dock-count">0 件選択中</strong><div class="selected-dock-tags"></div></div><div class="selected-dock-actions"><button class="button button-primary" type="button" data-action="open-editor">プロンプト編集へ</button><button class="button button-quiet" type="button" data-action="clear-selection">全解除</button></div>';
     document.body.append(dock);
     dock.querySelector('[data-action="clear-selection"]').addEventListener("click", () => {
-      if (!state.selected.size && !state.positiveExtra && !state.negativeExtra) return;
-      if (!window.confirm("選択タグと追記内容をすべて解除しますか？")) return;
+      if (!state.selected.size && !state.promptPositive && !state.promptNegative) return;
+      if (!window.confirm("選択タグとプロンプト本文をすべて解除しますか？")) return;
       state.selected.clear(); state.polarity.clear();
-      state.positiveExtra = ""; state.negativeExtra = "";
-      $("#positive-extra").value = ""; $("#negative-extra").value = "";
+      state.promptPositive = ""; state.promptNegative = "";
+      $("#positive-output").value = ""; $("#negative-output").value = "";
       renderRows(); renderEditor();
     });
   }
