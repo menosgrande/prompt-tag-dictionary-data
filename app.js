@@ -704,7 +704,7 @@
   }
   function parsePromptItem(value) {
     let text = String(value || "").trim(), weight = null;
-    const weighted = text.match(/^\\((.*):([0-9]+(?:\\.[0-9]+)?)\\)$/);
+    const weighted = text.match(/^\((.*):([0-9]+(?:\.[0-9]+)?)\)$/);
     if (weighted) {
       const number = Number(weighted[2]);
       if (Number.isFinite(number) && number >= 0.1 && number <= 2) {
@@ -719,7 +719,7 @@
     return splitPromptText(value).map(parsePromptItem).filter(item => item.text);
   }
   function formatPromptWeight(value) {
-    return Number(value).toFixed(2).replace(/0+$/, "").replace(/\\.$/, "");
+    return Number(value).toFixed(2).replace(/0+$/, "").replace(/\.$/, "");
   }
   function serializePromptItems(items) {
     return items.map(item => item.weight === null || item.weight === undefined
@@ -793,7 +793,7 @@
         const restoreItems = (savedItems, text) => Array.isArray(savedItems)
           ? savedItems.filter(item => item && typeof item.text === "string" && item.text.trim()).map(item => ({
               text: item.text.trim(),
-              weight: item.weight === null || item.weight === undefined ? null : Math.max(0.1, Math.min(2, Math.round(Number(item.weight) * 100) / 100)),
+              weight: item.weight === null || item.weight === undefined || !Number.isFinite(Number(item.weight)) ? null : Math.max(0.1, Math.min(2, Math.round(Number(item.weight) * 100) / 100)),
               key: typeof item.key === "string" && rowsByKey.has(item.key) ? item.key : null
             }))
           : parsePromptItems(text);
@@ -944,15 +944,26 @@
     const textarea = $(polarity === "negative" ? "#negative-output" : "#positive-output");
     const parsed = parsePromptItems(textarea?.value || "");
     setPromptItems(polarity, parsed);
+    syncSelectedToPromptItems(polarity, parsed);
     state.promptMode = null;
     state.activeBubble = null;
     renderEditor();
+  }
+  function syncSelectedToPromptItems(polarity, items) {
+    const present = new Set(items.map(item => item.key).filter(Boolean));
+    [...state.selected.keys()].forEach(key => {
+      if (state.polarity.get(key) === polarity && !present.has(key)) {
+        state.selected.delete(key);
+        state.polarity.delete(key);
+      }
+    });
   }
   function syncPromptTextInput(polarity, value) {
     state[promptStateKey(polarity)] = value;
     const parsed = parsePromptItems(value);
     if (polarity === "negative") state.promptItemsNegative = parsed;
     else state.promptItemsPositive = parsed;
+    syncSelectedToPromptItems(polarity, parsed);
     saveBuilderState();
     renderPromptAutocomplete(polarity);
     const hasValue = Boolean(value.trim());
@@ -1367,6 +1378,7 @@
         const panel = $("[data-autocomplete='" + polarity + "']");
         const option = panel?.querySelector(".prompt-autocomplete-option");
         if (event.key === "Escape" && panel && !panel.hidden) { panel.hidden = true; event.stopPropagation(); }
+        else if (event.key === "ArrowDown" && option && !panel.hidden) { event.preventDefault(); option.focus(); }
         else if (event.key === "Enter" && option && !panel.hidden) { event.preventDefault(); applyPromptAutocomplete(polarity, option.dataset.autocompleteTag); }
       });
       const region = $("[data-prompt-region='" + polarity + "']");
@@ -1378,7 +1390,7 @@
           state.activeBubble = { polarity, index: -1, editing: true, creating: true };
           renderEditor();
           const input = $("[data-bubble-toolbar='" + polarity + "'] [data-bubble-edit-input]");
-          if (input) { input.hidden = false; input.focus(); }
+          if (input) { input.value = ""; input.hidden = false; input.focus(); }
           return;
         }
         const bubble = event.target.closest("[data-bubble-index]");
