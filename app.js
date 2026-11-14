@@ -456,7 +456,7 @@
         '<button type="button" class="tag-english tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</button>' +
         '<button type="button" class="tag-japanese tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</button>' +
         '<span class="tag-major" title="大分類">' + escapeHTML(row.major || "未分類") + '</span>' +
-        '<span class="expression-level-cell" role="group" aria-label="表現レベル">' + [0,1,2,3,4].map(level => '<button type="button" class="expression-level-button' + (expressionLevelFor(row) === level ? ' is-active' : '') + '" data-expression-level="' + escapeHTML(key) + '" data-level="' + level + '" aria-pressed="' + (expressionLevelFor(row) === level ? 'true' : 'false') + '" title="表現レベル ' + level + '">' + level + '</button>').join("") + '</span>' +
+        '<span class="expression-level-cell"><button type="button" class="expression-level-button' + (expressionLevelFor(row) === null ? ' is-unset' : ' level-' + expressionLevelFor(row)) + '" data-expression-level="' + escapeHTML(key) + '" aria-label="表現ランク ' + (expressionLevelFor(row) === null ? '未設定' : expressionLevelFor(row)) + '。クリックで次のランクへ" title="表現ランク ' + (expressionLevelFor(row) === null ? '未設定' : expressionLevelFor(row)) + '：クリックで次へ">' + (expressionLevelFor(row) === null ? '—' : expressionLevelFor(row)) + '</button></span>' +
         '<span class="tag-detail-cell"><button type="button" class="tag-detail-button" data-detail="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + ' の詳細" title="タグの詳細情報">ⓘ</button></span>' +
       '</div>';
     }).join("") : '<div class="empty-state">条件に一致するタグはありません。</div>';
@@ -661,10 +661,10 @@
       const levelButton = event.target.closest("[data-expression-level]");
       if (levelButton) {
         const key = levelButton.dataset.expressionLevel;
-        const level = Number(levelButton.dataset.level);
         const row = state.all.find(item => keyOf(item) === key);
         if (row) {
-          state.expressionLevels.set(key, expressionLevelFor(row) === level ? null : level);
+          const current = expressionLevelFor(row);
+          state.expressionLevels.set(key, current === null ? 0 : (current + 1) % 5);
           saveExpressionLevels();
           renderRows();
         }
