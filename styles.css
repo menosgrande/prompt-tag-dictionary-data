@@ -473,3 +473,17 @@ body{font-size:14px;line-height:1.65}
 .preview-add-candidate small{overflow:hidden;color:var(--muted);font:10px var(--mono);text-overflow:ellipsis;white-space:nowrap}
 .preview-add-candidate .candidate-match{flex-shrink:0;color:var(--accent-strong)}
 @media(max-width:760px){.preview-add-candidates{margin-right:10px;margin-left:10px}.preview-add-candidate{min-height:38px}}
+
+
+/* Per-user visibility controls for major category navigation. */
+.category-major-row{display:flex;align-items:center;gap:4px}
+.category-major-row>.category-major-button{flex:1;min-width:0}
+.category-visibility{display:inline-flex;flex:0 0 auto;align-items:center;gap:3px;padding:5px 4px;border-radius:4px;color:var(--muted-2);font-size:9px;white-space:nowrap;cursor:pointer}
+.category-visibility:hover{background:var(--surface-hover);color:var(--text)}
+.category-visibility input{width:13px;height:13px;margin:0;accent-color:var(--accent)}
+.category-hidden-list{margin:8px 2px 2px;padding-top:7px;border-top:1px solid var(--line-soft)}
+.category-hidden-list>summary{padding:6px 7px;color:var(--muted);font-size:10px;cursor:pointer;list-style:none}
+.category-hidden-list>summary::-webkit-details-marker{display:none}
+.category-hidden-list>div{display:grid;gap:2px;padding:3px 4px 6px}
+.category-hidden-list .category-visibility{justify-content:flex-start;padding:6px}
+.category-show-all{justify-self:start;margin:5px 6px;padding:4px 0;border:0;background:none;color:var(--accent-strong);font-size:10px;cursor:pointer}
