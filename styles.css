@@ -528,8 +528,8 @@ body{font-size:14px;line-height:1.65}
 .editor-builder-panel .output-card:first-child .output-header label{color:#8fc9b1}
 .editor-builder-panel .output-card:last-child .output-header label{color:#e5a0a8}
 .editor-builder-panel .prompt-bubble-editor{min-height:0;padding:0 10px;border:1px solid var(--line-soft);border-radius:18px;background:rgba(12,17,23,.34)}
-.editor-builder-panel .prompt-bubbles{align-items:center;gap:8px;min-height:0}
-.editor-builder-panel .prompt-bubble{position:relative;gap:7px;width:max-content;max-width:min(88%,560px);padding:9px 12px;border:1px solid #466b60;border-radius:999px;background:#29483f;color:#e8f4ee;box-shadow:0 2px 5px #0002;cursor:grab;touch-action:none;user-select:none;transition:box-shadow 150ms ease}
+.editor-builder-panel .prompt-bubbles{align-items:center;column-gap:8px;row-gap:5px;min-height:0}
+.editor-builder-panel .prompt-bubble{position:relative;gap:7px;width:max-content;max-width:min(88%,560px);padding:5px 12px;border:1px solid #466b60;border-radius:999px;background:#29483f;color:#e8f4ee;box-shadow:0 2px 5px #0002;cursor:grab;touch-action:none;user-select:none;transition:box-shadow 150ms ease}
 .editor-builder-panel .output-card:last-child .prompt-bubble{border-color:#76515a;border-radius:999px;background:#4a3037;color:#f7e9eb}
 .editor-builder-panel .prompt-bubble:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px}
 .editor-builder-panel .prompt-bubble.is-dragging{z-index:1000;cursor:grabbing;opacity:.96;box-shadow:0 12px 28px #0007;transform:scale(1.025)}
@@ -542,5 +542,5 @@ body{font-size:14px;line-height:1.65}
 .editor-builder-panel .prompt-bubble-empty{align-self:center;padding:8px 10px;color:var(--muted-2);font-size:11px;cursor:text}
 .editor-builder-panel .output-actions{justify-content:flex-end;padding:7px 3px 0;border:0}
 .editor-builder-panel .output-card>textarea{min-height:150px;margin-top:8px}
-@media(max-width:600px){.editor-builder-panel .output-grid{padding:8px;gap:12px}.editor-builder-panel .prompt-bubble-editor{padding:0 7px}.editor-builder-panel .prompt-bubble{max-width:94%;padding:8px 10px}.editor-builder-panel .prompt-bubble-label{max-width:68vw;font-size:11px}}
+@media(max-width:600px){.editor-builder-panel .output-grid{padding:8px;gap:12px}.editor-builder-panel .prompt-bubble-editor{padding:0 7px}.editor-builder-panel .prompt-bubble{max-width:94%;padding:4px 10px}.editor-builder-panel .prompt-bubble-label{max-width:68vw;font-size:11px}}
 .editor-builder-panel .output-card:has(textarea:not([hidden])) .output-header [data-editor-mode]{display:inline-flex}
