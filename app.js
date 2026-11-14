@@ -248,6 +248,7 @@
   function normalizeSearchText(value) {
     return String(value ?? "").normalize("NFKC").normalize("NFKD")
       .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[\u30a1-\u30f6]/g, char => String.fromCharCode(char.charCodeAt(0) - 0x60))
       .toLocaleLowerCase()
       .replace(/[\s\p{P}\p{S}]+/gu, "");
   }
@@ -849,7 +850,6 @@
     if (search) search.value = state.query;
     $("#favorites-only").checked = state.favoritesOnly;
     state.queryTerms = state.query.split(/\s+/).map(normalizeSearchText).filter(Boolean);
-    if (state.query && !state.relatedIndexesReady) ensureRelatedIndexes();
     renderCategories();
     renderTableTools();
     setScreen(screen, { historyMode: "none" });
