@@ -1196,6 +1196,14 @@
     $("#negative-output").addEventListener("input", event => {
       state.promptNegative = event.target.value; syncSelectedFromPromptText(); renderRows(); renderEditor();
     });
+    ["positive","negative"].forEach(target => {
+      const output = $("#" + target + "-output");
+      const modeButton = $('[data-editor-mode="' + target + '"]');
+      output.addEventListener("blur", event => {
+        // 明示的な切替ボタンへ移動した場合は、ボタン側の処理に任せる。
+        if (event.relatedTarget !== modeButton) setPromptEditorMode(target, "bubble");
+      });
+    });
     ["positive","negative"].forEach(target=>{
       const editor=$("#"+target+"-bubble-editor"),bubbles=$("#"+target+"-bubbles");
       editor.addEventListener("click",event=>{
