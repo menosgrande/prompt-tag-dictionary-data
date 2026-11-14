@@ -427,7 +427,7 @@ body{font-size:14px;line-height:1.65}
 .table-head-cell.header-menu-cell[data-column="level"] .column-menu>summary{font-size:14px;line-height:1}
 .header-title{display:block;min-width:0;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .column-menu{position:relative;display:inline-flex;flex:1 1 auto;min-width:0;align-items:center}
-.column-menu>summary{display:block;max-width:100%;padding:3px 2px;border:0;border-radius:3px;color:var(--muted);font-size:10px;line-height:1.2;list-style:none;cursor:pointer;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px}
+.column-menu>summary{display:block;max-width:100%;padding:3px 2px;border:0;border-radius:3px;color:var(--muted);font-size:10px;line-height:1.2;list-style:none;cursor:pointer;text-decoration-line:underline;text-decoration-style:dotted;text-decoration-color:rgba(159,199,192,.48);text-underline-offset:3px}
 .column-menu>summary::-webkit-details-marker{display:none}
 .column-menu>summary:hover,.column-menu[open]>summary{background:var(--surface-hover);color:var(--accent-strong);text-decoration-color:currentColor}
 .column-menu-panel{position:fixed;top:10px;left:10px;z-index:60;display:grid;gap:10px;width:max-content;min-width:170px;max-width:min(280px,calc(100vw - 32px));max-height:min(65vh,440px);overflow:auto;padding:11px;border:1px solid var(--line);border-radius:8px;background:var(--surface-raised);box-shadow:0 12px 30px #0008;color:var(--text);white-space:normal}
