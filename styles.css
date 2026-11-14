@@ -446,3 +446,19 @@ body{font-size:14px;line-height:1.65}
 @media(max-width:760px){
   .column-menu-panel{width:min(280px,calc(100vw - 20px));max-width:none;max-height:55vh}
 }
+
+
+/* Prompt output controls and persistent manual additions. */
+.output-settings{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 14px;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);color:var(--muted);font-size:11px}
+.output-settings>strong{color:var(--text);font-size:11px}
+.output-settings>label{display:inline-flex;align-items:center;gap:5px}
+.output-settings input[type="checkbox"]{accent-color:var(--accent)}
+.weight-setting input{width:66px;min-height:28px;padding:4px 6px;border:1px solid var(--line);border-radius:5px;background:var(--surface-raised);color:var(--text);font:inherit}
+.output-card>textarea[readonly]{cursor:default;opacity:.92}
+.output-extra-label{display:block;margin:9px 0 4px;color:var(--muted);font-size:10px}
+.output-card>textarea.output-extra{min-height:72px;height:72px;font-size:12px}
+.output-card>textarea.output-extra:focus{border-color:var(--accent);outline:1px solid var(--accent)}
+@media(max-width:600px){
+  .output-settings{align-items:flex-start;gap:8px 12px;padding:9px}
+  .output-settings>strong{width:100%}
+}
