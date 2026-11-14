@@ -70,6 +70,11 @@
     </section>
     <section id="editor-screen" class="app-screen editor-screen" hidden>
       <section class="editor-intro"><h1>プロンプト編集</h1><p>辞典から選んだタグを並べ、コピーまたはテキストファイルに保存します。</p></section>
+      <details id="migration-unresolved-panel" class="migration-unresolved-panel" hidden>
+        <summary id="migration-unresolved-summary">移行できなかった設定</summary>
+        <p>旧形式の保存データから対応先を特定できなかった項目です。内容を確認するまで旧保存データは削除しないでください。</p>
+        <ul id="migration-unresolved-list"></ul>
+      </details>
       <section class="panel builder-panel editor-builder-panel">
         <div class="panel-heading"><div><h2>選択したタグ</h2></div><button class="text-button" type="button">全解除</button></div>
         <div class="preview-add-row"><label>タグを直接追加<input type="search" placeholder="英語タグまたは日本語訳を完全一致で入力" autocomplete="off"></label><button class="button button-secondary" type="button" disabled>＋ 追加</button></div>
@@ -107,6 +112,6 @@
   <footer class="footer"><span>CSVを正本として表示</span></footer>
   </main>
   <script src="./csv.js?v=csv-parser-20261114"></script>
-  <script src="./app.js?v=escape-url-fix-20261114"></script>
+  <script src="./app.js?v=stable-user-ids-20261114"></script>
 </body>
 </html>
