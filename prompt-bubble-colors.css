@@ -8,6 +8,9 @@
   box-shadow: none;
   outline: none;
 }
+.editor-builder-panel .prompt-bubbles {
+  min-height: 206px;
+}
 .editor-builder-panel .prompt-bubble {
   border: 1px solid #35c85a;
   border-radius: 999px;
@@ -48,5 +51,8 @@
   .editor-builder-panel .prompt-bubble-editor:focus-within {
     padding: 16px;
     border-radius: 20px;
+  }
+  .editor-builder-panel .prompt-bubbles {
+    min-height: 194px;
   }
 }
