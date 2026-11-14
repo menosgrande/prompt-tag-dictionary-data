@@ -706,52 +706,57 @@
     root.replaceChildren();
     tokens.forEach((item,index) => {
       const chip = document.createElement("div");
-      chip.className = "prompt-bubble";
-      chip.draggable = true;
+      chip.className = "prompt-bubble"; chip.draggable = true; chip.tabIndex = 0;
+      chip.setAttribute("role","group");
+      chip.setAttribute("aria-label",item.tag + "。ドラッグで並べ替え、クリックで編集");
       const label = document.createElement("span");
-      label.className = "prompt-bubble-label";
-      label.textContent = item.tag;
-      label.title = item.tag;
-      const weight = document.createElement("input");
-      weight.type = "number"; weight.className = "prompt-bubble-weight";
-      weight.min = "0.1"; weight.max = "2"; weight.step = "0.01";
-      weight.placeholder = "重み"; weight.value = item.weight;
-      weight.setAttribute("aria-label", item.tag + "の重み");
-      weight.addEventListener("change", () => {
-        const value = weight.value.trim();
-        if (value && (!Number.isFinite(Number(value)) || Number(value) < 0.1 || Number(value) > 2)) {
-          weight.value = item.weight; return;
-        }
-        tokens[index].weight = value ? String(Number(value)) : "";
-        updatePromptFromBubbles(target,tokens);
+      label.className = "prompt-bubble-label"; label.textContent = item.tag;
+      label.title = "クリックしてタグ名を編集";
+      label.addEventListener("click", () => {
+        if(label.isContentEditable)return;
+        label.contentEditable="true";label.focus();
+        const range=document.createRange();range.selectNodeContents(label);
+        const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);
       });
-      const makeAction = (caption,title,handler) => {
-        const button = document.createElement("button");
-        button.type = "button"; button.className = "prompt-bubble-action";
-        button.textContent = caption; button.title = title; button.setAttribute("aria-label",title);
-        button.addEventListener("click",handler); return button;
+      const commitLabel=()=>{
+        if(!label.isContentEditable)return;
+        label.contentEditable="false";const value=label.textContent.trim();
+        if(value)tokens[index].tag=value;else label.textContent=tokens[index].tag;
+        updatePromptFromBubbles(target,tokens);
       };
-      chip.append(label,weight,
-        makeAction("↑","上へ移動",()=>{if(index>0){[tokens[index-1],tokens[index]]=[tokens[index],tokens[index-1]];updatePromptFromBubbles(target,tokens);}}),
-        makeAction("↓","下へ移動",()=>{if(index<tokens.length-1){[tokens[index+1],tokens[index]]=[tokens[index],tokens[index+1]];updatePromptFromBubbles(target,tokens);}}),
-        makeAction("編集","タグ名を編集",()=>{const value=window.prompt("タグ名を編集",item.tag);if(value!==null&&value.trim()){tokens[index].tag=value.trim();updatePromptFromBubbles(target,tokens);}}),
-        makeAction(target==="positive"?"−N":"+P",target==="positive"?"ネガティブへ移動":"ポジティブへ移動",()=>movePromptBubble(target,index,tokens)),
-        makeAction("×","削除",()=>{tokens.splice(index,1);updatePromptFromBubbles(target,tokens);}));
+      label.addEventListener("keydown",event=>{
+        if(event.key==="Enter"){event.preventDefault();label.blur();}
+        if(event.key==="Escape"){event.preventDefault();label.textContent=item.tag;label.contentEditable="false";label.blur();}
+      });
+      label.addEventListener("blur",commitLabel);
+      const weight=document.createElement("input");
+      weight.type="number";weight.className="prompt-bubble-weight";weight.min="0.1";weight.max="2";weight.step="0.01";
+      weight.placeholder="重み";weight.value=item.weight;weight.setAttribute("aria-label",item.tag+"の重み");
+      weight.addEventListener("change",()=>{
+        const value=weight.value.trim();
+        if(value&&(!Number.isFinite(Number(value))||Number(value)<0.1||Number(value)>2)){weight.value=item.weight;return;}
+        tokens[index].weight=value?String(Number(value)):"";updatePromptFromBubbles(target,tokens);
+      });
+      const remove=document.createElement("button");
+      remove.type="button";remove.className="prompt-bubble-action";remove.textContent="×";remove.title="削除";
+      remove.setAttribute("aria-label","削除");remove.addEventListener("click",()=>{tokens.splice(index,1);updatePromptFromBubbles(target,tokens);});
+      chip.append(label,weight,remove);
+      chip.addEventListener("keydown",event=>{
+        if(event.target===label&&label.isContentEditable)return;
+        if(event.ctrlKey&&event.key==="ArrowUp"){event.preventDefault();if(index>0){[tokens[index-1],tokens[index]]=[tokens[index],tokens[index-1]];updatePromptFromBubbles(target,tokens);}}
+        else if(event.ctrlKey&&event.key==="ArrowDown"){event.preventDefault();if(index<tokens.length-1){[tokens[index+1],tokens[index]]=[tokens[index],tokens[index+1]];updatePromptFromBubbles(target,tokens);}}
+        else if(event.ctrlKey&&((event.key==="ArrowLeft"&&target==="negative")||(event.key==="ArrowRight"&&target==="positive"))){event.preventDefault();movePromptBubble(target,index,tokens);}
+        else if((event.key==="Delete"||event.key==="Backspace")&&event.target===chip){event.preventDefault();tokens.splice(index,1);updatePromptFromBubbles(target,tokens);}
+      });
       chip.addEventListener("dragstart",event=>{event.dataTransfer.setData("text/plain",String(index));event.dataTransfer.effectAllowed="move";});
       chip.addEventListener("dragover",event=>{event.preventDefault();event.dataTransfer.dropEffect="move";});
       chip.addEventListener("drop",event=>{
-        event.preventDefault();
-        const from=Number(event.dataTransfer.getData("text/plain"));
-        if(Number.isInteger(from)&&from!==index&&tokens[from]){
-          const [moved]=tokens.splice(from,1);tokens.splice(index,0,moved);updatePromptFromBubbles(target,tokens);
-        }
+        event.preventDefault();const from=Number(event.dataTransfer.getData("text/plain"));
+        if(Number.isInteger(from)&&from!==index&&tokens[from]){const [moved]=tokens.splice(from,1);tokens.splice(index,0,moved);updatePromptFromBubbles(target,tokens);}
       });
       root.append(chip);
     });
-    if (!tokens.length) {
-      const empty=document.createElement("span");empty.className="prompt-bubble-empty";
-      empty.textContent="タグを選択するか、上の欄から追加してください。";root.append(empty);
-    }
+    if(!tokens.length){const empty=document.createElement("span");empty.className="prompt-bubble-empty";empty.textContent="辞典からタグを選ぶか、この余白をクリックして入力";root.append(empty);}
   }
   function updatePromptFromBubbles(target,tokens) {
     const key=target==="negative"?"promptNegative":"promptPositive";
@@ -1190,6 +1195,14 @@
     });
     $("#negative-output").addEventListener("input", event => {
       state.promptNegative = event.target.value; syncSelectedFromPromptText(); renderRows(); renderEditor();
+    });
+    ["positive","negative"].forEach(target=>{
+      const editor=$("#"+target+"-bubble-editor"),bubbles=$("#"+target+"-bubbles");
+      editor.addEventListener("click",event=>{
+        if(event.target===editor||event.target===bubbles||event.target.classList.contains("prompt-bubble-empty")){
+          setPromptEditorMode(target,"text");$("#"+target+"-output").focus();
+        }
+      });
     });
     $$("[data-editor-mode]").forEach(button=>button.addEventListener("click",()=>{
       const target=button.dataset.editorMode;
