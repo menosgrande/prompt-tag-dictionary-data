@@ -1237,6 +1237,17 @@
         setPromptEditorMode(target, "bubble");
       });
     });
+    // iOS Safariでは、フォーカスできない余白や要素をタップしても
+    // textareaのblurが発生しない場合があるため、外側へのタップでもバブル表示へ戻す。
+    document.addEventListener("pointerdown", event => {
+      ["positive","negative"].forEach(target => {
+        if (state.editorModes[target] !== "text") return;
+        const output = $("#" + target + "-output");
+        if (output && event.target !== output && !output.contains(event.target)) {
+          setPromptEditorMode(target, "bubble");
+        }
+      });
+    }, true);
     ["positive","negative"].forEach(target=>{
       const editor=$("#"+target+"-bubble-editor"),bubbles=$("#"+target+"-bubbles");
       editor.addEventListener("click",event=>{
