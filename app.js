@@ -706,7 +706,8 @@
     root.replaceChildren();
     tokens.forEach((item,index) => {
       const chip = document.createElement("div");
-      chip.className = "prompt-bubble"; chip.draggable = true; chip.tabIndex = 0;
+      chip.className = "prompt-bubble"; chip.tabIndex = 0;
+      chip._promptToken = item;
       chip.setAttribute("role","group");
       chip.setAttribute("aria-label",item.tag + "。ドラッグで並べ替え、クリックで編集");
       const label = document.createElement("span");
@@ -729,18 +730,10 @@
         if(event.key==="Escape"){event.preventDefault();label.textContent=item.tag;label.contentEditable="false";label.blur();}
       });
       label.addEventListener("blur",commitLabel);
-      const weight=document.createElement("input");
-      weight.type="number";weight.className="prompt-bubble-weight";weight.min="0.1";weight.max="2";weight.step="0.01";
-      weight.placeholder="重み";weight.value=item.weight;weight.setAttribute("aria-label",item.tag+"の重み");
-      weight.addEventListener("change",()=>{
-        const value=weight.value.trim();
-        if(value&&(!Number.isFinite(Number(value))||Number(value)<0.1||Number(value)>2)){weight.value=item.weight;return;}
-        tokens[index].weight=value?String(Number(value)):"";updatePromptFromBubbles(target,tokens);
-      });
       const remove=document.createElement("button");
       remove.type="button";remove.className="prompt-bubble-action";remove.textContent="×";remove.title="削除";
       remove.setAttribute("aria-label","削除");remove.addEventListener("click",()=>{tokens.splice(index,1);updatePromptFromBubbles(target,tokens);});
-      chip.append(label,weight,remove);
+      chip.append(label,remove);
       chip.addEventListener("keydown",event=>{
         if(event.target===label&&label.isContentEditable)return;
         if(event.ctrlKey&&event.key==="ArrowUp"){event.preventDefault();if(index>0){[tokens[index-1],tokens[index]]=[tokens[index],tokens[index-1]];updatePromptFromBubbles(target,tokens);}}
@@ -748,12 +741,54 @@
         else if(event.ctrlKey&&((event.key==="ArrowLeft"&&target==="negative")||(event.key==="ArrowRight"&&target==="positive"))){event.preventDefault();movePromptBubble(target,index,tokens);}
         else if((event.key==="Delete"||event.key==="Backspace")&&event.target===chip){event.preventDefault();tokens.splice(index,1);updatePromptFromBubbles(target,tokens);}
       });
-      chip.addEventListener("dragstart",event=>{event.dataTransfer.setData("text/plain",String(index));event.dataTransfer.effectAllowed="move";});
-      chip.addEventListener("dragover",event=>{event.preventDefault();event.dataTransfer.dropEffect="move";});
-      chip.addEventListener("drop",event=>{
-        event.preventDefault();const from=Number(event.dataTransfer.getData("text/plain"));
-        if(Number.isInteger(from)&&from!==index&&tokens[from]){const [moved]=tokens.splice(from,1);tokens.splice(index,0,moved);updatePromptFromBubbles(target,tokens);}
+      let pointerStart=null, pointerDragging=false, suppressNextClick=false;
+      label.addEventListener("click",event=>{
+        if(suppressNextClick){event.preventDefault();event.stopImmediatePropagation();suppressNextClick=false;}
+      },true);
+      chip.addEventListener("pointerdown",event=>{
+        if(event.button!==0||label.isContentEditable||event.target.closest(".prompt-bubble-action"))return;
+        pointerStart={id:event.pointerId,x:event.clientX,y:event.clientY};
+        pointerDragging=false;
       });
+      chip.addEventListener("pointermove",event=>{
+        if(!pointerStart||event.pointerId!==pointerStart.id)return;
+        if(!pointerDragging&&Math.hypot(event.clientX-pointerStart.x,event.clientY-pointerStart.y)>5){
+          pointerDragging=true;chip.classList.add("is-dragging");chip.setPointerCapture(event.pointerId);
+        }
+        if(!pointerDragging)return;
+        event.preventDefault();
+        const hit=document.elementFromPoint(event.clientX,event.clientY);
+        const other=hit&&hit.closest(".prompt-bubble");
+        if(!other||other===chip||other.parentElement!==root)return;
+        const rect=other.getBoundingClientRect();
+        const after=event.clientY>rect.top+rect.height/2||
+          (Math.abs(event.clientY-(rect.top+rect.height/2))<rect.height/3&&event.clientX>rect.left+rect.width/2);
+        const beforeNode=after?other.nextElementSibling:other;
+        if(beforeNode!==chip&&beforeNode!==chip.nextElementSibling){
+          const before=[...root.children].filter(node=>node.classList.contains("prompt-bubble"));
+          const positions=new Map(before.map(node=>[node,node.getBoundingClientRect()]));
+          root.insertBefore(chip,beforeNode);
+          before.forEach(node=>{
+            const first=positions.get(node),last=node.getBoundingClientRect();
+            const dx=first.left-last.left,dy=first.top-last.top;
+            if(dx||dy){node.style.transition="none";node.style.transform="translate("+dx+"px,"+dy+"px)";requestAnimationFrame(()=>{
+              node.style.transition="transform 150ms ease";node.style.transform="";
+            });}
+          });
+        }
+      });
+      const finishPointerDrag=event=>{
+        if(!pointerStart||event.pointerId!==pointerStart.id)return;
+        if(pointerDragging){
+          suppressNextClick=true;
+          chip.classList.remove("is-dragging");
+          const ordered=[...root.querySelectorAll(".prompt-bubble")].map(node=>node._promptToken);
+          updatePromptFromBubbles(target,ordered);
+        }
+        pointerStart=null;pointerDragging=false;
+      };
+      chip.addEventListener("pointerup",finishPointerDrag);
+      chip.addEventListener("pointercancel",finishPointerDrag);
       root.append(chip);
     });
     if(!tokens.length){const empty=document.createElement("span");empty.className="prompt-bubble-empty";empty.textContent="辞典からタグを選ぶか、この余白をクリックして入力";root.append(empty);}
@@ -817,8 +852,6 @@
     state.editorModes[target]=mode;
     $("#"+target+"-bubble-editor").hidden=mode!=="bubble";
     $("#"+(positive?"positive-output":"negative-output")).hidden=mode!=="text";
-    const button=$('[data-editor-mode="'+target+'"]');
-    if(button)button.textContent=mode==="text"?"バブル編集に戻る":"テキスト編集";
     saveBuilderState();
   }
 
@@ -1196,6 +1229,14 @@
     $("#negative-output").addEventListener("input", event => {
       state.promptNegative = event.target.value; syncSelectedFromPromptText(); renderRows(); renderEditor();
     });
+    ["positive","negative"].forEach(target => {
+      const output = $("#" + target + "-output");
+
+      output.addEventListener("blur", event => {
+        // 明示的な切替ボタンへ移動した場合は、ボタン側の処理に任せる。
+        setPromptEditorMode(target, "bubble");
+      });
+    });
     ["positive","negative"].forEach(target=>{
       const editor=$("#"+target+"-bubble-editor"),bubbles=$("#"+target+"-bubbles");
       editor.addEventListener("click",event=>{
@@ -1204,10 +1245,6 @@
         }
       });
     });
-    $$("[data-editor-mode]").forEach(button=>button.addEventListener("click",()=>{
-      const target=button.dataset.editorMode;
-      setPromptEditorMode(target,state.editorModes[target]==="text"?"bubble":"text");
-    }));
     $$("[data-bubble-add]").forEach(button=>button.addEventListener("click",()=>addBubbleTag(button.dataset.bubbleAdd)));
     ["positive","negative"].forEach(target=>{
       const input=$("#"+target+"-bubble-add");
