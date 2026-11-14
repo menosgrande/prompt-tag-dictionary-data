@@ -903,7 +903,7 @@
       const button = toolbar.querySelector('[data-bubble-action="' + action + '"]');
       if (button) button.hidden = !editing;
     });
-    ["edit","move","move-up","move-down","delete"].forEach(action => {
+    ["edit","move","move-up","move-down","delete","clear-weight"].forEach(action => {
       const button = toolbar.querySelector('[data-bubble-action="' + action + '"]');
       if (button) button.hidden = !active || editing || creating;
     });
@@ -1492,6 +1492,10 @@
       else if (action === "cancel-edit") {
         state.activeBubble = active.creating ? null : { ...active, editing: false, creating: false };
         renderEditor();
+      }
+      else if (action === "clear-weight") {
+        const items = ensurePromptItems(polarity);
+        if (items[active.index]) { items[active.index].weight = null; setPromptItems(polarity, items); renderEditor(); }
       }
       else if (action === "move") movePromptBubble(polarity, active.index);
       else if (action === "move-up") reorderPromptBubble(polarity, active.index, active.index - 1);
