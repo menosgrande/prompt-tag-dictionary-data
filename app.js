@@ -771,6 +771,7 @@
         state.all.sort((a,b) => Number(a.index) - Number(b.index));
         state.relatedIndexesReady = false;
         state.works = []; state.authors = []; state.reviewRows = []; state.ambiguousRows = [];
+        if (state.query) ensureRelatedIndexes();
         $(".stats strong").textContent = state.all.length.toLocaleString("ja-JP");
         renderCategories();
         applyFilters();
