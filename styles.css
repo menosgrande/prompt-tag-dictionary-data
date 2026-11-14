@@ -487,3 +487,12 @@ body{font-size:14px;line-height:1.65}
 .category-hidden-list>div{display:grid;gap:2px;padding:3px 4px 6px}
 .category-hidden-list .category-visibility{justify-content:flex-start;padding:6px}
 .category-show-all{justify-self:start;margin:5px 6px;padding:4px 0;border:0;background:none;color:var(--accent-strong);font-size:10px;cursor:pointer}
+
+
+/* Editable prompt textareas replace the selected-tag list and output settings. */
+.editor-builder-panel .output-card>textarea{
+  display:block;width:100%;min-height:190px;resize:vertical;padding:12px;
+  border:1px solid var(--line);border-radius:7px;background:var(--surface-raised);
+  color:var(--text);font:12px/1.7 var(--mono);white-space:pre-wrap;overflow-wrap:anywhere;
+}
+.editor-builder-panel .output-card>textarea:focus{border-color:var(--accent);outline:1px solid var(--accent)}
