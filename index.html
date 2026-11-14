@@ -77,8 +77,9 @@
       </details>
       <section class="panel builder-panel editor-builder-panel">
         <div class="panel-heading"><div><h2>選択したタグ</h2></div><button class="text-button" type="button">全解除</button></div>
-        <div class="preview-add-row"><label>タグを直接追加<input type="search" placeholder="英語タグまたは日本語訳を完全一致で入力" autocomplete="off"></label><button class="button button-secondary" type="button" disabled>＋ 追加</button></div>
-        <p class="preview-help">タグ一覧で指定した出力状態を確認し、順序を整理できます。</p>
+        <div class="preview-add-row"><label>タグを直接追加<input type="search" placeholder="英語・日本語・別名から検索" autocomplete="off" aria-controls="preview-add-candidates" aria-autocomplete="list"></label><button class="button button-secondary" type="button" disabled>＋ 追加</button></div>
+        <div id="preview-add-candidates" class="preview-add-candidates" role="listbox" aria-label="追加候補" hidden></div>
+        <p class="preview-help">英語タグ・日本語訳・別名から候補を選んで追加できます。</p>
         <div id="selected-tag-list" class="selected-tag-list" aria-live="polite"><p class="empty-state">まだタグが選択されていません。</p></div>
         <div class="builder-controls"><label class="check-row"><input type="checkbox" checked> 分類順に並べて出力</label></div>
         <section class="output-settings" aria-label="出力設定">
@@ -112,6 +113,6 @@
   <footer class="footer"><span>CSVを正本として表示</span></footer>
   </main>
   <script src="./csv.js?v=csv-parser-20261114"></script>
-  <script src="./app.js?v=stable-user-ids-20261114"></script>
+  <script src="./app.js?v=search-improvements-20261115"></script>
 </body>
 </html>
