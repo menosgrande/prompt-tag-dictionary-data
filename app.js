@@ -674,7 +674,7 @@
     if (state.favoritesOnly) params.set("favorites", "1");
     if (state.worksQuery) params.set("works", state.worksQuery);
     if (state.authorsQuery) params.set("authors", state.authorsQuery);
-    const hash = "#" + state.activeScreen + (params.size ? "?" + params.toString() : "");
+    const hash = "#" + state.activeScreen + (params.toString() ? "?" + params.toString() : "");
     if (window.location.hash === hash) return;
     if (mode === "push") history.pushState(null, "", hash);
     else history.replaceState(null, "", hash);
