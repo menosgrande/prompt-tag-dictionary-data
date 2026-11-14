@@ -61,7 +61,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, hiddenMajorCategories: new Set(), columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", promptItemsPositive: [], promptItemsNegative: [], promptMode: null, activeBubble: null, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, hiddenMajorCategories: new Set(), columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
   };
   let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -683,27 +683,85 @@
     renderRows();
     writeLocationState("replace");
   }
-  function promptTokens(value) {
-    return String(value || "").split(",").map(token => token.trim()).filter(Boolean);
+  const promptItemsFor = polarity => polarity === "negative" ? state.promptItemsNegative : state.promptItemsPositive;
+  const promptStateKey = polarity => polarity === "negative" ? "promptNegative" : "promptPositive";
+  function splitPromptText(value) {
+    const text = String(value || "");
+    const parts = [];
+    let start = 0, depth = 0;
+    for (let i = 0; i < text.length; i++) {
+      if (text[i] === "(") depth++;
+      else if (text[i] === ")" && depth > 0) depth--;
+      else if (text[i] === "," && depth === 0) {
+        const part = text.slice(start, i).trim();
+        if (part) parts.push(part);
+        start = i + 1;
+      }
+    }
+    const tail = text.slice(start).trim();
+    if (tail) parts.push(tail);
+    return parts;
+  }
+  function parsePromptItem(value) {
+    let text = String(value || "").trim(), weight = null;
+    const weighted = text.match(/^\\((.*):([0-9]+(?:\\.[0-9]+)?)\\)$/);
+    if (weighted) {
+      const number = Number(weighted[2]);
+      if (Number.isFinite(number) && number >= 0.1 && number <= 2) {
+        text = weighted[1].trim();
+        weight = Math.round(number * 100) / 100;
+      }
+    }
+    const row = state.all.find(item => item.tag === text);
+    return { text, weight, key: row ? keyOf(row) : null };
+  }
+  function parsePromptItems(value) {
+    return splitPromptText(value).map(parsePromptItem).filter(item => item.text);
+  }
+  function formatPromptWeight(value) {
+    return Number(value).toFixed(2).replace(/0+$/, "").replace(/\\.$/, "");
+  }
+  function serializePromptItems(items) {
+    return items.map(item => item.weight === null || item.weight === undefined
+      ? item.text
+      : "(" + item.text + ":" + formatPromptWeight(item.weight) + ")").join(", ");
+  }
+  function setPromptItems(polarity, items) {
+    if (polarity === "negative") state.promptItemsNegative = items;
+    else state.promptItemsPositive = items;
+    state[promptStateKey(polarity)] = serializePromptItems(items);
+  }
+  function ensurePromptItems(polarity) {
+    const items = promptItemsFor(polarity);
+    if (!Array.isArray(items) || (!items.length && state[promptStateKey(polarity)])) {
+      const parsed = parsePromptItems(state[promptStateKey(polarity)]);
+      if (polarity === "negative") state.promptItemsNegative = parsed;
+      else state.promptItemsPositive = parsed;
+      return parsed;
+    }
+    return items;
   }
   function appendPromptTag(polarity, tag) {
-    const key = polarity === "negative" ? "promptNegative" : "promptPositive";
-    const tokens = promptTokens(state[key]);
-    if (!tokens.includes(tag)) tokens.push(tag);
-    state[key] = tokens.join(", ");
+    const items = ensurePromptItems(polarity);
+    if (!items.some(item => item.text === tag)) {
+      const row = state.all.find(item => item.tag === tag);
+      items.push({ text: tag, weight: null, key: row ? keyOf(row) : null });
+    }
+    setPromptItems(polarity, items);
     const output = $(polarity === "negative" ? "#negative-output" : "#positive-output");
-    if (output) output.value = state[key];
+    if (output && state.promptMode !== polarity) output.value = state[promptStateKey(polarity)];
   }
   function removePromptTag(polarity, tag) {
-    const key = polarity === "negative" ? "promptNegative" : "promptPositive";
-    state[key] = promptTokens(state[key]).filter(token => token !== tag).join(", ");
+    const items = ensurePromptItems(polarity).filter(item => item.text !== tag);
+    setPromptItems(polarity, items);
     const output = $(polarity === "negative" ? "#negative-output" : "#positive-output");
-    if (output) output.value = state[key];
+    if (output && state.promptMode !== polarity) output.value = state[promptStateKey(polarity)];
   }
   function saveBuilderState() {
     writeUserDataV2({ builderState: {
       selected: [...state.selected.keys()], polarity: [...state.polarity.entries()],
-      promptPositive: state.promptPositive, promptNegative: state.promptNegative
+      promptPositive: state.promptPositive, promptNegative: state.promptNegative,
+      promptItemsPositive: state.promptItemsPositive, promptItemsNegative: state.promptItemsNegative
     } });
   }
   function restoreBuilderState() {
@@ -732,10 +790,124 @@
           state.promptPositive = positive.join(", ");
           state.promptNegative = negative.join(", ");
         }
+        const restoreItems = (savedItems, text) => Array.isArray(savedItems)
+          ? savedItems.filter(item => item && typeof item.text === "string" && item.text.trim()).map(item => ({
+              text: item.text.trim(),
+              weight: item.weight === null || item.weight === undefined ? null : Math.max(0.1, Math.min(2, Math.round(Number(item.weight) * 100) / 100)),
+              key: typeof item.key === "string" && rowsByKey.has(item.key) ? item.key : null
+            }))
+          : parsePromptItems(text);
+        state.promptItemsPositive = restoreItems(saved.promptItemsPositive, state.promptPositive);
+        state.promptItemsNegative = restoreItems(saved.promptItemsNegative, state.promptNegative);
+        state.promptPositive = serializePromptItems(state.promptItemsPositive);
+        state.promptNegative = serializePromptItems(state.promptItemsNegative);
       }
     } catch (error) { console.warn("プロンプト編集内容を復元できませんでした。", error); }
     $("#positive-output").value = state.promptPositive;
     $("#negative-output").value = state.promptNegative;
+  }
+  function promptCandidates(query) {
+    const normalized = normalizeSearchText(query);
+    if (!normalized || normalized.length < 1) return [];
+    return state.all.map(row => {
+      const aliases = parseAliases(row.aliases_json);
+      const fields = [row.tag, row.ja, ...aliases].map(normalizeSearchText);
+      let score = 99;
+      fields.forEach(field => {
+        if (field === normalized) score = Math.min(score, 0);
+        else if (field.startsWith(normalized)) score = Math.min(score, 1);
+        else if (field.includes(normalized)) score = Math.min(score, 2);
+      });
+      return { row, score };
+    }).filter(item => item.score < 99)
+      .sort((a, b) => a.score - b.score || a.row.tag.localeCompare(b.row.tag, "en"))
+      .slice(0, 8).map(item => item.row);
+  }
+  function currentPromptSegment(textarea) {
+    const value = textarea.value;
+    const cursor = textarea.selectionStart ?? value.length;
+    const start = value.lastIndexOf(",", Math.max(0, cursor - 1)) + 1;
+    const nextComma = value.indexOf(",", cursor);
+    return { start, end: nextComma < 0 ? value.length : nextComma, query: value.slice(start, cursor).trim() };
+  }
+  function renderPromptAutocomplete(polarity) {
+    if (state.promptMode !== polarity) return;
+    const textarea = $(polarity === "negative" ? "#negative-output" : "#positive-output");
+    const panel = $("[data-autocomplete='" + polarity + "']");
+    if (!textarea || !panel) return;
+    const segment = currentPromptSegment(textarea);
+    const candidates = promptCandidates(segment.query);
+    panel.innerHTML = candidates.map(row =>
+      '<button class="prompt-autocomplete-option" type="button" role="option" data-autocomplete-tag="' + escapeHTML(row.tag) + '"><strong>' + escapeHTML(row.tag) + '</strong><small>' + escapeHTML(row.ja) + '</small></button>'
+    ).join("");
+    panel.hidden = candidates.length === 0;
+  }
+  function applyPromptAutocomplete(polarity, tag) {
+    const textarea = $(polarity === "negative" ? "#negative-output" : "#positive-output");
+    if (!textarea) return;
+    const value = textarea.value;
+    const segment = currentPromptSegment(textarea);
+    const prefix = value.slice(0, segment.start);
+    const suffix = value.slice(segment.end);
+    const nextValue = prefix + (prefix && !prefix.endsWith(",") ? ", " : prefix.endsWith(",") ? " " : "") + tag + (suffix ? suffix : ", ");
+    textarea.value = nextValue;
+    state[promptStateKey(polarity)] = nextValue;
+    const parsed = parsePromptItems(nextValue);
+    if (polarity === "negative") state.promptItemsNegative = parsed; else state.promptItemsPositive = parsed;
+    saveBuilderState();
+    renderPromptAutocomplete(polarity);
+    const caret = nextValue.length;
+    textarea.setSelectionRange(caret, caret);
+    textarea.focus();
+  }
+  function updatePromptDatalist(query) {
+    const list = $("#prompt-tag-datalist");
+    if (!list) return;
+    list.innerHTML = promptCandidates(query).map(row =>
+      '<option value="' + escapeHTML(row.tag) + '">' + escapeHTML(row.ja) + '</option>'
+    ).join("");
+  }
+  function renderPromptBubbles(polarity) {
+    const view = $("[data-bubble-view='" + polarity + "']");
+    const toolbar = $("[data-bubble-toolbar='" + polarity + "']");
+    const textarea = $(polarity === "negative" ? "#negative-output" : "#positive-output");
+    const items = ensurePromptItems(polarity);
+    const active = state.activeBubble?.polarity === polarity ? state.activeBubble : null;
+    if (!view || !toolbar || !textarea) return;
+    view.hidden = state.promptMode === polarity;
+    textarea.hidden = state.promptMode !== polarity;
+    const panel = $("[data-autocomplete='" + polarity + "']");
+    if (panel && state.promptMode !== polarity) panel.hidden = true;
+    view.innerHTML = items.map((item, index) =>
+      '<div class="prompt-bubble' + (active && active.index === index ? ' is-active' : '') + '" role="button" tabindex="0" draggable="true" aria-pressed="' + String(Boolean(active && active.index === index)) + '" data-bubble-index="' + index + '" data-bubble-polarity="' + polarity + '">' +
+        '<span class="prompt-bubble-text">' + escapeHTML(item.text) + '</span>' +
+        (item.weight !== null && item.weight !== undefined ? '<small class="prompt-bubble-weight">' + escapeHTML(formatPromptWeight(item.weight)) + '</small>' : '') +
+      '</div>'
+    ).join("") + '<button class="prompt-bubble-add" type="button" data-bubble-add="' + polarity + '" aria-label="手動タグを追加">＋</button><span class="prompt-bubble-blank">空き領域をタップしてテキスト入力</span>';
+    toolbar.hidden = !active;
+    const weight = toolbar.querySelector("[data-bubble-weight]");
+    const editInput = toolbar.querySelector("[data-bubble-edit-input]");
+    const editing = Boolean(active?.editing);
+    const creating = Boolean(active?.creating);
+    if (weight) {
+      weight.hidden = !active || creating || editing;
+      weight.value = active && !creating && items[active.index] && items[active.index].weight !== null
+        ? formatPromptWeight(items[active.index].weight) : "1.00";
+    }
+    if (editInput) {
+      editInput.hidden = !editing;
+      if (editing && document.activeElement !== editInput) editInput.value = creating ? (editInput.value || "") : (items[active.index]?.text || "");
+    }
+    ["save-edit","cancel-edit"].forEach(action => {
+      const button = toolbar.querySelector('[data-bubble-action="' + action + '"]');
+      if (button) button.hidden = !editing;
+    });
+    ["edit","move","move-up","move-down","delete"].forEach(action => {
+      const button = toolbar.querySelector('[data-bubble-action="' + action + '"]');
+      if (button) button.hidden = !active || editing || creating;
+    });
+    const move = toolbar.querySelector('[data-bubble-action="move"]');
+    if (move) move.textContent = polarity === "positive" ? "Negativeへ" : "Positiveへ";
   }
   function renderEditor() {
     saveBuilderState();
@@ -746,11 +918,119 @@
     const chips = $(".selected-dock-tags");
     if (chips) chips.innerHTML = rows.slice(0, 8).map(row => '<span class="selected-dock-chip"><span title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</span><button class="selected-dock-remove" type="button" data-remove="' + escapeHTML(keyOf(row)) + '" aria-label="削除">×</button></span>').join("") + (count > 8 ? '<span class="selected-dock-more">+' + (count - 8) + '件</span>' : "");
     const dock = $(".selected-dock"); if (dock) dock.hidden = count === 0;
+    if (state.promptMode !== "positive") $("#positive-output").value = state.promptPositive;
+    if (state.promptMode !== "negative") $("#negative-output").value = state.promptNegative;
+    renderPromptBubbles("positive");
+    renderPromptBubbles("negative");
     const positive = $("#positive-output"), negative = $("#negative-output");
     $('[data-action="copy-positive"]').disabled = !positive?.value;
     $('[data-action="save-positive"]').disabled = !positive?.value;
     $('[data-action="copy-negative"]').disabled = !negative?.value;
     $('[data-action="save-negative"]').disabled = !negative?.value;
+  }
+  function enterPromptTextMode(polarity) {
+    state.promptMode = polarity;
+    state.activeBubble = null;
+    renderEditor();
+    const textarea = $(polarity === "negative" ? "#negative-output" : "#positive-output");
+    if (textarea) {
+      textarea.focus();
+      const end = textarea.value.length;
+      textarea.setSelectionRange(end, end);
+    }
+  }
+  function commitPromptTextMode(polarity) {
+    if (state.promptMode !== polarity) return;
+    const textarea = $(polarity === "negative" ? "#negative-output" : "#positive-output");
+    const parsed = parsePromptItems(textarea?.value || "");
+    setPromptItems(polarity, parsed);
+    state.promptMode = null;
+    state.activeBubble = null;
+    renderEditor();
+  }
+  function syncPromptTextInput(polarity, value) {
+    state[promptStateKey(polarity)] = value;
+    const parsed = parsePromptItems(value);
+    if (polarity === "negative") state.promptItemsNegative = parsed;
+    else state.promptItemsPositive = parsed;
+    saveBuilderState();
+    renderPromptAutocomplete(polarity);
+    const hasValue = Boolean(value.trim());
+    $('[data-action="copy-' + polarity + '"]').disabled = !hasValue;
+    $('[data-action="save-' + polarity + '"]').disabled = !hasValue;
+  }
+  function selectPromptBubble(polarity, index) {
+    state.activeBubble = { polarity, index, editing: false, creating: false };
+    renderEditor();
+  }
+  function reorderPromptBubble(polarity, from, to) {
+    const items = ensurePromptItems(polarity);
+    if (from < 0 || from >= items.length || to < 0 || to >= items.length || from === to) return;
+    const [item] = items.splice(from, 1);
+    items.splice(to, 0, item);
+    setPromptItems(polarity, items);
+    state.activeBubble = { polarity, index: to, editing: false, creating: false };
+    renderEditor();
+  }
+  function changePromptWeight(polarity, index, delta) {
+    const items = ensurePromptItems(polarity);
+    if (!items[index]) return;
+    const current = items[index].weight === null || items[index].weight === undefined ? 1 : Number(items[index].weight);
+    items[index].weight = Math.max(0.1, Math.min(2, Math.round((current + delta) * 100) / 100));
+    setPromptItems(polarity, items);
+    state.activeBubble = { polarity, index, editing: false, creating: false };
+    renderEditor();
+  }
+  function movePromptBubble(polarity, index) {
+    const source = ensurePromptItems(polarity);
+    if (!source[index]) return;
+    const targetPolarity = polarity === "positive" ? "negative" : "positive";
+    const [item] = source.splice(index, 1);
+    const target = ensurePromptItems(targetPolarity);
+    target.push(item);
+    setPromptItems(polarity, source);
+    setPromptItems(targetPolarity, target);
+    if (item.key && state.selected.has(item.key)) state.polarity.set(item.key, targetPolarity);
+    state.activeBubble = null;
+    renderRows();
+    renderEditor();
+  }
+  function deletePromptBubble(polarity, index) {
+    const items = ensurePromptItems(polarity);
+    const [removed] = items.splice(index, 1);
+    if (removed?.key) {
+      state.selected.delete(removed.key);
+      state.polarity.delete(removed.key);
+    }
+    setPromptItems(polarity, items);
+    state.activeBubble = null;
+    renderRows();
+    renderEditor();
+  }
+  function savePromptBubbleEdit(polarity) {
+    const toolbar = $("[data-bubble-toolbar='" + polarity + "']");
+    const input = toolbar?.querySelector("[data-bubble-edit-input]");
+    const active = state.activeBubble;
+    const text = String(input?.value || "").trim();
+    if (!active || active.polarity !== polarity || !text) return;
+    if (text.includes(",")) {
+      window.alert("タグ内のカンマは区切り文字として扱われます。カンマを含まない表記を入力してください。");
+      return;
+    }
+    const items = ensurePromptItems(polarity);
+    if (active.creating) items.push({ text, weight: null, key: null });
+    else if (items[active.index]) {
+      const old = items[active.index];
+      if (old.key && old.text !== text) {
+        state.selected.delete(old.key);
+        state.polarity.delete(old.key);
+      }
+      items[active.index] = { ...old, text, key: old.text === text ? old.key : null };
+    }
+    setPromptItems(polarity, items);
+    state.activeBubble = { polarity, index: active.creating ? items.length - 1 : active.index, editing: false, creating: false };
+    renderRows();
+    renderEditor();
   }
   function addRow(row) {
     const key = keyOf(row);
@@ -1077,12 +1357,140 @@
         if (row) addRow(row);
       }
     });
-    $("#positive-output").addEventListener("input", event => {
-      state.promptPositive = event.target.value; renderEditor();
+    ["positive","negative"].forEach(polarity => {
+      const textarea = $(polarity === "negative" ? "#negative-output" : "#positive-output");
+      textarea.addEventListener("input", event => {
+        if (!event.isComposing) syncPromptTextInput(polarity, event.target.value);
+      });
+      textarea.addEventListener("compositionend", event => syncPromptTextInput(polarity, event.target.value));
+      textarea.addEventListener("keydown", event => {
+        const panel = $("[data-autocomplete='" + polarity + "']");
+        const option = panel?.querySelector(".prompt-autocomplete-option");
+        if (event.key === "Escape" && panel && !panel.hidden) { panel.hidden = true; event.stopPropagation(); }
+        else if (event.key === "Enter" && option && !panel.hidden) { event.preventDefault(); applyPromptAutocomplete(polarity, option.dataset.autocompleteTag); }
+      });
+      const region = $("[data-prompt-region='" + polarity + "']");
+      region.addEventListener("click", event => {
+        const option = event.target.closest("[data-autocomplete-tag]");
+        if (option) { applyPromptAutocomplete(polarity, option.dataset.autocompleteTag); return; }
+        if (event.target.closest("textarea")) return;
+        if (event.target.closest(".prompt-bubble-add")) {
+          state.activeBubble = { polarity, index: -1, editing: true, creating: true };
+          renderEditor();
+          const input = $("[data-bubble-toolbar='" + polarity + "'] [data-bubble-edit-input]");
+          if (input) { input.hidden = false; input.focus(); }
+          return;
+        }
+        const bubble = event.target.closest("[data-bubble-index]");
+        if (bubble) { selectPromptBubble(polarity, Number(bubble.dataset.bubbleIndex)); return; }
+        if (state.promptMode !== polarity) enterPromptTextMode(polarity);
+      });
+      region.addEventListener("keydown", event => {
+        const bubble = event.target.closest("[data-bubble-index]");
+        if (!bubble) return;
+        const index = Number(bubble.dataset.bubbleIndex);
+        if (event.key === "Enter" || event.key === " ") { event.preventDefault(); selectPromptBubble(polarity, index); }
+        else if (event.key === "Delete" || event.key === "Backspace") { event.preventDefault(); deletePromptBubble(polarity, index); }
+        else if (event.key === "Escape") { state.activeBubble = null; renderEditor(); }
+        else if (event.ctrlKey && event.key === "ArrowUp") { event.preventDefault(); changePromptWeight(polarity, index, 0.1); }
+        else if (event.ctrlKey && event.key === "ArrowDown") { event.preventDefault(); changePromptWeight(polarity, index, -0.1); }
+        else if (event.ctrlKey && event.key === "ArrowLeft") { event.preventDefault(); reorderPromptBubble(polarity, index, index - 1); }
+        else if (event.ctrlKey && event.key === "ArrowRight") { event.preventDefault(); reorderPromptBubble(polarity, index, index + 1); }
+        else if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+          const bubbles = [...region.querySelectorAll("[data-bubble-index]")];
+          const next = bubbles[index + (event.key === "ArrowRight" ? 1 : -1)];
+          if (next) { event.preventDefault(); next.focus(); }
+        }
+      });
+      region.addEventListener("dragstart", event => {
+        const bubble = event.target.closest("[data-bubble-index]");
+        if (!bubble || !event.dataTransfer) return;
+        event.dataTransfer.setData("text/plain", JSON.stringify({ polarity, index: Number(bubble.dataset.bubbleIndex) }));
+        event.dataTransfer.effectAllowed = "move";
+      });
+      region.addEventListener("dragover", event => { if (event.target.closest("[data-bubble-index]")) event.preventDefault(); });
+      region.addEventListener("drop", event => {
+        const targetBubble = event.target.closest("[data-bubble-index]");
+        if (!targetBubble || !event.dataTransfer) return;
+        event.preventDefault();
+        try {
+          const source = JSON.parse(event.dataTransfer.getData("text/plain"));
+          const targetIndex = Number(targetBubble.dataset.bubbleIndex);
+          if (source.polarity === polarity) reorderPromptBubble(polarity, source.index, targetIndex);
+          else {
+            const moved = ensurePromptItems(source.polarity).splice(source.index, 1)[0];
+            if (!moved) return;
+            ensurePromptItems(polarity).splice(targetIndex, 0, moved);
+            setPromptItems(source.polarity, ensurePromptItems(source.polarity));
+            setPromptItems(polarity, ensurePromptItems(polarity));
+            if (moved.key && state.selected.has(moved.key)) state.polarity.set(moved.key, polarity);
+            renderRows(); renderEditor();
+          }
+        } catch {}
+      });
     });
-    $("#negative-output").addEventListener("input", event => {
-      state.promptNegative = event.target.value; renderEditor();
+    let longPressTimer = null;
+    $(".editor-builder-panel").addEventListener("pointerdown", event => {
+      const bubble = event.target.closest("[data-bubble-index]");
+      if (!bubble || event.pointerType !== "touch") return;
+      const polarity = bubble.dataset.bubblePolarity;
+      const index = Number(bubble.dataset.bubbleIndex);
+      longPressTimer = window.setTimeout(() => selectPromptBubble(polarity, index), 500);
     });
+    ["pointerup","pointercancel","pointerleave"].forEach(type => $(".editor-builder-panel").addEventListener(type, () => {
+      if (longPressTimer) window.clearTimeout(longPressTimer);
+      longPressTimer = null;
+    }));
+    $(".editor-builder-panel").addEventListener("click", event => {
+      const actionButton = event.target.closest("[data-bubble-action]");
+      if (!actionButton) return;
+      const toolbar = actionButton.closest("[data-bubble-toolbar]");
+      const polarity = toolbar?.dataset.bubbleToolbar;
+      const active = state.activeBubble;
+      if (!polarity || !active || active.polarity !== polarity) return;
+      const action = actionButton.dataset.bubbleAction;
+      if (action === "edit") {
+        state.activeBubble = { ...active, editing: true };
+        renderEditor();
+        const input = toolbar.querySelector("[data-bubble-edit-input]");
+        if (input) { input.hidden = false; input.value = ensurePromptItems(polarity)[active.index]?.text || ""; input.focus(); }
+      } else if (action === "save-edit") savePromptBubbleEdit(polarity);
+      else if (action === "cancel-edit") { state.activeBubble = { ...active, editing: false, creating: false }; renderEditor(); }
+      else if (action === "move") movePromptBubble(polarity, active.index);
+      else if (action === "move-up") reorderPromptBubble(polarity, active.index, active.index - 1);
+      else if (action === "move-down") reorderPromptBubble(polarity, active.index, active.index + 1);
+      else if (action === "delete") deletePromptBubble(polarity, active.index);
+    });
+    $(".editor-builder-panel").addEventListener("change", event => {
+      const weightInput = event.target.closest("[data-bubble-weight]");
+      if (weightInput && state.activeBubble && !state.activeBubble.creating) {
+        const { polarity, index } = state.activeBubble;
+        const value = Number(weightInput.value);
+        if (!Number.isFinite(value) || value < 0.1 || value > 2) {
+          window.alert("重みは0.1〜2.0の範囲で入力してください。");
+          renderEditor();
+          return;
+        }
+        const items = ensurePromptItems(polarity);
+        if (items[index]) { items[index].weight = Math.round(value * 100) / 100; setPromptItems(polarity, items); renderEditor(); }
+      }
+    });
+    $(".editor-builder-panel").addEventListener("input", event => {
+      const editInput = event.target.closest("[data-bubble-edit-input]");
+      if (editInput) updatePromptDatalist(editInput.value);
+    });
+    $(".editor-builder-panel").addEventListener("keydown", event => {
+      const editInput = event.target.closest("[data-bubble-edit-input]");
+      if (!editInput) return;
+      const toolbar = editInput.closest("[data-bubble-toolbar]");
+      const polarity = toolbar?.dataset.bubbleToolbar;
+      if (event.key === "Enter") { event.preventDefault(); savePromptBubbleEdit(polarity); }
+      if (event.key === "Escape") { event.preventDefault(); state.activeBubble = null; renderEditor(); }
+    });
+    document.addEventListener("pointerdown", event => {
+      if (state.promptMode && !event.target.closest(".prompt-editor-region")) commitPromptTextMode(state.promptMode);
+    }, true);
+
     $$("[data-action]").forEach(button => button.addEventListener("click", async () => {
       const action = button.dataset.action;
       const target = action.includes("negative") ? $("#negative-output") : $("#positive-output");
