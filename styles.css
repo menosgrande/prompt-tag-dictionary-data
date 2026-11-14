@@ -461,3 +461,15 @@ body{font-size:14px;line-height:1.65}
   .output-settings{align-items:flex-start;gap:8px 12px;padding:9px}
   .output-settings>strong{width:100%}
 }
+
+
+/* Direct-add candidate suggestions */
+.preview-add-candidates{display:flex;flex-direction:column;gap:3px;margin:8px 16px 0;padding:5px;border:1px solid var(--line);border-radius:7px;background:#151b22}
+.preview-add-candidates[hidden]{display:none}
+.preview-add-candidate{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:7px 9px;border:0;border-radius:5px;background:transparent;text-align:left}
+.preview-add-candidate:hover,.preview-add-candidate:focus-visible{background:var(--surface-hover)}
+.preview-add-candidate>span{display:flex;flex-direction:column;min-width:0}
+.preview-add-candidate strong{overflow:hidden;color:var(--text);font-size:11px;text-overflow:ellipsis;white-space:nowrap}
+.preview-add-candidate small{overflow:hidden;color:var(--muted);font:10px var(--mono);text-overflow:ellipsis;white-space:nowrap}
+.preview-add-candidate .candidate-match{flex-shrink:0;color:var(--accent-strong)}
+@media(max-width:760px){.preview-add-candidates{margin-right:10px;margin-left:10px}.preview-add-candidate{min-height:38px}}
