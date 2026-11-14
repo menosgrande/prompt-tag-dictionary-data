@@ -1,9 +1,9 @@
 /* Prompt tag colors and capsule shape. Keep the editor frame separate. */
 .editor-builder-panel .prompt-bubble-editor,
 .editor-builder-panel .prompt-bubble-editor:focus-within {
-  padding: 12px 14px;
+  padding: 20px 22px;
   border: 1px solid var(--line-soft);
-  border-radius: 18px;
+  border-radius: 24px;
   background: rgba(12,17,23,.34);
   box-shadow: none;
   outline: none;
@@ -46,7 +46,7 @@
 @media(max-width:600px) {
   .editor-builder-panel .prompt-bubble-editor,
   .editor-builder-panel .prompt-bubble-editor:focus-within {
-    padding: 10px;
-    border-radius: 16px;
+    padding: 16px;
+    border-radius: 20px;
   }
 }
