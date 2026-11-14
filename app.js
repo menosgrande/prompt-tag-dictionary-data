@@ -691,7 +691,7 @@
 
   function parsePromptTokens(value) {
     return String(value || "").split(",").map(raw => raw.trim()).filter(Boolean).map(raw => {
-      const weighted = raw.match(/^\\((.+):([0-9]+(?:\\.[0-9]+)?)\\)$/);
+      const weighted = raw.match(/^\((.+):([0-9]+(?:\.[0-9]+)?)\)$/);
       return weighted ? { tag: weighted[1], weight: weighted[2] } : { tag: raw, weight: "" };
     });
   }
