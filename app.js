@@ -445,26 +445,36 @@
     });
   }
   function renderTableTools() {
-    const root = $(".table-tools");
-    if (!root) return;
-    const groups = [
-      ["major", "大分類", [...new Set(state.all.map(row => row.major || "未分類"))].sort(compareMajorCategories)],
-      ["level", "表現レベル", ["0","1","2","3","4","未設定"]],
-      ["translation", "翻訳状態", [...new Set(state.all.map(row => row.translation_status || "未設定"))].sort()],
-      ["classification", "分類確認", [...new Set(state.all.map(row => row.classification_review_status || "未設定"))].sort()]
-    ];
-    const count = Object.values(state.columnFilters).reduce((sum, values) => sum + values.size, 0);
-    root.innerHTML =
-      '<div class="table-tools-bar"><label class="sort-control">並び替え <select id="table-sort"><option value="index">元の順</option><option value="tag">タグ（英語）</option><option value="ja">日本語訳</option><option value="major">大分類</option><option value="level">表現レベル</option><option value="favorites">お気に入り優先</option></select></label>' +
-      '<button type="button" class="text-button sort-direction" id="table-sort-direction" aria-label="並び順を反転">' + (state.sortDirection === "asc" ? "昇順 ↑" : "降順 ↓") + '</button>' +
-      '<details class="filter-menu"><summary>フィルター' + (count ? ' <span class="filter-count">' + count + '</span>' : '') + '</summary><div class="filter-menu-panel">' +
-      '<div class="filter-group"><strong>お気に入り</strong><label><input type="checkbox" data-filter-favorites' + (state.favoritesOnly ? ' checked' : '') + '> お気に入りのみ</label></div>' +
-      groups.map(([key,label,values]) => '<fieldset class="filter-group"><legend>' + label + '</legend><div class="filter-options">' + values.map(value => {
-        const checked = state.columnFilters[key].has(value);
-        return '<label><input type="checkbox" data-filter-group="' + key + '" value="' + escapeHTML(value) + '"' + (checked ? ' checked' : '') + '> ' + escapeHTML(key === "translation" || key === "classification" ? statusLabel(value) : value) + '</label>';
-      }).join("") + '</div><button type="button" class="filter-select-all" data-filter-clear="' + key + '">すべて</button></fieldset>').join("") +
-      '<div class="filter-actions"><button type="button" class="text-button" data-filter-reset>すべて解除</button><button type="button" class="button" data-filter-apply>適用</button></div></div></details></div>';
-    $("#table-sort").value = state.sort;
+    const cells = {
+      favorites: $('.table-head-cell[data-column="favorites"] [data-menu-content]'),
+      tag: $('.table-head-cell[data-column="tag"] [data-menu-content]'),
+      ja: $('.table-head-cell[data-column="ja"] [data-menu-content]'),
+      major: $('.table-head-cell[data-column="major"] [data-menu-content]'),
+      level: $('.table-head-cell[data-column="level"] [data-menu-content]')
+    };
+    const checkboxGroup = (key, values, labelMap = value => value) =>
+      '<fieldset class="column-filter-group"><legend>' + (key === "major" ? "大分類で絞り込む" : "表現レベルで絞り込む") + '</legend>' +
+      '<div class="column-filter-options">' + values.map(value =>
+        '<label><input type="checkbox" data-filter-group="' + key + '" value="' + escapeHTML(value) + '"' +
+        (state.columnFilters[key].has(value) ? ' checked' : '') + '> ' + escapeHTML(labelMap(value)) + '</label>'
+      ).join("") + '</div><button type="button" class="column-filter-clear" data-filter-clear="' + key + '">この列の絞り込みを解除</button></fieldset>';
+    const sortOptions = field => {
+      const labels = { tag: ["A → Z", "Z → A"], ja: ["あ → ん", "ん → あ"], major: ["分類順（昇順）", "分類順（降順）"], level: ["低い順（0 → 4）", "高い順（4 → 0）"] };
+      return '<div class="column-sort-options"><strong>並び替え</strong>' +
+        labels[field].map((label, index) => '<button type="button" data-sort-field="' + field + '" data-sort-direction="' + (index === 0 ? 'asc' : 'desc') + '"' +
+          (state.sort === field && state.sortDirection === (index === 0 ? "asc" : "desc") ? ' aria-pressed="true"' : '') + '>' + label + '</button>').join("") +
+        '</div>';
+    };
+    if (cells.favorites) cells.favorites.innerHTML =
+      '<label class="column-favorite-filter"><input type="checkbox" data-filter-favorites' + (state.favoritesOnly ? ' checked' : '') + '> お気に入りのみ</label>';
+    if (cells.tag) cells.tag.innerHTML = sortOptions("tag");
+    if (cells.ja) cells.ja.innerHTML = sortOptions("ja");
+    if (cells.major) {
+      const majors = [...new Set(state.all.map(row => row.major || "未分類"))].sort(compareMajorCategories);
+      cells.major.innerHTML = sortOptions("major") + checkboxGroup("major", majors);
+    }
+    if (cells.level) cells.level.innerHTML =
+      sortOptions("level") + checkboxGroup("level", ["0","1","2","3","4","未設定"], value => value === "未設定" ? "未設定" : "レベル " + value);
   }
   function renderRows() {
     const rows = state.filtered;
@@ -624,45 +634,39 @@
     catch { const area = document.createElement("textarea"); area.value = text; document.body.append(area); area.select(); document.execCommand("copy"); area.remove(); }
   }
   function bindTableTools() {
-    const root = $(".table-tools");
+    const root = $(".table-head");
     if (!root) return;
-    root.addEventListener("change", event => {
-      const sort = event.target.closest("#table-sort");
-      if (sort) { state.sort = sort.value; applyFilters(); return; }
-      const favorite = event.target.closest("[data-filter-favorites]");
-      if (favorite) {
-        state.favoritesOnly = favorite.checked;
-        $("#favorites-only").checked = favorite.checked;
-      }
-    });
     root.addEventListener("click", event => {
-      const direction = event.target.closest("#table-sort-direction");
-      if (direction) {
-        state.sortDirection = state.sortDirection === "asc" ? "desc" : "asc";
-        renderTableTools(); applyFilters(); return;
+      const sort = event.target.closest("[data-sort-field]");
+      if (sort) {
+        state.sort = sort.dataset.sortField;
+        state.sortDirection = sort.dataset.sortDirection;
+        root.querySelectorAll("details[open]").forEach(menu => { menu.open = false; });
+        renderTableTools();
+        applyFilters();
+        return;
       }
       const clear = event.target.closest("[data-filter-clear]");
       if (clear) {
         state.columnFilters[clear.dataset.filterClear].clear();
-        renderTableTools(); return;
-      }
-      if (event.target.closest("[data-filter-reset]")) {
-        Object.values(state.columnFilters).forEach(values => values.clear());
-        state.favoritesOnly = false;
-        $("#favorites-only").checked = false;
-        renderTableTools(); applyFilters(); return;
-      }
-      if (event.target.closest("[data-filter-apply]")) {
-        const menu = root.querySelector(".filter-menu");
-        if (menu) menu.open = false;
+        renderTableTools();
         applyFilters();
       }
     });
     root.addEventListener("change", event => {
       const input = event.target.closest("[data-filter-group]");
-      if (!input) return;
-      const values = state.columnFilters[input.dataset.filterGroup];
-      if (input.checked) values.add(input.value); else values.delete(input.value);
+      if (input) {
+        const values = state.columnFilters[input.dataset.filterGroup];
+        if (input.checked) values.add(input.value); else values.delete(input.value);
+        applyFilters();
+        return;
+      }
+      const favorite = event.target.closest("[data-filter-favorites]");
+      if (favorite) {
+        state.favoritesOnly = favorite.checked;
+        $("#favorites-only").checked = favorite.checked;
+        applyFilters();
+      }
     });
   }
   function bindControls() {
