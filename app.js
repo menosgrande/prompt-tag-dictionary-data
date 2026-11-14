@@ -751,6 +751,26 @@
         chip.style.width="";chip.style.height="";chip.style.margin="";
         chip.style.pointerEvents="";chip.style.zIndex="";chip.style.transform="";
       };
+      const moveDragPlaceholder=(destination,beforeNode)=>{
+        const oldRoot=dragState.placeholder.parentElement;
+        const roots=[...new Set([oldRoot,destination])];
+        const nodes=roots.flatMap(container=>[...container.querySelectorAll(".prompt-bubble")]);
+        const positions=new Map(nodes.map(node=>[node,node.getBoundingClientRect()]));
+        destination.insertBefore(dragState.placeholder,beforeNode);
+        nodes.forEach(node=>{
+          if(!node.isConnected)return;
+          const first=positions.get(node),last=node.getBoundingClientRect();
+          const dx=first.left-last.left,dy=first.top-last.top;
+          if(dx||dy){
+            node.style.transition="none";
+            node.style.transform="translate("+dx+"px,"+dy+"px)";
+            requestAnimationFrame(()=>{
+              node.style.transition="transform 150ms ease";
+              node.style.transform="";
+            });
+          }
+        });
+      };
       const updateDragTarget=event=>{
         if(!dragState)return;
         chip.style.left=(event.clientX-dragState.grabX)+"px";
@@ -769,10 +789,10 @@
             (Math.abs(event.clientY-(rect.top+rect.height/2))<rect.height/3&&event.clientX>rect.left+rect.width/2);
           const beforeNode=after?other.nextElementSibling:other;
           if(beforeNode!==dragState.placeholder&&beforeNode!==dragState.placeholder.nextSibling){
-            destination.insertBefore(dragState.placeholder,beforeNode);
+            moveDragPlaceholder(destination,beforeNode);
           }
         }else if(destination!==dragState.placeholder.parentElement||!other){
-          destination.append(dragState.placeholder);
+          moveDragPlaceholder(destination,null);
         }
       };
       const finishPointerDrag=(event,cancelled=false)=>{
