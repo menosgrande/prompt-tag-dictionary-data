@@ -534,8 +534,7 @@ body{font-size:14px;line-height:1.65}
 .editor-builder-panel .prompt-bubble:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px}
 .editor-builder-panel .prompt-bubble-label{max-width:min(65vw,420px);font:12px/1.5 var(--mono);cursor:text}
 .editor-builder-panel .prompt-bubble-label[contenteditable="true"]{min-width:50px;outline:none;cursor:text}
-.editor-builder-panel .prompt-bubble-weight{display:none;width:58px;background:#17231f;color:inherit}
-.editor-builder-panel .prompt-bubble:focus-within .prompt-bubble-weight,.editor-builder-panel .prompt-bubble:hover .prompt-bubble-weight{display:block}
+.editor-builder-panel .prompt-bubble-weight{display:none!important}
 .editor-builder-panel .prompt-bubble-action{position:absolute;top:-7px;right:-7px;display:none;width:20px;height:20px;padding:0;border:1px solid #81978e;border-radius:50%;background:#17231f;color:#fff}
 .editor-builder-panel .prompt-bubble:hover .prompt-bubble-action,.editor-builder-panel .prompt-bubble:focus-within .prompt-bubble-action{display:block}
 .editor-builder-panel .prompt-bubble-empty{align-self:center;padding:8px 10px;color:var(--muted-2);font-size:11px;cursor:text}
@@ -543,3 +542,9 @@ body{font-size:14px;line-height:1.65}
 .editor-builder-panel .output-card>textarea{min-height:150px;margin-top:8px}
 @media(max-width:600px){.editor-builder-panel .output-grid{padding:8px;gap:12px}.editor-builder-panel .prompt-bubble-editor{padding:9px 7px}.editor-builder-panel .prompt-bubble{max-width:94%;padding:8px 10px}.editor-builder-panel .prompt-bubble-label{max-width:68vw;font-size:11px}}
 .editor-builder-panel .output-card:has(textarea:not([hidden])) .output-header [data-editor-mode]{display:inline-flex}
+
+/* Smooth pointer-driven bubble sorting. */
+.editor-builder-panel .prompt-bubble{touch-action:none;user-select:none;transition:transform 180ms cubic-bezier(.2,.75,.25,1),box-shadow 180ms ease;will-change:transform}
+.editor-builder-panel .prompt-bubble.is-dragging{opacity:.94;box-shadow:0 12px 28px #0007;cursor:grabbing;transition:none}
+.editor-builder-panel .prompt-bubble-placeholder{flex:0 0 auto;min-width:36px;border:1px dashed #657b78;border-radius:14px;background:#9fc7c012}
+.editor-builder-panel .prompt-bubble-label{user-select:text}
