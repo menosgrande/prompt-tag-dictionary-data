@@ -498,7 +498,8 @@
     state.filtered = state.all.filter(matches);
     const direction = state.sortDirection === "desc" ? -1 : 1;
     const compareText = (left, right, locale = "ja") => String(left || "").localeCompare(String(right || ""), locale, { numeric: true, sensitivity: "base" });
-    if (state.sort === "tag") state.filtered.sort((a,b) => direction * compareText(a.tag, b.tag, "en"));
+    if (state.sort === "index") state.filtered.sort((a,b) => direction * (Number(a.index) - Number(b.index)));
+    else if (state.sort === "tag") state.filtered.sort((a,b) => direction * compareText(a.tag, b.tag, "en"));
     else if (state.sort === "ja") state.filtered.sort((a,b) => direction * compareText(a.ja, b.ja));
     else if (state.sort === "major") state.filtered.sort((a,b) => direction * (compareMajorCategories(a.major || "", b.major || "") || compareText(a.tag, b.tag, "en")));
     else if (state.sort === "level") state.filtered.sort((a,b) => {
@@ -629,7 +630,10 @@
       const sort = event.target.closest("#table-sort");
       if (sort) { state.sort = sort.value; applyFilters(); return; }
       const favorite = event.target.closest("[data-filter-favorites]");
-      if (favorite) state.favoritesOnly = favorite.checked;
+      if (favorite) {
+        state.favoritesOnly = favorite.checked;
+        $("#favorites-only").checked = favorite.checked;
+      }
     });
     root.addEventListener("click", event => {
       const direction = event.target.closest("#table-sort-direction");
@@ -645,6 +649,7 @@
       if (event.target.closest("[data-filter-reset]")) {
         Object.values(state.columnFilters).forEach(values => values.clear());
         state.favoritesOnly = false;
+        $("#favorites-only").checked = false;
         renderTableTools(); applyFilters(); return;
       }
       if (event.target.closest("[data-filter-apply]")) {
