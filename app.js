@@ -741,54 +741,100 @@
         else if(event.ctrlKey&&((event.key==="ArrowLeft"&&target==="negative")||(event.key==="ArrowRight"&&target==="positive"))){event.preventDefault();movePromptBubble(target,index,tokens);}
         else if((event.key==="Delete"||event.key==="Backspace")&&event.target===chip){event.preventDefault();tokens.splice(index,1);updatePromptFromBubbles(target,tokens);}
       });
-      let pointerStart=null, pointerDragging=false, suppressNextClick=false;
+      let pointerStart=null, pointerDragging=false, suppressNextClick=false, dragState=null;
       label.addEventListener("click",event=>{
         if(suppressNextClick){event.preventDefault();event.stopImmediatePropagation();suppressNextClick=false;}
       },true);
+      const clearDragStyles=()=>{
+        chip.classList.remove("is-dragging");
+        chip.style.position="";chip.style.left="";chip.style.top="";
+        chip.style.width="";chip.style.height="";chip.style.margin="";
+        chip.style.pointerEvents="";chip.style.zIndex="";chip.style.transform="";
+      };
+      const updateDragTarget=event=>{
+        if(!dragState)return;
+        chip.style.left=(event.clientX-dragState.grabX)+"px";
+        chip.style.top=(event.clientY-dragState.grabY)+"px";
+        const hit=document.elementFromPoint(event.clientX,event.clientY);
+        let destination=hit&&hit.closest(".prompt-bubbles");
+        if(!destination){
+          const editor=hit&&hit.closest(".prompt-bubble-editor");
+          destination=editor&&editor.querySelector(".prompt-bubbles");
+        }
+        if(!destination||!["positive-bubbles","negative-bubbles"].includes(destination.id))return;
+        const other=hit&&hit.closest(".prompt-bubble");
+        if(other&&other!==chip&&other.parentElement===destination){
+          const rect=other.getBoundingClientRect();
+          const after=event.clientY>rect.top+rect.height/2||
+            (Math.abs(event.clientY-(rect.top+rect.height/2))<rect.height/3&&event.clientX>rect.left+rect.width/2);
+          const beforeNode=after?other.nextElementSibling:other;
+          if(beforeNode!==dragState.placeholder&&beforeNode!==dragState.placeholder.nextSibling){
+            destination.insertBefore(dragState.placeholder,beforeNode);
+          }
+        }else if(destination!==dragState.placeholder.parentElement||!other){
+          destination.append(dragState.placeholder);
+        }
+      };
+      const finishPointerDrag=(event,cancelled=false)=>{
+        if(!pointerStart||event.pointerId!==pointerStart.id)return;
+        window.removeEventListener("pointermove",onWindowPointerMove);
+        window.removeEventListener("pointerup",onWindowPointerUp);
+        window.removeEventListener("pointercancel",onWindowPointerCancel);
+        if(pointerDragging&&dragState){
+          suppressNextClick=true;
+          const placeholder=dragState.placeholder;
+          if(cancelled){
+            const origin=dragState.originRoot;
+            origin.insertBefore(chip,dragState.originNext&&dragState.originNext.parentElement===origin?dragState.originNext:null);
+          }else{
+            placeholder.parentElement.insertBefore(chip,placeholder);
+          }
+          placeholder.remove();
+          clearDragStyles();
+          if(!cancelled){
+            const positive=[...$("#positive-bubbles").querySelectorAll(".prompt-bubble")].map(node=>node._promptToken);
+            const negative=[...$("#negative-bubbles").querySelectorAll(".prompt-bubble")].map(node=>node._promptToken);
+            state.promptPositive=serializePromptTokens(positive);
+            state.promptNegative=serializePromptTokens(negative);
+            $("#positive-output").value=state.promptPositive;
+            $("#negative-output").value=state.promptNegative;
+            syncSelectedFromPromptText();
+            renderPromptBubbles("positive");renderPromptBubbles("negative");
+            renderRows();renderEditor();
+          }
+        }
+        pointerStart=null;pointerDragging=false;dragState=null;
+      };
+      const onWindowPointerMove=event=>{
+        if(!pointerStart||event.pointerId!==pointerStart.id)return;
+        if(!pointerDragging&&Math.hypot(event.clientX-pointerStart.x,event.clientY-pointerStart.y)>6){
+          pointerDragging=true;
+          const rect=chip.getBoundingClientRect();
+          const placeholder=document.createElement("div");
+          placeholder.className="prompt-bubble-placeholder";
+          placeholder.style.width=rect.width+"px";
+          placeholder.style.height=rect.height+"px";
+          dragState={placeholder,originRoot:root,originNext:chip.nextSibling,
+            grabX:event.clientX-rect.left,grabY:event.clientY-rect.top};
+          root.insertBefore(placeholder,chip);
+          chip.classList.add("is-dragging");
+          chip.style.position="fixed";chip.style.left=rect.left+"px";chip.style.top=rect.top+"px";
+          chip.style.width=rect.width+"px";chip.style.height=rect.height+"px";
+          chip.style.margin="0";chip.style.pointerEvents="none";chip.style.zIndex="1000";
+          document.body.append(chip);
+        }
+        if(pointerDragging){event.preventDefault();updateDragTarget(event);}
+      };
+      const onWindowPointerUp=event=>finishPointerDrag(event,false);
+      const onWindowPointerCancel=event=>finishPointerDrag(event,true);
       chip.addEventListener("pointerdown",event=>{
         if(event.button!==0||label.isContentEditable||event.target.closest(".prompt-bubble-action"))return;
         pointerStart={id:event.pointerId,x:event.clientX,y:event.clientY};
         pointerDragging=false;
+        window.addEventListener("pointermove",onWindowPointerMove,{passive:false});
+        window.addEventListener("pointerup",onWindowPointerUp);
+        window.addEventListener("pointercancel",onWindowPointerCancel);
       });
-      chip.addEventListener("pointermove",event=>{
-        if(!pointerStart||event.pointerId!==pointerStart.id)return;
-        if(!pointerDragging&&Math.hypot(event.clientX-pointerStart.x,event.clientY-pointerStart.y)>5){
-          pointerDragging=true;chip.classList.add("is-dragging");chip.setPointerCapture(event.pointerId);
-        }
-        if(!pointerDragging)return;
-        event.preventDefault();
-        const hit=document.elementFromPoint(event.clientX,event.clientY);
-        const other=hit&&hit.closest(".prompt-bubble");
-        if(!other||other===chip||other.parentElement!==root)return;
-        const rect=other.getBoundingClientRect();
-        const after=event.clientY>rect.top+rect.height/2||
-          (Math.abs(event.clientY-(rect.top+rect.height/2))<rect.height/3&&event.clientX>rect.left+rect.width/2);
-        const beforeNode=after?other.nextElementSibling:other;
-        if(beforeNode!==chip&&beforeNode!==chip.nextElementSibling){
-          const before=[...root.children].filter(node=>node.classList.contains("prompt-bubble"));
-          const positions=new Map(before.map(node=>[node,node.getBoundingClientRect()]));
-          root.insertBefore(chip,beforeNode);
-          before.forEach(node=>{
-            const first=positions.get(node),last=node.getBoundingClientRect();
-            const dx=first.left-last.left,dy=first.top-last.top;
-            if(dx||dy){node.style.transition="none";node.style.transform="translate("+dx+"px,"+dy+"px)";requestAnimationFrame(()=>{
-              node.style.transition="transform 150ms ease";node.style.transform="";
-            });}
-          });
-        }
-      });
-      const finishPointerDrag=event=>{
-        if(!pointerStart||event.pointerId!==pointerStart.id)return;
-        if(pointerDragging){
-          suppressNextClick=true;
-          chip.classList.remove("is-dragging");
-          const ordered=[...root.querySelectorAll(".prompt-bubble")].map(node=>node._promptToken);
-          updatePromptFromBubbles(target,ordered);
-        }
-        pointerStart=null;pointerDragging=false;
-      };
-      chip.addEventListener("pointerup",finishPointerDrag);
-      chip.addEventListener("pointercancel",finishPointerDrag);
       root.append(chip);
     });
     if(!tokens.length){const empty=document.createElement("span");empty.className="prompt-bubble-empty";empty.textContent="辞典からタグを選ぶか、この余白をクリックして入力";root.append(empty);}
