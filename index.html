@@ -6,14 +6,14 @@
   <meta name="theme-color" content="#15191f">
   <meta name="description" content="画像生成タグを日本語・英語で検索し、分類から選んでプロンプトを組み立てるタグ辞典。">
   <title>画像生成タグ辞典</title>
-  <link rel="stylesheet" href="./styles.css?v=prompt-editor-20261115">
+  <link rel="stylesheet" href="./styles.css?v=bubble-editor-category-exclusion-20261115">
 </head>
 <body>
   <header class="topbar">
     <a class="brand brand-compact" href="./" aria-label="画像生成タグ辞典">
       <span class="brand-copy"><strong>画像生成タグ辞典</strong></span>
     </a>
-    <div class="topbar-meta"><div class="stats header-stats" aria-label="辞書の統計"><div class="stat-card"><strong>—</strong><span>登録</span></div><div class="stat-card"><strong>0</strong><span>選択</span></div></div><a class="button button-secondary" href="./admin.html">タグ管理</a></div>
+    <div class="topbar-meta"><div class="stats header-stats" aria-label="辞書の統計"><div class="stat-card"><strong>—</strong><span>登録</span></div></div><a class="button button-secondary" href="./admin.html">タグ管理</a></div>
   </header>
   <main class="app-shell">
     <nav class="screen-nav" aria-label="画面切り替え">
@@ -79,16 +79,19 @@
         <div class="panel-heading"><div><h2>プロンプト</h2></div><button class="text-button" type="button">全解除</button></div>
         <div class="output-grid">
           <section class="output-card">
-            <div class="output-header"><label for="positive-output">ポジティブプロンプト</label></div>
-            <textarea id="positive-output" spellcheck="false" placeholder="タグ一覧から選択するか、ここに直接入力してください。"></textarea>
+            <div class="output-header"><label for="positive-output">ポジティブプロンプト</label><button class="text-button" type="button" data-editor-mode="positive">テキスト編集</button></div>
+            <section id="positive-bubble-editor" class="prompt-bubble-editor"><div class="bubble-toolbar"><input id="positive-bubble-add" type="search" list="bubble-tag-suggestions" placeholder="タグを検索して追加" autocomplete="off"><button class="button button-quiet" type="button" data-bubble-add="positive">＋追加</button></div><div id="positive-bubbles" class="prompt-bubbles"></div></section>
+            <textarea id="positive-output" spellcheck="false" placeholder="タグ一覧から選択するか、ここに直接入力してください。" hidden></textarea>
             <div class="output-actions"><button class="button button-primary" type="button" data-action="copy-positive" disabled>コピー</button><button class="button button-ghost" type="button" data-action="save-positive" disabled>TXT保存</button></div>
           </section>
           <section class="output-card">
-            <div class="output-header"><label for="negative-output">ネガティブプロンプト</label></div>
-            <textarea id="negative-output" spellcheck="false" placeholder="ネガティブタグを選択するか、ここに直接入力してください。"></textarea>
+            <div class="output-header"><label for="negative-output">ネガティブプロンプト</label><button class="text-button" type="button" data-editor-mode="negative">テキスト編集</button></div>
+            <section id="negative-bubble-editor" class="prompt-bubble-editor"><div class="bubble-toolbar"><input id="negative-bubble-add" type="search" list="bubble-tag-suggestions" placeholder="タグを検索して追加" autocomplete="off"><button class="button button-quiet" type="button" data-bubble-add="negative">＋追加</button></div><div id="negative-bubbles" class="prompt-bubbles"></div></section>
+            <textarea id="negative-output" spellcheck="false" placeholder="ネガティブタグを選択するか、ここに直接入力してください。" hidden></textarea>
             <div class="output-actions negative-output-actions"><button class="button button-primary" type="button" data-action="copy-negative" disabled>コピー</button><button class="button button-ghost" type="button" data-action="save-negative" disabled>TXT保存</button></div>
           </section>
         </div>
+        <datalist id="bubble-tag-suggestions"></datalist>
       </section>
     </section>
     <dialog id="tag-detail-dialog" class="tag-detail-dialog" aria-labelledby="tag-detail-title">
@@ -98,6 +101,6 @@
   <footer class="footer"><span>CSVを正本として表示</span></footer>
   </main>
   <script src="./csv.js?v=csv-parser-20261114"></script>
-  <script src="./app.js?v=prompt-editor-20261115"></script>
+  <script src="./app.js?v=bubble-editor-category-exclusion-20261115"></script>
 </body>
 </html>

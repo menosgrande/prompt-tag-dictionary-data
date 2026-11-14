@@ -496,3 +496,24 @@ body{font-size:14px;line-height:1.65}
   color:var(--text);font:12px/1.7 var(--mono);white-space:pre-wrap;overflow-wrap:anywhere;
 }
 .editor-builder-panel .output-card>textarea:focus{border-color:var(--accent);outline:1px solid var(--accent)}
+
+/* Category checkboxes now exclude matching tag rows; they no longer hide category navigation. */
+.category-major-row{display:flex;align-items:center;gap:7px}
+.category-major-row>.category-major-button{flex:1;min-width:0}
+.category-exclusion{display:inline-flex;flex:0 0 18px;align-items:center;justify-content:center;cursor:pointer}
+.category-exclusion input{width:15px;height:15px;margin:0;accent-color:var(--accent)}
+/* Bubble-first prompt editor */
+.prompt-bubble-editor{display:grid;gap:10px;padding:12px;border:1px solid var(--line);border-radius:9px;background:var(--surface)}
+.prompt-bubble-editor[hidden]{display:none}
+.bubble-toolbar{display:flex;gap:8px;flex-wrap:wrap}
+.bubble-toolbar input{flex:1 1 220px;min-width:0;min-height:36px;padding:8px 10px;border:1px solid var(--line);border-radius:7px;background:var(--surface-raised);color:var(--text)}
+.prompt-bubbles{display:flex;flex-wrap:wrap;align-items:center;gap:7px;min-height:36px}
+.prompt-bubble{display:flex;align-items:center;gap:5px;max-width:100%;padding:5px 6px 5px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface-raised)}
+.prompt-bubble-label{max-width:min(42vw,320px);overflow-wrap:anywhere;font:11px/1.5 var(--mono)}
+.prompt-bubble-weight{width:62px;min-width:0;padding:3px 4px;border:1px solid var(--line);border-radius:5px;background:var(--surface);color:var(--text);font-size:10px}
+.prompt-bubble-action{padding:4px 6px;border:0;border-radius:5px;background:var(--surface-hover);color:var(--text);font-size:11px;cursor:pointer}
+.prompt-bubble-action:hover{background:var(--accent);color:var(--bg)}
+.prompt-bubble-empty{color:var(--muted);font-size:11px}
+@media(max-width:600px){.prompt-bubble{gap:4px;padding:5px}.prompt-bubble-label{max-width:38vw}.prompt-bubble-action{padding:5px}}
+
+.editor-builder-panel .output-card>textarea[hidden]{display:none}

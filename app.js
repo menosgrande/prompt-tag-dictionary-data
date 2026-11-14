@@ -61,7 +61,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, hiddenMajorCategories: new Set(), columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
   };
   let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -480,19 +480,19 @@
       if (row.minor) entry.minors.set(row.minor, (entry.minors.get(row.minor) || 0) + 1);
     });
     const majors = [...majorCounts.entries()].sort((a,b) => compareMajorCategories(a[0], b[0]));
-    const visibleMajors = majors.filter(([major]) => !state.hiddenMajorCategories.has(major));
-    const hiddenMajors = majors.filter(([major]) => state.hiddenMajorCategories.has(major));
     const renderMajor = ([major,entry]) => {
       const minors = [...entry.minors.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja"));
-      return '<div class="category-major"><div class="category-major-row"><button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button><label class="category-visibility" title="この分類の表示・非表示"><input type="checkbox" data-category-visible="' + escapeHTML(major) + '" checked aria-label="' + escapeHTML(major) + 'を表示">表示</label></div>' +
-        '<div class="category-minors">' + minors.map(([minor,n]) => '<button class="category-minor' + (state.minor === minor ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button>').join("") + '</div></div>';
+      return '<div class="category-major"><div class="category-major-row">' +
+        '<label class="category-exclusion" title="この分類に該当するタグを一覧から除外"><input type="checkbox" data-category-exclude="' + escapeHTML(major) + '"' + (state.excludedMajorCategories.has(major) ? ' checked' : '') + ' aria-label="' + escapeHTML(major) + 'のタグを一覧から除外"></label>' +
+        '<button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button></div>' +
+        '<div class="category-minors">' + minors.map(([minor,n]) => '<button class="category-minor' + (state.minor === minor && state.major === major ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button>').join("") + '</div></div>';
     };
     root.innerHTML = '<button class="category-major-button' + (state.favoritesOnly ? ' active' : '') + '" data-favorites="true">お気に入り <span class="count">' + favoriteCount.toLocaleString("ja-JP") + '</span></button>' +
       '<button class="category-major-button' + (!state.major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="">すべての分類 <span class="count">' + state.all.length.toLocaleString("ja-JP") + '</span></button>' +
-      visibleMajors.map(renderMajor).join("") +
-      (hiddenMajors.length ? '<details class="category-hidden-list"><summary>非表示の分類 <span class="count">' + hiddenMajors.length + '件</span></summary><div>' + hiddenMajors.map(([major]) => '<label class="category-visibility"><input type="checkbox" data-category-visible="' + escapeHTML(major) + '" aria-label="' + escapeHTML(major) + 'を表示">' + escapeHTML(major) + '</label>').join("") + '<button type="button" class="category-show-all" data-show-all-categories>すべて表示</button></div></details>' : '');
+      majors.map(renderMajor).join("");
   }
   function matches(row) {
+    if (state.excludedMajorCategories.has(row.major || "")) return false;
     if (state.major && row.major !== state.major) return false;
     if (state.minor && row.minor !== state.minor) return false;
     if (state.favoritesOnly && !state.favorites.has(keyOf(row))) return false;
@@ -656,6 +656,8 @@
     state.major = "";
     state.minor = "";
     state.favoritesOnly = false;
+    state.excludedMajorCategories.clear();
+    writeUserDataV2({ excludedMajorCategories: [] });
     $("#favorites-only").checked = false;
     Object.values(state.columnFilters).forEach(values => values.clear());
     state.sort = "index";
@@ -686,6 +688,135 @@
   function promptTokens(value) {
     return String(value || "").split(",").map(token => token.trim()).filter(Boolean);
   }
+
+  function parsePromptTokens(value) {
+    return String(value || "").split(",").map(raw => raw.trim()).filter(Boolean).map(raw => {
+      const weighted = raw.match(/^\((.+):([0-9]+(?:\.[0-9]+)?)\)$/);
+      return weighted ? { tag: weighted[1], weight: weighted[2] } : { tag: raw, weight: "" };
+    });
+  }
+  function serializePromptTokens(tokens) {
+    return tokens.map(item => item.weight ? "(" + item.tag + ":" + item.weight + ")" : item.tag).join(", ");
+  }
+  function renderPromptBubbles(polarity) {
+    const target = polarity === "negative" ? "negative" : "positive";
+    const root = $("#" + target + "-bubbles");
+    if (!root) return;
+    const tokens = parsePromptTokens(state[target === "negative" ? "promptNegative" : "promptPositive"]);
+    root.replaceChildren();
+    tokens.forEach((item,index) => {
+      const chip = document.createElement("div");
+      chip.className = "prompt-bubble";
+      chip.draggable = true;
+      const label = document.createElement("span");
+      label.className = "prompt-bubble-label";
+      label.textContent = item.tag;
+      label.title = item.tag;
+      const weight = document.createElement("input");
+      weight.type = "number"; weight.className = "prompt-bubble-weight";
+      weight.min = "0.1"; weight.max = "2"; weight.step = "0.01";
+      weight.placeholder = "重み"; weight.value = item.weight;
+      weight.setAttribute("aria-label", item.tag + "の重み");
+      weight.addEventListener("change", () => {
+        const value = weight.value.trim();
+        if (value && (!Number.isFinite(Number(value)) || Number(value) < 0.1 || Number(value) > 2)) {
+          weight.value = item.weight; return;
+        }
+        tokens[index].weight = value ? String(Number(value)) : "";
+        updatePromptFromBubbles(target,tokens);
+      });
+      const makeAction = (caption,title,handler) => {
+        const button = document.createElement("button");
+        button.type = "button"; button.className = "prompt-bubble-action";
+        button.textContent = caption; button.title = title; button.setAttribute("aria-label",title);
+        button.addEventListener("click",handler); return button;
+      };
+      chip.append(label,weight,
+        makeAction("↑","上へ移動",()=>{if(index>0){[tokens[index-1],tokens[index]]=[tokens[index],tokens[index-1]];updatePromptFromBubbles(target,tokens);}}),
+        makeAction("↓","下へ移動",()=>{if(index<tokens.length-1){[tokens[index+1],tokens[index]]=[tokens[index],tokens[index+1]];updatePromptFromBubbles(target,tokens);}}),
+        makeAction("編集","タグ名を編集",()=>{const value=window.prompt("タグ名を編集",item.tag);if(value!==null&&value.trim()){tokens[index].tag=value.trim();updatePromptFromBubbles(target,tokens);}}),
+        makeAction(target==="positive"?"−N":"+P",target==="positive"?"ネガティブへ移動":"ポジティブへ移動",()=>movePromptBubble(target,index,tokens)),
+        makeAction("×","削除",()=>{tokens.splice(index,1);updatePromptFromBubbles(target,tokens);}));
+      chip.addEventListener("dragstart",event=>{event.dataTransfer.setData("text/plain",String(index));event.dataTransfer.effectAllowed="move";});
+      chip.addEventListener("dragover",event=>{event.preventDefault();event.dataTransfer.dropEffect="move";});
+      chip.addEventListener("drop",event=>{
+        event.preventDefault();
+        const from=Number(event.dataTransfer.getData("text/plain"));
+        if(Number.isInteger(from)&&from!==index&&tokens[from]){
+          const [moved]=tokens.splice(from,1);tokens.splice(index,0,moved);updatePromptFromBubbles(target,tokens);
+        }
+      });
+      root.append(chip);
+    });
+    if (!tokens.length) {
+      const empty=document.createElement("span");empty.className="prompt-bubble-empty";
+      empty.textContent="タグを選択するか、上の欄から追加してください。";root.append(empty);
+    }
+  }
+  function updatePromptFromBubbles(target,tokens) {
+    const key=target==="negative"?"promptNegative":"promptPositive";
+    state[key]=serializePromptTokens(tokens);
+    const textarea=$("#"+(target==="negative"?"negative-output":"positive-output"));
+    textarea.value=state[key];
+    syncSelectedFromPromptText();
+    renderPromptBubbles("positive");renderPromptBubbles("negative");
+    renderRows();renderEditor();
+  }
+  function movePromptBubble(source,index,tokens) {
+    const target=source==="positive"?"negative":"positive";
+    const item=tokens.splice(index,1)[0];
+    const key=target==="negative"?"promptNegative":"promptPositive";
+    const destination=parsePromptTokens(state[key]);
+    destination.push(item);
+    updatePromptFromBubbles(source,tokens);
+    state[key]=serializePromptTokens(destination);
+    $("#"+(target==="negative"?"negative-output":"positive-output")).value=state[key];
+    syncSelectedFromPromptText();renderPromptBubbles("positive");renderPromptBubbles("negative");renderEditor();
+  }
+  function syncSelectedFromPromptText() {
+    const rowsByTag=new Map(state.all.map(row=>[String(row.tag).toLocaleLowerCase(),row]));
+    const nextSelected=new Map(),nextPolarity=new Map();
+    [["positive",state.promptPositive],["negative",state.promptNegative]].forEach(([polarity,text])=>{
+      parsePromptTokens(text).forEach(token=>{
+        const row=rowsByTag.get(token.tag.toLocaleLowerCase());
+        if(row){const key=keyOf(row);nextSelected.set(key,row);nextPolarity.set(key,polarity);}
+      });
+    });
+    state.selected=nextSelected;state.polarity=nextPolarity;
+  }
+  function updateBubbleSuggestions(input) {
+    const list=$("#bubble-tag-suggestions"),query=normalizeSearchText(input.value);
+    list.replaceChildren();
+    if(!query)return;
+    const matches=state.all.map(row=>{
+      const aliases=parseAliases(row.aliases_json);
+      const fields=[row.tag,row.ja,...aliases].map(normalizeSearchText);
+      const rank=fields.some(value=>value===query)?0:fields.some(value=>value.startsWith(query))?1:fields.some(value=>value.includes(query))?2:9;
+      return {row,rank};
+    }).filter(item=>item.rank<9).sort((a,b)=>a.rank-b.rank||String(a.row.tag).localeCompare(String(b.row.tag),"en")).slice(0,10);
+    matches.forEach(({row})=>{const option=document.createElement("option");option.value=row.tag;option.label=row.ja||row.tag;list.append(option);});
+  }
+  function addBubbleTag(target) {
+    const input=$("#"+(target==="negative"?"negative-bubble-add":"positive-bubble-add"));
+    const raw=input.value.trim();if(!raw)return;
+    const query=normalizeSearchText(raw);
+    const match=state.all.find(row=>normalizeSearchText(row.tag)===query||normalizeSearchText(row.ja)===query||parseAliases(row.aliases_json).some(alias=>normalizeSearchText(alias)===query));
+    const tag=match?match.tag:raw;
+    const key=target==="negative"?"promptNegative":"promptPositive";
+    const tokens=parsePromptTokens(state[key]);
+    if(!tokens.some(item=>item.tag.toLocaleLowerCase()===tag.toLocaleLowerCase()))tokens.push({tag,weight:""});
+    input.value="";updateBubbleSuggestions(input);updatePromptFromBubbles(target,tokens);
+  }
+  function setPromptEditorMode(target,mode) {
+    const positive=target==="positive";
+    state.editorModes[target]=mode;
+    $("#"+target+"-bubble-editor").hidden=mode!=="bubble";
+    $("#"+(positive?"positive-output":"negative-output")).hidden=mode!=="text";
+    const button=$('[data-editor-mode="'+target+'"]');
+    if(button)button.textContent=mode==="text"?"バブル編集に戻る":"テキスト編集";
+    saveBuilderState();
+  }
+
   function appendPromptTag(polarity, tag) {
     const key = polarity === "negative" ? "promptNegative" : "promptPositive";
     const tokens = promptTokens(state[key]);
@@ -703,7 +834,7 @@
   function saveBuilderState() {
     writeUserDataV2({ builderState: {
       selected: [...state.selected.keys()], polarity: [...state.polarity.entries()],
-      promptPositive: state.promptPositive, promptNegative: state.promptNegative
+      promptPositive: state.promptPositive, promptNegative: state.promptNegative, editorModes: state.editorModes
     } });
   }
   function restoreBuilderState() {
@@ -724,6 +855,7 @@
         if (typeof saved.promptPositive === "string" && typeof saved.promptNegative === "string") {
           state.promptPositive = saved.promptPositive;
           state.promptNegative = saved.promptNegative;
+          if (saved.editorModes && typeof saved.editorModes === "object") state.editorModes = { positive: saved.editorModes.positive === "text" ? "text" : "bubble", negative: saved.editorModes.negative === "text" ? "text" : "bubble" };
         } else {
           const positive = [], negative = [];
           state.selected.forEach((row, key) => (state.polarity.get(key) === "negative" ? negative : positive).push(row.tag));
@@ -736,28 +868,20 @@
     } catch (error) { console.warn("プロンプト編集内容を復元できませんでした。", error); }
     $("#positive-output").value = state.promptPositive;
     $("#negative-output").value = state.promptNegative;
+    syncSelectedFromPromptText();
   }
   function renderEditor() {
     saveBuilderState();
-    const rows = [...state.selected.values()], count = state.selected.size;
-    $$(".stats strong")[1].textContent = String(count);
-    const countLabel = $(".selected-dock-count");
-    if (countLabel) countLabel.textContent = count + " 件選択中";
-    const chips = $(".selected-dock-tags");
-    if (chips) chips.innerHTML = rows.slice(0, 8).map(row => '<span class="selected-dock-chip"><span title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</span><button class="selected-dock-remove" type="button" data-remove="' + escapeHTML(keyOf(row)) + '" aria-label="削除">×</button></span>').join("") + (count > 8 ? '<span class="selected-dock-more">+' + (count - 8) + '件</span>' : "");
-    const dock = $(".selected-dock"); if (dock) dock.hidden = count === 0;
     const positive = $("#positive-output"), negative = $("#negative-output");
     $('[data-action="copy-positive"]').disabled = !positive?.value;
     $('[data-action="save-positive"]').disabled = !positive?.value;
     $('[data-action="copy-negative"]').disabled = !negative?.value;
     $('[data-action="save-negative"]').disabled = !negative?.value;
+    renderPromptBubbles("positive"); renderPromptBubbles("negative");
   }
   function addRow(row) {
     const key = keyOf(row);
-    if (!state.selected.has(key)) {
-      state.selected.set(key, row); state.polarity.set(key, "positive");
-      appendPromptTag("positive", row.tag);
-    }
+    if (!state.selected.has(key)) { state.selected.set(key, row); state.polarity.set(key, "positive"); appendPromptTag("positive", row.tag); }
     renderRows(); renderEditor();
   }
   function toggleRow(row) {
@@ -769,7 +893,7 @@
       state.selected.set(key, row); state.polarity.set(key, "positive");
       appendPromptTag("positive", row.tag);
     }
-    renderRows(); renderEditor();
+    syncSelectedFromPromptText(); renderRows(); renderEditor();
   }
   function cycleRowState(row) {
     const key = keyOf(row);
@@ -783,7 +907,7 @@
       removePromptTag("negative", row.tag);
       state.selected.delete(key); state.polarity.delete(key);
     }
-    renderRows(); renderEditor();
+    syncSelectedFromPromptText(); renderRows(); renderEditor();
   }
   function showTagDetail(row) {
     const dialog = $("#tag-detail-dialog");
@@ -962,22 +1086,15 @@
       setCategoryPanelOpen(categoryToggle.getAttribute("aria-expanded") !== "true");
     });
     $(".category-tree").addEventListener("change", event => {
-      const visibility = event.target.closest("[data-category-visible]");
-      if (!visibility) return;
-      const major = visibility.dataset.categoryVisible;
-      if (visibility.checked) state.hiddenMajorCategories.delete(major);
-      else state.hiddenMajorCategories.add(major);
-      writeUserDataV2({ hiddenMajorCategories: [...state.hiddenMajorCategories] });
-      renderCategories();
+      const checkbox = event.target.closest("[data-category-exclude]");
+      if (!checkbox) return;
+      const major = checkbox.dataset.categoryExclude;
+      if (checkbox.checked) state.excludedMajorCategories.add(major);
+      else state.excludedMajorCategories.delete(major);
+      writeUserDataV2({ excludedMajorCategories: [...state.excludedMajorCategories] });
+      applyFilters();
     });
     $(".category-tree").addEventListener("click", event => {
-      const showAll = event.target.closest("[data-show-all-categories]");
-      if (showAll) {
-        state.hiddenMajorCategories.clear();
-        writeUserDataV2({ hiddenMajorCategories: [] });
-        renderCategories();
-        return;
-      }
       const favoriteCategory = event.target.closest("[data-favorites]");
       if (favoriteCategory) {
         state.favoritesOnly = !state.favoritesOnly;
@@ -994,7 +1111,7 @@
       renderCategories(); applyFilters();
       if (isMinor) setCategoryPanelOpen(false); else setCategoryPanelOpen(true);
     });
-    $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; renderCategories(); applyFilters(); setCategoryPanelOpen(false); });
+    $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; state.excludedMajorCategories.clear(); writeUserDataV2({ excludedMajorCategories: [] }); renderCategories(); applyFilters(); setCategoryPanelOpen(false); });
     $(".search-row > .button").addEventListener("click", resetDictionarySearch);
     $(".pagination").addEventListener("click", event => {
       const button = event.target.closest("[data-page]");
@@ -1050,15 +1167,6 @@
       if (!tab) return;
       event.preventDefault(); setScreen(tab.hash.slice(1));
     });
-    $(".selected-dock").addEventListener("click", event => {
-      const button = event.target.closest("[data-remove]");
-      if (!button) return;
-      const row = state.all.find(item => keyOf(item) === button.dataset.remove);
-      if (row) removePromptTag(state.polarity.get(button.dataset.remove) || "positive", row.tag);
-      state.selected.delete(button.dataset.remove); state.polarity.delete(button.dataset.remove);
-      renderRows(); renderEditor();
-    });
-    $(".selected-dock-actions [data-action='open-editor']").addEventListener("click", () => setScreen("editor-screen"));
     $(".editor-builder-panel .text-button").addEventListener("click", () => {
       if (!state.selected.size && !state.promptPositive && !state.promptNegative) return;
       if (!window.confirm("選択タグとプロンプト本文をすべて解除しますか？")) return;
@@ -1078,10 +1186,20 @@
       }
     });
     $("#positive-output").addEventListener("input", event => {
-      state.promptPositive = event.target.value; renderEditor();
+      state.promptPositive = event.target.value; syncSelectedFromPromptText(); renderRows(); renderEditor();
     });
     $("#negative-output").addEventListener("input", event => {
-      state.promptNegative = event.target.value; renderEditor();
+      state.promptNegative = event.target.value; syncSelectedFromPromptText(); renderRows(); renderEditor();
+    });
+    $$("[data-editor-mode]").forEach(button=>button.addEventListener("click",()=>{
+      const target=button.dataset.editorMode;
+      setPromptEditorMode(target,state.editorModes[target]==="text"?"bubble":"text");
+    }));
+    $$("[data-bubble-add]").forEach(button=>button.addEventListener("click",()=>addBubbleTag(button.dataset.bubbleAdd)));
+    ["positive","negative"].forEach(target=>{
+      const input=$("#"+target+"-bubble-add");
+      input.addEventListener("input",()=>updateBubbleSuggestions(input));
+      input.addEventListener("keydown",event=>{if(event.key==="Enter"){event.preventDefault();addBubbleTag(target);}});
     });
     $$("[data-action]").forEach(button => button.addEventListener("click", async () => {
       const action = button.dataset.action;
@@ -1098,24 +1216,9 @@
       if (action.startsWith("save")) downloadText(action.includes("negative") ? "negative-prompt.txt" : "positive-prompt.txt", target.value);
     }));
   }
-  function createDock() {
-    const dock = document.createElement("aside");
-    dock.className = "selected-dock"; dock.hidden = true;
-    dock.innerHTML = '<div class="selected-dock-content"><strong class="selected-dock-count">0 件選択中</strong><div class="selected-dock-tags"></div></div><div class="selected-dock-actions"><button class="button button-primary" type="button" data-action="open-editor">プロンプト編集へ</button><button class="button button-quiet" type="button" data-action="clear-selection">全解除</button></div>';
-    document.body.append(dock);
-    dock.querySelector('[data-action="clear-selection"]').addEventListener("click", () => {
-      if (!state.selected.size && !state.promptPositive && !state.promptNegative) return;
-      if (!window.confirm("選択タグとプロンプト本文をすべて解除しますか？")) return;
-      state.selected.clear(); state.polarity.clear();
-      state.promptPositive = ""; state.promptNegative = "";
-      $("#positive-output").value = ""; $("#negative-output").value = "";
-      renderRows(); renderEditor();
-    });
-  }
   async function init() {
     setScreen("dictionary-screen", { historyMode: "none" });
     setMessage("CSVデータを読み込んでいます…");
-    createDock();
     setupColumnResizers();
     try {
       const loaded = await Promise.all(DATA_FILES.map(loadCSV));
@@ -1125,7 +1228,7 @@
         prepareSearchIndex();
         const userData = migrateLegacyUserData();
         state.favorites = new Set(Array.isArray(userData.favorites) ? userData.favorites.filter(key => typeof key === "string") : []);
-        state.hiddenMajorCategories = new Set(Array.isArray(userData.hiddenMajorCategories) ? userData.hiddenMajorCategories.filter(value => typeof value === "string") : []);
+        state.excludedMajorCategories = new Set(Array.isArray(userData.excludedMajorCategories) ? userData.excludedMajorCategories.filter(value => typeof value === "string") : []);
         state.expressionLevels = new Map(Array.isArray(userData.expressionLevels) ? userData.expressionLevels.filter(entry => Array.isArray(entry) && typeof entry[0] === "string" && (entry[1] === null || [0,1,2,3,4].includes(entry[1])) ) : []);
         renderMigrationReport(userData);
         if (!state.selectionRestored) restoreBuilderState();
@@ -1142,6 +1245,7 @@
         renderTableTools();
         applyFilters();
         renderEditor();
+        setPromptEditorMode("positive",state.editorModes.positive); setPromptEditorMode("negative",state.editorModes.negative);
       };
       // 操作イベントと保存済み設定を先に読み込み、CSVの表示処理を最小化する。
       bindControls();
