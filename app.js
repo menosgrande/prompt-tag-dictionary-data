@@ -244,6 +244,21 @@
   function parseAliases(value) {
     try { const parsed = JSON.parse(value || "[]"); return Array.isArray(parsed) ? parsed.map(String) : []; } catch { return []; }
   }
+  // 全角・半角、英字大小、アクセント、句読点や区切り文字の違いを吸収する検索用正規化。
+  function normalizeSearchText(value) {
+    return String(value ?? "").normalize("NFKC").normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLocaleLowerCase()
+      .replace(/[\s\p{P}\p{S}]+/gu, "");
+  }
+  function prepareSearchIndex() {
+    state.all.forEach(row => {
+      row._searchText = normalizeSearchText([
+        row.tag, row.ja, ...parseAliases(row.aliases_json),
+        row.major, row.minor, row.detail
+      ].join(" "));
+    });
+  }
   function addWorkAlias(map, value, group) {
     const normalized = normalizeWorkName(value);
     if (!normalized) return;
@@ -322,11 +337,6 @@
   function ensureRelatedIndexes() {
     if (state.relatedIndexesReady) return;
     buildRelatedIndexes();
-    // 作品インデックス構築後に workTitle を含む検索用文字列を一度だけ作る。
-    state.all.forEach(row => {
-      row._searchText = [row.tag,row.ja,row.aliases_json,row.major,row.minor,row.detail,row.workTitle]
-        .join(" ").toLocaleLowerCase();
-    });
     state.relatedIndexesReady = true;
   }
   function relatedTagRow(row, groupName = "", typeLabel = "") {
@@ -633,6 +643,23 @@
     $(".result-heading .count").textContent = rows.length.toLocaleString("ja-JP") + " 件";
     $(".pagination").innerHTML = '<button class="page-number page-arrow" type="button" data-page="prev"' + (state.page === 0 ? ' disabled' : '') + '>前へ</button>' + (start > 1 ? '<span class="page-ellipsis">…</span>' : '') + nums + (end < pages ? '<span class="page-ellipsis">…</span><button class="page-number" type="button" data-page="' + (pages - 1) + '">' + pages + '</button>' : '') + '<button class="page-number page-arrow" type="button" data-page="next"' + (state.page >= pages - 1 ? ' disabled' : '') + '>次へ</button><span class="page-total">' + rows.length.toLocaleString("ja-JP") + '件</span>';
   }
+  function resetDictionarySearch() {
+    const search = $(".search-row .searchbox input");
+    if (search) search.value = "";
+    state.query = "";
+    state.queryTerms = [];
+    state.major = "";
+    state.minor = "";
+    state.favoritesOnly = false;
+    $("#favorites-only").checked = false;
+    Object.values(state.columnFilters).forEach(values => values.clear());
+    state.sort = "index";
+    state.sortDirection = "asc";
+    renderCategories();
+    renderTableTools();
+    applyFilters();
+    writeLocationState("replace");
+  }
   function applyFilters() {
     state.filtered = state.all.filter(matches);
     const direction = state.sortDirection === "desc" ? -1 : 1;
@@ -821,7 +848,7 @@
     const search = $(".search-row .searchbox input");
     if (search) search.value = state.query;
     $("#favorites-only").checked = state.favoritesOnly;
-    state.queryTerms = state.query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
+    state.queryTerms = state.query.split(/\s+/).map(normalizeSearchText).filter(Boolean);
     if (state.query && !state.relatedIndexesReady) ensureRelatedIndexes();
     renderCategories();
     renderTableTools();
@@ -924,9 +951,9 @@
     let searchDebounceTimer = null;
     const applySearchInput = () => {
       state.query = search.value.trim();
-      if (state.query && !state.relatedIndexesReady) ensureRelatedIndexes();
-      state.queryTerms = state.query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
+      state.queryTerms = state.query.split(/\s+/).map(normalizeSearchText).filter(Boolean);
       applyFilters();
+      writeLocationState("replace");
     };
     const scheduleSearch = () => {
       window.clearTimeout(searchDebounceTimer);
@@ -967,10 +994,7 @@
       if (isMinor) setCategoryPanelOpen(false); else setCategoryPanelOpen(true);
     });
     $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; renderCategories(); applyFilters(); setCategoryPanelOpen(false); });
-    $(".search-row > .button").addEventListener("click", () => {
-      search.value = ""; state.query = ""; state.major = ""; state.minor = ""; state.favoritesOnly = false; $("#favorites-only").checked = false;
-      renderCategories(); renderTableTools(); applyFilters();
-    });
+    $(".search-row > .button").addEventListener("click", resetDictionarySearch);
     $(".pagination").addEventListener("click", event => {
       const button = event.target.closest("[data-page]");
       if (!button || button.disabled) return;
@@ -1066,15 +1090,45 @@
     });
     const addInput = $(".preview-add-row input");
     const addButton = $(".preview-add-row button");
+    const addCandidates = $("#preview-add-candidates");
     function updateAddButton() {
-      const q = addInput.value.trim().toLocaleLowerCase();
-      const match = q ? state.all.find(row => row.tag.toLocaleLowerCase() === q || row.ja.toLocaleLowerCase() === q) : null;
-      addButton.disabled = !match; addButton.dataset.key = match ? keyOf(match) : "";
+      const q = normalizeSearchText(addInput.value.trim());
+      if (!q) {
+        addButton.disabled = true;
+        addButton.dataset.key = "";
+        addCandidates.hidden = true;
+        addCandidates.innerHTML = "";
+        return;
+      }
+      const ranked = state.all.map(row => {
+        const fields = [row.tag, row.ja, ...parseAliases(row.aliases_json)].map(normalizeSearchText).filter(Boolean);
+        const exact = fields.some(value => value === q);
+        const prefix = fields.some(value => value.startsWith(q));
+        const partial = fields.some(value => value.includes(q));
+        return { row, exact, prefix, partial };
+      }).filter(item => item.partial)
+        .sort((a,b) => Number(b.exact)-Number(a.exact) || Number(b.prefix)-Number(a.prefix) || a.row.ja.localeCompare(b.row.ja,"ja"))
+        .slice(0,8);
+      const exactMatches = ranked.filter(item => item.exact);
+      addButton.disabled = exactMatches.length !== 1;
+      addButton.dataset.key = exactMatches.length === 1 ? keyOf(exactMatches[0].row) : "";
+      addCandidates.hidden = ranked.length === 0;
+      addCandidates.innerHTML = ranked.map(({row,exact}) =>
+        '<button type="button" class="preview-add-candidate" role="option" data-add-candidate="' + escapeHTML(keyOf(row)) + '">' +
+        '<span><strong>' + escapeHTML(row.ja || row.tag) + '</strong><small>' + escapeHTML(row.tag) + '</small></span>' +
+        (exact ? '<small class="candidate-match">完全一致</small>' : '') + '</button>'
+      ).join("") || '<p class="empty-state">一致する候補はありません。</p>';
     }
     addInput.addEventListener("input", updateAddButton);
     addButton.addEventListener("click", () => {
       const row = state.all.find(item => keyOf(item) === addButton.dataset.key);
-      if (row) { state.polarity.set(keyOf(row), "positive"); addRow(row); addInput.value = ""; updateAddButton(); }
+      if (row) { addRow(row); addInput.value = ""; updateAddButton(); }
+    });
+    addCandidates.addEventListener("click", event => {
+      const candidate = event.target.closest("[data-add-candidate]");
+      if (!candidate) return;
+      const row = state.all.find(item => keyOf(item) === candidate.dataset.addCandidate);
+      if (row) { addRow(row); addInput.value = ""; updateAddButton(); addInput.focus(); }
     });
     $(".builder-controls input").addEventListener("change", renderEditor);
     $("#positive-extra").addEventListener("input", event => { state.positiveExtra = event.target.value; renderEditor(); });
@@ -1125,6 +1179,7 @@
       const applyLoadedData = rowsByFile => {
         state.all = rowsByFile.flat();
         state.all.sort((a,b) => Number(a.index) - Number(b.index));
+        prepareSearchIndex();
         const userData = migrateLegacyUserData();
         state.favorites = new Set(Array.isArray(userData.favorites) ? userData.favorites.filter(key => typeof key === "string") : []);
         state.expressionLevels = new Map(Array.isArray(userData.expressionLevels) ? userData.expressionLevels.filter(entry => Array.isArray(entry) && typeof entry[0] === "string" && (entry[1] === null || [0,1,2,3,4].includes(entry[1])) ) : []);
