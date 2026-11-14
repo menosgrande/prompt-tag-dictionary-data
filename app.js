@@ -523,6 +523,7 @@
     // 元の順は読み込み時のindex順を維持する。
     state.page = 0;
     renderRows();
+    writeLocationState("replace");
   }
   function promptTags() {
     const rows = [...state.selected.values()];
@@ -661,7 +662,38 @@
       (related.length ? '<section class="detail-related"><h3>同じ分類のタグ</h3><div>' + related.map(item => '<button type="button" data-add="' + escapeHTML(keyOf(item)) + '">' + escapeHTML(item.ja || item.tag) + '<small>' + escapeHTML(item.tag) + '</small></button>').join("") + '</div></section>' : '');
     if (typeof dialog.showModal === "function") dialog.showModal(); else dialog.setAttribute("open","");
   }
-  function setScreen(id) {
+  function writeLocationState(mode = "replace") {
+    const params = new URLSearchParams();
+    if (state.query) params.set("q", state.query);
+    if (state.major) params.set("major", state.major);
+    if (state.minor) params.set("minor", state.minor);
+    if (state.favoritesOnly) params.set("favorites", "1");
+    const hash = "#" + state.activeScreen + (params.size ? "?" + params.toString() : "");
+    if (window.location.hash === hash) return;
+    if (mode === "push") history.pushState(null, "", hash);
+    else history.replaceState(null, "", hash);
+  }
+  function restoreLocationState() {
+    const raw = window.location.hash.replace(/^#/, "");
+    const [screenPart, queryPart = ""] = raw.split("?");
+    const allowed = ["dictionary-screen", "works-screen", "authors-screen", "editor-screen"];
+    const screen = allowed.includes(screenPart) ? screenPart : "dictionary-screen";
+    const params = new URLSearchParams(queryPart);
+    state.query = params.get("q") || "";
+    state.major = params.get("major") || "";
+    state.minor = params.get("minor") || "";
+    state.favoritesOnly = params.get("favorites") === "1";
+    const search = $(".search-row .searchbox input");
+    if (search) search.value = state.query;
+    $("#favorites-only").checked = state.favoritesOnly;
+    state.queryTerms = state.query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
+    if (state.query && !state.relatedIndexesReady) ensureRelatedIndexes();
+    renderCategories();
+    renderTableTools();
+    applyFilters();
+    setScreen(screen, { historyMode: "none" });
+  }
+  function setScreen(id, options = {}) {
     state.activeScreen = id;
     $$(".app-screen").forEach(screen => screen.hidden = screen.id !== id);
     $$(".screen-tab").forEach(tab => {
@@ -672,6 +704,7 @@
     if (id === "works-screen") { ensureRelatedIndexes(); renderWorkList(); }
     if (id === "authors-screen") { ensureRelatedIndexes(); renderAuthorList(); }
     if (id === "editor-screen") renderEditor();
+    if (options.historyMode !== "none") writeLocationState(options.historyMode || "push");
   }
   function downloadText(filename, text) {
     const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
@@ -682,8 +715,12 @@
   }
   async function copyText(text) {
     if (!text) return;
-    try { await navigator.clipboard.writeText(text); }
-    catch { const area = document.createElement("textarea"); area.value = text; document.body.append(area); area.select(); document.execCommand("copy"); area.remove(); }
+    try { await navigator.clipboard.writeText(text); return true; }
+    catch {
+      const area = document.createElement("textarea");
+      area.value = text; document.body.append(area); area.select();
+      const copied = document.execCommand("copy"); area.remove(); return copied;
+    }
   }
   function bindTableTools() {
     const root = $(".table-head");
@@ -839,6 +876,19 @@
         if (row) toggleRow(row);
       }
     });
+    window.addEventListener("keydown", event => {
+      const target = event.target;
+      const isTyping = target instanceof HTMLElement && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName));
+      if (event.key === "/" && !isTyping && !event.ctrlKey && !event.metaKey && !event.altKey) {
+        event.preventDefault();
+        $(".search-row .searchbox input").focus();
+      }
+      if (event.key === "Escape") {
+        const dialog = $("#tag-detail-dialog");
+        if (dialog?.open) dialog.close();
+        $(".column-menu[open]").forEach(menu => { menu.open = false; });
+      }
+    });
     $(".screen-nav").addEventListener("click", event => {
       const tab = event.target.closest(".screen-tab");
       if (!tab) return;
@@ -851,7 +901,12 @@
     });
     $(".selected-dock-actions [data-action='open-editor']").addEventListener("click", () => setScreen("editor-screen"));
     $(".editor-builder-panel .text-button").addEventListener("click", () => {
-      state.selected.clear(); state.polarity.clear(); renderRows(); renderEditor();
+      if (!state.selected.size && !state.positiveExtra && !state.negativeExtra) return;
+      if (!window.confirm("選択タグと追記内容をすべて解除しますか？")) return;
+      state.selected.clear(); state.polarity.clear();
+      state.positiveExtra = ""; state.negativeExtra = "";
+      $("#positive-extra").value = ""; $("#negative-extra").value = "";
+      renderRows(); renderEditor();
     });
     $("#selected-tag-list").addEventListener("click", event => {
       const remove = event.target.closest("[data-remove-selected]");
@@ -891,15 +946,27 @@
       if (row) { state.polarity.set(keyOf(row), "positive"); addRow(row); addInput.value = ""; updateAddButton(); }
     });
     $(".builder-controls input").addEventListener("change", renderEditor);
-    $("#positive-output").addEventListener("input", renderEditor);
-    $("#negative-output").addEventListener("input", () => {
-      $('[data-action="copy-negative"]').disabled = !$("#negative-output").value;
-      $('[data-action="save-negative"]').disabled = !$("#negative-output").value;
+    $("#positive-extra").addEventListener("input", event => { state.positiveExtra = event.target.value; renderEditor(); });
+    $("#negative-extra").addEventListener("input", event => { state.negativeExtra = event.target.value; renderEditor(); });
+    $("#escape-parentheses").addEventListener("change", event => { state.escapeParentheses = event.target.checked; renderEditor(); });
+    $("#apply-weight").addEventListener("change", event => { state.applyWeight = event.target.checked; renderEditor(); });
+    $("#weight-value").addEventListener("change", event => {
+      state.weightValue = Math.max(0.1, Math.min(2, Number(event.target.value) || 1.2));
+      event.target.value = String(state.weightValue);
+      renderEditor();
     });
     $$("[data-action]").forEach(button => button.addEventListener("click", async () => {
       const action = button.dataset.action;
       const target = action.includes("negative") ? $("#negative-output") : $("#positive-output");
-      if (action.startsWith("copy")) await copyText(target.value);
+      if (action.startsWith("copy")) {
+        const copied = await copyText(target.value);
+        if (copied) {
+          const original = button.textContent;
+          button.textContent = "コピーしました";
+          button.disabled = true;
+          window.setTimeout(() => { button.textContent = original; button.disabled = !target.value; }, 1400);
+        } else button.textContent = "コピー失敗";
+      }
       if (action.startsWith("save")) downloadText(action.includes("negative") ? "negative-prompt.txt" : "positive-prompt.txt", target.value);
     }));
   }
@@ -908,10 +975,17 @@
     dock.className = "selected-dock"; dock.hidden = true;
     dock.innerHTML = '<div class="selected-dock-content"><strong class="selected-dock-count">0 件選択中</strong><div class="selected-dock-tags"></div></div><div class="selected-dock-actions"><button class="button button-primary" type="button" data-action="open-editor">プロンプト編集へ</button><button class="button button-quiet" type="button" data-action="clear-selection">全解除</button></div>';
     document.body.append(dock);
-    dock.querySelector('[data-action="clear-selection"]').addEventListener("click", () => { state.selected.clear(); state.polarity.clear(); renderRows(); renderEditor(); });
+    dock.querySelector('[data-action="clear-selection"]').addEventListener("click", () => {
+      if (!state.selected.size && !state.positiveExtra && !state.negativeExtra) return;
+      if (!window.confirm("選択タグと追記内容をすべて解除しますか？")) return;
+      state.selected.clear(); state.polarity.clear();
+      state.positiveExtra = ""; state.negativeExtra = "";
+      $("#positive-extra").value = ""; $("#negative-extra").value = "";
+      renderRows(); renderEditor();
+    });
   }
   async function init() {
-    setScreen("dictionary-screen");
+    setScreen("dictionary-screen", { historyMode: "none" });
     setMessage("CSVデータを読み込んでいます…");
     createDock();
     setupColumnResizers();
@@ -920,6 +994,7 @@
       const applyLoadedData = rowsByFile => {
         state.all = rowsByFile.flat();
         state.all.sort((a,b) => Number(a.index) - Number(b.index));
+        restoreBuilderState();
         state.relatedIndexesReady = false;
         state.works = []; state.authors = []; state.reviewRows = []; state.ambiguousRows = [];
         if (state.query) ensureRelatedIndexes();
@@ -935,6 +1010,8 @@
       bindTableTools();
       // キャッシュ（または初回取得分）を一覧へ直接反映する。
       applyLoadedData(loaded.map(item => item.rows));
+      restoreLocationState();
+      window.addEventListener("popstate", restoreLocationState);
       // 最新CSVは裏で確認し、実データに差分があったファイルだけ差し替える。
       Promise.all(loaded.map(item => item.refresh)).then(refreshed => {
         if (refreshed.some(Boolean)) {
