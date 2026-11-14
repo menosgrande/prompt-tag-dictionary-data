@@ -165,7 +165,10 @@
           return;
         }
         const mapped = mapLegacyKey(entry[0], "polarity");
-        if (mapped !== null && selectedSet.has(mapped)) polarity.push([mapped, entry[1]]);
+        if (mapped !== null) {
+          if (selectedSet.has(mapped)) polarity.push([mapped, entry[1]]);
+          else unresolved.push({ kind: "polarity", legacyKey: String(entry[0]), tag: mapped, reason: "対応する選択タグがありません" });
+        }
       });
       builderState = {
         selected, polarity,
@@ -195,8 +198,9 @@
     const summary = $("#migration-unresolved-summary");
     const list = $("#migration-unresolved-list");
     if (summary) summary.textContent = "移行できなかった設定：" + items.length + "件（確認が必要）";
+    const kindLabels = { favorite: "お気に入り", expressionLevel: "表現レベル", selected: "選択タグ", polarity: "出力区分", builder: "ビルダー設定" };
     if (list) list.innerHTML = items.map(item =>
-      "<li><strong>" + escapeHTML(item.kind || "不明") + "</strong> · " + escapeHTML(item.tag || item.legacyKey || "識別情報なし") + (item.reason ? " — " + escapeHTML(item.reason) : "") + "</li>"
+      "<li><strong>" + escapeHTML(kindLabels[item.kind] || item.kind || "不明") + "</strong> · " + escapeHTML(item.tag || item.legacyKey || "識別情報なし") + (item.reason ? " — " + escapeHTML(item.reason) : "") + "</li>"
     ).join("");
   }
   const statusLabel = value => ({ verified:"確認済み", pending:"未確認", needs_review:"要確認", "needs-review":"要確認", provisional:"暫定", unverified:"未確認" })[value] || value || "—";
