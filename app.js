@@ -61,7 +61,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, hiddenMajorCategories: new Set(), excludedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
   };
   let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -656,6 +656,8 @@
     state.major = "";
     state.minor = "";
     state.favoritesOnly = false;
+    state.excludedMajorCategories.clear();
+    writeUserDataV2({ excludedMajorCategories: [] });
     $("#favorites-only").checked = false;
     Object.values(state.columnFilters).forEach(values => values.clear());
     state.sort = "index";
@@ -1109,7 +1111,7 @@
       renderCategories(); applyFilters();
       if (isMinor) setCategoryPanelOpen(false); else setCategoryPanelOpen(true);
     });
-    $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; renderCategories(); applyFilters(); setCategoryPanelOpen(false); });
+    $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; state.excludedMajorCategories.clear(); writeUserDataV2({ excludedMajorCategories: [] }); renderCategories(); applyFilters(); setCategoryPanelOpen(false); });
     $(".search-row > .button").addEventListener("click", resetDictionarySearch);
     $(".pagination").addEventListener("click", event => {
       const button = event.target.closest("[data-page]");
