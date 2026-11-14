@@ -18,7 +18,6 @@
   const FAVORITES_KEY = "ptd-favorites-v1";
   const EXPRESSION_LEVELS_KEY = "ptd-expression-levels-v1";
   const CSV_CACHE_DB = "ptd-csv-cache-v1";
-  const CSV_CACHE_TTL = 5 * 60 * 1000;
 
   function openCSVCache() {
     return new Promise((resolve, reject) => {
@@ -60,7 +59,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], columnWidths: [30, 26, 210, 170, 130, 96, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, columnWidths: [30, 26, 210, 170, 130, 96, 26], columnWidthMode: "desktop"
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -82,7 +81,7 @@
   function setMessage(message, error = false) {
     $(".tag-results").innerHTML = '<div class="empty-state' + (error ? ' load-error' : '') + '">' + escapeHTML(message) + '</div>';
   }
-  async function fetchCSV(file) {
+  async function fetchCSV(file, cachedRows = null) {
     const response = await fetch(file.url, { cache: "no-store" });
     if (!response.ok) throw new Error(file.url + " の読み込みに失敗しました (HTTP " + response.status + ")");
     const rows = window.DictionaryCSV.parseCSV(await response.text());
@@ -92,6 +91,10 @@
       throw new Error(file.url + " のCSVヘッダーが想定する12列と一致しません。");
     }
     const prepared = rows.map(row => ({ ...row, source: file.source, sourceLabel: file.label }));
+    const unchanged = cachedRows && prepared.length === cachedRows.length && prepared.every((row, index) =>
+      HEADERS.every(header => row[header] === cachedRows[index][header])
+    );
+    if (unchanged) return null;
     try { await writeCSVCache(file.url, prepared); } catch {}
     return prepared;
   }
@@ -99,8 +102,8 @@
     let cached = null;
     try { cached = await readCSVCache(file.url); } catch {}
     if (cached?.rows?.length) {
-      // キャッシュを先に返し、最新CSVの取得はバックグラウンドで行う。
-      return { rows: cached.rows, refresh: fetchCSV(file).catch(error => {
+      // キャッシュを先に返す。バックグラウンド取得では変更があった場合だけ新しい行を返す。
+      return { rows: cached.rows, refresh: fetchCSV(file, cached.rows).catch(error => {
         console.warn(file.url + " のバックグラウンド更新に失敗しました。キャッシュを継続使用します。", error);
         return null;
       }) };
@@ -186,6 +189,11 @@
     state.authors = creatorRows.sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
     state.reviewRows = reviewRows.sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
     state.ambiguousRows = ambiguousRows.sort((a,b) => a.row.ja.localeCompare(b.row.ja, "ja"));
+  }
+  function ensureRelatedIndexes() {
+    if (state.relatedIndexesReady) return;
+    buildRelatedIndexes();
+    state.relatedIndexesReady = true;
   }
   function relatedTagRow(row, groupName = "", typeLabel = "") {
     const key = keyOf(row);
@@ -314,20 +322,24 @@
     $("#authors-count").textContent = rows.length.toLocaleString("ja-JP") + "件";
     $("#authors-list").innerHTML = rows.length ? rows.map(row => relatedTagRow(row, "作者・配信者", "作者・配信者")).join("") : '<p class="empty-state">検索条件に一致する作者・配信者はいません。</p>';
   }
-  function categoryCounts(rows, key) {
-    const counts = new Map();
-    rows.forEach(row => { if (row[key]) counts.set(row[key], (counts.get(row[key]) || 0) + 1); });
-    return [...counts.entries()].sort((a,b) => key === "major" ? compareMajorCategories(a[0], b[0]) : a[0].localeCompare(b[0], "ja"));
-  }
   function renderCategories() {
     const root = $(".category-tree");
-    const majors = categoryCounts(state.all, "major");
-    const favoriteCount = state.all.filter(row => state.favorites.has(keyOf(row))).length;
+    const majorCounts = new Map();
+    let favoriteCount = 0;
+    state.all.forEach(row => {
+      if (state.favorites.has(keyOf(row))) favoriteCount++;
+      if (!row.major) return;
+      let entry = majorCounts.get(row.major);
+      if (!entry) { entry = { count: 0, minors: new Map() }; majorCounts.set(row.major, entry); }
+      entry.count++;
+      if (row.minor) entry.minors.set(row.minor, (entry.minors.get(row.minor) || 0) + 1);
+    });
+    const majors = [...majorCounts.entries()].sort((a,b) => compareMajorCategories(a[0], b[0]));
     root.innerHTML = '<button class="category-major-button' + (state.favoritesOnly ? ' active' : '') + '" data-favorites="true">お気に入り <span class="count">' + favoriteCount.toLocaleString("ja-JP") + '</span></button>' +
       '<button class="category-major-button' + (!state.major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="">すべての分類 <span class="count">' + state.all.length.toLocaleString("ja-JP") + '</span></button>' +
-      majors.map(([major,count]) => {
-        const minors = categoryCounts(state.all.filter(row => row.major === major), "minor");
-        return '<div class="category-major' + (state.major === major ? ' is-expanded' : '') + '><button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + count.toLocaleString("ja-JP") + '</span></button>' +
+      majors.map(([major,entry]) => {
+        const minors = [...entry.minors.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja"));
+        return '<div class="category-major' + (state.major === major ? ' is-expanded' : '') + '><button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button>' +
           '<div class="category-minors">' + minors.map(([minor,n]) => '<button class="category-minor' + (state.minor === minor ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button>').join("") + '</div></div>';
       }).join("");
   }
@@ -458,7 +470,7 @@
     state.filtered = state.all.filter(matches);
     if (state.sort === "tag") state.filtered.sort((a,b) => a.tag.localeCompare(b.tag));
     else if (state.sort === "ja") state.filtered.sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
-    else state.filtered.sort((a,b) => Number(a.index) - Number(b.index));
+    // index順はstate.allを読み込み時に一度だけ整列しているため、再ソートしない。
     state.page = 0;
     renderRows();
   }
@@ -558,8 +570,8 @@
       tab.classList.toggle("active", active);
       if (active) tab.setAttribute("aria-current", "page"); else tab.removeAttribute("aria-current");
     });
-    if (id === "works-screen") renderWorkList();
-    if (id === "authors-screen") renderAuthorList();
+    if (id === "works-screen") { ensureRelatedIndexes(); renderWorkList(); }
+    if (id === "authors-screen") { ensureRelatedIndexes(); renderAuthorList(); }
     if (id === "editor-screen") renderEditor();
   }
   function downloadText(filename, text) {
@@ -586,7 +598,11 @@
       renderEditor();
     }));
     const search = $(".search-row .searchbox input");
-    search.addEventListener("input", () => { state.query = search.value.trim(); applyFilters(); });
+    search.addEventListener("input", () => {
+      state.query = search.value.trim();
+      if (state.query && !state.relatedIndexesReady) ensureRelatedIndexes();
+      applyFilters();
+    });
 
     $("#favorites-only").addEventListener("change", event => { state.favoritesOnly = event.target.checked; state.major = ""; state.minor = ""; renderCategories(); applyFilters(); });
     try { state.favorites = new Set(JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]")); } catch { state.favorites = new Set(); }
@@ -752,23 +768,26 @@
       const loaded = await Promise.all(DATA_FILES.map(loadCSV));
       const applyLoadedData = rowsByFile => {
         state.all = rowsByFile.flat();
-        buildRelatedIndexes();
-        state.all.forEach(row => {
-          const match = state.reviewRows.find(item => keyOf(item) === keyOf(row));
-          if (match) return;
-          const group = state.works.find(item => item.characters.some(x => keyOf(x) === keyOf(row)) || item.elements.some(x => keyOf(x) === keyOf(row)));
-          if (group) row.workTitle = group.name;
-        });
+        state.all.sort((a,b) => Number(a.index) - Number(b.index));
+        state.relatedIndexesReady = false;
+        state.works = []; state.authors = []; state.reviewRows = []; state.ambiguousRows = [];
+        if (state.query) ensureRelatedIndexes();
         $(".stats strong").textContent = state.all.length.toLocaleString("ja-JP");
-        renderCategories(); applyFilters(); renderEditor();
+        renderCategories();
+        applyFilters();
+        // 編集画面は開かれるまで生成しない。
+        if (state.activeScreen === "editor-screen") renderEditor();
       };
-      // まずキャッシュ（または初回取得分）で画面を構築する。
-      applyLoadedData(loaded.map(item => item.rows));
+      // 操作イベントと保存済み設定を先に読み込み、CSVの表示処理を最小化する。
       bindControls();
-      // 最新CSVが取得できた場合だけ、表示データを差し替える。
+      // キャッシュ（または初回取得分）を一覧へ直接反映する。
+      applyLoadedData(loaded.map(item => item.rows));
+      // 最新CSVは裏で確認し、実データに差分があったファイルだけ差し替える。
       Promise.all(loaded.map(item => item.refresh)).then(refreshed => {
         if (refreshed.some(Boolean)) {
           applyLoadedData(loaded.map((item, index) => refreshed[index] || item.rows));
+          if (state.activeScreen === "works-screen") { ensureRelatedIndexes(); renderWorkList(); }
+          if (state.activeScreen === "authors-screen") { ensureRelatedIndexes(); renderAuthorList(); }
         }
       });
     } catch (error) {
