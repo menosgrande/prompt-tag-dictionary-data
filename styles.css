@@ -374,3 +374,23 @@ body{font-size:14px;line-height:1.65}
   .tag-results{width:max-content;min-width:100%}
   .column-width-reset{font-size:9px}
 }
+
+/* Table sorting and multi-value filters */
+.table-tools{padding:0 16px 12px}
+.table-tools-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.sort-control{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:11px}
+.sort-control select{max-width:180px;padding:6px 28px 6px 9px;border:1px solid var(--line);border-radius:7px;background:var(--surface-raised);color:var(--text);font:inherit}
+.sort-direction{padding:6px 9px;border:1px solid var(--line);border-radius:7px}
+.filter-menu{position:relative}
+.filter-menu>summary{list-style:none;cursor:pointer;padding:6px 10px;border:1px solid var(--line);border-radius:7px;color:var(--text);font-size:11px}
+.filter-menu>summary::-webkit-details-marker{display:none}
+.filter-count{display:inline-flex;min-width:17px;height:17px;align-items:center;justify-content:center;margin-left:4px;border-radius:10px;background:var(--accent);color:var(--accent-ink);font-size:10px;font-weight:700}
+.filter-menu-panel{position:absolute;top:calc(100% + 6px);left:0;z-index:50;display:grid;grid-template-columns:repeat(2,minmax(160px,1fr));gap:12px;width:min(520px,calc(100vw - 40px));max-height:min(65vh,520px);overflow:auto;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface-raised);box-shadow:0 12px 32px rgba(0,0,0,.35)}
+.filter-group{min-width:0;margin:0;padding:0;border:0}
+.filter-group>strong,.filter-group>legend{display:block;margin-bottom:7px;color:var(--text);font-size:11px;font-weight:700}
+.filter-group>label,.filter-options label{display:flex;align-items:center;gap:6px;padding:3px 0;color:var(--muted);font-size:11px}
+.filter-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 8px;max-height:150px;overflow:auto}
+.filter-group input{accent-color:var(--accent)}
+.filter-select-all{margin-top:5px;padding:2px 0;border:0;background:none;color:var(--accent-strong);font-size:10px;cursor:pointer}
+.filter-actions{grid-column:1/-1;display:flex;justify-content:flex-end;gap:8px;padding-top:8px;border-top:1px solid var(--line)}
+@media(max-width:760px){.table-tools{padding:0 10px 10px}.filter-menu-panel{grid-template-columns:1fr;left:auto;right:0}.sort-control select{max-width:145px}}
