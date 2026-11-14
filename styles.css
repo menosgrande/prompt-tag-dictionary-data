@@ -422,6 +422,7 @@ body{font-size:14px;line-height:1.65}
 .table-head{overflow:visible}
 .table-head-cell.header-menu-cell{position:relative;justify-content:flex-start;gap:3px;overflow:visible;padding:2px 4px}
 .table-head-cell.header-menu-cell[data-column="favorites"]{justify-content:center;gap:0;padding:2px 1px}
+.header-menu-cell[data-column="favorites"] .column-menu>summary.favorite-header-icon{width:24px;height:24px;flex:0 0 24px;font-family:Arial,sans-serif;font-size:17px;line-height:1;letter-spacing:0;transform:none}
 .header-title{min-width:0;overflow:hidden;text-overflow:ellipsis}
 .column-menu{position:relative;display:inline-flex;flex:0 0 auto;align-items:center}
 .column-menu>summary{display:grid;place-items:center;width:17px;height:19px;border:1px solid transparent;border-radius:4px;color:var(--muted);font-size:11px;line-height:1;list-style:none;cursor:pointer}
