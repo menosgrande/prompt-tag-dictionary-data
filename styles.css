@@ -394,3 +394,26 @@ body{font-size:14px;line-height:1.65}
 .filter-select-all{margin-top:5px;padding:2px 0;border:0;background:none;color:var(--accent-strong);font-size:10px;cursor:pointer}
 .filter-actions{grid-column:1/-1;display:flex;justify-content:flex-end;gap:8px;padding-top:8px;border-top:1px solid var(--line)}
 @media(max-width:760px){.table-tools{padding:0 10px 10px}.filter-menu-panel{grid-template-columns:1fr;left:auto;right:0}.sort-control select{max-width:145px}}
+
+
+/* Keep sorting and filtering beside the tag-list heading. */
+.result-heading{align-items:center}
+.result-heading-actions{display:flex;align-items:center;gap:8px;min-width:0}
+.result-heading .table-tools{padding:0;min-width:0}
+.result-heading .table-tools-bar{flex-wrap:nowrap;gap:5px}
+.result-heading .sort-control{gap:4px;font-size:10px;white-space:nowrap}
+.result-heading .sort-control select{max-width:145px;padding:5px 22px 5px 7px;font-size:10px}
+.result-heading .sort-direction{padding:5px 7px;font-size:10px;white-space:nowrap}
+.result-heading .filter-menu>summary{padding:5px 8px;font-size:10px;white-space:nowrap}
+.result-heading .column-width-reset{font-size:9px}
+@media(max-width:900px){
+  .result-heading{align-items:flex-start;flex-wrap:wrap}
+  .result-heading-actions{width:100%;justify-content:flex-end;flex-wrap:wrap}
+  .result-heading .table-tools{flex:1 1 auto}
+  .result-heading .table-tools-bar{justify-content:flex-end;flex-wrap:wrap}
+}
+@media(max-width:760px){
+  .result-heading-actions{gap:6px}
+  .result-heading .sort-control select{max-width:125px}
+  .result-heading .filter-menu-panel{left:auto;right:0}
+}
