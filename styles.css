@@ -334,8 +334,8 @@ body{font-size:14px;line-height:1.65}
 .tag-results .tag-row>.tag-japanese{color:#aab6c4;font-size:11px}
 .tag-results .tag-row>.tag-english:hover,.tag-results .tag-row>.tag-japanese:hover{color:var(--accent-strong);background:rgba(120,170,150,.07)}
 .tag-results .tag-row>.tag-major{display:flex;align-items:center;min-width:0;padding-left:0;padding-right:0;color:var(--muted);font-size:10px;text-overflow:ellipsis;white-space:nowrap}
-.expression-level-cell{display:flex!important;align-items:center;justify-content:center;padding:0 2px!important}
-.expression-level-value{display:inline-flex;flex:0 0 25px;align-items:center;justify-content:center;width:25px;height:22px;padding:0;border:1px solid #40534f;border-radius:4px;background:rgba(120,170,150,.08);color:#c5d8cf;font:11px var(--mono);font-weight:700;line-height:1}
+.expression-level-cell{display:flex!important;align-items:center;justify-content:center;padding:0 1px!important}
+.expression-level-value{display:inline-flex;flex:0 0 20px;align-items:center;justify-content:center;width:20px;height:22px;padding:0;border:1px solid #40534f;border-radius:4px;background:rgba(120,170,150,.08);color:#c5d8cf;font:11px var(--mono);font-weight:700;line-height:1}
 .expression-level-value.level-0{background:rgba(120,170,150,.12);border-color:rgba(120,170,150,.32);color:#c5d8cf}
 .expression-level-value.level-1{background:rgba(120,170,150,.24);border-color:rgba(120,170,150,.42);color:#d0e5da}
 .expression-level-value.level-2{background:rgba(120,170,150,.38);border-color:rgba(120,170,150,.54);color:#e0eee7}
