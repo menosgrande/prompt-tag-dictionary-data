@@ -529,8 +529,8 @@ body{font-size:14px;line-height:1.65}
 .editor-builder-panel .output-card:last-child .output-header label{color:#e5a0a8}
 .editor-builder-panel .prompt-bubble-editor{min-height:0;padding:0 10px;border:1px solid var(--line-soft);border-radius:18px;background:rgba(12,17,23,.34)}
 .editor-builder-panel .prompt-bubbles{align-items:center;column-gap:8px;row-gap:5px;min-height:0}
-.editor-builder-panel .prompt-bubble{position:relative;gap:7px;width:max-content;max-width:min(88%,560px);padding:0 12px;border:1px solid #466b60;border-radius:999px;background:#29483f;color:#e8f4ee;box-shadow:0 2px 5px #0002;cursor:grab;touch-action:none;user-select:none;transition:box-shadow 150ms ease}
-.editor-builder-panel .output-card:last-child .prompt-bubble{border-color:#76515a;border-radius:999px;background:#4a3037;color:#f7e9eb}
+.editor-builder-panel .prompt-bubble{position:relative;gap:7px;width:max-content;max-width:min(88%,560px);padding:0 12px;border:1px solid #52786c;border-radius:999px;background:#29443d;color:#b6e2ce;box-shadow:0 2px 5px #0002;cursor:grab;touch-action:none;user-select:none;transition:box-shadow 150ms ease}
+.editor-builder-panel .output-card:last-child .prompt-bubble{border-color:#81525b;border-radius:999px;background:#482d32;color:#efb7bd}
 .editor-builder-panel .prompt-bubble:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px}
 .editor-builder-panel .prompt-bubble.is-dragging{z-index:1000;cursor:grabbing;opacity:.96;box-shadow:0 12px 28px #0007;transform:scale(1.025)}
 .editor-builder-panel .prompt-bubble.is-dragging .prompt-bubble-action{display:none!important}
