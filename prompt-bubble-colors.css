@@ -1,28 +1,29 @@
-/* Stable rounded prompt frame with iMessage-inspired tag colors. */
+/* Prompt tag colors and capsule shape. Keep the editor frame separate. */
 .editor-builder-panel .prompt-bubble-editor,
 .editor-builder-panel .prompt-bubble-editor:focus-within {
+  padding: 12px 14px;
   border: 1px solid var(--line-soft);
-  border-radius: 12px;
+  border-radius: 18px;
   background: rgba(12,17,23,.34);
   box-shadow: none;
   outline: none;
 }
 .editor-builder-panel .prompt-bubble {
-  border: 0;
-  border-radius: 10px;
+  border: 1px solid #35c85a;
+  border-radius: 999px;
   padding: 8px 14px;
-  background: #34c759;
+  background: #4BE36A;
   color: #000;
-  box-shadow: none;
-  transition: none;
+  box-shadow: 0 2px 5px #0002;
+  transition: box-shadow 150ms ease;
 }
 .editor-builder-panel .output-card:last-child .prompt-bubble {
-  border: 0;
-  border-radius: 10px;
+  border: 1px solid #F06B59;
+  border-radius: 999px;
   padding: 8px 14px;
-  background: #ff6b55;
+  background: #FF806E;
   color: #000;
-  box-shadow: none;
+  box-shadow: 0 2px 5px #0002;
 }
 .editor-builder-panel .prompt-bubble:focus,
 .editor-builder-panel .prompt-bubble:focus-visible,
@@ -41,4 +42,11 @@
 .editor-builder-panel .output-card:last-child .prompt-bubble-action {
   background: #392b28;
   color: #fff;
+}
+@media(max-width:600px) {
+  .editor-builder-panel .prompt-bubble-editor,
+  .editor-builder-panel .prompt-bubble-editor:focus-within {
+    padding: 10px;
+    border-radius: 16px;
+  }
 }
