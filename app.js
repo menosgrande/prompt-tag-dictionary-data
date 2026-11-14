@@ -951,6 +951,14 @@
   }
   function syncSelectedToPromptItems(polarity, items) {
     const present = new Set(items.map(item => item.key).filter(Boolean));
+    items.forEach(item => {
+      if (!item.key) return;
+      const row = state.all.find(candidate => keyOf(candidate) === item.key);
+      if (row) {
+        state.selected.set(item.key, row);
+        state.polarity.set(item.key, polarity);
+      }
+    });
     [...state.selected.keys()].forEach(key => {
       if (state.polarity.get(key) === polarity && !present.has(key)) {
         state.selected.delete(key);
@@ -1029,14 +1037,19 @@
       return;
     }
     const items = ensurePromptItems(polarity);
-    if (active.creating) items.push({ text, weight: null, key: null });
-    else if (items[active.index]) {
+    const matchingRow = state.all.find(row => row.tag === text) || null;
+    if (active.creating) {
+      items.push({ text, weight: null, key: matchingRow ? keyOf(matchingRow) : null });
+      if (matchingRow) { state.selected.set(keyOf(matchingRow), matchingRow); state.polarity.set(keyOf(matchingRow), polarity); }
+    } else if (items[active.index]) {
       const old = items[active.index];
       if (old.key && old.text !== text) {
         state.selected.delete(old.key);
         state.polarity.delete(old.key);
       }
-      items[active.index] = { ...old, text, key: old.text === text ? old.key : null };
+      const nextKey = old.text === text ? old.key : (matchingRow ? keyOf(matchingRow) : null);
+      items[active.index] = { ...old, text, key: nextKey };
+      if (nextKey && matchingRow) { state.selected.set(nextKey, matchingRow); state.polarity.set(nextKey, polarity); }
     }
     setPromptItems(polarity, items);
     state.activeBubble = { polarity, index: active.creating ? items.length - 1 : active.index, editing: false, creating: false };
@@ -1380,6 +1393,13 @@
         if (event.key === "Escape" && panel && !panel.hidden) { panel.hidden = true; event.stopPropagation(); }
         else if (event.key === "ArrowDown" && option && !panel.hidden) { event.preventDefault(); option.focus(); }
         else if (event.key === "Enter" && option && !panel.hidden) { event.preventDefault(); applyPromptAutocomplete(polarity, option.dataset.autocompleteTag); }
+      });
+      $("[data-autocomplete='" + polarity + "']").addEventListener("keydown", event => {
+        const options = [...event.currentTarget.querySelectorAll(".prompt-autocomplete-option")];
+        const index = options.indexOf(document.activeElement);
+        if (event.key === "ArrowDown" && options.length) { event.preventDefault(); options[Math.min(options.length - 1, index + 1)].focus(); }
+        else if (event.key === "ArrowUp" && options.length) { event.preventDefault(); if (index <= 0) textarea.focus(); else options[index - 1].focus(); }
+        else if (event.key === "Escape") { event.preventDefault(); event.currentTarget.hidden = true; textarea.focus(); }
       });
       const region = $("[data-prompt-region='" + polarity + "']");
       region.addEventListener("click", event => {
