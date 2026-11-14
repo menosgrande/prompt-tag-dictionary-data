@@ -59,7 +59,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -347,6 +347,12 @@
     if (state.major && row.major !== state.major) return false;
     if (state.minor && row.minor !== state.minor) return false;
     if (state.favoritesOnly && !state.favorites.has(keyOf(row))) return false;
+    const filters = state.columnFilters;
+    if (filters.major.size && !filters.major.has(row.major || "未分類")) return false;
+    const level = expressionLevelFor(row);
+    if (filters.level.size && !filters.level.has(level === null ? "未設定" : String(level))) return false;
+    if (filters.translation.size && !filters.translation.has(row.translation_status || "未設定")) return false;
+    if (filters.classification.size && !filters.classification.has(row.classification_review_status || "未設定")) return false;
     if (state.query) {
       const terms = state.query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
       const fields = [row.tag,row.ja,row.aliases_json,row.major,row.minor,row.detail,row.workTitle];
@@ -438,6 +444,28 @@
       $$(".column-resize").forEach((handle, index) => handle.setAttribute("aria-valuenow", String(state.columnWidths[index])));
     });
   }
+  function renderTableTools() {
+    const root = $(".table-tools");
+    if (!root) return;
+    const groups = [
+      ["major", "大分類", [...new Set(state.all.map(row => row.major || "未分類"))].sort(compareMajorCategories)],
+      ["level", "表現レベル", ["0","1","2","3","4","未設定"]],
+      ["translation", "翻訳状態", [...new Set(state.all.map(row => row.translation_status || "未設定"))].sort()],
+      ["classification", "分類確認", [...new Set(state.all.map(row => row.classification_review_status || "未設定"))].sort()]
+    ];
+    const count = Object.values(state.columnFilters).reduce((sum, values) => sum + values.size, 0);
+    root.innerHTML =
+      '<div class="table-tools-bar"><label class="sort-control">並び替え <select id="table-sort"><option value="index">元の順</option><option value="tag">タグ（英語）</option><option value="ja">日本語訳</option><option value="major">大分類</option><option value="level">表現レベル</option><option value="favorites">お気に入り優先</option></select></label>' +
+      '<button type="button" class="text-button sort-direction" id="table-sort-direction" aria-label="並び順を反転">' + (state.sortDirection === "asc" ? "昇順 ↑" : "降順 ↓") + '</button>' +
+      '<details class="filter-menu"><summary>フィルター' + (count ? ' <span class="filter-count">' + count + '</span>' : '') + '</summary><div class="filter-menu-panel">' +
+      '<div class="filter-group"><strong>お気に入り</strong><label><input type="checkbox" data-filter-favorites' + (state.favoritesOnly ? ' checked' : '') + '> お気に入りのみ</label></div>' +
+      groups.map(([key,label,values]) => '<fieldset class="filter-group"><legend>' + label + '</legend><div class="filter-options">' + values.map(value => {
+        const checked = state.columnFilters[key].has(value);
+        return '<label><input type="checkbox" data-filter-group="' + key + '" value="' + escapeHTML(value) + '"' + (checked ? ' checked' : '') + '> ' + escapeHTML(key === "translation" || key === "classification" ? statusLabel(value) : value) + '</label>';
+      }).join("") + '</div><button type="button" class="filter-select-all" data-filter-clear="' + key + '">すべて</button></fieldset>').join("") +
+      '<div class="filter-actions"><button type="button" class="text-button" data-filter-reset>すべて解除</button><button type="button" class="button" data-filter-apply>適用</button></div></div></details></div>';
+    $("#table-sort").value = state.sort;
+  }
   function renderRows() {
     const rows = state.filtered;
     const pages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
@@ -468,9 +496,17 @@
   }
   function applyFilters() {
     state.filtered = state.all.filter(matches);
-    if (state.sort === "tag") state.filtered.sort((a,b) => a.tag.localeCompare(b.tag));
-    else if (state.sort === "ja") state.filtered.sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
-    // index順はstate.allを読み込み時に一度だけ整列しているため、再ソートしない。
+    const direction = state.sortDirection === "desc" ? -1 : 1;
+    const compareText = (left, right, locale = "ja") => String(left || "").localeCompare(String(right || ""), locale, { numeric: true, sensitivity: "base" });
+    if (state.sort === "tag") state.filtered.sort((a,b) => direction * compareText(a.tag, b.tag, "en"));
+    else if (state.sort === "ja") state.filtered.sort((a,b) => direction * compareText(a.ja, b.ja));
+    else if (state.sort === "major") state.filtered.sort((a,b) => direction * (compareMajorCategories(a.major || "", b.major || "") || compareText(a.tag, b.tag, "en")));
+    else if (state.sort === "level") state.filtered.sort((a,b) => {
+      const left = expressionLevelFor(a), right = expressionLevelFor(b);
+      return direction * ((left === null ? 99 : left) - (right === null ? 99 : right));
+    });
+    else if (state.sort === "favorites") state.filtered.sort((a,b) => direction * (Number(state.favorites.has(keyOf(b))) - Number(state.favorites.has(keyOf(a)))));
+    // 元の順は読み込み時のindex順を維持する。
     state.page = 0;
     renderRows();
   }
@@ -585,6 +621,44 @@
     if (!text) return;
     try { await navigator.clipboard.writeText(text); }
     catch { const area = document.createElement("textarea"); area.value = text; document.body.append(area); area.select(); document.execCommand("copy"); area.remove(); }
+  }
+  function bindTableTools() {
+    const root = $(".table-tools");
+    if (!root) return;
+    root.addEventListener("change", event => {
+      const sort = event.target.closest("#table-sort");
+      if (sort) { state.sort = sort.value; applyFilters(); return; }
+      const favorite = event.target.closest("[data-filter-favorites]");
+      if (favorite) state.favoritesOnly = favorite.checked;
+    });
+    root.addEventListener("click", event => {
+      const direction = event.target.closest("#table-sort-direction");
+      if (direction) {
+        state.sortDirection = state.sortDirection === "asc" ? "desc" : "asc";
+        renderTableTools(); applyFilters(); return;
+      }
+      const clear = event.target.closest("[data-filter-clear]");
+      if (clear) {
+        state.columnFilters[clear.dataset.filterClear].clear();
+        renderTableTools(); return;
+      }
+      if (event.target.closest("[data-filter-reset]")) {
+        Object.values(state.columnFilters).forEach(values => values.clear());
+        state.favoritesOnly = false;
+        renderTableTools(); applyFilters(); return;
+      }
+      if (event.target.closest("[data-filter-apply]")) {
+        const menu = root.querySelector(".filter-menu");
+        if (menu) menu.open = false;
+        applyFilters();
+      }
+    });
+    root.addEventListener("change", event => {
+      const input = event.target.closest("[data-filter-group]");
+      if (!input) return;
+      const values = state.columnFilters[input.dataset.filterGroup];
+      if (input.checked) values.add(input.value); else values.delete(input.value);
+    });
   }
   function bindControls() {
     $("#works-search").addEventListener("input", event => { state.worksQuery = event.target.value.trim().toLocaleLowerCase(); renderWorkList(); });
@@ -762,12 +836,14 @@
         if (state.query) ensureRelatedIndexes();
         $(".stats strong").textContent = state.all.length.toLocaleString("ja-JP");
         renderCategories();
+        renderTableTools();
         applyFilters();
         // 編集画面は開かれるまで生成しない。
         if (state.activeScreen === "editor-screen") renderEditor();
       };
       // 操作イベントと保存済み設定を先に読み込み、CSVの表示処理を最小化する。
       bindControls();
+      bindTableTools();
       // キャッシュ（または初回取得分）を一覧へ直接反映する。
       applyLoadedData(loaded.map(item => item.rows));
       // 最新CSVは裏で確認し、実データに差分があったファイルだけ差し替える。
