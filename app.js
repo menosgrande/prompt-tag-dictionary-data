@@ -653,6 +653,22 @@
         applyFilters();
       }
     });
+    root.addEventListener("click", event => {
+      const summary = event.target.closest(".column-menu > summary");
+      if (!summary) return;
+      requestAnimationFrame(() => {
+        const menu = summary.parentElement;
+        if (!menu.open) return;
+        const panel = menu.querySelector(".column-menu-panel");
+        if (!panel) return;
+        const rect = summary.getBoundingClientRect();
+        const width = Math.min(panel.scrollWidth || 240, window.innerWidth - 20);
+        const height = Math.min(panel.scrollHeight || 180, window.innerHeight - 20);
+        panel.style.left = Math.max(10, Math.min(rect.left, window.innerWidth - width - 10)) + "px";
+        panel.style.right = "auto";
+        panel.style.top = Math.max(10, Math.min(rect.bottom + 5, window.innerHeight - height - 10)) + "px";
+      });
+    });
     root.addEventListener("change", event => {
       const input = event.target.closest("[data-filter-group]");
       if (input) {
@@ -687,7 +703,7 @@
       applyFilters();
     });
 
-    $("#favorites-only").addEventListener("change", event => { state.favoritesOnly = event.target.checked; state.major = ""; state.minor = ""; renderCategories(); applyFilters(); });
+    $("#favorites-only").addEventListener("change", event => { state.favoritesOnly = event.target.checked; state.major = ""; state.minor = ""; renderCategories(); renderTableTools(); applyFilters(); });
     try { state.favorites = new Set(JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]")); } catch { state.favorites = new Set(); }
     try {
       const savedLevels = JSON.parse(localStorage.getItem(EXPRESSION_LEVELS_KEY) || "[]");
@@ -707,7 +723,7 @@
         state.favoritesOnly = !state.favoritesOnly;
         state.major = ""; state.minor = "";
         $("#favorites-only").checked = state.favoritesOnly;
-        renderCategories(); applyFilters(); setCategoryPanelOpen(false);
+        renderCategories(); renderTableTools(); applyFilters(); setCategoryPanelOpen(false);
         return;
       }
       const button = event.target.closest("[data-major]");
@@ -721,7 +737,7 @@
     $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; renderCategories(); applyFilters(); setCategoryPanelOpen(false); });
     $(".search-row > .button").addEventListener("click", () => {
       search.value = ""; state.query = ""; state.major = ""; state.minor = ""; state.favoritesOnly = false; $("#favorites-only").checked = false;
-      renderCategories(); applyFilters();
+      renderCategories(); renderTableTools(); applyFilters();
     });
     $(".pagination").addEventListener("click", event => {
       const button = event.target.closest("[data-page]");
