@@ -59,7 +59,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "",
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, columnWidths: [30, 26, 210, 170, 130, 96, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -356,15 +356,15 @@
     return true;
   }
   const COLUMN_WIDTH_KEYS = {
-    desktop: "ptd-dictionary-column-widths-v5-desktop",
-    mobile: "ptd-dictionary-column-widths-v5-mobile"
+    desktop: "ptd-dictionary-column-widths-v6-desktop",
+    mobile: "ptd-dictionary-column-widths-v6-mobile"
   };
   const COLUMN_DEFAULTS = {
-    desktop: [30, 26, 210, 170, 130, 96, 26],
-    mobile: [24, 22, 160, 140, 110, 94, 22]
+    desktop: [30, 26, 210, 170, 130, 34, 26],
+    mobile: [24, 22, 160, 140, 110, 32, 22]
   };
-  const COLUMN_MIN_WIDTHS = [24, 22, 90, 90, 72, 90, 22];
-  const COLUMN_MAX_WIDTHS = [64, 56, 520, 520, 360, 140, 56];
+  const COLUMN_MIN_WIDTHS = [24, 22, 90, 90, 72, 30, 22];
+  const COLUMN_MAX_WIDTHS = [64, 56, 520, 520, 360, 56, 56];
   function currentColumnMode() {
     return window.matchMedia("(max-width: 760px)").matches ? "mobile" : "desktop";
   }
