@@ -923,7 +923,13 @@
       if (!input) return;
       const row = state.all.find(item => keyOf(item) === input.dataset.key);
       if (!row) return;
-      if (input.checked) { state.selected.set(input.dataset.key, row); state.polarity.set(input.dataset.key, "positive"); } else { state.selected.delete(input.dataset.key); state.polarity.delete(input.dataset.key); }
+      if (input.checked) {
+        state.selected.set(input.dataset.key, row); state.polarity.set(input.dataset.key, "positive");
+        appendPromptTag("positive", row.tag);
+      } else {
+        removePromptTag(state.polarity.get(input.dataset.key) || "positive", row.tag);
+        state.selected.delete(input.dataset.key); state.polarity.delete(input.dataset.key);
+      }
       renderEditor();
     }));
     const search = $(".search-row .searchbox input");
@@ -1047,7 +1053,10 @@
     $(".selected-dock").addEventListener("click", event => {
       const button = event.target.closest("[data-remove]");
       if (!button) return;
-      state.selected.delete(button.dataset.remove); state.polarity.delete(button.dataset.remove); renderRows(); renderEditor();
+      const row = state.all.find(item => keyOf(item) === button.dataset.remove);
+      if (row) removePromptTag(state.polarity.get(button.dataset.remove) || "positive", row.tag);
+      state.selected.delete(button.dataset.remove); state.polarity.delete(button.dataset.remove);
+      renderRows(); renderEditor();
     });
     $(".selected-dock-actions [data-action='open-editor']").addEventListener("click", () => setScreen("editor-screen"));
     $(".editor-builder-panel .text-button").addEventListener("click", () => {
