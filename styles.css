@@ -529,10 +529,12 @@ body{font-size:14px;line-height:1.65}
 .editor-builder-panel .output-card:last-child .output-header label{color:#e5a0a8}
 .editor-builder-panel .prompt-bubble-editor{min-height:112px;padding:12px 10px;border:1px solid var(--line-soft);border-radius:15px;background:rgba(12,17,23,.34)}
 .editor-builder-panel .prompt-bubbles{align-items:flex-end;gap:8px;min-height:84px}
-.editor-builder-panel .prompt-bubble{position:relative;gap:7px;width:max-content;max-width:min(88%,560px);padding:9px 12px;border:1px solid #466b60;border-radius:17px 17px 17px 5px;background:#29483f;color:#e8f4ee;box-shadow:0 2px 5px #0002;cursor:grab;touch-action:none;user-select:none;transition:box-shadow 150ms ease}
-.editor-builder-panel .output-card:last-child .prompt-bubble{border-color:#76515a;border-radius:17px 17px 5px 17px;background:#4a3037;color:#f7e9eb}
+.editor-builder-panel .prompt-bubble{position:relative;gap:7px;width:max-content;max-width:min(88%,560px);padding:9px 12px;border:1px solid #466b60;border-radius:12px;background:#29483f;color:#e8f4ee;box-shadow:0 2px 5px #0002;cursor:grab;touch-action:none;user-select:none;transition:box-shadow 150ms ease}
+.editor-builder-panel .output-card:last-child .prompt-bubble{border-color:#76515a;border-radius:12px;background:#4a3037;color:#f7e9eb}
 .editor-builder-panel .prompt-bubble:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px}
 .editor-builder-panel .prompt-bubble.is-dragging{z-index:5;cursor:grabbing;opacity:.88;box-shadow:0 8px 22px #0005;transform:scale(1.035)}
+.editor-builder-panel .prompt-bubble.is-dragging{z-index:1000;opacity:.96;box-shadow:0 12px 28px #0007;transform:scale(1.025)}
+.editor-builder-panel .prompt-bubble-placeholder{flex:0 0 auto;min-width:42px;border:1px dashed var(--accent-strong);border-radius:12px;background:rgba(120,160,145,.12);transition:width 120ms ease,height 120ms ease}
 .editor-builder-panel .prompt-bubble-label{max-width:min(65vw,420px);font:12px/1.5 var(--mono);cursor:text}
 .editor-builder-panel .prompt-bubble-label[contenteditable="true"]{min-width:50px;outline:none;cursor:text}
 .editor-builder-panel .prompt-bubble-action{position:absolute;top:-7px;right:-7px;display:none;width:20px;height:20px;padding:0;border:1px solid #81978e;border-radius:50%;background:#17231f;color:#fff}
