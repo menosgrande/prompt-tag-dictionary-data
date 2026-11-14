@@ -17,7 +17,7 @@
     (MAJOR_CATEGORY_RANK.get(a) ?? Number.MAX_SAFE_INTEGER) - (MAJOR_CATEGORY_RANK.get(b) ?? Number.MAX_SAFE_INTEGER) || a.localeCompare(b, "ja");
   const FAVORITES_KEY = "ptd-favorites-v1";
   const EXPRESSION_LEVELS_KEY = "ptd-expression-levels-v1";
-  const CSV_CACHE_DB = "ptd-csv-cache-v1";
+  const CSV_CACHE_DB = "ptd-csv-cache-v2";
 
   function openCSVCache() {
     return new Promise((resolve, reject) => {
@@ -57,7 +57,7 @@
     } finally { db?.close(); }
   }
   const state = {
-    all: [], filtered: [], page: 0, major: "", minor: "", query: "",
+    all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
     selected: new Map(), expressionLevels: new Map(), columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
   };
@@ -82,7 +82,7 @@
     $(".tag-results").innerHTML = '<div class="empty-state' + (error ? ' load-error' : '') + '">' + escapeHTML(message) + '</div>';
   }
   async function fetchCSV(file, cachedRows = null) {
-    const response = await fetch(file.url, { cache: "no-store" });
+    const response = await fetch(file.url, { cache: "no-cache" });
     if (!response.ok) throw new Error(file.url + " の読み込みに失敗しました (HTTP " + response.status + ")");
     const rows = window.DictionaryCSV.parseCSV(await response.text());
     if (!rows.length) throw new Error(file.url + " にデータ行がありません。");
@@ -193,6 +193,11 @@
   function ensureRelatedIndexes() {
     if (state.relatedIndexesReady) return;
     buildRelatedIndexes();
+    // 作品インデックス構築後に workTitle を含む検索用文字列を一度だけ作る。
+    state.all.forEach(row => {
+      row._searchText = [row.tag,row.ja,row.aliases_json,row.major,row.minor,row.detail,row.workTitle]
+        .join(" ").toLocaleLowerCase();
+    });
     state.relatedIndexesReady = true;
   }
   function relatedTagRow(row, groupName = "", typeLabel = "") {
@@ -353,12 +358,7 @@
     if (filters.level.size && !filters.level.has(level === null ? "未設定" : String(level))) return false;
     if (filters.translation.size && !filters.translation.has(row.translation_status || "未設定")) return false;
     if (filters.classification.size && !filters.classification.has(row.classification_review_status || "未設定")) return false;
-    if (state.query) {
-      const terms = state.query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
-      const fields = [row.tag,row.ja,row.aliases_json,row.major,row.minor,row.detail,row.workTitle];
-      const haystack = fields.join(" ").toLocaleLowerCase();
-      if (!terms.every(term => haystack.includes(term))) return false;
-    }
+    if (state.queryTerms.length && !state.queryTerms.every(term => (row._searchText || "").includes(term))) return false;
     return true;
   }
   const COLUMN_WIDTH_KEYS = {
@@ -602,7 +602,7 @@
     if (!dialog || !row) return;
     const aliases = parseAliases(row.aliases_json);
     const related = state.all.filter(item => item !== row && row.major && item.major === row.major && (row.minor ? item.minor === row.minor : true)).slice(0,8);
-    const fields = [["大分類",row.major],["中分類",row.minor],["小分類",row.detail],["別名",aliases.join("、")],["説明",row.description || ""],["表現レベル", expressionLevelFor(row) === null ? "未判定" : String(expressionLevelFor(row))],["年齢判定",row.age_safety],["翻訳状態",statusLabel(row.translation_status)],["分類確認",statusLabel(row.classification_review_status)]].filter(([,value]) => value);
+    const fields = [["大分類",row.major],["中分類",row.minor],["小分類",row.detail],["別名",aliases.join("、")],["表現レベル", expressionLevelFor(row) === null ? "未判定" : String(expressionLevelFor(row))],["年齢判定",row.age_safety],["翻訳状態",statusLabel(row.translation_status)],["分類確認",statusLabel(row.classification_review_status)]].filter(([,value]) => value);
     $(".tag-detail-content").innerHTML =
       '<div class="tag-detail-main"><strong>' + escapeHTML(row.tag) + '</strong><span>' + escapeHTML(row.ja) + '</span></div>' +
       '<dl class="tag-detail-fields">' + fields.map(([label,value]) => '<div><dt>' + escapeHTML(label) + '</dt><dd>' + escapeHTML(value) + '</dd></div>').join("") + '</dl>' +
@@ -626,7 +626,7 @@
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement("a");
     anchor.href = url; anchor.download = filename; anchor.click();
-    URL.revokeObjectURL(url);
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
   async function copyText(text) {
     if (!text) return;
@@ -697,10 +697,22 @@
       renderEditor();
     }));
     const search = $(".search-row .searchbox input");
-    search.addEventListener("input", () => {
+    let searchDebounceTimer = null;
+    const applySearchInput = () => {
       state.query = search.value.trim();
       if (state.query && !state.relatedIndexesReady) ensureRelatedIndexes();
+      state.queryTerms = state.query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
       applyFilters();
+    };
+    const scheduleSearch = () => {
+      window.clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = window.setTimeout(applySearchInput, 120);
+    };
+    search.addEventListener("compositionstart", () => window.clearTimeout(searchDebounceTimer));
+    search.addEventListener("compositionend", scheduleSearch);
+    search.addEventListener("input", event => {
+      if (event.isComposing) return;
+      scheduleSearch();
     });
 
     $("#favorites-only").addEventListener("change", event => { state.favoritesOnly = event.target.checked; state.major = ""; state.minor = ""; renderCategories(); renderTableTools(); applyFilters(); });
@@ -874,7 +886,10 @@
       // 最新CSVは裏で確認し、実データに差分があったファイルだけ差し替える。
       Promise.all(loaded.map(item => item.refresh)).then(refreshed => {
         if (refreshed.some(Boolean)) {
+          const currentPage = state.page;
           applyLoadedData(loaded.map((item, index) => refreshed[index] || item.rows));
+          state.page = Math.min(currentPage, Math.max(0, Math.ceil(state.filtered.length / PAGE_SIZE) - 1));
+          renderRows();
           if (state.activeScreen === "works-screen") { ensureRelatedIndexes(); renderWorkList(); }
           if (state.activeScreen === "authors-screen") { ensureRelatedIndexes(); renderAuthorList(); }
         }
