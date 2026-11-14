@@ -698,62 +698,72 @@
   function serializePromptTokens(tokens) {
     return tokens.map(item => item.weight ? "(" + item.tag + ":" + item.weight + ")" : item.tag).join(", ");
   }
+
+  let activeBubbleDrag=null,bubbleDragFrame=0;
+  function animateBubbleReflow(root,mutate){
+    const nodes=[...root.querySelectorAll(".prompt-bubble:not(.is-dragging)")],before=new Map(nodes.map(n=>[n,n.getBoundingClientRect()]));
+    mutate();
+    nodes.forEach(n=>{if(!n.isConnected)return;const a=before.get(n),b=n.getBoundingClientRect();if(!a)return;const x=a.left-b.left,y=a.top-b.top;if(x||y){n.style.transition="none";n.style.transform=`translate3d(${x}px,${y}px,0)`; }});
+    root.getBoundingClientRect();requestAnimationFrame(()=>nodes.forEach(n=>{if(n.isConnected){n.style.transition="";n.style.transform="";}}));
+  }
+  function placeBubblePlaceholder(root,ph,x,y){
+    const nodes=[...root.querySelectorAll(".prompt-bubble:not(.is-dragging)")];if(!nodes.length){root.append(ph);return;}
+    let near=null,rect=null,best=Infinity;
+    nodes.forEach(n=>{const r=n.getBoundingClientRect(),dx=x-r.left-r.width/2,dy=y-r.top-r.height/2,d=dx*dx+dy*dy;if(d<best){best=d;near=n;rect=r;}});
+    if(!near)return;const dx=Math.abs(x-rect.left-rect.width/2),dy=Math.abs(y-rect.top-rect.height/2);
+    const before=dx>=dy?x<rect.left+rect.width/2:y<rect.top+rect.height/2,next=before?near:near.nextElementSibling;
+    if(next!==ph)animateBubbleReflow(root,()=>root.insertBefore(ph,next));
+  }
+  function stopBubbleAutoScroll(){if(bubbleDragFrame)cancelAnimationFrame(bubbleDragFrame);bubbleDragFrame=0;}
+  function runBubbleAutoScroll(){
+    if(!activeBubbleDrag||activeBubbleDrag.phase!=="dragging")return;
+    const {x,y}=activeBubbleDrag,e=64;let sx=0,sy=0;
+    if(x<e)sx=-Math.ceil((e-x)/7);else if(x>innerWidth-e)sx=Math.ceil((x-innerWidth+e)/7);
+    if(y<e)sy=-Math.ceil((e-y)/7);else if(y>innerHeight-e)sy=Math.ceil((y-innerHeight+e)/7);
+    if(sx||sy)window.scrollBy(sx,sy);bubbleDragFrame=requestAnimationFrame(runBubbleAutoScroll);
+  }
+  function finishBubbleDrag(commit=true){
+    const d=activeBubbleDrag;if(!d)return;stopBubbleAutoScroll();activeBubbleDrag=null;
+    const {chip,root,placeholder,target,originalTokens}=d;
+    if(placeholder?.parentElement){placeholder.parentElement.insertBefore(chip,placeholder);placeholder.remove();}
+    chip.classList.remove("is-dragging");["position","left","top","width","height","margin","transform","zIndex","pointerEvents","transition"].forEach(k=>chip.style[k]="");
+    if(!commit||d.phase!=="dragging")return;
+    const ordered=[...root.querySelectorAll(".prompt-bubble")].map(n=>{const tag=n.querySelector(".prompt-bubble-label")?.textContent.trim()||"";return originalTokens.find(t=>t.tag===tag)||{tag,weight:""};}).filter(t=>t.tag);
+    if(serializePromptTokens(ordered)!==serializePromptTokens(originalTokens))updatePromptFromBubbles(target,ordered);
+    chip.dataset.suppressClickUntil=String(Date.now()+350);
+  }
+  function bindBubbleDrag(root,target){
+    if(!root||root.dataset.dragBound==="true")return;root.dataset.dragBound="true";
+    root.addEventListener("pointerdown",e=>{
+      if(e.button!==0||e.target.closest("button,input,[contenteditable='true']"))return;
+      const chip=e.target.closest(".prompt-bubble");if(!chip||!root.contains(chip))return;
+      activeBubbleDrag={phase:"pending",pointerId:e.pointerId,root,target,chip,startX:e.clientX,startY:e.clientY,x:e.clientX,y:e.clientY,rect:chip.getBoundingClientRect(),originalTokens:parsePromptTokens(state[target==="negative"?"promptNegative":"promptPositive"])};
+    });
+  }
+  document.addEventListener("pointermove",e=>{
+    const d=activeBubbleDrag;if(!d||e.pointerId!==d.pointerId)return;d.x=e.clientX;d.y=e.clientY;
+    if(d.phase==="pending"){
+      if(Math.hypot(e.clientX-d.startX,e.clientY-d.startY)<5)return;d.phase="dragging";
+      const ph=document.createElement("div"),r=d.rect;ph.className="prompt-bubble-placeholder";ph.setAttribute("aria-hidden","true");ph.style.width=r.width+"px";ph.style.height=r.height+"px";ph.style.flex="0 0 "+r.width+"px";d.placeholder=ph;d.chip.after(ph);d.chip.classList.add("is-dragging");
+      Object.assign(d.chip.style,{position:"fixed",left:r.left+"px",top:r.top+"px",width:r.width+"px",height:r.height+"px",margin:"0",zIndex:"1000",pointerEvents:"none",transition:"none",transform:"translate3d(0,0,0)"});runBubbleAutoScroll();
+    }
+    if(d.phase!=="dragging")return;e.preventDefault();d.chip.style.transform=`translate3d(${e.clientX-d.startX}px,${e.clientY-d.startY}px,0)`;placeBubblePlaceholder(d.root,d.placeholder,e.clientX,e.clientY);
+  },{passive:false});
+  document.addEventListener("pointerup",e=>{if(activeBubbleDrag&&e.pointerId===activeBubbleDrag.pointerId)finishBubbleDrag(true);});
+  document.addEventListener("pointercancel",e=>{if(activeBubbleDrag&&e.pointerId===activeBubbleDrag.pointerId)finishBubbleDrag(true);});
+
   function renderPromptBubbles(polarity) {
-    const target = polarity === "negative" ? "negative" : "positive";
-    const root = $("#" + target + "-bubbles");
-    if (!root) return;
-    const tokens = parsePromptTokens(state[target === "negative" ? "promptNegative" : "promptPositive"]);
-    root.replaceChildren();
-    tokens.forEach((item,index) => {
-      const chip = document.createElement("div");
-      chip.className = "prompt-bubble"; chip.draggable = true; chip.tabIndex = 0;
-      chip.setAttribute("role","group");
-      chip.setAttribute("aria-label",item.tag + "。ドラッグで並べ替え、クリックで編集");
-      const label = document.createElement("span");
-      label.className = "prompt-bubble-label"; label.textContent = item.tag;
-      label.title = "クリックしてタグ名を編集";
-      label.addEventListener("click", () => {
-        if(label.isContentEditable)return;
-        label.contentEditable="true";label.focus();
-        const range=document.createRange();range.selectNodeContents(label);
-        const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);
-      });
-      const commitLabel=()=>{
-        if(!label.isContentEditable)return;
-        label.contentEditable="false";const value=label.textContent.trim();
-        if(value)tokens[index].tag=value;else label.textContent=tokens[index].tag;
-        updatePromptFromBubbles(target,tokens);
-      };
-      label.addEventListener("keydown",event=>{
-        if(event.key==="Enter"){event.preventDefault();label.blur();}
-        if(event.key==="Escape"){event.preventDefault();label.textContent=item.tag;label.contentEditable="false";label.blur();}
-      });
-      label.addEventListener("blur",commitLabel);
-      const weight=document.createElement("input");
-      weight.type="number";weight.className="prompt-bubble-weight";weight.min="0.1";weight.max="2";weight.step="0.01";
-      weight.placeholder="重み";weight.value=item.weight;weight.setAttribute("aria-label",item.tag+"の重み");
-      weight.addEventListener("change",()=>{
-        const value=weight.value.trim();
-        if(value&&(!Number.isFinite(Number(value))||Number(value)<0.1||Number(value)>2)){weight.value=item.weight;return;}
-        tokens[index].weight=value?String(Number(value)):"";updatePromptFromBubbles(target,tokens);
-      });
-      const remove=document.createElement("button");
-      remove.type="button";remove.className="prompt-bubble-action";remove.textContent="×";remove.title="削除";
-      remove.setAttribute("aria-label","削除");remove.addEventListener("click",()=>{tokens.splice(index,1);updatePromptFromBubbles(target,tokens);});
-      chip.append(label,weight,remove);
-      chip.addEventListener("keydown",event=>{
-        if(event.target===label&&label.isContentEditable)return;
-        if(event.ctrlKey&&event.key==="ArrowUp"){event.preventDefault();if(index>0){[tokens[index-1],tokens[index]]=[tokens[index],tokens[index-1]];updatePromptFromBubbles(target,tokens);}}
-        else if(event.ctrlKey&&event.key==="ArrowDown"){event.preventDefault();if(index<tokens.length-1){[tokens[index+1],tokens[index]]=[tokens[index],tokens[index+1]];updatePromptFromBubbles(target,tokens);}}
-        else if(event.ctrlKey&&((event.key==="ArrowLeft"&&target==="negative")||(event.key==="ArrowRight"&&target==="positive"))){event.preventDefault();movePromptBubble(target,index,tokens);}
-        else if((event.key==="Delete"||event.key==="Backspace")&&event.target===chip){event.preventDefault();tokens.splice(index,1);updatePromptFromBubbles(target,tokens);}
-      });
-      chip.addEventListener("dragstart",event=>{event.dataTransfer.setData("text/plain",String(index));event.dataTransfer.effectAllowed="move";});
-      chip.addEventListener("dragover",event=>{event.preventDefault();event.dataTransfer.dropEffect="move";});
-      chip.addEventListener("drop",event=>{
-        event.preventDefault();const from=Number(event.dataTransfer.getData("text/plain"));
-        if(Number.isInteger(from)&&from!==index&&tokens[from]){const [moved]=tokens.splice(from,1);tokens.splice(index,0,moved);updatePromptFromBubbles(target,tokens);}
-      });
+    const target=polarity==="negative"?"negative":"positive",root=$("#"+target+"-bubbles");if(!root)return;
+    const tokens=parsePromptTokens(state[target==="negative"?"promptNegative":"promptPositive"]);root.replaceChildren();
+    tokens.forEach((item,index)=>{
+      const chip=document.createElement("div");chip.className="prompt-bubble";chip.tabIndex=0;chip.setAttribute("role","group");chip.setAttribute("aria-label",item.tag+"。ドラッグで並べ替え、クリックで編集");
+      const label=document.createElement("span");label.className="prompt-bubble-label";label.textContent=item.tag;label.title="クリックしてタグ名を編集";
+      label.addEventListener("click",()=>{if(Number(chip.dataset.suppressClickUntil||0)>Date.now()||label.isContentEditable)return;label.contentEditable="true";label.focus();const range=document.createRange();range.selectNodeContents(label);const sel=window.getSelection();sel.removeAllRanges();sel.addRange(range);});
+      const commitLabel=()=>{if(!label.isContentEditable)return;label.contentEditable="false";const value=label.textContent.trim();if(value)tokens[index].tag=value;else label.textContent=tokens[index].tag;updatePromptFromBubbles(target,tokens);};
+      label.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();label.blur();}if(e.key==="Escape"){e.preventDefault();label.textContent=item.tag;label.contentEditable="false";label.blur();}});label.addEventListener("blur",commitLabel);
+      const remove=document.createElement("button");remove.type="button";remove.className="prompt-bubble-action";remove.textContent="×";remove.title="削除";remove.setAttribute("aria-label","削除");remove.addEventListener("click",()=>{if(Number(chip.dataset.suppressClickUntil||0)>Date.now())return;tokens.splice(index,1);updatePromptFromBubbles(target,tokens);});
+      chip.append(label,remove);
+      chip.addEventListener("keydown",e=>{if(e.target===label&&label.isContentEditable)return;if(e.ctrlKey&&e.key==="ArrowUp"){e.preventDefault();if(index>0){[tokens[index-1],tokens[index]]=[tokens[index],tokens[index-1]];updatePromptFromBubbles(target,tokens);}}else if(e.ctrlKey&&e.key==="ArrowDown"){e.preventDefault();if(index<tokens.length-1){[tokens[index+1],tokens[index]]=[tokens[index],tokens[index+1]];updatePromptFromBubbles(target,tokens);}}else if(e.ctrlKey&&((e.key==="ArrowLeft"&&target==="negative")||(e.key==="ArrowRight"&&target==="positive"))){e.preventDefault();movePromptBubble(target,index,tokens);}else if((e.key==="Delete"||e.key==="Backspace")&&e.target===chip){e.preventDefault();tokens.splice(index,1);updatePromptFromBubbles(target,tokens);}});
       root.append(chip);
     });
     if(!tokens.length){const empty=document.createElement("span");empty.className="prompt-bubble-empty";empty.textContent="辞典からタグを選ぶか、この余白をクリックして入力";root.append(empty);}
@@ -1196,6 +1206,7 @@
     $("#negative-output").addEventListener("input", event => {
       state.promptNegative = event.target.value; syncSelectedFromPromptText(); renderRows(); renderEditor();
     });
+    ["positive","negative"].forEach(target=>bindBubbleDrag($("#"+target+"-bubbles"),target));
     ["positive","negative"].forEach(target=>{
       const editor=$("#"+target+"-bubble-editor"),bubbles=$("#"+target+"-bubbles");
       editor.addEventListener("click",event=>{
