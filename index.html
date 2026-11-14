@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#15191f">
   <meta name="description" content="画像生成タグを日本語・英語で検索し、分類から選んでプロンプトを組み立てるタグ辞典。">
   <title>画像生成タグ辞典</title>
-  <link rel="stylesheet" href="./styles.css?v=level-menu-position-20261114">
+  <link rel="stylesheet" href="./styles.css?v=builder-controls-20261114">
 </head>
 <body>
   <header class="topbar">
@@ -76,9 +76,27 @@
         <p class="preview-help">タグ一覧で指定した出力状態を確認し、順序を整理できます。</p>
         <div id="selected-tag-list" class="selected-tag-list" aria-live="polite"><p class="empty-state">まだタグが選択されていません。</p></div>
         <div class="builder-controls"><label class="check-row"><input type="checkbox" checked> 分類順に並べて出力</label></div>
+        <section class="output-settings" aria-label="出力設定">
+          <strong>出力設定</strong>
+          <label><input id="escape-parentheses" type="checkbox"> タグ内の丸括弧をエスケープ（\\(series\\)）</label>
+          <label><input id="apply-weight" type="checkbox"> 重み付けを適用</label>
+          <label class="weight-setting">重み <input id="weight-value" type="number" min="0.1" max="2" step="0.05" value="1.2"></label>
+        </section>
         <div class="output-grid">
-          <section class="output-card"><div class="output-header"><label for="positive-output">ポジティブプロンプト</label></div><textarea id="positive-output" spellcheck="false" placeholder="選択したタグがここに表示されます。"></textarea><div class="output-actions"><button class="button button-primary" type="button" data-action="copy-positive" disabled>コピー</button><button class="button button-ghost" type="button" data-action="save-positive" disabled>TXT保存</button></div></section>
-          <section class="output-card"><div class="output-header"><label for="negative-output">ネガティブプロンプト</label></div><textarea id="negative-output" spellcheck="false" placeholder="ネガティブプロンプトを入力"></textarea><div class="output-actions negative-output-actions"><button class="button button-primary" type="button" data-action="copy-negative" disabled>コピー</button><button class="button button-ghost" type="button" data-action="save-negative" disabled>TXT保存</button></div></section>
+          <section class="output-card">
+            <div class="output-header"><label for="positive-output">ポジティブプロンプト</label></div>
+            <textarea id="positive-output" spellcheck="false" readonly placeholder="選択したタグと追記内容がここに表示されます。"></textarea>
+            <label class="output-extra-label" for="positive-extra">直接追記（タグ操作では消えません）</label>
+            <textarea id="positive-extra" class="output-extra" spellcheck="false" placeholder="ここに追加の語句を入力"></textarea>
+            <div class="output-actions"><button class="button button-primary" type="button" data-action="copy-positive" disabled>コピー</button><button class="button button-ghost" type="button" data-action="save-positive" disabled>TXT保存</button></div>
+          </section>
+          <section class="output-card">
+            <div class="output-header"><label for="negative-output">ネガティブプロンプト</label></div>
+            <textarea id="negative-output" spellcheck="false" readonly placeholder="ネガティブタグと追記内容がここに表示されます。"></textarea>
+            <label class="output-extra-label" for="negative-extra">直接追記（タグ操作では消えません）</label>
+            <textarea id="negative-extra" class="output-extra" spellcheck="false" placeholder="ここに追加の語句を入力"></textarea>
+            <div class="output-actions negative-output-actions"><button class="button button-primary" type="button" data-action="copy-negative" disabled>コピー</button><button class="button button-ghost" type="button" data-action="save-negative" disabled>TXT保存</button></div>
+          </section>
         </div>
       </section>
     </section>
@@ -89,6 +107,6 @@
   <footer class="footer"><span>CSVを正本として表示</span></footer>
   </main>
   <script src="./csv.js?v=csv-parser-20261114"></script>
-  <script src="./app.js?v=csv-maintenance-20261114"></script>
+  <script src="./app.js?v=builder-state-20261114"></script>
 </body>
 </html>
