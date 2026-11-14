@@ -62,6 +62,7 @@
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
     selected: new Map(), expressionLevels: new Map(), positiveExtra: "", negativeExtra: "", escapeParentheses: false, applyWeight: false, weightValue: 1.2, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
   };
+  let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
   const escapeHTML = value => String(value ?? "").replace(/[&<>"']/g, ch => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[ch]));
@@ -663,11 +664,14 @@
     if (typeof dialog.showModal === "function") dialog.showModal(); else dialog.setAttribute("open","");
   }
   function writeLocationState(mode = "replace") {
+    if (skipLocationWrite) return;
     const params = new URLSearchParams();
     if (state.query) params.set("q", state.query);
     if (state.major) params.set("major", state.major);
     if (state.minor) params.set("minor", state.minor);
     if (state.favoritesOnly) params.set("favorites", "1");
+    if (state.worksQuery) params.set("works", state.worksQuery);
+    if (state.authorsQuery) params.set("authors", state.authorsQuery);
     const hash = "#" + state.activeScreen + (params.size ? "?" + params.toString() : "");
     if (window.location.hash === hash) return;
     if (mode === "push") history.pushState(null, "", hash);
@@ -683,6 +687,10 @@
     state.major = params.get("major") || "";
     state.minor = params.get("minor") || "";
     state.favoritesOnly = params.get("favorites") === "1";
+    state.worksQuery = params.get("works") || "";
+    state.authorsQuery = params.get("authors") || "";
+    $("#works-search").value = state.worksQuery;
+    $("#authors-search").value = state.authorsQuery;
     const search = $(".search-row .searchbox input");
     if (search) search.value = state.query;
     $("#favorites-only").checked = state.favoritesOnly;
@@ -690,8 +698,8 @@
     if (state.query && !state.relatedIndexesReady) ensureRelatedIndexes();
     renderCategories();
     renderTableTools();
-    applyFilters();
     setScreen(screen, { historyMode: "none" });
+    applyFilters();
   }
   function setScreen(id, options = {}) {
     state.activeScreen = id;
@@ -775,8 +783,8 @@
     });
   }
   function bindControls() {
-    $("#works-search").addEventListener("input", event => { state.worksQuery = event.target.value.trim().toLocaleLowerCase(); renderWorkList(); });
-    $("#authors-search").addEventListener("input", event => { state.authorsQuery = event.target.value.trim().toLocaleLowerCase(); renderAuthorList(); });
+    $("#works-search").addEventListener("input", event => { state.worksQuery = event.target.value.trim().toLocaleLowerCase(); renderWorkList(); writeLocationState("replace"); });
+    $("#authors-search").addEventListener("input", event => { state.authorsQuery = event.target.value.trim().toLocaleLowerCase(); renderAuthorList(); writeLocationState("replace"); });
     $$(".related-list").forEach(root => root.addEventListener("change", event => {
       const input = event.target.closest(".related-select");
       if (!input) return;
@@ -1009,7 +1017,9 @@
       bindControls();
       bindTableTools();
       // キャッシュ（または初回取得分）を一覧へ直接反映する。
+      skipLocationWrite = true;
       applyLoadedData(loaded.map(item => item.rows));
+      skipLocationWrite = false;
       restoreLocationState();
       window.addEventListener("popstate", restoreLocationState);
       // 最新CSVは裏で確認し、実データに差分があったファイルだけ差し替える。
