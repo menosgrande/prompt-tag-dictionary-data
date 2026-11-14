@@ -4,7 +4,7 @@
     { url: "./dictionary-working.csv", source: "dictionary-working.csv", label: "一般" },
     { url: "./characters-working.csv", source: "characters-working.csv", label: "作品・人物" }
   ];
-  const PAGE_SIZE = 300;
+  const PAGE_SIZE = 150;
   const HEADERS = ["index","tag","ja","major","minor","detail","aliases_json","translation_status","ero_level","ero_review_status","classification_review_status","age_safety"];
   const MAJOR_CATEGORY_ORDER = [
     "品質・ネガティブ", "人数・人物構成", "人物の特徴", "顔・表情", "髪・頭部",
@@ -17,6 +17,7 @@
     (MAJOR_CATEGORY_RANK.get(a) ?? Number.MAX_SAFE_INTEGER) - (MAJOR_CATEGORY_RANK.get(b) ?? Number.MAX_SAFE_INTEGER) || a.localeCompare(b, "ja");
   const FAVORITES_KEY = "ptd-favorites-v1";
   const EXPRESSION_LEVELS_KEY = "ptd-expression-levels-v1";
+  const BUILDER_STATE_KEY = "ptd-builder-state-v1";
   const CSV_CACHE_DB = "ptd-csv-cache-v2";
 
   function openCSVCache() {
@@ -59,7 +60,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), positiveExtra: "", negativeExtra: "", escapeParentheses: false, applyWeight: false, weightValue: 1.2, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -546,13 +547,62 @@
     }).join("");
     root.classList.toggle("is-sorted", Boolean(ordered));
   }
-  function renderEditor() {
+  function formatPromptTag(tag) {
+    let value = String(tag || "");
+    if (state.escapeParentheses) value = value.replace(/([()])/g, "\\$1");
+    if (state.applyWeight) {
+      const weight = Number(state.weightValue || 1.2).toFixed(2).replace(/0+$/, "").replace(/\.$/, "");
+      value = "(" + value + ":" + weight + ")";
+    }
+    return value;
+  }
+  function updatePromptOutputs() {
     const rows = promptTags();
     const positiveRows = rows.filter(row => (state.polarity.get(keyOf(row)) || "positive") === "positive");
     const negativeRows = rows.filter(row => state.polarity.get(keyOf(row)) === "negative");
     const positive = $("#positive-output"), negative = $("#negative-output");
-    if (positive && document.activeElement !== positive) positive.value = positiveRows.map(row => row.tag).join(", ");
-    if (negative && document.activeElement !== negative) negative.value = negativeRows.map(row => row.tag).join(", ");
+    if (positive) positive.value = [...positiveRows.map(row => formatPromptTag(row.tag)), state.positiveExtra.trim()].filter(Boolean).join(", ");
+    if (negative) negative.value = [...negativeRows.map(row => formatPromptTag(row.tag)), state.negativeExtra.trim()].filter(Boolean).join(", ");
+  }
+  function saveBuilderState() {
+    try {
+      localStorage.setItem(BUILDER_STATE_KEY, JSON.stringify({
+        selected: [...state.selected.keys()], polarity: [...state.polarity.entries()],
+        positiveExtra: state.positiveExtra, negativeExtra: state.negativeExtra,
+        escapeParentheses: state.escapeParentheses, applyWeight: state.applyWeight, weightValue: state.weightValue
+      }));
+    } catch {}
+  }
+  function restoreBuilderState() {
+    if (state.selectionRestored) return;
+    state.selectionRestored = true;
+    try {
+      const saved = JSON.parse(localStorage.getItem(BUILDER_STATE_KEY) || "null");
+      if (!saved || typeof saved !== "object") return;
+      const rowsByKey = new Map(state.all.map(row => [keyOf(row), row]));
+      if (Array.isArray(saved.selected)) saved.selected.forEach(key => {
+        const row = rowsByKey.get(key);
+        if (row) state.selected.set(key, row);
+      });
+      if (Array.isArray(saved.polarity)) saved.polarity.forEach(([key, value]) => {
+        if (state.selected.has(key) && (value === "positive" || value === "negative")) state.polarity.set(key, value);
+      });
+      state.selected.forEach((row, key) => { if (!state.polarity.has(key)) state.polarity.set(key, "positive"); });
+      state.positiveExtra = typeof saved.positiveExtra === "string" ? saved.positiveExtra : "";
+      state.negativeExtra = typeof saved.negativeExtra === "string" ? saved.negativeExtra : "";
+      state.escapeParentheses = saved.escapeParentheses === true;
+      state.applyWeight = saved.applyWeight === true;
+      state.weightValue = Number.isFinite(Number(saved.weightValue)) ? Math.max(0.1, Math.min(2, Number(saved.weightValue))) : 1.2;
+    } catch {}
+    $("#positive-extra").value = state.positiveExtra;
+    $("#negative-extra").value = state.negativeExtra;
+    $("#escape-parentheses").checked = state.escapeParentheses;
+    $("#apply-weight").checked = state.applyWeight;
+    $("#weight-value").value = String(state.weightValue);
+  }
+  function renderEditor() {
+    updatePromptOutputs();
+    saveBuilderState();
     renderSelectedTagList();
     const count = state.selected.size;
     $$(".stats strong")[1].textContent = String(count);
