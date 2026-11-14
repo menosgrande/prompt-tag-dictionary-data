@@ -15,9 +15,10 @@
   const MAJOR_CATEGORY_RANK = new Map(MAJOR_CATEGORY_ORDER.map((name, index) => [name, index]));
   const compareMajorCategories = (a, b) =>
     (MAJOR_CATEGORY_RANK.get(a) ?? Number.MAX_SAFE_INTEGER) - (MAJOR_CATEGORY_RANK.get(b) ?? Number.MAX_SAFE_INTEGER) || a.localeCompare(b, "ja");
-  const FAVORITES_KEY = "ptd-favorites-v1";
-  const EXPRESSION_LEVELS_KEY = "ptd-expression-levels-v1";
-  const BUILDER_STATE_KEY = "ptd-builder-state-v1";
+  const USER_DATA_KEY = "ptd-user-data-v2";
+  const LEGACY_FAVORITES_KEY = "ptd-favorites-v1";
+  const LEGACY_EXPRESSION_LEVELS_KEY = "ptd-expression-levels-v1";
+  const LEGACY_BUILDER_STATE_KEY = "ptd-builder-state-v1";
   const CSV_CACHE_DB = "ptd-csv-cache-v2";
 
   function openCSVCache() {
@@ -66,7 +67,8 @@
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
   const escapeHTML = value => String(value ?? "").replace(/[&<>"']/g, ch => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[ch]));
-  const keyOf = row => [row.source, row.index, row.tag].join("::");
+  // 統合データセット内で一意なCSVのtag値を識別子として使う。source/index/ファイル名には依存しない。
+  const keyOf = row => String(row.tag ?? "");
   function baseExpressionLevel(row) {
     const value = String(row.ero_level ?? "").trim();
     return /^[0-4]$/.test(value) ? Number(value) : null;
@@ -75,8 +77,127 @@
     const key = keyOf(row);
     return state.expressionLevels.has(key) ? state.expressionLevels.get(key) : baseExpressionLevel(row);
   }
+  function readUserDataV2() {
+    const raw = localStorage.getItem(USER_DATA_KEY);
+    if (!raw) return null;
+    const data = JSON.parse(raw);
+    if (!data || data.schemaVersion !== 2 || typeof data !== "object") throw new Error("ユーザー保存データの形式が不正です。");
+    return data;
+  }
+  function writeUserDataV2(patch) {
+    try {
+      const current = readUserDataV2() || { schemaVersion: 2, favorites: [], expressionLevels: [], builderState: null, migration: null };
+      localStorage.setItem(USER_DATA_KEY, JSON.stringify({ ...current, ...patch, schemaVersion: 2 }));
+    } catch (error) { console.warn("ユーザー設定を保存できませんでした。", error); }
+  }
   function saveExpressionLevels() {
-    try { localStorage.setItem(EXPRESSION_LEVELS_KEY, JSON.stringify([...state.expressionLevels.entries()])); } catch {}
+    writeUserDataV2({ expressionLevels: [...state.expressionLevels.entries()] });
+  }
+  function legacyTagFromKey(key) {
+    if (typeof key !== "string") return null;
+    const first = key.indexOf("::");
+    const second = first < 0 ? -1 : key.indexOf("::", first + 2);
+    return second < 0 ? null : key.slice(second + 2);
+  }
+  function migrateLegacyUserData() {
+    const current = readUserDataV2();
+    if (current) return current;
+
+    const rowsByTag = new Map();
+    const duplicateTags = new Set();
+    state.all.forEach(row => {
+      const tag = String(row.tag ?? "");
+      if (rowsByTag.has(tag)) duplicateTags.add(tag);
+      else rowsByTag.set(tag, row);
+    });
+    duplicateTags.forEach(tag => rowsByTag.delete(tag));
+
+    const unresolved = [];
+    const mapLegacyKey = (key, kind) => {
+      const tag = legacyTagFromKey(key);
+      if (tag !== null && rowsByTag.has(tag)) return tag;
+      unresolved.push({ kind, legacyKey: String(key ?? ""), tag: tag ?? "" });
+      return null;
+    };
+    const readLegacy = (key, fallback, kind) => {
+      try {
+        const raw = localStorage.getItem(key);
+        return raw === null ? fallback : JSON.parse(raw);
+      } catch {
+        unresolved.push({ kind, legacyKey: key, tag: "", reason: "旧データをJSONとして読み取れません" });
+        return fallback;
+      }
+    };
+
+    const oldFavorites = readLegacy(LEGACY_FAVORITES_KEY, [], "favorite");
+    const favorites = [];
+    if (Array.isArray(oldFavorites)) oldFavorites.forEach(key => {
+      const mapped = mapLegacyKey(key, "favorite");
+      if (mapped !== null && !favorites.includes(mapped)) favorites.push(mapped);
+    });
+    else unresolved.push({ kind: "favorite", legacyKey: LEGACY_FAVORITES_KEY, tag: "", reason: "旧データの形式が配列ではありません" });
+
+    const oldLevels = readLegacy(LEGACY_EXPRESSION_LEVELS_KEY, [], "expressionLevel");
+    const expressionLevels = [];
+    if (Array.isArray(oldLevels)) oldLevels.forEach(entry => {
+      if (!Array.isArray(entry) || entry.length < 2 || !(entry[1] === null || [0,1,2,3,4].includes(entry[1]))) {
+        unresolved.push({ kind: "expressionLevel", legacyKey: String(entry?.[0] ?? ""), tag: "", reason: "旧データの項目形式が不正です" });
+        return;
+      }
+      const mapped = mapLegacyKey(entry[0], "expressionLevel");
+      if (mapped !== null) expressionLevels.push([mapped, entry[1]]);
+    });
+    else unresolved.push({ kind: "expressionLevel", legacyKey: LEGACY_EXPRESSION_LEVELS_KEY, tag: "", reason: "旧データの形式が配列ではありません" });
+
+    const oldBuilder = readLegacy(LEGACY_BUILDER_STATE_KEY, null, "builder");
+    let builderState = null;
+    if (oldBuilder && typeof oldBuilder === "object" && !Array.isArray(oldBuilder)) {
+      const selected = [];
+      if (Array.isArray(oldBuilder.selected)) oldBuilder.selected.forEach(key => {
+        const mapped = mapLegacyKey(key, "selected");
+        if (mapped !== null && !selected.includes(mapped)) selected.push(mapped);
+      });
+      const selectedSet = new Set(selected);
+      const polarity = [];
+      if (Array.isArray(oldBuilder.polarity)) oldBuilder.polarity.forEach(entry => {
+        if (!Array.isArray(entry) || entry.length < 2 || !["positive", "negative"].includes(entry[1])) {
+          unresolved.push({ kind: "polarity", legacyKey: String(entry?.[0] ?? ""), tag: "", reason: "旧データの項目形式が不正です" });
+          return;
+        }
+        const mapped = mapLegacyKey(entry[0], "polarity");
+        if (mapped !== null && selectedSet.has(mapped)) polarity.push([mapped, entry[1]]);
+      });
+      builderState = {
+        selected, polarity,
+        positiveExtra: typeof oldBuilder.positiveExtra === "string" ? oldBuilder.positiveExtra : "",
+        negativeExtra: typeof oldBuilder.negativeExtra === "string" ? oldBuilder.negativeExtra : "",
+        escapeParentheses: oldBuilder.escapeParentheses === true,
+        applyWeight: oldBuilder.applyWeight === true,
+        weightValue: Number.isFinite(Number(oldBuilder.weightValue)) ? Math.max(0.1, Math.min(2, Number(oldBuilder.weightValue))) : 1.2
+      };
+    } else if (oldBuilder !== null) {
+      unresolved.push({ kind: "builder", legacyKey: LEGACY_BUILDER_STATE_KEY, tag: "", reason: "旧データの形式がオブジェクトではありません" });
+    }
+
+    const migrated = {
+      schemaVersion: 2, favorites, expressionLevels, builderState,
+      migration: { completedAt: new Date().toISOString(), unresolved }
+    };
+    // 1つのlocalStorageキーへ一括保存する。旧キーは復旧確認まで残す。
+    localStorage.setItem(USER_DATA_KEY, JSON.stringify(migrated));
+    return migrated;
+  }
+  function renderMigrationReport(data) {
+    const panel = $("#migration-unresolved-panel");
+    if (!panel) return;
+    const items = Array.isArray(data?.migration?.unresolved) ? data.migration.unresolved : [];
+    panel.hidden = items.length === 0;
+    const summary = $("#migration-unresolved-summary");
+    const list = $("#migration-unresolved-list");
+    if (summary) summary.textContent = "移行できなかった設定：" + items.length + "件（確認が必要）";
+    if (list) list.innerHTML = items.map(item =>
+      "<li><strong>" + escapeHTML(item.kind || "不明") + "</strong> · " + escapeHTML(item.tag || item.legacyKey || "識別情報なし") + (item.reason ? " — " + escapeHTML(item.reason) : "") + "</li>"
+    ).join("");
   }
   const statusLabel = value => ({ verified:"確認済み", pending:"未確認", needs_review:"要確認", "needs-review":"要確認", provisional:"暫定", unverified:"未確認" })[value] || value || "—";
 
@@ -568,18 +689,18 @@
   }
   function saveBuilderState() {
     try {
-      localStorage.setItem(BUILDER_STATE_KEY, JSON.stringify({
+      writeUserDataV2({ builderState: {
         selected: [...state.selected.keys()], polarity: [...state.polarity.entries()],
         positiveExtra: state.positiveExtra, negativeExtra: state.negativeExtra,
         escapeParentheses: state.escapeParentheses, applyWeight: state.applyWeight, weightValue: state.weightValue
-      }));
+      } });
     } catch {}
   }
   function restoreBuilderState() {
     if (state.selectionRestored) return;
     state.selectionRestored = true;
     try {
-      const saved = JSON.parse(localStorage.getItem(BUILDER_STATE_KEY) || "null");
+      const saved = readUserDataV2()?.builderState || null;
       if (!saved || typeof saved !== "object") return;
       const rowsByKey = new Map(state.all.map(row => [keyOf(row), row]));
       if (Array.isArray(saved.selected)) saved.selected.forEach(key => {
@@ -815,11 +936,7 @@
     });
 
     $("#favorites-only").addEventListener("change", event => { state.favoritesOnly = event.target.checked; state.major = ""; state.minor = ""; renderCategories(); renderTableTools(); applyFilters(); });
-    try { state.favorites = new Set(JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]")); } catch { state.favorites = new Set(); }
-    try {
-      const savedLevels = JSON.parse(localStorage.getItem(EXPRESSION_LEVELS_KEY) || "[]");
-      if (Array.isArray(savedLevels)) savedLevels.forEach(([key, value]) => { if (typeof key === "string" && (value === null || [0,1,2,3,4].includes(value))) state.expressionLevels.set(key, value); });
-    } catch { state.expressionLevels = new Map(); }
+    // ユーザー設定はCSV読み込み後、統合データセットに対して移行・復元する。
     const categoryToggle = $(".category-mobile-toggle");
     const setCategoryPanelOpen = open => {
       categoryToggle.setAttribute("aria-expanded", String(open));
@@ -863,7 +980,7 @@
       if (favorite) {
         const key = favorite.dataset.favorite;
         if (state.favorites.has(key)) state.favorites.delete(key); else state.favorites.add(key);
-        try { localStorage.setItem(FAVORITES_KEY, JSON.stringify([...state.favorites])); } catch {}
+        writeUserDataV2({ favorites: [...state.favorites] });
         renderCategories();
         if (state.favoritesOnly) applyFilters(); else renderRows();
         return;
@@ -1004,6 +1121,10 @@
       const applyLoadedData = rowsByFile => {
         state.all = rowsByFile.flat();
         state.all.sort((a,b) => Number(a.index) - Number(b.index));
+        const userData = migrateLegacyUserData();
+        state.favorites = new Set(Array.isArray(userData.favorites) ? userData.favorites.filter(key => typeof key === "string") : []);
+        state.expressionLevels = new Map(Array.isArray(userData.expressionLevels) ? userData.expressionLevels.filter(entry => Array.isArray(entry) && typeof entry[0] === "string" && (entry[1] === null || [0,1,2,3,4].includes(entry[1])) ) : []);
+        renderMigrationReport(userData);
         if (!state.selectionRestored) restoreBuilderState();
         else {
           const rowsByKey = new Map(state.all.map(row => [keyOf(row), row]));
