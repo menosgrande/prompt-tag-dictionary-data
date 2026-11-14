@@ -605,6 +605,8 @@
   function renderEditor() {
     updatePromptOutputs();
     saveBuilderState();
+    const rows = promptTags();
+    const positive = $("#positive-output"), negative = $("#negative-output");
     renderSelectedTagList();
     const count = state.selected.size;
     $$(".stats strong")[1].textContent = String(count);
@@ -1002,7 +1004,12 @@
       const applyLoadedData = rowsByFile => {
         state.all = rowsByFile.flat();
         state.all.sort((a,b) => Number(a.index) - Number(b.index));
-        restoreBuilderState();
+        if (!state.selectionRestored) restoreBuilderState();
+        else {
+          const rowsByKey = new Map(state.all.map(row => [keyOf(row), row]));
+          state.selected = new Map([...state.selected.keys()].map(key => [key, rowsByKey.get(key)]).filter(([, row]) => row));
+          state.polarity = new Map([...state.polarity].filter(([key]) => state.selected.has(key)));
+        }
         state.relatedIndexesReady = false;
         state.works = []; state.authors = []; state.reviewRows = []; state.ambiguousRows = [];
         if (state.query) ensureRelatedIndexes();
@@ -1010,8 +1017,7 @@
         renderCategories();
         renderTableTools();
         applyFilters();
-        // 編集画面は開かれるまで生成しない。
-        if (state.activeScreen === "editor-screen") renderEditor();
+        renderEditor();
       };
       // 操作イベントと保存済み設定を先に読み込み、CSVの表示処理を最小化する。
       bindControls();
