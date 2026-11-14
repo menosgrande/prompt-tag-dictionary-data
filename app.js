@@ -706,7 +706,8 @@
     root.replaceChildren();
     tokens.forEach((item,index) => {
       const chip = document.createElement("div");
-      chip.className = "prompt-bubble"; chip.tabIndex = 0;\n      chip._promptToken = item;
+      chip.className = "prompt-bubble"; chip.tabIndex = 0;
+      chip._promptToken = item;
       chip.setAttribute("role","group");
       chip.setAttribute("aria-label",item.tag + "。ドラッグで並べ替え、クリックで編集");
       const label = document.createElement("span");
