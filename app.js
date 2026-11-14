@@ -896,7 +896,7 @@
       if (event.key === "Escape") {
         const dialog = $("#tag-detail-dialog");
         if (dialog?.open) dialog.close();
-        $(".column-menu[open]").forEach(menu => { menu.open = false; });
+        $$(".column-menu[open]").forEach(menu => { menu.open = false; });
       }
     });
     $(".screen-nav").addEventListener("click", event => {
