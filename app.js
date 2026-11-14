@@ -61,7 +61,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), positiveExtra: "", negativeExtra: "", escapeParentheses: false, applyWeight: false, weightValue: 1.2, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), positiveExtra: "", negativeExtra: "", escapeParentheses: false, applyWeight: false, weightValue: 1.2, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, hiddenMajorCategories: new Set(), columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
   };
   let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -480,13 +480,17 @@
       if (row.minor) entry.minors.set(row.minor, (entry.minors.get(row.minor) || 0) + 1);
     });
     const majors = [...majorCounts.entries()].sort((a,b) => compareMajorCategories(a[0], b[0]));
+    const visibleMajors = majors.filter(([major]) => !state.hiddenMajorCategories.has(major));
+    const hiddenMajors = majors.filter(([major]) => state.hiddenMajorCategories.has(major));
+    const renderMajor = ([major,entry]) => {
+      const minors = [...entry.minors.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja"));
+      return '<div class="category-major"><div class="category-major-row"><button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button><label class="category-visibility" title="この分類の表示・非表示"><input type="checkbox" data-category-visible="' + escapeHTML(major) + '" checked aria-label="' + escapeHTML(major) + 'を表示">表示</label></div>' +
+        '<div class="category-minors">' + minors.map(([minor,n]) => '<button class="category-minor' + (state.minor === minor ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button>').join("") + '</div></div>';
+    };
     root.innerHTML = '<button class="category-major-button' + (state.favoritesOnly ? ' active' : '') + '" data-favorites="true">お気に入り <span class="count">' + favoriteCount.toLocaleString("ja-JP") + '</span></button>' +
       '<button class="category-major-button' + (!state.major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="">すべての分類 <span class="count">' + state.all.length.toLocaleString("ja-JP") + '</span></button>' +
-      majors.map(([major,entry]) => {
-        const minors = [...entry.minors.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja"));
-        return '<div class="category-major' + (state.major === major ? ' is-expanded' : '') + '"><button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button>' +
-          '<div class="category-minors">' + minors.map(([minor,n]) => '<button class="category-minor' + (state.minor === minor ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button>').join("") + '</div></div>';
-      }).join("");
+      visibleMajors.map(renderMajor).join("") +
+      (hiddenMajors.length ? '<details class="category-hidden-list"><summary>非表示の分類 <span class="count">' + hiddenMajors.length + '件</span></summary><div>' + hiddenMajors.map(([major]) => '<label class="category-visibility"><input type="checkbox" data-category-visible="' + escapeHTML(major) + '" aria-label="' + escapeHTML(major) + 'を表示">' + escapeHTML(major) + '</label>').join("") + '<button type="button" class="category-show-all" data-show-all-categories>すべて表示</button></div></details>' : '');
   }
   function matches(row) {
     if (state.major && row.major !== state.major) return false;
@@ -976,7 +980,23 @@
     categoryToggle.addEventListener("click", () => {
       setCategoryPanelOpen(categoryToggle.getAttribute("aria-expanded") !== "true");
     });
+    $(".category-tree").addEventListener("change", event => {
+      const visibility = event.target.closest("[data-category-visible]");
+      if (!visibility) return;
+      const major = visibility.dataset.categoryVisible;
+      if (visibility.checked) state.hiddenMajorCategories.delete(major);
+      else state.hiddenMajorCategories.add(major);
+      writeUserDataV2({ hiddenMajorCategories: [...state.hiddenMajorCategories] });
+      renderCategories();
+    });
     $(".category-tree").addEventListener("click", event => {
+      const showAll = event.target.closest("[data-show-all-categories]");
+      if (showAll) {
+        state.hiddenMajorCategories.clear();
+        writeUserDataV2({ hiddenMajorCategories: [] });
+        renderCategories();
+        return;
+      }
       const favoriteCategory = event.target.closest("[data-favorites]");
       if (favoriteCategory) {
         state.favoritesOnly = !state.favoritesOnly;
@@ -1182,6 +1202,7 @@
         prepareSearchIndex();
         const userData = migrateLegacyUserData();
         state.favorites = new Set(Array.isArray(userData.favorites) ? userData.favorites.filter(key => typeof key === "string") : []);
+        state.hiddenMajorCategories = new Set(Array.isArray(userData.hiddenMajorCategories) ? userData.hiddenMajorCategories.filter(value => typeof value === "string") : []);
         state.expressionLevels = new Map(Array.isArray(userData.expressionLevels) ? userData.expressionLevels.filter(entry => Array.isArray(entry) && typeof entry[0] === "string" && (entry[1] === null || [0,1,2,3,4].includes(entry[1])) ) : []);
         renderMigrationReport(userData);
         if (!state.selectionRestored) restoreBuilderState();
