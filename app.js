@@ -254,9 +254,10 @@
   }
   function prepareSearchIndex() {
     state.all.forEach(row => {
+      const promptFields = [row.tag, row.ja, ...parseAliases(row.aliases_json)];
+      row._promptSearchFields = promptFields.map(normalizeSearchText);
       row._searchText = normalizeSearchText([
-        row.tag, row.ja, ...parseAliases(row.aliases_json),
-        row.major, row.minor, row.detail
+        ...promptFields, row.major, row.minor, row.detail
       ].join(" "));
     });
   }
@@ -810,8 +811,7 @@
     const normalized = normalizeSearchText(query);
     if (!normalized || normalized.length < 1) return [];
     return state.all.map(row => {
-      const aliases = parseAliases(row.aliases_json);
-      const fields = [row.tag, row.ja, ...aliases].map(normalizeSearchText);
+      const fields = row._promptSearchFields || [row.tag, row.ja, ...parseAliases(row.aliases_json)].map(normalizeSearchText);
       let score = 99;
       fields.forEach(field => {
         if (field === normalized) score = Math.min(score, 0);
@@ -854,7 +854,8 @@
     state[promptStateKey(polarity)] = nextValue;
     const parsed = parsePromptItems(nextValue);
     if (polarity === "negative") state.promptItemsNegative = parsed; else state.promptItemsPositive = parsed;
-    saveBuilderState();
+    syncSelectedToPromptItems(polarity, parsed);
+    renderEditor();
     renderPromptAutocomplete(polarity);
     const caret = nextValue.length;
     textarea.setSelectionRange(caret, caret);
@@ -972,7 +973,7 @@
     if (polarity === "negative") state.promptItemsNegative = parsed;
     else state.promptItemsPositive = parsed;
     syncSelectedToPromptItems(polarity, parsed);
-    saveBuilderState();
+    renderEditor();
     renderPromptAutocomplete(polarity);
     const hasValue = Boolean(value.trim());
     $('[data-action="copy-' + polarity + '"]').disabled = !hasValue;
