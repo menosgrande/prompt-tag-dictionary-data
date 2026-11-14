@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#15191f">
   <meta name="description" content="画像生成タグを日本語・英語で検索し、分類から選んでプロンプトを組み立てるタグ辞典。">
   <title>画像生成タグ辞典</title>
-  <link rel="stylesheet" href="./styles.css?v=prompt-editor-20261115">
+  <link rel="stylesheet" href="./styles.css?v=bubble-editor-20261115">
 </head>
 <body>
   <header class="topbar">
@@ -78,17 +78,48 @@
       <section class="panel builder-panel editor-builder-panel">
         <div class="panel-heading"><div><h2>プロンプト</h2></div><button class="text-button" type="button">全解除</button></div>
         <div class="output-grid">
-          <section class="output-card">
-            <div class="output-header"><label for="positive-output">ポジティブプロンプト</label></div>
-            <textarea id="positive-output" spellcheck="false" placeholder="タグ一覧から選択するか、ここに直接入力してください。"></textarea>
+          <section class="output-card" data-prompt-card="positive">
+            <div class="output-header"><label for="positive-output">ポジティブプロンプト</label><span>POSITIVE</span></div>
+            <div class="prompt-editor-region" data-prompt-region="positive">
+              <div class="prompt-bubble-view" data-bubble-view="positive" aria-label="ポジティブプロンプトのタグ"></div>
+              <textarea id="positive-output" spellcheck="false" placeholder="タグを入力。カンマ区切りで複数指定できます。" hidden></textarea>
+              <div class="prompt-autocomplete" data-autocomplete="positive" role="listbox" hidden></div>
+            </div>
+            <div class="prompt-bubble-toolbar" data-bubble-toolbar="positive" hidden>
+              <button class="button button-ghost" type="button" data-bubble-action="edit">編集</button>
+              <label class="prompt-weight-control">重み <input type="number" min="0.1" max="2" step="0.01" value="1.00" data-bubble-weight></label>
+              <button class="button button-ghost" type="button" data-bubble-action="move">Negativeへ</button>
+              <button class="button button-ghost" type="button" data-bubble-action="move-up">↑</button>
+              <button class="button button-ghost" type="button" data-bubble-action="move-down">↓</button>
+              <button class="button button-ghost" type="button" data-bubble-action="delete">削除</button>
+              <input class="prompt-bubble-edit-input" type="text" data-bubble-edit-input list="prompt-tag-datalist" placeholder="タグ名" hidden>
+              <button class="button button-primary" type="button" data-bubble-action="save-edit" hidden>確定</button>
+              <button class="button button-ghost" type="button" data-bubble-action="cancel-edit" hidden>取消</button>
+            </div>
             <div class="output-actions"><button class="button button-primary" type="button" data-action="copy-positive" disabled>コピー</button><button class="button button-ghost" type="button" data-action="save-positive" disabled>TXT保存</button></div>
           </section>
-          <section class="output-card">
-            <div class="output-header"><label for="negative-output">ネガティブプロンプト</label></div>
-            <textarea id="negative-output" spellcheck="false" placeholder="ネガティブタグを選択するか、ここに直接入力してください。"></textarea>
+          <section class="output-card" data-prompt-card="negative">
+            <div class="output-header"><label for="negative-output">ネガティブプロンプト</label><span>NEGATIVE</span></div>
+            <div class="prompt-editor-region" data-prompt-region="negative">
+              <div class="prompt-bubble-view" data-bubble-view="negative" aria-label="ネガティブプロンプトのタグ"></div>
+              <textarea id="negative-output" spellcheck="false" placeholder="タグを入力。カンマ区切りで複数指定できます。" hidden></textarea>
+              <div class="prompt-autocomplete" data-autocomplete="negative" role="listbox" hidden></div>
+            </div>
+            <div class="prompt-bubble-toolbar" data-bubble-toolbar="negative" hidden>
+              <button class="button button-ghost" type="button" data-bubble-action="edit">編集</button>
+              <label class="prompt-weight-control">重み <input type="number" min="0.1" max="2" step="0.01" value="1.00" data-bubble-weight></label>
+              <button class="button button-ghost" type="button" data-bubble-action="move">Positiveへ</button>
+              <button class="button button-ghost" type="button" data-bubble-action="move-up">↑</button>
+              <button class="button button-ghost" type="button" data-bubble-action="move-down">↓</button>
+              <button class="button button-ghost" type="button" data-bubble-action="delete">削除</button>
+              <input class="prompt-bubble-edit-input" type="text" data-bubble-edit-input list="prompt-tag-datalist" placeholder="タグ名" hidden>
+              <button class="button button-primary" type="button" data-bubble-action="save-edit" hidden>確定</button>
+              <button class="button button-ghost" type="button" data-bubble-action="cancel-edit" hidden>取消</button>
+            </div>
             <div class="output-actions negative-output-actions"><button class="button button-primary" type="button" data-action="copy-negative" disabled>コピー</button><button class="button button-ghost" type="button" data-action="save-negative" disabled>TXT保存</button></div>
           </section>
         </div>
+        <datalist id="prompt-tag-datalist"></datalist>
       </section>
     </section>
     <dialog id="tag-detail-dialog" class="tag-detail-dialog" aria-labelledby="tag-detail-title">
