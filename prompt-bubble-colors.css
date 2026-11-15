@@ -22,11 +22,11 @@
 .editor-builder-panel .prompt-bubble {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   width: max-content;
   max-width: 100%;
   min-height: 0;
-  padding: 0 20px;
+  padding: 0 10px;
   border: 0;
   border-radius: 999px;
   background: linear-gradient(110deg, #efffc9 0%, #b9ffe0 100%);
@@ -41,7 +41,7 @@
 .editor-builder-panel .prompt-bubble-label {
   max-width: min(68vw, 520px);
   color: inherit;
-  font: 16px/1.35 'DM Sans', 'Noto Sans JP', sans-serif;
+  font: 14px/1.25 'DM Sans', 'Noto Sans JP', sans-serif;
   letter-spacing: .01em;
   cursor: text;
 }
@@ -100,11 +100,11 @@
   .editor-builder-panel .prompt-bubble {
     min-height: 0;
     max-width: 100%;
-    padding: 0 16px;
+    padding: 0 8px;
   }
 
   .editor-builder-panel .prompt-bubble-label {
     max-width: 68vw;
-    font-size: 15px;
+    font-size: 13px;
   }
 }
