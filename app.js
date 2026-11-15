@@ -1209,17 +1209,30 @@
       if (!majorCheckbox && !minorCheckbox) return;
       if (majorCheckbox) {
         const major = majorCheckbox.dataset.categoryExcludeMajor;
-        if (majorCheckbox.checked) state.excludedMajorCategories.add(major);
-        else state.excludedMajorCategories.delete(major);
+        if (majorCheckbox.checked) {
+          state.excludedMajorCategories.add(major);
+          // 除外する分類が現在の表示条件なら、衝突する選択条件を解除する。
+          if (state.major === major) { state.major = ""; state.minor = ""; }
+        } else {
+          state.excludedMajorCategories.delete(major);
+        }
       } else {
-        const key = minorCategoryKey(minorCheckbox.dataset.categoryMajor, minorCheckbox.dataset.categoryMinor);
-        if (minorCheckbox.checked) state.excludedMinorCategories.add(key);
-        else state.excludedMinorCategories.delete(key);
+        const major = minorCheckbox.dataset.categoryMajor;
+        const minor = minorCheckbox.dataset.categoryMinor;
+        const key = minorCategoryKey(major, minor);
+        if (minorCheckbox.checked) {
+          state.excludedMinorCategories.add(key);
+          // 選択中の中分類を除外した場合は、大分類表示に戻して残りを表示する。
+          if (state.major === major && state.minor === minor) state.minor = "";
+        } else {
+          state.excludedMinorCategories.delete(key);
+        }
       }
       writeUserDataV2({
         excludedMajorCategories: [...state.excludedMajorCategories],
         excludedMinorCategories: [...state.excludedMinorCategories].map(key => JSON.parse(key))
       });
+      renderCategories();
       applyFilters();
     });
     $(".category-tree").addEventListener("click", event => {
