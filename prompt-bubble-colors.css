@@ -119,11 +119,39 @@
 }
 
 .editor-builder-panel .prompt-bubble-empty {
-  align-self: center;
-  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  min-height: 112px;
+  padding: 18px 12px;
+  border: 1px dashed rgba(190, 205, 198, .28);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .025);
+  color: var(--muted-2);
+  text-align: center;
+  cursor: text;
+  transition: border-color 150ms ease, background 150ms ease;
+}
+
+.editor-builder-panel .prompt-bubble-empty:hover {
+  border-color: rgba(190, 205, 198, .5);
+  background: rgba(255, 255, 255, .045);
+}
+
+.editor-builder-panel .prompt-bubble-empty-title {
+  color: #d5e3dc;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+.editor-builder-panel .prompt-bubble-empty-hint {
   color: var(--muted-2);
   font-size: 11px;
-  cursor: text;
+  line-height: 1.5;
 }
 
 /* Drag preview: the chip is temporarily moved directly under body. */
