@@ -804,10 +804,9 @@
         const transform=getComputedStyle(node).transform;
         let x=0,y=0;
         if(transform&&transform!=="none"){
-          const matrix=transform.match(/^matrix\\((.+)\\)$/);
-          const matrix3d=transform.match(/^matrix3d\\((.+)\\)$/);
-          if(matrix){const values=matrix[1].split(",").map(Number);x=values[4]||0;y=values[5]||0;}
-          else if(matrix3d){const values=matrix3d[1].split(",").map(Number);x=values[12]||0;y=values[13]||0;}
+          const values=transform.slice(transform.indexOf("(")+1,-1).split(",").map(Number);
+          if(transform.startsWith("matrix3d(")){x=values[12]||0;y=values[13]||0;}
+          else if(transform.startsWith("matrix(")){x=values[4]||0;y=values[5]||0;}
         }
         return {left:rect.left-x,right:rect.right-x,top:rect.top-y,bottom:rect.bottom-y,width:rect.width,height:rect.height};
       };
