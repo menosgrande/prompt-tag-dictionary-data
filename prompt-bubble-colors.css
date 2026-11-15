@@ -1,64 +1,110 @@
-/* Prompt tag colors and capsule shape. Keep the editor frame separate. */
+/* Prompt tag appearance: match the reference capsule design. */
 .editor-builder-panel .prompt-bubble-editor,
 .editor-builder-panel .prompt-bubble-editor:focus-within {
-  padding: 20px 22px;
-  border: 1px solid var(--line-soft);
-  border-radius: 24px;
-  background: rgba(12,17,23,.34);
+  padding: 14px;
+  border: 0;
+  border-radius: 18px;
+  background: #303030;
   box-shadow: none;
   outline: none;
 }
+
+/* Reserve roughly five rows even when fewer tags are selected. */
 .editor-builder-panel .prompt-bubbles {
   min-height: 206px;
+  align-items: flex-start;
+  align-content: flex-start;
+  column-gap: 12px;
+  row-gap: 12px;
 }
+
+/* Positive tags: soft lime-to-mint capsules. */
 .editor-builder-panel .prompt-bubble {
-  border: 1px solid #35c85a;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  max-width: 100%;
+  min-height: 48px;
+  padding: 11px 20px;
+  border: 0;
   border-radius: 999px;
-  padding: 8px 14px;
-  background: #4BE36A;
-  color: #000;
-  box-shadow: 0 2px 5px #0002;
-  transition: box-shadow 150ms ease;
+  background: linear-gradient(110deg, #efffc9 0%, #b9ffe0 100%);
+  color: #111b16;
+  box-shadow: none;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  transition: filter 150ms ease, box-shadow 150ms ease;
 }
-.editor-builder-panel .output-card:last-child .prompt-bubble {
-  border: 1px solid #F06B59;
-  border-radius: 999px;
-  padding: 8px 14px;
-  background: #FF806E;
-  color: #000;
-  box-shadow: 0 2px 5px #0002;
+
+.editor-builder-panel .prompt-bubble-label {
+  max-width: min(68vw, 520px);
+  color: inherit;
+  font: 16px/1.35 'DM Sans', 'Noto Sans JP', sans-serif;
+  letter-spacing: .01em;
+  cursor: text;
 }
-.editor-builder-panel .prompt-bubble:focus,
-.editor-builder-panel .prompt-bubble:focus-visible,
+
 .editor-builder-panel .prompt-bubble-label[contenteditable="true"]:focus {
   outline: none;
   box-shadow: none;
 }
+
+.editor-builder-panel .prompt-bubble:focus,
+.editor-builder-panel .prompt-bubble:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.editor-builder-panel .prompt-bubble:hover {
+  filter: brightness(1.025);
+}
+
 .editor-builder-panel .prompt-bubble.is-dragging {
   box-shadow: 0 8px 18px #0004;
 }
-.editor-builder-panel .prompt-bubble-action {
+
+.editor-builder-panel .output-card:last-child .prompt-bubble {
   border: 0;
-  background: #26312d;
-  color: #fff;
-}
-.editor-builder-panel .output-card:last-child .prompt-bubble-action {
-  background: #392b28;
-  color: #fff;
-}
-@media(max-width:600px) {
-  .editor-builder-panel .prompt-bubble-editor,
-  .editor-builder-panel .prompt-bubble-editor:focus-within {
-    padding: 16px;
-    border-radius: 20px;
-  }
-  .editor-builder-panel .prompt-bubbles {
-    min-height: 194px;
-  }
+  border-radius: 999px;
+  background: linear-gradient(110deg, #ffe0dc 0%, #ffc3cc 100%);
+  color: #261416;
+  box-shadow: none;
 }
 
-/* Keep prompt tags aligned to the top of the editor area. */
-.editor-builder-panel .prompt-bubbles {
-  align-items: flex-start;
-  align-content: flex-start;
+.editor-builder-panel .prompt-bubble-action {
+  border: 0;
+  background: rgba(35, 43, 39, .9);
+  color: #fff;
+}
+
+.editor-builder-panel .output-card:last-child .prompt-bubble-action {
+  background: rgba(57, 35, 39, .92);
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .editor-builder-panel .prompt-bubble-editor,
+  .editor-builder-panel .prompt-bubble-editor:focus-within {
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .editor-builder-panel .prompt-bubbles {
+    min-height: 194px;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+
+  .editor-builder-panel .prompt-bubble {
+    min-height: 44px;
+    max-width: 100%;
+    padding: 10px 16px;
+  }
+
+  .editor-builder-panel .prompt-bubble-label {
+    max-width: 68vw;
+    font-size: 15px;
+  }
 }
