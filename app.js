@@ -800,6 +800,9 @@
         window.removeEventListener("pointermove",onWindowPointerMove);
         window.removeEventListener("pointerup",onWindowPointerUp);
         window.removeEventListener("pointercancel",onWindowPointerCancel);
+        if(pointerDragging){
+          document.documentElement.classList.remove("prompt-bubble-dragging-active");
+        }
         if(pointerDragging&&dragState){
           suppressNextClick=true;
           const placeholder=dragState.placeholder;
@@ -829,6 +832,8 @@
         if(!pointerStart||event.pointerId!==pointerStart.id)return;
         if(!pointerDragging&&Math.hypot(event.clientX-pointerStart.x,event.clientY-pointerStart.y)>6){
           pointerDragging=true;
+          document.documentElement.classList.add("prompt-bubble-dragging-active");
+          window.getSelection?.()?.removeAllRanges();
           const rect=chip.getBoundingClientRect();
           const placeholder=document.createElement("div");
           placeholder.className="prompt-bubble-placeholder";
