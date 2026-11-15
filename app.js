@@ -858,7 +858,7 @@
       });
       root.append(chip);
     });
-    if(!tokens.length){const empty=document.createElement("span");empty.className="prompt-bubble-empty";empty.textContent="辞典からタグを選ぶか、この余白をクリックして入力";root.append(empty);}
+    if(!tokens.length){const empty=document.createElement("span");empty.className="prompt-bubble-empty";empty.innerHTML='<span class="prompt-bubble-empty-title">＋ タグを追加</span><span class="prompt-bubble-empty-hint">辞典から選択 · タップして直接入力</span>';root.append(empty);}
   }
   function updatePromptFromBubbles(target,tokens) {
     const key=target==="negative"?"promptNegative":"promptPositive";
