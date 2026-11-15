@@ -482,6 +482,16 @@
       else entry.hasEmptyMinor = true;
     });
     const majors = [...majorCounts.entries()].sort((a,b) => compareMajorCategories(a[0], b[0]));
+    const searching = state.queryTerms.length > 0;
+    const searchCounts = new Map();
+    const searchMinorCounts = new Map();
+    if (searching) state.all.forEach(row => {
+      if (!state.queryTerms.every(term => (row._searchText || "").includes(term))) return;
+      const major = row.major || "";
+      const minorKey = minorCategoryKey(major, row.minor);
+      searchCounts.set(major, (searchCounts.get(major) || 0) + 1);
+      searchMinorCounts.set(minorKey, (searchMinorCounts.get(minorKey) || 0) + 1);
+    });
     const categoryKeys = majors.flatMap(([major,entry]) => {
       const childNames = [...entry.minors.keys()];
       if (entry.hasEmptyMinor || childNames.length === 0) childNames.push("");
@@ -498,6 +508,11 @@
       const visibleChildren = childNames.filter(minor => !state.excludedMinorCategories.has(minorCategoryKey(major, minor))).length;
       const majorChecked = visibleChildren === childNames.length;
       const majorMixed = visibleChildren > 0 && visibleChildren < childNames.length;
+      const majorSearchCount = searchCounts.get(major) || 0;
+      const majorSearchClass = searching && majorSearchCount ? " is-search-match" : "";
+      const majorCountMarkup = searching
+        ? (majorSearchCount ? '<span class="count search-count" title="検索一致 ' + majorSearchCount.toLocaleString("ja-JP") + '件">' + majorSearchCount.toLocaleString("ja-JP") + '</span>' : "")
+        : '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span>';
       const minorRows = [...minors];
       if (entry.hasEmptyMinor || minorRows.length === 0) {
         const emptyMinorCount = state.all.filter(row => row.major === major && !row.minor).length;
@@ -506,12 +521,19 @@
       return '<div class="category-major"><div class="category-major-row">' +
         '<button type="button" class="category-collapse-toggle' + (state.expandedMajorCategories.has(major) ? ' is-expanded' : '') + '" data-category-toggle="' + escapeHTML(major) + '" aria-expanded="' + String(state.expandedMajorCategories.has(major)) + '" aria-label="' + escapeHTML(major) + 'の中分類を' + (state.expandedMajorCategories.has(major) ? '折り畳む' : '展開する') + '" title="' + (state.expandedMajorCategories.has(major) ? '折り畳む' : '展開する') + '">▸</button>' +
         '<label class="category-exclusion" title="この大分類の中分類をまとめて表示・非表示"><input type="checkbox" data-category-exclude-major="' + escapeHTML(major) + '"' + (majorChecked ? ' checked' : '') + (majorMixed ? ' data-indeterminate="true"' : '') + ' aria-label="' + escapeHTML(major) + 'の中分類をまとめて表示"></label>' +
-        '<button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button></div>' +
-        '<div class="category-minors"' + (state.expandedMajorCategories.has(major) ? '' : ' hidden') + '>' + minorRows.map(([minor,n]) => '<div class="category-minor-row">' +
+        '<button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + majorSearchClass + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + majorCountMarkup + '</button></div>' +
+        '<div class="category-minors"' + (state.expandedMajorCategories.has(major) ? '' : ' hidden') + '>' + minorRows.map(([minor,n]) => {
+          const minorSearchCount = searchMinorCounts.get(minorCategoryKey(major, minor)) || 0;
+          const minorSearchClass = searching && minorSearchCount ? ' is-search-match' : '';
+          const minorCountMarkup = searching
+            ? (minorSearchCount ? '<span class="count search-count" title="検索一致 ' + minorSearchCount.toLocaleString("ja-JP") + '件">' + minorSearchCount.toLocaleString("ja-JP") + '</span>' : '')
+            : '<span class="count">' + n.toLocaleString("ja-JP") + '</span>';
+          return '<div class="category-minor-row">' +
           '<label class="category-exclusion" title="この中分類だけ表示・非表示"><input type="checkbox" data-category-exclude-minor data-category-major="' + escapeHTML(major) + '" data-category-minor="' + escapeHTML(minor) + '"' + (!state.excludedMinorCategories.has(minorCategoryKey(major, minor)) ? ' checked' : '') + ' aria-label="' + escapeHTML(major + (minor ? " / " + minor : " / 中分類なし")) + 'を表示"></label>' +
           (minor
-            ? '<button class="category-minor' + (state.minor === minor && state.major === major ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button>'
-            : '<span class="category-minor category-minor-label">中分類なし<span class="count">' + n.toLocaleString("ja-JP") + '</span></span>') + '</div>').join("") + '</div></div>';
+            ? '<button class="category-minor' + (state.minor === minor && state.major === major ? ' active' : '') + minorSearchClass + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + minorCountMarkup + '</button>'
+            : '<span class="category-minor category-minor-label' + minorSearchClass + '">中分類なし' + minorCountMarkup + '</span>') + '</div>';
+        }).join("") + '</div></div>';
     };
     root.innerHTML = '<button class="category-major-button' + (state.favoritesOnly ? ' active' : '') + '" data-favorites="true">お気に入り <span class="count">' + favoriteCount.toLocaleString("ja-JP") + '</span></button>' +
       '<button class="category-major-button' + (!state.major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="">全タグ <span class="count">' + state.all.length.toLocaleString("ja-JP") + '</span></button>' +
@@ -519,7 +541,8 @@
     $$(".category-major-row [data-indeterminate]").forEach(input => { input.indeterminate = true; input.removeAttribute("data-indeterminate"); });
   }
   function matches(row) {
-    if (row.major && state.excludedMinorCategories.has(minorCategoryKey(row.major, row.minor))) return false;
+    // 検索中は非表示設定の分類も検索対象に含める。チェック状態自体は変更しない。
+    if (!state.queryTerms.length && row.major && state.excludedMinorCategories.has(minorCategoryKey(row.major, row.minor))) return false;
     if (state.major && row.major !== state.major) return false;
     if (state.minor && row.minor !== state.minor) return false;
     if (state.favoritesOnly && !state.favorites.has(keyOf(row))) return false;
@@ -1268,6 +1291,7 @@
     const applySearchInput = () => {
       state.query = search.value.trim();
       state.queryTerms = state.query.split(/\s+/).map(normalizeSearchText).filter(Boolean);
+      renderCategories();
       applyFilters();
       writeLocationState("replace");
     };
