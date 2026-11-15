@@ -56,3 +56,9 @@
     min-height: 194px;
   }
 }
+
+/* Keep prompt tags aligned to the top of the editor area. */
+.editor-builder-panel .prompt-bubbles {
+  align-items: flex-start;
+  align-content: flex-start;
+}
