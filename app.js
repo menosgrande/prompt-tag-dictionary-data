@@ -1401,8 +1401,15 @@
         prepareSearchIndex();
         const userData = migrateLegacyUserData();
         state.favorites = new Set(Array.isArray(userData.favorites) ? userData.favorites.filter(key => typeof key === "string") : []);
-        state.excludedMajorCategories = new Set(Array.isArray(userData.excludedMajorCategories) ? userData.excludedMajorCategories.filter(value => typeof value === "string") : []);
-        state.excludedMinorCategories = new Set(Array.isArray(userData.excludedMinorCategories) ? userData.excludedMinorCategories.filter(entry => Array.isArray(entry) && entry.length >= 2 && typeof entry[0] === "string" && typeof entry[1] === "string").map(([major, minor]) => minorCategoryKey(major, minor)) : []);
+        if (userData.categoryVisibilityVersion !== 2) {
+          // 旧仕様ではチェック済みが「除外」だったため、新仕様への切替時に旧除外状態を解除する。
+          state.excludedMajorCategories = new Set();
+          state.excludedMinorCategories = new Set();
+          writeUserDataV2({ excludedMajorCategories: [], excludedMinorCategories: [], categoryVisibilityVersion: 2 });
+        } else {
+          state.excludedMajorCategories = new Set(Array.isArray(userData.excludedMajorCategories) ? userData.excludedMajorCategories.filter(value => typeof value === "string") : []);
+          state.excludedMinorCategories = new Set(Array.isArray(userData.excludedMinorCategories) ? userData.excludedMinorCategories.filter(entry => Array.isArray(entry) && entry.length >= 2 && typeof entry[0] === "string" && typeof entry[1] === "string").map(([major, minor]) => minorCategoryKey(major, minor)) : []);
+        }
         state.expandedMajorCategories = new Set(Array.isArray(userData.expandedMajorCategories) ? userData.expandedMajorCategories.filter(value => typeof value === "string") : []);
         state.expressionLevels = new Map(Array.isArray(userData.expressionLevels) ? userData.expressionLevels.filter(entry => Array.isArray(entry) && typeof entry[0] === "string" && (entry[1] === null || [0,1,2,3,4].includes(entry[1])) ) : []);
         renderMigrationReport(userData);
