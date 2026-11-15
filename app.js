@@ -938,7 +938,8 @@
           chip.style.position="fixed";chip.style.left=rect.left+"px";chip.style.top=rect.top+"px";
           chip.style.width=rect.width+"px";chip.style.height=rect.height+"px";
           chip.style.margin="0";chip.style.pointerEvents="none";chip.style.zIndex="1000";
-          document.body.append(chip);\n          dragState.lastAnchor=placeholder.nextSibling;
+          document.body.append(chip);
+          dragState.lastAnchor=placeholder.nextSibling;
         }
         if(pointerDragging){event.preventDefault();updateDragTarget(event);}
       };
