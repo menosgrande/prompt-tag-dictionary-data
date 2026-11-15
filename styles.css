@@ -565,3 +565,15 @@ body{font-size:14px;line-height:1.65}
 /* Master category visibility control sits beside the category heading. */
 .panel-heading .category-master-toggle{display:flex;align-items:center;gap:6px;flex:0 0 auto;font-size:12px;white-space:nowrap;color:var(--muted)}
 .category-master-toggle input{width:15px;height:15px;margin:0;accent-color:var(--accent)}
+
+
+/* Hierarchical category visibility controls: expand, checkbox, then major label. */
+.category-major-row{display:flex;align-items:center;gap:6px}
+.category-major-row>.category-major-button{flex:1;min-width:0}
+.category-major-row>.category-collapse-toggle{order:0}
+.category-major-row>.category-exclusion{order:1;flex:0 0 18px}
+.category-major-row>.category-major-button{order:2}
+.category-major-row .category-exclusion input,.category-minor-row .category-exclusion input{width:15px;height:15px;margin:0;accent-color:var(--accent)}
+.category-major-row .category-exclusion,.category-minor-row .category-exclusion{display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.category-minor-row{display:flex;align-items:center;gap:5px}
+.category-minor-row>.category-minor{flex:1;min-width:0}
