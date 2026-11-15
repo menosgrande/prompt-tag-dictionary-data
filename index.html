@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#15191f">
   <meta name="description" content="画像生成タグを日本語・英語で検索し、分類から選んでプロンプトを組み立てるタグ辞典。">
   <title>画像生成タグ辞典</title>
-  <link rel="stylesheet" href="./styles.css?v=category-collapse-20261115">
+  <link rel="stylesheet" href="./styles.css?v=category-hierarchy-20261115">
   <link rel="stylesheet" href="./prompt-bubble-colors.css?v=add-capsule-fixed-20261115">
 </head>
 <body>
@@ -33,7 +33,7 @@
       <button class="category-mobile-toggle" type="button" aria-expanded="false" aria-controls="mobile-category-panel">分類から探す <span>タップして開閉</span></button>
       <section class="workspace">
         <aside class="panel categories-panel" id="mobile-category-panel">
-          <div class="panel-heading"><h2>分類から探す</h2><label class="category-master-toggle"><input id="category-visibility-all" type="checkbox" checked> すべて表示</label></div>
+          <div class="panel-heading"><h2>分類から探す</h2><label class="category-master-toggle"><input id="category-visibility-all" type="checkbox" checked> すべての分類</label></div>
           <div class="category-tree"><p class="empty-state">CSV読み込み後に分類を表示します。</p></div>
           <div class="category-footnote">分類名・件数はCSVの内容から自動生成されます。</div>
         </aside>
@@ -96,6 +96,6 @@
     <footer class="footer"><span>CSVを正本として表示</span></footer>
   </main>
   <script src="./csv.js?v=csv-parser-20261114"></script>
-  <script src="./app.js?v=category-visibility-20261115"></script>
+  <script src="./app.js?v=category-hierarchy-20261115"></script>
 </body>
 </html>
