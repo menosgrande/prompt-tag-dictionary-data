@@ -471,9 +471,16 @@
   function renderCategories() {
     const root = $(".category-tree");
     const majorCounts = new Map();
+    const searchMajorCounts = new Map();
+    const searchMinorCounts = new Map();
     let favoriteCount = 0;
     state.all.forEach(row => {
       if (state.favorites.has(keyOf(row))) favoriteCount++;
+      if (state.queryTerms.length && state.queryTerms.every(term => (row._searchText || "").includes(term)) && row.major) {
+        searchMajorCounts.set(row.major, (searchMajorCounts.get(row.major) || 0) + 1);
+        const key = minorCategoryKey(row.major, row.minor);
+        searchMinorCounts.set(key, (searchMinorCounts.get(key) || 0) + 1);
+      }
       if (!row.major) return;
       let entry = majorCounts.get(row.major);
       if (!entry) { entry = { count: 0, minors: new Map(), hasEmptyMinor: false }; majorCounts.set(row.major, entry); }
@@ -498,20 +505,26 @@
       const visibleChildren = childNames.filter(minor => !state.excludedMinorCategories.has(minorCategoryKey(major, minor))).length;
       const majorChecked = visibleChildren === childNames.length;
       const majorMixed = visibleChildren > 0 && visibleChildren < childNames.length;
+      const searchMajorCount = searchMajorCounts.get(major) || 0;
       const minorRows = [...minors];
       if (entry.hasEmptyMinor || minorRows.length === 0) {
         const emptyMinorCount = state.all.filter(row => row.major === major && !row.minor).length;
         minorRows.push(["", emptyMinorCount || entry.count]);
       }
+      const searchExpanded = state.queryTerms.length > 0 && searchMajorCount > 0;
+      const expanded = state.expandedMajorCategories.has(major) || searchExpanded;
       return '<div class="category-major"><div class="category-major-row">' +
-        '<button type="button" class="category-collapse-toggle' + (state.expandedMajorCategories.has(major) ? ' is-expanded' : '') + '" data-category-toggle="' + escapeHTML(major) + '" aria-expanded="' + String(state.expandedMajorCategories.has(major)) + '" aria-label="' + escapeHTML(major) + 'の中分類を' + (state.expandedMajorCategories.has(major) ? '折り畳む' : '展開する') + '" title="' + (state.expandedMajorCategories.has(major) ? '折り畳む' : '展開する') + '">▸</button>' +
+        '<button type="button" class="category-collapse-toggle' + (expanded ? ' is-expanded' : '') + '" data-category-toggle="' + escapeHTML(major) + '" aria-expanded="' + String(expanded) + '" aria-label="' + escapeHTML(major) + 'の中分類を' + (expanded ? '折り畳む' : '展開する') + '" title="' + (expanded ? '折り畳む' : '展開する') + '">▸</button>' +
         '<label class="category-exclusion" title="この大分類の中分類をまとめて表示・非表示"><input type="checkbox" data-category-exclude-major="' + escapeHTML(major) + '"' + (majorChecked ? ' checked' : '') + (majorMixed ? ' data-indeterminate="true"' : '') + ' aria-label="' + escapeHTML(major) + 'の中分類をまとめて表示"></label>' +
-        '<button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button></div>' +
-        '<div class="category-minors"' + (state.expandedMajorCategories.has(major) ? '' : ' hidden') + '>' + minorRows.map(([minor,n]) => '<div class="category-minor-row">' +
+        '<button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + (searchMajorCount ? ' has-search-results' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span>' + (searchMajorCount ? '<span class="search-match-count">検索 ' + searchMajorCount.toLocaleString("ja-JP") + '</span>' : '') + '</button></div>' +
+        '<div class="category-minors"' + (expanded ? '' : ' hidden') + '>' + minorRows.map(([minor,n]) => {
+          const searchMinorCount = searchMinorCounts.get(minorCategoryKey(major, minor)) || 0;
+          return '<div class="category-minor-row">' +
           '<label class="category-exclusion" title="この中分類だけ表示・非表示"><input type="checkbox" data-category-exclude-minor data-category-major="' + escapeHTML(major) + '" data-category-minor="' + escapeHTML(minor) + '"' + (!state.excludedMinorCategories.has(minorCategoryKey(major, minor)) ? ' checked' : '') + ' aria-label="' + escapeHTML(major + (minor ? " / " + minor : " / 中分類なし")) + 'を表示"></label>' +
           (minor
-            ? '<button class="category-minor' + (state.minor === minor && state.major === major ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button>'
-            : '<span class="category-minor category-minor-label">中分類なし<span class="count">' + n.toLocaleString("ja-JP") + '</span></span>') + '</div>').join("") + '</div></div>';
+            ? '<button class="category-minor' + (state.minor === minor && state.major === major ? ' active' : '') + (searchMinorCount ? ' has-search-results' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span>' + (searchMinorCount ? '<span class="search-match-count">検索 ' + searchMinorCount.toLocaleString("ja-JP") + '</span>' : '') + '</button>'
+            : '<span class="category-minor category-minor-label">' + '中分類なし<span class="count">' + n.toLocaleString("ja-JP") + '</span>' + (searchMinorCount ? '<span class="search-match-count">検索 ' + searchMinorCount.toLocaleString("ja-JP") + '</span>' : '') + '</span>') + '</div>';
+        }).join("") + '</div></div>';
     };
     root.innerHTML = '<button class="category-major-button' + (state.favoritesOnly ? ' active' : '') + '" data-favorites="true">お気に入り <span class="count">' + favoriteCount.toLocaleString("ja-JP") + '</span></button>' +
       '<button class="category-major-button' + (!state.major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="">全タグ <span class="count">' + state.all.length.toLocaleString("ja-JP") + '</span></button>' +
@@ -519,7 +532,8 @@
     $$(".category-major-row [data-indeterminate]").forEach(input => { input.indeterminate = true; input.removeAttribute("data-indeterminate"); });
   }
   function matches(row) {
-    if (row.major && state.excludedMinorCategories.has(minorCategoryKey(row.major, row.minor))) return false;
+    // 検索中は除外チェックを一時的に迂回し、検索一致タグを表示する。チェック状態自体は変更しない。
+    if (!state.queryTerms.length && row.major && state.excludedMinorCategories.has(minorCategoryKey(row.major, row.minor))) return false;
     if (state.major && row.major !== state.major) return false;
     if (state.minor && row.minor !== state.minor) return false;
     if (state.favoritesOnly && !state.favorites.has(keyOf(row))) return false;
@@ -714,6 +728,7 @@
     else if (state.sort === "favorites") state.filtered.sort((a,b) => direction * (Number(state.favorites.has(keyOf(b))) - Number(state.favorites.has(keyOf(a)))));
     // 元の順は読み込み時のindex順を維持する。
     state.page = 0;
+    renderCategories();
     renderRows();
     writeLocationState("replace");
   }
