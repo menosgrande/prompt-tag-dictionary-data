@@ -546,3 +546,16 @@ body{font-size:14px;line-height:1.65}
 /* Match positive and negative prompt controls to their bubble colors. */
 .editor-builder-panel .negative-output-actions .button-primary{background:#b85b64;border-color:#d17b83;color:#fff}
 .editor-builder-panel .negative-output-actions .button-primary:hover:not(:disabled){background:#a94e57;border-color:#c96d76}
+
+/* Keep category labels on one line after adding visibility checkboxes. */
+.category-major-button,
+.category-minor{
+  min-width:0;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.category-major-button .count,
+.category-minor .count{
+  flex:0 0 auto;
+}
