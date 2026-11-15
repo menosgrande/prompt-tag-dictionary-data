@@ -1,6 +1,12 @@
-/* Prompt tag appearance: match the reference capsule design. */
-.editor-builder-panel .prompt-bubble-editor,
-.editor-builder-panel .prompt-bubble-editor:focus-within {
+/* Prompt bubble editor
+   All capsule layout, appearance and drag-preview styles live here.
+*/
+
+/* Editor surface */
+.editor-builder-panel .prompt-bubble-editor {
+  display: grid;
+  gap: 10px;
+  min-height: 0;
   padding: 14px;
   border: 0;
   border-radius: 18px;
@@ -9,16 +15,21 @@
   outline: none;
 }
 
-/* Reserve roughly five rows even when fewer tags are selected. */
+.editor-builder-panel .prompt-bubble-editor[hidden] {
+  display: none;
+}
+
+/* Capsule layout */
 .editor-builder-panel .prompt-bubbles {
-  min-height: 206px;
+  display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   align-content: flex-start;
+  min-height: 206px;
   column-gap: 8px;
   row-gap: 8px;
 }
 
-/* Positive tags: soft lime-to-mint capsules. */
 .editor-builder-panel .prompt-bubble {
   display: inline-flex;
   align-items: center;
@@ -38,6 +49,22 @@
   transition: filter 150ms ease, box-shadow 150ms ease;
 }
 
+.editor-builder-panel .output-card:last-child .prompt-bubble {
+  border-color: #e6a5a8;
+  background: linear-gradient(110deg, #ffe0dc 0%, #ffc3cc 100%);
+  color: #261416;
+}
+
+.editor-builder-panel .prompt-bubble:hover {
+  filter: brightness(1.025);
+}
+
+.editor-builder-panel .prompt-bubble:focus,
+.editor-builder-panel .prompt-bubble:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
 .editor-builder-panel .prompt-bubble-label {
   max-width: min(68vw, 520px);
   color: inherit;
@@ -49,34 +76,64 @@
   cursor: text;
 }
 
+.editor-builder-panel .prompt-bubble-label[contenteditable="true"] {
+  min-width: 50px;
+  outline: none;
+}
+
 .editor-builder-panel .prompt-bubble-label[contenteditable="true"]:focus {
   outline: none;
   box-shadow: none;
 }
 
-.editor-builder-panel .prompt-bubble:focus,
-.editor-builder-panel .prompt-bubble:focus-visible {
-  outline: none;
-  box-shadow: none;
+.editor-builder-panel .prompt-bubble-action {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  display: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(35, 43, 39, .9);
+  color: #fff;
 }
 
-.editor-builder-panel .prompt-bubble:hover {
-  filter: brightness(1.025);
+.editor-builder-panel .output-card:last-child .prompt-bubble-action {
+  background: rgba(57, 35, 39, .92);
 }
 
-.editor-builder-panel .prompt-bubble.is-dragging {
-  box-shadow: 0 8px 18px #0004;
+.editor-builder-panel .prompt-bubble:hover .prompt-bubble-action,
+.editor-builder-panel .prompt-bubble:focus-within .prompt-bubble-action {
+  display: block;
 }
 
-/* The dragged chip is temporarily moved under body, outside the editor styles. */
+.editor-builder-panel .prompt-bubble-placeholder {
+  flex: 0 0 auto;
+  min-width: 42px;
+  border: 1px dashed var(--accent-strong);
+  border-radius: 999px;
+  background: rgba(120, 160, 145, .12);
+  transition: width 120ms ease, height 120ms ease;
+}
+
+.editor-builder-panel .prompt-bubble-empty {
+  align-self: center;
+  padding: 8px 10px;
+  color: var(--muted-2);
+  font-size: 11px;
+  cursor: text;
+}
+
+/* Drag preview: the chip is temporarily moved directly under body. */
 body > .prompt-bubble.is-dragging {
   display: inline-flex;
   flex-wrap: nowrap;
-  white-space: nowrap;
   align-items: center;
   gap: 5px;
   width: max-content;
-  max-width: min(100vw - 24px, 520px);
+  max-width: calc(100vw - 24px);
   min-height: 0;
   padding: 3px 9px;
   border: 1px solid #a8d8bd;
@@ -85,6 +142,7 @@ body > .prompt-bubble.is-dragging {
   color: #111b16;
   box-shadow: 0 8px 18px #0004;
   box-sizing: border-box;
+  white-space: nowrap;
 }
 
 body > .prompt-bubble.is-dragging.is-negative-dragging {
@@ -95,51 +153,24 @@ body > .prompt-bubble.is-dragging.is-negative-dragging {
 
 body > .prompt-bubble.is-dragging .prompt-bubble-label {
   flex: 0 0 auto;
-  white-space: nowrap;
-  overflow-wrap: normal;
   max-width: min(68vw, 520px);
+  overflow: hidden;
   color: inherit;
   font-family: inherit;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.45;
   letter-spacing: .01em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 body > .prompt-bubble.is-dragging .prompt-bubble-action {
   display: none !important;
-  border: 0;
-  background: rgba(35, 43, 39, .9);
-  color: #fff;
-}
-
-body > .prompt-bubble.is-dragging.is-negative-dragging .prompt-bubble-action {
-  background: rgba(57, 35, 39, .92);
-  color: #fff;
-}
-
-.editor-builder-panel .output-card:last-child .prompt-bubble {
-  border: 1px solid #e6a5a8;
-  border-radius: 999px;
-  background: linear-gradient(110deg, #ffe0dc 0%, #ffc3cc 100%);
-  color: #261416;
-  box-shadow: none;
-}
-
-.editor-builder-panel .prompt-bubble-action {
-  border: 0;
-  background: rgba(35, 43, 39, .9);
-  color: #fff;
-}
-
-.editor-builder-panel .output-card:last-child .prompt-bubble-action {
-  background: rgba(57, 35, 39, .92);
-  color: #fff;
 }
 
 @media (max-width: 600px) {
-  .editor-builder-panel .prompt-bubble-editor,
-  .editor-builder-panel .prompt-bubble-editor:focus-within {
+  .editor-builder-panel .prompt-bubble-editor {
     padding: 12px;
     border-radius: 16px;
   }
@@ -151,8 +182,6 @@ body > .prompt-bubble.is-dragging.is-negative-dragging .prompt-bubble-action {
   }
 
   .editor-builder-panel .prompt-bubble {
-    min-height: 0;
-    max-width: 100%;
     padding: 3px 8px;
   }
 
