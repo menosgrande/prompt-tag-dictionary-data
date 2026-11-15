@@ -484,11 +484,11 @@
     const renderMajor = ([major,entry]) => {
       const minors = [...entry.minors.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja"));
       return '<div class="category-major"><div class="category-major-row">' +
-        '<label class="category-exclusion" title="この大分類のタグを一覧から除外"><input type="checkbox" data-category-exclude-major="' + escapeHTML(major) + '"' + (state.excludedMajorCategories.has(major) ? ' checked' : '') + ' aria-label="' + escapeHTML(major) + 'のタグを一覧から除外"></label>' +
+        '<label class="category-exclusion" title="この大分類のタグを一覧に表示"><input type="checkbox" data-category-exclude-major="' + escapeHTML(major) + '"' + (!state.excludedMajorCategories.has(major) ? ' checked' : '') + ' aria-label="' + escapeHTML(major) + 'のタグを一覧に表示"></label>' +
         '<button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button>' +
         '<button type="button" class="category-collapse-toggle' + (state.expandedMajorCategories.has(major) ? ' is-expanded' : '') + '" data-category-toggle="' + escapeHTML(major) + '" aria-expanded="' + String(state.expandedMajorCategories.has(major)) + '" aria-label="' + escapeHTML(major) + 'の中分類を' + (state.expandedMajorCategories.has(major) ? '折り畳む' : '展開する') + '" title="' + (state.expandedMajorCategories.has(major) ? '折り畳む' : '展開する') + '">▸</button></div>' +
         '<div class="category-minors"' + (state.expandedMajorCategories.has(major) ? '' : ' hidden') + '>' + minors.map(([minor,n]) => '<div class="category-minor-row">' +
-          '<label class="category-exclusion" title="この中分類のタグを一覧から除外"><input type="checkbox" data-category-exclude-minor data-category-major="' + escapeHTML(major) + '" data-category-minor="' + escapeHTML(minor) + '"' + (state.excludedMinorCategories.has(minorCategoryKey(major, minor)) ? ' checked' : '') + ' aria-label="' + escapeHTML(major + " / " + minor) + 'のタグを一覧から除外"></label>' +
+          '<label class="category-exclusion" title="この中分類のタグを一覧に表示"><input type="checkbox" data-category-exclude-minor data-category-major="' + escapeHTML(major) + '" data-category-minor="' + escapeHTML(minor) + '"' + (!state.excludedMinorCategories.has(minorCategoryKey(major, minor)) ? ' checked' : '') + ' aria-label="' + escapeHTML(major + " / " + minor) + 'のタグを一覧から除外"></label>' +
           '<button class="category-minor' + (state.minor === minor && state.major === major ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button></div>').join("") + '</div></div>';
     };
     root.innerHTML = '<button class="category-major-button' + (state.favoritesOnly ? ' active' : '') + '" data-favorites="true">お気に入り <span class="count">' + favoriteCount.toLocaleString("ja-JP") + '</span></button>' +
@@ -1210,22 +1210,22 @@
       if (majorCheckbox) {
         const major = majorCheckbox.dataset.categoryExcludeMajor;
         if (majorCheckbox.checked) {
-          state.excludedMajorCategories.add(major);
-          // 除外する分類が現在の表示条件なら、衝突する選択条件を解除する。
-          if (state.major === major) { state.major = ""; state.minor = ""; }
-        } else {
           state.excludedMajorCategories.delete(major);
+        } else {
+          state.excludedMajorCategories.add(major);
+          // 非表示にする分類が現在の表示条件なら、衝突する選択条件を解除する。
+          if (state.major === major) { state.major = ""; state.minor = ""; }
         }
       } else {
         const major = minorCheckbox.dataset.categoryMajor;
         const minor = minorCheckbox.dataset.categoryMinor;
         const key = minorCategoryKey(major, minor);
         if (minorCheckbox.checked) {
-          state.excludedMinorCategories.add(key);
-          // 選択中の中分類を除外した場合は、大分類表示に戻して残りを表示する。
-          if (state.major === major && state.minor === minor) state.minor = "";
-        } else {
           state.excludedMinorCategories.delete(key);
+        } else {
+          state.excludedMinorCategories.add(key);
+          // 非表示にする中分類が現在の表示条件なら、大分類表示に戻して残りを表示する。
+          if (state.major === major && state.minor === minor) state.minor = "";
         }
       }
       writeUserDataV2({
