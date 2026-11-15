@@ -26,7 +26,7 @@
   width: max-content;
   max-width: 100%;
   min-height: 0;
-  padding: 0 10px;
+  padding: 2px 9px;
   border: 0;
   border-radius: 999px;
   background: linear-gradient(110deg, #efffc9 0%, #b9ffe0 100%);
@@ -41,7 +41,10 @@
 .editor-builder-panel .prompt-bubble-label {
   max-width: min(68vw, 520px);
   color: inherit;
-  font: 10px/0 'DM Sans', 'Noto Sans JP', sans-serif;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
   letter-spacing: .01em;
   cursor: text;
 }
@@ -100,12 +103,12 @@
   .editor-builder-panel .prompt-bubble {
     min-height: 0;
     max-width: 100%;
-    padding: 0 8px;
+    padding: 2px 8px;
   }
 
   .editor-builder-panel .prompt-bubble-label {
     max-width: 68vw;
-    font-size: 10px;
-    line-height: 0;
+    font-size: 12px;
+    line-height: 1.45;
   }
 }
