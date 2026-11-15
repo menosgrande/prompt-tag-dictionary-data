@@ -489,6 +489,16 @@ body{font-size:14px;line-height:1.65}
 .category-show-all{justify-self:start;margin:5px 6px;padding:4px 0;border:0;background:none;color:var(--accent-strong);font-size:10px;cursor:pointer}
 
 
+/* The tag view and free-text view share one editor frame. */
+.editor-builder-panel .prompt-bubble-editor>textarea{
+  display:block;vertical-align:top;width:100%;min-height:206px;resize:vertical;
+  padding:4px;border:0;border-radius:8px;background:transparent;
+  color:var(--text);font:12px/1.7 var(--mono);white-space:pre-wrap;overflow-wrap:anywhere;
+}
+.editor-builder-panel .prompt-bubble-editor>textarea[hidden]{display:none}
+.editor-builder-panel .prompt-bubbles[hidden]{display:none}
+.editor-builder-panel .prompt-bubble-editor>textarea:focus{outline:none}
+
 /* Editable prompt textareas replace the selected-tag list and output settings. */
 .editor-builder-panel .output-card>textarea{
   display:block;vertical-align:top;text-align:left;width:100%;min-height:220px;resize:vertical;
