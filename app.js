@@ -481,6 +481,11 @@
       if (row.minor) entry.minors.set(row.minor, (entry.minors.get(row.minor) || 0) + 1);
     });
     const majors = [...majorCounts.entries()].sort((a,b) => compareMajorCategories(a[0], b[0]));
+    const masterToggle = $("#category-visibility-all");
+    const totalCategoryChecks = majors.length + [...majorCounts.values()].reduce((sum, entry) => sum + entry.minors.size, 0);
+    const excludedCategoryChecks = state.excludedMajorCategories.size + state.excludedMinorCategories.size;
+    masterToggle.checked = excludedCategoryChecks === 0;
+    masterToggle.indeterminate = excludedCategoryChecks > 0 && excludedCategoryChecks < totalCategoryChecks;
     const renderMajor = ([major,entry]) => {
       const minors = [...entry.minors.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja"));
       return '<div class="category-major"><div class="category-major-row">' +
@@ -1203,22 +1208,18 @@
     categoryToggle.addEventListener("click", () => {
       setCategoryPanelOpen(categoryToggle.getAttribute("aria-expanded") !== "true");
     });
-    $(".category-panel-bulk").addEventListener("click", event => {
-      const button = event.target.closest("[data-category-bulk]");
-      if (!button) return;
-      const mode = button.dataset.categoryBulk;
-      if (mode === "on") {
+    $("#category-visibility-all").addEventListener("change", event => {
+      if (event.target.checked) {
         state.excludedMajorCategories.clear();
         state.excludedMinorCategories.clear();
-      } else if (mode === "off") {
-        const majorNames = new Set(state.all.map(row => row.major || ""));
-        state.excludedMajorCategories = majorNames;
+      } else {
+        state.excludedMajorCategories = new Set(state.all.map(row => row.major || ""));
         state.excludedMinorCategories = new Set(
           state.all.filter(row => row.minor).map(row => minorCategoryKey(row.major || "", row.minor))
         );
         state.major = "";
         state.minor = "";
-      } else return;
+      }
       writeUserDataV2({
         excludedMajorCategories: [...state.excludedMajorCategories],
         excludedMinorCategories: [...state.excludedMinorCategories].map(key => JSON.parse(key))
