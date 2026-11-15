@@ -482,10 +482,13 @@
     });
     const majors = [...majorCounts.entries()].sort((a,b) => compareMajorCategories(a[0], b[0]));
     const masterToggle = $("#category-visibility-all");
-    const totalCategoryChecks = majors.length + [...majorCounts.values()].reduce((sum, entry) => sum + entry.minors.size, 0);
-    const excludedCategoryChecks = state.excludedMajorCategories.size + state.excludedMinorCategories.size;
-    masterToggle.checked = excludedCategoryChecks === 0;
-    masterToggle.indeterminate = excludedCategoryChecks > 0 && excludedCategoryChecks < totalCategoryChecks;
+    const rowIsVisible = row =>
+      !state.excludedMajorCategories.has(row.major || "") &&
+      !state.excludedMinorCategories.has(minorCategoryKey(row.major || "", row.minor));
+    const anyVisible = state.all.some(rowIsVisible);
+    const allVisible = state.all.every(rowIsVisible);
+    masterToggle.checked = allVisible;
+    masterToggle.indeterminate = anyVisible && !allVisible;
     const renderMajor = ([major,entry]) => {
       const minors = [...entry.minors.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja"));
       return '<div class="category-major"><div class="category-major-row">' +
