@@ -516,7 +516,7 @@
     root.innerHTML = '<button class="category-major-button' + (state.favoritesOnly ? ' active' : '') + '" data-favorites="true">お気に入り <span class="count">' + favoriteCount.toLocaleString("ja-JP") + '</span></button>' +
       '<button class="category-major-button' + (!state.major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="">全タグ <span class="count">' + state.all.length.toLocaleString("ja-JP") + '</span></button>' +
       majors.map(renderMajor).join("");
-    $(".category-major-row [data-indeterminate]").forEach(input => { input.indeterminate = true; input.removeAttribute("data-indeterminate"); });
+    $$(".category-major-row [data-indeterminate]").forEach(input => { input.indeterminate = true; input.removeAttribute("data-indeterminate"); });
   }
   function matches(row) {
     if (row.major && state.excludedMinorCategories.has(minorCategoryKey(row.major, row.minor))) return false;
