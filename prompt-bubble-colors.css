@@ -118,40 +118,40 @@
   transition: width 120ms ease, height 120ms ease;
 }
 
-.editor-builder-panel .prompt-bubble-empty {
-  display: flex;
-  flex-direction: column;
+.editor-builder-panel .prompt-bubble-add {
+  display: inline-flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  width: 100%;
-  min-height: 112px;
-  padding: 18px 12px;
-  border: 1px dashed rgba(190, 205, 198, .28);
-  border-radius: 14px;
+  min-height: 30px;
+  padding: 5px 12px;
+  border: 1px dashed rgba(190, 205, 198, .42);
+  border-radius: 999px;
   background: rgba(255, 255, 255, .025);
-  color: var(--muted-2);
-  text-align: center;
-  cursor: text;
+  color: #d5e3dc;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.3;
+  cursor: pointer;
   transition: border-color 150ms ease, background 150ms ease;
 }
 
-.editor-builder-panel .prompt-bubble-empty:hover {
-  border-color: rgba(190, 205, 198, .5);
-  background: rgba(255, 255, 255, .045);
+.editor-builder-panel .prompt-bubble-add:hover,
+.editor-builder-panel .prompt-bubble-add:focus-visible {
+  border-color: rgba(190, 205, 198, .72);
+  background: rgba(255, 255, 255, .065);
+  outline: none;
 }
 
-.editor-builder-panel .prompt-bubble-empty-title {
-  color: #d5e3dc;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: .02em;
+.editor-builder-panel .output-card:last-child .prompt-bubble-add {
+  border-color: rgba(230, 165, 168, .48);
+  color: #f0c6c9;
 }
 
-.editor-builder-panel .prompt-bubble-empty-hint {
-  color: var(--muted-2);
-  font-size: 11px;
-  line-height: 1.5;
+.editor-builder-panel .output-card:last-child .prompt-bubble-add:hover,
+.editor-builder-panel .output-card:last-child .prompt-bubble-add:focus-visible {
+  border-color: rgba(230, 165, 168, .78);
+  background: rgba(230, 165, 168, .08);
 }
 
 /* Drag preview: the chip is temporarily moved directly under body. */
