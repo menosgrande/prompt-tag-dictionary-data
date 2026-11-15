@@ -581,3 +581,9 @@ body{font-size:14px;line-height:1.65}
 
 /* Keep prompt bubble labels consistent with the editor's 12px text size. */
 .prompt-bubble-label{font-size:12px}
+
+
+/* Temporary search-result hints in the category tree; checkbox state remains user-controlled. */
+.search-match-count{display:inline-flex;flex:0 0 auto;align-items:center;margin-left:5px;padding:1px 5px;border:1px solid rgba(120,170,150,.42);border-radius:9px;background:rgba(120,170,150,.12);color:var(--accent-strong);font-size:9px;font-weight:700;line-height:1.45;white-space:nowrap}
+.category-major-button.has-search-results,.category-minor.has-search-results{color:var(--accent-strong)}
+.category-major-button.has-search-results{background:rgba(120,170,150,.06)}
