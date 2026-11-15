@@ -1203,6 +1203,29 @@
     categoryToggle.addEventListener("click", () => {
       setCategoryPanelOpen(categoryToggle.getAttribute("aria-expanded") !== "true");
     });
+    $(".category-panel-bulk").addEventListener("click", event => {
+      const button = event.target.closest("[data-category-bulk]");
+      if (!button) return;
+      const mode = button.dataset.categoryBulk;
+      if (mode === "on") {
+        state.excludedMajorCategories.clear();
+        state.excludedMinorCategories.clear();
+      } else if (mode === "off") {
+        const majorNames = new Set(state.all.map(row => row.major || ""));
+        state.excludedMajorCategories = majorNames;
+        state.excludedMinorCategories = new Set(
+          state.all.filter(row => row.minor).map(row => minorCategoryKey(row.major || "", row.minor))
+        );
+        state.major = "";
+        state.minor = "";
+      } else return;
+      writeUserDataV2({
+        excludedMajorCategories: [...state.excludedMajorCategories],
+        excludedMinorCategories: [...state.excludedMinorCategories].map(key => JSON.parse(key))
+      });
+      renderCategories();
+      applyFilters();
+    });
     $(".category-tree").addEventListener("change", event => {
       const majorCheckbox = event.target.closest("[data-category-exclude-major]");
       const minorCheckbox = event.target.closest("[data-category-exclude-minor]");
