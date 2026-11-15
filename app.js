@@ -799,6 +799,17 @@
           }
         });
       };
+      const layoutRect=node=>{
+        const rect=node.getBoundingClientRect();
+        const transform=getComputedStyle(node).transform;
+        let x=0,y=0;
+        if(transform&&transform!=="none"){
+          const values=transform.slice(transform.indexOf("(")+1,-1).split(",").map(Number);
+          if(transform.startsWith("matrix3d(")){x=values[12]||0;y=values[13]||0;}
+          else if(transform.startsWith("matrix(")){x=values[4]||0;y=values[5]||0;}
+        }
+        return {left:rect.left-x,right:rect.right-x,top:rect.top-y,bottom:rect.bottom-y,width:rect.width,height:rect.height};
+      };
       const updateDragTarget=event=>{
         if(!dragState)return;
         chip.style.left=(event.clientX-dragState.grabX)+"px";
@@ -810,18 +821,69 @@
           destination=editor&&editor.querySelector(".prompt-bubbles");
         }
         if(!destination||!["positive-bubbles","negative-bubbles"].includes(destination.id))return;
-        const other=hit&&hit.closest(".prompt-bubble");
-        if(other&&other!==chip&&other.parentElement===destination){
-          const rect=other.getBoundingClientRect();
-          const after=event.clientY>rect.top+rect.height/2||
-            (Math.abs(event.clientY-(rect.top+rect.height/2))<rect.height/3&&event.clientX>rect.left+rect.width/2);
-          const beforeNode=after?other.nextElementSibling:other;
-          if(beforeNode!==dragState.placeholder&&beforeNode!==dragState.placeholder.nextSibling){
-            moveDragPlaceholder(destination,beforeNode);
-          }
-        }else if(destination!==dragState.placeholder.parentElement||!other){
+
+        const candidates=[...destination.children].filter(node=>
+          node!==dragState.placeholder&&node.classList.contains("prompt-bubble"));
+        if(!candidates.length){
           moveDragPlaceholder(destination,null);
+          dragState.lastAnchor=null;
+          dragState.lastRowAnchor=null;
+          return;
         }
+
+        const measured=candidates.map(node=>({node,rect:layoutRect(node)}));
+        measured.sort((a,b)=>(a.rect.top+a.rect.bottom)-(b.rect.top+b.rect.bottom));
+        const rows=[];
+        measured.forEach(entry=>{
+          let row=rows.find(candidate=>entry.rect.top<=candidate.bottom+3&&entry.rect.bottom>=candidate.top-3);
+          if(!row){row={top:entry.rect.top,bottom:entry.rect.bottom,entries:[]};rows.push(row);}
+          row.top=Math.min(row.top,entry.rect.top);
+          row.bottom=Math.max(row.bottom,entry.rect.bottom);
+          row.entries.push(entry);
+        });
+        rows.forEach(row=>row.entries.sort((a,b)=>a.rect.left-b.rect.left));
+
+        let nearestRow=rows[0],nearestDistance=Infinity;
+        rows.forEach(row=>{
+          const distance=Math.abs(event.clientY-(row.top+row.bottom)/2);
+          if(distance<nearestDistance){nearestDistance=distance;nearestRow=row;}
+        });
+        const previousRow=dragState.lastRowAnchor
+          ?rows.find(row=>row.entries.some(entry=>entry.node===dragState.lastRowAnchor))
+          :null;
+        let targetRow=nearestRow;
+        if(previousRow){
+          const previousDistance=Math.abs(event.clientY-(previousRow.top+previousRow.bottom)/2);
+          if(previousDistance<=nearestDistance+12)targetRow=previousRow;
+        }
+
+        const entries=targetRow.entries;
+        const rowIndex=rows.indexOf(targetRow);
+        const afterRowAnchor=rows[rowIndex+1]?.entries[0]?.node||null;
+        let anchor=null,passedLastInRow=true,retainedAnchor=false;
+        for(let index=0;index<entries.length;index++){
+          const entry=entries[index];
+          const centerX=entry.rect.left+entry.rect.width/2;
+          const nextAnchor=entries[index+1]?.node||afterRowAnchor;
+          if(Math.abs(event.clientX-centerX)<8&&
+             (dragState.lastAnchor===entry.node||dragState.lastAnchor===nextAnchor)){
+            anchor=dragState.lastAnchor;
+            retainedAnchor=true;
+            break;
+          }
+          if(event.clientX<centerX){anchor=entry.node;passedLastInRow=false;break;}
+        }
+        if(!retainedAnchor&&passedLastInRow)anchor=afterRowAnchor;
+
+        if(dragState.placeholder.parentElement===destination&&
+           dragState.placeholder.nextSibling===anchor){
+          dragState.lastAnchor=anchor;
+          dragState.lastRowAnchor=entries[0].node;
+          return;
+        }
+        moveDragPlaceholder(destination,anchor);
+        dragState.lastAnchor=anchor;
+        dragState.lastRowAnchor=entries[0].node;
       };
       const finishPointerDrag=(event,cancelled=false)=>{
         if(!pointerStart||event.pointerId!==pointerStart.id)return;
@@ -876,6 +938,7 @@
           chip.style.width=rect.width+"px";chip.style.height=rect.height+"px";
           chip.style.margin="0";chip.style.pointerEvents="none";chip.style.zIndex="1000";
           document.body.append(chip);
+          dragState.lastAnchor=placeholder.nextSibling;
         }
         if(pointerDragging){event.preventDefault();updateDragTarget(event);}
       };
