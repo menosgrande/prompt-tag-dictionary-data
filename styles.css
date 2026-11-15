@@ -512,6 +512,7 @@ body{font-size:14px;line-height:1.65}
 .category-major-row>.category-major-button{flex:1;min-width:0}
 .category-exclusion{display:inline-flex;flex:0 0 18px;align-items:center;justify-content:center;cursor:pointer}
 .category-exclusion input{width:15px;height:15px;margin:0;accent-color:var(--accent)}
+.category-minor-row{display:flex;align-items:center;gap:5px}.category-minor-row>.category-minor{flex:1;min-width:0}
 
 
 
