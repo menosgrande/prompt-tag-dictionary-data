@@ -746,7 +746,7 @@
         if(suppressNextClick){event.preventDefault();event.stopImmediatePropagation();suppressNextClick=false;}
       },true);
       const clearDragStyles=()=>{
-        chip.classList.remove("is-dragging");
+        chip.classList.remove("is-dragging","is-negative-dragging");
         chip.style.position="";chip.style.left="";chip.style.top="";
         chip.style.width="";chip.style.height="";chip.style.margin="";
         chip.style.pointerEvents="";chip.style.zIndex="";chip.style.transform="";
@@ -838,6 +838,7 @@
             grabX:event.clientX-rect.left,grabY:event.clientY-rect.top};
           root.insertBefore(placeholder,chip);
           chip.classList.add("is-dragging");
+          chip.classList.toggle("is-negative-dragging",root.id==="negative-bubbles");
           chip.style.position="fixed";chip.style.left=rect.left+"px";chip.style.top=rect.top+"px";
           chip.style.width=rect.width+"px";chip.style.height=rect.height+"px";
           chip.style.margin="0";chip.style.pointerEvents="none";chip.style.zIndex="1000";
