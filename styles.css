@@ -233,7 +233,8 @@ body{font-size:14px;line-height:1.65}
 
 
 
-.search-row{grid-template-columns:minmax(220px,1fr) auto 34px;align-items:center}
+/* Keep the search controls compact on desktop instead of stretching across the full panel. */
+.search-row{grid-template-columns:minmax(0,460px) auto 34px;align-items:center}
 .search-row .searchbox{min-width:0}
 .search-row .favorite-filter{padding:0 8px}
 @media(max-width:760px){
