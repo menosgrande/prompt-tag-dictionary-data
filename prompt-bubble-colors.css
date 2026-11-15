@@ -41,7 +41,7 @@
 .editor-builder-panel .prompt-bubble-label {
   max-width: min(68vw, 520px);
   color: inherit;
-  font: 10px/1 'DM Sans', 'Noto Sans JP', sans-serif;
+  font: 10px/0 'DM Sans', 'Noto Sans JP', sans-serif;
   letter-spacing: .01em;
   cursor: text;
 }
@@ -106,6 +106,6 @@
   .editor-builder-panel .prompt-bubble-label {
     max-width: 68vw;
     font-size: 10px;
-    line-height: 1;
+    line-height: 0;
   }
 }
