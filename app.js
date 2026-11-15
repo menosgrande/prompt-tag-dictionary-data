@@ -481,31 +481,36 @@
       if (row.minor) entry.minors.set(row.minor, (entry.minors.get(row.minor) || 0) + 1);
     });
     const majors = [...majorCounts.entries()].sort((a,b) => compareMajorCategories(a[0], b[0]));
+    const categoryKeys = majors.flatMap(([major,entry]) => {
+      const childNames = [...entry.minors.keys()];
+      return (childNames.length ? childNames : [""]).map(minor => minorCategoryKey(major, minor));
+    });
+    const visibleCategoryCount = categoryKeys.filter(key => !state.excludedMinorCategories.has(key)).length;
     const masterToggle = $("#category-visibility-all");
-    const rowIsVisible = row =>
-      !state.excludedMajorCategories.has(row.major || "") &&
-      !state.excludedMinorCategories.has(minorCategoryKey(row.major || "", row.minor));
-    const anyVisible = state.all.some(rowIsVisible);
-    const allVisible = state.all.every(rowIsVisible);
-    masterToggle.checked = allVisible;
-    masterToggle.indeterminate = anyVisible && !allVisible;
+    masterToggle.checked = categoryKeys.length > 0 && visibleCategoryCount === categoryKeys.length;
+    masterToggle.indeterminate = visibleCategoryCount > 0 && visibleCategoryCount < categoryKeys.length;
     const renderMajor = ([major,entry]) => {
       const minors = [...entry.minors.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja"));
+      const childNames = minors.length ? minors.map(([minor]) => minor) : [""];
+      const visibleChildren = childNames.filter(minor => !state.excludedMinorCategories.has(minorCategoryKey(major, minor))).length;
+      const majorChecked = visibleChildren === childNames.length;
+      const majorMixed = visibleChildren > 0 && visibleChildren < childNames.length;
+      const minorRows = minors.length ? minors : [["", entry.count]];
       return '<div class="category-major"><div class="category-major-row">' +
-        '<label class="category-exclusion" title="この大分類のタグを一覧に表示"><input type="checkbox" data-category-exclude-major="' + escapeHTML(major) + '"' + (!state.excludedMajorCategories.has(major) ? ' checked' : '') + ' aria-label="' + escapeHTML(major) + 'のタグを一覧に表示"></label>' +
-        '<button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button>' +
-        '<button type="button" class="category-collapse-toggle' + (state.expandedMajorCategories.has(major) ? ' is-expanded' : '') + '" data-category-toggle="' + escapeHTML(major) + '" aria-expanded="' + String(state.expandedMajorCategories.has(major)) + '" aria-label="' + escapeHTML(major) + 'の中分類を' + (state.expandedMajorCategories.has(major) ? '折り畳む' : '展開する') + '" title="' + (state.expandedMajorCategories.has(major) ? '折り畳む' : '展開する') + '">▸</button></div>' +
-        '<div class="category-minors"' + (state.expandedMajorCategories.has(major) ? '' : ' hidden') + '>' + minors.map(([minor,n]) => '<div class="category-minor-row">' +
-          '<label class="category-exclusion" title="この中分類のタグを一覧に表示"><input type="checkbox" data-category-exclude-minor data-category-major="' + escapeHTML(major) + '" data-category-minor="' + escapeHTML(minor) + '"' + (!state.excludedMinorCategories.has(minorCategoryKey(major, minor)) ? ' checked' : '') + ' aria-label="' + escapeHTML(major + " / " + minor) + 'のタグを一覧から除外"></label>' +
-          '<button class="category-minor' + (state.minor === minor && state.major === major ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button></div>').join("") + '</div></div>';
+        '<button type="button" class="category-collapse-toggle' + (state.expandedMajorCategories.has(major) ? ' is-expanded' : '') + '" data-category-toggle="' + escapeHTML(major) + '" aria-expanded="' + String(state.expandedMajorCategories.has(major)) + '" aria-label="' + escapeHTML(major) + 'の中分類を' + (state.expandedMajorCategories.has(major) ? '折り畳む' : '展開する') + '" title="' + (state.expandedMajorCategories.has(major) ? '折り畳む' : '展開する') + '">▸</button>' +
+        '<label class="category-exclusion" title="この大分類の中分類をまとめて表示・非表示"><input type="checkbox" data-category-exclude-major="' + escapeHTML(major) + '"' + (majorChecked ? ' checked' : '') + (majorMixed ? ' data-indeterminate="true"' : '') + ' aria-label="' + escapeHTML(major) + 'の中分類をまとめて表示"></label>' +
+        '<button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button></div>' +
+        '<div class="category-minors"' + (state.expandedMajorCategories.has(major) ? '' : ' hidden') + '>' + minorRows.map(([minor,n]) => '<div class="category-minor-row">' +
+          '<label class="category-exclusion" title="この中分類だけ表示・非表示"><input type="checkbox" data-category-exclude-minor data-category-major="' + escapeHTML(major) + '" data-category-minor="' + escapeHTML(minor) + '"' + (!state.excludedMinorCategories.has(minorCategoryKey(major, minor)) ? ' checked' : '') + ' aria-label="' + escapeHTML(major + (minor ? " / " + minor : " / 中分類なし")) + 'を表示"></label>' +
+          '<button class="category-minor' + (state.minor === minor && state.major === major ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor || "中分類なし") + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button></div>').join("") + '</div></div>';
     };
     root.innerHTML = '<button class="category-major-button' + (state.favoritesOnly ? ' active' : '') + '" data-favorites="true">お気に入り <span class="count">' + favoriteCount.toLocaleString("ja-JP") + '</span></button>' +
-      '<button class="category-major-button' + (!state.major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="">すべての分類 <span class="count">' + state.all.length.toLocaleString("ja-JP") + '</span></button>' +
+      '<button class="category-major-button' + (!state.major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="">全タグ <span class="count">' + state.all.length.toLocaleString("ja-JP") + '</span></button>' +
       majors.map(renderMajor).join("");
+    $(".category-major-row [data-indeterminate]").forEach(input => { input.indeterminate = true; input.removeAttribute("data-indeterminate"); });
   }
   function matches(row) {
-    if (state.excludedMajorCategories.has(row.major || "")) return false;
-    if (state.excludedMinorCategories.has(minorCategoryKey(row.major, row.minor))) return false;
+    if (row.major && state.excludedMinorCategories.has(minorCategoryKey(row.major, row.minor))) return false;
     if (state.major && row.major !== state.major) return false;
     if (state.minor && row.minor !== state.minor) return false;
     if (state.favoritesOnly && !state.favorites.has(keyOf(row))) return false;
@@ -1212,20 +1217,19 @@
       setCategoryPanelOpen(categoryToggle.getAttribute("aria-expanded") !== "true");
     });
     $("#category-visibility-all").addEventListener("change", event => {
+      const childKeys = state.all.filter(row => row.major).map(row => minorCategoryKey(row.major, row.minor));
       if (event.target.checked) {
-        state.excludedMajorCategories.clear();
         state.excludedMinorCategories.clear();
       } else {
-        state.excludedMajorCategories = new Set(state.all.map(row => row.major || ""));
-        state.excludedMinorCategories = new Set(
-          state.all.filter(row => row.minor).map(row => minorCategoryKey(row.major || "", row.minor))
-        );
+        state.excludedMinorCategories = new Set(childKeys);
         state.major = "";
         state.minor = "";
       }
+      state.excludedMajorCategories.clear();
       writeUserDataV2({
-        excludedMajorCategories: [...state.excludedMajorCategories],
-        excludedMinorCategories: [...state.excludedMinorCategories].map(key => JSON.parse(key))
+        excludedMajorCategories: [],
+        excludedMinorCategories: [...state.excludedMinorCategories].map(key => JSON.parse(key)),
+        categoryVisibilityVersion: 3
       });
       renderCategories();
       applyFilters();
@@ -1236,28 +1240,31 @@
       if (!majorCheckbox && !minorCheckbox) return;
       if (majorCheckbox) {
         const major = majorCheckbox.dataset.categoryExcludeMajor;
-        if (majorCheckbox.checked) {
-          state.excludedMajorCategories.delete(major);
-        } else {
-          state.excludedMajorCategories.add(major);
-          // 非表示にする分類が現在の表示条件なら、衝突する選択条件を解除する。
-          if (state.major === major) { state.major = ""; state.minor = ""; }
-        }
+        const childKeys = [...new Set(state.all.filter(row => row.major === major)
+          .map(row => minorCategoryKey(major, row.minor)))];
+        childKeys.forEach(key => {
+          if (majorCheckbox.checked) state.excludedMinorCategories.delete(key);
+          else state.excludedMinorCategories.add(key);
+        });
+        if (!majorCheckbox.checked && state.major === major) { state.major = ""; state.minor = ""; }
       } else {
         const major = minorCheckbox.dataset.categoryMajor;
         const minor = minorCheckbox.dataset.categoryMinor;
         const key = minorCategoryKey(major, minor);
-        if (minorCheckbox.checked) {
-          state.excludedMinorCategories.delete(key);
-        } else {
+        if (minorCheckbox.checked) state.excludedMinorCategories.delete(key);
+        else {
           state.excludedMinorCategories.add(key);
-          // 非表示にする中分類が現在の表示条件なら、大分類表示に戻して残りを表示する。
           if (state.major === major && state.minor === minor) state.minor = "";
         }
+        const remainingVisible = state.all.some(row => row.major === major &&
+          !state.excludedMinorCategories.has(minorCategoryKey(major, row.minor)));
+        if (!remainingVisible && state.major === major) { state.major = ""; state.minor = ""; }
       }
+      state.excludedMajorCategories.clear();
       writeUserDataV2({
-        excludedMajorCategories: [...state.excludedMajorCategories],
-        excludedMinorCategories: [...state.excludedMinorCategories].map(key => JSON.parse(key))
+        excludedMajorCategories: [],
+        excludedMinorCategories: [...state.excludedMinorCategories].map(key => JSON.parse(key)),
+        categoryVisibilityVersion: 3
       });
       renderCategories();
       applyFilters();
@@ -1428,14 +1435,30 @@
         prepareSearchIndex();
         const userData = migrateLegacyUserData();
         state.favorites = new Set(Array.isArray(userData.favorites) ? userData.favorites.filter(key => typeof key === "string") : []);
-        if (userData.categoryVisibilityVersion !== 2) {
-          // 旧仕様ではチェック済みが「除外」だったため、新仕様への切替時に旧除外状態を解除する。
-          state.excludedMajorCategories = new Set();
-          state.excludedMinorCategories = new Set();
-          writeUserDataV2({ excludedMajorCategories: [], excludedMinorCategories: [], categoryVisibilityVersion: 2 });
+        const savedMinorExclusions = Array.isArray(userData.excludedMinorCategories)
+          ? userData.excludedMinorCategories.filter(entry => Array.isArray(entry) && entry.length >= 2 && typeof entry[0] === "string" && typeof entry[1] === "string")
+            .map(([major, minor]) => minorCategoryKey(major, minor))
+          : [];
+        if (userData.categoryVisibilityVersion === 3) {
+          state.excludedMinorCategories = new Set(savedMinorExclusions);
+        } else if (userData.categoryVisibilityVersion === 2) {
+          // 旧形式の大分類除外を、配下の中分類除外へ展開して子の状態へ統一する。
+          const oldMajorExclusions = new Set(Array.isArray(userData.excludedMajorCategories) ? userData.excludedMajorCategories.filter(value => typeof value === "string") : []);
+          state.excludedMinorCategories = new Set(savedMinorExclusions);
+          state.all.filter(row => oldMajorExclusions.has(row.major || "")).forEach(row => {
+            state.excludedMinorCategories.add(minorCategoryKey(row.major || "", row.minor));
+          });
         } else {
-          state.excludedMajorCategories = new Set(Array.isArray(userData.excludedMajorCategories) ? userData.excludedMajorCategories.filter(value => typeof value === "string") : []);
-          state.excludedMinorCategories = new Set(Array.isArray(userData.excludedMinorCategories) ? userData.excludedMinorCategories.filter(entry => Array.isArray(entry) && entry.length >= 2 && typeof entry[0] === "string" && typeof entry[1] === "string").map(([major, minor]) => minorCategoryKey(major, minor)) : []);
+          // 旧仕様の保存状態は表示設定として引き継がず、全分類を表示する。
+          state.excludedMinorCategories = new Set();
+        }
+        state.excludedMajorCategories = new Set();
+        if (userData.categoryVisibilityVersion !== 3) {
+          writeUserDataV2({
+            excludedMajorCategories: [],
+            excludedMinorCategories: [...state.excludedMinorCategories].map(key => JSON.parse(key)),
+            categoryVisibilityVersion: 3
+          });
         }
         state.expandedMajorCategories = new Set(Array.isArray(userData.expandedMajorCategories) ? userData.expandedMajorCategories.filter(value => typeof value === "string") : []);
         state.expressionLevels = new Map(Array.isArray(userData.expressionLevels) ? userData.expressionLevels.filter(entry => Array.isArray(entry) && typeof entry[0] === "string" && (entry[1] === null || [0,1,2,3,4].includes(entry[1])) ) : []);
