@@ -68,6 +68,50 @@
   box-shadow: 0 8px 18px #0004;
 }
 
+/* The dragged chip is temporarily moved under body, outside the editor styles. */
+body > .prompt-bubble.is-dragging {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: max-content;
+  max-width: min(100vw - 24px, 520px);
+  min-height: 0;
+  padding: 3px 9px;
+  border: 1px solid #a8d8bd;
+  border-radius: 999px;
+  background: linear-gradient(110deg, #efffc9 0%, #b9ffe0 100%);
+  color: #111b16;
+  box-shadow: 0 8px 18px #0004;
+  box-sizing: border-box;
+}
+
+body > .prompt-bubble.is-dragging.is-negative-dragging {
+  border-color: #e6a5a8;
+  background: linear-gradient(110deg, #ffe0dc 0%, #ffc3cc 100%);
+  color: #261416;
+}
+
+body > .prompt-bubble.is-dragging .prompt-bubble-label {
+  max-width: min(68vw, 520px);
+  color: inherit;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: .01em;
+}
+
+body > .prompt-bubble.is-dragging .prompt-bubble-action {
+  border: 0;
+  background: rgba(35, 43, 39, .9);
+  color: #fff;
+}
+
+body > .prompt-bubble.is-dragging.is-negative-dragging .prompt-bubble-action {
+  background: rgba(57, 35, 39, .92);
+  color: #fff;
+}
+
 .editor-builder-panel .output-card:last-child .prompt-bubble {
   border: 1px solid #e6a5a8;
   border-radius: 999px;
