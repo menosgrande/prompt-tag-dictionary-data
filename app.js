@@ -858,7 +858,11 @@
       });
       root.append(chip);
     });
-    if(!tokens.length){const empty=document.createElement("span");empty.className="prompt-bubble-empty";empty.innerHTML='<span class="prompt-bubble-empty-title">＋ タグを追加</span><span class="prompt-bubble-empty-hint">辞典から選択 · タップして直接入力</span>';root.append(empty);}
+    const addButton=document.createElement("button");
+    addButton.type="button";
+    addButton.className="prompt-bubble-add";
+    addButton.textContent="＋ タグを追加";
+    root.append(addButton);
   }
   function updatePromptFromBubbles(target,tokens) {
     const key=target==="negative"?"promptNegative":"promptPositive";
@@ -1318,7 +1322,7 @@
     ["positive","negative"].forEach(target=>{
       const editor=$("#"+target+"-bubble-editor"),bubbles=$("#"+target+"-bubbles");
       editor.addEventListener("click",event=>{
-        if(event.target===editor||event.target===bubbles||event.target.classList.contains("prompt-bubble-empty")){
+        if(event.target===editor||event.target===bubbles||event.target.classList.contains("prompt-bubble-add")){
           setPromptEditorMode(target,"text");$("#"+target+"-output").focus();
         }
       });
