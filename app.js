@@ -61,7 +61,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
   };
   let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -485,8 +485,9 @@
       const minors = [...entry.minors.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja"));
       return '<div class="category-major"><div class="category-major-row">' +
         '<label class="category-exclusion" title="この大分類のタグを一覧から除外"><input type="checkbox" data-category-exclude-major="' + escapeHTML(major) + '"' + (state.excludedMajorCategories.has(major) ? ' checked' : '') + ' aria-label="' + escapeHTML(major) + 'のタグを一覧から除外"></label>' +
-        '<button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button></div>' +
-        '<div class="category-minors">' + minors.map(([minor,n]) => '<div class="category-minor-row">' +
+        '<button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button>' +
+        '<button type="button" class="category-collapse-toggle' + (state.expandedMajorCategories.has(major) ? ' is-expanded' : '') + '" data-category-toggle="' + escapeHTML(major) + '" aria-expanded="' + String(state.expandedMajorCategories.has(major)) + '" aria-label="' + escapeHTML(major) + 'の中分類を' + (state.expandedMajorCategories.has(major) ? '折り畳む' : '展開する') + '" title="' + (state.expandedMajorCategories.has(major) ? '折り畳む' : '展開する') + '">▸</button></div>' +
+        '<div class="category-minors"' + (state.expandedMajorCategories.has(major) ? '' : ' hidden') + '>' + minors.map(([minor,n]) => '<div class="category-minor-row">' +
           '<label class="category-exclusion" title="この中分類のタグを一覧から除外"><input type="checkbox" data-category-exclude-minor data-category-major="' + escapeHTML(major) + '" data-category-minor="' + escapeHTML(minor) + '"' + (state.excludedMinorCategories.has(minorCategoryKey(major, minor)) ? ' checked' : '') + ' aria-label="' + escapeHTML(major + " / " + minor) + 'のタグを一覧から除外"></label>' +
           '<button class="category-minor' + (state.minor === minor && state.major === major ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button></div>').join("") + '</div></div>';
     };
@@ -1222,6 +1223,15 @@
       applyFilters();
     });
     $(".category-tree").addEventListener("click", event => {
+      const categoryToggle = event.target.closest("[data-category-toggle]");
+      if (categoryToggle) {
+        const major = categoryToggle.dataset.categoryToggle;
+        if (state.expandedMajorCategories.has(major)) state.expandedMajorCategories.delete(major);
+        else state.expandedMajorCategories.add(major);
+        writeUserDataV2({ expandedMajorCategories: [...state.expandedMajorCategories] });
+        renderCategories();
+        return;
+      }
       const favoriteCategory = event.target.closest("[data-favorites]");
       if (favoriteCategory) {
         state.favoritesOnly = !state.favoritesOnly;
@@ -1380,6 +1390,7 @@
         state.favorites = new Set(Array.isArray(userData.favorites) ? userData.favorites.filter(key => typeof key === "string") : []);
         state.excludedMajorCategories = new Set(Array.isArray(userData.excludedMajorCategories) ? userData.excludedMajorCategories.filter(value => typeof value === "string") : []);
         state.excludedMinorCategories = new Set(Array.isArray(userData.excludedMinorCategories) ? userData.excludedMinorCategories.filter(entry => Array.isArray(entry) && entry.length >= 2 && typeof entry[0] === "string" && typeof entry[1] === "string").map(([major, minor]) => minorCategoryKey(major, minor)) : []);
+        state.expandedMajorCategories = new Set(Array.isArray(userData.expandedMajorCategories) ? userData.expandedMajorCategories.filter(value => typeof value === "string") : []);
         state.expressionLevels = new Map(Array.isArray(userData.expressionLevels) ? userData.expressionLevels.filter(entry => Array.isArray(entry) && typeof entry[0] === "string" && (entry[1] === null || [0,1,2,3,4].includes(entry[1])) ) : []);
         renderMigrationReport(userData);
         if (!state.selectionRestored) restoreBuilderState();
