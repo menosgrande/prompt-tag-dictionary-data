@@ -476,14 +476,16 @@
       if (state.favorites.has(keyOf(row))) favoriteCount++;
       if (!row.major) return;
       let entry = majorCounts.get(row.major);
-      if (!entry) { entry = { count: 0, minors: new Map() }; majorCounts.set(row.major, entry); }
+      if (!entry) { entry = { count: 0, minors: new Map(), hasEmptyMinor: false }; majorCounts.set(row.major, entry); }
       entry.count++;
       if (row.minor) entry.minors.set(row.minor, (entry.minors.get(row.minor) || 0) + 1);
+      else entry.hasEmptyMinor = true;
     });
     const majors = [...majorCounts.entries()].sort((a,b) => compareMajorCategories(a[0], b[0]));
     const categoryKeys = majors.flatMap(([major,entry]) => {
       const childNames = [...entry.minors.keys()];
-      return (childNames.length ? childNames : [""]).map(minor => minorCategoryKey(major, minor));
+      if (entry.hasEmptyMinor || childNames.length === 0) childNames.push("");
+      return childNames.map(minor => minorCategoryKey(major, minor));
     });
     const visibleCategoryCount = categoryKeys.filter(key => !state.excludedMinorCategories.has(key)).length;
     const masterToggle = $("#category-visibility-all");
@@ -491,11 +493,16 @@
     masterToggle.indeterminate = visibleCategoryCount > 0 && visibleCategoryCount < categoryKeys.length;
     const renderMajor = ([major,entry]) => {
       const minors = [...entry.minors.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja"));
-      const childNames = minors.length ? minors.map(([minor]) => minor) : [""];
+      const childNames = minors.map(([minor]) => minor);
+      if (entry.hasEmptyMinor || childNames.length === 0) childNames.push("");
       const visibleChildren = childNames.filter(minor => !state.excludedMinorCategories.has(minorCategoryKey(major, minor))).length;
       const majorChecked = visibleChildren === childNames.length;
       const majorMixed = visibleChildren > 0 && visibleChildren < childNames.length;
-      const minorRows = minors.length ? minors : [["", entry.count]];
+      const minorRows = [...minors];
+      if (entry.hasEmptyMinor || minorRows.length === 0) {
+        const emptyMinorCount = state.all.filter(row => row.major === major && !row.minor).length;
+        minorRows.push(["", emptyMinorCount || entry.count]);
+      }
       return '<div class="category-major"><div class="category-major-row">' +
         '<button type="button" class="category-collapse-toggle' + (state.expandedMajorCategories.has(major) ? ' is-expanded' : '') + '" data-category-toggle="' + escapeHTML(major) + '" aria-expanded="' + String(state.expandedMajorCategories.has(major)) + '" aria-label="' + escapeHTML(major) + 'の中分類を' + (state.expandedMajorCategories.has(major) ? '折り畳む' : '展開する') + '" title="' + (state.expandedMajorCategories.has(major) ? '折り畳む' : '展開する') + '">▸</button>' +
         '<label class="category-exclusion" title="この大分類の中分類をまとめて表示・非表示"><input type="checkbox" data-category-exclude-major="' + escapeHTML(major) + '"' + (majorChecked ? ' checked' : '') + (majorMixed ? ' data-indeterminate="true"' : '') + ' aria-label="' + escapeHTML(major) + 'の中分類をまとめて表示"></label>' +
