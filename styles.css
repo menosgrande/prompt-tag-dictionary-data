@@ -562,6 +562,6 @@ body{font-size:14px;line-height:1.65}
 }
 
 
-/* Bulk visibility controls for category checkboxes. */
-.category-panel-bulk{display:flex;align-items:center;gap:7px;flex:0 0 auto}
-.category-panel-bulk .text-button{padding:4px 3px;font-size:10px;white-space:nowrap}
+/* Master category visibility control sits beside the category heading. */
+.panel-heading .category-master-toggle{display:flex;align-items:center;gap:6px;flex:0 0 auto;font-size:12px;white-space:nowrap;color:var(--muted)}
+.category-master-toggle input{width:15px;height:15px;margin:0;accent-color:var(--accent)}
