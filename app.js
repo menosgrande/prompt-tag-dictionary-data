@@ -61,7 +61,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
   };
   let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -69,6 +69,7 @@
   const escapeHTML = value => String(value ?? "").replace(/[&<>"']/g, ch => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[ch]));
   // 統合データセット内で一意なCSVのtag値を識別子として使う。source/index/ファイル名には依存しない。
   const keyOf = row => String(row.tag ?? "");
+  const minorCategoryKey = (major, minor) => JSON.stringify([String(major ?? ""), String(minor ?? "")]);
   function baseExpressionLevel(row) {
     const value = String(row.ero_level ?? "").trim();
     return /^[0-4]$/.test(value) ? Number(value) : null;
@@ -483,9 +484,11 @@
     const renderMajor = ([major,entry]) => {
       const minors = [...entry.minors.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja"));
       return '<div class="category-major"><div class="category-major-row">' +
-        '<label class="category-exclusion" title="この分類に該当するタグを一覧から除外"><input type="checkbox" data-category-exclude="' + escapeHTML(major) + '"' + (state.excludedMajorCategories.has(major) ? ' checked' : '') + ' aria-label="' + escapeHTML(major) + 'のタグを一覧から除外"></label>' +
+        '<label class="category-exclusion" title="この大分類のタグを一覧から除外"><input type="checkbox" data-category-exclude-major="' + escapeHTML(major) + '"' + (state.excludedMajorCategories.has(major) ? ' checked' : '') + ' aria-label="' + escapeHTML(major) + 'のタグを一覧から除外"></label>' +
         '<button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button></div>' +
-        '<div class="category-minors">' + minors.map(([minor,n]) => '<button class="category-minor' + (state.minor === minor && state.major === major ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button>').join("") + '</div></div>';
+        '<div class="category-minors">' + minors.map(([minor,n]) => '<div class="category-minor-row">' +
+          '<label class="category-exclusion" title="この中分類のタグを一覧から除外"><input type="checkbox" data-category-exclude-minor data-category-major="' + escapeHTML(major) + '" data-category-minor="' + escapeHTML(minor) + '"' + (state.excludedMinorCategories.has(minorCategoryKey(major, minor)) ? ' checked' : '') + ' aria-label="' + escapeHTML(major + " / " + minor) + 'のタグを一覧から除外"></label>' +
+          '<button class="category-minor' + (state.minor === minor && state.major === major ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button></div>').join("") + '</div></div>';
     };
     root.innerHTML = '<button class="category-major-button' + (state.favoritesOnly ? ' active' : '') + '" data-favorites="true">お気に入り <span class="count">' + favoriteCount.toLocaleString("ja-JP") + '</span></button>' +
       '<button class="category-major-button' + (!state.major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="">すべての分類 <span class="count">' + state.all.length.toLocaleString("ja-JP") + '</span></button>' +
@@ -493,6 +496,7 @@
   }
   function matches(row) {
     if (state.excludedMajorCategories.has(row.major || "")) return false;
+    if (state.excludedMinorCategories.has(minorCategoryKey(row.major, row.minor))) return false;
     if (state.major && row.major !== state.major) return false;
     if (state.minor && row.minor !== state.minor) return false;
     if (state.favoritesOnly && !state.favorites.has(keyOf(row))) return false;
@@ -657,7 +661,8 @@
     state.minor = "";
     state.favoritesOnly = false;
     state.excludedMajorCategories.clear();
-    writeUserDataV2({ excludedMajorCategories: [] });
+    state.excludedMinorCategories.clear();
+    writeUserDataV2({ excludedMajorCategories: [], excludedMinorCategories: [] });
     $("#favorites-only").checked = false;
     Object.values(state.columnFilters).forEach(values => values.clear());
     state.sort = "index";
@@ -1198,12 +1203,22 @@
       setCategoryPanelOpen(categoryToggle.getAttribute("aria-expanded") !== "true");
     });
     $(".category-tree").addEventListener("change", event => {
-      const checkbox = event.target.closest("[data-category-exclude]");
-      if (!checkbox) return;
-      const major = checkbox.dataset.categoryExclude;
-      if (checkbox.checked) state.excludedMajorCategories.add(major);
-      else state.excludedMajorCategories.delete(major);
-      writeUserDataV2({ excludedMajorCategories: [...state.excludedMajorCategories] });
+      const majorCheckbox = event.target.closest("[data-category-exclude-major]");
+      const minorCheckbox = event.target.closest("[data-category-exclude-minor]");
+      if (!majorCheckbox && !minorCheckbox) return;
+      if (majorCheckbox) {
+        const major = majorCheckbox.dataset.categoryExcludeMajor;
+        if (majorCheckbox.checked) state.excludedMajorCategories.add(major);
+        else state.excludedMajorCategories.delete(major);
+      } else {
+        const key = minorCategoryKey(minorCheckbox.dataset.categoryMajor, minorCheckbox.dataset.categoryMinor);
+        if (minorCheckbox.checked) state.excludedMinorCategories.add(key);
+        else state.excludedMinorCategories.delete(key);
+      }
+      writeUserDataV2({
+        excludedMajorCategories: [...state.excludedMajorCategories],
+        excludedMinorCategories: [...state.excludedMinorCategories].map(key => JSON.parse(key))
+      });
       applyFilters();
     });
     $(".category-tree").addEventListener("click", event => {
@@ -1223,7 +1238,7 @@
       renderCategories(); applyFilters();
       if (isMinor) setCategoryPanelOpen(false); else setCategoryPanelOpen(true);
     });
-    $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; state.excludedMajorCategories.clear(); writeUserDataV2({ excludedMajorCategories: [] }); renderCategories(); applyFilters(); setCategoryPanelOpen(false); });
+    $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; state.excludedMajorCategories.clear(); state.excludedMinorCategories.clear(); writeUserDataV2({ excludedMajorCategories: [], excludedMinorCategories: [] }); renderCategories(); applyFilters(); setCategoryPanelOpen(false); });
     $(".search-row > .button").addEventListener("click", resetDictionarySearch);
     $(".pagination").addEventListener("click", event => {
       const button = event.target.closest("[data-page]");
@@ -1364,6 +1379,7 @@
         const userData = migrateLegacyUserData();
         state.favorites = new Set(Array.isArray(userData.favorites) ? userData.favorites.filter(key => typeof key === "string") : []);
         state.excludedMajorCategories = new Set(Array.isArray(userData.excludedMajorCategories) ? userData.excludedMajorCategories.filter(value => typeof value === "string") : []);
+        state.excludedMinorCategories = new Set(Array.isArray(userData.excludedMinorCategories) ? userData.excludedMinorCategories.filter(entry => Array.isArray(entry) && entry.length >= 2 && typeof entry[0] === "string" && typeof entry[1] === "string").map(([major, minor]) => minorCategoryKey(major, minor)) : []);
         state.expressionLevels = new Map(Array.isArray(userData.expressionLevels) ? userData.expressionLevels.filter(entry => Array.isArray(entry) && typeof entry[0] === "string" && (entry[1] === null || [0,1,2,3,4].includes(entry[1])) ) : []);
         renderMigrationReport(userData);
         if (!state.selectionRestored) restoreBuilderState();
