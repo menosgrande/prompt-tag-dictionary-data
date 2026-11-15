@@ -1304,7 +1304,8 @@
       renderCategories(); applyFilters();
       if (isMinor) setCategoryPanelOpen(false); else setCategoryPanelOpen(true);
     });
-    $(".categories-panel .text-button").addEventListener("click", () => { state.major = ""; state.minor = ""; state.excludedMajorCategories.clear(); state.excludedMinorCategories.clear(); writeUserDataV2({ excludedMajorCategories: [], excludedMinorCategories: [] }); renderCategories(); applyFilters(); setCategoryPanelOpen(false); });
+    // 分類パネルに解除ボタンが配置されている場合のみイベントを登録する。
+    $(".categories-panel .text-button")?.addEventListener("click", () => { state.major = ""; state.minor = ""; state.excludedMajorCategories.clear(); state.excludedMinorCategories.clear(); writeUserDataV2({ excludedMajorCategories: [], excludedMinorCategories: [] }); renderCategories(); applyFilters(); setCategoryPanelOpen(false); });
     $(".search-row > .button").addEventListener("click", resetDictionarySearch);
     $(".pagination").addEventListener("click", event => {
       const button = event.target.closest("[data-page]");
