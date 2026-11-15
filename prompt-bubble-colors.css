@@ -131,6 +131,7 @@ html.prompt-bubble-dragging-active * {
 
 .editor-builder-panel .prompt-bubble-add {
   display: inline-flex;
+  justify-self: start;
   flex: 0 0 auto;
   align-items: center;
   justify-content: center;
