@@ -509,7 +509,9 @@
         '<button class="category-major-button' + (state.major === major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="' + escapeHTML(major) + '">' + escapeHTML(major) + '<span class="count">' + entry.count.toLocaleString("ja-JP") + '</span></button></div>' +
         '<div class="category-minors"' + (state.expandedMajorCategories.has(major) ? '' : ' hidden') + '>' + minorRows.map(([minor,n]) => '<div class="category-minor-row">' +
           '<label class="category-exclusion" title="この中分類だけ表示・非表示"><input type="checkbox" data-category-exclude-minor data-category-major="' + escapeHTML(major) + '" data-category-minor="' + escapeHTML(minor) + '"' + (!state.excludedMinorCategories.has(minorCategoryKey(major, minor)) ? ' checked' : '') + ' aria-label="' + escapeHTML(major + (minor ? " / " + minor : " / 中分類なし")) + 'を表示"></label>' +
-          '<button class="category-minor' + (state.minor === minor && state.major === major ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor || "中分類なし") + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button></div>').join("") + '</div></div>';
+          (minor
+            ? '<button class="category-minor' + (state.minor === minor && state.major === major ? ' active' : '') + '" data-major="' + escapeHTML(major) + '" data-minor="' + escapeHTML(minor) + '">' + escapeHTML(minor) + '<span class="count">' + n.toLocaleString("ja-JP") + '</span></button>'
+            : '<span class="category-minor category-minor-label">中分類なし<span class="count">' + n.toLocaleString("ja-JP") + '</span></span>') + '</div>').join("") + '</div></div>';
     };
     root.innerHTML = '<button class="category-major-button' + (state.favoritesOnly ? ' active' : '') + '" data-favorites="true">お気に入り <span class="count">' + favoriteCount.toLocaleString("ja-JP") + '</span></button>' +
       '<button class="category-major-button' + (!state.major && !state.minor && !state.favoritesOnly ? ' active' : '') + '" data-major="">全タグ <span class="count">' + state.all.length.toLocaleString("ja-JP") + '</span></button>' +
