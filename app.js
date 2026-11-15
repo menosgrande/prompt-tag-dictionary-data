@@ -926,7 +926,9 @@
   function setPromptEditorMode(target,mode) {
     const positive=target==="positive";
     state.editorModes[target]=mode;
-    $("#"+target+"-bubble-editor").hidden=mode!=="bubble";
+    const editor=$("#"+target+"-bubble-editor");
+    editor.hidden=false;
+    editor.querySelector(".prompt-bubbles").hidden=mode!=="bubble";
     $("#"+(positive?"positive-output":"negative-output")).hidden=mode!=="text";
     saveBuilderState();
   }
