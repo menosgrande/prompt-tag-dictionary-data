@@ -559,3 +559,8 @@ body{font-size:14px;line-height:1.65}
 .category-minor .count{
   flex:0 0 auto;
 }
+
+
+/* Bulk visibility controls for category checkboxes. */
+.category-panel-bulk{display:flex;align-items:center;gap:7px;flex:0 0 auto}
+.category-panel-bulk .text-button{padding:4px 3px;font-size:10px;white-space:nowrap}
