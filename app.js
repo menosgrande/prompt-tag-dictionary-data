@@ -61,7 +61,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, columnWidths: [30, 26, 210, 170, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, columnWidths: [30, 26, 210, 170, 130, 130, 34, 26], columnWidthMode: "desktop"
   };
   let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -537,11 +537,11 @@
     mobile: "ptd-dictionary-column-widths-v6-mobile"
   };
   const COLUMN_DEFAULTS = {
-    desktop: [30, 26, 210, 170, 130, 34, 26],
-    mobile: [24, 22, 160, 140, 110, 32, 22]
+    desktop: [30, 26, 210, 170, 130, 130, 34, 26],
+    mobile: [24, 22, 160, 140, 110, 110, 32, 22]
   };
-  const COLUMN_MIN_WIDTHS = [24, 22, 90, 90, 72, 30, 22];
-  const COLUMN_MAX_WIDTHS = [64, 56, 520, 520, 360, 56, 56];
+  const COLUMN_MIN_WIDTHS = [24, 22, 90, 90, 72, 72, 30, 22];
+  const COLUMN_MAX_WIDTHS = [64, 56, 520, 520, 360, 360, 56, 56];
   function currentColumnMode() {
     return window.matchMedia("(max-width: 760px)").matches ? "mobile" : "desktop";
   }
@@ -575,7 +575,7 @@
       handle.tabIndex = 0;
       handle.setAttribute("role", "separator");
       handle.setAttribute("aria-orientation", "vertical");
-      handle.setAttribute("aria-label", (cell.textContent.trim() || ["状態","お気に入り","タグ（英語）","日本語訳","大分類","表現レベル","詳細"][index]) + "列の幅を変更");
+      handle.setAttribute("aria-label", (cell.textContent.trim() || ["状態","お気に入り","タグ（英語）","日本語訳","大分類","中分類","表現レベル","詳細"][index]) + "列の幅を変更");
       handle.setAttribute("aria-valuemin", String(COLUMN_MIN_WIDTHS[index]));
       handle.setAttribute("aria-valuemax", String(COLUMN_MAX_WIDTHS[index]));
       cell.append(handle);
@@ -621,6 +621,7 @@
       tag: $('.table-head-cell[data-column="tag"] [data-menu-content]'),
       ja: $('.table-head-cell[data-column="ja"] [data-menu-content]'),
       major: $('.table-head-cell[data-column="major"] [data-menu-content]'),
+      minor: $('.table-head-cell[data-column="minor"] [data-menu-content]'),
       level: $('.table-head-cell[data-column="level"] [data-menu-content]')
     };
     const checkboxGroup = (key, values, labelMap = value => value) =>
@@ -630,7 +631,7 @@
         (state.columnFilters[key].has(value) ? ' checked' : '') + '> ' + escapeHTML(labelMap(value)) + '</label>'
       ).join("") + '</div><button type="button" class="column-filter-clear" data-filter-clear="' + key + '">この列の絞り込みを解除</button></fieldset>';
     const sortOptions = field => {
-      const labels = { tag: ["A → Z", "Z → A"], ja: ["あ → ん", "ん → あ"], major: ["分類順（昇順）", "分類順（降順）"], level: ["低い順（0 → 4）", "高い順（4 → 0）"] };
+      const labels = { tag: ["A → Z", "Z → A"], ja: ["あ → ん", "ん → あ"], major: ["分類順（昇順）", "分類順（降順）"], minor: ["あ → ん", "ん → あ"], level: ["低い順（0 → 4）", "高い順（4 → 0）"] };
       return '<div class="column-sort-options"><strong>並び替え</strong>' +
         labels[field].map((label, index) => '<button type="button" data-sort-field="' + field + '" data-sort-direction="' + (index === 0 ? 'asc' : 'desc') + '"' +
           (state.sort === field && state.sortDirection === (index === 0 ? "asc" : "desc") ? ' aria-pressed="true"' : '') + '>' + label + '</button>').join("") +
@@ -640,6 +641,7 @@
       '<label class="column-favorite-filter"><input type="checkbox" data-filter-favorites' + (state.favoritesOnly ? ' checked' : '') + '> お気に入りのみ</label>';
     if (cells.tag) cells.tag.innerHTML = sortOptions("tag");
     if (cells.ja) cells.ja.innerHTML = sortOptions("ja");
+    if (cells.minor) cells.minor.innerHTML = sortOptions("minor");
     if (cells.major) {
       const majors = [...new Set(state.all.map(row => row.major || "未分類"))].sort(compareMajorCategories);
       cells.major.innerHTML = sortOptions("major") + checkboxGroup("major", majors);
@@ -665,6 +667,7 @@
         '<button type="button" class="tag-english tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</button>' +
         '<button type="button" class="tag-japanese tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</button>' +
         '<span class="tag-major" title="大分類">' + escapeHTML(row.major || "未分類") + '</span>' +
+        '<span class="tag-minor" title="中分類">' + escapeHTML(row.minor || "—") + '</span>' +
         '<span class="expression-level-cell"><span class="expression-level-value' + (expressionLevelFor(row) === null ? ' is-unset' : ' level-' + expressionLevelFor(row)) + '" aria-label="表現ランク ' + (expressionLevelFor(row) === null ? '未設定' : expressionLevelFor(row)) + '" title="表現ランク ' + (expressionLevelFor(row) === null ? '未設定' : expressionLevelFor(row)) + '">' + (expressionLevelFor(row) === null ? '—' : expressionLevelFor(row)) + '</span></span>' +
         '<span class="tag-detail-cell"><button type="button" class="tag-detail-button" data-detail="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + ' の詳細" title="タグの詳細情報">ⓘ</button></span>' +
       '</div>';
@@ -703,6 +706,7 @@
     else if (state.sort === "tag") state.filtered.sort((a,b) => direction * compareText(a.tag, b.tag, "en"));
     else if (state.sort === "ja") state.filtered.sort((a,b) => direction * compareText(a.ja, b.ja));
     else if (state.sort === "major") state.filtered.sort((a,b) => direction * (compareMajorCategories(a.major || "", b.major || "") || compareText(a.tag, b.tag, "en")));
+    else if (state.sort === "minor") state.filtered.sort((a,b) => direction * (compareText(a.minor, b.minor) || compareText(a.tag, b.tag, "en")));
     else if (state.sort === "level") state.filtered.sort((a,b) => {
       const left = expressionLevelFor(a), right = expressionLevelFor(b);
       return direction * ((left === null ? 99 : left) - (right === null ? 99 : right));
