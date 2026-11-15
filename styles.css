@@ -513,6 +513,7 @@ body{font-size:14px;line-height:1.65}
 .category-exclusion{display:inline-flex;flex:0 0 18px;align-items:center;justify-content:center;cursor:pointer}
 .category-exclusion input{width:15px;height:15px;margin:0;accent-color:var(--accent)}
 .category-minor-row{display:flex;align-items:center;gap:5px}.category-minor-row>.category-minor{flex:1;min-width:0}
+.category-collapse-toggle{flex:0 0 24px;width:24px;height:28px;padding:0;border:0;border-radius:5px;background:transparent;color:var(--muted-2);font-size:16px;line-height:1;cursor:pointer;transition:transform .15s ease,background .15s ease}.category-collapse-toggle:hover{background:var(--surface-hover);color:var(--text)}.category-collapse-toggle.is-expanded{transform:rotate(90deg)}.category-minors[hidden]{display:none}
 
 
 
