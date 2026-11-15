@@ -71,6 +71,8 @@
 /* The dragged chip is temporarily moved under body, outside the editor styles. */
 body > .prompt-bubble.is-dragging {
   display: inline-flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
   align-items: center;
   gap: 5px;
   width: max-content;
@@ -92,6 +94,9 @@ body > .prompt-bubble.is-dragging.is-negative-dragging {
 }
 
 body > .prompt-bubble.is-dragging .prompt-bubble-label {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  overflow-wrap: normal;
   max-width: min(68vw, 520px);
   color: inherit;
   font-family: inherit;
@@ -102,6 +107,7 @@ body > .prompt-bubble.is-dragging .prompt-bubble-label {
 }
 
 body > .prompt-bubble.is-dragging .prompt-bubble-action {
+  display: none !important;
   border: 0;
   background: rgba(35, 43, 39, .9);
   color: #fff;
