@@ -561,6 +561,26 @@ body{font-size:14px;line-height:1.65}
   flex:0 0 auto;
 }
 
+/* Search results temporarily surface matching categories without changing visibility checkboxes. */
+.category-major-button.is-search-match,
+.category-minor.is-search-match{
+  background:rgba(120,170,150,.16);
+  box-shadow:inset 0 0 0 1px rgba(159,199,192,.58);
+  color:var(--accent-strong);
+}
+.category-major-button.is-search-match.active,
+.category-minor.is-search-match.active{
+  background:#2c4842;
+}
+.category-major-button .search-count,
+.category-minor .search-count{
+  padding:1px 5px;
+  border-radius:8px;
+  background:rgba(120,170,150,.2);
+  color:var(--accent-strong);
+  font-weight:700;
+}
+
 
 /* Master category visibility control sits beside the category heading. */
 .panel-heading .category-master-toggle{display:flex;align-items:center;gap:6px;flex:0 0 auto;font-size:12px;white-space:nowrap;color:var(--muted)}
