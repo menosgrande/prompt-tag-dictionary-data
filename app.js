@@ -863,11 +863,6 @@
       });
       root.append(chip);
     });
-    const addButton=document.createElement("button");
-    addButton.type="button";
-    addButton.className="prompt-bubble-add";
-    addButton.textContent="＋ タグを追加";
-    root.append(addButton);
   }
   function updatePromptFromBubbles(target,tokens) {
     const key=target==="negative"?"promptNegative":"promptPositive";
@@ -929,6 +924,7 @@
     const editor=$("#"+target+"-bubble-editor");
     editor.hidden=false;
     editor.querySelector(".prompt-bubbles").hidden=mode!=="bubble";
+    editor.querySelector(".prompt-bubble-add").hidden=mode!=="bubble";
     $("#"+(positive?"positive-output":"negative-output")).hidden=mode!=="text";
     saveBuilderState();
   }
