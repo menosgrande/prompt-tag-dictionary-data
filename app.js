@@ -849,7 +849,7 @@
       const normalized = normalizeSearchText(item.tag);
       const row = rowsByTag.get(item.tag.toLocaleLowerCase()) || (ambiguousTerms.has(normalized) ? null : rowsByTerm.get(normalized));
       const rawTag = row ? row.tag : item.tag;
-      const tag = state.escapeParentheses ? rawTag.replace(/(^|[^\\])([()])/g, "$1\\$2") : rawTag;
+      const tag = state.escapeParentheses ? rawTag.replace(/(?<!\\)([()])/g, "\\$1") : rawTag;
       return item.weight && Number(item.weight) !== 1 ? "(" + tag + ":" + item.weight + ")" : tag;
     }).join(", ");
   }
@@ -1349,7 +1349,8 @@
         }
       }
     } catch (error) { console.warn("プロンプト編集内容を復元できませんでした。", error); }
-    $("#escape-parentheses").checked = state.escapeParentheses;
+    const escapeParenthesesBox = $("#escape-parentheses");
+    if (escapeParenthesesBox) escapeParenthesesBox.checked = state.escapeParentheses;
     $("#positive-output").value = state.promptPositive;
     $("#negative-output").value = state.promptNegative;
     syncSelectedFromPromptText();
