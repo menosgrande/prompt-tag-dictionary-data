@@ -923,7 +923,6 @@
             promptBubbleFocusRestore={target,tag:item.tag,index};
             updatePromptFromBubbles(target,tokens);
           }else if(action==="move"){
-            const destination=target==="positive"?"negative":"positive";
             movePromptBubble(target,index,tokens);
           }else if(action==="remove"){
             tokens.splice(index,1);updatePromptFromBubbles(target,tokens);
@@ -1135,7 +1134,6 @@
             const movedToken=chip._promptToken;
             const originRoot=dragState.originRoot;
             const destinationPolarity=destinationRoot?.id==="negative-bubbles"?"negative":"positive";
-            const originPolarity=originRoot?.id==="negative-bubbles"?"negative":"positive";
             let mergedIndex=-1;
             let merged=false;
             if(originRoot!==destinationRoot){
