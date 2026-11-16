@@ -972,14 +972,14 @@
         }
       });
       chip.append(label);
-      if(translation.textContent)chip.append(translation);
-      if(item.weight){
+      if(item.weight && Number(item.weight) !== 1){
         const weightBadge=document.createElement("small");
         weightBadge.className="prompt-bubble-weight-badge";
-        weightBadge.textContent="："+item.weight;
+        weightBadge.textContent=" "+item.weight;
         weightBadge.title="重み";
         chip.append(weightBadge);
       }
+      if(translation.textContent)chip.append(translation);
       chip.append(remove,menuToggle,menu);
       if(promptBubbleMenuRestore&&promptBubbleMenuRestore.target===target&&promptBubbleMenuRestore.tag===item.tag){
         menu.hidden=false;
