@@ -1756,25 +1756,23 @@
     });
     window.addEventListener("keydown", event => {
       const target = event.target;
-      const editorPanel = target instanceof Element ? target.closest(".editor-builder-panel") : null;
-      const isBubbleAddInput = target instanceof Element && target.matches("#positive-bubble-add, #negative-bubble-add");
+      const isTyping = target instanceof HTMLElement && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName));
       const hasCommandModifier = event.ctrlKey || event.metaKey;
       const key = event.key.toLowerCase();
       const isUndoShortcut = hasCommandModifier && !event.shiftKey && !event.altKey && key === "z";
       const isRedoShortcut = hasCommandModifier && !event.altKey && (
         (event.shiftKey && key === "z") || (!event.shiftKey && key === "y")
       );
-      if (editorPanel && !isBubbleAddInput && isRedoShortcut && state.redoHistory.length) {
+      if (!isTyping && isRedoShortcut && state.redoHistory.length) {
         event.preventDefault();
         redoPromptChange();
         return;
       }
-      if (editorPanel && !isBubbleAddInput && isUndoShortcut && state.undoHistory.length) {
+      if (!isTyping && isUndoShortcut && state.undoHistory.length) {
         event.preventDefault();
         undoPromptChange();
         return;
       }
-      const isTyping = target instanceof HTMLElement && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName));
       if (event.key === "/" && !isTyping && !event.ctrlKey && !event.metaKey && !event.altKey) {
         event.preventDefault();
         $(".search-row .searchbox input").focus();
