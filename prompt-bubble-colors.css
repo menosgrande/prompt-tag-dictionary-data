@@ -231,3 +231,27 @@ body > .prompt-bubble.is-dragging .prompt-bubble-action {
     line-height: 1.45;
   }
 }
+
+
+/* Prompt chip operation menu, Undo, validation and length estimates. */
+.editor-builder-panel .prompt-bubble{position:relative}
+.editor-builder-panel .prompt-bubble-menu-toggle{left:-7px;right:auto;top:-7px;display:none}
+.editor-builder-panel .prompt-bubble:hover .prompt-bubble-menu-toggle,
+.editor-builder-panel .prompt-bubble:focus-within .prompt-bubble-menu-toggle{display:block}
+.editor-builder-panel .prompt-bubble-menu{position:absolute;top:calc(100% + 5px);left:0;z-index:80;display:grid;grid-template-columns:repeat(2,minmax(82px,1fr));gap:4px;min-width:190px;padding:8px;border:1px solid #879b91;border-radius:9px;background:#202a27;color:#f1f5f2;box-shadow:0 8px 22px #0006;cursor:default;touch-action:auto}
+.editor-builder-panel .prompt-bubble-menu[hidden]{display:none}
+.editor-builder-panel .prompt-bubble-weight{grid-column:1/-1;padding:2px 4px;color:#d5e5dc;font-size:10px}
+.editor-builder-panel .prompt-bubble-menu-item{min-height:30px;padding:5px 7px;border:1px solid #566b61;border-radius:6px;background:#2b3933;color:#f1f5f2;font-size:10px;cursor:pointer;touch-action:manipulation}
+.editor-builder-panel .prompt-bubble-menu-item:hover,.editor-builder-panel .prompt-bubble-menu-item:focus-visible{background:#40594c;outline:1px solid #a8d8bd}
+.editor-builder-panel .output-card:last-child .prompt-bubble-menu{border-color:#9c7277;background:#302326}
+.editor-builder-panel .output-card:last-child .prompt-bubble-menu-item{border-color:#805b60;background:#493237}
+.editor-builder-panel .prompt-bubble.is-duplicate-highlight{outline:3px solid #e7b85c;outline-offset:3px;filter:brightness(1.12)}
+.builder-heading-actions{display:flex;align-items:center;gap:10px}
+.prompt-metrics{margin:0 4px;color:var(--muted);font-size:10px}
+.prompt-conflict-warning{margin:0 12px 10px;padding:8px 10px;border:1px solid #b78a45;border-radius:7px;background:rgba(183,138,69,.12);color:#f0d29b;font-size:11px;overflow-wrap:anywhere}
+.prompt-conflict-warning[hidden]{display:none}
+@media(max-width:600px){
+  .editor-builder-panel .prompt-bubble-menu{position:fixed;left:12px;right:12px;top:auto;bottom:12px;grid-template-columns:repeat(2,minmax(0,1fr));width:auto;min-width:0}
+  .editor-builder-panel .prompt-bubble-menu-item{min-height:38px;font-size:11px}
+  .builder-heading-actions{gap:6px}
+}
