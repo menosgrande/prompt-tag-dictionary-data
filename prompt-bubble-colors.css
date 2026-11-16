@@ -76,6 +76,16 @@ html.prompt-bubble-dragging-active * {
   box-shadow: none;
 }
 
+/* Make keyboard focus on a prompt chip unmistakable. */
+.editor-builder-panel .prompt-bubble:focus-visible {
+  position: relative;
+  z-index: 2;
+  outline: 3px solid #f6c453;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px rgba(20, 28, 24, .92), 0 0 0 5px rgba(246, 196, 83, .28);
+  filter: brightness(1.06);
+}
+
 .editor-builder-panel .prompt-bubble-label {
   max-width: min(68vw, 520px);
   color: inherit;
