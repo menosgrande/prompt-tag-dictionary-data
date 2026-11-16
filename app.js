@@ -61,7 +61,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", undoHistory: [], restoringUndo: false, textEditUndoPending: { positive: false, negative: false }, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, columnWidths: [30, 26, 210, 170, 130, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", undoHistory: [], restoringUndo: false, textEditUndoPending: { positive: false, negative: false }, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, escapeParentheses: false, columnWidths: [30, 26, 210, 170, 130, 130, 34, 26], columnWidthMode: "desktop"
   };
   let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -848,7 +848,8 @@
     return parsePromptTokens(source).map(item => {
       const normalized = normalizeSearchText(item.tag);
       const row = rowsByTag.get(item.tag.toLocaleLowerCase()) || (ambiguousTerms.has(normalized) ? null : rowsByTerm.get(normalized));
-      const tag = row ? row.tag : item.tag;
+      const rawTag = row ? row.tag : item.tag;
+      const tag = state.escapeParentheses ? rawTag.replace(/(^|[^\\])([()])/g, "$1\\$2") : rawTag;
       return item.weight && Number(item.weight) !== 1 ? "(" + tag + ":" + item.weight + ")" : tag;
     }).join(", ");
   }
@@ -1314,7 +1315,8 @@
   function saveBuilderState() {
     writeUserDataV2({ builderState: {
       selected: [...state.selected.keys()], polarity: [...state.polarity.entries()],
-      promptPositive: state.promptPositive, promptNegative: state.promptNegative, editorModes: state.editorModes
+      promptPositive: state.promptPositive, promptNegative: state.promptNegative, editorModes: state.editorModes,
+      escapeParentheses: state.escapeParentheses
     } });
   }
   function restoreBuilderState() {
@@ -1323,6 +1325,7 @@
     try {
       const saved = readUserDataV2()?.builderState || null;
       if (saved && typeof saved === "object") {
+        if (typeof saved.escapeParentheses === "boolean") state.escapeParentheses = saved.escapeParentheses;
         const rowsByKey = new Map(state.all.map(row => [keyOf(row), row]));
         if (Array.isArray(saved.selected)) saved.selected.forEach(key => {
           const row = rowsByKey.get(key);
@@ -1546,6 +1549,14 @@
     });
   }
   function bindControls() {
+    const escapeParentheses = $("#escape-parentheses");
+    if (escapeParentheses) {
+      escapeParentheses.checked = state.escapeParentheses;
+      escapeParentheses.addEventListener("change", () => {
+        state.escapeParentheses = escapeParentheses.checked;
+        saveBuilderState();
+      });
+    }
     $("#works-search").addEventListener("input", event => { state.worksQuery = event.target.value.trim().toLocaleLowerCase(); renderWorkList(); writeLocationState("replace"); });
     $("#authors-search").addEventListener("input", event => { state.authorsQuery = event.target.value.trim().toLocaleLowerCase(); renderAuthorList(); writeLocationState("replace"); });
     $$(".related-list").forEach(root => root.addEventListener("change", event => {
