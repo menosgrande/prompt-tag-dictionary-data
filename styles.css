@@ -85,7 +85,7 @@ body{font-size:14px;line-height:1.65}
 
 /* Compact dictionary counters in the top header. */
 .topbar-meta{gap:10px}.header-stats{display:flex;align-items:center;gap:5px}.header-stats .stat-card{display:flex;align-items:baseline;gap:5px;min-width:0;padding:4px 7px;border:1px solid var(--line-soft);border-radius:6px;background:transparent}.header-stats .stat-card strong{font:500 12px var(--mono);letter-spacing:0}.header-stats .stat-card span{margin:0;color:var(--muted-2);font-size:9px;white-space:nowrap}
-@media(max-width:760px){.topbar-meta{gap:6px}.header-stats{gap:3px}.header-stats .stat-card{gap:3px;padding:3px 5px}.header-stats .stat-card strong{font-size:10px}.header-stats .stat-card span{font-size:8px}.topbar-meta>.button{min-height:30px;padding:5px 8px;font-size:9px}}
+@media(max-width:760px){.topbar-meta{gap:4px;flex-shrink:0}.header-stats{gap:2px}.header-stats .stat-card{gap:2px;padding:2px 4px}.header-stats .stat-card strong{font-size:9px}.header-stats .stat-card span{font-size:7px}.topbar-meta>.button{min-height:26px;padding:3px 6px;font-size:8px;line-height:1;white-space:nowrap}}
 
 
 /* Dense tag table: separate favorite column, hide internal row IDs. */
