@@ -61,7 +61,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", undoHistory: [], restoringUndo: false, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, columnWidths: [30, 26, 210, 170, 130, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", undoHistory: [], restoringUndo: false, textEditUndoPending: { positive: false, negative: false }, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, columnWidths: [30, 26, 210, 170, 130, 130, 34, 26], columnWidthMode: "desktop"
   };
   let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -1660,11 +1660,11 @@
       }
     });
     $("#positive-output").addEventListener("input", event => {
-      captureUndoState();
+      if(!state.textEditUndoPending.positive){captureUndoState();state.textEditUndoPending.positive=true;}
       state.promptPositive = event.target.value; syncSelectedFromPromptText(); renderRows(); renderEditor();
     });
     $("#negative-output").addEventListener("input", event => {
-      captureUndoState();
+      if(!state.textEditUndoPending.negative){captureUndoState();state.textEditUndoPending.negative=true;}
       state.promptNegative = event.target.value; syncSelectedFromPromptText(); renderRows(); renderEditor();
     });
     $('[data-action="undo-prompt"]').addEventListener("click", undoPromptChange);
@@ -1672,6 +1672,7 @@
       const output = $("#" + target + "-output");
 
       output.addEventListener("blur", event => {
+        state.textEditUndoPending[target]=false;
         // 明示的な切替ボタンへ移動した場合は、ボタン側の処理に任せる。
         setPromptEditorMode(target, "bubble");
       });
