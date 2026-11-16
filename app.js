@@ -928,12 +928,10 @@
           }else if(action==="remove"){
             tokens.splice(index,1);updatePromptFromBubbles(target,tokens);
           }else if(action==="up"||action==="down"){
-            const destination=index+(action==="up"?-1:1);
-            if(destination>=0&&destination<tokens.length){
-              [tokens[index],tokens[destination]]=[tokens[destination],tokens[index]];
+            const delta=action==="up"?-1:1;
+            if(index+delta>=0&&index+delta<tokens.length){
               promptBubbleMenuRestore={target,tag:item.tag};
-              promptBubbleFocusRestore={target,tag:item.tag,index:destination};
-              updatePromptFromBubbles(target,tokens);
+              reorderTag(target,index,delta);
             }
           }
         });
@@ -966,6 +964,11 @@
           tokens[index].weight=next.toFixed(1);
           promptBubbleFocusRestore={target,tag:item.tag,index};
           updatePromptFromBubbles(target,tokens);
+          return;
+        }
+        if(event.shiftKey&&(event.key==="ArrowLeft"||event.key==="ArrowRight")){
+          event.preventDefault();
+          reorderTag(target,index,event.key==="ArrowLeft"?-1:1);
           return;
         }
         if(event.shiftKey&&event.key!=="+")return;
@@ -1222,6 +1225,16 @@
     const index=Number.isInteger(insertIndex)?Math.max(0,Math.min(destinationTokens.length,insertIndex)):destinationTokens.length;
     destinationTokens.splice(index,0,item);
     return {tokens:destinationTokens,index,merged:false};
+  }
+  function reorderTag(target,index,delta) {
+    const key=target==="negative"?"promptNegative":"promptPositive";
+    const tokens=parsePromptTokens(state[key]);
+    const destination=index+delta;
+    if(!Number.isInteger(index)||destination<0||destination>=tokens.length)return false;
+    [tokens[index],tokens[destination]]=[tokens[destination],tokens[index]];
+    promptBubbleFocusRestore={target,tag:tokens[destination].tag,index:destination};
+    updatePromptFromBubbles(target,tokens);
+    return true;
   }
   function movePromptBubble(source,index,tokens) {
     const target=source==="positive"?"negative":"positive";
