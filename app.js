@@ -915,8 +915,23 @@
         }
         labelClickArmed = false;
         label.contentEditable="true";label.focus();
-        const range=document.createRange();range.selectNodeContents(label);
-        const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);
+        // 編集開始時は全選択せず、タップした位置にキャレットを置く。
+        let range = null;
+        if (document.caretRangeFromPoint) {
+          range = document.caretRangeFromPoint(event.clientX, event.clientY);
+        } else if (document.caretPositionFromPoint) {
+          const position = document.caretPositionFromPoint(event.clientX, event.clientY);
+          if (position) {
+            range = document.createRange();
+            range.setStart(position.offsetNode, position.offset);
+            range.collapse(true);
+          }
+        }
+        if (range && label.contains(range.startContainer)) {
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+        }
       });
       chip.addEventListener("click", event => {
         if(event.target.closest("button, .prompt-bubble-label"))return;
