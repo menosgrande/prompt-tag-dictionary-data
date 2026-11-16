@@ -61,7 +61,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, columnWidths: [30, 26, 210, 170, 130, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", undoHistory: [], restoringUndo: false, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, columnWidths: [30, 26, 210, 170, 130, 130, 34, 26], columnWidthMode: "desktop"
   };
   let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -759,6 +759,76 @@
   function serializePromptTokens(tokens) {
     return tokens.map(item => item.weight ? "(" + item.tag + ":" + item.weight + ")" : item.tag).join(", ");
   }
+  function promptSnapshot() {
+    return { positive: state.promptPositive, negative: state.promptNegative };
+  }
+  function captureUndoState() {
+    if (state.restoringUndo) return;
+    const snapshot = promptSnapshot();
+    const last = state.undoHistory[state.undoHistory.length - 1];
+    if (last && last.positive === snapshot.positive && last.negative === snapshot.negative) return;
+    state.undoHistory.push(snapshot);
+    if (state.undoHistory.length > 50) state.undoHistory.shift();
+    updateUndoButton();
+  }
+  function updateUndoButton() {
+    const button = $('[data-action="undo-prompt"]');
+    if (button) button.disabled = state.undoHistory.length === 0;
+  }
+  function undoPromptChange() {
+    if (!state.undoHistory.length) return;
+    const snapshot = state.undoHistory.pop();
+    state.restoringUndo = true;
+    state.promptPositive = snapshot.positive;
+    state.promptNegative = snapshot.negative;
+    $("#positive-output").value = state.promptPositive;
+    $("#negative-output").value = state.promptNegative;
+    state.restoringUndo = false;
+    syncSelectedFromPromptText();
+    renderRows();
+    renderEditor();
+  }
+  function locatePromptTag(tag) {
+    const normalized = String(tag || "").trim().toLocaleLowerCase();
+    for (const polarity of ["positive", "negative"]) {
+      const tokens = parsePromptTokens(state[polarity === "positive" ? "promptPositive" : "promptNegative"]);
+      const index = tokens.findIndex(item => item.tag.trim().toLocaleLowerCase() === normalized);
+      if (index >= 0) return { polarity, index };
+    }
+    return null;
+  }
+  function highlightPromptTag(polarity, index) {
+    const root = $("#" + polarity + "-bubbles");
+    const chip = root?.children[index];
+    if (!chip) return;
+    chip.classList.remove("is-duplicate-highlight");
+    void chip.offsetWidth;
+    chip.classList.add("is-duplicate-highlight");
+    chip.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
+    window.setTimeout(() => chip.classList.remove("is-duplicate-highlight"), 1500);
+  }
+  function renderPromptMetrics() {
+    ["positive", "negative"].forEach(polarity => {
+      const text = state[polarity === "positive" ? "promptPositive" : "promptNegative"];
+      const count = parsePromptTokens(text).length;
+      const chars = text.length;
+      // Character-based estimate only; this is not a model tokenizer.
+      const estimate = text.trim() ? Math.ceil(chars / 4) : 0;
+      const node = $("#" + polarity + "-prompt-metrics");
+      if (node) node.textContent = "タグ " + count + " 件 · 文字 " + chars + " · トークン目安 約 " + estimate + "（文字数÷4の概算）";
+    });
+  }
+  function renderPromptConflictWarning() {
+    const positive = new Set(parsePromptTokens(state.promptPositive).map(item => item.tag.trim().toLocaleLowerCase()).filter(Boolean));
+    const conflicts = [...new Set(parsePromptTokens(state.promptNegative).map(item => item.tag.trim()).filter(tag => positive.has(tag.toLocaleLowerCase())))];
+    const node = $("#prompt-conflict-warning");
+    if (!node) return;
+    node.hidden = conflicts.length === 0;
+    node.textContent = conflicts.length ? "確認：同じタグがポジティブ／ネガティブの両方にあります — " + conflicts.join(", ") : "";
+  }
+  function getPromptOutput(polarity) {
+    return polarity === "negative" ? state.promptNegative : state.promptPositive;
+  }
   function renderPromptBubbles(polarity) {
     const target = polarity === "negative" ? "negative" : "positive";
     const root = $("#" + target + "-bubbles");
@@ -794,7 +864,49 @@
       const remove=document.createElement("button");
       remove.type="button";remove.className="prompt-bubble-action";remove.textContent="×";remove.title="削除";
       remove.setAttribute("aria-label","削除");remove.addEventListener("click",()=>{tokens.splice(index,1);updatePromptFromBubbles(target,tokens);});
-      chip.append(label,remove);
+      const menuToggle=document.createElement("button");
+      menuToggle.type="button";menuToggle.className="prompt-bubble-action prompt-bubble-menu-toggle";
+      menuToggle.textContent="⋯";menuToggle.title="タグ操作";menuToggle.setAttribute("aria-label","タグ操作");
+      const menu=document.createElement("div");
+      menu.className="prompt-bubble-menu";menu.hidden=true;
+      const weightLabel=document.createElement("span");
+      weightLabel.className="prompt-bubble-weight";
+      const refreshWeight=()=>{weightLabel.textContent="重み: "+(tokens[index]?.weight||"なし");};
+      refreshWeight();
+      const addMenuButton=(text,action)=>{
+        const button=document.createElement("button");button.type="button";button.className="prompt-bubble-menu-item";button.textContent=text;
+        button.addEventListener("click",event=>{
+          event.preventDefault();event.stopPropagation();
+          if(action==="weight-down"||action==="weight-up"){
+            const current=Number(tokens[index].weight||1);
+            const next=Math.max(0.1,Math.min(2,Math.round((current+(action==="weight-up"?0.1:-0.1))*10)/10));
+            tokens[index].weight=next.toFixed(1);
+            updatePromptFromBubbles(target,tokens);
+          }else if(action==="move"){
+            menu.hidden=true;movePromptBubble(target,index,tokens);
+          }else if(action==="up"||action==="down"){
+            const destination=index+(action==="up"?-1:1);
+            if(destination>=0&&destination<tokens.length){
+              [tokens[index],tokens[destination]]=[tokens[destination],tokens[index]];
+              updatePromptFromBubbles(target,tokens);
+            }
+          }
+        });
+        menu.append(button);
+      };
+      menu.append(weightLabel);
+      addMenuButton("重み −","weight-down");
+      addMenuButton("重み ＋","weight-up");
+      addMenuButton(target==="positive"?"ネガティブへ移動":"ポジティブへ移動","move");
+      addMenuButton("前へ移動","up");
+      addMenuButton("後ろへ移動","down");
+      menuToggle.addEventListener("click",event=>{
+        event.preventDefault();event.stopPropagation();
+        const opening=menu.hidden;
+        root.querySelectorAll(".prompt-bubble-menu").forEach(other=>{other.hidden=true;});
+        menu.hidden=!opening;
+      });
+      chip.append(label,remove,menuToggle,menu);
       chip.addEventListener("keydown",event=>{
         if(event.target===label&&label.isContentEditable)return;
         if(event.ctrlKey&&event.key==="ArrowUp"){event.preventDefault();if(index>0){[tokens[index-1],tokens[index]]=[tokens[index],tokens[index-1]];updatePromptFromBubbles(target,tokens);}}
@@ -938,6 +1050,7 @@
           placeholder.remove();
           clearDragStyles();
           if(!cancelled){
+            captureUndoState();
             const positive=[...$("#positive-bubbles").querySelectorAll(".prompt-bubble")].map(node=>node._promptToken);
             const negative=[...$("#negative-bubbles").querySelectorAll(".prompt-bubble")].map(node=>node._promptToken);
             state.promptPositive=serializePromptTokens(positive);
@@ -989,6 +1102,7 @@
     });
   }
   function updatePromptFromBubbles(target,tokens) {
+    captureUndoState();
     const key=target==="negative"?"promptNegative":"promptPositive";
     state[key]=serializePromptTokens(tokens);
     const textarea=$("#"+(target==="negative"?"negative-output":"positive-output"));
@@ -999,14 +1113,17 @@
   }
   function movePromptBubble(source,index,tokens) {
     const target=source==="positive"?"negative":"positive";
-    const item=tokens.splice(index,1)[0];
-    const key=target==="negative"?"promptNegative":"promptPositive";
-    const destination=parsePromptTokens(state[key]);
+    const item=tokens[index];
+    if(!item)return;
+    captureUndoState();
+    const sourceTokens=tokens.filter((_,tokenIndex)=>tokenIndex!==index);
+    const destination=parsePromptTokens(state[target==="negative"?"promptNegative":"promptPositive"]);
     destination.push(item);
-    updatePromptFromBubbles(source,tokens);
-    state[key]=serializePromptTokens(destination);
-    $("#"+(target==="negative"?"negative-output":"positive-output")).value=state[key];
-    syncSelectedFromPromptText();renderPromptBubbles("positive");renderPromptBubbles("negative");renderEditor();
+    state[source==="negative"?"promptNegative":"promptPositive"]=serializePromptTokens(sourceTokens);
+    state[target==="negative"?"promptNegative":"promptPositive"]=serializePromptTokens(destination);
+    $("#positive-output").value=state.promptPositive;
+    $("#negative-output").value=state.promptNegative;
+    syncSelectedFromPromptText();renderRows();renderEditor();
   }
   function syncSelectedFromPromptText() {
     const rowsByTag=new Map(state.all.map(row=>[String(row.tag).toLocaleLowerCase(),row]));
@@ -1037,9 +1154,13 @@
     const query=normalizeSearchText(raw);
     const match=state.all.find(row=>normalizeSearchText(row.tag)===query||normalizeSearchText(row.ja)===query||parseAliases(row.aliases_json).some(alias=>normalizeSearchText(alias)===query));
     const tag=match?match.tag:raw;
+    const existing=locatePromptTag(tag);
+    if(existing){
+      input.value="";updateBubbleSuggestions(input);highlightPromptTag(existing.polarity,existing.index);return;
+    }
     const key=target==="negative"?"promptNegative":"promptPositive";
     const tokens=parsePromptTokens(state[key]);
-    if(!tokens.some(item=>item.tag.toLocaleLowerCase()===tag.toLocaleLowerCase()))tokens.push({tag,weight:""});
+    tokens.push({tag,weight:""});
     input.value="";updateBubbleSuggestions(input);updatePromptFromBubbles(target,tokens);
   }
   function setPromptEditorMode(target,mode) {
@@ -1054,16 +1175,20 @@
   }
 
   function appendPromptTag(polarity, tag) {
+    const existing=locatePromptTag(tag);
+    if(existing){highlightPromptTag(existing.polarity,existing.index);return;}
+    captureUndoState();
     const key = polarity === "negative" ? "promptNegative" : "promptPositive";
-    const tokens = promptTokens(state[key]);
-    if (!tokens.includes(tag)) tokens.push(tag);
-    state[key] = tokens.join(", ");
+    const tokens = parsePromptTokens(state[key]);
+    tokens.push({tag,weight:""});
+    state[key] = serializePromptTokens(tokens);
     const output = $(polarity === "negative" ? "#negative-output" : "#positive-output");
     if (output) output.value = state[key];
   }
   function removePromptTag(polarity, tag) {
+    captureUndoState();
     const key = polarity === "negative" ? "promptNegative" : "promptPositive";
-    state[key] = promptTokens(state[key]).filter(token => token !== tag).join(", ");
+    state[key] = parsePromptTokens(state[key]).filter(item => item.tag.toLocaleLowerCase() !== String(tag).toLocaleLowerCase()).map(item=>item.weight?"("+item.tag+":"+item.weight+")":item.tag).join(", ");
     const output = $(polarity === "negative" ? "#negative-output" : "#positive-output");
     if (output) output.value = state[key];
   }
@@ -1113,6 +1238,9 @@
     $('[data-action="save-positive"]').disabled = !positive?.value;
     $('[data-action="copy-negative"]').disabled = !negative?.value;
     $('[data-action="save-negative"]').disabled = !negative?.value;
+    renderPromptMetrics();
+    renderPromptConflictWarning();
+    updateUndoButton();
     renderPromptBubbles("positive"); renderPromptBubbles("negative");
   }
   function addRow(row) {
@@ -1482,6 +1610,7 @@
     $(".editor-builder-panel .text-button").addEventListener("click", () => {
       if (!state.selected.size && !state.promptPositive && !state.promptNegative) return;
       if (!window.confirm("選択タグとプロンプト本文をすべて解除しますか？")) return;
+      captureUndoState();
       state.selected.clear(); state.polarity.clear();
       state.promptPositive = ""; state.promptNegative = "";
       $("#positive-output").value = ""; $("#negative-output").value = "";
@@ -1498,11 +1627,14 @@
       }
     });
     $("#positive-output").addEventListener("input", event => {
+      captureUndoState();
       state.promptPositive = event.target.value; syncSelectedFromPromptText(); renderRows(); renderEditor();
     });
     $("#negative-output").addEventListener("input", event => {
+      captureUndoState();
       state.promptNegative = event.target.value; syncSelectedFromPromptText(); renderRows(); renderEditor();
     });
+    $('[data-action="undo-prompt"]').addEventListener("click", undoPromptChange);
     ["positive","negative"].forEach(target => {
       const output = $("#" + target + "-output");
 
@@ -1538,17 +1670,19 @@
     });
     $$("[data-action]").forEach(button => button.addEventListener("click", async () => {
       const action = button.dataset.action;
-      const target = action.includes("negative") ? $("#negative-output") : $("#positive-output");
+      const polarity = action.includes("negative") ? "negative" : "positive";
+      const output = getPromptOutput(polarity);
+      if (action.startsWith("undo")) return;
       if (action.startsWith("copy")) {
-        const copied = await copyText(target.value);
+        const copied = await copyText(output);
         if (copied) {
           const original = button.textContent;
           button.textContent = "コピーしました";
           button.disabled = true;
-          window.setTimeout(() => { button.textContent = original; button.disabled = !target.value; }, 1400);
+          window.setTimeout(() => { button.textContent = original; button.disabled = !getPromptOutput(polarity); }, 1400);
         } else button.textContent = "コピー失敗";
       }
-      if (action.startsWith("save")) downloadText(action.includes("negative") ? "negative-prompt.txt" : "positive-prompt.txt", target.value);
+      if (action.startsWith("save")) downloadText(polarity + "-prompt.txt", output);
     }));
   }
   async function init() {
