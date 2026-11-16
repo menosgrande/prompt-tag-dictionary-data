@@ -828,16 +828,23 @@
   }
   function getPromptOutput(polarity) {
     const source = polarity === "negative" ? state.promptNegative : state.promptPositive;
+    const rowsByTag = new Map(state.all.map(candidate => [normalizeSearchText(candidate.tag), candidate]));
     const rowsByTerm = new Map();
+    const ambiguousTerms = new Set();
     state.all.forEach(candidate => {
-      [candidate.tag, candidate.ja, ...parseAliases(candidate.aliases_json)].forEach(term => {
+      [candidate.ja, ...parseAliases(candidate.aliases_json)].forEach(term => {
         const normalized = normalizeSearchText(term);
-        if (normalized && !rowsByTerm.has(normalized)) rowsByTerm.set(normalized, candidate);
+        if (!normalized || ambiguousTerms.has(normalized)) return;
+        const existing = rowsByTerm.get(normalized);
+        if (existing && existing.tag !== candidate.tag) {
+          rowsByTerm.delete(normalized);
+          ambiguousTerms.add(normalized);
+        } else if (!existing) rowsByTerm.set(normalized, candidate);
       });
     });
     return parsePromptTokens(source).map(item => {
       const normalized = normalizeSearchText(item.tag);
-      const row = rowsByTerm.get(normalized);
+      const row = rowsByTag.get(normalized) || (ambiguousTerms.has(normalized) ? null : rowsByTerm.get(normalized));
       const tag = row ? row.tag : item.tag;
       return item.weight ? "(" + tag + ":" + item.weight + ")" : tag;
     }).join(", ");
