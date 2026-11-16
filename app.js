@@ -850,12 +850,20 @@
     }).join(", ");
   }
   let promptBubbleMenuRestore = null;
+  let promptBubbleFocusRestore = null;
   function renderPromptBubbles(polarity) {
     const target = polarity === "negative" ? "negative" : "positive";
     const root = $("#" + target + "-bubbles");
     if (!root) return;
     const tokens = parsePromptTokens(state[target === "negative" ? "promptNegative" : "promptPositive"]);
     const rowsByTag = new Map(state.all.map(row => [String(row.tag).toLocaleLowerCase(), row]));
+    const activeChip = document.activeElement?.closest?.(".prompt-bubble");
+    const activeChipIndex = activeChip && root.contains(activeChip) ? [...root.children].indexOf(activeChip) : -1;
+    const focusRestore = promptBubbleFocusRestore?.target === target
+      ? promptBubbleFocusRestore
+      : (!promptBubbleFocusRestore && activeChipIndex >= 0
+        ? { target, tag: activeChip._promptToken?.tag, index: activeChipIndex }
+        : null);
     root.replaceChildren();
     tokens.forEach((item,index) => {
       const chip = document.createElement("div");
@@ -880,6 +888,7 @@
         if(!label.isContentEditable)return;
         label.contentEditable="false";const value=label.textContent.trim();
         if(value)tokens[index].tag=value;else label.textContent=tokens[index].tag;
+        promptBubbleFocusRestore={target,tag:tokens[index].tag,index};
         updatePromptFromBubbles(target,tokens);
       };
       label.addEventListener("keydown",event=>{
@@ -908,10 +917,12 @@
             const next=Math.max(0.1,Math.min(2,Math.round((current+(action==="weight-up"?0.1:-0.1))*10)/10));
             tokens[index].weight=next.toFixed(1);
             promptBubbleMenuRestore={target,tag:item.tag};
+            promptBubbleFocusRestore={target,tag:item.tag,index};
             updatePromptFromBubbles(target,tokens);
           }else if(action==="move"){
             const destination=target==="positive"?"negative":"positive";
             promptBubbleMenuRestore={target:destination,tag:item.tag};
+            promptBubbleFocusRestore={target:destination,tag:item.tag,index:parsePromptTokens(state[destination==="negative"?"promptNegative":"promptPositive"]).length};
             movePromptBubble(target,index,tokens);
           }else if(action==="remove"){
             tokens.splice(index,1);updatePromptFromBubbles(target,tokens);
@@ -920,6 +931,7 @@
             if(destination>=0&&destination<tokens.length){
               [tokens[index],tokens[destination]]=[tokens[destination],tokens[index]];
               promptBubbleMenuRestore={target,tag:item.tag};
+              promptBubbleFocusRestore={target,tag:item.tag,index:destination};
               updatePromptFromBubbles(target,tokens);
             }
           }
@@ -938,6 +950,25 @@
         const opening=menu.hidden;
         root.querySelectorAll(".prompt-bubble-menu").forEach(other=>{other.hidden=true;});
         menu.hidden=!opening;
+      });
+      chip.addEventListener("keydown",event=>{
+        if(event.target!==chip||event.isComposing||event.keyCode===229||event.ctrlKey||event.metaKey||event.altKey)return;
+        if(label.isContentEditable||!menu.hidden)return;
+        if(event.key==="+"||event.key==="-"){
+          event.preventDefault();
+          const current=Number(tokens[index].weight||1);
+          const next=Math.max(0.1,Math.min(2,Math.round((current+(event.key==="+"?0.1:-0.1))*10)/10));
+          if(next===current)return;
+          tokens[index].weight=next.toFixed(1);
+          promptBubbleFocusRestore={target,tag:item.tag,index};
+          updatePromptFromBubbles(target,tokens);
+          return;
+        }
+        if(event.key==="ArrowLeft"||event.key==="ArrowRight"){
+          const chips=[...root.querySelectorAll(".prompt-bubble")];
+          const nextChip=chips[index+(event.key==="ArrowRight"?1:-1)];
+          if(nextChip){event.preventDefault();nextChip.focus();}
+        }
       });
       chip.append(label);
       if(translation.textContent)chip.append(translation);
@@ -1093,8 +1124,14 @@
             captureUndoState();
             const positive=[...$("#positive-bubbles").querySelectorAll(".prompt-bubble")].map(node=>node._promptToken);
             const negative=[...$("#negative-bubbles").querySelectorAll(".prompt-bubble")].map(node=>node._promptToken);
+            const movedTag=chip._promptToken?.tag;
             state.promptPositive=serializePromptTokens(positive);
             state.promptNegative=serializePromptTokens(negative);
+            const destinationRoot=placeholder.parentElement;
+            const destinationPolarity=destinationRoot?.id==="negative-bubbles"?"negative":"positive";
+            const destinationTokens=destinationPolarity==="negative"?negative:positive;
+            const movedIndex=destinationTokens.findIndex(token=>token.tag===movedTag);
+            if(movedIndex>=0)promptBubbleFocusRestore={target:destinationPolarity,tag:movedTag,index:movedIndex};
             $("#positive-output").value=state.promptPositive;
             $("#negative-output").value=state.promptNegative;
             syncSelectedFromPromptText();
@@ -1140,6 +1177,13 @@
       });
       root.append(chip);
     });
+    if(focusRestore){
+      const candidate=root.querySelectorAll(".prompt-bubble")[focusRestore.index];
+      if(candidate&&candidate._promptToken?.tag===focusRestore.tag){
+        candidate.focus({preventScroll:true});
+        if(promptBubbleFocusRestore===focusRestore||promptBubbleFocusRestore?.target===target)promptBubbleFocusRestore=null;
+      }
+    }
   }
   function updatePromptFromBubbles(target,tokens) {
     captureUndoState();
