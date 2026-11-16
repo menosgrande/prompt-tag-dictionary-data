@@ -1137,8 +1137,10 @@
             let mergedIndex=-1;
             let merged=false;
             if(originRoot!==destinationRoot){
-              const destinationTokens=(destinationPolarity==="negative"?negative:positive).filter(token=>token!==movedToken);
-              const result=mergeIntoDestination(movedToken,destinationTokens);
+              const droppedTokens=destinationPolarity==="negative"?negative:positive;
+              const dropIndex=droppedTokens.findIndex(token=>token===movedToken);
+              const destinationTokens=droppedTokens.filter(token=>token!==movedToken);
+              const result=mergeIntoDestination(movedToken,destinationTokens,dropIndex);
               mergedIndex=result.index;
               merged=result.merged;
               if(destinationPolarity==="negative")negative=result.tokens;
@@ -1212,12 +1214,13 @@
     // render here so a restored open menu is not immediately discarded.
     renderRows();renderEditor();
   }
-  function mergeIntoDestination(item,destinationTokens) {
+  function mergeIntoDestination(item,destinationTokens,insertIndex=null) {
     const normalized=normalizePromptTag(item?.tag);
     const duplicateIndex=destinationTokens.findIndex(token=>normalizePromptTag(token.tag)===normalized);
     if(duplicateIndex>=0)return {tokens:destinationTokens,index:duplicateIndex,merged:true};
-    destinationTokens.push(item);
-    return {tokens:destinationTokens,index:destinationTokens.length-1,merged:false};
+    const index=Number.isInteger(insertIndex)?Math.max(0,Math.min(destinationTokens.length,insertIndex)):destinationTokens.length;
+    destinationTokens.splice(index,0,item);
+    return {tokens:destinationTokens,index,merged:false};
   }
   function movePromptBubble(source,index,tokens) {
     const target=source==="positive"?"negative":"positive";
