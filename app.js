@@ -894,18 +894,25 @@
       chip.setAttribute("aria-label",item.tag + "。1回クリックでフォーカス、同じチップをもう1回クリックでタグ名を編集。ドラッグで並べ替え");
       const label = document.createElement("span");
       label.className = "prompt-bubble-label"; label.textContent = item.tag;
+      let labelClickArmed = false;
+      label.addEventListener("pointerdown", event => {
+        if (!label.isContentEditable) event.preventDefault();
+      });
+      chip.addEventListener("blur", () => { labelClickArmed = false; });
       const dictionaryRow = rowsByTag.get(item.tag.toLocaleLowerCase());
       const translation = document.createElement("small");
       translation.className = "prompt-bubble-translation";
       translation.textContent = dictionaryRow?.ja || "";
       label.addEventListener("click", event => {
         if(label.isContentEditable)return;
-        // 1回目はチップにフォーカスするだけ。フォーカス済みの同じチップを再クリックすると編集する。
-        if(document.activeElement!==chip){
+        // クリック回数をフォーカス状態と分離する。自動復元されたフォーカスで初回から編集しない。
+        if(!labelClickArmed){
+          labelClickArmed = true;
           event.preventDefault();
           chip.focus();
           return;
         }
+        labelClickArmed = false;
         label.contentEditable="true";label.focus();
         const range=document.createRange();range.selectNodeContents(label);
         const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);
