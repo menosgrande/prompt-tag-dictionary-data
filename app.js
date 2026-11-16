@@ -757,7 +757,7 @@
     });
   }
   function serializePromptTokens(tokens) {
-    return tokens.map(item => item.weight ? "(" + item.tag + ":" + item.weight + ")" : item.tag).join(", ");
+    return tokens.map(item => item.weight && Number(item.weight) !== 1 ? "(" + item.tag + ":" + item.weight + ")" : item.tag).join(", ");
   }
   function promptSnapshot() {
     return { positive: state.promptPositive, negative: state.promptNegative };
@@ -846,7 +846,7 @@
       const normalized = normalizeSearchText(item.tag);
       const row = rowsByTag.get(item.tag.toLocaleLowerCase()) || (ambiguousTerms.has(normalized) ? null : rowsByTerm.get(normalized));
       const tag = row ? row.tag : item.tag;
-      return item.weight ? "(" + tag + ":" + item.weight + ")" : tag;
+      return item.weight && Number(item.weight) !== 1 ? "(" + tag + ":" + item.weight + ")" : tag;
     }).join(", ");
   }
   let promptBubbleMenuRestore = null;
@@ -1248,6 +1248,11 @@
   }
   function setPromptEditorMode(target,mode) {
     const positive=target==="positive";
+    const promptKey=positive?"promptPositive":"promptNegative";
+    if(mode==="text"){
+      state[promptKey]=serializePromptTokens(parsePromptTokens(state[promptKey]));
+      $("#"+(positive?"positive-output":"negative-output")).value=state[promptKey];
+    }
     state.editorModes[target]=mode;
     const editor=$("#"+target+"-bubble-editor");
     editor.hidden=false;
@@ -1271,7 +1276,7 @@
   function removePromptTag(polarity, tag, recordUndo=true) {
     if(recordUndo)captureUndoState();
     const key = polarity === "negative" ? "promptNegative" : "promptPositive";
-    state[key] = parsePromptTokens(state[key]).filter(item => item.tag.toLocaleLowerCase() !== String(tag).toLocaleLowerCase()).map(item=>item.weight?"("+item.tag+":"+item.weight+")":item.tag).join(", ");
+    state[key] = serializePromptTokens(parsePromptTokens(state[key]).filter(item => item.tag.toLocaleLowerCase() !== String(tag).toLocaleLowerCase()));
     const output = $(polarity === "negative" ? "#negative-output" : "#positive-output");
     if (output) output.value = state[key];
   }
