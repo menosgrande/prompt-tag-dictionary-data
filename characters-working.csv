@@ -832,7 +832,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4290,hisakawa hayate (The Idolmaster Cinderella Girls),久川颯（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4291,hisakawa nagi (The Idolmaster Cinderella Girls),久川凪,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4293,hishikawa rikka (DokiDoki! PreCure),菱川六花（ドキドキ！プリキュア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4294,hisona (suaritesumi),Hisona(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+4294,hisona (suaritesumi),Hisona(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4300,hizaka,ヒザカ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4301,hizuki yayoi,ひづき夜宵(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4302,ho-kago tea time,放課後ティータイム,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -857,7 +857,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4539,honolulu (azur lane),ホノルル（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4561,hori (hori no su),ほり(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4562,horikawa raiko (touhou project),堀川雷鼓（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4576,horosuke,ホロスケ,キャラクター・作品,作者・配信者,,"[""Horosuke""]",verified,0,verified,verified,normal
+4576,horosuke,ホロスケ(イラストレーター),キャラクター・作品,作者・配信者,,"[""Horosuke""]",verified,0,verified,verified,normal
 4587,hoshi syoko (The Idolmaster Cinderella Girls),星輝子（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4588,hoshiguma (arknights),ホシグマ（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4589,hoshiguma yuugi (Touhou Project),星熊勇儀,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1010,7 +1010,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4907,jessie (pokemon),ムサシ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4912,jeweled branch of hourai,蓬莱の玉の枝,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 4916,jigglypuff (Pokémon),プリン（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4918,jin (mugenjin),ジン(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+4918,jin (mugenjin),ジン(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4921,jinguu (4839ms),Jinguu(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4922,jintsuu (kancolle),神通（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4923,jinx (league of legends),ジンクス（リーグオブレジェンド）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1100,9 +1100,9 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5049,kasane teto (UTAU),重音テト（UTAU）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5050,kasane teto (sv),重音テトSV,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5051,kase daiki,加瀬大輝(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-5052,kashikaze,カシカゼ,キャラクター・作品,作者・配信者,,"[""Kashikaze""]",verified,0,verified,verified,normal
+5052,kashikaze,樫風(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,"[""Kashikaze""]",verified,0,verified,verified,normal
 5053,kashima (kancolle),鹿島（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5054,kashiwamochi yomogi,カシワモチヨモギ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+5054,kashiwamochi yomogi,柏餅よもぎ(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5055,kashiwazaki sena (Haganai),柏崎星奈,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5056,kasodani kyouko (Touhou Project),幽谷響子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5057,kasugano sakura (Street Fighter),春日野さくら（ストリートファイター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1521,7 +1521,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6052,misaki kurehito,深崎暮人(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6053,mishima kurone,三嶋くろね(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6068,misty (pokemon),カスミ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-6069,misumi (macaroni),Misumi(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+6069,misumi (macaroni),みすみ(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6070,misumi nagisa (futari wa pretty cure),美墨なぎさ（ふたりはプリキュア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6072,mitaka asa (chainsaw man),三鷹アサ（チェンソーマン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6073,mitakihara school uniform,見滝原中学校の制服（魔法少女まどか☆マギカ）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
@@ -1542,7 +1542,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6094,miyuki (kancolle),深雪（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6096,mizuhara aki,Mizuhara Aki(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6097,mizuhashi parsee (Touhou Project),水橋パルスィ（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-6098,mizuki hitoshi,ミズキ・ヒトシ,キャラクター・作品,作者・配信者,,"[""Mizuki Hitoshi""]",verified,0,verified,verified,normal
+6098,mizuki hitoshi,みずきひとし(漫画家),キャラクター・作品,作者・配信者,,"[""Mizuki Hitoshi""]",verified,0,verified,verified,normal
 6099,mizuki makoto,ミズキ・マコト,キャラクター・作品,作者・配信者,,"[""Mizuki Makoto""]",verified,0,verified,verified,normal
 6100,mizumizuni,ミズミズニ,キャラクター・作品,作者・配信者,,"[""Mizumizuni""]",verified,0,verified,verified,normal
 6101,mizumoto tadashi,水本正(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
