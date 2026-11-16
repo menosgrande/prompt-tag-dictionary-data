@@ -896,7 +896,8 @@
       label.className = "prompt-bubble-label"; label.textContent = item.tag;
       let labelClickArmed = false;
       label.addEventListener("pointerdown", event => {
-        if (!label.isContentEditable) event.preventDefault();
+        // Touch input must retain its default focus behavior so mobile keyboards can open.
+        if (!label.isContentEditable && event.pointerType !== "touch") event.preventDefault();
       });
       chip.addEventListener("blur", () => { labelClickArmed = false; });
       const dictionaryRow = rowsByTag.get(item.tag.toLocaleLowerCase());
