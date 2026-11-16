@@ -7,11 +7,11 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 50,7th dragon (series),セブンスドラゴン（シリーズ）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 52,9s (nier:automata),ヨルハ九号S型（ニーア オートマタ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 53,a certain high school uniform,とある高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
-55,a1 (initial-g),A1（Initial-G）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-56,aaaa (quad-a),AAAA（Quad-A）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+55,a1 (initial-g),"A1（Initial-G）(作者)",キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+56,aaaa (quad-a),"AAAA（Quad-A）(作者)",キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 58,abigail williams (fate),アビゲイル・ウィリアムズ（Fate/Grand Order）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 59,abigail williams (swimsuit foreigner) (fate),アビゲイル・ウィリアムズ（水着フォーリナー）（Fate/Grand Order）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-67,abubu,あぶぶ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+67,abubu,"あぶぶ(作者)",キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 68,abukuma (kancolle),阿武隈（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 70,abyssal ship,深海棲艦,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 71,accelerator (toaru majutsu no index),アクセラレータ（とある魔術の禁書目録）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -28,9 +28,9 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 107,aestus estus,原初の火（Fate/EXTRA）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 108,aether (genshin impact),空（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 112,afrobull,Afrobull(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-119,agahari,アガハリ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+119,agahari,"アガハリ(作者)",キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 125,agano (kancolle),阿賀野（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-126,agawa ryou,阿川椋,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+126,agawa ryou,"阿川椋(作者)",キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 133,agnes digital (umamusume),アグネスデジタル（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 134,agnes tachyon (umamusume),アグネスタキオン（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 138,ahri (league of legends),アーリ（リーグ・オブ・レジェンド）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
