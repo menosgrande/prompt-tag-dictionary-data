@@ -753,3 +753,17 @@ body{font-size:14px;line-height:1.65}
   overscroll-behavior-x:contain;
   -webkit-overflow-scrolling:touch;
 }
+
+
+/* Move tag administration out of the mobile header so the tag list keeps its width. */
+.mobile-admin-link{display:none}
+@media(max-width:760px){
+  .topbar-meta{gap:10px;flex-shrink:0}
+  .header-stats{gap:5px}
+  .header-stats .stat-card{gap:5px;padding:4px 7px}
+  .header-stats .stat-card strong{font-size:12px}
+  .header-stats .stat-card span{font-size:9px}
+  .topbar-meta>.button{display:none}
+  .mobile-admin-link{display:inline-flex;flex-shrink:0;min-height:32px;padding:5px 10px;font-size:10px}
+  .footer{align-items:center}
+}
