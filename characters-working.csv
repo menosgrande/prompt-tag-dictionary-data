@@ -812,7 +812,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4266,himekaidou hatate (Touhou Project),姫海棠はたて,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4267,himemori luna (Hololive),姫森ルーナ（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4268,himeno (chainsaw man),姫野（チェンソーマン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4269,himura kiseki,比村奇石(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+4269,himura kiseki,比村奇石(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4270,hina (blue archive),空崎ヒナ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4271,hina (swimsuit) (blue archive),ヒナ（水着）（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4272,hinanawi tenshi (Touhou Project),比那名居天子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -884,7 +884,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4618,houshou marine (Hololive),宝鐘マリン（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4619,houshou marine (1st costume),宝鐘マリン（初期衣装）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4620,houshou marine (summer),宝鐘マリン（夏衣装）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4621,houtengeki,方天戟(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+4621,houtengeki,方天戟(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4624,hozuki momiji (onii-chan wa oshimai!),穂月もみじ（お兄ちゃんはおしまい！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4625,hu tao (genshin impact),フータオ（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4643,hugtto! precure,HUGっと！プリキュア,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -933,7 +933,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4713,ikari shinji (Neon Genesis Evangelion),碇シンジ（新世紀エヴァンゲリオン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4714,ikazuchi (kancolle),雷（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4715,ike (fire emblem),アイク（ファイアーエムブレム 蒼炎の軌跡／暁の女神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4716,ikeuchi tanuma,池内たぬま(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+4716,ikeuchi tanuma,池内たぬま(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4717,ikkitousen,一騎当千,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4718,ikuchan kaoru,郁(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4720,illustrious (azur lane),イラストリアス（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -997,7 +997,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4869,izuna (blue archive),イズナ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4870,jack dempa,ジャックデンパ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4871,jack the ripper (fate/apocrypha),ジャック・ザ・リッパー（Fate/Apocrypha）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4884,jako (jakoo21),じゃこ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+4884,jako (jakoo21),じゃこ(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4885,jakuzure nonon (Kill la Kill),蛇崩乃音（キルラキル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4887,james (pokemon),コジロウ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4888,jane doe (zenless zone zero),ジェーン・ドゥ（ゼンレスゾーンゼロ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1108,7 +1108,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5057,kasugano sakura (Street Fighter),春日野さくら（ストリートファイター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5058,kasumi (doa),かすみ（DEAD OR ALIVE）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5059,kasumi (kancolle),霞（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5060,kasumi (skchkko),かすみ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+5060,kasumi (skchkko),かすみ(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5061,kasumi kai ni (kancolle),霞改二（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5062,katahira masashi,Katahira Masashi(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5064,katekyo hitman reborn!,家庭教師ヒットマンREBORN！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
