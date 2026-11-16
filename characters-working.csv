@@ -20,7 +20,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 82,adachi rei (utau),足立レイ（UTAU）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 97,admiral (kancolle),提督（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 98,admire vega (umamusume),アドマイヤベガ（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-99,ado (utaite),Ado（アド）,キャラクター・作品,作者・配信者,,"[""Ado"",""アド""]",verified,0,verified,verified,normal
+99,ado (utaite),Ado（アド）(歌い手・歌手),キャラクター・作品,作者・配信者,,"[""Ado"",""アド""]",verified,0,verified,verified,normal
 100,adventure time,アドベンチャー・タイム（アニメタイトル）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 101,adventurer (ff11),冒険者（ファイナルファンタジーXI）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 102,aegis (persona),アイギス（ペルソナ3）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -855,7 +855,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4537,honkai impact 3rd,崩壊3rd,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4538,honkai: star rail,崩壊：スターレイル,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4539,honolulu (azur lane),ホノルル（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4561,hori (hori no su),ほり(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+4561,hori (hori no su),ほり(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4562,horikawa raiko (touhou project),堀川雷鼓（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4576,horosuke,ホロスケ,キャラクター・作品,作者・配信者,,"[""Horosuke""]",verified,0,verified,verified,normal
 4587,hoshi syoko (The Idolmaster Cinderella Girls),星輝子（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -940,7 +940,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4721,illyasviel von einzbern (Fate),イリヤスフィール・フォン・アインツベルン,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4722,ilya kuvshinov,イリヤ・クブシノフ(イラストレーター・アニメーション監督),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4724,imaizumi kagerou (Touhou Project),今泉影狼,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4725,imizu (nitro unknown),イミズ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+4725,imizu (nitro unknown),イミズ(イラストレーター・漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4743,imu sanjo,三条いむ(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4756,inaba tewi (Touhou Project),因幡てゐ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4757,inazuma (kancolle),電（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1128,7 +1128,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5079,kazama iroha (Hololive),風真いろは（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5080,kazama iroha (1st costume),風真いろは（1st衣装）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5081,kazami yuuka (Touhou Project),風見幽香,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5082,kazenokaze,Kazenokaze(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+5082,kazenokaze,Kazenokaze(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5083,kazusa (blue archive),杏山カズサ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5085,keizoku military uniform,継続高校の軍服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5086,keizoku school uniform,継続高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
@@ -1501,7 +1501,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6016,mima (touhou),魅魔（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6018,mimikyu (Pokémon),ミミッキュ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6019,mimura kanako (the idolmaster cinderella girls),三村かな子（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-6020,minaba hideo,皆葉英夫(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+6020,minaba hideo,皆葉英夫(アートディレクター・ゲームデザイナー),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6021,minakami (flyingman555),Minakami(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6022,minami (colorful palette),みなみ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6023,minami kotori (love live! school idol project),南ことり（ラブライブ！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1518,7 +1518,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6047,miracle mallet,奇跡のマレット,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 6048,mirko,ミルコ（僕のヒーローアカデミア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6051,misaka mikoto (a certain scientific railgun),御坂美琴（とある科学の超電磁砲）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-6052,misaki kurehito,深崎暮人(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+6052,misaki kurehito,深崎暮人(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6053,mishima kurone,三嶋くろね(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6068,misty (pokemon),カスミ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6069,misumi (macaroni),Misumi(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
