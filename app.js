@@ -61,7 +61,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", undoHistory: [], restoringUndo: false, textEditUndoPending: { positive: false, negative: false }, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, escapeParentheses: false, columnWidths: [30, 26, 210, 170, 130, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", undoHistory: [], redoHistory: [], restoringUndo: false, textEditUndoPending: { positive: false, negative: false }, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, escapeParentheses: false, columnWidths: [30, 26, 210, 170, 130, 130, 34, 26], columnWidthMode: "desktop"
   };
   let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -769,24 +769,41 @@
     if (last && last.positive === snapshot.positive && last.negative === snapshot.negative) return;
     state.undoHistory.push(snapshot);
     if (state.undoHistory.length > 50) state.undoHistory.shift();
-    updateUndoButton();
+    state.redoHistory = [];
+    updateUndoButtons();
   }
-  function updateUndoButton() {
-    const button = $('[data-action="undo-prompt"]');
-    if (button) button.disabled = state.undoHistory.length === 0;
+  function updateUndoButtons() {
+    const undoButton = $('[data-action="undo-prompt"]');
+    const redoButton = $('[data-action="redo-prompt"]');
+    if (undoButton) undoButton.disabled = state.undoHistory.length === 0;
+    if (redoButton) redoButton.disabled = state.redoHistory.length === 0;
   }
-  function undoPromptChange() {
-    if (!state.undoHistory.length) return;
-    const snapshot = state.undoHistory.pop();
+  function restorePromptSnapshot(snapshot) {
     state.restoringUndo = true;
     state.promptPositive = snapshot.positive;
     state.promptNegative = snapshot.negative;
     $("#positive-output").value = state.promptPositive;
     $("#negative-output").value = state.promptNegative;
     state.restoringUndo = false;
+    state.textEditUndoPending.positive = false;
+    state.textEditUndoPending.negative = false;
     syncSelectedFromPromptText();
     renderRows();
     renderEditor();
+  }
+  function undoPromptChange() {
+    if (!state.undoHistory.length) return;
+    state.redoHistory.push(promptSnapshot());
+    if (state.redoHistory.length > 50) state.redoHistory.shift();
+    restorePromptSnapshot(state.undoHistory.pop());
+    updateUndoButtons();
+  }
+  function redoPromptChange() {
+    if (!state.redoHistory.length) return;
+    state.undoHistory.push(promptSnapshot());
+    if (state.undoHistory.length > 50) state.undoHistory.shift();
+    restorePromptSnapshot(state.redoHistory.pop());
+    updateUndoButtons();
   }
   function normalizePromptTag(tag) {
     return String(tag || "").trim().toLocaleLowerCase();
@@ -1377,7 +1394,7 @@
     $('[data-action="save-negative"]').disabled = !negative?.value;
     renderPromptMetrics();
     renderPromptConflictWarning();
-    updateUndoButton();
+    updateUndoButtons();
     renderPromptBubbles("positive"); renderPromptBubbles("negative");
   }
   function addRow(row) {
@@ -1739,6 +1756,24 @@
     });
     window.addEventListener("keydown", event => {
       const target = event.target;
+      const editorPanel = target instanceof Element ? target.closest(".editor-builder-panel") : null;
+      const isBubbleAddInput = target instanceof Element && target.matches("#positive-bubble-add, #negative-bubble-add");
+      const hasCommandModifier = event.ctrlKey || event.metaKey;
+      const key = event.key.toLowerCase();
+      const isUndoShortcut = hasCommandModifier && !event.shiftKey && !event.altKey && key === "z";
+      const isRedoShortcut = hasCommandModifier && !event.altKey && (
+        (event.shiftKey && key === "z") || (!event.shiftKey && key === "y")
+      );
+      if (editorPanel && !isBubbleAddInput && isRedoShortcut && state.redoHistory.length) {
+        event.preventDefault();
+        redoPromptChange();
+        return;
+      }
+      if (editorPanel && !isBubbleAddInput && isUndoShortcut && state.undoHistory.length) {
+        event.preventDefault();
+        undoPromptChange();
+        return;
+      }
       const isTyping = target instanceof HTMLElement && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName));
       if (event.key === "/" && !isTyping && !event.ctrlKey && !event.metaKey && !event.altKey) {
         event.preventDefault();
@@ -1783,6 +1818,7 @@
       state.promptNegative = event.target.value; syncSelectedFromPromptText(); renderRows(); renderEditor();
     });
     $('[data-action="undo-prompt"]').addEventListener("click", undoPromptChange);
+    $('[data-action="redo-prompt"]').addEventListener("click", redoPromptChange);
     ["positive","negative"].forEach(target => {
       const output = $("#" + target + "-output");
 
