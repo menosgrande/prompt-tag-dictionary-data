@@ -780,7 +780,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4196,hellsing,HELLSING（ヘルシング）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4197,helltaker,Helltaker（ヘルテイカー）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4202,hestia (danmachi),ヘスティア（ダンまち）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4205,hews,Hews（ヒューズ）,キャラクター・作品,作者・配信者,,"[""Hews"",""ヒューズ""]",verified,0,verified,verified,normal
+4205,hews,Hews(イラストレーター),キャラクター・作品,作者・配信者,,"[""Hews"",""ヒューズ""]",verified,0,verified,verified,normal
 4206,hex maniac (pokemon),オカルトマニア（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4211,hibike! euphonium,響け！ユーフォニアム,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4212,hibiki (blue archive),ヒビキ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -941,7 +941,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4722,ilya kuvshinov,イリヤ・クブシノフ(イラストレーター・アニメーション監督),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4724,imaizumi kagerou (Touhou Project),今泉影狼,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4725,imizu (nitro unknown),イミズ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-4743,imu sanjo,三条いむ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+4743,imu sanjo,三条いむ(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4756,inaba tewi (Touhou Project),因幡てゐ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4757,inazuma (kancolle),電（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4758,inazuma eleven,イナズマイレブン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -993,7 +993,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4865,izayoi sakuya (Touhou Project),十六夜咲夜,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4866,izumi konata (Lucky Star),泉こなた（らき☆すた）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4867,izumi sagiri (Eromanga Sensei),和泉紗霧（エロマンガ先生）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4868,izumi tsubasu,和泉つばす,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+4868,izumi tsubasu,和泉つばす(イラストレーター・原画家・キャラクターデザイナー),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4869,izuna (blue archive),イズナ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4870,jack dempa,ジャックデンパ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4871,jack the ripper (fate/apocrypha),ジャック・ザ・リッパー（Fate/Apocrypha）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1044,7 +1044,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4974,kafuu chino (Is the Order a Rabbit?),香風智乃,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4975,kaga (azur lane),加賀（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4976,kaga (kancolle),加賀（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4977,kagami hirotaka,カガミヒロタカ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+4977,kagami hirotaka,カガミヒロタカ(絵師・原画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4979,kagamine len (Vocaloid),鏡音レン（ボーカロイド）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4980,kagamine rin (Vocaloid),鏡音リン（ボーカロイド）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4981,kagari atsuko (Little Witch Academia),アツコ・カガリ（リトルウィッチアカデミア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1085,7 +1085,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5025,kannagi,かんなぎ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5026,kanon,Kanon（作品名）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5027,kanon (kurogane knights),カノン（クロガネナイツ）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-5028,kanpa (campagne 9),カンパ（Campagne 9）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+5028,kanpa (campagne 9),カンパ(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5029,kanroji mitsuri (Demon Slayer: Kimetsu no Yaiba),甘露寺蜜璃,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5031,kantai collection,艦隊これくしょん,キャラクター・作品,タイトル（作品名）,,"[""KanColle""]",verified,0,verified,verified,normal
 5032,kantoku,カントク(イラストレーター・原画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
@@ -1229,7 +1229,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5244,konoshige (ryuun),コノシゲ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5245,konpaku youmu (Touhou Project),魂魄妖夢,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5246,konpaku youmu (ghost),魂魄妖夢（幽霊）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5249,koruri,コルリ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+5249,koruri,コルリ(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5250,kosaka honoka (Love Live! School Idol Project),高坂穂乃果（ラブライブ！ School idol project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5251,koseki bijou (Hololive),古石ビジュー（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5252,koshimizu sachiko (The Idolmaster Cinderella Girls),輿水幸子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1684,7 +1684,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6467,nekomata okayu (hololive),猫又おかゆ（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6468,nekomata okayu (1st costume),猫又おかゆ（1st衣装）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6470,nekopara,ネコぱら,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-6471,nekotoufu,ねことうふ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+6471,nekotoufu,ねことうふ(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6472,nemona (pokemon),ネモ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6474,neocoill,Neocoill（ネオコイル）,キャラクター・作品,作者・配信者,,"[""Neocoill"",""ネオコイル""]",verified,0,verified,verified,normal
 6475,neon genesis evangelion,新世紀エヴァンゲリオン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
