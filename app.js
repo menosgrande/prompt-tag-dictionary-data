@@ -1165,7 +1165,8 @@
     const textarea=$("#"+(target==="negative"?"negative-output":"positive-output"));
     textarea.value=state[key];
     syncSelectedFromPromptText();
-    renderPromptBubbles("positive");renderPromptBubbles("negative");
+    // renderEditor() already redraws both bubble lists. Avoid a duplicate
+    // render here so a restored open menu is not immediately discarded.
     renderRows();renderEditor();
   }
   function movePromptBubble(source,index,tokens) {
