@@ -262,3 +262,8 @@ body > .prompt-bubble.is-dragging .prompt-bubble-action {
   .editor-builder-panel .prompt-bubble .prompt-bubble-action{display:block}
   .editor-builder-panel .prompt-bubble-translation{max-width:32vw;font-size:9px}
 }
+
+
+/* Show explicit prompt weight directly on its tag chip. */
+.editor-builder-panel .prompt-bubble-weight-badge{flex:0 0 auto;padding:1px 4px;border-radius:5px;background:rgba(17,27,22,.12);color:inherit;font-size:10px;font-weight:700;line-height:1.3;font-variant-numeric:tabular-nums}
+.editor-builder-panel .output-card:last-child .prompt-bubble-weight-badge{background:rgba(38,20,22,.12)}
