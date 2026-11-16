@@ -946,31 +946,7 @@
         menu.hidden=false;
         promptBubbleMenuRestore=null;
       }
-      chip.addEventListener("keydown",event=>{
-        if(event.target===label&&label.isContentEditable)return;
-        const isMac=/Mac|iPhone|iPad|iPod/.test(navigator.platform||"");
-        const weightModifier=event.altKey;
-        const reorderModifier=isMac?event.metaKey:event.ctrlKey;
-        if(weightModifier&&event.key==="ArrowUp"){
-          event.preventDefault();
-          const current=Number(tokens[index].weight||1);
-          tokens[index].weight=Math.min(2,Math.round((current+0.1)*10)/10).toFixed(1);
-          updatePromptFromBubbles(target,tokens);
-        }else if(weightModifier&&event.key==="ArrowDown"){
-          event.preventDefault();
-          const current=Number(tokens[index].weight||1);
-          tokens[index].weight=Math.max(0.1,Math.round((current-0.1)*10)/10).toFixed(1);
-          updatePromptFromBubbles(target,tokens);
-        }else if(reorderModifier&&event.key==="ArrowLeft"){
-          event.preventDefault();
-          if(index>0){[tokens[index-1],tokens[index]]=[tokens[index],tokens[index-1]];updatePromptFromBubbles(target,tokens);}
-        }else if(reorderModifier&&event.key==="ArrowRight"){
-          event.preventDefault();
-          if(index<tokens.length-1){[tokens[index+1],tokens[index]]=[tokens[index],tokens[index+1]];updatePromptFromBubbles(target,tokens);}
-        }else if((event.key==="Delete"||event.key==="Backspace")&&event.target===chip){
-          event.preventDefault();tokens.splice(index,1);updatePromptFromBubbles(target,tokens);
-        }
-      });
+
       let pointerStart=null, pointerDragging=false, suppressNextClick=false, dragState=null;
       label.addEventListener("click",event=>{
         if(suppressNextClick){event.preventDefault();event.stopImmediatePropagation();suppressNextClick=false;}
