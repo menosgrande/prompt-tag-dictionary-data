@@ -45,7 +45,7 @@ html.prompt-bubble-dragging-active * {
 .editor-builder-panel .prompt-bubble {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 0;
   width: max-content;
   max-width: 100%;
   min-height: 0;
@@ -181,7 +181,7 @@ body > .prompt-bubble.is-dragging {
   display: inline-flex;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 5px;
+  gap: 0;
   width: max-content;
   max-width: calc(100vw - 24px);
   min-height: 0;
@@ -266,7 +266,7 @@ body > .prompt-bubble.is-dragging .prompt-bubble-action {
   .builder-heading-actions{gap:6px}
 }
 
-.editor-builder-panel .prompt-bubble-translation{display:none;max-width:min(38vw,260px);overflow:hidden;color:rgba(17,27,22,.72);font-size:10px;line-height:1.35;text-overflow:ellipsis;white-space:nowrap}
+.editor-builder-panel .prompt-bubble-translation{display:none;margin-left:5px;max-width:min(38vw,260px);overflow:hidden;color:rgba(17,27,22,.72);font-size:10px;line-height:1.35;text-overflow:ellipsis;white-space:nowrap}
 .editor-builder-panel .output-card:last-child .prompt-bubble-translation{color:rgba(38,20,22,.68)}
 .editor-builder-panel .prompt-bubble:hover .prompt-bubble-translation,
 .editor-builder-panel .prompt-bubble:focus-within .prompt-bubble-translation{display:inline}
