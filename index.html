@@ -67,7 +67,23 @@
       <section class="panel related-list-panel"><div id="authors-list" class="related-list"><p class="empty-state">CSV読み込み後に作者一覧を表示します。</p></div></section>
     </section>
     <section id="editor-screen" class="app-screen editor-screen" hidden>
-      <section class="editor-intro"><h1>プロンプト編集</h1><p>辞典から選んだタグを追加し、テキスト欄で内容や順序を自由に編集できます。</p></section>
+      <section class="editor-intro"><h1>プロンプト編集</h1><p>辞典から選んだタグを追加し、テキスト欄で内容や順序を自由に編集できます。</p>
+        <details class="editor-shortcut-help">
+          <summary>操作方法・キーボードショートカット</summary>
+          <div>
+            <p><strong>キーボード操作</strong></p>
+            <ul>
+              <li>重みを変更：Windows は <kbd>Alt</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd>、Mac は <kbd>Option</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd></li>
+              <li>同じ欄のタグを前後に移動：Windows は <kbd>Ctrl</kbd> + <kbd>←</kbd> / <kbd>→</kbd>、Mac は <kbd>Command</kbd> + <kbd>←</kbd> / <kbd>→</kbd></li>
+            </ul>
+            <p><strong>マウス操作</strong></p>
+            <ul>
+              <li>タグの <strong>⋯</strong> メニューから、重み変更・削除・前後への移動・ポジティブ／ネガティブ間の移動ができます。</li>
+              <li>タグをドラッグして、順番を変更したりポジティブ／ネガティブ間を移動したりできます。</li>
+            </ul>
+          </div>
+        </details>
+      </section>
       <details id="migration-unresolved-panel" class="migration-unresolved-panel" hidden>
         <summary id="migration-unresolved-summary">移行できなかった設定</summary>
         <p>旧形式の保存データから対応先を特定できなかった項目です。内容を確認するまで旧保存データは削除しないでください。</p>
