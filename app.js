@@ -642,16 +642,15 @@
     const cells = {
       favorites: $('.table-head-cell[data-column="favorites"] [data-menu-content]'),
       major: $('.table-head-cell[data-column="major"] [data-menu-content]'),
-      minor: $('.table-head-cell[data-column="minor"] [data-menu-content]'),
       level: $('.table-head-cell[data-column="level"] [data-menu-content]')
     };
-    ["tag", "ja"].forEach(field => {
+    ["tag", "ja", "minor"].forEach(field => {
       const button = $('.table-head-cell[data-column="' + field + '"] [data-sort-toggle]');
       if (!button) return;
       const active = state.sort === field;
       const direction = active ? state.sortDirection : "asc";
       button.textContent = direction === "asc" ? "↑" : "↓";
-      button.setAttribute("aria-label", (field === "tag" ? "タグ" : "日本語訳") + (direction === "asc" ? "を昇順に並び替え" : "を降順に並び替え"));
+      button.setAttribute("aria-label", ({ tag: "タグ", ja: "日本語訳", minor: "中分類" }[field]) + (direction === "asc" ? "を昇順に並び替え" : "を降順に並び替え"));
       button.title = direction === "asc" ? "昇順" : "降順";
       button.setAttribute("aria-pressed", String(active));
     });
@@ -670,7 +669,6 @@
     };
     if (cells.favorites) cells.favorites.innerHTML =
       '<label class="column-favorite-filter"><input type="checkbox" data-filter-favorites' + (state.favoritesOnly ? ' checked' : '') + '> お気に入りのみ</label>';
-    if (cells.minor) cells.minor.innerHTML = sortOptions("minor");
     if (cells.major) {
       const majors = [...new Set(state.all.map(row => row.major || "未分類"))].sort(compareMajorCategories);
       cells.major.innerHTML = sortOptions("major") + checkboxGroup("major", majors);
