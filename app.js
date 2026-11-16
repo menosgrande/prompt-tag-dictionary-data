@@ -828,13 +828,16 @@
   }
   function getPromptOutput(polarity) {
     const source = polarity === "negative" ? state.promptNegative : state.promptPositive;
+    const rowsByTerm = new Map();
+    state.all.forEach(candidate => {
+      [candidate.tag, candidate.ja, ...parseAliases(candidate.aliases_json)].forEach(term => {
+        const normalized = normalizeSearchText(term);
+        if (normalized && !rowsByTerm.has(normalized)) rowsByTerm.set(normalized, candidate);
+      });
+    });
     return parsePromptTokens(source).map(item => {
       const normalized = normalizeSearchText(item.tag);
-      const row = state.all.find(candidate =>
-        normalizeSearchText(candidate.tag) === normalized ||
-        normalizeSearchText(candidate.ja) === normalized ||
-        parseAliases(candidate.aliases_json).some(alias => normalizeSearchText(alias) === normalized)
-      );
+      const row = rowsByTerm.get(normalized);
       const tag = row ? row.tag : item.tag;
       return item.weight ? "(" + tag + ":" + item.weight + ")" : tag;
     }).join(", ");
@@ -844,6 +847,7 @@
     const root = $("#" + target + "-bubbles");
     if (!root) return;
     const tokens = parsePromptTokens(state[target === "negative" ? "promptNegative" : "promptPositive"]);
+    const rowsByTag = new Map(state.all.map(row => [String(row.tag).toLocaleLowerCase(), row]));
     root.replaceChildren();
     tokens.forEach((item,index) => {
       const chip = document.createElement("div");
@@ -854,6 +858,10 @@
       const label = document.createElement("span");
       label.className = "prompt-bubble-label"; label.textContent = item.tag;
       label.title = "クリックしてタグ名を編集";
+      const dictionaryRow = rowsByTag.get(item.tag.toLocaleLowerCase());
+      const translation = document.createElement("small");
+      translation.className = "prompt-bubble-translation";
+      translation.textContent = dictionaryRow?.ja || "";
       label.addEventListener("click", () => {
         if(label.isContentEditable)return;
         label.contentEditable="true";label.focus();
@@ -919,7 +927,9 @@
         root.querySelectorAll(".prompt-bubble-menu").forEach(other=>{other.hidden=true;});
         menu.hidden=!opening;
       });
-      chip.append(label,remove,menuToggle,menu);
+      chip.append(label);
+      if(translation.textContent)chip.append(translation);
+      chip.append(remove,menuToggle,menu);
       chip.addEventListener("keydown",event=>{
         if(event.target===label&&label.isContentEditable)return;
         if(event.ctrlKey&&event.key==="ArrowUp"){event.preventDefault();if(index>0){[tokens[index-1],tokens[index]]=[tokens[index],tokens[index-1]];updatePromptFromBubbles(target,tokens);}}
@@ -1189,7 +1199,7 @@
 
   function appendPromptTag(polarity, tag, recordUndo=true) {
     const existing=locatePromptTag(tag);
-    if(existing){highlightPromptTag(existing.polarity,existing.index);return;}
+    if(existing){syncSelectedFromPromptText();highlightPromptTag(existing.polarity,existing.index);return;}
     if(recordUndo)captureUndoState();
     const key = polarity === "negative" ? "promptNegative" : "promptPositive";
     const tokens = parsePromptTokens(state[key]);
