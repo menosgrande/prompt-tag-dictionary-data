@@ -826,7 +826,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4284,hiro (darling in the franxx),ヒロ（ダーリン・イン・ザ・フランキス）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4285,hirogaru sky! precure,ひろがるスカイ！プリキュア,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4286,hiroi kikuri (Bocchi the Rock!),廣井きくり（ぼっち・ざ・ろっく！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4287,hiroki (yyqw7151),ヒロき(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+4287,hiroki (yyqw7151),ヒロき(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4288,hiryuu (kancolle),飛龍（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4289,hisahiko,ヒサヒコ,キャラクター・作品,作者・配信者,,"[""Hisahiko""]",verified,0,verified,verified,normal
 4290,hisakawa hayate (The Idolmaster Cinderella Girls),久川颯（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1110,7 +1110,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5059,kasumi (kancolle),霞（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5060,kasumi (skchkko),かすみ(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5061,kasumi kai ni (kancolle),霞改二（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5062,katahira masashi,Katahira Masashi(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+5062,katahira masashi,Katahira Masashi(メカニックデザイナー),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5064,katekyo hitman reborn!,家庭教師ヒットマンREBORN！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5065,katori (kancolle),香取（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5066,katsuki yuuri (Yuri!!! on Ice),勝生勇利（ユーリ!!! on ICE）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1422,7 +1422,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5829,mash kyrielight (demi-servant),マシュ・キリエライト（デミ・サーヴァント）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5837,massakasama,まっさかさま(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5839,master sword,マスターソード（ゼルダの伝説）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
-5842,masukuza j,マスクザJ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+5842,masukuza j,マスクザJ(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5844,matara okina (touhou),摩多羅隠岐奈（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5846,materia,マテリア（ファイナルファンタジーVII）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5849,matikane tannhauser (umamusume),マチカネタンホイザ（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1503,7 +1503,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6019,mimura kanako (the idolmaster cinderella girls),三村かな子（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6020,minaba hideo,皆葉英夫(アートディレクター・ゲームデザイナー),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6021,minakami (flyingman555),Minakami(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-6022,minami (colorful palette),みなみ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+6022,minami (colorful palette),みなみ(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6023,minami kotori (love live! school idol project),南ことり（ラブライブ！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6024,minamino kanade (Suite Precure),南野奏（スイートプリキュア♪）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6025,minamoto no raikou (fate),源頼光（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
