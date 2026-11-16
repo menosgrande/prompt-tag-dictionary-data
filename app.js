@@ -784,6 +784,8 @@
     $("#positive-output").value = state.promptPositive;
     $("#negative-output").value = state.promptNegative;
     state.restoringUndo = false;
+    state.textEditUndoPending.positive = false;
+    state.textEditUndoPending.negative = false;
     syncSelectedFromPromptText();
     renderRows();
     renderEditor();
@@ -1739,6 +1741,14 @@
     });
     window.addEventListener("keydown", event => {
       const target = event.target;
+      const editorPanel = target instanceof Element ? target.closest(".editor-builder-panel") : null;
+      const isBubbleAddInput = target instanceof Element && target.matches("#positive-bubble-add, #negative-bubble-add");
+      const isUndoShortcut = (event.ctrlKey || event.metaKey) && !event.shiftKey && !event.altKey && event.key.toLowerCase() === "z";
+      if (isUndoShortcut && editorPanel && !isBubbleAddInput && state.undoHistory.length) {
+        event.preventDefault();
+        undoPromptChange();
+        return;
+      }
       const isTyping = target instanceof HTMLElement && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName));
       if (event.key === "/" && !isTyping && !event.ctrlKey && !event.metaKey && !event.altKey) {
         event.preventDefault();
