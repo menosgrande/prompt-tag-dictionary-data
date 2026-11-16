@@ -815,7 +815,7 @@
       // Character-based estimate only; this is not a model tokenizer.
       const estimate = text.trim() ? Math.ceil(chars / 4) : 0;
       const node = $("#" + polarity + "-prompt-metrics");
-      if (node) node.textContent = "タグ " + count + " 件 · 文字 " + chars + " · トークン目安 約 " + estimate + "（文字数÷4の概算）";
+      if (node) node.textContent = "タグ " + count + " 件 · 文字 " + chars + " · トークン目安 約 " + estimate + "（文字数÷4の粗い概算。77前後は参考値・モデル依存）";
     });
   }
   function renderPromptConflictWarning() {
@@ -827,7 +827,17 @@
     node.textContent = conflicts.length ? "確認：同じタグがポジティブ／ネガティブの両方にあります — " + conflicts.join(", ") : "";
   }
   function getPromptOutput(polarity) {
-    return polarity === "negative" ? state.promptNegative : state.promptPositive;
+    const source = polarity === "negative" ? state.promptNegative : state.promptPositive;
+    return parsePromptTokens(source).map(item => {
+      const normalized = normalizeSearchText(item.tag);
+      const row = state.all.find(candidate =>
+        normalizeSearchText(candidate.tag) === normalized ||
+        normalizeSearchText(candidate.ja) === normalized ||
+        parseAliases(candidate.aliases_json).some(alias => normalizeSearchText(alias) === normalized)
+      );
+      const tag = row ? row.tag : item.tag;
+      return item.weight ? "(" + tag + ":" + item.weight + ")" : tag;
+    }).join(", ");
   }
   function renderPromptBubbles(polarity) {
     const target = polarity === "negative" ? "negative" : "positive";
@@ -884,6 +894,8 @@
             updatePromptFromBubbles(target,tokens);
           }else if(action==="move"){
             menu.hidden=true;movePromptBubble(target,index,tokens);
+          }else if(action==="remove"){
+            tokens.splice(index,1);updatePromptFromBubbles(target,tokens);
           }else if(action==="up"||action==="down"){
             const destination=index+(action==="up"?-1:1);
             if(destination>=0&&destination<tokens.length){
@@ -898,6 +910,7 @@
       addMenuButton("重み −","weight-down");
       addMenuButton("重み ＋","weight-up");
       addMenuButton(target==="positive"?"ネガティブへ移動":"ポジティブへ移動","move");
+      addMenuButton("削除","remove");
       addMenuButton("前へ移動","up");
       addMenuButton("後ろへ移動","down");
       menuToggle.addEventListener("click",event=>{
