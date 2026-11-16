@@ -849,6 +849,7 @@
       return item.weight ? "(" + tag + ":" + item.weight + ")" : tag;
     }).join(", ");
   }
+  let promptBubbleMenuRestore = null;
   function renderPromptBubbles(polarity) {
     const target = polarity === "negative" ? "negative" : "positive";
     const root = $("#" + target + "-bubbles");
@@ -906,15 +907,19 @@
             const current=Number(tokens[index].weight||1);
             const next=Math.max(0.1,Math.min(2,Math.round((current+(action==="weight-up"?0.1:-0.1))*10)/10));
             tokens[index].weight=next.toFixed(1);
+            promptBubbleMenuRestore={target,tag:item.tag};
             updatePromptFromBubbles(target,tokens);
           }else if(action==="move"){
-            menu.hidden=true;movePromptBubble(target,index,tokens);
+            const destination=target==="positive"?"negative":"positive";
+            promptBubbleMenuRestore={target:destination,tag:item.tag};
+            movePromptBubble(target,index,tokens);
           }else if(action==="remove"){
             tokens.splice(index,1);updatePromptFromBubbles(target,tokens);
           }else if(action==="up"||action==="down"){
             const destination=index+(action==="up"?-1:1);
             if(destination>=0&&destination<tokens.length){
               [tokens[index],tokens[destination]]=[tokens[destination],tokens[index]];
+              promptBubbleMenuRestore={target,tag:item.tag};
               updatePromptFromBubbles(target,tokens);
             }
           }
@@ -937,6 +942,10 @@
       chip.append(label);
       if(translation.textContent)chip.append(translation);
       chip.append(remove,menuToggle,menu);
+      if(promptBubbleMenuRestore&&promptBubbleMenuRestore.target===target&&promptBubbleMenuRestore.tag===item.tag){
+        menu.hidden=false;
+        promptBubbleMenuRestore=null;
+      }
       chip.addEventListener("keydown",event=>{
         if(event.target===label&&label.isContentEditable)return;
         const isMac=/Mac|iPhone|iPad|iPod/.test(navigator.platform||"");
