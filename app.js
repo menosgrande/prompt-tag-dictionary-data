@@ -964,7 +964,7 @@
           updatePromptFromBubbles(target,tokens);
           return;
         }
-        if(event.shiftKey&&event.key!==" + ".trim())return;
+        if(event.shiftKey&&event.key!=="+")return;
         if(event.key==="ArrowLeft"||event.key==="ArrowRight"){
           const chips=[...root.querySelectorAll(".prompt-bubble")];
           const nextChip=chips[index+(event.key==="ArrowRight"?1:-1)];
