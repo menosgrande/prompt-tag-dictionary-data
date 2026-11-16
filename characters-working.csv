@@ -1242,7 +1242,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5262,kou hiyoyo,こうひよよ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5264,kouji (campus life),Kouji（キャンパスライフ）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5265,kouno (masao),河野(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-5266,kourindou tengu costume,"香霖堂天狗装束（東方Project）",キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+5266,"kourindou tengu costume (Touhou Project)","香霖堂天狗装束（東方Project）",キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5267,kousaka kirino (Oreimo),高坂桐乃,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5268,kousaka reina (Sound! Euphonium),高坂麗奈,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5269,kousaka tamaki (To Heart 2),向坂環（ToHeart2）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1273,8 +1273,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5296,kuroki tomoko (watamote),黒木智子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5297,kurokoma saki (touhou),驪駒早鬼（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5299,kuromiya,Kuromiya(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-5300,kuromorimine military uniform,"黒森峰女学園の軍服（ガールズ＆パンツァー）",キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
-5301,kuromorimine school uniform,"黒森峰女学園の制服（ガールズ＆パンツァー）",キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+5300,"kuromorimine military uniform (girls und panzer)","黒森峰女学園の軍服（ガールズ＆パンツァー）",キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+5301,"kuromorimine school uniform (girls und panzer)","黒森峰女学園の制服（ガールズ＆パンツァー）",キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5302,kurosaki ichigo (bleach),黒崎一護（BLEACH）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5303,kurosawa dia (love live! sunshine!!),黒澤ダイヤ（ラブライブ！サンシャイン!!）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5304,kurosawa ruby (love live! sunshine!!),黒澤ルビィ（ラブライブ！サンシャイン!!）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1350,12 +1350,12 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5677,lum (urusei yatsura),ラム（うる星やつら）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5678,lumine (genshin impact),蛍（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5679,luna child,ルナチャイルド,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5680,luna nova school uniform,"ルーナノヴァ魔法学校の制服（リトルウィッチアカデミア）",キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+5680,"luna nova school uniform (Little Witch Academia)","ルーナノヴァ魔法学校の制服（リトルウィッチアカデミア）",キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5681,lunasa prismriver (touhou),ルナサ・プリズムリバー（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5682,luo xiaohei zhanji,羅小黒戦記,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5683,lusamine (pokemon),ルザミーネ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5685,lycoris recoil,リコリス・リコイル,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-5686,lycoris uniform,"リコリスの制服（リコリス・リコイル）",キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+5686,"lycoris uniform (Lycoris Recoil)","リコリスの制服（リコリス・リコイル）",キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5691,lyn (fire emblem),リン（ファイアーエムブレム 烈火の剣）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5692,lynette (genshin impact),リネット（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5693,lynette bishop (strike witches),リネット・ビショップ（ストライクウィッチーズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1445,7 +1445,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5871,maya (kancolle),摩耶（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5872,mayano top gun (umamusume),マヤノトップガン（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5873,mayuzumi fuyuko (The Idolmaster: Shiny Colors),黛冬優子（アイドルマスター シャイニーカラーズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5899,medicine melancholy,"メディスン・メランコリー（東方Project）",キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5899,"medicine melancholy (Touhou Project)","メディスン・メランコリー（東方Project）",キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5906,medusa (fate),メドゥーサ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5907,medusa (rider) (fate),メドゥーサ（ライダー・Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5908,mega gardevoir (pokemon),メガサーナイト（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1512,7 +1512,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6028,minato aqua (1st costume),湊あくあ（初期衣装）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6029,minato aqua (sailor),湊あくあ（セーラー衣装）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6031,minecraft,マインクラフト,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-6038,mini-hakkero,"ミニ八卦炉（東方Project）",キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+6038,"mini-hakkero (Touhou Project)","ミニ八卦炉（東方Project）",キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 6045,miorine rembran (mobile suit gundam: the witch from mercury),ミオリネ・レンブラン（水星の魔女）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6046,mira-cra park!,みらくらぱーく!,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6047,miracle mallet,奇跡のマレット,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
@@ -1524,7 +1524,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6069,misumi (macaroni),Misumi(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6070,misumi nagisa (futari wa pretty cure),美墨なぎさ（ふたりはプリキュア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6072,mitaka asa (chainsaw man),三鷹アサ（チェンソーマン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-6073,mitakihara school uniform,"見滝原中学校の制服（魔法少女まどか☆マギカ）",キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+6073,"mitakihara school uniform (Puella Magi Madoka Magica)","見滝原中学校の制服（魔法少女まどか☆マギカ）",キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 6074,mithra (ff11),ミスラ（FF11）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6075,mithrun (delicious in dungeon),ミスルン（ダンジョン飯）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6078,mitsumoto jouji,Mitsumoto Jouji(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
@@ -1564,13 +1564,13 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6138,momoko (momopoco),Momoko(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6139,momose ginko (hasunosora jogakuin school idol club),百生吟子（蓮ノ空女学院スクールアイドルクラブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6140,momosuzu nene (hololive),桃鈴ねね（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-6141,momota kaito,"百田解斗（ダンガンロンパV3）",キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+6141,"momota kaito (Danganronpa V3)","百田解斗（ダンガンロンパV3）",キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6142,mon-musu quest!,もんむす・くえすと！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6143,mona (genshin impact),モナ（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6145,monika (doki doki literature club),モニカ（ドキドキ文芸部）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6150,monkey d. luffy,モンキー・D・ルフィ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6157,monogatari (series),〈物語〉シリーズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-6158,monokuma,"モノクマ（ダンガンロンパ）",キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+6158,"monokuma (Danganronpa)","モノクマ（ダンガンロンパ）",キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6159,mononobe no futo,物部布都,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6164,monster girl encyclopedia,モンスターガール百科事典,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6165,monster hunter (character),モンスターハンター（キャラクター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
