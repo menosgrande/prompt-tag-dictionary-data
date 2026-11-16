@@ -1061,7 +1061,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4995,kama (fate),カマ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4997,kamado nezuko (Demon Slayer: Kimetsu no Yaiba),竈門禰豆子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4998,kamado tanjirou (Demon Slayer: Kimetsu no Yaiba),竈門炭治郎,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4999,kame (kamepan44231),かめぱすた(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+4999,kame (kamepan44231),かめぱすた(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5000,kamen rider,仮面ライダー,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5001,kamijou touma (A Certain Magical Index),上条当麻,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5002,kamikaze (kancolle),神風（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1078,7 +1078,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5016,kaname madoka (magical girl),鹿目まどか（魔法少女）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5018,kanba girls high school uniform,神庭女子藝術高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5019,kani biimu,かにビーム(イラストレーター・原画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-5021,kankan33333,かんかん33333,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+5021,kankan33333,ポテトルス(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5022,kanna (blue archive),尾刃カンナ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5023,kanna (swimsuit) (blue archive),尾刃カンナ（水着）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5024,kanna kamui (Miss Kobayashi's Dragon Maid),カンナカムイ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1247,9 +1247,9 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5268,kousaka reina (Sound! Euphonium),高坂麗奈,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5269,kousaka tamaki (To Heart 2),向坂環（ToHeart2）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5270,kouzuki kallen (Code Geass),紅月カレン（コードギアス 反逆のルルーシュ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5271,koyama shigeru,コヤマ・シゲル,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+5271,koyama shigeru,こやま滋(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5272,koyanskaya (fate),コヤンスカヤ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5273,koyorin,コヨリン,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+5273,koyorin,Koyorin(イラストレーター・キャラクターデザイナー),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5274,kris (pokemon),クリス（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5275,krista lenz (Attack on Titan),クリスタ・レンズ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5276,kuavera,Kuavera(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
@@ -1267,7 +1267,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5289,kumoi ichirin (touhou),雲居一輪（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5291,kunikida hanamaru (love live! sunshine!!),国木田花丸（ラブライブ！サンシャイン!!）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5292,kureiji ollie,クレイジー・オリー（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5293,kuro kosyou,九六胡椒,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+5293,kuro kosyou,九六胡椒(3Dモデラー・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5294,kuro no kiseki (series),黎の軌跡,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5295,kurodani yamame (touhou),黒谷ヤマメ（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5296,kuroki tomoko (watamote),黒木智子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1543,20 +1543,20 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6096,mizuhara aki,Mizuhara Aki(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6097,mizuhashi parsee (Touhou Project),水橋パルスィ（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6098,mizuki hitoshi,みずきひとし(漫画家),キャラクター・作品,作者・配信者,,"[""Mizuki Hitoshi""]",verified,0,verified,verified,normal
-6099,mizuki makoto,ミズキ・マコト,キャラクター・作品,作者・配信者,,"[""Mizuki Makoto""]",verified,0,verified,verified,normal
+6099,mizuki makoto,観月真(イラストレーター),キャラクター・作品,作者・配信者,,"[""Mizuki Makoto""]",verified,0,verified,verified,normal
 6100,mizumizuni,ミズミズニ,キャラクター・作品,作者・配信者,,"[""Mizumizuni""]",verified,0,verified,verified,normal
-6101,mizumoto tadashi,水本正(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+6101,mizumoto tadashi,水本正(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6102,mizuno ami (sailor moon),水野亜美（美少女戦士セーラームーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6103,mk (mod0),MK（mod0）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6104,mo (kireinamo),MO（kireinamo）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6107,mob psycho 100,モブサイコ100,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6108,mobile suit,モビルスーツ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6109,mobile suit gundam,機動戦士ガンダム,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-6111,mochi au lait,Mochi au lait（モチ・オ・レ）,キャラクター・作品,作者・配信者,,"[""Mochi au lait"",""モチオレ""]",verified,0,verified,verified,normal
+6111,mochi au lait,Mochi au lait(漫画家),キャラクター・作品,作者・配信者,,"[""Mochi au lait"",""モチオレ""]",verified,0,verified,verified,normal
 6113,mococo abyssgard (hololive),モココ・アビスガード（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6114,mococo abyssgard (1st costume),モココ・アビスガード（初期衣装）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6116,mogami (kancolle),最上（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-6117,mogudan,モグダン,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+6117,mogudan,モグダン(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6119,moisture (chichi),Moisture（chichi）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6120,moke ro,Moke Ro（モケ・ロ）,キャラクター・作品,作者・配信者,,"[""Moke Ro"",""モケロ""]",verified,0,verified,verified,normal
 6136,momo no sukebe,Momo no Sukebe(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
