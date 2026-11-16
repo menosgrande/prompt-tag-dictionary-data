@@ -964,6 +964,7 @@
           updatePromptFromBubbles(target,tokens);
           return;
         }
+        if(event.shiftKey&&event.key!==" + ".trim())return;
         if(event.key==="ArrowLeft"||event.key==="ArrowRight"){
           const chips=[...root.querySelectorAll(".prompt-bubble")];
           const nextChip=chips[index+(event.key==="ArrowRight"?1:-1)];
@@ -1129,8 +1130,7 @@
             state.promptPositive=serializePromptTokens(positive);
             state.promptNegative=serializePromptTokens(negative);
             const destinationPolarity=destinationRoot?.id==="negative-bubbles"?"negative":"positive";
-            const destinationTokens=destinationPolarity==="negative"?negative:positive;
-            const movedIndex=destinationTokens.findIndex(token=>token.tag===movedTag);
+            const movedIndex=[...destinationRoot.querySelectorAll(".prompt-bubble")].indexOf(chip);
             if(movedIndex>=0)promptBubbleFocusRestore={target:destinationPolarity,tag:movedTag,index:movedIndex};
             $("#positive-output").value=state.promptPositive;
             $("#negative-output").value=state.promptNegative;
@@ -1179,10 +1179,8 @@
     });
     if(focusRestore){
       const candidate=root.querySelectorAll(".prompt-bubble")[focusRestore.index];
-      if(candidate&&candidate._promptToken?.tag===focusRestore.tag){
-        candidate.focus({preventScroll:true});
-        if(promptBubbleFocusRestore===focusRestore||promptBubbleFocusRestore?.target===target)promptBubbleFocusRestore=null;
-      }
+      if(candidate&&candidate._promptToken?.tag===focusRestore.tag)candidate.focus({preventScroll:true});
+      if(promptBubbleFocusRestore===focusRestore)promptBubbleFocusRestore=null;
     }
   }
   function updatePromptFromBubbles(target,tokens) {
