@@ -1349,6 +1349,7 @@
         }
       }
     } catch (error) { console.warn("プロンプト編集内容を復元できませんでした。", error); }
+    $("#escape-parentheses").checked = state.escapeParentheses;
     $("#positive-output").value = state.promptPositive;
     $("#negative-output").value = state.promptNegative;
     syncSelectedFromPromptText();
