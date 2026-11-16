@@ -94,7 +94,12 @@ html.prompt-bubble-dragging-active * {
   font-weight: 400;
   line-height: 1.45;
   letter-spacing: .01em;
+  cursor: pointer;
+  user-select: none;
+}
+.editor-builder-panel .prompt-bubble-label[contenteditable="true"] {
   cursor: text;
+  user-select: text;
 }
 
 .editor-builder-panel .prompt-bubble-label[contenteditable="true"] {
