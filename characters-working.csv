@@ -2870,14 +2870,14 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11906,junko (blue archive),赤司ジュンコ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 11907,akari (blue archive),鰐渕アカリ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 11908,izumi (blue archive),獅子堂イズミ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-11909,to aru majutsu no index,とあるシリーズ,キャラクター・作品,タイトル（作品名）,,[],pending,,pending,pending,
-11910,yahari ore no seishun lovecome wa machigatteiru,やはり俺の青春ラブコメはまちがっている。,キャラクター・作品,タイトル（作品名）,,[],pending,,pending,pending,
-11911,the idolmaster,アイドルマスター,キャラクター・作品,タイトル（作品名）,,[],pending,,pending,pending,
-11912,kobayashi-san chi no maid dragon,小林さんちのメイドラゴン,キャラクター・作品,タイトル（作品名）,,[],pending,,pending,pending,
-11913,yuru yuri,ゆるゆり,キャラクター・作品,タイトル（作品名）,,[],pending,,pending,pending,
-11914,queen's blade,クイーンズブレイド,キャラクター・作品,タイトル（作品名）,,[],pending,,pending,pending,
-11915,kanon (visual novel),Kanon,キャラクター・作品,タイトル（作品名）,,[],pending,,pending,pending,
-11916,da capo,D.C. ～ダ・カーポ～,キャラクター・作品,タイトル（作品名）,,[],pending,,pending,pending,
+11909,to aru majutsu no index,とあるシリーズ,キャラクター・作品,小説タイトル,,[],pending,,pending,verified,
+11910,yahari ore no seishun lovecome wa machigatteiru,やはり俺の青春ラブコメはまちがっている。,キャラクター・作品,小説タイトル,,[],pending,,pending,verified,
+11911,the idolmaster,アイドルマスター,キャラクター・作品,ゲームタイトル,,[],pending,,pending,verified,
+11912,kobayashi-san chi no maid dragon,小林さんちのメイドラゴン,キャラクター・作品,漫画タイトル,,[],pending,,pending,verified,
+11913,yuru yuri,ゆるゆり,キャラクター・作品,漫画タイトル,,[],pending,,pending,verified,
+11914,queen's blade,クイーンズブレイド,キャラクター・作品,その他の作品タイトル,,[],pending,,pending,verified,
+11915,kanon (visual novel),Kanon,キャラクター・作品,ゲームタイトル,,[],pending,,pending,verified,
+11916,da capo,D.C. ～ダ・カーポ～,キャラクター・作品,ゲームタイトル,,[],pending,,pending,verified,
 11917,rei ayanami,綾波レイ,キャラクター・作品,キャラクター,,[],pending,,pending,pending,
 11918,asuka langley soryu,惣流・アスカ・ラングレー,キャラクター・作品,キャラクター,,[],pending,,pending,pending,
 11919,c.c.,C.C.,キャラクター・作品,キャラクター,,[],pending,,pending,pending,
