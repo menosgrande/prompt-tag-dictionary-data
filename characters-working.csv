@@ -61,7 +61,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 178,akigumo (kancolle),秋雲（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 179,akinbo (hyouka fuyou),Akinbo(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 180,akitsu maru (kancolle),あきつ丸（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-181,akitsuki karasu,秋月からす,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+181,akitsuki karasu,"秋月からす(作者)",キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 182,akiyama mio (K-On!),秋山澪（けいおん！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 183,akiyama mizuki (Project Sekai),暁山瑞希（プロジェクトセカイ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 184,akiyama yukari (Girls und Panzer),秋山優花里（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -81,7 +81,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 202,alice in wonderland,不思議の国のアリス（小説タイトル）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 203,alice margatroid (Touhou Project),アリス・マーガトロイド（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 205,alien stage,エイリアンステージ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-229,ama mitsuki,天三月,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+229,ama mitsuki,"天三月(作者)",キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 230,amagami,アマガミ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 231,amagi brilliant park,甘城ブリリアントパーク,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 232,amagi yukiko (Persona 4),天城雪子（ペルソナ4）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -143,7 +143,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 509,artoria pendragon (lancer) (fate),アルトリア・ペンドラゴン〔ランサー〕（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 510,artoria pendragon (swimsuit ruler) (fate),アルトリア・ペンドラゴン〔水着・ルーラー〕（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 511,aru (blue archive),アル（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-512,as109,As109（エーエス・ワンオーナイン）,キャラクター・作品,作者・配信者,,"[""As109"",""エーエス109""]",verified,0,verified,verified,normal
+512,as109,"As109（エーエス・ワンオーナイン）(作者)",キャラクター・作品,作者・配信者,,"[""As109"",""エーエス109""]",verified,0,verified,verified,normal
 514,asahina mafuyu (Project Sekai),朝比奈まふゆ（プロジェクトセカイ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 515,asahina mikuru (The Melancholy of Haruhi Suzumiya),朝比奈みくる（涼宮ハルヒの憂鬱）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 516,asakura ryouko (The Melancholy of Haruhi Suzumiya),朝倉涼子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
