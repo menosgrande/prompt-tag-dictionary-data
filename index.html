@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#15191f">
   <meta name="description" content="画像生成タグを日本語・英語で検索し、分類から選んでプロンプトを組み立てるタグ辞典。">
   <title>画像生成タグ辞典</title>
-  <link rel="stylesheet" href="./styles.css?v=search-category-feedback-20261116">
+  <link rel="stylesheet" href="./styles.css?v=plain-sort-toggles-20261116">
   <link rel="stylesheet" href="./prompt-bubble-colors.css?v=add-capsule-fixed-20261115">
 </head>
 <body>
@@ -43,8 +43,8 @@
             <div class="table-head" role="row">
               <div class="table-head-cell" aria-label="プロンプト状態"></div>
               <div class="table-head-cell header-menu-cell favorite-header" data-column="favorites" aria-label="お気に入り"><details class="column-menu"><summary aria-label="お気に入りフィルター">★</summary><div class="column-menu-panel" data-menu-content></div></details></div>
-              <div class="table-head-cell header-menu-cell" data-column="tag"><details class="column-menu"><summary class="header-title" aria-label="タグの並び替え">タグ（英語）</summary><div class="column-menu-panel" data-menu-content></div></details></div>
-              <div class="table-head-cell header-menu-cell" data-column="ja"><details class="column-menu"><summary class="header-title" aria-label="日本語訳の並び替え">日本語訳</summary><div class="column-menu-panel" data-menu-content></div></details></div>
+              <div class="table-head-cell sort-heading-cell" data-column="tag"><span class="header-title">タグ（英語）</span><button class="sort-toggle-button" type="button" data-sort-toggle="tag" aria-label="タグを昇順に並び替え" title="昇順" aria-pressed="false">↑</button></div>
+              <div class="table-head-cell sort-heading-cell" data-column="ja"><span class="header-title">日本語訳</span><button class="sort-toggle-button" type="button" data-sort-toggle="ja" aria-label="日本語訳を昇順に並び替え" title="昇順" aria-pressed="false">↑</button></div>
               <div class="table-head-cell header-menu-cell" data-column="major"><details class="column-menu"><summary class="header-title" aria-label="大分類の並び替えと絞り込み">大分類</summary><div class="column-menu-panel" data-menu-content></div></details></div>
               <div class="table-head-cell header-menu-cell" data-column="minor"><details class="column-menu"><summary class="header-title" aria-label="中分類の並び替え">中分類</summary><div class="column-menu-panel" data-menu-content></div></details></div>
               <div class="table-head-cell header-menu-cell" data-column="level" aria-label="表現レベル"><details class="column-menu"><summary class="header-title level-header-title" aria-label="表現レベルの並び替えと絞り込み">♥</summary><div class="column-menu-panel" data-menu-content></div></details></div>
@@ -97,6 +97,6 @@
     <footer class="footer"><span>CSVを正本として表示</span></footer>
   </main>
   <script src="./csv.js?v=csv-parser-20261114"></script>
-  <script src="./app.js?v=search-category-feedback-20261116"></script>
+  <script src="./app.js?v=plain-sort-toggles-20261116"></script>
 </body>
 </html>

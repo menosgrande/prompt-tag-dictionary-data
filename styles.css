@@ -601,3 +601,11 @@ body{font-size:14px;line-height:1.65}
 
 /* Keep prompt bubble labels consistent with the editor's 12px text size. */
 .prompt-bubble-label{font-size:12px}
+
+
+/* Plain tag/translation headings with a one-click sort direction toggle. */
+.table-head-cell.sort-heading-cell{display:flex;align-items:center;justify-content:flex-start;gap:5px;min-width:0;padding:2px 4px}
+.sort-heading-cell .header-title{flex:1;min-width:0;color:var(--muted);font-size:10px;text-decoration:none;cursor:default}
+.sort-toggle-button{display:inline-flex;flex:0 0 19px;align-items:center;justify-content:center;width:19px;height:19px;padding:0;border:1px solid var(--line);border-radius:4px;background:var(--surface-raised);color:var(--muted);font-size:12px;line-height:1;cursor:pointer}
+.sort-toggle-button:hover,.sort-toggle-button[aria-pressed="true"]{border-color:var(--accent);background:var(--surface-hover);color:var(--accent-strong)}
+@media(max-width:760px){.table-head-cell.sort-heading-cell{gap:3px;padding:2px}.sort-toggle-button{flex-basis:17px;width:17px;height:17px;font-size:11px}}

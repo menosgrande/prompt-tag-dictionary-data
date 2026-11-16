@@ -641,12 +641,20 @@
   function renderTableTools() {
     const cells = {
       favorites: $('.table-head-cell[data-column="favorites"] [data-menu-content]'),
-      tag: $('.table-head-cell[data-column="tag"] [data-menu-content]'),
-      ja: $('.table-head-cell[data-column="ja"] [data-menu-content]'),
       major: $('.table-head-cell[data-column="major"] [data-menu-content]'),
       minor: $('.table-head-cell[data-column="minor"] [data-menu-content]'),
       level: $('.table-head-cell[data-column="level"] [data-menu-content]')
     };
+    ["tag", "ja"].forEach(field => {
+      const button = $('.table-head-cell[data-column="' + field + '"] [data-sort-toggle]');
+      if (!button) return;
+      const active = state.sort === field;
+      const direction = active ? state.sortDirection : "asc";
+      button.textContent = direction === "asc" ? "↑" : "↓";
+      button.setAttribute("aria-label", (field === "tag" ? "タグ" : "日本語訳") + (direction === "asc" ? "を昇順に並び替え" : "を降順に並び替え"));
+      button.title = direction === "asc" ? "昇順" : "降順";
+      button.setAttribute("aria-pressed", String(active));
+    });
     const checkboxGroup = (key, values, labelMap = value => value) =>
       '<fieldset class="column-filter-group"><legend>' + (key === "major" ? "大分類で絞り込む" : "表現レベルで絞り込む") + '</legend>' +
       '<div class="column-filter-options">' + values.map(value =>
@@ -662,8 +670,6 @@
     };
     if (cells.favorites) cells.favorites.innerHTML =
       '<label class="column-favorite-filter"><input type="checkbox" data-filter-favorites' + (state.favoritesOnly ? ' checked' : '') + '> お気に入りのみ</label>';
-    if (cells.tag) cells.tag.innerHTML = sortOptions("tag");
-    if (cells.ja) cells.ja.innerHTML = sortOptions("ja");
     if (cells.minor) cells.minor.innerHTML = sortOptions("minor");
     if (cells.major) {
       const majors = [...new Set(state.all.map(row => row.major || "未分類"))].sort(compareMajorCategories);
@@ -1221,6 +1227,15 @@
     const root = $(".table-head");
     if (!root) return;
     root.addEventListener("click", event => {
+      const toggle = event.target.closest("[data-sort-toggle]");
+      if (toggle) {
+        const field = toggle.dataset.sortToggle;
+        state.sortDirection = state.sort === field && state.sortDirection === "asc" ? "desc" : "asc";
+        state.sort = field;
+        renderTableTools();
+        applyFilters();
+        return;
+      }
       const sort = event.target.closest("[data-sort-field]");
       if (sort) {
         state.sort = sort.dataset.sortField;
