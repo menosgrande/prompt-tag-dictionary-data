@@ -1252,12 +1252,20 @@
         applyFilters();
       }
     });
+    const closeColumnMenus = except => {
+      root.querySelectorAll("details.column-menu[open]").forEach(menu => {
+        if (menu !== except) menu.open = false;
+      });
+    };
+    // A column menu is transient: opening another menu replaces it, and
+    // interacting elsewhere or scrolling dismisses it.
     root.addEventListener("click", event => {
       const summary = event.target.closest(".column-menu > summary");
       if (!summary) return;
       requestAnimationFrame(() => {
         const menu = summary.parentElement;
         if (!menu.open) return;
+        closeColumnMenus(menu);
         const panel = menu.querySelector(".column-menu-panel");
         if (!panel) return;
         const rect = summary.getBoundingClientRect();
@@ -1268,6 +1276,10 @@
         panel.style.top = Math.max(10, Math.min(rect.bottom + 5, window.innerHeight - height - 10)) + "px";
       });
     });
+    document.addEventListener("pointerdown", event => {
+      if (!event.target.closest(".column-menu")) closeColumnMenus();
+    }, true);
+    document.addEventListener("scroll", () => closeColumnMenus(), true);
     root.addEventListener("change", event => {
       const input = event.target.closest("[data-filter-group]");
       if (input) {
