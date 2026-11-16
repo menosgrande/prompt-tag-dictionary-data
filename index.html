@@ -7,7 +7,7 @@
   <meta name="description" content="画像生成タグを日本語・英語で検索し、分類から選んでプロンプトを組み立てるタグ辞典。">
   <title>画像生成タグ辞典</title>
   <link rel="stylesheet" href="./styles.css?v=plain-sort-toggles-20261116">
-  <link rel="stylesheet" href="./prompt-bubble-colors.css?v=add-capsule-fixed-20261115">
+  <link rel="stylesheet" href="./prompt-bubble-colors.css?v=prompt-operations-metrics-20261116">
 </head>
 <body>
   <header class="topbar">
@@ -74,16 +74,19 @@
         <ul id="migration-unresolved-list"></ul>
       </details>
       <section class="panel builder-panel editor-builder-panel">
-        <div class="panel-heading"><div><h2>プロンプト</h2></div><button class="text-button" type="button">全解除</button></div>
+        <div class="panel-heading"><div><h2>プロンプト</h2></div><div class="builder-heading-actions"><button class="button button-quiet" type="button" data-action="undo-prompt" disabled>元に戻す</button><button class="text-button" type="button">全解除</button></div></div>
+        <p id="prompt-conflict-warning" class="prompt-conflict-warning" role="status" hidden></p>
         <div class="output-grid">
           <section class="output-card">
             <div class="output-header"><label for="positive-output">ポジティブプロンプト</label></div>
             <section id="positive-bubble-editor" class="prompt-bubble-editor"><div class="bubble-toolbar"><input id="positive-bubble-add" type="search" list="bubble-tag-suggestions" placeholder="タグを検索して追加" autocomplete="off"><button class="button button-quiet" type="button" data-bubble-add="positive">＋追加</button></div><div id="positive-bubbles" class="prompt-bubbles"></div><button class="prompt-bubble-add" type="button">＋ タグを追加</button><textarea id="positive-output" spellcheck="false" placeholder="タグ一覧から選択するか、ここに直接入力してください。" hidden></textarea></section>
+            <p id="positive-prompt-metrics" class="prompt-metrics"></p>
             <div class="output-actions"><button class="button button-primary" type="button" data-action="copy-positive" disabled>コピー</button><button class="button button-ghost" type="button" data-action="save-positive" disabled>TXT保存</button></div>
           </section>
           <section class="output-card">
             <div class="output-header"><label for="negative-output">ネガティブプロンプト</label></div>
             <section id="negative-bubble-editor" class="prompt-bubble-editor"><div class="bubble-toolbar"><input id="negative-bubble-add" type="search" list="bubble-tag-suggestions" placeholder="タグを検索して追加" autocomplete="off"><button class="button button-quiet" type="button" data-bubble-add="negative">＋追加</button></div><div id="negative-bubbles" class="prompt-bubbles"></div><button class="prompt-bubble-add" type="button">＋ タグを追加</button><textarea id="negative-output" spellcheck="false" placeholder="ネガティブタグを選択するか、ここに直接入力してください。" hidden></textarea></section>
+            <p id="negative-prompt-metrics" class="prompt-metrics"></p>
             <div class="output-actions negative-output-actions"><button class="button button-primary" type="button" data-action="copy-negative" disabled>コピー</button><button class="button button-ghost" type="button" data-action="save-negative" disabled>TXT保存</button></div>
           </section>
         </div>
@@ -97,6 +100,6 @@
     <footer class="footer"><span>CSVを正本として表示</span></footer>
   </main>
   <script src="./csv.js?v=csv-parser-20261114"></script>
-  <script src="./app.js?v=sort-menu-auto-dismiss-20261116"></script>
+  <script src="./app.js?v=prompt-operations-undo-metrics-20261116"></script>
 </body>
 </html>
