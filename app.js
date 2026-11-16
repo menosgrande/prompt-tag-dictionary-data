@@ -941,6 +941,13 @@
       });
       chip.append(label);
       if(translation.textContent)chip.append(translation);
+      if(item.weight){
+        const weightBadge=document.createElement("small");
+        weightBadge.className="prompt-bubble-weight-badge";
+        weightBadge.textContent=item.weight;
+        weightBadge.title="重み";
+        chip.append(weightBadge);
+      }
       chip.append(remove,menuToggle,menu);
       if(promptBubbleMenuRestore&&promptBubbleMenuRestore.target===target&&promptBubbleMenuRestore.tag===item.tag){
         menu.hidden=false;
