@@ -255,3 +255,10 @@ body > .prompt-bubble.is-dragging .prompt-bubble-action {
   .editor-builder-panel .prompt-bubble-menu-item{min-height:38px;font-size:11px}
   .builder-heading-actions{gap:6px}
 }
+
+.editor-builder-panel .prompt-bubble-translation{max-width:min(38vw,260px);overflow:hidden;color:rgba(17,27,22,.72);font-size:10px;line-height:1.35;text-overflow:ellipsis;white-space:nowrap}
+.editor-builder-panel .output-card:last-child .prompt-bubble-translation{color:rgba(38,20,22,.68)}
+@media(max-width:600px){
+  .editor-builder-panel .prompt-bubble .prompt-bubble-action{display:block}
+  .editor-builder-panel .prompt-bubble-translation{max-width:32vw;font-size:9px}
+}
