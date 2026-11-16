@@ -894,7 +894,6 @@
       chip.setAttribute("aria-label",item.tag + "。1回クリックでフォーカス、同じチップをもう1回クリックでタグ名を編集。ドラッグで並べ替え");
       const label = document.createElement("span");
       label.className = "prompt-bubble-label"; label.textContent = item.tag;
-      label.title = "1回目のクリックでフォーカス、もう1回クリックでタグ名を編集";
       const dictionaryRow = rowsByTag.get(item.tag.toLocaleLowerCase());
       const translation = document.createElement("small");
       translation.className = "prompt-bubble-translation";
