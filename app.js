@@ -94,6 +94,29 @@
   function saveExpressionLevels() {
     writeUserDataV2({ expressionLevels: [...state.expressionLevels.entries()] });
   }
+  const DICTIONARY_SORT_FIELDS = new Set(["index", "tag", "ja", "major", "minor", "level", "favorites"]);
+  const DICTIONARY_FILTER_GROUPS = ["major", "level", "translation", "classification"];
+  function saveDictionaryViewState() {
+    writeUserDataV2({
+      dictionaryViewState: {
+        sort: state.sort,
+        sortDirection: state.sortDirection,
+        columnFilters: Object.fromEntries(DICTIONARY_FILTER_GROUPS.map(key => [key, [...state.columnFilters[key]]]))
+      }
+    });
+  }
+  function restoreDictionaryViewState(userData) {
+    const saved = userData?.dictionaryViewState;
+    if (!saved || typeof saved !== "object") return;
+    if (DICTIONARY_SORT_FIELDS.has(saved.sort)) state.sort = saved.sort;
+    if (saved.sortDirection === "asc" || saved.sortDirection === "desc") state.sortDirection = saved.sortDirection;
+    if (saved.columnFilters && typeof saved.columnFilters === "object") {
+      DICTIONARY_FILTER_GROUPS.forEach(key => {
+        const values = saved.columnFilters[key];
+        if (Array.isArray(values)) state.columnFilters[key] = new Set(values.filter(value => typeof value === "string"));
+      });
+    }
+  }
   function legacyTagFromKey(key) {
     if (typeof key !== "string") return null;
     const first = key.indexOf("::");
@@ -498,6 +521,14 @@
       return childNames.map(minor => minorCategoryKey(major, minor));
     });
     const visibleCategoryCount = categoryKeys.filter(key => !state.excludedMinorCategories.has(key)).length;
+    const footnote = $(".category-footnote");
+    if (footnote) footnote.textContent = searching
+      ? "検索中は非表示にした分類も検索対象です。チェック状態は変わりません。"
+      : "分類名・件数はCSVの内容から自動生成されます。";
+    const searchInput = $(".search-row .searchbox input");
+    if (searchInput) searchInput.title = searching
+      ? "検索中は非表示にした分類も検索対象です。"
+      : "日本語・英語・別名から検索できます。";
     const masterToggle = $("#category-visibility-all");
     masterToggle.checked = categoryKeys.length > 0 && visibleCategoryCount === categoryKeys.length;
     masterToggle.indeterminate = visibleCategoryCount > 0 && visibleCategoryCount < categoryKeys.length;
@@ -698,7 +729,15 @@
         '<span class="expression-level-cell"><span class="expression-level-value' + (expressionLevelFor(row) === null ? ' is-unset' : ' level-' + expressionLevelFor(row)) + '" aria-label="表現ランク ' + (expressionLevelFor(row) === null ? '未設定' : expressionLevelFor(row)) + '" title="表現ランク ' + (expressionLevelFor(row) === null ? '未設定' : expressionLevelFor(row)) + '">' + (expressionLevelFor(row) === null ? '—' : expressionLevelFor(row)) + '</span></span>' +
         '<span class="tag-detail-cell"><button type="button" class="tag-detail-button" data-detail="' + escapeHTML(key) + '" aria-label="' + escapeHTML(row.tag) + ' の詳細" title="タグの詳細情報">ⓘ</button></span>' +
       '</div>';
-    }).join("") : '<div class="empty-state">条件に一致するタグはありません。</div>';
+    }).join("") : (() => {
+      const allCategoriesHidden = !state.queryTerms.length && !state.major && !state.minor && !state.favoritesOnly &&
+        Object.values(state.columnFilters).every(values => values.size === 0) &&
+        state.all.some(row => row.major) &&
+        state.all.filter(row => row.major).every(row => state.excludedMinorCategories.has(minorCategoryKey(row.major, row.minor)));
+      return '<div class="empty-state">' + (allCategoriesHidden
+        ? '分類がすべて非表示です。「すべての分類」をオンにするか、表示したい分類にチェックを入れてください。'
+        : '条件に一致するタグはありません。') + '</div>';
+    })();
     const start = Math.max(1, state.page - 2), end = Math.min(pages, Math.max(5, state.page + 3));
     let nums = "";
     for (let p = start; p <= end; p++) nums += '<button type="button" class="page-number' + (p - 1 === state.page ? ' active' : '') + '" data-page="' + (p - 1) + '" aria-current="' + (p - 1 === state.page ? 'page' : 'false') + '">' + p + '</button>';
@@ -713,13 +752,9 @@
     state.major = "";
     state.minor = "";
     state.favoritesOnly = false;
-    state.excludedMajorCategories.clear();
-    state.excludedMinorCategories.clear();
-    writeUserDataV2({ excludedMajorCategories: [], excludedMinorCategories: [] });
     $("#favorites-only").checked = false;
     Object.values(state.columnFilters).forEach(values => values.clear());
-    state.sort = "index";
-    state.sortDirection = "asc";
+    saveDictionaryViewState();
     renderCategories();
     renderTableTools();
     applyFilters();
@@ -1546,6 +1581,7 @@
         const field = toggle.dataset.sortToggle;
         state.sortDirection = state.sort === field && state.sortDirection === "asc" ? "desc" : "asc";
         state.sort = field;
+        saveDictionaryViewState();
         renderTableTools();
         applyFilters();
         return;
@@ -1554,6 +1590,7 @@
       if (sort) {
         state.sort = sort.dataset.sortField;
         state.sortDirection = sort.dataset.sortDirection;
+        saveDictionaryViewState();
         root.querySelectorAll("details[open]").forEach(menu => { menu.open = false; });
         renderTableTools();
         applyFilters();
@@ -1562,6 +1599,7 @@
       const clear = event.target.closest("[data-filter-clear]");
       if (clear) {
         state.columnFilters[clear.dataset.filterClear].clear();
+        saveDictionaryViewState();
         renderTableTools();
         applyFilters();
       }
@@ -1599,6 +1637,7 @@
       if (input) {
         const values = state.columnFilters[input.dataset.filterGroup];
         if (input.checked) values.add(input.value); else values.delete(input.value);
+        saveDictionaryViewState();
         applyFilters();
         return;
       }
@@ -1908,6 +1947,8 @@
         state.all = rowsByFile.flat();
         state.all.sort((a,b) => Number(a.index) - Number(b.index));
         prepareSearchIndex();
+        const hadStoredUserData = [USER_DATA_KEY, LEGACY_FAVORITES_KEY, LEGACY_EXPRESSION_LEVELS_KEY, LEGACY_BUILDER_STATE_KEY]
+          .some(key => localStorage.getItem(key) !== null);
         const userData = migrateLegacyUserData();
         state.favorites = new Set(Array.isArray(userData.favorites) ? userData.favorites.filter(key => typeof key === "string") : []);
         const savedMinorExclusions = Array.isArray(userData.excludedMinorCategories)
@@ -1924,11 +1965,13 @@
             state.excludedMinorCategories.add(minorCategoryKey(row.major || "", row.minor));
           });
         } else {
-          // 旧仕様の保存状態は表示設定として引き継がず、全分類を表示する。
-          state.excludedMinorCategories = new Set();
+          // 既存ユーザーの旧保存データは全分類表示を維持する。初回起動のみ全分類を非表示にする。
+          state.excludedMinorCategories = hadStoredUserData ? new Set() : new Set(
+            state.all.filter(row => row.major).map(row => minorCategoryKey(row.major, row.minor))
+          );
         }
         state.excludedMajorCategories = new Set();
-        if (userData.categoryVisibilityVersion !== 3) {
+        if (userData.categoryVisibilityVersion !== 3 || !hadStoredUserData) {
           writeUserDataV2({
             excludedMajorCategories: [],
             excludedMinorCategories: [...state.excludedMinorCategories].map(key => JSON.parse(key)),
@@ -1937,6 +1980,7 @@
         }
         state.expandedMajorCategories = new Set(Array.isArray(userData.expandedMajorCategories) ? userData.expandedMajorCategories.filter(value => typeof value === "string") : []);
         state.expressionLevels = new Map(Array.isArray(userData.expressionLevels) ? userData.expressionLevels.filter(entry => Array.isArray(entry) && typeof entry[0] === "string" && (entry[1] === null || [0,1,2,3,4].includes(entry[1])) ) : []);
+        restoreDictionaryViewState(userData);
         renderMigrationReport(userData);
         if (!state.selectionRestored) restoreBuilderState();
         else {
