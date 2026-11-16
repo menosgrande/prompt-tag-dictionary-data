@@ -982,7 +982,7 @@
       if(item.weight && Number(item.weight) !== 1){
         const weightBadge=document.createElement("small");
         weightBadge.className="prompt-bubble-weight-badge";
-        weightBadge.textContent=" "+item.weight;
+        weightBadge.textContent=": "+item.weight;
         weightBadge.title="重み";
         chip.append(weightBadge);
       }
