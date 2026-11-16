@@ -788,8 +788,11 @@
     renderRows();
     renderEditor();
   }
+  function normalizePromptTag(tag) {
+    return String(tag || "").trim().toLocaleLowerCase();
+  }
   function locatePromptTag(tag) {
-    const normalized = String(tag || "").trim().toLocaleLowerCase();
+    const normalized = normalizePromptTag(tag);
     for (const polarity of ["positive", "negative"]) {
       const tokens = parsePromptTokens(state[polarity === "positive" ? "promptPositive" : "promptNegative"]);
       const index = tokens.findIndex(item => item.tag.trim().toLocaleLowerCase() === normalized);
@@ -921,8 +924,6 @@
             updatePromptFromBubbles(target,tokens);
           }else if(action==="move"){
             const destination=target==="positive"?"negative":"positive";
-            promptBubbleMenuRestore={target:destination,tag:item.tag};
-            promptBubbleFocusRestore={target:destination,tag:item.tag,index:parsePromptTokens(state[destination==="negative"?"promptNegative":"promptPositive"]).length};
             movePromptBubble(target,index,tokens);
           }else if(action==="remove"){
             tokens.splice(index,1);updatePromptFromBubbles(target,tokens);
@@ -1127,19 +1128,35 @@
           clearDragStyles();
           if(!cancelled){
             captureUndoState();
-            const positive=[...$("#positive-bubbles").querySelectorAll(".prompt-bubble")].map(node=>node._promptToken);
-            const negative=[...$("#negative-bubbles").querySelectorAll(".prompt-bubble")].map(node=>node._promptToken);
-            const movedTag=chip._promptToken?.tag;
+            const positiveRoot=$("#positive-bubbles");
+            const negativeRoot=$("#negative-bubbles");
+            let positive=[...positiveRoot.querySelectorAll(".prompt-bubble")].map(node=>node._promptToken);
+            let negative=[...negativeRoot.querySelectorAll(".prompt-bubble")].map(node=>node._promptToken);
+            const movedToken=chip._promptToken;
+            const originRoot=dragState.originRoot;
+            const destinationPolarity=destinationRoot?.id==="negative-bubbles"?"negative":"positive";
+            const originPolarity=originRoot?.id==="negative-bubbles"?"negative":"positive";
+            let mergedIndex=-1;
+            let merged=false;
+            if(originRoot!==destinationRoot){
+              const destinationTokens=(destinationPolarity==="negative"?negative:positive).filter(token=>token!==movedToken);
+              const result=mergeIntoDestination(movedToken,destinationTokens);
+              mergedIndex=result.index;
+              merged=result.merged;
+              if(destinationPolarity==="negative")negative=result.tokens;
+              else positive=result.tokens;
+            }
             state.promptPositive=serializePromptTokens(positive);
             state.promptNegative=serializePromptTokens(negative);
-            const destinationPolarity=destinationRoot?.id==="negative-bubbles"?"negative":"positive";
-            const movedIndex=[...destinationRoot.querySelectorAll(".prompt-bubble")].indexOf(chip);
-            if(movedIndex>=0)promptBubbleFocusRestore={target:destinationPolarity,tag:movedTag,index:movedIndex};
+            const destinationTokens=destinationPolarity==="negative"?negative:positive;
+            const movedIndex=merged?mergedIndex:destinationTokens.findIndex(token=>token===movedToken);
+            if(movedIndex>=0)promptBubbleFocusRestore={target:destinationPolarity,tag:destinationTokens[movedIndex].tag,index:movedIndex};
             $("#positive-output").value=state.promptPositive;
             $("#negative-output").value=state.promptNegative;
             syncSelectedFromPromptText();
             renderPromptBubbles("positive");renderPromptBubbles("negative");
             renderRows();renderEditor();
+            if(merged&&mergedIndex>=0)highlightPromptTag(destinationPolarity,mergedIndex);
           }
         }
         pointerStart=null;pointerDragging=false;dragState=null;
@@ -1197,6 +1214,13 @@
     // render here so a restored open menu is not immediately discarded.
     renderRows();renderEditor();
   }
+  function mergeIntoDestination(item,destinationTokens) {
+    const normalized=normalizePromptTag(item?.tag);
+    const duplicateIndex=destinationTokens.findIndex(token=>normalizePromptTag(token.tag)===normalized);
+    if(duplicateIndex>=0)return {tokens:destinationTokens,index:duplicateIndex,merged:true};
+    destinationTokens.push(item);
+    return {tokens:destinationTokens,index:destinationTokens.length-1,merged:false};
+  }
   function movePromptBubble(source,index,tokens) {
     const target=source==="positive"?"negative":"positive";
     const item=tokens[index];
@@ -1204,12 +1228,15 @@
     captureUndoState();
     const sourceTokens=tokens.filter((_,tokenIndex)=>tokenIndex!==index);
     const destination=parsePromptTokens(state[target==="negative"?"promptNegative":"promptPositive"]);
-    destination.push(item);
+    const result=mergeIntoDestination(item,destination);
     state[source==="negative"?"promptNegative":"promptPositive"]=serializePromptTokens(sourceTokens);
-    state[target==="negative"?"promptNegative":"promptPositive"]=serializePromptTokens(destination);
+    state[target==="negative"?"promptNegative":"promptPositive"]=serializePromptTokens(result.tokens);
+    promptBubbleMenuRestore={target,tag:result.tokens[result.index].tag};
+    promptBubbleFocusRestore={target,tag:result.tokens[result.index].tag,index:result.index};
     $("#positive-output").value=state.promptPositive;
     $("#negative-output").value=state.promptNegative;
     syncSelectedFromPromptText();renderRows();renderEditor();
+    if(result.merged)highlightPromptTag(target,result.index);
   }
   function syncSelectedFromPromptText() {
     const rowsByTag=new Map(state.all.map(row=>[String(row.tag).toLocaleLowerCase(),row]));
