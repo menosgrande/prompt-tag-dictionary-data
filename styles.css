@@ -610,3 +610,16 @@ body{font-size:14px;line-height:1.65}
 .sort-toggle-button{display:inline-flex;flex:0 0 19px;align-items:center;justify-content:center;width:19px;height:19px;padding:0;border:1px solid var(--line);border-radius:4px;background:var(--surface-raised);color:var(--muted);font-size:12px;line-height:1;cursor:pointer}
 .sort-toggle-button:hover,.sort-toggle-button[aria-pressed="true"]{border-color:var(--accent);background:var(--surface-hover);color:var(--accent-strong)}
 @media(max-width:760px){.table-head-cell.sort-heading-cell{gap:3px;padding:2px}.sort-toggle-button{flex-basis:17px;width:17px;height:17px;font-size:11px}}
+
+
+/* Keep prompt editor actions visible while hiding its legacy toolbar. */
+.editor-builder-panel > .panel-heading{
+  display:flex;
+}
+.editor-builder-panel .builder-heading-actions{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:8px;
+  flex-wrap:wrap;
+}
