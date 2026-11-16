@@ -1174,10 +1174,10 @@
     saveBuilderState();
   }
 
-  function appendPromptTag(polarity, tag) {
+  function appendPromptTag(polarity, tag, recordUndo=true) {
     const existing=locatePromptTag(tag);
     if(existing){highlightPromptTag(existing.polarity,existing.index);return;}
-    captureUndoState();
+    if(recordUndo)captureUndoState();
     const key = polarity === "negative" ? "promptNegative" : "promptPositive";
     const tokens = parsePromptTokens(state[key]);
     tokens.push({tag,weight:""});
@@ -1185,8 +1185,8 @@
     const output = $(polarity === "negative" ? "#negative-output" : "#positive-output");
     if (output) output.value = state[key];
   }
-  function removePromptTag(polarity, tag) {
-    captureUndoState();
+  function removePromptTag(polarity, tag, recordUndo=true) {
+    if(recordUndo)captureUndoState();
     const key = polarity === "negative" ? "promptNegative" : "promptPositive";
     state[key] = parsePromptTokens(state[key]).filter(item => item.tag.toLocaleLowerCase() !== String(tag).toLocaleLowerCase()).map(item=>item.weight?"("+item.tag+":"+item.weight+")":item.tag).join(", ");
     const output = $(polarity === "negative" ? "#negative-output" : "#positive-output");
@@ -1245,30 +1245,32 @@
   }
   function addRow(row) {
     const key = keyOf(row);
-    if (!state.selected.has(key)) { state.selected.set(key, row); state.polarity.set(key, "positive"); appendPromptTag("positive", row.tag); }
+    if (!state.selected.has(key)) { captureUndoState(); state.selected.set(key, row); state.polarity.set(key, "positive"); appendPromptTag("positive", row.tag, false); }
     renderRows(); renderEditor();
   }
   function toggleRow(row) {
     const key = keyOf(row);
+    captureUndoState();
     if (state.selected.has(key)) {
-      removePromptTag(state.polarity.get(key) || "positive", row.tag);
+      removePromptTag(state.polarity.get(key) || "positive", row.tag, false);
       state.selected.delete(key); state.polarity.delete(key);
     } else {
       state.selected.set(key, row); state.polarity.set(key, "positive");
-      appendPromptTag("positive", row.tag);
+      appendPromptTag("positive", row.tag, false);
     }
     syncSelectedFromPromptText(); renderRows(); renderEditor();
   }
   function cycleRowState(row) {
     const key = keyOf(row);
+    captureUndoState();
     if (!state.selected.has(key)) {
       state.selected.set(key, row); state.polarity.set(key, "positive");
-      appendPromptTag("positive", row.tag);
+      appendPromptTag("positive", row.tag, false);
     } else if (state.polarity.get(key) === "positive") {
-      removePromptTag("positive", row.tag); state.polarity.set(key, "negative");
-      appendPromptTag("negative", row.tag);
+      removePromptTag("positive", row.tag, false); state.polarity.set(key, "negative");
+      appendPromptTag("negative", row.tag, false);
     } else {
-      removePromptTag("negative", row.tag);
+      removePromptTag("negative", row.tag, false);
       state.selected.delete(key); state.polarity.delete(key);
     }
     syncSelectedFromPromptText(); renderRows(); renderEditor();
@@ -1432,11 +1434,12 @@
       if (!input) return;
       const row = state.all.find(item => keyOf(item) === input.dataset.key);
       if (!row) return;
+      captureUndoState();
       if (input.checked) {
         state.selected.set(input.dataset.key, row); state.polarity.set(input.dataset.key, "positive");
-        appendPromptTag("positive", row.tag);
+        appendPromptTag("positive", row.tag, false);
       } else {
-        removePromptTag(state.polarity.get(input.dataset.key) || "positive", row.tag);
+        removePromptTag(state.polarity.get(input.dataset.key) || "positive", row.tag, false);
         state.selected.delete(input.dataset.key); state.polarity.delete(input.dataset.key);
       }
       renderEditor();
