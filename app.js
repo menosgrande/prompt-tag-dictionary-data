@@ -1112,6 +1112,7 @@
         if(pointerDragging&&dragState){
           suppressNextClick=true;
           const placeholder=dragState.placeholder;
+          const destinationRoot=placeholder.parentElement;
           if(cancelled){
             const origin=dragState.originRoot;
             origin.insertBefore(chip,dragState.originNext&&dragState.originNext.parentElement===origin?dragState.originNext:null);
@@ -1127,7 +1128,6 @@
             const movedTag=chip._promptToken?.tag;
             state.promptPositive=serializePromptTokens(positive);
             state.promptNegative=serializePromptTokens(negative);
-            const destinationRoot=placeholder.parentElement;
             const destinationPolarity=destinationRoot?.id==="negative-bubbles"?"negative":"positive";
             const destinationTokens=destinationPolarity==="negative"?negative:positive;
             const movedIndex=destinationTokens.findIndex(token=>token.tag===movedTag);
