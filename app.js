@@ -891,19 +891,29 @@
       chip.className = "prompt-bubble"; chip.tabIndex = 0;
       chip._promptToken = item;
       chip.setAttribute("role","group");
-      chip.setAttribute("aria-label",item.tag + "。ドラッグで並べ替え、クリックで編集");
+      chip.setAttribute("aria-label",item.tag + "。1回クリックでフォーカス、同じチップをもう1回クリックでタグ名を編集。ドラッグで並べ替え");
       const label = document.createElement("span");
       label.className = "prompt-bubble-label"; label.textContent = item.tag;
-      label.title = "クリックしてタグ名を編集";
+      label.title = "1回目のクリックでフォーカス、もう1回クリックでタグ名を編集";
       const dictionaryRow = rowsByTag.get(item.tag.toLocaleLowerCase());
       const translation = document.createElement("small");
       translation.className = "prompt-bubble-translation";
       translation.textContent = dictionaryRow?.ja || "";
-      label.addEventListener("click", () => {
+      label.addEventListener("click", event => {
         if(label.isContentEditable)return;
+        // 1回目はチップにフォーカスするだけ。フォーカス済みの同じチップを再クリックすると編集する。
+        if(document.activeElement!==chip){
+          event.preventDefault();
+          chip.focus();
+          return;
+        }
         label.contentEditable="true";label.focus();
         const range=document.createRange();range.selectNodeContents(label);
         const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);
+      });
+      chip.addEventListener("click", event => {
+        if(event.target.closest("button, .prompt-bubble-label"))return;
+        if(document.activeElement!==chip)chip.focus();
       });
       const commitLabel=()=>{
         if(!label.isContentEditable)return;
