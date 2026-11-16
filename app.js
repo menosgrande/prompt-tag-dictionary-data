@@ -951,6 +951,9 @@
         root.querySelectorAll(".prompt-bubble-menu").forEach(other=>{other.hidden=true;});
         menu.hidden=!opening;
       });
+      chip.addEventListener("focusout",event=>{
+        if(!chip.contains(event.relatedTarget))menu.hidden=true;
+      });
       chip.addEventListener("keydown",event=>{
         if(event.target!==chip||event.isComposing||event.keyCode===229||event.ctrlKey||event.metaKey||event.altKey)return;
         if(label.isContentEditable||!menu.hidden)return;
