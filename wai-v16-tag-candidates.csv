@@ -1,120 +1,41 @@
-"tag","ja","major","minor","detail","aliases_json","candidate_status","source_url","model_validation","notes"
-"neon genesis evangelion","新世紀エヴァンゲリオン","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"suzumiya haruhi no yuuutsu","涼宮ハルヒの憂鬱","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"code geass","コードギアス","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"fate (series)","Fateシリーズ","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"mahou shoujo madoka magica","魔法少女まどか☆マギカ","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"to aru majutsu no index","とあるシリーズ","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"k-on!","けいおん！","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"monogatari (series)","〈物語〉シリーズ","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"sword art online","ソードアート・オンライン","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"re:zero kara hajimeru isekai seikatsu","Re:ゼロから始める異世界生活","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"kono subarashii sekai ni shukufuku wo!","この素晴らしい世界に祝福を！","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"yahari ore no seishun lovecome wa machigatteiru","やはり俺の青春ラブコメはまちがっている。","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"ore no imouto ga konna ni kawaii wake ga nai","俺の妹がこんなに可愛いわけがない","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"to love-ru","To LOVEる","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"high school dxd","ハイスクールD×D","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"sono bisque doll wa koi wo suru","その着せ替え人形は恋をする","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"dungeon meshi","ダンジョン飯","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"sousou no frieren","葬送のフリーレン","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"chainsaw man","チェンソーマン","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"blue archive","ブルーアーカイブ","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"azur lane","アズールレーン","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"goddess of victory: nikke","勝利の女神：NIKKE","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"genshin impact","原神","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"honkai: star rail","崩壊：スターレイル","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"the idolmaster","アイドルマスター","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"love live!","ラブライブ！","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"umamusume","ウマ娘 プリティーダービー","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"kantai collection","艦隊これくしょん","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"touhou","東方Project","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"arknights","アークナイツ","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"hololive","ホロライブ","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"nijisanji","にじさんじ","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"vocaloid","VOCALOID","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"princess connect!","プリンセスコネクト！","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"granblue fantasy","グランブルーファンタジー","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"bleach","BLEACH","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"naruto","NARUTO","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"one piece","ONE PIECE","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"boku no hero academia","僕のヒーローアカデミア","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"spy x family","SPY×FAMILY","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"oshi no ko","【推しの子】","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"bocchi the rock!","ぼっち・ざ・ろっく！","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"kobayashi-san chi no maid dragon","小林さんちのメイドラゴン","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"yuru yuri","ゆるゆり","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"senki zesshou symphogear","戦姫絶唱シンフォギア","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"senran kagura","閃乱カグラ","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"date a live","デート・ア・ライブ","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"queen's blade","クイーンズブレイド","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"higurashi no naku koro ni","ひぐらしのなく頃に","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"clannad","CLANNAD","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"air (visual novel)","AIR","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"kanon (visual novel)","Kanon","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"da capo","D.C. ～ダ・カーポ～","キャラクター・作品","作品","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"rei ayanami","綾波レイ","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"asuka langley soryu","惣流・アスカ・ラングレー","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"suzumiya haruhi","涼宮ハルヒ","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"c.c.","C.C.","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"lelouch lamperouge","ルルーシュ・ランペルージ","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"saber","セイバー","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"tohsaka rin","遠坂凛","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"sakura matou","間桐桜","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"kaname madoka","鹿目まどか","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"akemi homura","暁美ほむら","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"mio akiyama","秋山澪","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"yui hirasawa","平沢唯","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"hitagi senjougahara","戦場ヶ原ひたぎ","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"asuna (sword art online)","アスナ","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"rem (re:zero)","レム","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"ram (re:zero)","ラム","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"megumin","めぐみん","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"yukino yukinoshita","雪ノ下雪乃","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"kuroneko (oreimo)","黒猫","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"lala satalin deviluke","ララ・サタリン・デビルーク","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"haruna sairenji","西連寺春菜","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"rias gremory","リアス・グレモリー","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"marin kitagawa","喜多川海夢","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"maomao (kusuriya no hitorigoto)","猫猫","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"frieren","フリーレン","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"fern (sousou no frieren)","フェルン","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"power (chainsaw man)","パワー","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"makima","マキマ","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"shiroko (blue archive)","砂狼シロコ","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"mika (blue archive)","聖園ミカ","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"hoshino (blue archive)","小鳥遊ホシノ","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"kafka (honkai: star rail)","カフカ","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"raiden shogun","雷電将軍","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"hu tao","胡桃","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"enterprise (azur lane)","エンタープライズ","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"belfast (azur lane)","ベルファスト","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"gold ship","ゴールドシップ","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"tokai teio","トウカイテイオー","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"hakos baelz","ハコス・ベールズ","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"gawr gura","がうる・ぐら","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"hoshimachi suisei","星街すいせい","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"goku","孫悟空","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"sakura kinomoto","木之本桜","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"marisa kirisame","霧雨魔理沙","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"reimu hakurei","博麗霊夢","キャラクター・作品","キャラクター","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"takeda hiromitsu","武田弘光","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"shindou l","しんどう","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"misakura nankotsu","みさくらなんこつ","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"coffee kizoku","珈琲貴族","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"korie riko","こりえりこ","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"tinkle","てぃんくる","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"nishimata aoi","西又葵","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"kanro toshiki","甘露樹","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"mataro","魔太郎","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"hisasi","Hisasi","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"pija","ぴじゃ","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"redjuice","redjuice","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"kantoku","カントク","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"misaki kurehito","深崎暮人","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"tony taka","Tony","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"rurudo","rurudo","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"anmi","Anmi","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"mignon","Mignon","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"toridamono","トリダモノ","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"necomi","necomi","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
-"happoubi jin","八宝備仁","キャラクター・作品","作者・配信者","","[]","候補・要タグ照合","","未実機検証","Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。"
+tag,ja,major,minor,detail,aliases_json,candidate_status,source_url,model_validation,notes
+to aru majutsu no index,とあるシリーズ,キャラクター・作品,作品,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+yahari ore no seishun lovecome wa machigatteiru,やはり俺の青春ラブコメはまちがっている。,キャラクター・作品,作品,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+the idolmaster,アイドルマスター,キャラクター・作品,作品,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+kobayashi-san chi no maid dragon,小林さんちのメイドラゴン,キャラクター・作品,作品,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+yuru yuri,ゆるゆり,キャラクター・作品,作品,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+queen's blade,クイーンズブレイド,キャラクター・作品,作品,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+kanon (visual novel),Kanon,キャラクター・作品,作品,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+da capo,D.C. ～ダ・カーポ～,キャラクター・作品,作品,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+rei ayanami,綾波レイ,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+asuka langley soryu,惣流・アスカ・ラングレー,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+c.c.,C.C.,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+lelouch lamperouge,ルルーシュ・ランペルージ,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+saber,セイバー,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+sakura matou,間桐桜,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+kaname madoka,鹿目まどか,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+akemi homura,暁美ほむら,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+mio akiyama,秋山澪,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+yui hirasawa,平沢唯,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+hitagi senjougahara,戦場ヶ原ひたぎ,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+asuna (sword art online),アスナ,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+megumin,めぐみん,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+yukino yukinoshita,雪ノ下雪乃,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+kuroneko (oreimo),黒猫,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+lala satalin deviluke,ララ・サタリン・デビルーク,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+haruna sairenji,西連寺春菜,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+rias gremory,リアス・グレモリー,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+marin kitagawa,喜多川海夢,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+maomao (kusuriya no hitorigoto),猫猫,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+frieren,フリーレン,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+makima,マキマ,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+hu tao,胡桃,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+gold ship,ゴールドシップ,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+tokai teio,トウカイテイオー,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+hakos baelz,ハコス・ベールズ,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+gawr gura,がうる・ぐら,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+hoshimachi suisei,星街すいせい,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+goku,孫悟空,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+sakura kinomoto,木之本桜,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+marisa kirisame,霧雨魔理沙,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
+reimu hakurei,博麗霊夢,キャラクター・作品,キャラクター,,[],候補・要タグ照合,,未実機検証,Danbooru上の正確なタグ表記・作品との紐付けを要確認。WAI-NSFW-Illustrious V16での再現性は未検証。
