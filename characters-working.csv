@@ -1838,7 +1838,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 7151,persona 4,ペルソナ4,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 7152,persona 5,ペルソナ5,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 7153,persona 5 the royal,ペルソナ5 ザ・ロイヤル,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-7154,personal ami,パーソナルアミ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+7154,personal ami,ぺんたごん(イラストレーター・漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 7169,phantasy star,ファンタシースター,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 7170,phantasy star online 2,ファンタシースターオンライン2,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 7171,phantom blood,ファントムブラッド,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -2014,7 +2014,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8180,saki (blue archive),サキ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8181,saki (manga),咲-Saki-（漫画タイトル）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 8182,saki achiga-hen,咲-Saki- 阿知賀編 episode of side-A,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-8183,sakiyamama,サキヤママ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+8183,sakiyamama,サキヤママ(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 8185,sakugawa school uniform,柵川中学の制服(とある科学の超電磁砲),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 8186,sakuma mayu,佐久間まゆ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8187,sakura futaba,佐倉双葉,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2034,7 +2034,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8210,samneco,サムネコ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 8213,samurai spirits,サムライスピリッツ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 8214,samus aran,サムス・アラン,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-8215,sana channel,名取さな,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+8215,sana channel,名取さな(VTuber),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 8222,sangonomiya kokomi,珊瑚宮心海,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8223,sangvis ferri,鉄血工造（少女前線）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 8224,sanji (one piece),サンジ（ワンピース）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2054,7 +2054,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8257,saunders military uniform,サンダース軍服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 8258,saunders school uniform,サンダース大学附属高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 8263,sayonara zetsubou sensei,さよなら絶望先生,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-8264,sayori (neko works),さより(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+8264,sayori (neko works),さより(イラストレーター・原画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 8265,sazanami (kancolle),漣（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8284,scaramouche (genshin impact),スカラマシュ（散兵／放浪者）（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8289,scathach (fate),スカサハ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2097,7 +2097,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8396,seo tatsuya,瀬尾辰也,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 8397,sephiroth,セフィロス,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8401,seraziel,セラジエル,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-8402,serebi ryousangata,セレビィ量産型,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+8402,serebi ryousangata,セレビィ量産型(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 8403,serena (pokemon),セレナ（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8404,serika (blue archive),黒見セリカ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8406,serizawa asahi,芹沢あさひ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2128,7 +2128,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8498,shikinami (kancolle),敷波（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8500,shima rin,志摩リン,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8501,shimada arisu,島田愛里寿,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-8502,shimada fumikane,島田フミカネ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+8502,shimada fumikane,島田フミカネ(イラストレーター・キャラクターデザイナー・メカニックデザイナー),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 8504,shimakaze (kancolle),島風（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8505,shimakaze (kancolle) (cosplay),島風（艦これ）のコスプレ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8506,shimamura uzuki,島村卯月,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2299,7 +2299,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9386,super sonico,すーぱーそに子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9399,surtr (arknights),スルト（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9408,sussurro (arknights),ススーロ（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-9409,suzuhira hiro,鈴平ひろ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+9409,suzuhira hiro,鈴平ひろ(イラストレーター・原画家・漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 9410,suzukaze (kancolle),涼風（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9411,suzuki toto,suzuki toto,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 9412,suzumiya haruhi,涼宮ハルヒ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2349,7 +2349,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9529,takatsuki yayoi,高槻やよい（アイドルマスター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9531,takeba yukari,岳羽ゆかり（ペルソナ3）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9532,takebe saori,武部沙織,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-9533,takeuchi takashi,武内崇（TYPE-MOON）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+9533,takeuchi takashi,武内崇(TYPE-MOON)(イラストレーター・キャラクターデザイナー),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 9534,takiki,takiki,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 9537,tales of (series),テイルズ オブ シリーズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9538,tales of graces,テイルズ オブ グレイセス,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -2450,7 +2450,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9840,tonee,tonee,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 9846,tony taka,Tony Taka（トニー・タカ）,キャラクター・作品,作者・配信者,,"[""Tony Taka"",""トニータカ""]",verified,0,verified,verified,normal
 9847,tony tony chopper,トニートニー・チョッパー（ONE PIECE）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-9852,toosaka asagi,遠坂あさぎ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+9852,toosaka asagi,遠坂あさぎ(イラストレーター・キャラクターデザイナー),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 9861,toradora!,とらドラ！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9862,toramaru shou,寅丸星（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9863,toranoana,とらのあな（同人ショップ）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
@@ -2493,7 +2493,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 10009,tsukumo benben,九十九弁々（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10010,tsukumo sana,九十九佐命,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10011,tsumiki mikan,罪木蜜柑（ダンガンロンパ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-10012,tsunako,つなこ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+10012,tsunako,つなこ(イラストレーター・2Dデザイナー),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 10014,tsunomaki watame,角巻わため,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10016,tsuruse,ツルセ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 10017,tsushima yoshiko,津島善子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2612,7 +2612,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 10754,xiao (genshin impact),魈（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10755,xingqiu (genshin impact),行秋（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10756,xinzoruo,シンゾルオ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-10758,yabuki kentarou,矢吹健太朗,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+10758,yabuki kentarou,矢吹健太朗(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 10759,yae miko,八重神子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10760,yae sakura,八重桜（崩壊3rd）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10761,yaegashi nan,八重樫南,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
@@ -2624,7 +2624,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 10768,yakumo yukari,八雲紫,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10769,yamada ryo,山田リョウ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10770,yamakaze (kancolle),山風（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-10771,yamamoto souichirou,山本崇一朗,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+10771,yamamoto souichirou,山本崇一朗(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 10772,yamashiro (kancolle),山城（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10773,yamato (kancolle),大和（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10774,yamato (one piece),ヤマト（ワンピース）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
