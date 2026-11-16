@@ -70,20 +70,20 @@ html.prompt-bubble-dragging-active * {
   filter: brightness(1.025);
 }
 
+/* Focus is shown on the chip's own border for both pointer and keyboard focus. */
 .editor-builder-panel .prompt-bubble:focus,
 .editor-builder-panel .prompt-bubble:focus-visible {
   outline: none;
+  border-width: 2px;
+  border-color: #426b55;
+  padding: 2px 8px;
   box-shadow: none;
+  filter: none;
 }
 
-/* Make keyboard focus on a prompt chip unmistakable. */
-.editor-builder-panel .prompt-bubble:focus-visible {
-  position: relative;
-  z-index: 2;
-  outline: 3px solid #f6c453;
-  outline-offset: 3px;
-  box-shadow: 0 0 0 2px rgba(20, 28, 24, .92), 0 0 0 5px rgba(246, 196, 83, .28);
-  filter: brightness(1.06);
+.editor-builder-panel .output-card:last-child .prompt-bubble:focus,
+.editor-builder-panel .output-card:last-child .prompt-bubble:focus-visible {
+  border-color: #98545e;
 }
 
 .editor-builder-panel .prompt-bubble-label {
