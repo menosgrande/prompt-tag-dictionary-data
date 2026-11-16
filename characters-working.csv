@@ -71,7 +71,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 188,akuma homura (Puella Magi Madoka Magica),悪魔ほむら（魔法少女まどか☆マギカ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 190,albedo (genshin impact),アルベド（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 193,alchemy stars,白夜極光（ゲームタイトル）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-195,aldehyde,アルデヒド,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+195,aldehyde,"アルデヒド(作者)",キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 196,aldnoah.zero,アルドノア・ゼロ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 197,alear (fire emblem),リュール（ファイアーエムブレム エンゲージ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 198,alhaitham (genshin impact),アルハイゼン（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -149,7 +149,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 516,asakura ryouko (The Melancholy of Haruhi Suzumiya),朝倉涼子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 517,asakura toru (The Idolmaster Shiny Colors),浅倉透（アイドルマスター シャイニーカラーズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 518,asamura hiori,朝叢ひおり(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-519,asanagi,朝凪,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+519,asanagi,"朝凪(作者)",キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 520,asashimo (kancolle),朝霜（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 521,asashio (kancolle),朝潮（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 522,asashio kai ni (kancolle),朝潮改二（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
