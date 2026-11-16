@@ -742,3 +742,14 @@ body{font-size:14px;line-height:1.65}
   gap:8px;
   flex-wrap:wrap;
 }
+
+/* Constrain the tag table to its panel; scroll the table horizontally on narrow screens. */
+.table-horizontal-scroll{
+  width:100%;
+  min-width:0;
+  max-width:100%;
+  overflow-x:auto;
+  overflow-y:hidden;
+  overscroll-behavior-x:contain;
+  -webkit-overflow-scrolling:touch;
+}
