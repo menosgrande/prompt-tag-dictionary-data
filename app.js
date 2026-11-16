@@ -828,7 +828,7 @@
   }
   function getPromptOutput(polarity) {
     const source = polarity === "negative" ? state.promptNegative : state.promptPositive;
-    const rowsByTag = new Map(state.all.map(candidate => [normalizeSearchText(candidate.tag), candidate]));
+    const rowsByTag = new Map(state.all.map(candidate => [String(candidate.tag).toLocaleLowerCase(), candidate]));
     const rowsByTerm = new Map();
     const ambiguousTerms = new Set();
     state.all.forEach(candidate => {
@@ -844,7 +844,7 @@
     });
     return parsePromptTokens(source).map(item => {
       const normalized = normalizeSearchText(item.tag);
-      const row = rowsByTag.get(normalized) || (ambiguousTerms.has(normalized) ? null : rowsByTerm.get(normalized));
+      const row = rowsByTag.get(item.tag.toLocaleLowerCase()) || (ambiguousTerms.has(normalized) ? null : rowsByTerm.get(normalized));
       const tag = row ? row.tag : item.tag;
       return item.weight ? "(" + tag + ":" + item.weight + ")" : tag;
     }).join(", ");
