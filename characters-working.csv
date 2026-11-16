@@ -1138,7 +1138,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5090,kemono friends,けものフレンズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5091,kemono friends 3,けものフレンズ3,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5092,kemono friends v project,けものフレンズVぷろじぇくと,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-5094,kenkou cross,ケンコウクロス,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+5094,kenkou cross,ケンコウクロス(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5095,kenzaki makoto,剣崎真琴（ドキドキ！プリキュア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5097,keqing (genshin impact),刻晴（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5099,kero (cardcaptor sakura),ケロちゃん（カードキャプターさくら）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1390,7 +1390,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5759,makinami mari illustrious (rebuild of evangelion),真希波・マリ・イラストリアス（ヱヴァンゲリヲン新劇場版）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5760,makise kurisu (steins;gate),牧瀬紅莉栖（シュタインズ・ゲート）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5762,makoto nanaya (blazblue),マコト＝ナナヤ（ブレイブルー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5763,makoto shinkai,新海誠 (作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+5763,makoto shinkai,新海誠(アニメーション監督・脚本家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5774,mallow (pokemon),マオ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5775,mamiya (kancolle),間宮（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5784,manhattan cafe (umamusume),マンハッタンカフェ（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1430,16 +1430,16 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5852,matoi ryuuko (kill la kill),纏流子（キルラキル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5853,matou kariya (fate/zero),間桐雁夜（Fate/Zero）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5854,matou sakura (fate/stay night),間桐桜（Fate/stay night）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5855,matsunaga kouyou,マツナガ・コウヨウ,キャラクター・作品,作者・配信者,,"[""Matsunaga Kouyou""]",verified,0,verified,verified,normal
+5855,matsunaga kouyou,松永紅葉(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,"[""Matsunaga Kouyou""]",verified,0,verified,verified,normal
 5856,matsuno choromatsu (osomatsu-san),松野チョロ松（おそ松さん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5857,matsuno ichimatsu (osomatsu-san),松野一松（おそ松さん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5858,matsuno jyushimatsu (osomatsu-san),松野十四松（おそ松さん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5859,matsuno karamatsu (osomatsu-san),松野カラ松（おそ松さん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5860,matsuno osomatsu (osomatsu-san),松野おそ松（おそ松さん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5861,matsuno todomatsu (osomatsu-san),松野トド松（おそ松さん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5862,matsuryuu,マツリュウ,キャラクター・作品,作者・配信者,,"[""MatsuRyuu""]",verified,0,verified,verified,normal
+5862,matsuryuu,松竜(イラストレーター・キャラクターデザイナー),キャラクター・作品,作者・配信者,,"[""MatsuRyuu""]",verified,0,verified,verified,normal
 5863,matsuura kanan (love live! sunshine!!),松浦果南（ラブライブ！サンシャイン!!）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5864,mattaku mousuke,マッタク・モウスケ,キャラクター・作品,作者・配信者,,"[""Mattaku Mousuke""]",verified,0,verified,verified,normal
+5864,mattaku mousuke,まったくモー助(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,"[""Mattaku Mousuke""]",verified,0,verified,verified,normal
 5868,maturiuta sorato,マツリウタ・ソラト(作者),キャラクター・作品,作者・配信者,,"[""Maturiuta Sorato""]",verified,0,verified,verified,normal
 5870,may (pokemon),ハルカ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5871,maya (kancolle),摩耶（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1474,12 +1474,12 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5942,meow (nekodenki),MEOW（ねこでんき）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5944,mercy (overwatch),マーシー（オーバーウォッチ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5945,merlin prismriver (touhou project),マーリン・プリズムリバー（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5949,merunyaa,Merunyaa（メルニャー）,キャラクター・作品,作者・配信者,,"[""Merunyaa"",""メルニャー""]",verified,0,verified,verified,normal
+5949,merunyaa,Merunyaa(絵師・アニメーター),キャラクター・作品,作者・配信者,,"[""Merunyaa"",""メルニャー""]",verified,0,verified,verified,normal
 5950,mery (yangmalgage),Mery(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5958,metal gear (series),メタルギアシリーズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5961,metamoran vest,メタモル星人のベスト,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5963,metroid,メトロイド,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-5964,meyoco,Meyoco（メヨコ）,キャラクター・作品,作者・配信者,,"[""Meyoco"",""メヨコ""]",verified,0,verified,verified,normal
+5964,meyoco,Meyoco(イラストレーター),キャラクター・作品,作者・配信者,,"[""Meyoco"",""メヨコ""]",verified,0,verified,verified,normal
 5966,michishio (kancolle),満潮（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5980,midna (the legend of zelda: twilight princess),ミドナ（ゼルダの伝説 トワイライトプリンセス）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5981,midori (blue archive),才羽ミドリ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
