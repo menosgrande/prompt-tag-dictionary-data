@@ -944,7 +944,7 @@
       if(item.weight){
         const weightBadge=document.createElement("small");
         weightBadge.className="prompt-bubble-weight-badge";
-        weightBadge.textContent=item.weight;
+        weightBadge.textContent="："+item.weight;
         weightBadge.title="重み";
         chip.append(weightBadge);
       }
