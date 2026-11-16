@@ -1171,7 +1171,7 @@
       const onWindowPointerUp=event=>finishPointerDrag(event,false);
       const onWindowPointerCancel=event=>finishPointerDrag(event,true);
       chip.addEventListener("pointerdown",event=>{
-        if(event.button!==0||label.isContentEditable||event.target.closest(".prompt-bubble-action"))return;
+        if(event.button!==0||label.isContentEditable||event.target.closest(".prompt-bubble-action, .prompt-bubble-menu"))return;
         pointerStart={id:event.pointerId,x:event.clientX,y:event.clientY};
         pointerDragging=false;
         window.addEventListener("pointermove",onWindowPointerMove,{passive:false});
