@@ -7,8 +7,8 @@
 - 抽出件数: 208件。過去の会話で扱った200件との差異があるため、この台帳は「200件確定版」ではなく、現行CSVから再抽出した一次候補一覧として扱う。
 - 注意: 提案は仮分類。CSV本体・app.jsは変更していない。
 
-```csv
-index,tag,ja,minor,reference_candidates,preliminary_action,proposed_target_or_relation,confidence,decision_status,review_notes
+```csv""
+"index","tag","ja","minor","reference_candidates","preliminary_action","proposed_target_or_relation","confidence","decision_status","review_notes"
 "162","akai haato (Hololive)","赤井はあと（ホロライブ）","キャラクター","ホロライブ | Hololive","組織・所属関係として管理","ホロライブ（組織）","中","確認済み","作品タイトルへの関連付けではなく、所属組織参照。"
 "164","akamatsu kaede (Danganronpa V3)","赤松楓","キャラクター","Danganronpa V3","既存タイトルへ関連付け","ニューダンガンロンパV3 みんなのコロシアイ新学期（index 2321）","中","確認済み","作品名は既存タイトル行で確認。"
 "171","akaza akari (YuruYuri)","赤座あかり","キャラクター","YuruYuri","タイトル行の追加候補","ゆるゆり","低","追加候補","既存タイトル行なし。作品名の親行を追加する候補。"
