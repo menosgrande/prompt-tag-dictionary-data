@@ -802,7 +802,7 @@
       if (char === "\\") { index++; continue; }
       if (matchedOpeners.has(index)) stack.push(char);
       else if (pairs[char] && stack[stack.length - 1] === pairs[char]) stack.pop();
-      else if ((char === "," || char === "\n" || char === "\r") && stack.length === 0) {
+      else if (char === "\n" || char === "\r" || (char === "," && stack.length === 0)) {
         const delimiterStart = index;
         if (char === "\r" && text[index + 1] === "\n") index++;
         else if (char === ",") while (text[index + 1] === " ") index++;
@@ -859,6 +859,37 @@
     output.push(formatSegment(segment));
     return output.join("");
   }
+  function parseParenthesizedPrompt(value) {
+    let inner = String(value || "").trim();
+    let depth = 0;
+    const unwrap = text => {
+      if (text[0] !== "(" || text[text.length - 1] !== ")") return null;
+      let level = 0;
+      for (let index = 0; index < text.length; index++) {
+        const char = text[index];
+        if (char === "\\") { index++; continue; }
+        if (char === "(") level++;
+        else if (char === ")") {
+          level--;
+          if (level < 0 || (level === 0 && index !== text.length - 1)) return null;
+        }
+      }
+      return level === 0 ? text.slice(1, -1) : null;
+    };
+    while (true) {
+      const unwrapped = unwrap(inner);
+      if (unwrapped === null) break;
+      inner = unwrapped;
+      depth++;
+    }
+    if (!depth || !inner) return null;
+    const weighted = inner.match(/^([\s\S]+):([0-9]+(?:\.[0-9]+)?)$/);
+    const tag = weighted ? weighted[1] : inner;
+    const explicitWeight = weighted ? Number(weighted[2]) : 1;
+    const implicitLayers = weighted ? depth - 1 : depth;
+    const weight = explicitWeight * Math.pow(1.1, implicitLayers);
+    return { tag, weight: Number(weight.toFixed(4)).toString() };
+  }
   function parsePromptTokens(value) {
     const tokens = [];
     splitPromptSegments(value).forEach(segment => {
@@ -867,10 +898,9 @@
         if (tokens.length) tokens[tokens.length - 1].separator += segment.separator;
         return;
       }
-      const weighted = raw.match(/^\(([^()]+):([0-9]+(?:\.[0-9]+)?)\)$/);
-      const hasTopLevelComma = weighted && splitPromptSegments(weighted[1]).length > 1;
-      const token = weighted && !hasTopLevelComma
-        ? { tag: weighted[1], weight: weighted[2] }
+      const parenthesized = parseParenthesizedPrompt(raw);
+      const token = parenthesized
+        ? { tag: parenthesized.tag, weight: parenthesized.weight }
         : isWrappedPromptExpression(raw)
           ? { tag: raw, weight: "", structured: true }
           : { tag: raw, weight: "" };
