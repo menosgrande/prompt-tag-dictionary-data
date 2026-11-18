@@ -1360,6 +1360,7 @@
       };
       const updateDragTarget=event=>{
         if(!dragState)return;
+        const isMobileDrag=window.matchMedia("(max-width: 600px)").matches;
         chip.style.left=(event.clientX-dragState.grabX)+"px";
         chip.style.top=(event.clientY-dragState.grabY)+"px";
         const hit=document.elementFromPoint(event.clientX,event.clientY);
@@ -1402,7 +1403,9 @@
         let targetRow=nearestRow;
         if(previousRow){
           const previousDistance=Math.abs(event.clientY-(previousRow.top+previousRow.bottom)/2);
-          if(previousDistance<=nearestDistance+12)targetRow=previousRow;
+          // Mobile touch coordinates fluctuate more; keep the current row until the
+          // pointer is clearly closer to another row to prevent row-to-row flicker.
+          if(previousDistance<=nearestDistance+(isMobileDrag?24:12))targetRow=previousRow;
         }
 
         const entries=targetRow.entries;
@@ -1413,7 +1416,9 @@
           const entry=entries[index];
           const centerX=entry.rect.left+entry.rect.width/2;
           const nextAnchor=entries[index+1]?.node||afterRowAnchor;
-          if(Math.abs(event.clientX-centerX)<8&&
+          // Add a wider dead zone around chip centers on mobile so a tiny coordinate
+          // fluctuation cannot repeatedly reverse the insertion position.
+          if(Math.abs(event.clientX-centerX)<(isMobileDrag?18:8)&&
              (dragState.lastAnchor===entry.node||dragState.lastAnchor===nextAnchor)){
             anchor=dragState.lastAnchor;
             retainedAnchor=true;
