@@ -138,9 +138,14 @@ html.prompt-bubble-dragging-active * {
   background: rgba(57, 35, 39, .92);
 }
 
-.editor-builder-panel .prompt-bubble:hover .prompt-bubble-action,
 .editor-builder-panel .prompt-bubble:focus-within .prompt-bubble-action {
   display: block;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .editor-builder-panel .prompt-bubble:hover .prompt-bubble-action {
+    display: block;
+  }
 }
 
 .editor-builder-panel .prompt-bubble-placeholder {
@@ -235,8 +240,10 @@ body > .prompt-bubble.is-dragging .prompt-bubble-action {
 
 /* Prompt chip operation menu, Undo, validation and length estimates. */
 .editor-builder-panel .prompt-bubble-menu-toggle{left:-7px;right:auto;top:-7px;display:none}
-.editor-builder-panel .prompt-bubble:hover .prompt-bubble-menu-toggle,
 .editor-builder-panel .prompt-bubble:focus-within .prompt-bubble-menu-toggle{display:block}
+@media (hover: hover) and (pointer: fine) {
+  .editor-builder-panel .prompt-bubble:hover .prompt-bubble-menu-toggle{display:block}
+}
 .editor-builder-panel .prompt-bubble-menu{position:absolute;top:calc(100% + 5px);left:0;z-index:80;display:grid;grid-template-columns:repeat(2,minmax(82px,1fr));gap:4px;min-width:190px;padding:8px;border:1px solid #879b91;border-radius:9px;background:#202a27;color:#f1f5f2;box-shadow:0 8px 22px #0006;cursor:default;touch-action:auto}
 .editor-builder-panel .prompt-bubble-menu[hidden]{display:none}
 .editor-builder-panel .prompt-bubble-weight{grid-column:1/-1;padding:2px 4px;color:#d5e5dc;font-size:10px}
@@ -252,8 +259,10 @@ body > .prompt-bubble.is-dragging .prompt-bubble-action {
 
 .editor-builder-panel .prompt-bubble-translation{display:none;margin-left:5px;max-width:min(38vw,260px);overflow:hidden;color:rgba(17,27,22,.72);font-size:10px;line-height:1.35;text-overflow:ellipsis;white-space:nowrap}
 .editor-builder-panel .output-card:last-child .prompt-bubble-translation{color:rgba(38,20,22,.68)}
-.editor-builder-panel .prompt-bubble:hover .prompt-bubble-translation,
 .editor-builder-panel .prompt-bubble:focus-within .prompt-bubble-translation{display:inline}
+@media (hover: hover) and (pointer: fine) {
+  .editor-builder-panel .prompt-bubble:hover .prompt-bubble-translation{display:inline}
+}
 
 
 
