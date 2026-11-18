@@ -1327,11 +1327,12 @@
         chip.style.pointerEvents="";chip.style.zIndex="";chip.style.transform="";
       };
       const moveDragPlaceholder=(destination,beforeNode)=>{
-        const oldRoot=dragState.placeholder.parentElement;
+        destination.insertBefore(dragState.placeholder,beforeNode);
+        if(window.matchMedia("(max-width: 600px)").matches)return;
+        const oldRoot=dragState.previousRoot;
         const roots=[...new Set([oldRoot,destination])];
         const nodes=roots.flatMap(container=>[...container.querySelectorAll(".prompt-bubble")]);
         const positions=new Map(nodes.map(node=>[node,node.getBoundingClientRect()]));
-        destination.insertBefore(dragState.placeholder,beforeNode);
         nodes.forEach(node=>{
           if(!node.isConnected)return;
           const first=positions.get(node),last=node.getBoundingClientRect();
