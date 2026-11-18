@@ -1047,6 +1047,15 @@
   }
   let promptBubbleMenuRestore = null;
   let promptBubbleFocusRestore = null;
+  // Close operation menus on an actual outside pointer action. On iOS Safari,
+  // focusout.relatedTarget may be null even when a menu button is tapped.
+  document.addEventListener("pointerdown", event => {
+    if (event.target.closest?.(".prompt-bubble")) return;
+    document.querySelectorAll(".prompt-bubble-menu:not([hidden])").forEach(menu => {
+      menu.hidden = true;
+      menu.closest(".prompt-bubble")?.querySelector(".prompt-bubble-menu-toggle")?.setAttribute("aria-expanded", "false");
+    });
+  }, true);
   function renderPromptBubbles(polarity) {
     const target = polarity === "negative" ? "negative" : "positive";
     const root = $("#" + target + "-bubbles");
@@ -1217,14 +1226,24 @@
       addMenuButton("削除","remove");
       addMenuButton("前へ移動","up");
       addMenuButton("後ろへ移動","down");
+      menuToggle.setAttribute("aria-expanded", "false");
       menuToggle.addEventListener("click",event=>{
         event.preventDefault();event.stopPropagation();
         const opening=menu.hidden;
-        root.querySelectorAll(".prompt-bubble-menu").forEach(other=>{other.hidden=true;});
+        root.querySelectorAll(".prompt-bubble-menu").forEach(other=>{
+          other.hidden=true;
+          other.closest(".prompt-bubble")?.querySelector(".prompt-bubble-menu-toggle")?.setAttribute("aria-expanded", "false");
+        });
         menu.hidden=!opening;
+        menuToggle.setAttribute("aria-expanded", String(opening));
       });
       chip.addEventListener("focusout",event=>{
-        if(!chip.contains(event.relatedTarget))menu.hidden=true;
+        // A null relatedTarget is common for touch interactions in iOS Safari.
+        // Outside pointerdown is handled by the document-level listener above.
+        if(event.relatedTarget && !chip.contains(event.relatedTarget)){
+          menu.hidden=true;
+          menuToggle.setAttribute("aria-expanded", "false");
+        }
       });
       chip.addEventListener("keydown",event=>{
         if(event.target!==chip||event.isComposing||event.keyCode===229||event.ctrlKey||event.metaKey||event.altKey)return;
