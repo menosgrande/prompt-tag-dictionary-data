@@ -792,6 +792,31 @@
   function serializePromptTokens(tokens) {
     return tokens.map(item => item.weight && Number(item.weight) !== 1 ? "(" + item.tag + ":" + item.weight + ")" : item.tag).join(", ");
   }
+  function restorePromptDisplayText(value, original) {
+    if (!state.spacesToUnderscores || !original) return value;
+    const originalDisplay = original.replace(/\\s+/g, "_");
+    if (value === originalDisplay) return original;
+    const originalSegments = original.match(/\\s+|[^\\s]/g) || [];
+    const dp = Array.from({length:value.length + 1}, () => new Uint32Array(originalDisplay.length + 1));
+    for (let i=value.length-1;i>=0;i--) {
+      for (let j=originalDisplay.length-1;j>=0;j--) {
+        if (value[i] === originalDisplay[j]) {
+          const score = originalSegments[j] === "_" ? 2 : 1;
+          dp[i][j] = score + dp[i+1][j+1];
+        } else dp[i][j] = Math.max(dp[i+1][j], dp[i][j+1]);
+      }
+    }
+    const mapped = new Map();
+    let i=0,j=0;
+    while (i<value.length && j<originalDisplay.length) {
+      const score = originalSegments[j] === "_" ? 2 : 1;
+      if (value[i] === originalDisplay[j] && dp[i][j] === score + dp[i+1][j+1]) {
+        mapped.set(i, originalSegments[j]); i++; j++;
+      } else if (dp[i+1][j] >= dp[i][j+1]) i++;
+      else j++;
+    }
+    return [...value].map((char, position) => mapped.get(position) ?? char).join("");
+  }
   function promptSnapshot() {
     return { positive: state.promptPositive, negative: state.promptNegative };
   }
@@ -1423,12 +1448,17 @@
     tokens.push({tag,weight:""});
     input.value="";updateBubbleSuggestions(input);updatePromptFromBubbles(target,tokens);
   }
+  const textEditOriginal = { positive: null, negative: null };
   function setPromptEditorMode(target,mode) {
     const positive=target==="positive";
     const promptKey=positive?"promptPositive":"promptNegative";
     if(mode==="text"){
       state[promptKey]=serializePromptTokens(parsePromptTokens(state[promptKey]));
-      $("#"+(positive?"positive-output":"negative-output")).value=state[promptKey];
+      textEditOriginal[target] = state[promptKey];
+      const output=$("#"+(positive?"positive-output":"negative-output"));
+      output.value=state.spacesToUnderscores ? state[promptKey].replace(/\\s+/g,"_") : state[promptKey];
+    } else {
+      textEditOriginal[target] = null;
     }
     state.editorModes[target]=mode;
     const editor=$("#"+target+"-bubble-editor");
@@ -1940,11 +1970,11 @@
     });
     $("#positive-output").addEventListener("input", event => {
       if(!state.textEditUndoPending.positive){captureUndoState();state.textEditUndoPending.positive=true;}
-      state.promptPositive = event.target.value; syncSelectedFromPromptText(); renderRows(); renderEditor();
+      state.promptPositive = restorePromptDisplayText(event.target.value, textEditOriginal.positive ?? ""); syncSelectedFromPromptText(); renderRows(); renderEditor();
     });
     $("#negative-output").addEventListener("input", event => {
       if(!state.textEditUndoPending.negative){captureUndoState();state.textEditUndoPending.negative=true;}
-      state.promptNegative = event.target.value; syncSelectedFromPromptText(); renderRows(); renderEditor();
+      state.promptNegative = restorePromptDisplayText(event.target.value, textEditOriginal.negative ?? ""); syncSelectedFromPromptText(); renderRows(); renderEditor();
     });
     $('[data-action="undo-prompt"]').addEventListener("click", undoPromptChange);
     $('[data-action="redo-prompt"]').addEventListener("click", redoPromptChange);
