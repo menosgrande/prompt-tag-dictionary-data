@@ -1034,15 +1034,16 @@
         } else if (!existing) rowsByTerm.set(normalized, candidate);
       });
     });
-    return parsePromptTokens(source).map(item => {
-      if (item.structured) return state.spacesToUnderscores ? formatStructuredPromptExpression(item.tag) : item.tag;
+    const tokens = parsePromptTokens(source).map(item => {
+      if (item.structured) return { ...item, tag: state.spacesToUnderscores ? formatStructuredPromptExpression(item.tag) : item.tag };
       const normalized = normalizeSearchText(item.tag);
       const row = rowsByTag.get(item.tag.toLocaleLowerCase()) || (ambiguousTerms.has(normalized) ? null : rowsByTerm.get(normalized));
       const rawTag = row ? row.tag : item.tag;
       let tag = state.escapeParentheses ? rawTag.replace(/(?<!\\)([()])/g, "\\$1") : rawTag;
       if (state.spacesToUnderscores) tag = tag.replace(/ +/g, "_");
-      return item.weight && Number(item.weight) !== 1 ? "(" + tag + ":" + item.weight + ")" : tag;
-    }).join(", ");
+      return { ...item, tag };
+    });
+    return serializePromptTokens(tokens);
   }
   let promptBubbleMenuRestore = null;
   let promptBubbleFocusRestore = null;
