@@ -1378,12 +1378,8 @@
         // Use the geometry captured when dragging began. Moving the placeholder
         // changes flex-wrap positions, so live measurements would make the target
         // calculation chase its own layout changes.
-        const measured=(isMobileDrag
-          ?[...destination.querySelectorAll(".prompt-bubble")]
-            .filter(node=>node!==chip&&node.isConnected)
-            .map(node=>({node,rect:layoutRect(node)}))
-          :(dragState.layoutSnapshots?.get(destination)||[])
-            .filter(entry=>entry.node.isConnected));
+        const measured=(dragState.layoutSnapshots?.get(destination)||[])
+          .filter(entry=>entry.node.isConnected);
         if(!measured.length){
           moveDragPlaceholder(destination,null);
           dragState.lastAnchor=null;
