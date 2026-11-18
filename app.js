@@ -794,28 +794,40 @@
   }
   function restorePromptDisplayText(value, original) {
     if (!state.spacesToUnderscores || !original) return value;
-    const originalDisplay = original.replace(/\s+/g, "_");
+    const valueChars = [...value];
+    const originalSegments = [];
+    for (const char of original) {
+      if (/\s/.test(char) && originalSegments[originalSegments.length - 1]?.kind === "space") {
+        originalSegments[originalSegments.length - 1].source += char;
+      } else {
+        originalSegments.push({
+          display: /\s/.test(char) ? "_" : char,
+          source: char,
+          kind: /\s/.test(char) ? "space" : char === "_" ? "underscore" : "text"
+        });
+      }
+    }
+    const originalDisplay = originalSegments.map(segment => segment.display).join("");
     if (value === originalDisplay) return original;
-    const originalSegments = original.match(/\s+|[^\s]/g) || [];
-    const dp = Array.from({length:value.length + 1}, () => new Uint32Array(originalDisplay.length + 1));
-    for (let i=value.length-1;i>=0;i--) {
-      for (let j=originalDisplay.length-1;j>=0;j--) {
-        if (value[i] === originalDisplay[j]) {
-          const score = originalSegments[j] === "_" ? 2 : 1;
+    const dp = Array.from({length:valueChars.length + 1}, () => new Uint32Array(originalSegments.length + 1));
+    for (let i=valueChars.length-1;i>=0;i--) {
+      for (let j=originalSegments.length-1;j>=0;j--) {
+        if (valueChars[i] === originalSegments[j].display) {
+          const score = originalSegments[j].kind === "underscore" ? 2 : 1;
           dp[i][j] = score + dp[i+1][j+1];
         } else dp[i][j] = Math.max(dp[i+1][j], dp[i][j+1]);
       }
     }
     const mapped = new Map();
     let i=0,j=0;
-    while (i<value.length && j<originalDisplay.length) {
-      const score = originalSegments[j] === "_" ? 2 : 1;
-      if (value[i] === originalDisplay[j] && dp[i][j] === score + dp[i+1][j+1]) {
-        mapped.set(i, originalSegments[j]); i++; j++;
+    while (i<valueChars.length && j<originalSegments.length) {
+      const score = originalSegments[j].kind === "underscore" ? 2 : 1;
+      if (valueChars[i] === originalSegments[j].display && dp[i][j] === score + dp[i+1][j+1]) {
+        mapped.set(i, originalSegments[j].source); i++; j++;
       } else if (dp[i+1][j] >= dp[i][j+1]) i++;
       else j++;
     }
-    return [...value].map((char, position) => mapped.get(position) ?? char).join("");
+    return valueChars.map((char, position) => mapped.get(position) ?? char).join("");
   }
   function promptSnapshot() {
     return { positive: state.promptPositive, negative: state.promptNegative };
