@@ -37,7 +37,18 @@ html.prompt-bubble-dragging-active * {
   row-gap: 8px;
 }
 
-.editor-builder-panel .prompt-bubble {
+.editor-builder-panel .prompt-bubble-line-break {
+  flex: 0 0 100%;
+  width: 0;
+  height: 0;
+  min-height: 0;
+  margin: 0 0 -8px;
+  padding: 0;
+  border: 0;
+  pointer-events: none;
+}
+
+.prompt-bubble {
   display: inline-flex;
   align-items: center;
   gap: 0;
@@ -273,6 +284,10 @@ body > .prompt-bubble.is-dragging .prompt-bubble-action {
     min-height: 194px;
     column-gap: 6px;
     row-gap: 6px;
+  }
+
+  .editor-builder-panel .prompt-bubble-line-break {
+    margin-bottom: -6px;
   }
 
   .editor-builder-panel .prompt-bubble {
