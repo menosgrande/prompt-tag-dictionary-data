@@ -1512,7 +1512,7 @@
           placeholder.style.height=rect.height+"px";
           dragState={placeholder,originRoot:root,originNext:chip.nextSibling,
             grabX:event.clientX-rect.left,grabY:event.clientY-rect.top,
-            layoutSnapshots,dragFrame:0,pendingPoint:null};
+            dragFrame:0,pendingPoint:null};
           root.insertBefore(placeholder,chip);
           // Snapshot both prompt columns after the origin placeholder is in place.
           // These rectangles remain the fixed insertion reference for this drag.
@@ -1524,6 +1524,7 @@
               .filter(node=>node!==placeholder&&node!==chip&&node.classList.contains("prompt-bubble"))
               .map(node=>({node,rect:layoutRect(node)}))
           ]));
+          dragState.layoutSnapshots=layoutSnapshots;
           chip.classList.add("is-dragging");
           chip.classList.toggle("is-negative-dragging",root.id==="negative-bubbles");
           chip.style.position="fixed";chip.style.left=rect.left+"px";chip.style.top=rect.top+"px";
