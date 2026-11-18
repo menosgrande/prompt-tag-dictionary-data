@@ -1445,7 +1445,8 @@
           dragState.lastRowAnchor=null;
           return;
         }
-        const hit=document.elementFromPoint(event.clientX,event.clientY);
+        // Resolve the destination under the dragged chip's center as well.
+        const hit=document.elementFromPoint(draggedCenterX,draggedCenterY);
         let destination=hit&&hit.closest(".prompt-bubbles");
         if(!destination){
           const editor=hit&&hit.closest(".prompt-bubble-editor");
