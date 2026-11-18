@@ -1324,7 +1324,7 @@
         chip.classList.remove("is-dragging","is-negative-dragging");
         chip.style.position="";chip.style.left="";chip.style.top="";
         chip.style.width="";chip.style.height="";chip.style.margin="";
-        chip.style.pointerEvents="";chip.style.zIndex="";chip.style.transform="";
+        chip.style.pointerEvents="";chip.style.zIndex="";chip.style.transform="";chip.style.willChange="";
       };
       const moveDragPlaceholder=(destination,beforeNode)=>{
         const oldRoot=dragState.placeholder.parentElement;
@@ -1361,8 +1361,12 @@
       const updateDragTarget=event=>{
         if(!dragState)return;
         const isMobileDrag=window.matchMedia("(max-width: 600px)").matches;
-        chip.style.left=(event.clientX-dragState.grabX)+"px";
-        chip.style.top=(event.clientY-dragState.grabY)+"px";
+        if(isMobileDrag){
+          chip.style.transform="translate3d("+(event.clientX-dragState.startX)+"px,"+(event.clientY-dragState.startY)+"px,0)";
+        }else{
+          chip.style.left=(event.clientX-dragState.grabX)+"px";
+          chip.style.top=(event.clientY-dragState.grabY)+"px";
+        }
         const hit=document.elementFromPoint(event.clientX,event.clientY);
         let destination=hit&&hit.closest(".prompt-bubbles");
         if(!destination){
@@ -1374,8 +1378,12 @@
         // Use the geometry captured when dragging began. Moving the placeholder
         // changes flex-wrap positions, so live measurements would make the target
         // calculation chase its own layout changes.
-        const measured=(dragState.layoutSnapshots?.get(destination)||[])
-          .filter(entry=>entry.node.isConnected);
+        const measured=(isMobileDrag
+          ?[...destination.querySelectorAll(".prompt-bubble")]
+            .filter(node=>node!==chip&&node.isConnected)
+            .map(node=>({node,rect:layoutRect(node)}))
+          :(dragState.layoutSnapshots?.get(destination)||[])
+            .filter(entry=>entry.node.isConnected));
         if(!measured.length){
           moveDragPlaceholder(destination,null);
           dragState.lastAnchor=null;
@@ -1512,6 +1520,7 @@
           placeholder.style.height=rect.height+"px";
           dragState={placeholder,originRoot:root,originNext:chip.nextSibling,
             grabX:event.clientX-rect.left,grabY:event.clientY-rect.top,
+            startX:event.clientX,startY:event.clientY,
             dragFrame:0,pendingPoint:null};
           root.insertBefore(placeholder,chip);
           // Snapshot both prompt columns after the origin placeholder is in place.
@@ -1530,6 +1539,7 @@
           chip.style.position="fixed";chip.style.left=rect.left+"px";chip.style.top=rect.top+"px";
           chip.style.width=rect.width+"px";chip.style.height=rect.height+"px";
           chip.style.margin="0";chip.style.pointerEvents="none";chip.style.zIndex="1000";
+          if(window.matchMedia("(max-width: 600px)").matches)chip.style.willChange="transform";
           document.body.append(chip);
           dragState.lastAnchor=placeholder.nextSibling;
         }
