@@ -990,19 +990,24 @@
           }else if(state.spacesToUnderscores && originalDisplay !== originalTag){
             // 表示用に置換した "_" のうち、編集後も残った文字だけ元の空白へ戻す。
             // 元から存在した "_" や、編集時に新しく入力された "_" はそのまま保持する。
+            const originalSegments = originalTag.match(/\\s+|[^\\s]/g) || [];
             const dp = Array.from({length:value.length + 1}, () => new Uint32Array(originalDisplay.length + 1));
             for(let i=value.length-1;i>=0;i--){
               for(let j=originalDisplay.length-1;j>=0;j--){
-                dp[i][j] = value[i] === originalDisplay[j]
-                  ? 1 + dp[i+1][j+1]
-                  : Math.max(dp[i+1][j], dp[i][j+1]);
+                if(value[i] === originalDisplay[j]){
+                  const matchScore = originalSegments[j] === "_" ? 2 : 1;
+                  dp[i][j] = matchScore + dp[i+1][j+1];
+                }else{
+                  dp[i][j] = Math.max(dp[i+1][j], dp[i][j+1]);
+                }
               }
             }
             const mapped = new Map();
             let i=0,j=0;
             while(i<value.length && j<originalDisplay.length){
-              if(value[i] === originalDisplay[j]){
-                mapped.set(i, originalTag[j]);
+              if(value[i] === originalDisplay[j] &&
+                dp[i][j] === (originalSegments[j] === "_" ? 2 : 1) + dp[i+1][j+1]){
+                mapped.set(i, originalSegments[j]);
                 i++; j++;
               }else if(dp[i+1][j] >= dp[i][j+1]){
                 i++;
