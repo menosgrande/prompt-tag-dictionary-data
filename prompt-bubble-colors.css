@@ -320,10 +320,6 @@ body > .prompt-bubble.is-dragging .prompt-bubble-action {
     gap: 6px;
   }
 
-  .editor-builder-panel .prompt-bubble .prompt-bubble-action {
-    display: block;
-  }
-
   .editor-builder-panel .prompt-bubble-translation {
     max-width: 32vw;
     font-size: 9px;
