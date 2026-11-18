@@ -948,7 +948,14 @@
           return;
         }
         labelClickArmed = false;
-        label.textContent=item.tag;label.contentEditable="true";label.focus();
+        const originalTag = item.tag;
+        const originalDisplay = state.spacesToUnderscores
+          ? originalTag.replace(/\s+/g, "_")
+          : originalTag;
+        label.textContent = originalDisplay;
+        label._originalTag = originalTag;
+        label._originalDisplay = originalDisplay;
+        label.contentEditable="true";label.focus();
         // 編集開始時は全選択せず、タップした位置にキャレットを置く。
         let range = null;
         if (document.caretRangeFromPoint) {
@@ -973,14 +980,51 @@
       });
       const commitLabel=()=>{
         if(!label.isContentEditable)return;
-        label.contentEditable="false";const value=label.textContent.trim();
-        if(value)tokens[index].tag=value;else label.textContent=state.spacesToUnderscores?tokens[index].tag.replace(/\s+/g,"_"):tokens[index].tag;
+        label.contentEditable="false";
+        const value=label.textContent.trim();
+        if(value){
+          const originalTag = label._originalTag ?? item.tag;
+          const originalDisplay = label._originalDisplay ?? originalTag;
+          if(value === originalDisplay){
+            tokens[index].tag = originalTag;
+          }else if(state.spacesToUnderscores && originalDisplay !== originalTag){
+            // 表示用に置換した "_" のうち、編集後も残った文字だけ元の空白へ戻す。
+            // 元から存在した "_" や、編集時に新しく入力された "_" はそのまま保持する。
+            const dp = Array.from({length:value.length + 1}, () => new Uint32Array(originalDisplay.length + 1));
+            for(let i=value.length-1;i>=0;i--){
+              for(let j=originalDisplay.length-1;j>=0;j--){
+                dp[i][j] = value[i] === originalDisplay[j]
+                  ? 1 + dp[i+1][j+1]
+                  : Math.max(dp[i+1][j], dp[i][j+1]);
+              }
+            }
+            const mapped = new Map();
+            let i=0,j=0;
+            while(i<value.length && j<originalDisplay.length){
+              if(value[i] === originalDisplay[j]){
+                mapped.set(i, originalTag[j]);
+                i++; j++;
+              }else if(dp[i+1][j] >= dp[i][j+1]){
+                i++;
+              }else{
+                j++;
+              }
+            }
+            tokens[index].tag = [...value].map((char, position) => mapped.get(position) ?? char).join("");
+          }else{
+            tokens[index].tag = value;
+          }
+        }else{
+          label.textContent=state.spacesToUnderscores
+            ?tokens[index].tag.replace(/\s+/g,"_")
+            :tokens[index].tag;
+        }
         promptBubbleFocusRestore={target,tag:tokens[index].tag,index};
         updatePromptFromBubbles(target,tokens);
       };
       label.addEventListener("keydown",event=>{
         if(event.key==="Enter"){event.preventDefault();label.blur();}
-        if(event.key==="Escape"){event.preventDefault();label.textContent=state.spacesToUnderscores?item.tag.replace(/\s+/g,"_"):item.tag;label.contentEditable="false";label.blur();}
+        if(event.key==="Escape"){event.preventDefault();label.textContent=state.spacesToUnderscores?item.tag.replace(/\s+/g,"_"):item.tag;label.contentEditable="false";label._originalTag=null;label._originalDisplay=null;label.blur();}
       });
       label.addEventListener("blur",commitLabel);
       const remove=document.createElement("button");
