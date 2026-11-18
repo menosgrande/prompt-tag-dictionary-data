@@ -416,6 +416,8 @@ body{font-size:14px;line-height:1.65}
   text-align:left;
   text-overflow:ellipsis;
   white-space:nowrap;
+  user-select:text;
+  -webkit-user-select:text;
   cursor:pointer;
 }
 .tag-results .tag-row>.tag-english{color:var(--text);font-size:12px;font-weight:600}
