@@ -249,15 +249,15 @@ body > .prompt-bubble.is-dragging .prompt-bubble-action {
 /* Show explicit prompt weight directly on its tag chip. */
 .editor-builder-panel .prompt-bubble-weight-badge{
   display:inline-block;
-  flex:0 0 3.2em;
-  width:3.2em;
-  margin-left:2px;
+  flex:0 0 auto;
+  width:auto;
+  margin-left:4px;
   color:inherit;
   font-size:9px;
   font-weight:500;
   line-height:1;
   font-variant-numeric:tabular-nums;
-  text-align:right;
+  text-align:left;
   white-space:nowrap;
   vertical-align:baseline;
 }
