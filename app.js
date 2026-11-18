@@ -1424,10 +1424,9 @@
           chip.style.left=(event.clientX-dragState.grabX)+"px";
           chip.style.top=(event.clientY-dragState.grabY)+"px";
         }
-        // Give the original slot priority when the dragged chip is brought
-        // back over it. The pointer itself may be offset from the chip's center.
-        const originPlaceholder=dragState.placeholder;
-        const originRect=originPlaceholder.getBoundingClientRect();
+        // Use the drag-start slot geometry: the placeholder moves during sorting
+        // and must not redefine what counts as the original position.
+        const originRect=dragState.originRect;
         const draggedRect=chip.getBoundingClientRect();
         const draggedCenterX=draggedRect.left+draggedRect.width/2;
         const draggedCenterY=draggedRect.top+draggedRect.height/2;
@@ -1478,7 +1477,7 @@
 
         let nearestRow=rows[0],nearestDistance=Infinity;
         rows.forEach(row=>{
-          const distance=Math.abs(event.clientY-(row.top+row.bottom)/2);
+          const distance=Math.abs(draggedCenterY-(row.top+row.bottom)/2);
           if(distance<nearestDistance){nearestDistance=distance;nearestRow=row;}
         });
         const previousRow=dragState.lastRowAnchor
@@ -1486,7 +1485,7 @@
           :null;
         let targetRow=nearestRow;
         if(previousRow){
-          const previousDistance=Math.abs(event.clientY-(previousRow.top+previousRow.bottom)/2);
+          const previousDistance=Math.abs(draggedCenterY-(previousRow.top+previousRow.bottom)/2);
           // Mobile touch coordinates fluctuate more; keep the current row until the
           // pointer is clearly closer to another row to prevent row-to-row flicker.
           if(previousDistance<=nearestDistance+(isMobileDrag?24:12))targetRow=previousRow;
@@ -1500,15 +1499,15 @@
           const entry=entries[index];
           const centerX=entry.rect.left+entry.rect.width/2;
           const nextAnchor=entries[index+1]?.node||afterRowAnchor;
-          // Add a wider dead zone around chip centers on mobile so a tiny coordinate
-          // fluctuation cannot repeatedly reverse the insertion position.
-          if(Math.abs(event.clientX-centerX)<(isMobileDrag?18:8)&&
+          // Judge insertion by the dragged chip's center, not the grab point.
+          // Retain the previous side inside a dead zone to avoid boundary flicker.
+          if(Math.abs(draggedCenterX-centerX)<(isMobileDrag?18:10)&&
              (dragState.lastAnchor===entry.node||dragState.lastAnchor===nextAnchor)){
             anchor=dragState.lastAnchor;
             retainedAnchor=true;
             break;
           }
-          if(event.clientX<centerX){anchor=entry.node;passedLastInRow=false;break;}
+          if(draggedCenterX<centerX){anchor=entry.node;passedLastInRow=false;break;}
         }
         if(!retainedAnchor&&passedLastInRow)anchor=afterRowAnchor;
 
@@ -1594,6 +1593,7 @@
           placeholder.style.width=rect.width+"px";
           placeholder.style.height=rect.height+"px";
           dragState={placeholder,originRoot:root,originNext:chip.nextSibling,
+            originRect:{left:rect.left,right:rect.right,top:rect.top,bottom:rect.bottom},
             grabX:event.clientX-rect.left,grabY:event.clientY-rect.top,
             startX:event.clientX,startY:event.clientY,
             dragFrame:0,pendingPoint:null};
