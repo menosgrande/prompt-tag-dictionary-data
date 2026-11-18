@@ -1489,7 +1489,12 @@
           const previousDistance=Math.abs(draggedCenterY-(previousRow.top+previousRow.bottom)/2);
           // Mobile touch coordinates fluctuate more; keep the current row until the
           // pointer is clearly closer to another row to prevent row-to-row flicker.
-          if(previousDistance<=nearestDistance+(isMobileDrag?24:12))targetRow=previousRow;
+          const rowCenterGap=Math.abs(
+            (previousRow.top+previousRow.bottom)/2-
+            (nearestRow.top+nearestRow.bottom)/2
+          );
+          const hysteresis=Math.min(isMobileDrag?24:12,rowCenterGap*0.25);
+          if(previousDistance<=nearestDistance+hysteresis)targetRow=previousRow;
         }
 
         const entries=targetRow.entries;
