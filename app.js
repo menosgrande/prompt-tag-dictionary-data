@@ -1501,21 +1501,26 @@
         const rowIndex=rows.indexOf(targetRow);
         const afterRowAnchor=rows[rowIndex+1]?.entries[0]?.node||null;
         let anchor=null,passedLastInRow=true,retainedAnchor=false;
-        for(let index=0;index<entries.length;index++){
-          const entry=entries[index];
-          const centerX=entry.rect.left+entry.rect.width/2;
-          const nextAnchor=entries[index+1]?.node||afterRowAnchor;
-          // Judge insertion by the dragged chip's center, not the grab point.
-          // Retain the previous side inside a dead zone to avoid boundary flicker.
-          if(Math.abs(draggedCenterX-centerX)<(isMobileDrag?18:10)&&
-             (dragState.lastAnchor===entry.node||dragState.lastAnchor===nextAnchor)){
-            anchor=dragState.lastAnchor;
-            retainedAnchor=true;
-            break;
+        // Once the dragged chip's center is below the final row, append it
+        // to the end regardless of its horizontal position.
+        const belowLastRow=draggedCenterY>rows[rows.length-1].bottom;
+        if(!belowLastRow){
+          for(let index=0;index<entries.length;index++){
+            const entry=entries[index];
+            const centerX=entry.rect.left+entry.rect.width/2;
+            const nextAnchor=entries[index+1]?.node||afterRowAnchor;
+            // Judge insertion by the dragged chip's center, not the grab point.
+            // Retain the previous side inside a dead zone to avoid boundary flicker.
+            if(Math.abs(draggedCenterX-centerX)<(isMobileDrag?18:10)&&
+               (dragState.lastAnchor===entry.node||dragState.lastAnchor===nextAnchor)){
+              anchor=dragState.lastAnchor;
+              retainedAnchor=true;
+              break;
+            }
+            if(draggedCenterX<centerX){anchor=entry.node;passedLastInRow=false;break;}
           }
-          if(draggedCenterX<centerX){anchor=entry.node;passedLastInRow=false;break;}
+          if(!retainedAnchor&&passedLastInRow)anchor=afterRowAnchor;
         }
-        if(!retainedAnchor&&passedLastInRow)anchor=afterRowAnchor;
 
         if(dragState.placeholder.parentElement===destination&&
            dragState.placeholder.nextSibling===anchor){
