@@ -794,9 +794,9 @@
   }
   function restorePromptDisplayText(value, original) {
     if (!state.spacesToUnderscores || !original) return value;
-    const originalDisplay = original.replace(/\\s+/g, "_");
+    const originalDisplay = original.replace(/\s+/g, "_");
     if (value === originalDisplay) return original;
-    const originalSegments = original.match(/\\s+|[^\\s]/g) || [];
+    const originalSegments = original.match(/\s+|[^\s]/g) || [];
     const dp = Array.from({length:value.length + 1}, () => new Uint32Array(originalDisplay.length + 1));
     for (let i=value.length-1;i>=0;i--) {
       for (let j=originalDisplay.length-1;j>=0;j--) {
@@ -1456,7 +1456,7 @@
       state[promptKey]=serializePromptTokens(parsePromptTokens(state[promptKey]));
       textEditOriginal[target] = state[promptKey];
       const output=$("#"+(positive?"positive-output":"negative-output"));
-      output.value=state.spacesToUnderscores ? state[promptKey].replace(/\\s+/g,"_") : state[promptKey];
+      output.value=state.spacesToUnderscores ? state[promptKey].replace(/\s+/g,"_") : state[promptKey];
     } else {
       textEditOriginal[target] = null;
     }
