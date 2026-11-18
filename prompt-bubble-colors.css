@@ -9,11 +9,6 @@ html.prompt-bubble-dragging-active * {
   -webkit-user-select: none !important;
 }
 
-.editor-builder-panel .prompt-bubble-label {
-  user-select: text;
-  -webkit-user-select: text;
-}
-
 /* Editor surface */
 .editor-builder-panel .prompt-bubble-editor {
   display: grid;
@@ -57,6 +52,7 @@ html.prompt-bubble-dragging-active * {
   box-shadow: none;
   cursor: grab;
   touch-action: none;
+  position: relative;
   transition: filter 150ms ease, box-shadow 150ms ease;
 }
 
@@ -98,13 +94,11 @@ html.prompt-bubble-dragging-active * {
   user-select: none;
 }
 .editor-builder-panel .prompt-bubble-label[contenteditable="true"] {
+  min-width: 50px;
   cursor: text;
   user-select: text;
-}
-
-.editor-builder-panel .prompt-bubble-label[contenteditable="true"] {
-  min-width: 50px;
   outline: none;
+  -webkit-user-select: text;
 }
 
 .editor-builder-panel .prompt-bubble-label[contenteditable="true"]:focus {
@@ -249,7 +243,6 @@ body > .prompt-bubble.is-dragging .prompt-bubble-action {
 
 
 /* Prompt chip operation menu, Undo, validation and length estimates. */
-.editor-builder-panel .prompt-bubble{position:relative}
 .editor-builder-panel .prompt-bubble-menu-toggle{left:-7px;right:auto;top:-7px;display:none}
 .editor-builder-panel .prompt-bubble:hover .prompt-bubble-menu-toggle,
 .editor-builder-panel .prompt-bubble:focus-within .prompt-bubble-menu-toggle{display:block}
@@ -283,4 +276,4 @@ body > .prompt-bubble.is-dragging .prompt-bubble-action {
 
 
 /* Show explicit prompt weight directly on its tag chip. */
-.editor-builder-panel .prompt-bubble-weight-badge{display:inline;color:inherit;font:inherit;font-variant-numeric:tabular-nums}
+.editor-builder-panel .prompt-bubble-weight-badge{display:inline;color:inherit;font:inherit;font-variant-numeric:tabular-nums;white-space:nowrap;vertical-align:baseline}
