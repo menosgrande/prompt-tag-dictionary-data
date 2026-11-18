@@ -1371,16 +1371,17 @@
         }
         if(!destination||!["positive-bubbles","negative-bubbles"].includes(destination.id))return;
 
-        const candidates=[...destination.children].filter(node=>
-          node!==dragState.placeholder&&node.classList.contains("prompt-bubble"));
-        if(!candidates.length){
+        // Use the geometry captured when dragging began. Moving the placeholder
+        // changes flex-wrap positions, so live measurements would make the target
+        // calculation chase its own layout changes.
+        const measured=(dragState.layoutSnapshots?.get(destination)||[])
+          .filter(entry=>entry.node.isConnected);
+        if(!measured.length){
           moveDragPlaceholder(destination,null);
           dragState.lastAnchor=null;
           dragState.lastRowAnchor=null;
           return;
         }
-
-        const measured=candidates.map(node=>({node,rect:layoutRect(node)}));
         measured.sort((a,b)=>(a.rect.top+a.rect.bottom)-(b.rect.top+b.rect.bottom));
         const rows=[];
         measured.forEach(entry=>{
@@ -1440,6 +1441,10 @@
       };
       const finishPointerDrag=(event,cancelled=false)=>{
         if(!pointerStart||event.pointerId!==pointerStart.id)return;
+        if(dragState?.dragFrame){
+          cancelAnimationFrame(dragState.dragFrame);
+          dragState.dragFrame=0;
+        }
         window.removeEventListener("pointermove",onWindowPointerMove);
         window.removeEventListener("pointerup",onWindowPointerUp);
         window.removeEventListener("pointercancel",onWindowPointerCancel);
@@ -1506,8 +1511,19 @@
           placeholder.style.width=rect.width+"px";
           placeholder.style.height=rect.height+"px";
           dragState={placeholder,originRoot:root,originNext:chip.nextSibling,
-            grabX:event.clientX-rect.left,grabY:event.clientY-rect.top};
+            grabX:event.clientX-rect.left,grabY:event.clientY-rect.top,
+            layoutSnapshots,dragFrame:0,pendingPoint:null};
           root.insertBefore(placeholder,chip);
+          // Snapshot both prompt columns after the origin placeholder is in place.
+          // These rectangles remain the fixed insertion reference for this drag.
+          const positiveRoot=$("#positive-bubbles");
+          const negativeRoot=$("#negative-bubbles");
+          const layoutSnapshots=new Map([positiveRoot,negativeRoot].map(container=>[
+            container,
+            [...container.children]
+              .filter(node=>node!==placeholder&&node!==chip&&node.classList.contains("prompt-bubble"))
+              .map(node=>({node,rect:layoutRect(node)}))
+          ]));
           chip.classList.add("is-dragging");
           chip.classList.toggle("is-negative-dragging",root.id==="negative-bubbles");
           chip.style.position="fixed";chip.style.left=rect.left+"px";chip.style.top=rect.top+"px";
@@ -1516,9 +1532,29 @@
           document.body.append(chip);
           dragState.lastAnchor=placeholder.nextSibling;
         }
-        if(pointerDragging){event.preventDefault();updateDragTarget(event);}
+        if(pointerDragging){
+          event.preventDefault();
+          // Coalesce high-frequency touch events to one layout update per frame.
+          dragState.pendingPoint={clientX:event.clientX,clientY:event.clientY};
+          if(!dragState.dragFrame){
+            dragState.dragFrame=requestAnimationFrame(()=>{
+              if(!dragState)return;
+              dragState.dragFrame=0;
+              const point=dragState.pendingPoint;
+              dragState.pendingPoint=null;
+              if(point)updateDragTarget(point);
+            });
+          }
+        }
       };
-      const onWindowPointerUp=event=>finishPointerDrag(event,false);
+      const onWindowPointerUp=event=>{
+        if(pointerDragging&&dragState){
+          if(dragState.dragFrame)cancelAnimationFrame(dragState.dragFrame);
+          dragState.dragFrame=0;
+          updateDragTarget(event);
+        }
+        finishPointerDrag(event,false);
+      };
       const onWindowPointerCancel=event=>finishPointerDrag(event,true);
       chip.addEventListener("pointerdown",event=>{
         if(event.button!==0||label.isContentEditable||event.target.closest(".prompt-bubble-action, .prompt-bubble-menu"))return;
