@@ -1340,19 +1340,39 @@
       const moveDragPlaceholder=(destination,beforeNode)=>{
         const oldRoot=dragState.placeholder.parentElement;
         const isMobileDrag=window.matchMedia("(max-width: 600px)").matches;
-        destination.insertBefore(dragState.placeholder,beforeNode);
         const roots=[...new Set([oldRoot,destination])];
         const nodes=roots.flatMap(container=>[...container.querySelectorAll(".prompt-bubble")]);
+        if(isMobileDrag){
+          // Capture pre-move positions so the FLIP delta reflects the placeholder move.
+          const positions=new Map(nodes.map(node=>[node,node.getBoundingClientRect()]));
+          destination.insertBefore(dragState.placeholder,beforeNode);
+          nodes.forEach(node=>{
+            if(!node.isConnected)return;
+            const first=positions.get(node),last=node.getBoundingClientRect();
+            if(!first)return;
+            const dx=first.left-last.left,dy=first.top-last.top;
+            if(Math.abs(dx)>2||Math.abs(dy)>2){
+              node.style.transition="none";
+              node.style.transform="translate3d("+dx+"px,"+dy+"px,0)";
+              requestAnimationFrame(()=>{
+                node.style.transition="transform 100ms ease-out";
+                node.style.transform="";
+              });
+            }
+          });
+          return;
+        }
+        destination.insertBefore(dragState.placeholder,beforeNode);
         const positions=new Map(nodes.map(node=>[node,node.getBoundingClientRect()]));
         nodes.forEach(node=>{
           if(!node.isConnected)return;
           const first=positions.get(node),last=node.getBoundingClientRect();
           const dx=first.left-last.left,dy=first.top-last.top;
-          if(Math.abs(dx)>2||Math.abs(dy)>2){
+          if(dx||dy){
             node.style.transition="none";
-            node.style.transform="translate3d("+dx+"px,"+dy+"px,0)";
+            node.style.transform="translate("+dx+"px,"+dy+"px)";
             requestAnimationFrame(()=>{
-              node.style.transition="transform "+(isMobileDrag?"100ms ease-out":"150ms ease");
+              node.style.transition="transform 150ms ease";
               node.style.transform="";
             });
           }
