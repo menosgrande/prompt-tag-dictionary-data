@@ -1524,7 +1524,7 @@
       });
       root.append(chip);
       // A newline in the original separator starts a new visual row.
-      if(index<tokens.length-1 && /[\\r\\n]/.test(item.separator||"")){
+      if(index<tokens.length-1 && /[\r\n]/.test(item.separator||"")){
         const lineBreak=document.createElement("div");
         lineBreak.className="prompt-bubble-line-break";
         lineBreak.setAttribute("aria-hidden","true");
