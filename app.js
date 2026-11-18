@@ -1099,6 +1099,7 @@
       : (!promptBubbleFocusRestore && activeChipIndex >= 0
         ? { target, tag: activeChip._promptToken?.tag, index: activeChipIndex }
         : null);
+    let armedLabelForEdit = null;
     root.replaceChildren();
     tokens.forEach((item,index) => {
       const chip = document.createElement("div");
@@ -1109,11 +1110,16 @@
       const label = document.createElement("span");
       label.className = "prompt-bubble-label"; label.textContent = state.spacesToUnderscores ? (item.structured ? formatStructuredPromptExpression(item.tag) : item.tag.replace(/ +/g, "_")) : item.tag;
       let labelClickArmed = false;
+      let labelClickArmedAt = 0;
       label.addEventListener("pointerdown", event => {
         // Touch input must retain its default focus behavior so mobile keyboards can open.
         if (!label.isContentEditable && event.pointerType !== "touch") event.preventDefault();
       });
-      chip.addEventListener("blur", () => { labelClickArmed = false; });
+      chip.addEventListener("blur", () => {
+        labelClickArmed = false;
+        labelClickArmedAt = 0;
+        if (armedLabelForEdit === label) armedLabelForEdit = null;
+      });
       const dictionaryRow = rowsByTag.get(item.tag.toLocaleLowerCase());
       const translation = document.createElement("small");
       translation.className = "prompt-bubble-translation";
@@ -1121,13 +1127,18 @@
       label.addEventListener("click", event => {
         if(label.isContentEditable)return;
         // クリック回数をフォーカス状態と分離する。自動復元されたフォーカスで初回から編集しない。
-        if(!labelClickArmed){
+        const now = performance.now();
+        if(!labelClickArmed || armedLabelForEdit !== label || now - labelClickArmedAt > 500){
           labelClickArmed = true;
+          labelClickArmedAt = now;
+          armedLabelForEdit = label;
           event.preventDefault();
           chip.focus();
           return;
         }
         labelClickArmed = false;
+        labelClickArmedAt = 0;
+        armedLabelForEdit = null;
         const originalTag = item.tag;
         const originalDisplay = state.spacesToUnderscores
           ? (item.structured ? formatStructuredPromptExpression(originalTag) : originalTag.replace(/ +/g, "_"))
@@ -1328,8 +1339,8 @@
       };
       const moveDragPlaceholder=(destination,beforeNode)=>{
         const oldRoot=dragState.placeholder.parentElement;
+        const isMobileDrag=window.matchMedia("(max-width: 600px)").matches;
         destination.insertBefore(dragState.placeholder,beforeNode);
-        if(window.matchMedia("(max-width: 600px)").matches)return;
         const roots=[...new Set([oldRoot,destination])];
         const nodes=roots.flatMap(container=>[...container.querySelectorAll(".prompt-bubble")]);
         const positions=new Map(nodes.map(node=>[node,node.getBoundingClientRect()]));
@@ -1337,11 +1348,11 @@
           if(!node.isConnected)return;
           const first=positions.get(node),last=node.getBoundingClientRect();
           const dx=first.left-last.left,dy=first.top-last.top;
-          if(dx||dy){
+          if(Math.abs(dx)>2||Math.abs(dy)>2){
             node.style.transition="none";
-            node.style.transform="translate("+dx+"px,"+dy+"px)";
+            node.style.transform="translate3d("+dx+"px,"+dy+"px,0)";
             requestAnimationFrame(()=>{
-              node.style.transition="transform 150ms ease";
+              node.style.transition="transform "+(isMobileDrag?"100ms ease-out":"150ms ease");
               node.style.transform="";
             });
           }
@@ -1564,6 +1575,10 @@
       };
       const onWindowPointerCancel=event=>finishPointerDrag(event,true);
       chip.addEventListener("pointerdown",event=>{
+        if (armedLabelForEdit && !label.contains(event.target)) {
+          armedLabelForEdit._labelClickArmed = false;
+          armedLabelForEdit = null;
+        }
         if(event.button!==0||label.isContentEditable||event.target.closest(".prompt-bubble-action, .prompt-bubble-menu"))return;
         pointerStart={id:event.pointerId,x:event.clientX,y:event.clientY};
         pointerDragging=false;
