@@ -783,25 +783,38 @@
     return String(value || "").split(",").map(token => token.trim()).filter(Boolean);
   }
 
-  function splitPromptParts(value) {
+  function splitPromptSegments(value) {
     const text = String(value || "");
-    const parts = [];
-    const stack = [];
+    const segments = [];
     const pairs = { ")": "(", "]": "[", "}": "{" };
+    const matchedOpeners = new Set();
+    const bracketStack = [];
+    for (let index = 0; index < text.length; index++) {
+      const char = text[index];
+      if (char === "\\") { index++; continue; }
+      if (char === "(" || char === "[" || char === "{") bracketStack.push({ char, index });
+      else if (pairs[char] && bracketStack[bracketStack.length - 1]?.char === pairs[char]) matchedOpeners.add(bracketStack.pop().index);
+    }
+    const stack = [];
     let start = 0;
     for (let index = 0; index < text.length; index++) {
       const char = text[index];
       if (char === "\\") { index++; continue; }
-      if (char === "(" || char === "[" || char === "{") stack.push(char);
+      if (matchedOpeners.has(index)) stack.push(char);
       else if (pairs[char] && stack[stack.length - 1] === pairs[char]) stack.pop();
       else if ((char === "," || char === "\n" || char === "\r") && stack.length === 0) {
-        parts.push(text.slice(start, index));
+        const delimiterStart = index;
         if (char === "\r" && text[index + 1] === "\n") index++;
+        else if (char === ",") while (text[index + 1] === " ") index++;
+        segments.push({ raw: text.slice(start, delimiterStart), separator: text.slice(delimiterStart, index + 1) });
         start = index + 1;
       }
     }
-    parts.push(text.slice(start));
-    return parts;
+    segments.push({ raw: text.slice(start), separator: "" });
+    return segments;
+  }
+  function splitPromptParts(value) {
+    return splitPromptSegments(value).map(segment => segment.raw);
   }
   function isWrappedPromptExpression(value) {
     const text = String(value || "").trim();
@@ -831,7 +844,7 @@
       const leading = part.match(/^\s*/)?.[0] || "";
       const trailing = part.match(/\s*$/)?.[0] || "";
       const core = part.slice(leading.length, part.length - trailing.length);
-      return leading + core.replace(/(?<![:,])\s+(?![:,])/g, "_") + trailing;
+      return leading + core.replace(/(?<![:,]) +(?![:,])/g, "_") + trailing;
     };
     for (let index = 0; index < text.length; index++) {
       const char = text[index];
@@ -847,28 +860,44 @@
     return output.join("");
   }
   function parsePromptTokens(value) {
-    return splitPromptParts(value).map(raw => raw.trim()).filter(Boolean).map(raw => {
-      if (isWrappedPromptExpression(raw)) return { tag: raw, weight: "", structured: true };
-      const weighted = raw.match(/^\((.+):([0-9]+(?:\.[0-9]+)?)\)$/);
-      return weighted ? { tag: weighted[1], weight: weighted[2] } : { tag: raw, weight: "" };
+    const tokens = [];
+    splitPromptSegments(value).forEach(segment => {
+      const raw = segment.raw.trim();
+      if (!raw) {
+        if (tokens.length) tokens[tokens.length - 1].separator += segment.separator;
+        return;
+      }
+      const weighted = raw.match(/^\(([^()]+):([0-9]+(?:\.[0-9]+)?)\)$/);
+      const hasTopLevelComma = weighted && splitPromptSegments(weighted[1]).length > 1;
+      const token = weighted && !hasTopLevelComma
+        ? { tag: weighted[1], weight: weighted[2] }
+        : isWrappedPromptExpression(raw)
+          ? { tag: raw, weight: "", structured: true }
+          : { tag: raw, weight: "" };
+      token.separator = segment.separator;
+      tokens.push(token);
     });
+    return tokens;
   }
   function serializePromptTokens(tokens) {
-    return tokens.map(item => item.structured ? item.tag : (item.weight && Number(item.weight) !== 1 ? "(" + item.tag + ":" + item.weight + ")" : item.tag)).join(", ");
+    return tokens.map((item, index) => {
+      const value = item.structured ? item.tag : (item.weight && Number(item.weight) !== 1 ? "(" + item.tag + ":" + item.weight + ")" : item.tag);
+      return value + (index < tokens.length - 1 ? (item.separator || ", ") : "");
+    }).join("");
   }
   function restorePromptTagText(value, originalTag) {
     if (!originalTag) return value;
-    const originalDisplay = originalTag.replace(/\s+/g, "_");
+    const originalDisplay = originalTag.replace(/ +/g, "_");
     if (value === originalDisplay) return originalTag;
     const originalSegments = [];
     for (const char of originalTag) {
-      if (/\s/.test(char) && originalSegments[originalSegments.length - 1]?.kind === "space") {
+      if (char === " " && originalSegments[originalSegments.length - 1]?.kind === "space") {
         originalSegments[originalSegments.length - 1].source += char;
       } else {
         originalSegments.push({
-          display: /\s/.test(char) ? "_" : char,
+          display: char === " " ? "_" : char,
           source: char,
-          kind: /\s/.test(char) ? "space" : char === "_" ? "underscore" : "text"
+          kind: char === " " ? "space" : char === "_" ? "underscore" : "text"
         });
       }
     }
@@ -896,16 +925,11 @@
   function restorePromptDisplayText(value, original) {
     if (!state.spacesToUnderscores || !original) return value;
     const originalTokens = parsePromptTokens(original);
-    return splitPromptParts(value).map((part, index) => {
-      const leading = part.match(/^\s*/)?.[0] || "";
-      const trailing = part.match(/\s*$/)?.[0] || "";
-      const core = part.slice(leading.length, part.length - trailing.length);
-      if (!core) return part;
-      const token = parsePromptTokens(core)[0];
-      if (!token) return part;
-      const tag = restorePromptTagText(token.tag, originalTokens[index]?.tag);
-      return leading + tag + trailing;
-    }).join(", ");
+    const editedTokens = parsePromptTokens(value);
+    editedTokens.forEach((token, index) => {
+      token.tag = restorePromptTagText(token.tag, originalTokens[index]?.tag);
+    });
+    return serializePromptTokens(editedTokens);
   }
   function promptSnapshot() {
     return { positive: state.promptPositive, negative: state.promptNegative };
@@ -1016,7 +1040,7 @@
       const row = rowsByTag.get(item.tag.toLocaleLowerCase()) || (ambiguousTerms.has(normalized) ? null : rowsByTerm.get(normalized));
       const rawTag = row ? row.tag : item.tag;
       let tag = state.escapeParentheses ? rawTag.replace(/(?<!\\)([()])/g, "\\$1") : rawTag;
-      if (state.spacesToUnderscores) tag = tag.replace(/\s+/g, "_");
+      if (state.spacesToUnderscores) tag = tag.replace(/ +/g, "_");
       return item.weight && Number(item.weight) !== 1 ? "(" + tag + ":" + item.weight + ")" : tag;
     }).join(", ");
   }
@@ -1043,7 +1067,7 @@
       chip.setAttribute("role","group");
       chip.setAttribute("aria-label",item.tag + "。1回クリックでフォーカス、同じチップをもう1回クリックでタグ名を編集。ドラッグで並べ替え");
       const label = document.createElement("span");
-      label.className = "prompt-bubble-label"; label.textContent = state.spacesToUnderscores ? (item.structured ? formatStructuredPromptExpression(item.tag) : item.tag.replace(/\s+/g, "_")) : item.tag;
+      label.className = "prompt-bubble-label"; label.textContent = state.spacesToUnderscores ? (item.structured ? formatStructuredPromptExpression(item.tag) : item.tag.replace(/ +/g, "_")) : item.tag;
       let labelClickArmed = false;
       label.addEventListener("pointerdown", event => {
         // Touch input must retain its default focus behavior so mobile keyboards can open.
@@ -1066,7 +1090,7 @@
         labelClickArmed = false;
         const originalTag = item.tag;
         const originalDisplay = state.spacesToUnderscores
-          ? (item.structured ? formatStructuredPromptExpression(originalTag) : originalTag.replace(/\s+/g, "_"))
+          ? (item.structured ? formatStructuredPromptExpression(originalTag) : originalTag.replace(/ +/g, "_"))
           : originalTag;
         label.textContent = originalDisplay;
         label._originalTag = originalTag;
@@ -1106,7 +1130,7 @@
           }else if(state.spacesToUnderscores && originalDisplay !== originalTag){
             // 表示用に置換した "_" のうち、編集後も残った文字だけ元の空白へ戻す。
             // 元から存在した "_" や、編集時に新しく入力された "_" はそのまま保持する。
-            const originalSegments = originalTag.match(/\s+|[^\s]/g) || [];
+            const originalSegments = originalTag.match(/ +|[^ ]/g) || [];
             const dp = Array.from({length:value.length + 1}, () => new Uint32Array(originalDisplay.length + 1));
             for(let i=value.length-1;i>=0;i--){
               for(let j=originalDisplay.length-1;j>=0;j--){
@@ -1137,7 +1161,7 @@
           }
         }else{
           label.textContent=state.spacesToUnderscores
-            ?tokens[index].tag.replace(/\s+/g,"_")
+            ?tokens[index].tag.replace(/ +/g,"_")
             :tokens[index].tag;
         }
         promptBubbleFocusRestore={target,tag:tokens[index].tag,index};
@@ -1145,7 +1169,7 @@
       };
       label.addEventListener("keydown",event=>{
         if(event.key==="Enter"){event.preventDefault();label.blur();}
-        if(event.key==="Escape"){event.preventDefault();label.textContent=state.spacesToUnderscores?(item.structured?formatStructuredPromptExpression(item.tag):item.tag.replace(/\s+/g,"_")):item.tag;label.contentEditable="false";label._originalTag=null;label._originalDisplay=null;label.blur();}
+        if(event.key==="Escape"){event.preventDefault();label.textContent=state.spacesToUnderscores?(item.structured?formatStructuredPromptExpression(item.tag):item.tag.replace(/ +/g,"_")):item.tag;label.contentEditable="false";label._originalTag=null;label._originalDisplay=null;label.blur();}
       });
       label.addEventListener("blur",commitLabel);
       const remove=document.createElement("button");
@@ -1547,7 +1571,7 @@
       state[promptKey]=serializePromptTokens(parsePromptTokens(state[promptKey]));
       textEditOriginal[target] = state[promptKey];
       const output=$("#"+(positive?"positive-output":"negative-output"));
-      output.value=state.spacesToUnderscores ? serializePromptTokens(parsePromptTokens(state[promptKey]).map(item => ({...item, tag:item.structured ? formatStructuredPromptExpression(item.tag) : item.tag.replace(/\s+/g,"_")}))) : state[promptKey];
+      output.value=state.spacesToUnderscores ? serializePromptTokens(parsePromptTokens(state[promptKey]).map(item => ({...item, tag:item.structured ? formatStructuredPromptExpression(item.tag) : item.tag.replace(/ +/g,"_")}))) : state[promptKey];
     } else {
       textEditOriginal[target] = null;
     }
