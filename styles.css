@@ -418,7 +418,7 @@ body{font-size:14px;line-height:1.65}
   white-space:nowrap;
   user-select:text;
   -webkit-user-select:text;
-  cursor:pointer;
+  cursor:text;
 }
 .tag-results .tag-row>.tag-english{color:var(--text);font-size:12px;font-weight:600}
 .tag-results .tag-row>.tag-japanese{color:#aab6c4;font-size:11px}
