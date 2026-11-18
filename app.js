@@ -1282,6 +1282,7 @@
       chip.append(remove,menuToggle,menu);
       if(promptBubbleMenuRestore&&promptBubbleMenuRestore.target===target&&promptBubbleMenuRestore.tag===item.tag){
         menu.hidden=false;
+        menuToggle.setAttribute("aria-expanded", "true");
         promptBubbleMenuRestore=null;
       }
 
