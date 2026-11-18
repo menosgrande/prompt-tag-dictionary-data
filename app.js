@@ -1424,6 +1424,28 @@
           chip.style.left=(event.clientX-dragState.grabX)+"px";
           chip.style.top=(event.clientY-dragState.grabY)+"px";
         }
+        // Give the original slot priority when the dragged chip is brought
+        // back over it. The pointer itself may be offset from the chip's center.
+        const originPlaceholder=dragState.placeholder;
+        const originRect=originPlaceholder.getBoundingClientRect();
+        const draggedRect=chip.getBoundingClientRect();
+        const draggedCenterX=draggedRect.left+draggedRect.width/2;
+        const draggedCenterY=draggedRect.top+draggedRect.height/2;
+        const returnTolerance=12;
+        if(dragState.originRoot&&draggedCenterX>=originRect.left-returnTolerance&&
+           draggedCenterX<=originRect.right+returnTolerance&&
+           draggedCenterY>=originRect.top-returnTolerance&&
+           draggedCenterY<=originRect.bottom+returnTolerance){
+          const originAnchor=dragState.originNext?.parentElement===dragState.originRoot
+            ?dragState.originNext:null;
+          if(dragState.placeholder.parentElement!==dragState.originRoot||
+             dragState.placeholder.nextSibling!==originAnchor){
+            moveDragPlaceholder(dragState.originRoot,originAnchor);
+          }
+          dragState.lastAnchor=originAnchor;
+          dragState.lastRowAnchor=null;
+          return;
+        }
         const hit=document.elementFromPoint(event.clientX,event.clientY);
         let destination=hit&&hit.closest(".prompt-bubbles");
         if(!destination){
