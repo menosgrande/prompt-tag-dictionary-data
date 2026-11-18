@@ -1093,7 +1093,7 @@
     const tokens = parsePromptTokens(state[target === "negative" ? "promptNegative" : "promptPositive"]);
     const rowsByTag = new Map(state.all.map(row => [String(row.tag).toLocaleLowerCase(), row]));
     const activeChip = document.activeElement?.closest?.(".prompt-bubble");
-    const activeChipIndex = activeChip && root.contains(activeChip) ? [...root.children].indexOf(activeChip) : -1;
+    const activeChipIndex = activeChip && root.contains(activeChip) ? [...root.querySelectorAll(".prompt-bubble")].indexOf(activeChip) : -1;
     const focusRestore = promptBubbleFocusRestore?.target === target
       ? promptBubbleFocusRestore
       : (!promptBubbleFocusRestore && activeChipIndex >= 0
@@ -1523,6 +1523,13 @@
         window.addEventListener("pointercancel",onWindowPointerCancel);
       });
       root.append(chip);
+      // A newline in the original separator starts a new visual row.
+      if(index<tokens.length-1 && /[\\r\\n]/.test(item.separator||"")){
+        const lineBreak=document.createElement("div");
+        lineBreak.className="prompt-bubble-line-break";
+        lineBreak.setAttribute("aria-hidden","true");
+        root.append(lineBreak);
+      }
     });
     if(focusRestore){
       const candidate=root.querySelectorAll(".prompt-bubble")[focusRestore.index];
