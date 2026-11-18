@@ -1109,15 +1109,15 @@
       chip.setAttribute("aria-label",item.tag + "。1回クリックでフォーカス、同じチップをもう1回クリックでタグ名を編集。ドラッグで並べ替え");
       const label = document.createElement("span");
       label.className = "prompt-bubble-label"; label.textContent = state.spacesToUnderscores ? (item.structured ? formatStructuredPromptExpression(item.tag) : item.tag.replace(/ +/g, "_")) : item.tag;
-      let labelClickArmed = false;
-      let labelClickArmedAt = 0;
+      label._labelClickArmed = false;
+      label._labelClickArmedAt = 0;
       label.addEventListener("pointerdown", event => {
         // Touch input must retain its default focus behavior so mobile keyboards can open.
         if (!label.isContentEditable && event.pointerType !== "touch") event.preventDefault();
       });
       chip.addEventListener("blur", () => {
-        labelClickArmed = false;
-        labelClickArmedAt = 0;
+        label._labelClickArmed = false;
+        label._labelClickArmedAt = 0;
         if (armedLabelForEdit === label) armedLabelForEdit = null;
       });
       const dictionaryRow = rowsByTag.get(item.tag.toLocaleLowerCase());
@@ -1128,16 +1128,16 @@
         if(label.isContentEditable)return;
         // クリック回数をフォーカス状態と分離する。自動復元されたフォーカスで初回から編集しない。
         const now = performance.now();
-        if(!labelClickArmed || armedLabelForEdit !== label || now - labelClickArmedAt > 500){
-          labelClickArmed = true;
-          labelClickArmedAt = now;
+        if(!label._labelClickArmed || armedLabelForEdit !== label || now - label._labelClickArmedAt > 500){
+          label._labelClickArmed = true;
+          label._labelClickArmedAt = now;
           armedLabelForEdit = label;
           event.preventDefault();
           chip.focus();
           return;
         }
-        labelClickArmed = false;
-        labelClickArmedAt = 0;
+        label._labelClickArmed = false;
+        label._labelClickArmedAt = 0;
         armedLabelForEdit = null;
         const originalTag = item.tag;
         const originalDisplay = state.spacesToUnderscores
@@ -1577,6 +1577,7 @@
       chip.addEventListener("pointerdown",event=>{
         if (armedLabelForEdit && !label.contains(event.target)) {
           armedLabelForEdit._labelClickArmed = false;
+          armedLabelForEdit._labelClickArmedAt = 0;
           armedLabelForEdit = null;
         }
         if(event.button!==0||label.isContentEditable||event.target.closest(".prompt-bubble-action, .prompt-bubble-menu"))return;
