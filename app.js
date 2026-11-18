@@ -927,7 +927,7 @@
       chip.setAttribute("role","group");
       chip.setAttribute("aria-label",item.tag + "。1回クリックでフォーカス、同じチップをもう1回クリックでタグ名を編集。ドラッグで並べ替え");
       const label = document.createElement("span");
-      label.className = "prompt-bubble-label"; label.textContent = item.tag;
+      label.className = "prompt-bubble-label"; label.textContent = state.spacesToUnderscores ? item.tag.replace(/\s+/g, "_") : item.tag;
       let labelClickArmed = false;
       label.addEventListener("pointerdown", event => {
         // Touch input must retain its default focus behavior so mobile keyboards can open.
@@ -948,7 +948,7 @@
           return;
         }
         labelClickArmed = false;
-        label.contentEditable="true";label.focus();
+        label.textContent=item.tag;label.contentEditable="true";label.focus();
         // 編集開始時は全選択せず、タップした位置にキャレットを置く。
         let range = null;
         if (document.caretRangeFromPoint) {
@@ -974,13 +974,13 @@
       const commitLabel=()=>{
         if(!label.isContentEditable)return;
         label.contentEditable="false";const value=label.textContent.trim();
-        if(value)tokens[index].tag=value;else label.textContent=tokens[index].tag;
+        if(value)tokens[index].tag=value;else label.textContent=state.spacesToUnderscores?tokens[index].tag.replace(/\s+/g,"_"):tokens[index].tag;
         promptBubbleFocusRestore={target,tag:tokens[index].tag,index};
         updatePromptFromBubbles(target,tokens);
       };
       label.addEventListener("keydown",event=>{
         if(event.key==="Enter"){event.preventDefault();label.blur();}
-        if(event.key==="Escape"){event.preventDefault();label.textContent=item.tag;label.contentEditable="false";label.blur();}
+        if(event.key==="Escape"){event.preventDefault();label.textContent=state.spacesToUnderscores?item.tag.replace(/\s+/g,"_"):item.tag;label.contentEditable="false";label.blur();}
       });
       label.addEventListener("blur",commitLabel);
       const remove=document.createElement("button");
@@ -1668,6 +1668,7 @@
       spacesToUnderscores.addEventListener("change", () => {
         state.spacesToUnderscores = spacesToUnderscores.checked;
         saveBuilderState();
+        renderEditor();
       });
     }
     $("#works-search").addEventListener("input", event => { state.worksQuery = event.target.value.trim().toLocaleLowerCase(); renderWorkList(); writeLocationState("replace"); });
