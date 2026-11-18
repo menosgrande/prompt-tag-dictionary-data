@@ -302,7 +302,13 @@ body{font-size:14px;line-height:1.65}
 /* Dictionary table: one shared eight-column grid for the header and every data row. */
 .table-horizontal-scroll{
   --tag-list-columns:30px 26px 210px 170px 130px 130px 34px 26px;
+  width:100%;
   min-width:0;
+  max-width:100%;
+  overflow-x:auto;
+  overflow-y:hidden;
+  overscroll-behavior-x:contain;
+  -webkit-overflow-scrolling:touch;
 }
 .table-head,
 .tag-results .tag-row{
@@ -538,7 +544,6 @@ body{font-size:14px;line-height:1.65}
 }
 
 /* Per-column sort and filter menus */
-.table-head{overflow:visible}
 .table-head-cell.header-menu-cell{position:relative;justify-content:flex-start;gap:3px;overflow:visible;padding:2px 4px}
 .table-head-cell.header-menu-cell[data-column="favorites"]{justify-content:center;gap:0;padding:2px 1px}
 .table-head-cell.header-menu-cell[data-column="level"]{position:relative;justify-content:center;gap:0;padding:0 2px}
@@ -595,8 +600,6 @@ body{font-size:14px;line-height:1.65}
 
 
 /* Per-user visibility controls for major category navigation. */
-.category-major-row{display:flex;align-items:center;gap:4px}
-.category-major-row>.category-major-button{flex:1;min-width:0}
 .category-visibility{display:inline-flex;flex:0 0 auto;align-items:center;gap:3px;padding:5px 4px;border-radius:4px;color:var(--muted-2);font-size:9px;white-space:nowrap;cursor:pointer}
 .category-visibility:hover{background:var(--surface-hover);color:var(--text)}
 .category-visibility input{width:13px;height:13px;margin:0;accent-color:var(--accent)}
@@ -627,11 +630,8 @@ body{font-size:14px;line-height:1.65}
 .editor-builder-panel .output-card>textarea:focus{border-color:var(--accent);outline:none}
 
 /* Category checkboxes now exclude matching tag rows; they no longer hide category navigation. */
-.category-major-row{display:flex;align-items:center;gap:7px}
-.category-major-row>.category-major-button{flex:1;min-width:0}
 .category-exclusion{display:inline-flex;flex:0 0 18px;align-items:center;justify-content:center;cursor:pointer}
 .category-exclusion input{width:15px;height:15px;margin:0;accent-color:var(--accent)}
-.category-minor-row{display:flex;align-items:center;gap:5px}.category-minor-row>.category-minor{flex:1;min-width:0}
 .category-collapse-toggle{flex:0 0 24px;width:24px;height:28px;padding:0;border:0;border-radius:5px;background:transparent;color:var(--muted-2);font-size:16px;line-height:1;cursor:pointer;transition:transform .15s ease,background .15s ease}.category-collapse-toggle:hover{background:var(--surface-hover);color:var(--text)}.category-collapse-toggle.is-expanded{transform:rotate(90deg)}.category-minors[hidden]{display:none}
 
 
@@ -707,20 +707,14 @@ body{font-size:14px;line-height:1.65}
 
 /* Hierarchical category visibility controls: expand, checkbox, then major label. */
 .category-major-row{display:flex;align-items:center;gap:6px}
-.category-major-row>.category-major-button{flex:1;min-width:0}
+.category-major-row>.category-major-button{flex:1;min-width:0;order:2}
 .category-major-row>.category-collapse-toggle{order:0}
 .category-major-row>.category-exclusion{order:1;flex:0 0 18px}
-.category-major-row>.category-major-button{order:2}
 .category-major-row .category-exclusion input,.category-minor-row .category-exclusion input{width:15px;height:15px;margin:0;accent-color:var(--accent)}
 .category-major-row .category-exclusion,.category-minor-row .category-exclusion{display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
 .category-minor-row{display:flex;align-items:center;gap:5px}
 .category-minor-row>.category-minor{flex:1;min-width:0}
 
-
-/* Keep prompt bubble labels consistent with the editor's 12px text size. */
-.prompt-bubble-label{font-size:12px;cursor:pointer;user-select:none}.prompt-bubble-label[contenteditable="true"]{cursor:text;user-select:text}
-
-.prompt-bubble-weight-badge{display:inline-block;color:var(--accent-strong);font:600 10px/1 var(--mono);white-space:nowrap;vertical-align:baseline}
 
 
 /* Plain tag/translation headings with a one-click sort direction toggle. */
@@ -743,17 +737,7 @@ body{font-size:14px;line-height:1.65}
   flex-wrap:wrap;
 }
 
-/* Constrain the tag table to its panel; scroll the table horizontally on narrow screens. */
-.table-horizontal-scroll{
-  width:100%;
-  min-width:0;
-  max-width:100%;
-  overflow-x:auto;
-  overflow-y:hidden;
-  overscroll-behavior-x:contain;
-  -webkit-overflow-scrolling:touch;
-}
-
+/* The table wrapper owns horizontal scrolling at every viewport width. */
 
 /* Move tag administration out of the mobile header so the tag list keeps its width. */
 .mobile-admin-link{display:none}
