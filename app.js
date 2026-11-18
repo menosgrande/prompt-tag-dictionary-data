@@ -900,7 +900,7 @@
       const row = rowsByTag.get(item.tag.toLocaleLowerCase()) || (ambiguousTerms.has(normalized) ? null : rowsByTerm.get(normalized));
       const rawTag = row ? row.tag : item.tag;
       let tag = state.escapeParentheses ? rawTag.replace(/(?<!\\)([()])/g, "\\$1") : rawTag;
-      if (state.spacesToUnderscores) tag = tag.replace(/\\s+/g, "_");
+      if (state.spacesToUnderscores) tag = tag.replace(/\s+/g, "_");
       return item.weight && Number(item.weight) !== 1 ? "(" + tag + ":" + item.weight + ")" : tag;
     }).join(", ");
   }
