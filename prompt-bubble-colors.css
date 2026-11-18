@@ -92,6 +92,7 @@ html.prompt-bubble-dragging-active * {
   letter-spacing: .01em;
   cursor: pointer;
   user-select: none;
+  -webkit-user-select: text;
 }
 .editor-builder-panel .prompt-bubble-label[contenteditable="true"] {
   min-width: 50px;
