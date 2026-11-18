@@ -794,8 +794,9 @@
       if (char === "\\") { index++; continue; }
       if (char === "(" || char === "[" || char === "{") stack.push(char);
       else if (pairs[char] && stack[stack.length - 1] === pairs[char]) stack.pop();
-      else if (char === "," && stack.length === 0) {
+      else if ((char === "," || char === "\\n" || char === "\\r") && stack.length === 0) {
         parts.push(text.slice(start, index));
+        if (char === "\\r" && text[index + 1] === "\\n") index++;
         start = index + 1;
       }
     }
@@ -904,7 +905,7 @@
       if (!token) return part;
       const tag = restorePromptTagText(token.tag, originalTokens[index]?.tag);
       return leading + tag + trailing;
-    }).join(",");
+    }).join(", ");
   }
   function promptSnapshot() {
     return { positive: state.promptPositive, negative: state.promptNegative };
