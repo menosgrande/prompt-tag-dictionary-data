@@ -882,7 +882,7 @@
   function serializePromptTokens(tokens) {
     return tokens.map((item, index) => {
       const value = item.structured ? item.tag : (item.weight && Number(item.weight) !== 1 ? "(" + item.tag + ":" + item.weight + ")" : item.tag);
-      return value + (index < tokens.length - 1 ? (item.separator || ", ") : "");
+      return value + (item.separator || (index < tokens.length - 1 ? ", " : ""));
     }).join("");
   }
   function restorePromptTagText(value, originalTag) {
