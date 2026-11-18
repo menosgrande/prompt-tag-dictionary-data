@@ -990,7 +990,7 @@
           }else if(state.spacesToUnderscores && originalDisplay !== originalTag){
             // 表示用に置換した "_" のうち、編集後も残った文字だけ元の空白へ戻す。
             // 元から存在した "_" や、編集時に新しく入力された "_" はそのまま保持する。
-            const originalSegments = originalTag.match(/\\s+|[^\\s]/g) || [];
+            const originalSegments = originalTag.match(/\s+|[^\s]/g) || [];
             const dp = Array.from({length:value.length + 1}, () => new Uint32Array(originalDisplay.length + 1));
             for(let i=value.length-1;i>=0;i--){
               for(let j=originalDisplay.length-1;j>=0;j--){
