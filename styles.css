@@ -630,8 +630,6 @@ body{font-size:14px;line-height:1.65}
 .editor-builder-panel .output-card>textarea:focus{border-color:var(--accent);outline:none}
 
 /* Category checkboxes now exclude matching tag rows; they no longer hide category navigation. */
-.category-major-row{display:flex;align-items:center;gap:7px}
-.category-major-row>.category-major-button{flex:1;min-width:0}
 .category-exclusion{display:inline-flex;flex:0 0 18px;align-items:center;justify-content:center;cursor:pointer}
 .category-exclusion input{width:15px;height:15px;margin:0;accent-color:var(--accent)}
 .category-collapse-toggle{flex:0 0 24px;width:24px;height:28px;padding:0;border:0;border-radius:5px;background:transparent;color:var(--muted-2);font-size:16px;line-height:1;cursor:pointer;transition:transform .15s ease,background .15s ease}.category-collapse-toggle:hover{background:var(--surface-hover);color:var(--text)}.category-collapse-toggle.is-expanded{transform:rotate(90deg)}.category-minors[hidden]{display:none}
