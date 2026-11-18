@@ -1343,21 +1343,47 @@
         const roots=[...new Set([oldRoot,destination])];
         const nodes=roots.flatMap(container=>[...container.querySelectorAll(".prompt-bubble")]);
         if(isMobileDrag){
-          // Capture pre-move positions so the FLIP delta reflects the placeholder move.
-          const positions=new Map(nodes.map(node=>[node,node.getBoundingClientRect()]));
+          // Retarget each chip from its current visual position instead of restarting
+          // a short CSS transition from the previous layout position.
+          const visualPositions=new Map();
+          nodes.forEach(node=>{
+            visualPositions.set(node,node.getBoundingClientRect());
+            const running=dragState.flipAnimations?.get(node);
+            if(running){
+              running.cancel();
+              dragState.flipAnimations.delete(node);
+            }
+          });
           destination.insertBefore(dragState.placeholder,beforeNode);
           nodes.forEach(node=>{
             if(!node.isConnected)return;
-            const first=positions.get(node),last=node.getBoundingClientRect();
-            if(!first)return;
-            const dx=first.left-last.left,dy=first.top-last.top;
-            if(Math.abs(dx)>2||Math.abs(dy)>2){
-              node.style.transition="none";
-              node.style.transform="translate3d("+dx+"px,"+dy+"px,0)";
-              requestAnimationFrame(()=>{
-                node.style.transition="transform 100ms ease-out";
-                node.style.transform="";
-              });
+            const visual=visualPositions.get(node),layout=node.getBoundingClientRect();
+            if(!visual)return;
+            const dx=visual.left-layout.left,dy=visual.top-layout.top;
+            if(Math.abs(dx)>1||Math.abs(dy)>1){
+              if(typeof node.animate==="function"){
+                const animation=node.animate(
+                  [
+                    {transform:"translate3d("+dx+"px,"+dy+"px,0)"},
+                    {transform:"translate3d(0,0,0)"}
+                  ],
+                  {duration:220,easing:"cubic-bezier(0.22, 0.61, 0.36, 1)"}
+                );
+                dragState.flipAnimations ||= new Map();
+                dragState.flipAnimations.set(node,animation);
+                animation.onfinish=()=>{
+                  if(dragState?.flipAnimations?.get(node)===animation){
+                    dragState.flipAnimations.delete(node);
+                  }
+                };
+              }else{
+                node.style.transition="none";
+                node.style.transform="translate3d("+dx+"px,"+dy+"px,0)";
+                requestAnimationFrame(()=>{
+                  node.style.transition="transform 220ms cubic-bezier(0.22, 0.61, 0.36, 1)";
+                  node.style.transform="";
+                });
+              }
             }
           });
           return;
