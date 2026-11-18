@@ -792,11 +792,12 @@
   function serializePromptTokens(tokens) {
     return tokens.map(item => item.weight && Number(item.weight) !== 1 ? "(" + item.tag + ":" + item.weight + ")" : item.tag).join(", ");
   }
-  function restorePromptDisplayText(value, original) {
-    if (!state.spacesToUnderscores || !original) return value;
-    const valueChars = [...value];
+  function restorePromptTagText(value, originalTag) {
+    if (!originalTag) return value;
+    const originalDisplay = originalTag.replace(/\s+/g, "_");
+    if (value === originalDisplay) return originalTag;
     const originalSegments = [];
-    for (const char of original) {
+    for (const char of originalTag) {
       if (/\s/.test(char) && originalSegments[originalSegments.length - 1]?.kind === "space") {
         originalSegments[originalSegments.length - 1].source += char;
       } else {
@@ -807,8 +808,7 @@
         });
       }
     }
-    const originalDisplay = originalSegments.map(segment => segment.display).join("");
-    if (value === originalDisplay) return original;
+    const valueChars = [...value];
     const dp = Array.from({length:valueChars.length + 1}, () => new Uint32Array(originalSegments.length + 1));
     for (let i=valueChars.length-1;i>=0;i--) {
       for (let j=originalSegments.length-1;j>=0;j--) {
@@ -828,6 +828,21 @@
       else j++;
     }
     return valueChars.map((char, position) => mapped.get(position) ?? char).join("");
+  }
+  function restorePromptDisplayText(value, original) {
+    if (!state.spacesToUnderscores || !original) return value;
+    const originalTokens = parsePromptTokens(original);
+    return String(value).split(",").map((part, index) => {
+      const leading = part.match(/^\s*/)?.[0] || "";
+      const trailing = part.match(/\s*$/)?.[0] || "";
+      const core = part.slice(leading.length, part.length - trailing.length);
+      if (!core) return part;
+      const token = parsePromptTokens(core)[0];
+      if (!token) return part;
+      const tag = restorePromptTagText(token.tag, originalTokens[index]?.tag);
+      const restored = token.weight ? "(" + tag + ":" + token.weight + ")" : tag;
+      return leading + restored + trailing;
+    }).join(",");
   }
   function promptSnapshot() {
     return { positive: state.promptPositive, negative: state.promptNegative };
@@ -1468,7 +1483,7 @@
       state[promptKey]=serializePromptTokens(parsePromptTokens(state[promptKey]));
       textEditOriginal[target] = state[promptKey];
       const output=$("#"+(positive?"positive-output":"negative-output"));
-      output.value=state.spacesToUnderscores ? state[promptKey].replace(/\s+/g,"_") : state[promptKey];
+      output.value=state.spacesToUnderscores ? serializePromptTokens(parsePromptTokens(state[promptKey]).map(item => ({...item, tag:item.tag.replace(/\s+/g,"_")}))) : state[promptKey];
     } else {
       textEditOriginal[target] = null;
     }
