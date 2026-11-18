@@ -61,7 +61,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", undoHistory: [], redoHistory: [], restoringUndo: false, textEditUndoPending: { positive: false, negative: false }, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, escapeParentheses: false, spacesToUnderscores: false, columnWidths: [30, 26, 210, 170, 130, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", undoHistory: [], redoHistory: [], restoringUndo: false, textEditUndoPending: { positive: false, negative: false }, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, escapeParentheses: false, spacesToUnderscores: false, showPromptLineBreaks: true, columnWidths: [30, 26, 210, 170, 130, 130, 34, 26], columnWidthMode: "desktop"
   };
   let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -1524,7 +1524,7 @@
       });
       root.append(chip);
       // A newline in the original separator starts a new visual row.
-      if(index<tokens.length-1 && /[\r\n]/.test(item.separator||"")){
+      if(state.showPromptLineBreaks && index<tokens.length-1 && /[\r\n]/.test(item.separator||"")){
         const lineBreak=document.createElement("div");
         lineBreak.className="prompt-bubble-line-break";
         lineBreak.setAttribute("aria-hidden","true");
@@ -1664,7 +1664,8 @@
     writeUserDataV2({ builderState: {
       selected: [...state.selected.keys()], polarity: [...state.polarity.entries()],
       promptPositive: state.promptPositive, promptNegative: state.promptNegative, editorModes: state.editorModes,
-      escapeParentheses: state.escapeParentheses, spacesToUnderscores: state.spacesToUnderscores
+      escapeParentheses: state.escapeParentheses, spacesToUnderscores: state.spacesToUnderscores,
+      showPromptLineBreaks: state.showPromptLineBreaks
     } });
   }
   function restoreBuilderState() {
@@ -1675,6 +1676,7 @@
       if (saved && typeof saved === "object") {
         if (typeof saved.escapeParentheses === "boolean") state.escapeParentheses = saved.escapeParentheses;
         if (typeof saved.spacesToUnderscores === "boolean") state.spacesToUnderscores = saved.spacesToUnderscores;
+        if (typeof saved.showPromptLineBreaks === "boolean") state.showPromptLineBreaks = saved.showPromptLineBreaks;
         const rowsByKey = new Map(state.all.map(row => [keyOf(row), row]));
         if (Array.isArray(saved.selected)) saved.selected.forEach(key => {
           const row = rowsByKey.get(key);
@@ -1702,6 +1704,8 @@
     if (escapeParenthesesBox) escapeParenthesesBox.checked = state.escapeParentheses;
     const spacesToUnderscoresBox = $("#spaces-to-underscores");
     if (spacesToUnderscoresBox) spacesToUnderscoresBox.checked = state.spacesToUnderscores;
+    const showPromptLineBreaksBox = $("#show-prompt-line-breaks");
+    if (showPromptLineBreaksBox) showPromptLineBreaksBox.checked = state.showPromptLineBreaks;
     $("#positive-output").value = state.promptPositive;
     $("#negative-output").value = state.promptNegative;
     syncSelectedFromPromptText();
@@ -1919,6 +1923,15 @@
       spacesToUnderscores.checked = state.spacesToUnderscores;
       spacesToUnderscores.addEventListener("change", () => {
         state.spacesToUnderscores = spacesToUnderscores.checked;
+        saveBuilderState();
+        renderEditor();
+      });
+    }
+    const showPromptLineBreaks = $("#show-prompt-line-breaks");
+    if (showPromptLineBreaks) {
+      showPromptLineBreaks.checked = state.showPromptLineBreaks;
+      showPromptLineBreaks.addEventListener("change", () => {
+        state.showPromptLineBreaks = showPromptLineBreaks.checked;
         saveBuilderState();
         renderEditor();
       });
