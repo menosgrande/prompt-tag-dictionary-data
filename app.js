@@ -1427,14 +1427,15 @@
         // Use the drag-start slot geometry: the placeholder moves during sorting
         // and must not redefine what counts as the original position.
         const originRect=dragState.originRect;
-        const draggedRect=chip.getBoundingClientRect();
-        const draggedCenterX=draggedRect.left+draggedRect.width/2;
-        const draggedCenterY=draggedRect.top+draggedRect.height/2;
+        // Use the pointer position for sorting decisions. The dragged chip's
+        // center shifts with its text width, which makes long labels behave differently.
+        const pointerX=event.clientX;
+        const pointerY=event.clientY;
         const returnTolerance=12;
-        if(dragState.originRoot&&draggedCenterX>=originRect.left-returnTolerance&&
-           draggedCenterX<=originRect.right+returnTolerance&&
-           draggedCenterY>=originRect.top-returnTolerance&&
-           draggedCenterY<=originRect.bottom+returnTolerance){
+        if(dragState.originRoot&&pointerX>=originRect.left-returnTolerance&&
+           pointerX<=originRect.right+returnTolerance&&
+           pointerY>=originRect.top-returnTolerance&&
+           pointerY<=originRect.bottom+returnTolerance){
           const originAnchor=dragState.originNext?.parentElement===dragState.originRoot
             ?dragState.originNext:null;
           if(dragState.placeholder.parentElement!==dragState.originRoot||
@@ -1445,8 +1446,8 @@
           dragState.lastRowAnchor=null;
           return;
         }
-        // Resolve the destination under the dragged chip's center as well.
-        const hit=document.elementFromPoint(draggedCenterX,draggedCenterY);
+        // Resolve the destination under the pointer, independent of dragged-chip width.
+        const hit=document.elementFromPoint(pointerX,pointerY);
         let destination=hit&&hit.closest(".prompt-bubbles");
         if(!destination){
           const editor=hit&&hit.closest(".prompt-bubble-editor");
@@ -1478,7 +1479,7 @@
 
         let nearestRow=rows[0],nearestDistance=Infinity;
         rows.forEach(row=>{
-          const distance=Math.abs(draggedCenterY-(row.top+row.bottom)/2);
+          const distance=Math.abs(pointerY-(row.top+row.bottom)/2);
           if(distance<nearestDistance){nearestDistance=distance;nearestRow=row;}
         });
         const previousRow=dragState.lastRowAnchor
@@ -1486,7 +1487,7 @@
           :null;
         let targetRow=nearestRow;
         if(previousRow){
-          const previousDistance=Math.abs(draggedCenterY-(previousRow.top+previousRow.bottom)/2);
+          const previousDistance=Math.abs(pointerY-(previousRow.top+previousRow.bottom)/2);
           // Mobile touch coordinates fluctuate more; keep the current row until the
           // pointer is clearly closer to another row to prevent row-to-row flicker.
           const rowCenterGap=Math.abs(
@@ -1501,23 +1502,22 @@
         const rowIndex=rows.indexOf(targetRow);
         const afterRowAnchor=rows[rowIndex+1]?.entries[0]?.node||null;
         let anchor=null,passedLastInRow=true,retainedAnchor=false;
-        // Once the dragged chip's center is below the final row, append it
-        // to the end regardless of its horizontal position.
-        const belowLastRow=draggedCenterY>rows[rows.length-1].bottom;
+        // Once the pointer is below the final row, append at the end.
+        const belowLastRow=pointerY>rows[rows.length-1].bottom;
         if(!belowLastRow){
           for(let index=0;index<entries.length;index++){
             const entry=entries[index];
             const centerX=entry.rect.left+entry.rect.width/2;
             const nextAnchor=entries[index+1]?.node||afterRowAnchor;
-            // Judge insertion by the dragged chip's center, not the grab point.
-            // Retain the previous side inside a dead zone to avoid boundary flicker.
-            if(Math.abs(draggedCenterX-centerX)<(isMobileDrag?18:10)&&
+            // Judge insertion by pointer position; retain the previous side inside a
+            // dead zone to avoid boundary flicker.
+            if(Math.abs(pointerX-centerX)<(isMobileDrag?18:10)&&
                (dragState.lastAnchor===entry.node||dragState.lastAnchor===nextAnchor)){
               anchor=dragState.lastAnchor;
               retainedAnchor=true;
               break;
             }
-            if(draggedCenterX<centerX){anchor=entry.node;passedLastInRow=false;break;}
+            if(pointerX<centerX){anchor=entry.node;passedLastInRow=false;break;}
           }
           if(!retainedAnchor&&passedLastInRow)anchor=afterRowAnchor;
         }
