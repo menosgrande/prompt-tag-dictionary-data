@@ -280,7 +280,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1472,bubukka,Bubukka(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 1481,bulbasaur (Pokémon),フシギダネ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1512,butcha-u,ブッチャーU(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-1535,byleth (female) (fire emblem),ベレス（ファイアーエムブレム 風花雪月）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+1535,byleth (female) (fire emblem),ベレス（ファイアーエムブレム 風花雪月）,キャラクター・作品,キャラクター,,"[""enlightened byleth (female)""]",verified,0,verified,verified,normal
 1536,byleth (fire emblem),ベレト／ベレス（ファイアーエムブレム 風花雪月）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1537,byleth (male) (fire emblem),ベレト（ファイアーエムブレム 風花雪月）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1539,c.c. (Code Geass),C.C.（コードギアス）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -464,7 +464,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2642,dungeon meshi,ダンジョン飯,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2643,dungeons & dragons,ダンジョンズ＆ドラゴンズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2644,durarara!!,デュラララ!!,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-2646,dusk (arknights),夕（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+2646,dusk (arknights),夕（アークナイツ）,キャラクター・作品,キャラクター,,"[""dusk (everything is a miracle) (arknights)""]",verified,0,verified,verified,normal
 2657,e.g.o (project moon),E.G.O（Project Moon）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 2689,ebi 193,ebi 193(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 2690,ebifurya,えびふりゃ(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
@@ -547,7 +547,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2947,fate/zero,Fate/Zero,キャラクター・作品,タイトル（作品名）,,"[""フェイト／ゼロ""]",verified,0,verified,verified,normal
 2950,fatui coat,ファデュイのコート,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 2953,faust (project moon),ファウスト（Project Moon）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-2969,felicia (darkstalkers),フェリシア（ヴァンパイア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+2969,felicia (darkstalkers),フェリシア（ヴァンパイア）,キャラクター・作品,キャラクター,,"[""felicia (vampire)""]",verified,0,verified,verified,normal
 2970,female admiral (kancolle),女性提督（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2978,fennec (kemono friends),フェネック（ケモモの友達）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2980,fern (sousou no frieren),シダ（sousou no frieren）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -623,7 +623,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3344,fumihiko (fu mihi ko),ふみひこ(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 3345,fumio (rsqkr),Fumio(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 3347,funami yui (YuruYuri),船見結衣,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-3381,furina (genshin impact),フリーナ（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+3381,furina (genshin impact),フリーナ（原神）,キャラクター・作品,キャラクター,,"[""focalors (genshin impact)""]",verified,0,verified,verified,normal
 3390,furude rika,古手梨花,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 3391,furukawa nagisa (CLANNAD),古河渚（クラナド）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 3392,furutaka (kancolle),古鷹（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2779,7 +2779,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11815,hitsugaya toushirou (bleach),日番谷冬獅郎（BLEACH）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 11816,armin arlert (attack on titan),アルミン・アルレルト（進撃の巨人）,キャラクター・作品,キャラクター,,"[""armin arlert""]",verified,0,verified,verified,normal
 11817,agatsuma zenitsu (demon slayer),我妻善逸（鬼滅の刃）,キャラクター・作品,キャラクター,,"[""agatsuma zenitsu""]",verified,0,verified,verified,normal
-11818,hashibira inosuke (demon slayer),嘴平伊之助（鬼滅の刃）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+11818,hashibira inosuke (demon slayer),嘴平伊之助（鬼滅の刃）,キャラクター・作品,キャラクター,,"[""hashibira inosuke (kimetsu no yaiba)""]",verified,0,verified,verified,normal
 11819,edogawa conan (detective conan),江戸川コナン（名探偵コナン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 11820,haibara ai (detective conan),灰原哀（名探偵コナン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 11821,kaitou kid (detective conan),怪盗キッド（名探偵コナン）,キャラクター・作品,キャラクター,,"[""kaitou kid""]",verified,0,verified,verified,normal
@@ -3303,7 +3303,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12467,braixen,テールナー（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12468,brazilian miku,ブラジル風初音ミク（初音ミク派生キャラクター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12470,bremerton (kung fu cruiser) (azur lane),ブレマートン（カンフークルーザー／アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12474,brighid (xenoblade),ヒカリ（ゼノブレイド2）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+12474,brighid (xenoblade),カグツチ（ゼノブレイド2）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12475,bronya rand,ブローニャ・ランド（崩壊：スターレイル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12476,bronya zaychik,ブローニャ・ザイチク（崩壊3rd）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12477,bronya zaychik (herrscher of reason),ブローニャ・ザイチク（理の律者／崩壊3rd）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -3602,7 +3602,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12824,duramente (umamusume),ドゥラメンテ（ウマ娘 プリティーダービー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12825,durandal (honkai impact),デュランダル（崩壊3rd）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12826,durandal (umamusume),デュランダル（ウマ娘 プリティーダービー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12828,dusk (everything is a miracle) (arknights),夕（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12829,eas (fresh precure!),イース（フレッシュプリキュア！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12830,ebenholz (arknights),エーベンホルツ（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12831,ebina nana,海老名菜々（干物妹！うまるちゃん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -3671,7 +3670,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12907,enemy aircraft (kancolle),敵航空機（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12908,enemy lifebuoy (kancolle),敵浮き輪（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12909,enkidu (fate),エンキドゥ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12910,enlightened byleth (female),ベレス（ファイアーエムブレム 風花雪月）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12911,enma ai,閻魔あい（地獄少女）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12912,enna alouette,エナー・アールウェット（にじさんじEN）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12913,enoshima junko,江ノ島盾子（ダンガンロンパ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -3744,7 +3742,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12991,feixiao (honkai  star rail),飛霄（崩壊：スターレイル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12992,feldt grace,フェルト・グレイス（機動戦士ガンダム00）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12993,felicia (fire emblem),フェリシア（ファイアーエムブレムif）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12994,felicia (vampire),フェリシア（ヴァンパイア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12995,felicia hardy (marvel),フェリシア・ハーディ（マーベル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12996,felix argyle,フェリックス・アーガイル（Re:ゼロから始める異世界生活）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12997,felix hugo fraldarius,フェリクス・ユーゴ・フラルダリウス（ファイアーエムブレム 風花雪月）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -3789,7 +3786,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13044,flower (vocaloid4),flower（VOCALOID4）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13045,floyd leech,フロイド・リーチ（ディズニー ツイステッドワンダーランド）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13046,fluttershy,フラッターシャイ（マイリトルポニー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-13047,focalors (genshin impact),フリーナ（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13048,foch (azur lane),フォッシュ（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13050,formidable (the lady of the beach) (azur lane),フォーミダブル（ビーチの女王／アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13052,fox mccloud (star fox),フォックス・マクラウド（スターフォックス）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -3811,7 +3807,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13070,frieza (dragon ball),フリーザ（ドラゴンボール）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13072,frostleaf (arknights),フロストリーフ（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13073,frostnova (arknights),フロストノヴァ（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-13074,frye (splatoon),フウカ（スプラトゥーン3）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+13074,frye (splatoon),ウツホ（スプラトゥーン3）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13075,fu hua,符華（崩壊3rd）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13076,fu hua (azure empyrea),符華（雲墨丹心／崩壊3rd）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13077,fu hua (fenghuang of vicissitude),符華（歳華の夢／崩壊3rd）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4033,7 +4029,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13339,haruna (track) (blue archive),黒舘ハルナ（体操服／ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13340,haruno haruka,春野はるか（Go！プリンセスプリキュア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13343,hasegawa kobato,羽瀬川小鳩（僕は友達が少ない）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-13344,hashibira inosuke (kimetsu no yaiba),嘴平伊之助（鬼滅の刃）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13345,hashimoto nyaa,橋本にゃー（おそ松さん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13347,hasshaku-sama,八尺様（都市伝説）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13350,hata no kokoro,秦こころ（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4488,7 +4483,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13949,kamoi (kancolle),神威（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13950,kamui gakupo,神威がくぽ（VOCALOID）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13951,kamukura izuru,神座出流（ダンガンロンパ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-13952,kana (fire emblem),カムイ（ファイアーエムブレムif）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+13952,kana (fire emblem),カンナ（ファイアーエムブレムif）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13953,kanade izuru,奏手イヅル（VTuber）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13954,kanae (nijisanji),叶（にじさんじ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13955,kaname buccaneer,カナメ・バッカニア（マクロスΔ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -6532,7 +6527,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 16737,wakana shiki,若菜四季（ラブライブ！スーパースター!!）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16738,wakasa yuuri,若狭悠里（がっこうぐらし！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16740,wallace (pokemon),ミクリ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-16741,wally (pokemon),ユウキ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+16741,wally (pokemon),ミツル（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16742,walpurgisnacht (madoka magica),ワルプルギスの夜（魔法少女まどか☆マギカ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16743,wamuu,ワムウ（ジョジョの奇妙な冒険）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16745,wang liu mei,王留美（機動戦士ガンダム00）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
