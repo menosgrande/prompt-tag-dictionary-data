@@ -332,7 +332,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1847,chuunibyou demo koi ga shitai!,中二病でも恋がしたい！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 1848,ciel (tsukihime),シエル（月姫）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1852,cinderella girls gekijou,シンデレラガールズ劇場,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-1853,cinderella series,アイドルマスター シンデレラガールズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 1862,cirno (Touhou Project),チルノ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1866,clannad,CLANNAD,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 1868,clarent (fate),クラレント（Fate）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
@@ -539,7 +538,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2939,fate/extra ccc,Fate/EXTRA CCC,キャラクター・作品,タイトル（作品名）,,"[""フェイト／エクストラ CCC""]",verified,0,verified,verified,normal
 2940,fate/grand order,Fate/Grand Order,キャラクター・作品,タイトル（作品名）,,"[""フェイト／グランドオーダー"",""FGO""]",verified,0,verified,verified,normal
 2941,fate/hollow ataraxia,Fate/hollow ataraxia,キャラクター・作品,タイトル（作品名）,,"[""フェイト／ホロウアタラクシア""]",verified,0,verified,verified,normal
-2942,fate/kaleid liner prisma illya,プリズマ☆イリヤ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+2942,fate/kaleid liner prisma illya,プリズマ☆イリヤ,キャラクター・作品,タイトル（作品名）,,"[""prisma illya""]",verified,0,verified,verified,normal
 2943,fate/prototype,Fate/Prototype,キャラクター・作品,タイトル（作品名）,,"[""フェイト／プロトタイプ""]",verified,0,verified,verified,normal
 2944,fate/prototype: fragments of blue and silver,Fate/Prototype 蒼銀のフラグメンツ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2945,fate/samurai remnant,Fate/Samurai Remnant,キャラクター・作品,タイトル（作品名）,,"[""フェイト／サムライレムナント""]",verified,0,verified,verified,normal
@@ -930,7 +929,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4693,idolmaster (classic),アイドルマスター（アーケード版）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4694,idolmaster 1,アイドルマスター（初代）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4695,idolmaster 2,アイドルマスター2,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-4696,idolmaster cinderella girls,アイドルマスター シンデレラガールズ,キャラクター・作品,タイトル（作品名）,,"[""The Idolmaster Cinderella Girls""]",verified,0,verified,verified,normal
+4696,idolmaster cinderella girls,アイドルマスター シンデレラガールズ,キャラクター・作品,タイトル（作品名）,,"[""The Idolmaster Cinderella Girls"",""cinderella series""]",verified,0,verified,verified,normal
 4697,idolmaster cinderella girls starlight stage,アイドルマスター シンデレラガールズ スターライトステージ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4698,idolmaster dearly stars,アイドルマスター ディアリースターズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4699,idolmaster million live!,アイドルマスター ミリオンライブ！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -1379,7 +1378,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5693,lynette bishop (strike witches),リネット・ビショップ（ストライクウィッチーズ）,キャラクター・作品,キャラクター,,"[""lynette bishop""]",verified,0,verified,verified,normal
 5694,lyra (pokemon),コトネ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5696,lyrica prismriver (touhou),リリカ・プリズムリバー（東方Project）,キャラクター・作品,キャラクター,,"[""lyrica prismriver""]",verified,0,verified,verified,normal
-5697,lyrical nanoha,魔法少女リリカルなのは,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5699,lysithea von ordelia (fire emblem: three houses),リシテア＝フォン＝コーデリア（ファイアーエムブレム 風花雪月）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5701,m-da s-tarou,MだSたろう(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5706,mabinogi,マビノギ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -1396,7 +1394,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5739,mahjong soul,雀魂,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5741,mahou girls precure!,魔法つかいプリキュア！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5742,mahou sensei negima!,魔法先生ネギま！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-5743,mahou shoujo lyrical nanoha,魔法少女リリカルなのは,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+5743,mahou shoujo lyrical nanoha,魔法少女リリカルなのは,キャラクター・作品,タイトル（作品名）,,"[""lyrical nanoha""]",verified,0,verified,verified,normal
 5744,mahou shoujo lyrical nanoha strikers,魔法少女リリカルなのは StrikerS,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5745,mahou shoujo madoka magica,魔法少女まどか☆マギカ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5746,mahou shoujo madoka magica (anime),魔法少女まどか☆マギカ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -1918,7 +1916,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 7576,prinz eugen (azur lane),プリンツ・ユージン（アズール・レーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 7577,prinz eugen (kancolle),プリンツ・ユージン（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 7578,pripara,プリパラ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-7579,prisma illya,プリズマ☆イリヤ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 7584,producer (idolmaster cinderella girls anime),プロデューサー（アイドルマスター シンデレラガールズ アニメ版）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 7585,producer (idolmaster),プロデューサー（アイドルマスター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 7589,project diva (series),初音ミク -Project DIVA- シリーズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -2449,12 +2446,11 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9780,toaru kagaku no railgun,とある科学の超電磁砲,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9781,toaru majutsu no index,とある魔術の禁書目録,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9782,toaru majutsu no index: old testament,とある魔術の禁書目録（旧約）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-9786,todoroki shoto,轟焦凍（僕のヒーローアカデミア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+9786,todoroki shoto,轟焦凍（僕のヒーローアカデミア）,キャラクター・作品,キャラクター,,"[""todoroki shouto""]",verified,0,verified,verified,normal
 9796,toga himiko,トガヒミコ（僕のヒーローアカデミア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9797,togawa sakiko,豊川祥子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9799,tohru (maidragon),トール（小林さんちのメイドラゴン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9800,tohsaka rin,遠坂凛（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-9805,tojo nozomi,東條希（ラブライブ！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9806,tokai teio (umamusume),トウカイテイオー（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9807,toki (blue archive),飛鳥馬トキ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9808,toki (bunny) (blue archive),飛鳥馬トキ（バニー／ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2554,7 +2550,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 10218,unzan,雲山（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10230,urakaze (kancolle),浦風（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10231,uranohoshi school uniform,浦の星女学院の制服（ラブライブ！サンシャイン!!）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
-10232,uraraka ochaco,麗日お茶子（僕のヒーローアカデミア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+10232,uraraka ochaco,麗日お茶子（僕のヒーローアカデミア）,キャラクター・作品,キャラクター,,"[""uraraka ochako""]",verified,0,verified,verified,normal
 10236,uruha rushia,潤羽るしあ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10237,uruha rushia (1st costume),潤羽るしあ（1st衣装）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10238,urusei yatsura,うる星やつら,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -6323,7 +6319,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 16458,toad (mario),キノピオ（スーパーマリオ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16459,tobiichi origami,鳶一折紙（デート・ア・ライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16460,todo yurika,藤堂ユリカ（アイカツ！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-16462,todoroki shouto,轟焦凍（僕のヒーローアカデミア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16463,todoroki yachiyo,轟八千代（WORKING!!）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16465,togami byakuya,十神白夜（ダンガンロンパ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16467,tohno akiha,遠野秋葉（月姫）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -6366,7 +6361,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 16521,touhoku itako,東北イタコ（VOICEROID）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16523,touhoku zunko,東北ずん子（VOICEROID）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16524,toujou koneko,塔城小猫（ハイスクールD×D）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-16525,toujou nozomi,東條希（ラブライブ！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+16525,toujou nozomi,東條希（ラブライブ！）,キャラクター・作品,キャラクター,,"[""tojo nozomi""]",verified,0,verified,verified,normal
 16527,touwa erio,藤和エリオ（電波女と青春男）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16528,touyoko momoko,東横桃子（咲-Saki-）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16529,towa herschel,トワ・ハーシェル（英雄伝説 閃の軌跡）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -6431,7 +6426,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 16614,uni (neptunia),ユニ（超次元ゲイム ネプテューヌ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16616,unicorn (long-awaited date) (azur lane),ユニコーン（待ち望むデート）（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16617,united kingdom (hetalia),イギリス（ヘタリア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-16622,uraraka ochako,麗日お茶子（僕のヒーローアカデミア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16623,urbosa,ウルボザ（ゼルダの伝説 ブレス オブ ザ ワイルド）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16624,urd,ウルド（ああっ女神さまっ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16625,urotsuki,うろつき（ゆめ2っき）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
