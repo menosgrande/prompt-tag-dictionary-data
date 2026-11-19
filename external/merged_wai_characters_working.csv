@@ -104,13 +104,13 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12025,akatsuki (kancolle),暁（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12026,akatsuki kai ni (kancolle),暁改二（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12027,akatsuki kirika,暁切歌（戦姫絶唱シンフォギア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12028,akatsuki uni,暁ユニ（VTuber）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12028,akatsuki uni,暁ユニ（VTuber）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12029,akaza akari,赤座あかり（ゆるゆり）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12030,akebono (kancolle),曙（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12031,akechi gorou,明智吾郎（ペルソナ5）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12032,akemi homura,暁美ほむら（魔法少女まどか☆マギカ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12033,akemi homura (black dress),暁美ほむら（黒いドレス／魔法少女まどか☆マギカ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12034,akershus fortress (oshiro project),アーケシュフース城（御城プロジェクト）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12034,akershus fortress (oshiro project),アーケシュフース城（御城プロジェクト）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12035,aketa mikoto,緋田美琴（アイドルマスター シャイニーカラーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12036,aki minoriko,秋穣子（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12037,aki rosenthal,アキ・ローゼンタール（Hololive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -140,7 +140,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12061,albacore (azur lane),アルバコア（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12062,albedo (genshin impact),アルベド（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12063,albedo (overlord),アルベド（オーバーロード）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12064,alcina dimitrescu,アルチーナ・ドミトレスク（バイオハザード ヴィレッジ）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12064,alcina dimitrescu,アルチーナ・ドミトレスク（バイオハザード ヴィレッジ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12065,alear (female) (fire emblem),リュール（女性／ファイアーエムブレム エンゲージ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12066,alear (male) (fire emblem),リュール（男性／ファイアーエムブレム エンゲージ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12067,aleksandra i. pokryshkin,アレクサンドラ・I・ポクルィシュキン（ストライクウィッチーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -823,7 +823,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12744,danua,ダヌア（グランブルーファンタジー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12745,daring tact (umamusume),デアリングタクト（ウマ娘 プリティーダービー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12746,darjeeling (girls und panzer),ダージリン（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12747,dark elven forest ranger,ダークエルフ・フォレストレンジャー（ラストオリジン）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12747,dark elven forest ranger,ダークエルフ・フォレストレンジャー（ラストオリジン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12748,dark magician,ブラック・マジシャン（遊☆戯☆王）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12749,dark pit,ブラックピット（新・光神話 パルテナの鏡）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12750,dark sakura,黒桜（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -835,7 +835,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12756,dead master,デッドマスター（ブラック★ロックシューター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12757,deadpool (marvel),デッドプール（マーベル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12758,death (puss in boots),死神（長ぐつをはいたネコと9つの命）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12759,death-sensei (mori calliope),デス先生（森カリオペ）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12759,death-sensei (mori calliope),デス先生（森カリオペ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12760,deedlit,ディードリット（ロードス島戦記）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12761,degenbrecher (arknights),デーゲンブレヒャー（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12762,dehya (genshin impact),ディシア（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -846,8 +846,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12767,dendra (pokemon),キハダ（ポケットモンスター スカーレット・バイオレット）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12768,denji (chainsaw man),デンジ（チェンソーマン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12769,dennou shoujo siro,電脳少女シロ,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12770,destroyer (girls' frontline),破壊者（ドールズフロントライン）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12771,destroyer princess,駆逐棲姫（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12770,destroyer (girls' frontline),デストロイヤー（ドールズフロントライン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12771,destroyer princess,駆逐棲姫（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12772,deutschland (azur lane),ドイッチュラント（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12773,dhole (kemono friends),ドール（けものフレンズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12774,diabellstar the black witch,黒魔女ディアベルスター（遊☆戯☆王）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -862,7 +862,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12783,dimitri alexandre blaiddyd,ディミトリ＝アレクサンドル＝ブレーダッド（ファイアーエムブレム 風花雪月）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12784,dio brando,ディオ・ブランドー（ジョジョの奇妙な冒険）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12785,diona (genshin impact),ディオナ（原神）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12786,dire wolf (kemono friends),ダイアウルフ（けものフレンズ）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12786,dire wolf (kemono friends),ダイアウルフ（けものフレンズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12787,dizzy (guilty gear),ディズィー（ギルティギア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12788,djeeta (granblue fantasy),ジータ（グランブルーファンタジー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12789,dlanor a. knox,ドラノール・A・ノックス（うみねこのなく頃に）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -871,14 +871,14 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12792,doctor (arknights),ドクター（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12793,doctor doom (x-men),ドクター・ドゥーム（マーベル）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12794,dodoco (genshin impact),ドドコ（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12795,dokibird (vtuber),Dokibird（VTuber）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12795,dokibird (vtuber),ドキバード（VTuber）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12796,dokugamine riruka (bleach),毒ヶ峰リルカ（BLEACH）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12797,dokuro-kun (houshou marine),骸骨くん（宝鐘マリン）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12797,dokuro-kun (houshou marine),ドクロくん（宝鐘マリン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12798,dola (nijisanji),ドーラ（にじさんじ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12799,don quixote (project moon),ドンキホーテ（Project Moon）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12800,don-chan (usada pekora),ドンちゃん（兎田ぺこら）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12801,donkey kong,ドンキーコング,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12802,doomguy (doom),ドゥームガイ（DOOM）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12802,doomguy (doom),ドゥームガイ（DOOM）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12803,doremy sweet,ドレミー・スイート（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12804,dorothea arnault,ドロテア＝アールノルト（ファイアーエムブレム 風花雪月）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12805,dorothy (arknights),ドロシー（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -893,7 +893,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12814,dr. ratio (honkai  star rail),Dr.レイシオ（崩壊：スターレイル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12815,dragon kid,ドラゴンキッド（TIGER & BUNNY）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12816,dragonite (pokemon),カイリュー（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12817,dragoon (final fantasy),竜騎士（ファイナルファンタジー）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12817,dragoon (final fantasy),竜騎士（ファイナルファンタジー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12818,dream journey (umamusume),ドリームジャーニー（ウマ娘 プリティーダービー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12819,dreepy,ドラメシヤ（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12820,drifloon,フワンテ（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -915,7 +915,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12836,echidna (re zero),エキドナ（Re:ゼロから始める異世界生活）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12837,edea lee,イデア・リー（ブレイブリーデフォルト）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12838,edelgard von hresvelg,エーデルガルト＝フォン＝フレスベルグ（ファイアーエムブレム 風花雪月）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12839,eden (honkai impact),エデン（崩壊3rd）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12839,eden (honkai impact),エデン（崩壊3rd）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12840,edna (tales),エドナ（テイルズ オブ ゼスティリア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12841,edward elric,エドワード・エルリック（鋼の錬金術師）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12842,edward teach (fate),エドワード・ティーチ（Fate/Grand Order）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -925,13 +925,13 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12846,eiko carol,エーコ・キャルオル（ファイナルファンタジーIX）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12847,eila ilmatar juutilainen,エイラ・イルマタル・ユーティライネン（ストライクウィッチーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12848,eimi (blue archive),和泉元エイミ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12849,ein (blue archive),アイン（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12849,ein (blue archive),アイン（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12850,einhard stratos,アインハルト・ストラトス（魔法少女リリカルなのはViVid）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12851,eirika (fire emblem),エイリーク（ファイアーエムブレム）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12852,eishin flash (umamusume),エイシンフラッシュ（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12853,el condor pasa (umamusume),エルコンドルパサー（ウマ娘 プリティーダービー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12854,elaina (majo no tabitabi),イレイナ（魔女の旅々）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12855,elaine auclair,エレイン・オークレール（英雄伝説）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12855,elaine auclair,エレイン・オークレール（英雄伝説）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12856,elan ceres,エラン・ケレス（機動戦士ガンダム 水星の魔女）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12857,elbe (azur lane),エルベ（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12858,elbing (azur lane),エルビング（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -1071,11 +1071,11 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12992,feldt grace,フェルト・グレイス（機動戦士ガンダム00）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12993,felicia (fire emblem),フェリシア（ファイアーエムブレムif）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12994,felicia (vampire),フェリシア（ヴァンパイア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12995,felicia hardy (marvel),菲丽西亚·哈代（漫威）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12996,felix argyle,菲莉克斯·阿盖尔（Re:从零开始的异世界生活）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12997,felix hugo fraldarius,菲力克斯·雨果·弗拉德鲁斯（火焰纹章 风花雪月）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12995,felicia hardy (marvel),フェリシア・ハーディ（マーベル）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12996,felix argyle,フェリックス・アーガイル（Re:ゼロから始める異世界生活）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12997,felix hugo fraldarius,フェリクス・ユーゴ・フラルダリウス（ファイアーエムブレム 風花雪月）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12998,female admiral (kancolle),女性提督（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12999,female chief (path to nowhere),女局长（无期迷途）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12999,female chief (path to nowhere),女性局長（無期迷途）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13000,female commander (girls' frontline),女性指揮官（ドールズフロントライン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13001,female gunner (dungeon and fighter),女ガンナー（アラド戦記）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13002,female mage (dungeon and fighter),女メイジ（アラド戦記）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -1270,8 +1270,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13191,germany (hetalia),ドイツ（ヘタリア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13192,gertrud barkhorn,ゲルトルート・バルクホルン（ストライクウィッチーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13193,getou suguru,夏油傑（呪術廻戦）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-13194,ghost (modern warfare 2),西蒙-莱利（使命召唤现代战争2),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-13195,ghost miku (project voltage),宝可梦初音（火箭队）（project voltage),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13194,ghost (modern warfare 2),ゴースト／サイモン・ライリー（コール オブ デューティ モダン・ウォーフェア2）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+13195,ghost miku (project voltage),ゴーストタイプの初音ミク（ポケモン feat. 初音ミク）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13196,gigi murin,ジジ・ムリン（ホロライブEnglish）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13197,gilgamesh (caster) (fate),ギルガメッシュ〔キャスター〕（Fate/Grand Order）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13198,gilgamesh (fate),ギルガメッシュ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1299,7 +1299,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13220,gokou ruri,五更瑠璃（俺の妹がこんなに可愛いわけがない）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13221,gokuhara gonta,獄原ゴン太（ニューダンガンロンパV3）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13222,gold city (umamusume),ゴールドシチー（ウマ娘 プリティーダービー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-13223,gold ship (run revolt launcher) (umamusume),黄金船（RUN！乱！射！)（赛马娘),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13223,gold ship (run revolt launcher) (umamusume),ゴールドシップ（RUN！乱！射！）（ウマ娘 プリティーダービー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13224,gold ship (umamusume),ゴールドシップ（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13225,golden snub-nosed monkey (kemono friends),キンシコウ（けものフレンズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13226,goldenglow (arknights),ゴールデングロー（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1439,9 +1439,9 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13360,hatsune miku (append),初音ミク（Append）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13361,hatsune miku (nt),初音ミク NT,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13362,hatsune miku (vocaloid4),初音ミク（VOCALOID4）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-13363,hatsune mikuo,初音默言,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13363,hatsune mikuo,初音ミクオ（VOCALOID）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13364,hatsushimo (kancolle),初霜（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-13365,hatsutori hajime,初鸟创（细胞神曲）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13365,hatsutori hajime,初鳥創（細胞神曲）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13366,hatsuyuki (kancolle),初雪（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13367,hatsuzuki (kancolle),初月（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13368,hawks (boku no hero academia),ホークス（僕のヒーローアカデミア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1479,7 +1479,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13400,hero (dq5),主人公（ドラゴンクエストV）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13401,hero (omori),ヒーロー（OMORI）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13402,hero's daughter (dq5),主人公の娘（ドラゴンクエストV）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-13403,heroine (homicipher),heroine（homicipher),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13403,heroine (homicipher),主人公（Homicipher）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13404,herta (honkai  star rail),ヘルタ（崩壊：スターレイル）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13405,heshikiri hasebe,へし切長谷部（刀剣乱舞）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13406,hestia (danmachi),ヘスティア（ダンまち）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1579,7 +1579,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13500,hisaishi kanade,久石奏（響け！ユーフォニアム）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13501,hisakawa hayate,久川颯（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13502,hisakawa nagi,久川凪（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-13503,hisako fuchida (angel beats!),渊田久子（Angel Beats!）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13503,hisako fuchida (angel beats!),淵田久子（Angel Beats!）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13504,hisau maiya,久宇舞弥（Fate/Zero）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13505,hishi akebono (umamusume),ヒシアケボノ（ウマ娘 プリティーダービー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13506,hishi miracle (umamusume),ヒシミラクル（ウマ娘 プリティーダービー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -1741,7 +1741,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13662,ikamusume,イカ娘（侵略！イカ娘）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13663,ikari shinji,碇シンジ（新世紀エヴァンゲリオン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13664,ikaros,イカロス（そらのおとしもの）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-13665,ikaruga (senran kagura),斑鸠＆咏（闪乱神乐）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13665,ikaruga (senran kagura),斑鳩（閃乱カグラ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13666,ikaruga luca,斑鳩ルカ（アイドルマスター シャイニーカラーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13667,ikazuchi (kancolle),雷（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13668,ike (fire emblem),アイク（ファイアーエムブレム 蒼炎の軌跡／暁の女神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1830,7 +1830,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13751,ishtar (swimsuit rider) (fate),イシュタル（ライダー／水着）（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13752,iskandar (fate),イスカンダル（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13753,isla (plastic memories),アイラ（プラスティック・メモリーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-13754,island fox (kemono friends),岛屿灰狐（动物朋友）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13754,island fox (kemono friends),シマハイイロギツネ（けものフレンズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13755,isoi reiji,磯井玲志(写真家・映像作家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 13756,isokaze (kancolle),磯風（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13757,isonami (kancolle),磯波（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1853,7 +1853,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13774,izayoi aki,十六夜アキ（遊☆戯☆王）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13775,izayoi liko,十六夜リコ（魔法つかいプリキュア！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13776,izayoi sakuya,十六夜咲夜（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-13777,izmir,伊休米尔（碧蓝幻想）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13777,izmir,イズミール（グランブルーファンタジー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13778,izumi (blue archive),獅子堂イズミ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13779,izumi konata,泉こなた（らき☆すた）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13780,izumi koshiro,泉光子郎（デジモンアドベンチャー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -1868,7 +1868,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13789,jack atlas,ジャック・アトラス（遊☆戯☆王）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13790,jack the ripper (fate/apocrypha),ジャック・ザ・リッパー（Fate/Apocrypha）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13791,jack-o' valentine,ジャック・オー（GUILTY GEAR）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-13792,jacket girl (dipp),夹克女孩(蓬莱人形),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13792,jacket girl (dipp),ジャケットの少女（蓬莱人形）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13793,jacques de molay (foreigner) (fate),ジャック・ド・モレー（フォーリナー）（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13794,jade (honkai  star rail),ジェイド（崩壊：スターレイル）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13795,jade curtiss (tales of abyss),ジェイド・カーティス（テイルズ オブ ジ アビス）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -2269,13 +2269,13 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14190,koizumi hanayo,小泉花陽（ラブライブ！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14191,koizumi itsuki,古泉一樹（涼宮ハルヒの憂鬱）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14192,koizumi itsuki (female),古泉一樹（女性化）（涼宮ハルヒの憂鬱）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-14193,kojo anna,虎城安娜（虚拟主播）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+14193,kojo anna,虎城アンナ（VTuber）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14194,kokkoro (princess connect!),コッコロ（プリンセスコネクト！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14195,kokomine cocona,ココナ（フリップフラッパーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14196,kokona (blue archive),ココナ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14197,kokonoe (blazblue),ココノエ（BLAZBLUE）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14198,kokonoe rin,九重りん（こどものじかん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-14199,kokutou mikiya,黑桐干也-娘化（空之境界）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+14199,kokutou mikiya,黒桐幹也（女性化）（空の境界）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14200,koleda belobog,クレタ・ベロボーグ（ゼンレスゾーンゼロ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14201,komaeda nagito,狛枝凪斗（スーパーダンガンロンパ2）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14202,komaki manaka,小牧愛佳（ToHeart）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -2426,7 +2426,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14347,la pluma (arknights),ラ・プルマ（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14348,la pluma (summer flowers) (arknights),ラ・プルマ（夏の花）（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14349,la+ darknesss,ラプラス・ダークネス（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14350,label girl (dipp),Label子（蓬莱人形),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+14350,label girl (dipp),ラベルの少女（蓬莱人形）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14351,lacus clyne,ラクス・クライン（機動戦士ガンダムSEED）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14352,lady (devil may cry),レディ（デビル メイ クライ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14353,lady avalon (fate),レディ・アヴァロン（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -2521,7 +2521,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14442,litchi faye ling,ライチ＝フェイ＝リン（BLAZBLUE）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14443,little bel (azur lane),ちびベル（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14444,little blue whale (kancolle),小鲸（舰队Collection）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-14445,little boy admiral (kancolle),提督男孩（舰队Collection）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+14445,little boy admiral (kancolle),少年提督（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14446,little mac (punch out),リトル・マック（パンチアウト!!）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14447,little red riding hood (grimm),赤ずきん（グリム童話）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14448,littorio (azur lane),リットリオ（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -2547,7 +2547,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14468,lucas (pokemon),コウキ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14469,lucia (scott malin),露西亚（斯科特·马林作品）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
 14470,lucia  plume (pgr),ルシア・鴉羽（パニシング：グレイレイヴン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-14471,luciana de montefio,露西亚娜·奥克希斯·提奥多·德·蒙特夫（绝区零）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+14471,luciana de montefio,ルシアーナ・デ・モンテフィオ（ゼンレスゾーンゼロ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14472,luciela r. sourcream,ルシエラ・R・ソルクレーム（エルソード）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14473,lucifer (helltaker),ルシファー（Helltaker）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14474,lucifer (umineko),ルシファー（うみねこのなく頃に）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -2568,7 +2568,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14489,lumen (arknights),ルーメン（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14490,lumine (genshin impact),蛍（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14491,luna (pgr),ルナ（パニシング：グレイレイヴン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-14492,luna (sailor moon),月野兔/水兵月（美少女战士）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+14492,luna (sailor moon),ルナ（美少女戦士セーラームーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14493,luna child,ルナチャイルド,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14494,lunamaria hawke,ルナマリア・ホーク（機動戦士ガンダムSEED DESTINY）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14495,lunasa prismriver,ルナサ・プリズムリバー（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -2673,7 +2673,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14594,marie antoinette alter (fate),マリー・アントワネット〔オルタ〕（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14595,marie rose,マリー・ローズ（DEAD OR ALIVE）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14596,marina (blue archive),マリナ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-14597,marina (fear & hunger),玛丽娜（恐惧与饥饿）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+14597,marina (fear & hunger),マリーナ（Fear & Hunger）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14598,marina (splatoon),イイダ（スプラトゥーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14599,marina ismail,マリナ・イスマイール（機動戦士ガンダム00）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14600,marinette dupain-cheng,マリネット・デュパン＝チェン（ミラキュラス レディバグ＆シャノワール）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -2975,7 +2975,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14896,moeta kaoruko,萌田薫子（こみっくがーるず）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14897,mogami (kancolle),最上（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14898,mogami shizuka,最上静香（アイドルマスター ミリオンライブ！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-14899,momo (nikki),莫莫（NIKKE: 胜利女神）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+14899,momo (nikki),モモ（勝利の女神：NIKKE）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14900,momo velia deviluke,モモ・ベリア・デビルーク（To LOVEる -とらぶる-）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14901,momoe nagisa,百江なぎさ（魔法少女まどか☆マギカ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14902,momoe nagisa (magical girl),百江なぎさ（魔法少女）（魔法少女まどか☆マギカ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -3003,8 +3003,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14924,montgomery gator (five nights at freddy's),モンティ・ゴルゴナ（Five Nights at Freddy's）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14925,moogle,モーグリ（ファイナルファンタジー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14926,moona hoshinova,ムーナ・ホシノヴァ（ホロライブインドネシア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-14927,moonlight flower,月光花（东方Project）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-14928,moose (kemono friends),驼鹿（兽娘动物园）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+14927,moonlight flower,月夜花（ラグナロクオンライン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+14928,moose (kemono friends),ヘラジカ（けものフレンズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14929,morag ladair (xenoblade),モラグ・ラダマン（ゼノブレイド2）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14930,mordekaiser (league of legends),モルデカイザー（リーグ・オブ・レジェンド）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14931,mordred (fate),モードレッド（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -3036,7 +3036,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14957,mp40 (girls' frontline),MP40（ドールズフロントライン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14958,mp7 (girls' frontline),MP7（ドールズフロントライン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14959,mr. c.b. (umamusume),ミスターシービー（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14960,mr. crawling,Mr. Crawling,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+14960,mr. crawling,ミスター・クロウリング（Homicipher）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14961,mr. squeaks (hakos baelz),ミスター・スクイークス（ハコス・ベールズ）（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14962,ms. fortune (skullgirls),ミス・フォーチュン（スカルガールズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14963,mu-12,μ-12（BLAZBLUE）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -3246,7 +3246,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 15167,neutral chao,ニュートラルチャオ（ソニックシリーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 15168,neuvillette (genshin impact),ヌヴィレット（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15169,new jersey (azur lane),ニュージャージー（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-15170,new jersey (exhilarating steps!) (azur lane),花园·跃动的舞台时间！（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+15170,new jersey (exhilarating steps!) (azur lane),ニュージャージー（エキサイティング・ステップ！）（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 15171,nia (blade) (xenoblade),ニア（ブレイド形態）（ゼノブレイド2）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 15172,nia (xenoblade),ニア,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15173,nia teppelin,ニア・テッペリン,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -3376,7 +3376,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 15297,omaru polka,尾丸ポルカ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15298,omori (omori),オモリ（OMORI）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15299,one (cevio),ONE（CeVIO）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-15300,onigirya (nekomata okayu),鬼切（猫又小粥）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+15300,onigirya (nekomata okayu),おにぎりゃー（猫又おかゆファン）（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 15301,onitsuka natsumi,鬼塚夏美（ラブライブ！スーパースター!!）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 15302,onodera kosaki,小野寺小咲（ニセコイ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 15303,onozuka komachi,小野塚小町（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -3413,7 +3413,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 15334,oshino ougi,忍野扇（〈物語〉シリーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 15335,oshino shinobu,忍野忍,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15336,otegine,御手杵（刀剣乱舞）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-15337,otogi (blue archive),音葵（蔚蓝档案）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+15337,otogi (blue archive),オトギ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 15338,otomune kozue,乙宗梢（ラブライブ！蓮ノ空女学院スクールアイドルクラブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 15339,otonashi haruna,音無春奈（イナズマイレブン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 15340,otonashi kotori,音無小鳥,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -3897,7 +3897,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 15818,satono diamond (umamusume),サトノダイヤモンド（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15819,satou kazuma,佐藤和真,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15820,satou lilly,砂藤リリィ（花咲くいろは）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-15821,satsuki (blue archive),皋月（蔚蓝档案）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+15821,satsuki (blue archive),サツキ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 15822,satsuki (kancolle),皐月（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15823,sawa azusa,佐々木梓（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 15824,sawachika eri,沢近愛理（スクールランブル）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -4067,7 +4067,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 15988,shinosawa hiro,篠澤広,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15989,shinshuu maru (kancolle),神州丸（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 15990,shiodome miuna,潮留美海（凪のあすから）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-15991,shiokko (murasaki shion),盐子（宠物）（shiokko）（Hololive）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+15991,shiokko (murasaki shion),しおっこ（紫咲シオンファン）（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 15992,shiomi kotone,汐見琴音,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15993,shiomi syuko,塩見周子,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15994,shiori (princess connect!),シオリ（プリンセスコネクト！Re:Dive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -4250,7 +4250,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 16171,ssrb (shishiro botan),SSRB（獅白ぼたんファン）（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16172,st ar-15 (girls' frontline),ST AR-15（ドールズフロントライン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16173,st. louis (azur lane),セントルイス（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-16174,st. louis (luxurious wheels) (azur lane),圣路易斯（豪华车轮）（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+16174,st. louis (luxurious wheels) (azur lane),セントルイス（ラグジュアリー・ホイール）（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16175,star sapphire,スターサファイア（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16176,starfire (dc),スターファイア（DCコミックス）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16177,stark (sousou no frieren),シュタルク（葬送のフリーレン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4314,7 +4314,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 16235,sussurro (arknights),ススーロ（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16236,sussurro (summer flower) (arknights),ススーロ（夏の花）（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16237,suu (monster musume),スー（モンスター娘のいる日常）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-16238,suzu (cookie),铃（Cookie）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+16238,suzu (cookie),スズ（クッキー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16239,suzuhara lulu,鈴原るる（にじさんじ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16240,suzuka gozen (fate),鈴鹿御前（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16241,suzukaze (kancolle),涼風（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4518,7 +4518,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 16439,tifa lockhart,ティファ・ロックハート（ファイナルファンタジーVII）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16440,tifa lockhart (refined dress),蒂法·洛克哈特（精致礼服）（最终幻想VII）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
 16441,tifa lockhart (shining spirit),蒂法·洛克哈特（闪耀灵魂）（最终幻想VII）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-16442,tiffania westwood,蒂法妮娅·韦斯特伍德（零之使魔）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+16442,tiffania westwood,ティファニア・ウエストウッド（ゼロの使い魔）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16443,tighnari (genshin impact),ティナリ（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16444,tiki (adult) (fire emblem),チキ（大人）（ファイアーエムブレム）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16445,tiki (fire emblem),チキ（ファイアーエムブレム）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4732,10 +4732,10 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 16653,utage (arknights),ウタゲ（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16654,utage (summer flowers) (arknights),ウタゲ（夏の花）（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16655,utaha (blue archive),白石ウタハ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-16656,utsugi noriyuki,宇津木德幸（細胞神曲）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+16656,utsugi noriyuki,宇津木徳幸（細胞神曲）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16657,utsugi yuuki,宇津木優季（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16658,utsumi erice,宇津見エリセ（Fate/Grand Order）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-16659,utsumi sakura,内海樱（Sakura no Sekai）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+16659,utsumi sakura,内海さくら（Sakura no Sekai）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16660,uzaki hana,宇崎花（宇崎ちゃんは遊びたい！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16661,uzaki tsuki,宇崎月（宇崎ちゃんは遊びたい！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16662,uzui tengen,宇髄天元（鬼滅の刃）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -4944,7 +4944,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 16865,yamato takeru (fate),ヤマトタケル（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16866,yamato-no-kami yasusada,大和守安定（刀剣乱舞）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16867,yan qing (fate),燕青（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-16868,yan vismok,阳·比斯莫克,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+16868,yan vismok,ヤン・ヴィスモク,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16869,yanfei (genshin impact),煙緋（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16870,yang guifei (fate),楊貴妃（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16871,yang xiao long,ヤン・シャオロン,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4969,7 +4969,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 16890,yin (darker than black),銀（DARKER THAN BLACK）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16891,yinlin (wuthering waves),吟霖（鳴潮）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16892,ymir (shingeki no kyojin),ユミル（進撃の巨人）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-16893,yohane bonaventura,世羽·波娜温图拉（Last Eden）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+16893,yohane bonaventura,ヨハネ・ボナヴェントゥーラ（Last Eden）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16894,yoimiya (genshin impact),宵宮（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16895,yoisaki kanade,宵崎奏（プロジェクトセカイ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16896,yoko littner,ヨーコ・リットナー,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
