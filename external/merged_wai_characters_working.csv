@@ -1542,7 +1542,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13463,himura kenshin,緋村剣心（るろうに剣心）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13464,hina (blue archive),空崎ヒナ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13465,hina (dress) (blue archive),空崎ヒナ（ドレス／ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-13466,hina (girls band cry),妃娜（少女乐队的呐喊),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13466,hina (girls band cry),ヒナ（ガールズバンドクライ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13467,hina (pajamas) (blue archive),空崎ヒナ（パジャマ／ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13468,hina (swimsuit) (blue archive),ヒナ（水着）（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13469,hinaichigo (rozen maiden),雛苺（ローゼンメイデン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -1703,7 +1703,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13624,ib (ib),イヴ（Ib）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13625,ibara mayaka,伊原摩耶花（氷菓）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13626,ibaraki douji (fate),イバラキ・ドゥジ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-13627,ibaraki douji (swimsuit lancer) (fate),茨木童子-弓阶泳装（Fate),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13627,ibaraki douji (swimsuit lancer) (fate),茨木童子（水着ランサー）（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13628,ibaraki kasen,茨木華扇（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13629,ibuki (blue archive),イブキ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13630,ibuki (street fighter),いぶき（ストリートファイター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -1755,8 +1755,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13676,illuso (jojo no kimyou na bouken),イルーゾォ（ジョジョの奇妙な冒険）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13677,illustrious (azur lane),イラストリアス（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13678,illyasviel von einzbern,イリヤスフィール・フォン・アインツベルン（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-13679,illyasviel von einzbern (beast style),伊莉雅丝菲尔·冯·爱因兹贝伦-猫娘装（Fate）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-13680,illyasviel von einzbern (swimsuit archer),伊莉雅丝菲尔·冯·爱因兹贝伦-弓阶泳装（Fate）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13679,illyasviel von einzbern (beast style),イリヤスフィール・フォン・アインツベルン（ビーストスタイル）（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+13680,illyasviel von einzbern (swimsuit archer),イリヤスフィール・フォン・アインツベルン（水着アーチャー）（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13681,ilsa (granblue fantasy),イルザ（グランブルーファンタジー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13682,ilulu (maidragon),イルル（小林さんちのメイドラゴン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13683,imai lisa,今井リサ（BanG Dream!）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -2176,7 +2176,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14097,kinugasa (kancolle),衣笠（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14098,kinuhata saiai,絹旗最愛（とある魔術の禁書目録）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14099,kirahoshi ciel,キラ星シエル（キラキラ☆プリキュアアラモード）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-14100,kiran (fire emblem),柯岚（火焰之纹章）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+14100,kiran (fire emblem),エクラ（ファイアーエムブレム ヒーローズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14101,kirara (blue archive),キララ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14102,kirara (genshin impact),キララ（原神）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14103,kirby,カービィ（星のカービィ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -2998,7 +2998,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14919,monoko,モノ子（ゆめにっき）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14920,monokuma,モノクマ（ダンガンロンパ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14921,monomi (danganronpa),モノミ（スーパーダンガンロンパ2）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-14922,mononobe alice,物部爱丽丝（VTuber）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+14922,mononobe alice,物述有栖（にじさんじ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14923,mononobe no futo,物部布都,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14924,montgomery gator (five nights at freddy's),モンティ・ゴルゴナ（Five Nights at Freddy's）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14925,moogle,モーグリ（ファイナルファンタジー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4516,8 +4516,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 16437,tier harribel (bleach),ティア・ハリベル（BLEACH）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16438,tieria erde,ティエリア・アーデ（機動戦士ガンダム00）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16439,tifa lockhart,ティファ・ロックハート（ファイナルファンタジーVII）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-16440,tifa lockhart (refined dress),蒂法·洛克哈特（精致礼服）（最终幻想VII）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-16441,tifa lockhart (shining spirit),蒂法·洛克哈特（闪耀灵魂）（最终幻想VII）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+16440,tifa lockhart (refined dress),ティファ・ロックハート（洗練されたドレス）（ファイナルファンタジーVII）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+16441,tifa lockhart (shining spirit),ティファ・ロックハート（輝く魂）（ファイナルファンタジーVII）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16442,tiffania westwood,ティファニア・ウエストウッド（ゼロの使い魔）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16443,tighnari (genshin impact),ティナリ（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16444,tiki (adult) (fire emblem),チキ（大人）（ファイアーエムブレム）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
