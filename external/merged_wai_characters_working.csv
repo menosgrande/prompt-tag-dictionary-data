@@ -99,18 +99,18 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12020,akari (pokemon),ショウ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12021,akashi (azur lane),明石（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12022,akashi (kancolle),明石（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12023,akashi (live a hero),赤司魂群（LIVE A HERO）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12023,akashi (live a hero),アカシ（LIVE A HERO）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
 12024,akashiya moka,赤夜萌香（ロザリオとバンパイア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12025,akatsuki (kancolle),暁（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12026,akatsuki kai ni (kancolle),暁改二（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12027,akatsuki kirika,暁切歌（戦姫絶唱シンフォギア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12028,akatsuki uni,赤月ゆに（VTuber）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12028,akatsuki uni,暁ユニ（VTuber）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
 12029,akaza akari,赤座あかり（ゆるゆり）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12030,akebono (kancolle),曙（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12031,akechi gorou,明智吾郎（ペルソナ5）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12032,akemi homura,暁美ほむら（魔法少女まどか☆マギカ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12033,akemi homura (black dress),暁美ほむら（黒いドレス／魔法少女まどか☆マギカ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12034,akershus fortress (oshiro project),アーケシュフース（御城プロジェクト）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12034,akershus fortress (oshiro project),アーケシュフース城（御城プロジェクト）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
 12035,aketa mikoto,緋田美琴（アイドルマスター シャイニーカラーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12036,aki minoriko,秋穣子（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12037,aki rosenthal,アキ・ローゼンタール（Hololive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -118,7 +118,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12039,aki shizuha,秋静葉（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12040,akigumo (kancolle),秋雲（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12041,akigumo kai ni (kancolle),秋雲改二（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12042,akiha rumiho,牧瀬紅莉栖（命運石之門）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12042,akiha rumiho,フェイリス・ニャンニャン（STEINS;GATE）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12043,akikawa yayoi (umamusume),秋川やよい（ウマ娘 プリティーダービー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12044,akira (blue archive),清澄アキラ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12045,akishimo (kancolle),秋霜（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -140,7 +140,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12061,albacore (azur lane),アルバコア（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12062,albedo (genshin impact),アルベド（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12063,albedo (overlord),アルベド（オーバーロード）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12064,alcina dimitrescu,アルチーナ・ディミトレスク（バイオハザード ヴィレッジ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12064,alcina dimitrescu,オルチーナ・ドミトレスク（バイオハザード ヴィレッジ）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
 12065,alear (female) (fire emblem),リュール（女性／ファイアーエムブレム エンゲージ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12066,alear (male) (fire emblem),リュール（男性／ファイアーエムブレム エンゲージ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12067,aleksandra i. pokryshkin,アレクサンドラ・I・ポクルィシュキン（ストライクウィッチーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -163,12 +163,12 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12084,alisa ilinichina amiella,アリサ・イリーニチナ・アミエーラ（ゴッドイーター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12085,alisa mikhailovna kujou,アリサ・ミハイロヴナ・九条（時々ボソッとロシア語でデレる隣のアーリャさん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12086,alisa reinford,アリサ・ラインフォルト（英雄伝説 閃の軌跡）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12087,alisa southerncross,日向秋（ケロロ軍曹）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12087,alisa southerncross,アリサ・サザンクロス（ケロロ軍曹）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12088,allelujah haptism,アレルヤ・ハプティズム（機動戦士ガンダム00）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12089,alleyne (queen's blade),アレイン（クイーンズブレイド）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12090,alma armas (va-11 hall-a),アルマ・アーマス（VA-11 Hall-A）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12091,alolan vulpix,アローラロコン（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12092,alpaca suri (kemono friends),スリ（けものフレンズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12092,alpaca suri (kemono friends),アルパカ・スリ（けものフレンズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12093,alphonse elric,アルフォンス・エルリック（鋼の錬金術師）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12094,altaria,チルタリス（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12095,altera (fate),アルテラ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
