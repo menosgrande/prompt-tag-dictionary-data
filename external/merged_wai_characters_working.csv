@@ -1290,7 +1290,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13211,glimmer (xenoblade),グリマー（ゼノブレイド3）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13212,gloria (pokemon),ユウリ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13213,gneisenau (azur lane),グナイゼナウ（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-13214,godsworn alexiel,神域守护·布洛蒂亚（碧蓝幻想）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13214,godsworn alexiel,ブローディア（グランブルーファンタジー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13215,godzilla,ゴジラ,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13216,gogeta (dragon ball),ゴジータ（ドラゴンボール）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13217,goh (pokemon),ゴウ（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -1989,9 +1989,9 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13910,kagura (gintama),神楽（銀魂）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13911,kagura mea,神楽めあ（VTuber）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13912,kagurazaka asuna,神楽坂明日菜（魔法先生ネギま！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-13913,kaguya (blue archive),辉夜（蔚蓝档案）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13913,kaguya (blue archive),漆原カグヤ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13914,kaguya luna,輝夜月（VTuber）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-13915,kaho (blue archive),花帆（蔚蓝档案）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+13915,kaho (blue archive),桑上カホ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13916,kai'sa,カイ＝サ（リーグ・オブ・レジェンド）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13917,kaiboukan no. 4 (kancolle),第四号海防艦（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 13918,kaidou minami,海藤みなみ（Go！プリンセスプリキュア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -2912,7 +2912,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14833,mitaka asa,三鷹アサ（チェンソーマン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14834,mitake ran,美竹蘭（BanG Dream!）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14835,mitarashi anko (naruto),みたらしアンコ（NARUTO）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-14836,miteiru (shirakami fubuki),ミテイル（Miteiru）（白上吹雪）(VTuber),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+14836,miteiru (shirakami fubuki),ミテイル（白上フブキ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14837,mithrun,ミスルン（ダンジョン飯）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14838,mitsugashira enoko,三頭慧ノ子（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 14839,mitsuki felicia,深月フェリシア（マギアレコード）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -4553,7 +4553,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 16474,toki (blue archive),飛鳥馬トキ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16475,toki (bunny) (blue archive),飛鳥馬トキ（バニー／ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16476,toki kureha,土岐紅巴（アサルトリリィ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-16477,tokido saya,时藤沙耶（我的妹妹不可能那么可爱）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+16477,tokido saya,朱鷺戸沙耶（リトルバスターズ！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16478,tokiha mai,鴇羽舞衣（舞-HiME）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16479,tokiko (touhou),朱鷺子（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16480,tokino sora,ときのそら,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -5006,7 +5006,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 16927,yu mei-ren (second ascension) (fate),虞美人（第二再臨）（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16928,yu mei-ren (swimsuit lancer) (fate),虞美人（ランサー／水着）（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16929,yua serufu,結愛せるふ（Do It Yourself!!）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-16930,yue (chinese wife diary),月（中国妻子日记）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+16930,yue (chinese wife diary),月（ユエ／中国嫁日記）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16931,yuegui (genshin impact),月桂（原神）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16932,yuel (granblue fantasy),ユエル（グランブルーファンタジー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 16933,yuffie kisaragi,ユフィ・キサラギ（ファイナルファンタジーVII）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
