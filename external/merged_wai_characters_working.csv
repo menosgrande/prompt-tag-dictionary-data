@@ -256,17 +256,17 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12177,anya alstreim,アーニャ・アールストレイム（コードギアス 反逆のルルーシュ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12178,anya melfissa,アーニャ・メルフィッサ（Hololive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12179,anyoji hime,安養寺姫芽（ラブライブ！蓮ノ空女学院スクールアイドルクラブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12180,ao-chan (ninomae ina'nis),青酱（Hololive Ninomae Ina'nis）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12180,ao-chan (ninomae ina'nis),アオちゃん（ニノマエ・イナニス／Hololive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12181,aoba (kancolle),青葉（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12182,aoba kokona,青羽ここな（ヤマノススメ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12183,aoba moca,青葉モカ（BanG Dream!）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12184,aoi (blue archive),扇喜アオイ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12185,aoki reika,青木れいか（スマイルプリキュア！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12186,aoyama sumika,青山澄香（咖啡贵族）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12186,aoyama sumika,青山澄香（珈琲貴族）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12187,aozaki aoko,蒼崎青子（魔法使いの夜）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12188,aozaki touko,蒼崎橙子（空の境界）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12189,aponia (honkai impact),アポニア（崩壊3rd）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12190,apricot the lich,巫妖apricot（VShojo）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12190,apricot the lich,アプリコット・ザ・リッチ（VShojo）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12191,aqua (kingdom hearts),アクア（キングダム ハーツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12192,aqua (konosuba),アクア（この素晴らしい世界に祝福を！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12193,aquila (kancolle),アクィラ（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -297,7 +297,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12218,arihara nanami,在原七海（RIDDLE JOKER）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12219,arika yumemiya,夢宮ありか（舞-乙HiME）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12220,arima kana,有馬かな（【推しの子】）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12221,arima senne,有马千音（原创角色）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12221,arima senne,有馬千音（オリジナルキャラクター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12222,aris (blue archive),天童アリス（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12223,aris (maid) (blue archive),天童アリス（メイド／ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12224,arisa bunnings,アリサ・バニングス（魔法少女リリカルなのは）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
@@ -391,171 +391,171 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12312,athena cykes,希月心音（逆転裁判）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12313,atlanta (kancolle),アトランタ（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12314,atri,アトリ（ATRI -My Dear Moments-）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-12315,atsuko (blue archive),敦子（碧蓝档案）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12316,atsuko (swimsuit) (blue archive),敦子（泳装）（碧蓝档案）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12317,aty (summon night),艾蒂（召唤之夜）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12318,aubrey (faraway) (omori),奥布雷（遥远之地）(OMORI),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12319,aubrey (headspace) (omori),奥布雷（梦境空间）(OMORI),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12315,atsuko (blue archive),秤アツコ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12316,atsuko (swimsuit) (blue archive),秤アツコ（水着／ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12317,aty (summon night),アティ（サモンナイト）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12318,aubrey (faraway) (omori),オーブリー（遠い町／OMORI）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12319,aubrey (headspace) (omori),オーブリー（ヘッドスペース／OMORI）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12320,aubrey (omori),オーブリー（OMORI）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12321,august von parseval (azur lane),奥古斯特·冯·帕塞瓦尔（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12322,aura (sousou no frieren),阿乌拉（葬送的芙莉莲）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12323,aurelion sol (league of legends),奥瑞利安·索尔（英雄联盟）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12324,aurochs (kemono friends),野牛（兽娘动物园）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12325,aurora (arknights),极光（明日方舟）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12326,aurora sya lis kaymin,欧罗拉·栖夜·莉丝·凯米恩（在魔王城说晚安）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12321,august von parseval (azur lane),アウグスト・フォン・パーセヴァル（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12322,aura (sousou no frieren),アウラ（葬送のフリーレン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12323,aurelion sol (league of legends),オレリオン・ソル（リーグ・オブ・レジェンド）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12324,aurochs (kemono friends),オーロックス（けものフレンズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12325,aurora (arknights),オーロラ（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12326,aurora sya lis kaymin,オーロラ・栖夜・リース・カイミーン（魔王城でおやすみ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12327,aventurine (honkai  star rail),アベンチュリン（崩壊：スターレイル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12328,awa subaru,安和昴（Girls Band Cry）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12329,axel (kingdom hearts),亚克赛尔（王国之心）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12330,ayachi nene,绫地宁宁（千恋万花）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12328,awa subaru,安和すばる（ガールズバンドクライ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12329,axel (kingdom hearts),アクセル（キングダム ハーツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12330,ayachi nene,綾地寧々（千恋＊万花）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12331,ayanami (azur lane),綾波（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12332,ayanami (kancolle),綾波（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12333,ayanami (retrofit) (azur lane),绫波（改造）（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12334,ayanami kai ni (kancolle),绫波改二（舰队收藏）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12335,ayanami rei,绫波丽（新世纪福音战士）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12333,ayanami (retrofit) (azur lane),綾波（改造／アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12334,ayanami kai ni (kancolle),綾波改二（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12335,ayanami rei,綾波レイ（新世紀エヴァンゲリオン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12336,ayane (blue archive),奥空アヤネ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12337,ayane (doa),绫音（死或生）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12338,ayase eli,绚濑绘里（Love Live!）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12339,ayase honoka,绫濑穗乃香（偶像大师）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12340,ayase yue,绫濑夕映（悠久持有者）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12341,ayatsuji tsukasa,绚辻词（圣诞之吻）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12342,ayunda risu,阿尤达·丽丝（Hololive）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12343,ayunda risu (1st costume),阿尤达·丽丝（初代服装）（Hololive）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12344,azki (4th costume) (hololive),阿兹基（第四代服装）（Hololive）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12337,ayane (doa),あやね（DEAD OR ALIVE）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12338,ayase eli,絢瀬絵里（ラブライブ！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12339,ayase honoka,綾瀬穂乃香（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12340,ayase yue,綾瀬夕映（魔法先生ネギま！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12341,ayatsuji tsukasa,絢辻詞（アマガミ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12342,ayunda risu,アユンダ・リス（Hololive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12343,ayunda risu (1st costume),アユンダ・リス（初期衣装／Hololive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12344,azki (4th costume) (hololive),AZKi（第四衣装／Hololive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12345,azki (hololive),AZKi（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12346,azula,阿祖拉（阿凡达：最后的气宗）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12347,azuma (azur lane),吾妻（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12348,azumarill,玛力露丽（宝可梦）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12349,azura (fire emblem),阿祖拉（火焰纹章）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12346,azula,アズーラ（アバター 伝説の少年アン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12347,azuma (azur lane),吾妻（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12348,azumarill,マリルリ（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12349,azura (fire emblem),アクア（ファイアーエムブレムif）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12350,azusa (blue archive),アズサ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12351,azusa (swimsuit) (blue archive),梓（泳装）（蓝色档案）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12352,azusawa kohane,小豆泽心羽胸章（Project Sekai）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12353,bache (azur lane),巴赫（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12354,backbeako,背胡子（鬼太郎）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12355,bae minah (chaesu),裴敏雅（Chaesu）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12356,bagpipe (arknights),风笛（明日方舟）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12357,baiken,梅喧（罪恶装备）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12358,bailu (honkai  star rail),白露（崩坏：星穹铁道）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12359,baizhu (genshin impact),白术（原神）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12360,bakugou katsuki,爆豪胜己（我的英雄学院）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12361,balalaika (black lagoon),巴拉莱卡（黑礁）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12362,balthier (final fantasy xii),巴尔佛雷亚（最终幻想12）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12363,baltimore (after-school ace) (azur lane),巴尔的摩（放学后的王牌）（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12351,azusa (swimsuit) (blue archive),霞（水着／ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12352,azusawa kohane,小豆沢こはね（プロジェクトセカイ カラフルステージ！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12353,bache (azur lane),バッチ（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12354,backbeako,バックベアード（ゲゲゲの鬼太郎）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12355,bae minah (chaesu),ペ・ミナ（Chaesu）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12356,bagpipe (arknights),バグパイプ（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12357,baiken,梅喧（GUILTY GEAR）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12358,bailu (honkai  star rail),白露（崩壊：スターレイル）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12359,baizhu (genshin impact),白朮（原神）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12360,bakugou katsuki,爆豪勝己（僕のヒーローアカデミア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12361,balalaika (black lagoon),バラライカ（BLACK LAGOON）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12362,balthier (final fantasy xii),バルフレア（ファイナルファンタジーXII）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12363,baltimore (after-school ace) (azur lane),ボルチモア（放課後のエース／アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12364,baltimore (azur lane),ボルチモア（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12365,baltimore (finish line flagbearer) (azur lane),巴尔的摩（终点旗手）（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12366,bambietta basterbine,班比耶塔·巴斯特拜因（死神）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12367,banzoin hakka,万象院白华（万象院ハッカ）（VTuber）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12365,baltimore (finish line flagbearer) (azur lane),ボルチモア（フィニッシュラインの旗手／アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12366,bambietta basterbine,バンビエッタ・バスターバイン（BLEACH）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12367,banzoin hakka,万象院ハッカ（Holostars）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12368,baobhan sith (fate),バーヴァン・シー（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12369,baobhan sith (second ascension) (fate),芭万·希（第二灵基）（Fate）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12370,baobhan sith (swimsuit pretender) (fate),芭万·希（泳装伪装者）（Fate）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12371,baobhan sith (swimsuit pretender) (third ascension) (fate),芭万·希（泳装伪装者）（第三灵基）（Fate）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12369,baobhan sith (second ascension) (fate),バーヴァン・シー（第二再臨／Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12370,baobhan sith (swimsuit pretender) (fate),バーヴァン・シー（水着／プリテンダー／Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12371,baobhan sith (swimsuit pretender) (third ascension) (fate),バーヴァン・シー（水着／プリテンダー・第三再臨／Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12372,barbara (genshin impact),バーバラ（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12373,barbara (summertime sparkle) (genshin impact),芭芭拉（夏日闪耀）（原神）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12373,barbara (summertime sparkle) (genshin impact),バーバラ（サマータイムスパークル／原神）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12374,barghest (fate),バーゲスト（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12375,barghest (second ascension) (fate),巴格斯特（第二灵基）（Fate）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12376,barghest (swimsuit archer) (fate),巴格斯特（泳装弓兵）（Fate）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12377,barnaby brooks jr.,巴纳比·布鲁克斯Jr.（TIGER & BUNNY）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12378,baron bunny (genshin impact),兔子男爵（原神）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12379,barret wallace (ff7),巴雷特·华莱士（最终幻想7）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12375,barghest (second ascension) (fate),バーゲスト（第二再臨／Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12376,barghest (swimsuit archer) (fate),バーゲスト（水着／アーチャー／Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12377,barnaby brooks jr.,バーナビー・ブルックスJr.（TIGER & BUNNY）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12378,baron bunny (genshin impact),バロンバニー（原神）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12379,barret wallace (ff7),バレット・ウォーレス（ファイナルファンタジーVII）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12380,basil (faraway) (omori),バジル（遠い町／OMORI）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12381,basil (headspace) (omori),巴兹尔（头空间）（OMORI）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12381,basil (headspace) (omori),バジル（ヘッドスペース／OMORI）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12382,basil (omori),バジル（OMORI）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12383,bataan (azur lane),巴丹（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12384,batgirl (dc),蝙蝠少女（DC）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12385,battleship princess,战舰姬（舰队Collection）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12386,battleship water oni,战舰水鬼（舰队Collection）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12387,bayonetta,贝优妮塔（猎天使魔女）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12388,bazelgeuse (monster hunter),爆鳞龙（怪物猎人）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12383,bataan (azur lane),バターン（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12384,batgirl (dc),バットガール（DCコミックス）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12385,battleship princess,戦艦棲姫（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12386,battleship water oni,戦艦水鬼（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12387,bayonetta,ベヨネッタ（ベヨネッタ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12388,bazelgeuse (monster hunter),バゼルギウス（モンスターハンター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12389,bb (fate),BB（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12390,bb (swimsuit mooncancer) (fate),BB〔水着／ムーンキャンサー〕（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12391,bb (swimsuit mooncancer) (third ascension) (fate),BB（泳装月癌）（第三灵基）（Fate）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12392,bb dubai (fate),BB迪拜（Fate）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12391,bb (swimsuit mooncancer) (third ascension) (fate),BB（水着／ムーンキャンサー・第三再臨／Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12392,bb dubai (fate),BBドバイ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12393,bea (pokemon),サイトウ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12394,beanstalk (arknights),豆茎（明日方舟）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12395,beast boy (dc),野兽男孩（DC）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12396,beatrice (re zero),贝亚特丽丝（碧翠丝）（Re:从零开始的异世界生活）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12394,beanstalk (arknights),ビーンストーク（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12395,beast boy (dc),ビーストボーイ（DCコミックス）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12396,beatrice (re zero),ベアトリス（Re:ゼロから始める異世界生活）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12397,beatrice (umineko),ベアトリーチェ（うみねこのなく頃に）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12398,beatrix (granblue fantasy),贝娅特丽克丝（碧蓝幻想）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12399,becky blackbell,贝琪·布莱克贝尔（间谍过家家）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12400,bede (pokemon),彼特（宝可梦）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12401,bedivere (fate),贝狄威尔（Fate）系列,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12402,beelzebub (helltaker),别西卜（地狱把妹王）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12403,beerus (dragon ball),比鲁斯（龙珠）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12404,beeswax (arknights),蜜蜡（明日方舟）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12398,beatrix (granblue fantasy),ベアトリクス（グランブルーファンタジー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12399,becky blackbell,ベッキー・ブラックベル（SPY×FAMILY）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12400,bede (pokemon),ビート（ポケットモンスター ソード・シールド）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12401,bedivere (fate),ベディヴィエール（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12402,beelzebub (helltaker),ベルゼブブ（Helltaker）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12403,beerus (dragon ball),ビルス（ドラゴンボール）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12404,beeswax (arknights),ビーズワクス（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12405,beidou (genshin impact),北斗（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12406,belarus (hetalia),白俄罗斯（黑塔利亚）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12406,belarus (hetalia),ベラルーシ（ヘタリア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12407,belfast (azur lane),ベルファスト（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12408,belfast (shopping with the head maid) (azur lane),贝尔法斯特（与女仆长购物中）（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12409,belldandy,贝露丹蒂（我的女神）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12408,belfast (shopping with the head maid) (azur lane),ベルファスト（メイド長とお買い物／アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12409,belldandy,ベルダンディー（ああっ女神さまっ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12410,belle (zenless zone zero),リン（ゼンレスゾーンゼロ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12411,bellona (azur lane),贝罗娜（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12412,ben tennyson (ben 10),本杰明·坦尼森（Ben 10）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12413,beni-enma,红阎魔（Fate）系列,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12414,bernadetta von varley,贝尔娜黛塔·冯·瓦雷利（火焰纹章：风花雪月）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12415,berserker (fate/zero),狂战士（兰斯洛特）（Fate/Zero）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12411,bellona (azur lane),ベローナ（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12412,ben tennyson (ben 10),ベン・テニスン（ベン10）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12413,beni-enma,紅閻魔（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12414,bernadetta von varley,ベルナデッタ＝フォン＝ヴァーリ（ファイアーエムブレム 風花雪月）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12415,berserker (fate/zero),バーサーカー（ランスロット／Fate/Zero）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12416,bianca (pokemon),ベル（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12417,bibi (tokoyami towa),ビビ（常闇トワ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12418,big boss (metal gear solid),Big Boss（合金装备）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12419,biggs (ff7),毕格斯（最终幻想7）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12420,bili girl 22,22娘（Bilibili虚拟主播）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12421,bili girl 33,33娘（Bilibili虚拟主播）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12422,binah (project moon),比纳（废墟图书馆）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12423,bismarck (azur lane),俾斯麦（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12418,big boss (metal gear solid),ビッグ・ボス（メタルギアソリッド）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12419,biggs (ff7),ビッグス（ファイナルファンタジーVII）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12420,bili girl 22,22娘（bilibili）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12421,bili girl 33,33娘（bilibili）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12422,binah (project moon),ビナー（Library of Ruina）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12423,bismarck (azur lane),ビスマルク（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12424,bismarck (kancolle),ビスマルク（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12425,biwa hayahide (umamusume),琵琶晨光（赛马娘）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12426,black gold saw,黑金锯手（黑岩射手）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12427,black hanekawa,黑羽川（物语系列）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12428,black heart (neptunia),黑心（超次元游戏海王星）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12429,black lady (sailor moon),豆釘兔（黑暗淑女）（美少女战士）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12425,biwa hayahide (umamusume),ビワハヤヒデ（ウマ娘 プリティーダービー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12426,black gold saw,ブラックゴールドソー（ブラック★ロックシューター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12427,black hanekawa,ブラック羽川（〈物語〉シリーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12428,black heart (neptunia),ブラックハート（超次元ゲイム ネプテューヌ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12429,black lady (sailor moon),ブラックレディ（美少女戦士セーラームーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12430,black rock shooter (character),ブラック★ロックシューター（キャラクター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12431,black swan (honkai  star rail),ブラックスワン（崩壊：スターレイル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12432,black widow (marvel),黑寡妇（漫威）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12433,black-tailed prairie dog (kemono friends),黑尾土拨鼠（兽娘动物园）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12434,blackfire (dc),黑火（DC）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12432,black widow (marvel),ブラック・ウィドウ（マーベル）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12433,black-tailed prairie dog (kemono friends),オグロプレーリードッグ（けものフレンズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12434,blackfire (dc),ブラックファイヤー（DCコミックス）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12435,blade (honkai  star rail),刃（崩壊：スターレイル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12436,blaidd (elden ring),布莱德（艾尔登法环）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12437,blaidd the half-wolf,半狼布莱泽（艾尔登法环）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12438,blake belladonna,布蕾克·贝拉多娜（RWBY）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12439,blanc (neptunia),布兰（超次元游戏海王星）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12440,blaze (arknights),煌（明日方舟）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12441,blaze the cat,布雷兹（索尼克系列）（索尼克）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12442,blaziken (pokemon),火焰鸡（宝可梦）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12443,blemishine (arknights),瑕光（明日方舟）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12436,blaidd (elden ring),ブライヴ（エルデンリング）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12437,blaidd the half-wolf,半狼のブライヴ（エルデンリング）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12438,blake belladonna,ブレイク・ベラドンナ（RWBY）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12439,blanc (neptunia),ブラン（超次元ゲイム ネプテューヌ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12440,blaze (arknights),ブレイズ（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12441,blaze the cat,ブレイズ・ザ・キャット（ソニックシリーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12442,blaziken (pokemon),バシャーモ（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12443,blemishine (arknights),ブレミシャイン（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12444,bloop (gawr gura),ブループ（がうる・ぐら）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12445,blossom (ppg),花花（飞天小女警）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12446,blue mary,布鲁·玛丽（拳皇）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12445,blossom (ppg),ブロッサム（パワーパフガールズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12446,blue mary,ブルー・マリー（ザ・キング・オブ・ファイターズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12447,blue oak,グリーン（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12448,blue poison (arknights),ブルーポイズン（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12449,blue poison (shoal beat) (arknights),蓝毒（潮音韵律）（明日方舟）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12450,blue rose (tiger & bunny),蓝色玫瑰（老虎和兔子）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12451,boa hancock,波雅·汉库克（女帝）（海贼王）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12452,boba fett (star wars),波巴·费特（星球大战）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12449,blue poison (shoal beat) (arknights),ブルーポイズン（潮汐のリズム／アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12450,blue rose (tiger & bunny),ブルーローズ（TIGER & BUNNY）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12451,boa hancock,ボア・ハンコック（ONE PIECE）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12452,boba fett (star wars),ボバ・フェット（スター・ウォーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12453,boko (girls und panzer),ボコ（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12454,bokukawauso,獺獭（日本网络迷因角色）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12455,bonnie (pokemon),波妮（宝可梦）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12456,boo (mario),嘘嘘鬼（超级马力欧）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12455,bonnie (pokemon),ハルカ（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12456,boo (mario),テレサ（スーパーマリオ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12457,boo tao (genshin impact),胡桃（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12458,boota (ttgl),布塔（天元突破）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12459,boothill (honkai  star rail),波提欧（崩坏：星穹铁道）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12460,boros (ouro kronii),博罗斯（欧罗·克罗尼）（Hololive）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12461,bort,圆粒金刚石（宝石之国）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12462,bottle miku,瓶装初音（初音未来衍生形象）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12463,boudica (fate),布狄卡（Fate）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12464,bowser,酷霸王（库巴）（超级马力欧）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12465,bowsette,酷霸姬（库巴姬）（超级马力欧）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12466,bradamante (fate),布拉达曼特（Fate）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12467,braixen,长尾火狐（宝可梦）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12468,brazilian miku,巴西风初音（初音未来衍生形象）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12458,boota (ttgl),ブータ（天元突破グレンラガン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12459,boothill (honkai  star rail),ブートヒル（崩壊：スターレイル）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12460,boros (ouro kronii),ボロス（オーロ・クロニー／Hololive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12461,bort,ボルツ（宝石の国）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12462,bottle miku,ボトルミク（初音ミク派生キャラクター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12463,boudica (fate),ブーディカ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12464,bowser,クッパ（スーパーマリオ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12465,bowsette,クッパ姫（スーパーマリオ二次創作）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12466,bradamante (fate),ブラダマンテ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12467,braixen,テールナー（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12468,brazilian miku,ブラジル風初音ミク（初音ミク派生キャラクター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12469,bremerton (azur lane),ブレマートン（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12470,bremerton (kung fu cruiser) (azur lane),布雷默顿（功夫 cruiser）（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12470,bremerton (kung fu cruiser) (azur lane),ブレマートン（カンフークルーザー／アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12471,bremerton (scorching-hot training) (azur lane),ブレマートン〔熱々トレーニング〕（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12472,brendan (pokemon),ユウキ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12473,bridget (guilty gear),ブリジット（GUILTY GEAR）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12474,brighid (xenoblade),迦具土（异度神剑2）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12475,bronya rand,布洛妮娅·兰德（崩坏：星穹铁道）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12476,bronya zaychik,布洛妮娅·扎伊切克（崩坏3rd）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12477,bronya zaychik (herrscher of reason),布洛妮娅·理之律者（崩坏3rd）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12478,bronya zaychik (herrscher of truth),布洛妮娅·真理之律者（崩坏3rd）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12479,bronya zaychik (silverwing  n-ex),布洛妮娅·银翼（N-EX）（崩坏3rd）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12474,brighid (xenoblade),ヒカリ（ゼノブレイド2）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12475,bronya rand,ブローニャ・ランド（崩壊：スターレイル）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12476,bronya zaychik,ブローニャ・ザイチク（崩壊3rd）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12477,bronya zaychik (herrscher of reason),ブローニャ・ザイチク（理の律者／崩壊3rd）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12478,bronya zaychik (herrscher of truth),ブローニャ・ザイチク（真理の律者／崩壊3rd）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12479,bronya zaychik (silverwing  n-ex),ブローニャ・ザイチク（銀翼／N-EX／崩壊3rd）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12480,brook (one piece),布鲁克（海贼王）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
 12481,brown bear (kemono friends),棕熊（兽娘动物园）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
 12482,bruce wayne,布鲁斯·韦恩（DC漫画《蝙蝠侠》）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
