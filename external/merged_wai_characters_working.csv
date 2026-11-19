@@ -66,7 +66,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11987,aika granzchesta,藍華・S・グランチェスタ（ARIA）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 11988,aila jyrkiainen,アイラ・ユルキアイネン（ガンダムビルドファイターズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 11989,aile (mega man zx),エール（ロックマンゼクス）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-11990,aina (mao lian),Aina（Mao Lian)（原创角色）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+11990,aina (mao lian),アイナ（Mao Lian／オリジナルキャラクター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 11991,aino minako,愛野美奈子（美少女戦士セーラームーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 11992,aioi yuuko,相生祐子（日常）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 11993,air groove (umamusume),エアグルーヴ（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -75,181 +75,181 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11996,aircraft carrier oni,空母ヲ級（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 11997,aircraft carrier water oni,空母水鬼（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 11998,airfield princess,飛行場姫（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
-11999,airi (band) (blue archive),栗村爱莉（乐队）（碧蓝档案）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12000,airi (blue archive),栗村爱莉（碧蓝档案）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12001,airi (queen's blade),艾依莉（女皇之刃）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12002,airi (the infernal temptress),艾依莉（冥土的诱惑）（女皇之刃）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12003,aisaka taiga,逢坂大河（龙与虎）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12004,aisaki emiru,爱崎惠美瑠（光之美少女）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12005,aisha landar,爱莎·兰德尔（艾尔之光）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12006,aizawa ema,蓝泽艾玛（VTuber）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12007,aizawa kazuha,相泽一叶（突击莉莉）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12008,ajax (azur lane),阿贾克斯（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12009,ak-12 (girls' frontline),AK-12（少女前线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12010,ak-15 (girls' frontline),AK-15（少女前线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+11999,airi (band) (blue archive),栗村愛莉（バンド衣装／ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12000,airi (blue archive),栗村愛莉（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12001,airi (queen's blade),アイリ（クイーンズブレイド）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12002,airi (the infernal temptress),アイリ（冥土へ誘うもの／クイーンズブレイド）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12003,aisaka taiga,逢坂大河（とらドラ！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12004,aisaki emiru,愛崎えみる（HUGっと！プリキュア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12005,aisha landar,アイシャ・ランダル（エルソード）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12006,aizawa ema,藍沢エマ（ぶいすぽっ！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12007,aizawa kazuha,相澤一葉（アサルトリリィ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12008,ajax (azur lane),エイジャックス（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12009,ak-12 (girls' frontline),AK-12（ドールズフロントライン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12010,ak-15 (girls' frontline),AK-15（ドールズフロントライン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12011,akagi (azur lane),赤城（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12012,akagi (kancolle),赤城（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12013,akagi miria,赤城米莉亚（偶像大师灰姑娘）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12014,akagi-chan (azur lane),小赤城（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12015,akai haato,赤井心（Hololive）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12016,akai haato (gothic lolita),赤井心（哥特萝莉）（Hololive）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12017,akali,阿卡莉（英雄联盟）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12018,akamatsu kaede,赤松枫（弹丸论破）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12013,akagi miria,赤城みりあ（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12014,akagi-chan (azur lane),小赤城（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12015,akai haato,赤井はあと（Hololive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12016,akai haato (gothic lolita),赤井はあと（ゴシックロリータ／Hololive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12017,akali,アカリ（リーグ・オブ・レジェンド）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12018,akamatsu kaede,赤松楓（ニューダンガンロンパV3）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12019,akane (blue archive),アカネ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12020,akari (pokemon),ショウ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12021,akashi (azur lane),明石（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12021,akashi (azur lane),明石（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12022,akashi (kancolle),明石（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12023,akashi (live a hero),魂群赤司（live a hero),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12024,akashiya moka,赤夜萌香（吸血鬼Rosario+Vampire）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12023,akashi (live a hero),赤司魂群（LIVE A HERO）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12024,akashiya moka,赤夜萌香（ロザリオとバンパイア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12025,akatsuki (kancolle),暁（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12026,akatsuki kai ni (kancolle),晓二改（舰队Collection）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12027,akatsuki kirika,晓切歌（战姬绝唱）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12028,akatsuki uni,赤月優虹（VTuber）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12029,akaza akari,赤座灯里（摇曳百合）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12026,akatsuki kai ni (kancolle),暁改二（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12027,akatsuki kirika,暁切歌（戦姫絶唱シンフォギア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12028,akatsuki uni,赤月ゆに（VTuber）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12029,akaza akari,赤座あかり（ゆるゆり）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12030,akebono (kancolle),曙（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12031,akechi gorou,明智吾郎（女神异闻录）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12032,akemi homura,晓美焰（魔法少女小圆）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12033,akemi homura (black dress),晓美焰（丧服）（魔法少女小圆）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12034,akershus fortress (oshiro project),阿肯修弗斯（御城收藏),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12035,aketa mikoto,绯田美琴（偶像大师闪耀色彩）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12036,aki minoriko,秋穣子（东方project）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12037,aki rosenthal,亚绮·罗森塔尔（VTuber）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12038,aki rosenthal (1st costume),亚绮·罗森塔尔初代服装（VTuber）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12039,aki shizuha,秋静叶（东方Project）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12031,akechi gorou,明智吾郎（ペルソナ5）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12032,akemi homura,暁美ほむら（魔法少女まどか☆マギカ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12033,akemi homura (black dress),暁美ほむら（黒いドレス／魔法少女まどか☆マギカ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12034,akershus fortress (oshiro project),アーケシュフース（御城プロジェクト）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12035,aketa mikoto,緋田美琴（アイドルマスター シャイニーカラーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12036,aki minoriko,秋穣子（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12037,aki rosenthal,アキ・ローゼンタール（Hololive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12038,aki rosenthal (1st costume),アキ・ローゼンタール（初期衣装／Hololive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12039,aki shizuha,秋静葉（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12040,akigumo (kancolle),秋雲（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12041,akigumo kai ni (kancolle),秋云二改（舰队Collection）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12042,akiha rumiho,菲莉丝·喵喵（命运石之门）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12043,akikawa yayoi (umamusume),秋川弥生（赛马娘）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12044,akira (blue archive),清澄晶（蔚蓝档案）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12045,akishimo (kancolle),秋霜（舰队Collection）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12041,akigumo kai ni (kancolle),秋雲改二（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12042,akiha rumiho,牧瀬紅莉栖（命運石之門）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12043,akikawa yayoi (umamusume),秋川やよい（ウマ娘 プリティーダービー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12044,akira (blue archive),清澄アキラ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12045,akishimo (kancolle),秋霜（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12046,akitsu maru (kancolle),あきつ丸（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12047,akitsushima (kancolle),秋津洲（舰队Collection）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12048,akiyama mio,秋山澪（轻音少女）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12049,akiyama mizuki,晓山瑞希（世界计划缤纷舞台）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12050,akiyama rinko,秋山凜子（对魔忍）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12051,akiyama yukari,秋山优花里（少女与战车）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12047,akitsushima (kancolle),秋津洲（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12048,akiyama mio,秋山澪（けいおん！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12049,akiyama mizuki,暁山瑞希（プロジェクトセカイ カラフルステージ！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12050,akiyama rinko,秋山凜子（対魔忍）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12051,akiyama yukari,秋山優花里（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12052,akizuki (kancolle),秋月（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12053,akizuki ritsuko,秋月律子（偶像大师）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12054,akizuki ryo,秋月凉（偶像大师）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12053,akizuki ritsuko,秋月律子（アイドルマスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12054,akizuki ryo,秋月涼（アイドルマスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12055,ako (blue archive),アコ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12056,ako (dress) (blue archive),天雨亚子（礼服）（蔚蓝档案）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12057,akuma homura,恶魔焰（魔法少女小圆）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12058,al azif (demonbane),阿尔·阿吉夫（机神咆哮）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12059,alabama (azur lane),阿拉巴马（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12060,alatreon (monster hunter),煌黑龙（怪物猎人）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12061,albacore (azur lane),大青花鱼（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12056,ako (dress) (blue archive),天雨アコ（ドレス／ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12057,akuma homura,悪魔ほむら（魔法少女まどか☆マギカ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12058,al azif (demonbane),アル・アジフ（斬魔大聖デモンベイン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12059,alabama (azur lane),アラバマ（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12060,alatreon (monster hunter),アルバトリオン（モンスターハンター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12061,albacore (azur lane),アルバコア（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12062,albedo (genshin impact),アルベド（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12063,albedo (overlord),雅儿贝德（overlord),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12064,alcina dimitrescu,阿契娜·蒂米特雷斯庫（恶灵古堡）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12065,alear (female) (fire emblem),琉尔（女）（火焰纹章),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12066,alear (male) (fire emblem),琉尔（男）（火焰纹章）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12067,aleksandra i. pokryshkin,亚历珊朵拉·I·波克尔什金（强袭魔女）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12068,alfonse (fire emblem),阿尔冯斯（火焰纹章）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12063,albedo (overlord),アルベド（オーバーロード）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12064,alcina dimitrescu,アルチーナ・ディミトレスク（バイオハザード ヴィレッジ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12065,alear (female) (fire emblem),リュール（女性／ファイアーエムブレム エンゲージ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12066,alear (male) (fire emblem),リュール（男性／ファイアーエムブレム エンゲージ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12067,aleksandra i. pokryshkin,アレクサンドラ・I・ポクルィシュキン（ストライクウィッチーズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12068,alfonse (fire emblem),アルフォンス（ファイアーエムブレム ヒーローズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12069,alhaitham (genshin impact),アルハイゼン（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12070,alibaba saluja,阿里巴巴.沙尔贾（魔笛MAGI）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12070,alibaba saluja,アリババ・サルージャ（マギ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12071,alice (alice in wonderland),アリス（不思議の国のアリス）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12072,alice (nikke),爱丽丝（nikke),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12073,alice carroll,爱丽丝卡罗尔（水星领航员The AVVENIRE）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12074,alice cartelet,爱丽丝·卡塔雷特（黄金拼图）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12075,alice liddell (american mcgee's alice),爱丽丝（爱丽丝梦游魔境),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12076,alice margatroid,爱丽丝·玛格特罗依德（东方project）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12077,alice margatroid (pc-98),爱丽丝·玛格特罗依德（东方project pc-98),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12078,alice zuberg,爱丽丝·滋贝鲁库（刀剑神域）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12079,alicia (granblue fantasy),阿莉亚（碧蓝幻想）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12080,alicia florence,艾莉西亚·佛罗伦斯（水星领航员）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12081,alina gray,阿莉娜·格雷（魔法少女小圆）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12082,alipheese fateburn xvi,爱丽丝菲兹·菲伊塔鲁贝露（勇者大战魔物娘）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12083,alisa boskonovich (tekken),阿丽莎（铁拳）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12084,alisa ilinichina amiella,亚莉莎·伊莉妮提娜·阿米耶拉（噬神者）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12085,alisa mikhailovna kujou,艾莉莎·米哈伊罗夫纳·九条（不时轻声地以俄语遮羞的邻座艾莉同学）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12086,alisa reinford,亚莉莎·莱恩福尔特（英雄传说）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12087,alisa southerncross,爱莉莎·南十字星（KERORO军曹）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12088,allelujah haptism,阿雷路亚·哈普提森（高达）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12089,alleyne (queen's blade),阿莱茵（女皇之刃）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12090,alma armas (va-11 hall-a),阿尔玛·阿玛斯 (VA-11 Hall-A),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12091,alolan vulpix,阿罗拉六尾（宝可梦）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12092,alpaca suri (kemono friends),苏利羊驼（兽娘动物园）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12093,alphonse elric,阿尔冯斯·爱力克（钢之炼金术师）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12094,altaria,七夕青鸟（宝可梦）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12095,altera (fate),阿蒂拉（Fate),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12096,altina orion,亚尔缇娜·奥莱恩（英雄传说）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12097,amae koromo,天江衣（天才麻将少女）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12098,amagase touma,天濑冬马（偶像大师）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12099,amagi (azur lane),天城（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12100,amagi (kancolle),天城（舰队Collection）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12101,amagi rinne,天城燐音（偶像梦幻祭）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12102,amagi yukiko,天城雪子（女神异闻录）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12103,amagi-chan (azur lane),小天城（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12104,amagiri (kancolle),天雾（舰队Collection）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12105,amakusa shirou (fate),天草四郎（Fate),キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12106,amami haruka,天海春香（偶像大师）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12107,amami rantaro,天海兰太郎（弹丸论破）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12108,amamiya elena,天宫爱莲娜（Star☆Twinkle光之美少女）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12109,amamiya kokoro,天宫心（VTuber）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12110,amamiya manami,天宮学美（校园乌托邦学美向前冲！）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12111,amamiya ren,雨宫莲（女神异闻录5）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12112,amane kanata,天音彼方（Hololive）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12113,amane kanata (nurse),天音彼方 护士装（Hololive）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12114,amane kanata (work),天音彼方 工作服（Hololive）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12115,amane misa,弥海砂（死亡笔记）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12116,amane suzuha,阿万音铃羽（命运石之门）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12117,amano hina (tenki no ko),天野阳菜（天气之子）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12118,amano pikamee,天野噼咔米（Vtuber）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12119,amanogawa kirara,天之川绮罗（GO! PRINCESS光之美少女）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12120,amasawa yuuko,天泽悠子（电脑线圈）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12121,amaterasu (ookami),天照（大神）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12122,amatsuka mao,天塚真緒（GJ部）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12072,alice (nikke),アリス（勝利の女神：NIKKE）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12073,alice carroll,アリス・キャロル（ARIA The AVVENIRE）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12074,alice cartelet,アリス・カータレット（きんいろモザイク）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12075,alice liddell (american mcgee's alice),アリス・リデル（アリス マッドネス リターンズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12076,alice margatroid,アリス・マーガトロイド（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12077,alice margatroid (pc-98),アリス・マーガトロイド（PC-98版／東方Project）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12078,alice zuberg,アリス・ツーベルク（ソードアート・オンライン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12079,alicia (granblue fantasy),アリア（グランブルーファンタジー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12080,alicia florence,アリシア・フローレンス（ARIA）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12081,alina gray,アリナ・グレイ（マギアレコード 魔法少女まどか☆マギカ外伝）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12082,alipheese fateburn xvi,アリスフィーズ・フェイトバーン16世（もんむす・くえすと！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12083,alisa boskonovich (tekken),アリサ・ボスコノビッチ（鉄拳）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12084,alisa ilinichina amiella,アリサ・イリーニチナ・アミエーラ（ゴッドイーター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12085,alisa mikhailovna kujou,アリサ・ミハイロヴナ・九条（時々ボソッとロシア語でデレる隣のアーリャさん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12086,alisa reinford,アリサ・ラインフォルト（英雄伝説 閃の軌跡）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12087,alisa southerncross,日向秋（ケロロ軍曹）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12088,allelujah haptism,アレルヤ・ハプティズム（機動戦士ガンダム00）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12089,alleyne (queen's blade),アレイン（クイーンズブレイド）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12090,alma armas (va-11 hall-a),アルマ・アーマス（VA-11 Hall-A）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12091,alolan vulpix,アローラロコン（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12092,alpaca suri (kemono friends),スリ（けものフレンズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12093,alphonse elric,アルフォンス・エルリック（鋼の錬金術師）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12094,altaria,チルタリス（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12095,altera (fate),アルテラ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12096,altina orion,アルティナ・オライオン（英雄伝説 閃の軌跡）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12097,amae koromo,天江衣（咲-Saki-）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12098,amagase touma,天ヶ瀬冬馬（アイドルマスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12099,amagi (azur lane),天城（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12100,amagi (kancolle),天城（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12101,amagi rinne,天城燐音（あんさんぶるスターズ！！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12102,amagi yukiko,天城雪子（ペルソナ4）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12103,amagi-chan (azur lane),小天城（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12104,amagiri (kancolle),天霧（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12105,amakusa shirou (fate),天草四郎（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12106,amami haruka,天海春香（アイドルマスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12107,amami rantaro,天海蘭太郎（ニューダンガンロンパV3）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12108,amamiya elena,天宮えれな（スター☆トゥインクルプリキュア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12109,amamiya kokoro,天宮こころ（にじさんじ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12110,amamiya manami,天宮学美（がくえんゆーとぴあ まなびストレート！）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12111,amamiya ren,雨宮蓮（ペルソナ5）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12112,amane kanata,天音かなた（Hololive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12113,amane kanata (nurse),天音かなた（ナース衣装／Hololive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12114,amane kanata (work),天音かなた（仕事着／Hololive）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12115,amane misa,弥海砂（DEATH NOTE）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12116,amane suzuha,阿万音鈴羽（STEINS;GATE）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12117,amano hina (tenki no ko),天野陽菜（天気の子）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12118,amano pikamee,天野ピカミィ（VTuber）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12119,amanogawa kirara,天ノ川きらら（Go！プリンセスプリキュア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12120,amasawa yuuko,天沢勇子（電脳コイル）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12121,amaterasu (ookami),アマテラス（大神）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12122,amatsuka mao,天塚真緒（GJ部）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12123,amatsukaze (kancolle),天津風（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12124,amazon (dragon's crown),亚马逊女战士（龙之皇冠）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12124,amazon (dragon's crown),アマゾン（ドラゴンズクラウン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12125,amber (genshin impact),アンバー（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12126,ame-chan (needy girl overdose),あめちゃん（NEEDY GIRL OVERDOSE）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12127,america (hetalia),美国（黑塔利亚）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12128,amity blight,阿米蒂·布莱特（猫头鹰之家）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12127,america (hetalia),アメリカ（ヘタリア）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12128,amity blight,アミティ・ブライト（ふしぎの国 アウルハウス）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12129,amiya (arknights),アーミヤ（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12130,amy rose,エイミー・ローズ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12131,an-94 (girls' frontline),AN-94（少女前线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12132,ana (overwatch),安娜（守望先锋）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12133,ana coppola,安娜柯波拉（草莓棉花糖）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12134,anabel (pokemon),莉拉（宝可梦）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12131,an-94 (girls' frontline),AN-94（ドールズフロントライン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12132,ana (overwatch),アナ（オーバーウォッチ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12133,ana coppola,アナ・コッポラ（苺ましまろ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12134,anabel (pokemon),リラ（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12135,anastasia (fate),アナスタシア（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12136,anastasia (idolmaster),アナスタシア（アイドルマスター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12137,anastasia (swimsuit archer) (fate),阿纳斯塔西娅 泳装弓阶（Fate）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12138,anby demara,安比·德玛拉（绝区零）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12137,anastasia (swimsuit archer) (fate),アナスタシア（水着／アーチャー／Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12138,anby demara,アンビー・デマラ（ゼンレスゾーンゼロ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12139,anceril sacred,安瑟莉萨克里德（白发教团）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12140,anchorage (azur lane),安克雷奇（碧蓝航线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12140,anchorage (azur lane),アンカレッジ（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12141,anchovy (girls und panzer),アンチョビ（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12142,andira (granblue fantasy),茵妲拉（碧蓝幻想）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12142,andira (granblue fantasy),アンチラ（グランブルーファンタジー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12143,andou (girls und panzer),安藤（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12144,android 18,人造人間18号（ドラゴンボール）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12145,anegasaki nene,姉崎宁宁（LovePlus）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12146,anemone (eureka seven),安涅莫妮（交响诗篇）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12147,ange (princess principal),安洁（公主准则）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12148,ange katrina,安洁卡特琳娜（彩虹社）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12149,angel (kof),安琪尔（拳皇）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12150,angel devil (chainsaw man),天使恶魔（电锯人）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12145,anegasaki nene,姉ヶ崎寧々（ラブプラス）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12146,anemone (eureka seven),アネモネ（交響詩篇エウレカセブン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12147,ange (princess principal),アンジェ（プリンセス・プリンシパル）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12148,ange katrina,アンジュ・カトリーナ（にじさんじ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12149,angel (kof),エンジェル（ザ・キング・オブ・ファイターズ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12150,angel devil (chainsaw man),天使の悪魔（チェンソーマン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12151,angel girl (shimmer),天使少女（Shimmer动画）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12152,angela (project moon),安吉拉（脑叶公司）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12153,angela balzac,安吉拉巴尔扎克（乐园追放）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12154,angelia (girls' frontline),安洁莉娅（少女前线）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12155,angelica (project moon),安洁莉卡（脑叶公司）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12152,angela (project moon),アンジェラ（Library of Ruina）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12153,angela balzac,アンジェラ・バルザック（楽園追放）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12154,angelia (girls' frontline),アンジェリア（ドールズフロントライン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12155,angelica (project moon),アンジェリカ（Library of Ruina）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12156,angelina (arknights),アンジェリーナ（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12157,angelina (distinguished visitor) (arknights),安洁莉娜 尊贵访客（明日方舟）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12158,angelina (summer flower) (arknights),安洁莉娜 夏卉（明日方舟）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12159,angewomon,天女兽（数码宝贝）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12160,anila (granblue fantasy),阿妮拉（碧蓝幻想）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12157,angelina (distinguished visitor) (arknights),アンジェリーナ（尊貴なる訪問者／アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12158,angelina (summer flower) (arknights),アンジェリーナ（夏の花／アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12159,angewomon,エンジェウーモン（デジモン）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12160,anila (granblue fantasy),アニラ（グランブルーファンタジー）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12161,anis (nikke),アニス（勝利の女神:NIKKE）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12162,anis (sparkling summer) (nikke),阿妮斯 夏日闪耀（胜利女神：妮姬）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12163,anise tatlin (tales of abyss),阿尼斯·塔特琳（深渊传说）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12164,anisphia wynn palettia,安尼斯菲亚·温·帕莱提亚（转生公主与天才女士的魔法革命）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12165,anjou naruko,安城鸣子（未闻花名）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12166,ankha (animal crossing),尼罗（动物森友会）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12167,anna (frozen),安娜（冰雪奇缘）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12168,anna williams (tekken),安娜·威廉姆斯（铁拳）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12169,annaka haruna,安中榛名（日常）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12170,anne bonny (fate),安妮伯妮（Fate）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12171,annie (league of legends),安妮（英雄联盟）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12172,annie leonhart,阿妮利昂纳德（进击的巨人）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
-12173,ansel (arknights),安赛尔（明日方舟）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
+12162,anis (sparkling summer) (nikke),アニス（スパークリングサマー／勝利の女神：NIKKE）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12163,anise tatlin (tales of abyss),アニス・タトリン（テイルズ オブ ジ アビス）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12164,anisphia wynn palettia,アニスフィア・ウィン・パレッティア（転生王女と天才令嬢の魔法革命）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12165,anjou naruko,安城鳴子（あの日見た花の名前を僕達はまだ知らない。）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12166,ankha (animal crossing),ナイル（どうぶつの森）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12167,anna (frozen),アナ（アナと雪の女王）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12168,anna williams (tekken),アンナ・ウィリアムズ（鉄拳）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12169,annaka haruna,安中榛名（日常）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12170,anne bonny (fate),アン・ボニー（Fate）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12171,annie (league of legends),アニー（リーグ・オブ・レジェンド）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12172,annie leonhart,アニ・レオンハート（進撃の巨人）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
+12173,ansel (arknights),アンセル（アークナイツ）,キャラクター・作品,キャラクター,,[],verified,0,needs-review,needs-review,unknown
 12174,antonio salieri (fate),安东尼奥萨列里（Fate）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
 12175,antonio salieri (second ascension) (fate),安东尼奥萨列里 二破（Fate）,キャラクター・作品,キャラクター,,[],needs-review,0,needs-review,needs-review,unknown
 12176,anya (spy x family),アーニャ・フォージャー（SPY×FAMILY）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
