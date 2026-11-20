@@ -60,8 +60,8 @@
   }
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
-    classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(), worksQuery: "", authorsQuery: "",
-    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", undoHistory: [], redoHistory: [], restoringUndo: false, textEditUndoPending: { positive: false, negative: false }, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", works: [], authors: [], reviewRows: [], ambiguousRows: [], relatedIndexesReady: false, excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, escapeParentheses: false, spacesToUnderscores: false, showPromptLineBreaks: true, columnWidths: [30, 26, 210, 170, 130, 130, 34, 26], columnWidthMode: "desktop"
+    classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(),
+    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", undoHistory: [], redoHistory: [], restoringUndo: false, textEditUndoPending: { positive: false, negative: false }, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, escapeParentheses: false, spacesToUnderscores: false, showPromptLineBreaks: true, columnWidths: [30, 26, 210, 170, 130, 130, 34, 26], columnWidthMode: "desktop"
   };
   let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -264,7 +264,6 @@
     // 初回だけはCSV取得完了後に表示する。
     return { rows: await fetchCSV(file), refresh: Promise.resolve(null) };
   }
-  const normalizeWorkName = value => String(value || "").normalize("NFKD").replace(/\p{Diacritic}/gu, "").toLocaleLowerCase().replace(/[\s・:：!！?？"'’~〜\-‐‑–—_/／（）()\[\]「」『』.。、☆★]/g, "");
   function parseAliases(value) {
     try { const parsed = JSON.parse(value || "[]"); return Array.isArray(parsed) ? parsed.map(String) : []; } catch { return []; }
   }
@@ -296,213 +295,6 @@
         category: [row.major, row.minor, row.detail].map(normalizeSearchText).filter(Boolean)
       };
     });
-  }
-  function addWorkAlias(map, value, group) {
-    const normalized = normalizeWorkName(value);
-    if (!normalized) return;
-    if (!map.has(normalized)) map.set(normalized, new Set());
-    map.get(normalized).add(group);
-  }
-  function referenceTokens(value) {
-    return String(value || "").match(/[（(]([^（）()]+)[）)]/g)?.map(part => part.slice(1, -1).trim()) || [];
-  }
-  function findWorkCandidates(tokens, aliasMap) {
-    const matches = new Map();
-    tokens.forEach(token => {
-      const parts = [token, ...token.split(/[／]/).map(part => part.trim())].filter(Boolean);
-      parts.forEach(part => {
-        (aliasMap.get(normalizeWorkName(part)) || []).forEach(group => matches.set(group.key, group));
-      });
-    });
-    return [...matches.values()];
-  }
-  function buildRelatedIndexes() {
-    const characterRows = state.all.filter(row => row.source === "characters-working.csv");
-    const titleRows = characterRows.filter(row => row.minor === "タイトル（作品名）");
-    const groupMap = new Map();
-    const aliasMap = new Map();
-    titleRows.forEach(row => {
-      const label = row.ja.replace(/（(?:アニメ|ゲーム|漫画|小説|映画|メディアミックス|その他)?(?:タイトル|作品|シリーズ)）$/, "").trim() || row.ja;
-      const key = normalizeWorkName(label);
-      if (!key) return;
-      let group = groupMap.get(key);
-      if (!group) {
-        group = { key, name: label, titles: [], characters: [], elements: [], queryText: "" };
-        groupMap.set(key, group);
-      }
-      group.titles.push(row);
-      [label, row.tag, ...parseAliases(row.aliases_json)].forEach(alias => {
-        addWorkAlias(aliasMap, alias, group);
-        const englishBase = String(alias).replace(/\s*\((?:series|game|anime|manga|novel|film)\)\s*$/i, "");
-        if (englishBase !== alias) addWorkAlias(aliasMap, englishBase, group);
-        const japaneseBase = String(alias).replace(/シリーズ$/, "");
-        if (japaneseBase !== alias) addWorkAlias(aliasMap, japaneseBase, group);
-      });
-    });
-    const reviewRows = [];
-    const ambiguousRows = [];
-    const creatorRows = characterRows.filter(row => row.minor === "作者・配信者" || /[（(](?:作者|漫画家|配信者)[）)]$/.test(row.ja));
-    characterRows.filter(row => row.minor === "キャラクター" || row.minor === "作品固有の衣装・要素").forEach(row => {
-      if (/[（(](?:作者|漫画家|配信者)[）)]$/.test(row.ja)) return;
-      const jaCandidates = findWorkCandidates(referenceTokens(row.ja), aliasMap);
-      const enCandidates = findWorkCandidates(referenceTokens(row.tag), aliasMap);
-      const franchiseTokens = [];
-      if (/pokemon/i.test(row.tag) || /ポケモン|ポケットモンスター/i.test(row.ja)) franchiseTokens.push("ポケモン");
-      if (/final fantasy|ff(?:11|14)/i.test(row.tag) || /ファイナルファンタジー|FF(?:11|14)/i.test(row.ja)) franchiseTokens.push("ファイナルファンタジー");
-      const franchiseCandidates = findWorkCandidates(franchiseTokens, aliasMap);
-      const candidates = jaCandidates.length ? jaCandidates : enCandidates.length ? enCandidates : franchiseCandidates;
-      if (candidates.length === 1) {
-        const group = candidates[0];
-        (row.minor === "キャラクター" ? group.characters : group.elements).push(row);
-        row.workTitle = group.name;
-      } else if (candidates.length > 1) {
-        ambiguousRows.push({ row, candidates: candidates.map(group => group.name) });
-      } else {
-        reviewRows.push(row);
-      }
-    });
-    state.works = [...groupMap.values()].map(group => {
-      group.characters.sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
-      group.elements.sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
-      group.titles.sort((a,b) => Number(a.index)-Number(b.index));
-      group.queryText = [group.name, ...group.titles.map(row => row.tag), ...group.characters.flatMap(row => [row.tag,row.ja]), ...group.elements.flatMap(row => [row.tag,row.ja])].join(" ").toLocaleLowerCase();
-      return group;
-    }).sort((a,b) => a.name.localeCompare(b.name, "ja"));
-    state.authors = creatorRows.sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
-    state.reviewRows = reviewRows.sort((a,b) => a.ja.localeCompare(b.ja, "ja"));
-    state.ambiguousRows = ambiguousRows.sort((a,b) => a.row.ja.localeCompare(b.row.ja, "ja"));
-  }
-  function ensureRelatedIndexes() {
-    if (state.relatedIndexesReady) return;
-    buildRelatedIndexes();
-    state.relatedIndexesReady = true;
-  }
-  function relatedTagRow(row, groupName = "", typeLabel = "") {
-    const key = keyOf(row);
-    return '<div class="related-tag-row"><label><input type="checkbox" class="related-select" data-key="' + escapeHTML(key) + '"' + (state.selected.has(key) ? ' checked' : '') + '><span class="related-tag-copy"><strong>' + escapeHTML(row.ja || row.tag) + '</strong><small>' + escapeHTML(row.tag) + (groupName ? ' · ' + escapeHTML(groupName) : '') + '</small></span></label><span class="related-tag-type">' + escapeHTML(typeLabel || row.minor || "作品タイトル") + '</span></div>';
-  }
-  function specialSeriesName(group) {
-    const tags = group.titles.map(row => String(row.tag || "").toLocaleLowerCase());
-    const text = [group.name, ...tags, ...group.titles.map(row => row.ja)].join(" ").toLocaleLowerCase();
-    if (tags.some(tag => tag === "pokemon" || tag.startsWith("pokemon "))) return "ポケットモンスター";
-    if (tags.some(tag => tag === "final fantasy" || tag.startsWith("final fantasy ") || tag === "dissidia final fantasy")) return "ファイナルファンタジー";
-    if (tags.some(tag => tag === "fire emblem" || tag.startsWith("fire emblem ") || tag.startsWith("fire emblem:"))) return "ファイアーエムブレム";
-    if (tags.some(tag => tag === "dragon quest" || tag.startsWith("dragon quest "))) return "ドラゴンクエスト";
-    if (tags.some(tag => tag.startsWith("toaru ") || /とある/.test(text))) return "とあるシリーズ";
-    if (tags.some(tag => tag === "sword art online" || tag.startsWith("sword art online:") || /\bsao\b/i.test(tag))) return "ソードアート・オンライン";
-    if (tags.some(tag => tag === "the legend of zelda" || tag.startsWith("the legend of zelda:") || /ゼルダの伝説/.test(text))) return "ゼルダの伝説";
-    if (tags.some(tag => tag.startsWith("tales of "))) return "テイルズ オブ シリーズ";
-    if (/jojo|ジョジョ/.test(text)) return "ジョジョの奇妙な冒険";
-    return "";
-  }
-  function genericSeriesGroups() {
-    const manualRoots = new Set(["overwatch", "kemonofriends", "streetfighter", "idolmaster", "leagueoflegends", "touhou", "disney", "vocaloid", "yu-gi-oh!", "gundam", "neon genesis evangelion", "love live!", "persona", "dragon ball", "monster hunter (series)"]);
-    const entries = state.works.map(group => {
-      const tags = group.titles.map(row => String(row.tag || ""));
-      const normalizedTags = tags.map(normalizeWorkName).filter(Boolean);
-      const rootTag = tags.find(tag => /\(series\)\s*$/i.test(tag) || manualRoots.has(normalizeWorkName(tag)));
-      const normalized = rootTag ? normalizeWorkName(rootTag) : "";
-      const isRoot = Boolean(rootTag);
-      return { group, tags, normalizedTags, normalized, isRoot };
-    });
-    const roots = entries.filter(entry => entry.isRoot && entry.normalized);
-    const rootFor = new Map();
-    const rootAncestor = root => {
-      const parent = roots.filter(candidate => candidate.group !== root.group &&
-        root.normalized.startsWith(candidate.normalized) &&
-        root.normalized.length > candidate.normalized.length)
-        .sort((a,b) => b.normalized.length - a.normalized.length)[0];
-      return parent ? rootAncestor(parent) : root;
-    };
-    entries.forEach(entry => {
-      const forcedRootKey = entry.tags.some(tag => /^arcane:\s*league of legends$/i.test(tag)) ? "leagueoflegends" :
-        entry.tags.some(tag => /^gakuen idolmaster$/i.test(tag)) ? "idolmaster" :
-        (entry.tags.some(tag => /\((?:touhou|touhou project)\)/i.test(tag)) || /東方|touhou/i.test(entry.group.name)) ? "touhou" :
-        (entry.tags.some(tag => /\((?:vocaloid)\)/i.test(tag) || /^(?:project diva(?: \(series\))?|project sekai)$/i.test(tag)) || /初音ミク|ボーカロイド/i.test(entry.group.name)) ? "vocaloid" :
-        entry.tags.some(tag => /gundam/i.test(tag)) ? "gundam" :
-        entry.tags.some(tag => /^(?:monster hunter(?:\s|$))/i.test(tag) && !/^monster hunter \(series\)$/i.test(tag)) ? "monsterhunterseries" :
-        entry.tags.some(tag => /^(?:evangelion:|rebuild of evangelion$)/i.test(tag)) ? "neon genesis evangelion" :
-        entry.tags.some(tag => /^(?:marvel(?: cinematic universe)?|star wars|kingdom hearts|frozen(?: \(disney\))?)$/i.test(tag)) ? "disney" : "";
-      const forcedRoot = forcedRootKey ? roots.find(root => root.normalized === forcedRootKey && root.group !== entry.group) : null;
-      const candidate = forcedRoot || roots.filter(root => root.group !== entry.group &&
-        entry.normalizedTags.some(tag => tag.startsWith(root.normalized) && tag.length > root.normalized.length))
-        .sort((a,b) => b.normalized.length - a.normalized.length)[0];
-      if (candidate) rootFor.set(entry.group.key, rootAncestor(candidate).group);
-      else if (entry.isRoot) rootFor.set(entry.group.key, rootAncestor(entry).group);
-    });
-    const grouped = new Map();
-    rootFor.forEach((root, key) => {
-      if (!grouped.has(root.key)) grouped.set(root.key, { root, members: [] });
-      const member = state.works.find(group => group.key === key);
-      if (member && !grouped.get(root.key).members.includes(member)) grouped.get(root.key).members.push(member);
-    });
-    return new Map([...grouped].filter(([,value]) => value.members.length > 1));
-  }
-  function renderWorkList() {
-    const query = state.worksQuery.toLocaleLowerCase();
-    const genericGroups = genericSeriesGroups();
-    const genericRootByMember = new Map();
-    genericGroups.forEach(({root,members}) => members.forEach(member => genericRootByMember.set(member.key, root)));
-    const parentQueryMatches = new Set();
-    genericGroups.forEach(({root,members}) => {
-      if (query && root.queryText.includes(query)) members.forEach(member => parentQueryMatches.add(member.key));
-    });
-    const groups = state.works.filter(group =>
-      !query || group.queryText.includes(query) || parentQueryMatches.has(group.key) ||
-      (genericRootByMember.get(group.key)?.name || "").toLocaleLowerCase().includes(query) ||
-      specialSeriesName(group).toLocaleLowerCase().includes(query)
-    );
-    const totalMembers = groups.reduce((sum,group) => sum + group.titles.length + group.characters.length + group.elements.length, 0);
-    $("#works-count").textContent = groups.length.toLocaleString("ja-JP") + "作品 · " + totalMembers.toLocaleString("ja-JP") + "タグ";
-
-    const renderGroupBody = group => [
-      group.titles.length ? '<div class="related-subsection"><h3>作品タイトル</h3>' + group.titles.map(row => relatedTagRow(row, group.name)).join("") + '</div>' : "",
-      group.characters.length ? '<div class="related-subsection"><h3>キャラクター <span>' + group.characters.length + '</span></h3>' + group.characters.map(row => relatedTagRow(row, group.name)).join("") + '</div>' : "",
-      group.elements.length ? '<div class="related-subsection"><h3>作品固有の衣装・要素 <span>' + group.elements.length + '</span></h3>' + group.elements.map(row => relatedTagRow(row, group.name)).join("") + '</div>' : ""
-    ].join("");
-    const renderGroupCard = (group, nested = false) => {
-      const count = group.characters.length + group.elements.length;
-      return '<details class="work-card' + (nested ? ' series-child' : '') + '"><summary><span class="work-card-title">' + escapeHTML(group.name) + '</span><span class="work-card-meta">' + count + '件 · タイトル ' + group.titles.length + '件</span></summary><div class="work-card-body">' + renderGroupBody(group) + '</div></details>';
-    };
-
-    const specialGroups = new Map();
-    const genericMembers = new Map();
-    const standaloneGroups = [];
-    groups.forEach(group => {
-      const specialName = specialSeriesName(group);
-      if (specialName) {
-        if (!specialGroups.has(specialName)) specialGroups.set(specialName, []);
-        specialGroups.get(specialName).push(group);
-        return;
-      }
-      const genericRoot = genericRootByMember.get(group.key);
-      if (genericRoot) {
-        if (!genericMembers.has(genericRoot.key)) genericMembers.set(genericRoot.key, { root: genericRoot, members: [] });
-        genericMembers.get(genericRoot.key).members.push(group);
-        return;
-      }
-      standaloneGroups.push(group);
-    });
-    const specialCards = [...specialGroups.entries()].sort((a,b) => a[0].localeCompare(b[0], "ja")).map(([name,members]) => {
-      const tagCount = members.reduce((sum,group) => sum + group.titles.length + group.characters.length + group.elements.length, 0);
-      return '<details class="work-card series-parent"><summary><span class="work-card-title">' + escapeHTML(name) + '</span><span class="work-card-meta">' + members.length + '作品 · ' + tagCount + 'タグ</span></summary><div class="work-card-body series-body">' + members.map(group => renderGroupCard(group, true)).join("") + '</div></details>';
-    }).join("");
-    const genericCards = [...genericMembers.values()].sort((a,b) => a.root.name.localeCompare(b.root.name, "ja")).map(({root,members}) => {
-      const children = members.filter(group => group.key !== root.key);
-      const tagCount = members.reduce((sum,group) => sum + group.titles.length + group.characters.length + group.elements.length, 0);
-      return '<details class="work-card series-parent"><summary><span class="work-card-title">' + escapeHTML(root.name) + '</span><span class="work-card-meta">' + members.length + '作品 · ' + tagCount + 'タグ</span></summary><div class="work-card-body series-body">' + renderGroupBody(root) + children.map(group => renderGroupCard(group, true)).join("") + '</div></details>';
-    }).join("");
-    const cards = specialCards + genericCards + standaloneGroups.map(group => renderGroupCard(group)).join("");
-
-    const ambiguous = !query && state.ambiguousRows.length ? '<details class="work-card review-card"><summary><span class="work-card-title">複数候補・要確認</span><span class="work-card-meta">' + state.ambiguousRows.length + '件</span></summary><div class="work-card-body"><p class="related-note">複数の作品タイトルに一致したため、自動では割り当てていません。</p>' + state.ambiguousRows.map(item => relatedTagRow(item.row, "候補: " + item.candidates.join(" / "))).join("") + '</div></details>' : "";
-    const review = !query ? '<details class="work-card review-card"><summary><span class="work-card-title">未紐付け</span><span class="work-card-meta">' + state.reviewRows.length + '件</span></summary><div class="work-card-body"><p class="related-note">既存の作品タイトルと明確に照合できないタグです。作品名を推測して割り当てていません。</p>' + state.reviewRows.map(row => relatedTagRow(row)).join("") + '</div></details>' : "";
-    $("#works-list").innerHTML = cards + ambiguous + review || '<p class="empty-state">検索条件に一致する作品はありません。</p>';
-  }
-  function renderAuthorList() {
-    const query = state.authorsQuery.toLocaleLowerCase();
-    const rows = state.authors.filter(row => [row.ja,row.tag,row.aliases_json].join(" ").toLocaleLowerCase().includes(query));
-    $("#authors-count").textContent = rows.length.toLocaleString("ja-JP") + "件";
-    $("#authors-list").innerHTML = rows.length ? rows.map(row => relatedTagRow(row, "作者・配信者", "作者・配信者")).join("") : '<p class="empty-state">検索条件に一致する作者・配信者はいません。</p>';
   }
   function renderCategories() {
     const root = $(".category-tree");
@@ -1974,8 +1766,6 @@
     if (state.major) params.set("major", state.major);
     if (state.minor) params.set("minor", state.minor);
     if (state.favoritesOnly) params.set("favorites", "1");
-    if (state.worksQuery) params.set("works", state.worksQuery);
-    if (state.authorsQuery) params.set("authors", state.authorsQuery);
     const hash = "#" + state.activeScreen + (params.toString() ? "?" + params.toString() : "");
     if (window.location.hash === hash) return;
     if (mode === "push") history.pushState(null, "", hash);
@@ -1984,17 +1774,13 @@
   function restoreLocationState() {
     const raw = window.location.hash.replace(/^#/, "");
     const [screenPart, queryPart = ""] = raw.split("?");
-    const allowed = ["dictionary-screen", "works-screen", "authors-screen", "editor-screen"];
+    const allowed = ["dictionary-screen", "editor-screen"];
     const screen = allowed.includes(screenPart) ? screenPart : "dictionary-screen";
     const params = new URLSearchParams(queryPart);
     state.query = params.get("q") || "";
     state.major = params.get("major") || "";
     state.minor = params.get("minor") || "";
     state.favoritesOnly = params.get("favorites") === "1";
-    state.worksQuery = params.get("works") || "";
-    state.authorsQuery = params.get("authors") || "";
-    $("#works-search").value = state.worksQuery;
-    $("#authors-search").value = state.authorsQuery;
     const search = $(".search-row .searchbox input");
     if (search) search.value = state.query;
     const clearButton = $(".search-clear");
@@ -2014,8 +1800,6 @@
       tab.classList.toggle("active", active);
       if (active) tab.setAttribute("aria-current", "page"); else tab.removeAttribute("aria-current");
     });
-    if (id === "works-screen") { ensureRelatedIndexes(); renderWorkList(); }
-    if (id === "authors-screen") { ensureRelatedIndexes(); renderAuthorList(); }
     if (id === "editor-screen") renderEditor();
     if (options.historyMode !== "none") writeLocationState(options.historyMode || "push");
   }
@@ -2139,23 +1923,6 @@
         renderEditor();
       });
     }
-    $("#works-search").addEventListener("input", event => { state.worksQuery = event.target.value.trim().toLocaleLowerCase(); renderWorkList(); writeLocationState("replace"); });
-    $("#authors-search").addEventListener("input", event => { state.authorsQuery = event.target.value.trim().toLocaleLowerCase(); renderAuthorList(); writeLocationState("replace"); });
-    $$(".related-list").forEach(root => root.addEventListener("change", event => {
-      const input = event.target.closest(".related-select");
-      if (!input) return;
-      const row = state.all.find(item => keyOf(item) === input.dataset.key);
-      if (!row) return;
-      captureUndoState();
-      if (input.checked) {
-        state.selected.set(input.dataset.key, row); state.polarity.set(input.dataset.key, "positive");
-        appendPromptTag("positive", row.tag, false);
-      } else {
-        removePromptTag(state.polarity.get(input.dataset.key) || "positive", row.tag, false);
-        state.selected.delete(input.dataset.key); state.polarity.delete(input.dataset.key);
-      }
-      renderEditor();
-    }));
     const search = $(".search-row .searchbox input");
     let searchDebounceTimer = null;
     const updateSearchClearButton = () => {
@@ -2490,9 +2257,6 @@
           state.selected = new Map([...state.selected.keys()].map(key => [key, rowsByKey.get(key)]).filter(([, row]) => row));
           state.polarity = new Map([...state.polarity].filter(([key]) => state.selected.has(key)));
         }
-        state.relatedIndexesReady = false;
-        state.works = []; state.authors = []; state.reviewRows = []; state.ambiguousRows = [];
-        if (state.query) ensureRelatedIndexes();
         $(".stats strong").textContent = state.all.length.toLocaleString("ja-JP");
         renderCategories();
         renderTableTools();
@@ -2516,8 +2280,6 @@
           applyLoadedData(loaded.map((item, index) => refreshed[index] || item.rows));
           state.page = Math.min(currentPage, Math.max(0, Math.ceil(state.filtered.length / PAGE_SIZE) - 1));
           renderRows();
-          if (state.activeScreen === "works-screen") { ensureRelatedIndexes(); renderWorkList(); }
-          if (state.activeScreen === "authors-screen") { ensureRelatedIndexes(); renderAuthorList(); }
         }
       });
     } catch (error) {
