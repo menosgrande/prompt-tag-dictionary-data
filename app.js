@@ -1759,12 +1759,19 @@
     const tag=match?match.tag:raw;
     const existing=locatePromptTag(tag);
     if(existing){
-      input.value="";updateBubbleSuggestions(input);highlightPromptTag(existing.polarity,existing.index);return;
+      updateBubbleSuggestions(input);
+      input.focus({preventScroll:true});
+      input.select();
+      highlightPromptTag(existing.polarity,existing.index);
+      return;
     }
     const key=target==="negative"?"promptNegative":"promptPositive";
     const tokens=parsePromptTokens(state[key]);
     tokens.push({tag,weight:""});
-    input.value="";updateBubbleSuggestions(input);updatePromptFromBubbles(target,tokens);
+    updateBubbleSuggestions(input);
+    updatePromptFromBubbles(target,tokens);
+    input.focus({preventScroll:true});
+    input.select();
   }
   const textEditOriginal = { positive: null, negative: null };
   function setPromptEditorMode(target,mode) {
@@ -2243,7 +2250,11 @@
       const add = event.target.closest("[data-add]");
       if (add) {
         const row = state.all.find(item => keyOf(item) === add.dataset.add);
-        if (row) toggleRow(row);
+        if (row) {
+          toggleRow(row);
+          const focusTarget = [...$(".tag-results").querySelectorAll("[data-add]")].find(button => button.dataset.add === add.dataset.add);
+          focusTarget?.focus({ preventScroll: true });
+        }
       }
     });
     window.addEventListener("keydown", event => {
