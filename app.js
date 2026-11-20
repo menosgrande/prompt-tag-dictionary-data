@@ -1609,8 +1609,8 @@
     const previous = separators.filter(index => index < position).pop() ?? -1;
     const next = separators.find(index => index >= position) ?? text.length;
     const segment = text.slice(previous + 1, next);
-    const leading = segment.match(/^\\s*/)?.[0].length || 0;
-    const trailing = segment.match(/\\s*$/)?.[0].length || 0;
+    const leading = segment.match(/^\s*/)?.[0].length || 0;
+    const trailing = segment.match(/\s*$/)?.[0].length || 0;
     const start = previous + 1 + leading;
     const end = Math.max(start, next - trailing);
     if (position < start || position > end || start === end) return null;
