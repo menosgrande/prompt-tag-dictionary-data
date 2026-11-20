@@ -1693,7 +1693,9 @@
     if (event.key === "ArrowDown" || event.key === "ArrowUp") {
       event.preventDefault();
       const delta = event.key === "ArrowDown" ? 1 : -1;
-      current.activeIndex = (current.activeIndex + delta + current.candidates.length) % current.candidates.length;
+      current.activeIndex = current.activeIndex < 0
+        ? (delta > 0 ? 0 : current.candidates.length - 1)
+        : (current.activeIndex + delta + current.candidates.length) % current.candidates.length;
       renderPromptAutocomplete(target);
       return true;
     }
