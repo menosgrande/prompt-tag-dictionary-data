@@ -1616,7 +1616,7 @@
     if (position < start || position > end || start === end) return null;
     const query = text.slice(start, end);
     // 重み付け・括弧構文は壊さないよう、通常のタグ入力だけを候補対象にする。
-    if (/[()\\[\\]{}]/.test(query)) return null;
+    if (/[(){}\[\]]/.test(query)) return null;
     return { start, end, query };
   }
   function hidePromptAutocomplete(target) {
