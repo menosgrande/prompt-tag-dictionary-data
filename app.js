@@ -2284,6 +2284,7 @@
       output.addEventListener("keyup", event => {
         if (!["ArrowDown", "ArrowUp", "Enter", "Escape", "Shift", "Control", "Alt"].includes(event.key)) renderPromptAutocomplete(target);
       });
+      output.addEventListener("compositionstart", () => hidePromptAutocomplete(target));
       output.addEventListener("compositionend", () => renderPromptAutocomplete(target));
       output.addEventListener("blur", event => {
         hidePromptAutocomplete(target);
