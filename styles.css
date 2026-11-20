@@ -573,6 +573,16 @@ body{font-size:14px;line-height:1.65}
 .editor-builder-panel .prompt-bubbles[hidden]{display:none}
 .editor-builder-panel .prompt-bubble-editor>textarea:focus{outline:none}
 
+/* Autocomplete for the active token in the editable prompt textareas. */
+.prompt-autocomplete{position:relative;display:grid;gap:3px;max-height:240px;overflow:auto;margin:5px 0 0;padding:5px;border:1px solid var(--line);border-radius:8px;background:var(--surface-raised);box-shadow:0 10px 24px rgba(0,0,0,.28)}
+.prompt-autocomplete[hidden]{display:none}
+.prompt-autocomplete-option{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:36px;padding:6px 9px;border:0;border-radius:5px;background:transparent;color:var(--text);text-align:left;cursor:pointer}
+.prompt-autocomplete-option:hover,.prompt-autocomplete-option:focus-visible,.prompt-autocomplete-option[aria-selected="true"]{background:var(--surface-hover);outline:none}
+.prompt-autocomplete-option>span{display:flex;flex-direction:column;min-width:0}
+.prompt-autocomplete-option strong{overflow:hidden;font-size:11px;text-overflow:ellipsis;white-space:nowrap}
+.prompt-autocomplete-option small{overflow:hidden;color:var(--muted);font-size:10px;text-overflow:ellipsis;white-space:nowrap}
+@media(max-width:760px){.prompt-autocomplete{max-height:200px}.prompt-autocomplete-option{min-height:40px}}
+ 
 /* Editable prompt textareas replace the selected-tag list and output settings. */
 .editor-builder-panel .output-card>textarea{
   display:block;vertical-align:top;text-align:left;width:100%;min-height:220px;resize:vertical;

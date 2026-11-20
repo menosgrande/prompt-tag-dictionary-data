@@ -1592,6 +1592,125 @@
     }).filter(item=>item.rank<9).sort((a,b)=>a.rank-b.rank||String(a.row.tag).localeCompare(String(b.row.tag),"en")).slice(0,10);
     matches.forEach(({row})=>{const option=document.createElement("option");option.value=row.tag;option.label=row.ja||row.tag;list.append(option);});
   }
+  const promptAutocompleteState = { positive: { activeIndex: -1, candidates: [], range: null }, negative: { activeIndex: -1, candidates: [], range: null } };
+  function getPromptSegmentAtCaret(value, caret) {
+    const text = String(value || "");
+    const separators = [];
+    const stack = [];
+    const pairs = { ")": "(", "]": "[", "}": "{" };
+    for (let index = 0; index < text.length; index++) {
+      const char = text[index];
+      if (char === "\\") { index++; continue; }
+      if (char === "(" || char === "[" || char === "{") stack.push(char);
+      else if (pairs[char] && stack[stack.length - 1] === pairs[char]) stack.pop();
+      else if (char === "," && stack.length === 0) separators.push(index);
+    }
+    const position = Math.max(0, Math.min(text.length, Number(caret) || 0));
+    const previous = separators.filter(index => index < position).pop() ?? -1;
+    const next = separators.find(index => index >= position) ?? text.length;
+    const segment = text.slice(previous + 1, next);
+    const leading = segment.match(/^\s*/)?.[0].length || 0;
+    const trailing = segment.match(/\s*$/)?.[0].length || 0;
+    const start = previous + 1 + leading;
+    const end = Math.max(start, next - trailing);
+    if (position < start || position > end || start === end) return null;
+    const query = text.slice(start, end);
+    // 重み付け・括弧構文は壊さないよう、通常のタグ入力だけを候補対象にする。
+    if (/[(){}\[\]]/.test(query)) return null;
+    return { start, end, query };
+  }
+  function hidePromptAutocomplete(target) {
+    const list = $("#" + target + "-prompt-suggestions");
+    if (list) { list.hidden = true; list.replaceChildren(); }
+    promptAutocompleteState[target] = { activeIndex: -1, candidates: [], range: null };
+  }
+  function renderPromptAutocomplete(target) {
+    const output = $("#" + target + "-output");
+    const list = $("#" + target + "-prompt-suggestions");
+    if (!output || !list || output.hidden || document.activeElement !== output) { hidePromptAutocomplete(target); return; }
+    const range = getPromptSegmentAtCaret(output.value, output.selectionStart);
+    const query = normalizeSearchText(range?.query || "");
+    if (!range || !query) { hidePromptAutocomplete(target); return; }
+    const candidates = state.all.map(row => {
+      const fields = row._bubbleSearchFields || [];
+      const rank = fields.some(value => value === query) ? 0
+        : fields.some(value => value.startsWith(query)) ? 1
+        : fields.some(value => value.includes(query)) ? 2 : 9;
+      return { row, rank };
+    }).filter(item => item.rank < 9)
+      .sort((a, b) => a.rank - b.rank || String(a.row.tag).localeCompare(String(b.row.tag), "en"))
+      .slice(0, 8);
+    if (!candidates.length) { hidePromptAutocomplete(target); return; }
+    const current = promptAutocompleteState[target];
+    const sameRange = current.range?.start === range.start && current.range?.end === range.end && current.range?.query === range.query;
+    const activeIndex = sameRange ? Math.min(current.activeIndex, candidates.length - 1) : -1;
+    promptAutocompleteState[target] = { activeIndex, candidates, range };
+    list.replaceChildren();
+    candidates.forEach(({ row }, index) => {
+      const option = document.createElement("button");
+      option.type = "button";
+      option.className = "prompt-autocomplete-option";
+      option.setAttribute("role", "option");
+      option.setAttribute("aria-selected", String(index === activeIndex));
+      const names = document.createElement("span");
+      const english = document.createElement("strong");
+      english.textContent = row.tag;
+      const japanese = document.createElement("small");
+      japanese.textContent = row.ja || "日本語訳なし";
+      names.append(english, japanese);
+      option.append(names);
+      option.addEventListener("pointerdown", event => event.preventDefault());
+      option.addEventListener("click", () => applyPromptAutocomplete(target, index));
+      list.append(option);
+    });
+    list.hidden = false;
+  }
+  function applyPromptAutocomplete(target, index) {
+    const output = $("#" + target + "-output");
+    const current = promptAutocompleteState[target];
+    const candidate = current.candidates[index]?.row;
+    const range = current.range;
+    if (!output || !candidate || !range) return;
+    captureUndoState();
+    const replacement = candidate.tag;
+    output.value = output.value.slice(0, range.start) + replacement + output.value.slice(range.end);
+    const caret = range.start + replacement.length;
+    output.focus({ preventScroll: true });
+    output.setSelectionRange(caret, caret);
+    const key = target === "negative" ? "promptNegative" : "promptPositive";
+    state[key] = restorePromptDisplayText(output.value, textEditOriginal[target] ?? "");
+    textEditOriginal[target] = state[key];
+    state.textEditUndoPending[target] = false;
+    syncSelectedFromPromptText();
+    renderRows();
+    renderEditor();
+    hidePromptAutocomplete(target);
+    output.setSelectionRange(caret, caret);
+  }
+  function handlePromptAutocompleteKeydown(target, event) {
+    const current = promptAutocompleteState[target];
+    if (!current.candidates.length) return false;
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      const delta = event.key === "ArrowDown" ? 1 : -1;
+      current.activeIndex = current.activeIndex < 0
+        ? (delta > 0 ? 0 : current.candidates.length - 1)
+        : (current.activeIndex + delta + current.candidates.length) % current.candidates.length;
+      renderPromptAutocomplete(target);
+      return true;
+    }
+    if (event.key === "Enter" && current.activeIndex >= 0) {
+      event.preventDefault();
+      applyPromptAutocomplete(target, current.activeIndex);
+      return true;
+    }
+    if (event.key === "Escape") {
+      event.preventDefault();
+      hidePromptAutocomplete(target);
+      return true;
+    }
+    return false;
+  }
   function addBubbleTag(target) {
     const input=$("#"+(target==="negative"?"negative-bubble-add":"positive-bubble-add"));
     const raw=input.value.trim();if(!raw)return;
@@ -2148,17 +2267,27 @@
     $("#positive-output").addEventListener("input", event => {
       if(!state.textEditUndoPending.positive){captureUndoState();state.textEditUndoPending.positive=true;}
       state.promptPositive = restorePromptDisplayText(event.target.value, textEditOriginal.positive ?? ""); syncSelectedFromPromptText(); renderRows(); renderEditor();
+      if (!event.isComposing) renderPromptAutocomplete("positive");
     });
     $("#negative-output").addEventListener("input", event => {
       if(!state.textEditUndoPending.negative){captureUndoState();state.textEditUndoPending.negative=true;}
       state.promptNegative = restorePromptDisplayText(event.target.value, textEditOriginal.negative ?? ""); syncSelectedFromPromptText(); renderRows(); renderEditor();
+      if (!event.isComposing) renderPromptAutocomplete("negative");
     });
     $('[data-action="undo-prompt"]').addEventListener("click", undoPromptChange);
     $('[data-action="redo-prompt"]').addEventListener("click", redoPromptChange);
     ["positive","negative"].forEach(target => {
       const output = $("#" + target + "-output");
 
+      output.addEventListener("keydown", event => handlePromptAutocompleteKeydown(target, event));
+      output.addEventListener("click", () => renderPromptAutocomplete(target));
+      output.addEventListener("keyup", event => {
+        if (!["ArrowDown", "ArrowUp", "Enter", "Escape", "Shift", "Control", "Alt"].includes(event.key)) renderPromptAutocomplete(target);
+      });
+      output.addEventListener("compositionstart", () => hidePromptAutocomplete(target));
+      output.addEventListener("compositionend", () => renderPromptAutocomplete(target));
       output.addEventListener("blur", event => {
+        hidePromptAutocomplete(target);
         state.textEditUndoPending[target]=false;
         // 明示的な切替ボタンへ移動した場合は、ボタン側の処理に任せる。
         setPromptEditorMode(target, "bubble");
@@ -2170,7 +2299,9 @@
       ["positive","negative"].forEach(target => {
         if (state.editorModes[target] !== "text") return;
         const output = $("#" + target + "-output");
-        if (output && event.target !== output && !output.contains(event.target)) {
+        const suggestions = $("#" + target + "-prompt-suggestions");
+        if (output && event.target !== output && !output.contains(event.target) &&
+            !suggestions?.contains(event.target)) {
           setPromptEditorMode(target, "bubble");
         }
       });
