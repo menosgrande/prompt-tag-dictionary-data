@@ -2299,7 +2299,9 @@
       ["positive","negative"].forEach(target => {
         if (state.editorModes[target] !== "text") return;
         const output = $("#" + target + "-output");
-        if (output && event.target !== output && !output.contains(event.target)) {
+        const suggestions = $("#" + target + "-prompt-suggestions");
+        if (output && event.target !== output && !output.contains(event.target) &&
+            !suggestions?.contains(event.target)) {
           setPromptEditorMode(target, "bubble");
         }
       });
