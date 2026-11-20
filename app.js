@@ -276,10 +276,15 @@
       .toLocaleLowerCase()
       .replace(/[\s\p{P}\p{S}]+/gu, "");
   }
+  let bubbleExactTagIndex = new Map();
   function prepareSearchIndex() {
+    bubbleExactTagIndex = new Map();
     state.all.forEach(row => {
       const aliases = parseAliases(row.aliases_json);
       row._bubbleSearchFields = [row.tag, row.ja, ...aliases].map(normalizeSearchText).filter(Boolean);
+      row._bubbleSearchFields.forEach(field => {
+        if (!bubbleExactTagIndex.has(field)) bubbleExactTagIndex.set(field, row);
+      });
       row._searchText = normalizeSearchText([
         row.tag, row.ja, ...aliases,
         row.major, row.minor, row.detail
@@ -1755,7 +1760,7 @@
     const input=$("#"+(target==="negative"?"negative-bubble-add":"positive-bubble-add"));
     const raw=input.value.trim();if(!raw)return;
     const query=normalizeSearchText(raw);
-    const match=state.all.find(row=>(row._bubbleSearchFields || []).some(value=>value===query));
+    const match=bubbleExactTagIndex.get(query);
     const tag=match?match.tag:raw;
     const existing=locatePromptTag(tag);
     if(existing){
