@@ -753,3 +753,14 @@ body{font-size:14px;line-height:1.65}
   .mobile-admin-link{display:inline-flex;flex-shrink:0;min-height:32px;padding:5px 10px;font-size:10px}
   .footer{align-items:center}
 }
+
+
+/* Search clarity: active conditions, per-row match reasons, and query-only clear. */
+.active-search-summary{max-width:min(72vw,900px);margin:3px 0 0;color:var(--muted-2);font-size:9px;line-height:1.35;overflow-wrap:anywhere}
+.searchbox .search-clear{flex:0 0 22px;width:22px;height:22px;padding:0;border:0;border-radius:4px;background:transparent;color:var(--muted);font-size:17px;line-height:1}
+.searchbox .search-clear:hover{background:var(--surface-hover);color:var(--text)}
+.searchbox .search-clear[hidden],.active-search-summary[hidden]{display:none}
+.tag-results .tag-row>.tag-japanese{display:flex;align-items:center;gap:5px;white-space:nowrap}
+.tag-japanese-label{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.tag-match-reason{flex:0 0 auto;color:var(--accent);font-size:8px;font-weight:500}
+@media(max-width:760px){.active-search-summary{max-width:75vw;font-size:8px}.tag-match-reason{font-size:7px}}
