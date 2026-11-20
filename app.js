@@ -278,8 +278,10 @@
   }
   function prepareSearchIndex() {
     state.all.forEach(row => {
+      const aliases = parseAliases(row.aliases_json);
+      row._bubbleSearchFields = [row.tag, row.ja, ...aliases].map(normalizeSearchText).filter(Boolean);
       row._searchText = normalizeSearchText([
-        row.tag, row.ja, ...parseAliases(row.aliases_json),
+        row.tag, row.ja, ...aliases,
         row.major, row.minor, row.detail
       ].join(" "));
     });
@@ -1743,8 +1745,7 @@
     list.replaceChildren();
     if(!query)return;
     const matches=state.all.map(row=>{
-      const aliases=parseAliases(row.aliases_json);
-      const fields=[row.tag,row.ja,...aliases].map(normalizeSearchText);
+      const fields=row._bubbleSearchFields || [];
       const rank=fields.some(value=>value===query)?0:fields.some(value=>value.startsWith(query))?1:fields.some(value=>value.includes(query))?2:9;
       return {row,rank};
     }).filter(item=>item.rank<9).sort((a,b)=>a.rank-b.rank||String(a.row.tag).localeCompare(String(b.row.tag),"en")).slice(0,10);
@@ -1754,7 +1755,7 @@
     const input=$("#"+(target==="negative"?"negative-bubble-add":"positive-bubble-add"));
     const raw=input.value.trim();if(!raw)return;
     const query=normalizeSearchText(raw);
-    const match=state.all.find(row=>normalizeSearchText(row.tag)===query||normalizeSearchText(row.ja)===query||parseAliases(row.aliases_json).some(alias=>normalizeSearchText(alias)===query));
+    const match=state.all.find(row=>(row._bubbleSearchFields || []).some(value=>value===query));
     const tag=match?match.tag:raw;
     const existing=locatePromptTag(tag);
     if(existing){
