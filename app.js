@@ -289,6 +289,12 @@
         row.tag, row.ja, ...aliases,
         row.major, row.minor, row.detail
       ].join(" "));
+      row._searchFieldGroups = {
+        english: [normalizeSearchText(row.tag)].filter(Boolean),
+        japanese: [normalizeSearchText(row.ja)].filter(Boolean),
+        aliases: aliases.map(normalizeSearchText).filter(Boolean),
+        category: [row.major, row.minor, row.detail].map(normalizeSearchText).filter(Boolean)
+      };
     });
   }
   function addWorkAlias(map, value, group) {
@@ -714,7 +720,41 @@
     if (cells.level) cells.level.innerHTML =
       sortOptions("level") + checkboxGroup("level", ["0","1","2","3","4","未設定"], value => value === "未設定" ? "未設定" : "レベル " + value);
   }
+  function searchMatchReasons(row) {
+    if (!state.queryTerms.length) return [];
+    const groups = row._searchFieldGroups || {};
+    return [
+      ["英語", groups.english],
+      ["日本語", groups.japanese],
+      ["別名", groups.aliases],
+      ["分類", groups.category]
+    ].filter(([, values]) =>
+      (values || []).some(value => state.queryTerms.some(term => value.includes(term)))
+    ).map(([label]) => label);
+  }
+  function renderActiveSearchSummary() {
+    const summary = $("#active-search-summary");
+    if (!summary) return;
+    const parts = [];
+    if (state.query) parts.push("検索: " + state.query);
+    if (state.major) parts.push("大分類: " + state.major);
+    if (state.minor) parts.push("中分類: " + state.minor);
+    if (state.favoritesOnly) parts.push("お気に入り");
+    const filterLabels = {
+      major: "大分類フィルター",
+      level: "表現レベル",
+      translation: "翻訳状態",
+      classification: "分類確認"
+    };
+    Object.entries(filterLabels).forEach(([key, label]) => {
+      const values = [...state.columnFilters[key]];
+      if (values.length) parts.push(label + ": " + values.join(" / "));
+    });
+    summary.textContent = parts.length ? "適用中: " + parts.join(" · ") : "";
+    summary.hidden = parts.length === 0;
+  }
   function renderRows() {
+    renderActiveSearchSummary();
     const rows = state.filtered;
     const pages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
     state.page = Math.min(state.page, pages - 1);
@@ -730,7 +770,7 @@
         '<span class="tag-state-cell"><button type="button" class="tag-state-button ' + stateClass + '" data-row-state="' + escapeHTML(key) + '" aria-label="' + stateLabel + '（クリックで状態変更）" title="' + stateLabel + '：クリックで次の状態へ">' + stateIcon + '</button></span>' +
         '<span class="favorite-cell"><button type="button" class="favorite-button' + (state.favorites.has(key) ? ' is-favorite' : '') + '" data-favorite="' + escapeHTML(key) + '" aria-label="お気に入り切替" title="お気に入り">★</button></span>' +
         '<button type="button" class="tag-english tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.tag) + '">' + escapeHTML(row.tag) + '</button>' +
-        '<button type="button" class="tag-japanese tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.ja) + '">' + escapeHTML(row.ja) + '</button>' +
+        '<button type="button" class="tag-japanese tag-add-link" data-add="' + escapeHTML(key) + '" title="' + escapeHTML(row.ja + (state.queryTerms.length ? " · 一致項目: " + searchMatchReasons(row).join("・") : "")) + '"><span class="tag-japanese-label">' + escapeHTML(row.ja) + '</span>' + (state.queryTerms.length && searchMatchReasons(row).length ? '<small class="tag-match-reason">一致: ' + escapeHTML(searchMatchReasons(row).join("・")) + '</small>' : '') + '</button>' +
         '<span class="tag-major" title="大分類">' + escapeHTML(row.major || "未分類") + '</span>' +
         '<span class="tag-minor" title="中分類">' + escapeHTML(row.minor || "—") + '</span>' +
         '<span class="expression-level-cell"><span class="expression-level-value' + (expressionLevelFor(row) === null ? ' is-unset' : ' level-' + expressionLevelFor(row)) + '" aria-label="表現ランク ' + (expressionLevelFor(row) === null ? '未設定' : expressionLevelFor(row)) + '" title="表現ランク ' + (expressionLevelFor(row) === null ? '未設定' : expressionLevelFor(row)) + '">' + (expressionLevelFor(row) === null ? '—' : expressionLevelFor(row)) + '</span></span>' +
@@ -756,6 +796,8 @@
   function resetDictionarySearch() {
     const search = $(".search-row .searchbox input");
     if (search) search.value = "";
+    const clearButton = $(".search-clear");
+    if (clearButton) clearButton.hidden = true;
     state.query = "";
     state.queryTerms = [];
     state.major = "";
@@ -1955,6 +1997,8 @@
     $("#authors-search").value = state.authorsQuery;
     const search = $(".search-row .searchbox input");
     if (search) search.value = state.query;
+    const clearButton = $(".search-clear");
+    if (clearButton) clearButton.hidden = !state.query;
     $("#favorites-only").checked = state.favoritesOnly;
     state.queryTerms = state.query.split(/\s+/).map(normalizeSearchText).filter(Boolean);
     renderCategories();
@@ -2114,17 +2158,34 @@
     }));
     const search = $(".search-row .searchbox input");
     let searchDebounceTimer = null;
+    const updateSearchClearButton = () => {
+      const clearButton = $(".search-clear");
+      if (clearButton) clearButton.hidden = !search.value;
+    };
     const applySearchInput = () => {
       state.query = search.value.trim();
       state.queryTerms = state.query.split(/\s+/).map(normalizeSearchText).filter(Boolean);
+      updateSearchClearButton();
       renderCategories();
       applyFilters();
       writeLocationState("replace");
     };
     const scheduleSearch = () => {
       window.clearTimeout(searchDebounceTimer);
+      updateSearchClearButton();
       searchDebounceTimer = window.setTimeout(applySearchInput, 120);
     };
+    $(".search-clear")?.addEventListener("click", () => {
+      window.clearTimeout(searchDebounceTimer);
+      search.value = "";
+      state.query = "";
+      state.queryTerms = [];
+      updateSearchClearButton();
+      renderCategories();
+      applyFilters();
+      writeLocationState("replace");
+      search.focus();
+    });
     search.addEventListener("compositionstart", () => window.clearTimeout(searchDebounceTimer));
     search.addEventListener("compositionend", scheduleSearch);
     search.addEventListener("input", event => {
