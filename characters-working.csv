@@ -47,7 +47,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 161,akagi miria (The Idolmaster Cinderella Girls),赤城みりあ（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,"[""akagi miria""]",verified,0,verified,verified,normal
 162,akai haato (Hololive),赤井はあと（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 163,akairiot,AkaiRiot(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-164,akamatsu kaede (Danganronpa V3),赤松楓（ニューダンガンロンパV3）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+164,akamatsu kaede (Danganronpa V3),赤松楓（ニューダンガンロンパV3）,キャラクター・作品,キャラクター,,"[""akamatsu kaede""]",verified,0,verified,verified,normal
 166,akane (blue archive),アカネ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 167,akari (pokemon),ショウ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 168,akashi (kancolle),明石（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -214,7 +214,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 758,batman (series),バットマン（シリーズ）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 764,battle tendency,ジョジョの奇妙な冒険 第2部 戦闘潮流（漫画タイトル）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 766,battleship princess (Kantai Collection),戦艦棲姫（艦隊これくしょん）,キャラクター・作品,キャラクター,,"[""battleship princess""]",verified,0,verified,verified,normal
-768,bayonetta (Bayonetta),ベヨネッタ（ベヨネッタ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+768,bayonetta (Bayonetta),ベヨネッタ（ベヨネッタ）,キャラクター・作品,キャラクター,,"[""bayonetta""]",verified,0,verified,verified,normal
 769,bayonetta (series),ベヨネッタ（シリーズ）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 770,bb (baalbuddy),BB（Baalbuddy）(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 771,bb (fate),BB（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -317,7 +317,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1789,chi-hatan military uniform,知波単学園の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 1793,chibi usa,ちびうさ（美少女戦士セーラームーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1797,chigusa minori,千種みのり(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-1799,chihaya anon (BanG Dream! It's MyGO!!!!!),千早愛音（BanG Dream! It's MyGO!!!!!）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+1799,chihaya anon (BanG Dream! It's MyGO!!!!!),千早愛音（BanG Dream! It's MyGO!!!!!）,キャラクター・作品,キャラクター,,"[""chihaya anon""]",verified,0,verified,verified,normal
 1800,chihuri,チフリ(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 1802,chikuwa.,チクワ。(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 1817,chitanda eru (Hyouka),千反田える（氷菓）,キャラクター・作品,キャラクター,,"[""chitanda eru""]",verified,0,verified,verified,normal
@@ -499,7 +499,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2762,endeavor (boku no hero academia),エンデヴァー（僕のヒーローアカデミア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2771,engiyoshi,Engiyoshi(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 2774,enkyo yuuichirou,円居雄一郎(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-2776,enoshima junko (Danganronpa),江ノ島盾子（ダンガンロンパ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+2776,enoshima junko (Danganronpa),江ノ島盾子（ダンガンロンパ）,キャラクター・作品,キャラクター,,"[""enoshima junko""]",verified,0,verified,verified,normal
 2778,ensemble stars!,あんさんぶるスターズ！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2780,enterprise (azur lane),エンタープライズ（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2786,eren yeager (Attack on Titan),エレン・イェーガー（進撃の巨人）,キャラクター・作品,キャラクター,,"[""eren yeager""]",verified,0,verified,verified,normal
@@ -746,7 +746,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3942,hanamura yousuke (persona 4),花村陽介（ペルソナ4）,キャラクター・作品,キャラクター,,"[""hanamura yousuke""]",verified,0,verified,verified,normal
 3943,hanasaki tsubomi (HeartCatch PreCure!),花咲つぼみ（ハートキャッチプリキュア！）,キャラクター・作品,キャラクター,,"[""hanasaki tsubomi""]",verified,0,verified,verified,normal
 3944,hanasakigawa school uniform,花咲川女子学園の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
-4026,hanekawa tsubasa (Monogatari),羽川翼（〈物語〉シリーズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+4026,hanekawa tsubasa (Monogatari),羽川翼（〈物語〉シリーズ）,キャラクター・作品,キャラクター,,"[""hanekawa tsubasa""]",verified,0,verified,verified,normal
 4027,haneoka school uniform,羽丘女子学園の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 4035,haniyasushin keiki (Touhou Project),埴安神袿姫（東方Project）,キャラクター・作品,キャラクター,,"[""haniyasushin keiki""]",verified,0,verified,verified,normal
 4037,hanyuu (Higurashi When They Cry),羽入（ひぐらしのなく頃に）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1120,7 +1120,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5052,kashikaze,樫風(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,"[""Kashikaze""]",verified,0,verified,verified,normal
 5053,kashima (kancolle),鹿島（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5054,kashiwamochi yomogi,柏餅よもぎ(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-5055,kashiwazaki sena (Haganai),柏崎星奈（僕は友達が少ない）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5055,kashiwazaki sena (Haganai),柏崎星奈（僕は友達が少ない）,キャラクター・作品,キャラクター,,"[""kashiwazaki sena""]",verified,0,verified,verified,normal
 5056,kasodani kyouko (Touhou Project),幽谷響子（東方Project）,キャラクター・作品,キャラクター,,"[""kasodani kyouko""]",verified,0,verified,verified,normal
 5057,kasugano sakura (Street Fighter),春日野さくら（ストリートファイター）,キャラクター・作品,キャラクター,,"[""kasugano sakura""]",verified,0,verified,verified,normal
 5058,kasumi (doa),かすみ（DEAD OR ALIVE）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1169,7 +1169,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5119,kid icarus uprising,新・光神話 パルテナの鏡,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5120,kieran (pokemon),スグリ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5122,kijin seija (Touhou Project),鬼人正邪（東方Project）,キャラクター・作品,キャラクター,,"[""kijin seija""]",verified,0,verified,verified,normal
-5123,kikuchi makoto (The Idolmaster),菊地真（アイドルマスター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5123,kikuchi makoto (The Idolmaster),菊地真（アイドルマスター）,キャラクター・作品,キャラクター,,"[""kikuchi makoto""]",verified,0,verified,verified,normal
 5125,kikyou (blue archive),キキョウ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5126,kill la kill,キルラキル,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5127,kill me baby,キルミーベイベー,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -1182,12 +1182,12 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5143,kinomoto sakura (Cardcaptor Sakura),木之本桜（カードキャプターさくら）,キャラクター・作品,キャラクター,,"[""kinomoto sakura""]",verified,0,verified,verified,normal
 5144,kinugasa (kancolle),衣笠（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5145,kirakira precure a la mode,キラキラ☆プリキュアアラモード,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-5146,kirby (Kirby),カービィ（星のカービィ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5146,kirby (Kirby),カービィ（星のカービィ）,キャラクター・作品,キャラクター,,"[""kirby""]",verified,0,verified,verified,normal
 5147,kirby (series),星のカービィ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5148,kirigaya suguha (Sword Art Online),桐ヶ谷直葉（ソードアート・オンライン）,キャラクター・作品,キャラクター,,"[""kirigaya suguha""]",verified,0,verified,verified,normal
 5149,kirigiri kyoko (Danganronpa: Trigger Happy Havoc),霧切響子（ダンガンロンパ 希望の学園と絶望の高校生）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5150,kirijou mitsuru (Persona 3),桐条美鶴（ペルソナ3）,キャラクター・作品,キャラクター,,"[""kirijou mitsuru""]",verified,0,verified,verified,normal
-5151,kirima syaro (Is the Order a Rabbit?),桐間紗路（ご注文はうさぎですか？）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5151,kirima syaro (Is the Order a Rabbit?),桐間紗路（ご注文はうさぎですか？）,キャラクター・作品,キャラクター,,"[""kirima syaro""]",verified,0,verified,verified,normal
 5153,kirino ranmaru (Inazuma Eleven GO),霧野蘭丸（イナズマイレブンGO）,キャラクター・作品,キャラクター,,"[""kirino ranmaru""]",verified,0,verified,verified,normal
 5154,kirisame marisa (Touhou Project),霧雨魔理沙（東方Project）,キャラクター・作品,キャラクター,,"[""kirisame marisa""]",verified,0,verified,verified,normal
 5155,kirisawa juuzou,桐沢十三(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,"[""Kirisawa Juuzou""]",verified,0,verified,verified,normal
@@ -1207,7 +1207,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5177,kisume (Touhou Project),キスメ（東方Project）,キャラクター・作品,キャラクター,,"[""kisume""]",verified,0,verified,verified,normal
 5178,kita high school uniform,キタ高校のユニフォーム,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5179,kita ikuyo (Bocchi the Rock!),喜多郁代（ぼっち・ざ・ろっく！）,キャラクター・作品,キャラクター,,"[""kita ikuyo""]",verified,0,verified,verified,normal
-5180,kitagawa marin (My Dress-Up Darling),喜多川海夢（その着せ替え人形は恋をする）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5180,kitagawa marin (My Dress-Up Darling),喜多川海夢（その着せ替え人形は恋をする）,キャラクター・作品,キャラクター,,"[""kitagawa marin""]",verified,0,verified,verified,normal
 5181,kitakami (kancolle),北上（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5182,kitasan black (umamusume),キタサンブラック（ウマ娘）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5183,kitauji high school uniform,北宇治高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
@@ -1223,22 +1223,22 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5216,koakuma (Touhou Project),小悪魔（東方Project）,キャラクター・作品,キャラクター,,"[""koakuma""]",verified,0,verified,verified,normal
 5217,kobayashi-san chi no maidragon,小林さんちのメイドラゴン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5218,kochiya sanae (Touhou Project),東風谷早苗（東方Project）,キャラクター・作品,キャラクター,,"[""kochiya sanae""]",verified,0,verified,verified,normal
-5219,kochou shinobu (Demon Slayer: Kimetsu no Yaiba),胡蝶しのぶ（鬼滅の刃）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5219,kochou shinobu (Demon Slayer: Kimetsu no Yaiba),胡蝶しのぶ（鬼滅の刃）,キャラクター・作品,キャラクター,,"[""kochou shinobu""]",verified,0,verified,verified,normal
 5222,koha-ace,コハエース,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5223,koharu (blue archive),コハル（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5225,koihime musou,恋姫†無双,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5226,koishi day (Touhou Project),こいしの日（東方Project）,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5227,koizumi hanayo (Love Live! School Idol Project),小泉花陽（ラブライブ！ School idol project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5228,koizumi itsuki (The Melancholy of Haruhi Suzumiya),古泉一樹（涼宮ハルヒの憂鬱）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5228,koizumi itsuki (The Melancholy of Haruhi Suzumiya),古泉一樹（涼宮ハルヒの憂鬱）,キャラクター・作品,キャラクター,,"[""koizumi itsuki""]",verified,0,verified,verified,normal
 5229,kokkoro (princess connect!),コッコロ（プリンセスコネクト！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5230,kokona (blue archive),ココナ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5231,komaeda nagito (Danganronpa 2: Goodbye Despair),狛枝凪斗（スーパーダンガンロンパ2 さよなら絶望学園）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5232,komano aunn (Touhou Project),高麗野あうん（東方Project）,キャラクター・作品,キャラクター,,"[""komano aunn""]",verified,0,verified,verified,normal
 5233,komeiji koishi (Touhou Project),古明地こいし（東方Project）,キャラクター・作品,キャラクター,,"[""komeiji koishi""]",verified,0,verified,verified,normal
 5234,komeiji satori (Touhou Project),古明地さとり（東方Project）,キャラクター・作品,キャラクター,,"[""komeiji satori""]",verified,0,verified,verified,normal
-5235,komi shouko (Komi Can't Communicate),古見硝子（古見さんは、コミュ症です。）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5235,komi shouko (Komi Can't Communicate),古見硝子（古見さんは、コミュ症です。）,キャラクター・作品,キャラクター,,"[""komi shouko""]",verified,0,verified,verified,normal
 5236,komi-san wa komyushou desu,古見さんは、コミュ症です。,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-5237,komiya kaho (The Idolmaster Shiny Colors),小宮果穂（アイドルマスター シャイニーカラーズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5237,komiya kaho (The Idolmaster Shiny Colors),小宮果穂（アイドルマスター シャイニーカラーズ）,キャラクター・作品,キャラクター,,"[""komiya kaho""]",verified,0,verified,verified,normal
 5238,kongou (kancolle),金剛（艦これ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5239,konjiki no yami (To Love-Ru),金色の闇（To LOVEる）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5241,kono subarashii sekai ni shukufuku wo!,この素晴らしい世界に祝福を！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -1260,15 +1260,15 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5264,kouji (campus life),Kouji（キャンパスライフ）,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5265,kouno (masao),河野(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5266,kourindou tengu costume,香霖堂天狗装束（東方Project）,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
-5267,kousaka kirino (Oreimo),高坂桐乃（俺の妹がこんなに可愛いわけがない）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5268,kousaka reina (Sound! Euphonium),高坂麗奈（響け！ユーフォニアム）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5267,kousaka kirino (Oreimo),高坂桐乃（俺の妹がこんなに可愛いわけがない）,キャラクター・作品,キャラクター,,"[""kousaka kirino""]",verified,0,verified,verified,normal
+5268,kousaka reina (Sound! Euphonium),高坂麗奈（響け！ユーフォニアム）,キャラクター・作品,キャラクター,,"[""kousaka reina""]",verified,0,verified,verified,normal
 5269,kousaka tamaki (To Heart 2),向坂環（ToHeart2）,キャラクター・作品,キャラクター,,"[""kousaka tamaki""]",verified,0,verified,verified,normal
 5270,kouzuki kallen (Code Geass),紅月カレン（コードギアス 反逆のルルーシュ）,キャラクター・作品,キャラクター,,"[""kouzuki kallen""]",verified,0,verified,verified,normal
 5271,koyama shigeru,こやま滋(漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5272,koyanskaya (fate),コヤンスカヤ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5273,koyorin,Koyorin(イラストレーター・キャラクターデザイナー),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5274,kris (pokemon),クリス（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5275,krista lenz (Attack on Titan),クリスタ・レンズ（進撃の巨人）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5275,krista lenz (Attack on Titan),クリスタ・レンズ（進撃の巨人）,キャラクター・作品,キャラクター,,"[""krista lenz""]",verified,0,verified,verified,normal
 5276,kuavera,Kuavera(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5277,kuchiki rukia (Bleach),朽木ルキア（BLEACH）,キャラクター・作品,キャラクター,,"[""kuchiki rukia""]",verified,0,verified,verified,normal
 5278,kudamaki tsukasa (touhou),菅牧典（東方Project）,キャラクター・作品,キャラクター,,"[""kudamaki tsukasa""]",verified,0,verified,verified,normal
@@ -1363,7 +1363,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5673,lucina (fire emblem),ルキナ（ファイアーエムブレム 覚醒）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5674,lucky beast (kemono friends),ラッキービースト（けものフレンズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5675,lucky star,らき☆すた,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-5676,luigi (super mario),ルイージ（スーパーマリオ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5676,luigi (super mario),ルイージ（スーパーマリオ）,キャラクター・作品,キャラクター,,"[""luigi""]",verified,0,verified,verified,normal
 5677,lum (urusei yatsura),ラム（うる星やつら）,キャラクター・作品,キャラクター,,"[""lum""]",verified,0,verified,verified,normal
 5678,lumine (genshin impact),蛍（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5679,luna child,ルナチャイルド（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1425,7 +1425,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5803,marie (splatoon),ホタル（スプラトゥーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5804,marie antoinette (fate),マリー・アントワネット（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5805,marina (splatoon),イイダ（スプラトゥーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5806,mario (super mario),マリオ（スーパーマリオ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+5806,mario (super mario),マリオ（スーパーマリオ）,キャラクター・作品,キャラクター,,"[""mario""]",verified,0,verified,verified,normal
 5807,mario (series),マリオシリーズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5813,marnie (pokemon),マリィ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5817,martha (fate),マルタ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2948,7 +2948,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12015,akai haato,赤井はあと（Hololive）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12016,akai haato (gothic lolita),赤井はあと（ゴシックロリータ／Hololive）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12017,akali,アカリ（リーグ・オブ・レジェンド）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12018,akamatsu kaede,赤松楓（ニューダンガンロンパV3）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12021,akashi (azur lane),明石（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12023,akashi (live a hero),アカシ（LIVE A HERO）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12024,akashiya moka,赤夜萌香（ロザリオとバンパイア）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -3222,7 +3221,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12383,bataan (azur lane),バターン（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12384,batgirl (dc),バットガール（DCコミックス）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12386,battleship water oni,戦艦水鬼（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12387,bayonetta,ベヨネッタ（ベヨネッタ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12388,bazelgeuse (monster hunter),バゼルギウス（モンスターハンター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12391,bb (swimsuit mooncancer) (third ascension) (fate),BB（水着／ムーンキャンサー・第三再臨／Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12392,bb dubai (fate),BBドバイ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -3382,7 +3380,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12586,chief (path to nowhere),局長（無期迷途）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12587,chieru (princess connect!),チエル（プリンセスコネクト！Re:Dive）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12588,chiester410,シエスタ410（うみねこのなく頃に）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12589,chihaya anon,千早愛音（BanG Dream! It's MyGO!!!!!）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12590,chihiro (blue archive),千尋（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12591,chii (chobits),ちぃ（ちょびっツ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12592,chikorita,チコリータ（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -3646,7 +3643,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12909,enkidu (fate),エンキドゥ（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12911,enma ai,閻魔あい（地獄少女）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12912,enna alouette,エナー・アールウェット（にじさんじEN）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12913,enoshima junko,江ノ島盾子（ダンガンロンパ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12914,enraku tsubakura,燕楽玄鳥（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12915,entei (pokemon),エンテイ（ポケットモンスター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12917,envy (fullmetal alchemist),エンヴィー（鋼の錬金術師）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -3966,7 +3962,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13315,hanazono tae,花園たえ（BanG Dream!）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13316,hanazono yurine,花園ゆりね（邪神ちゃんドロップキック）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13317,handa roco,伴田路子（アイドルマスター ミリオンライブ！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-13318,hanekawa tsubasa,羽川翼（〈物語〉シリーズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13319,hange zoe (shingeki no kyojin),ハンジ・ゾエ（進撃の巨人）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13321,hanna-justina marseille,ハンナ・ユスティーナ・マルセイユ（ストライクウィッチーズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13322,hanyuu,古手羽入（ひぐらしのなく頃に）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4430,7 +4425,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13988,kashima (lawson) (kancolle),鹿島（ローソンコラボ）（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13989,kashino (azur lane),樫野（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13990,kashino (hot springs relaxation) (azur lane),樫野（湯上がりのリラックスタイム）（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-13991,kashiwazaki sena,柏崎星奈（僕は友達が少ない）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13992,kashuu kiyomitsu,加州清光（刀剣乱舞）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13995,kasukabe tsumugi,春日部つむぎ（VOICEVOX）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13996,kasumi (blue archive),霞（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4485,7 +4479,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14068,kiawe (pokemon),カキ（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14071,kihara tsumugu,木原紡（凪のあすから）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14073,kiki (majo no takkyuubin),キキ（魔女の宅急便）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14074,kikuchi makoto,菊地真（アイドルマスター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14075,kikuzuki (kancolle),菊月（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14078,kim possible (kim possible),キム・ポッシブル（キム・ポッシブル）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14079,kimeemaru,キメェ丸（射命丸文のゆっくり／東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4509,9 +4502,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14100,kiran (fire emblem),エクラ（ファイアーエムブレム ヒーローズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14101,kirara (blue archive),キララ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14102,kirara (genshin impact),キララ（原神）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14103,kirby,カービィ（星のカービィ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14105,kirigiri kyoko,霧切響子（ダンガンロンパ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14107,kirima syaro,桐間紗路（ご注文はうさぎですか？）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14108,kirin (monster hunter),キリン（モンスターハンター）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14109,kirino (blue archive),中務キリノ（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14110,kirino (swimsuit) (blue archive),中務キリノ（水着）（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4536,7 +4527,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14140,kishido temma,岸堂天真（ホロスターズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14142,kishinami hakuno (female),岸波白野（女性）（Fate/EXTRA）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14143,kishinami hakuno (male),岸波白野（男性）（Fate/EXTRA）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14147,kitagawa marin,喜多川海夢（その着せ替え人形は恋をする）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14148,kitagawa yuusuke,喜多川祐介（ペルソナ5）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14150,kitakami kai ni (kancolle),北上改二（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14151,kitakami reika,北上麗花（アイドルマスター ミリオンライブ！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4558,7 +4548,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14172,kobayakawa sae,小早川紗枝（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14173,kobayakawa yutaka,小早川ゆたか（らき☆すた）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14174,kobo kanaeru,こぼ・かなえる（VTuber）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14176,kochou shinobu,胡蝶しのぶ（鬼滅の刃）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14177,koga koharu,古賀小春（アイドルマスター シンデレラガールズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14178,koga mitsuki,古賀みつき（気になってる人が男じゃなかった）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14179,kogami akira,小神あきら（らき☆すた）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4572,7 +4561,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14188,koito yuu,小糸侑（やがて君になる）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14189,koiwai yotsuba,小岩井よつば（よつばと！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14190,koizumi hanayo,小泉花陽（ラブライブ！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14191,koizumi itsuki,古泉一樹（涼宮ハルヒの憂鬱）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14192,koizumi itsuki (female),古泉一樹（女性化）（涼宮ハルヒの憂鬱）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14193,kojo anna,虎城アンナ（VTuber）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14195,kokomine cocona,ココナ（フリップフラッパーズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4584,9 +4572,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14202,komaki manaka,小牧愛佳（ToHeart）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14203,komakusa sannyo,駒草山如（東方Project）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14207,komekko,こめっこ（この素晴らしい世界に祝福を！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14208,komi shouko,古見硝子（古見さんは、コミュ症です。）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14209,komichi aya,小路綾（きんいろモザイク）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14210,komiya kaho,小宮果穂（アイドルマスター シャイニーカラーズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14211,kon kanaho,今叶星（アサルトリリィ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14212,konan (naruto),小南（NARUTO）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14213,kondou taeko,近藤妙子（ガールズ＆パンツァー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4615,9 +4601,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14243,kotori (cheer squad) (blue archive),豊見コトリ（応援団）（ブルーアーカイブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14244,kotori (takanashi kiara),小鳥遊キアラ（ホロライブ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14245,kotozume yukari,琴爪ゆかり（キラキラ☆プリキュアアラモード）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14246,kousaka kirino,高坂桐乃（俺の妹がこんなに可愛いわけがない）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14247,kousaka kyousuke,高坂京介（俺の妹がこんなに可愛いわけがない）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14248,kousaka reina,高坂麗奈（響け！ユーフォニアム）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14250,kousaka umi,高坂海美（アイドルマスター ミリオンライブ！）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14251,kousetsu samonji,江雪左文字（刀剣乱舞）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14253,kouzuki mahiru,光月まひる（夜のクラゲは泳げない）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4629,7 +4613,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14260,kratos (god of war),クレイトス（ゴッド・オブ・ウォー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14261,krile mayer baldesion (ff5),クルル・マイア・バルデシオン（ファイナルファンタジーV）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14262,kris (deltarune),クリス（DELTARUNE）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14264,krista lenz,クリスタ・レンズ（進撃の巨人）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14265,kromer (project moon),クローマー（Limbus Company）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14266,kronshtadt (azur lane),クロンシュタット（アズールレーン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14267,krookodile (pokemon),ワルビアル（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4796,7 +4779,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14479,lucy (cyberpunk),ルーシー（サイバーパンク エッジランナーズ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14480,lucy maria misora,ルーシー・マリア・ミソラ（ToHeart2）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14481,lugia (pokemon),ルギア（ポケモン）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14482,luigi,ルイージ（スーパーマリオ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14483,luigi di savoia duca degli abruzzi (kancolle),アブルッツィ公爵（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14484,luigi torelli (kancolle),ルイージ・トレッリ（艦隊これくしょん）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14485,luke fon fabre,ルーク・フォン・ファブレ（テイルズ オブ ジ アビス）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4885,7 +4867,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14597,marina (fear & hunger),マリーナ（Fear & Hunger）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14599,marina ismail,マリナ・イスマイール（機動戦士ガンダム00）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14600,marinette dupain-cheng,マリネット・デュパン＝チェン（ミラキュラス レディバグ＆シャノワール）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14601,mario,マリオ（スーパーマリオ）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14602,marius von hagen (tears of themis),マリウス・フォン・ハーゲン（未定事件簿）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14603,marle (chrono trigger),マール（クロノ・トリガー）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14607,martha (swimsuit ruler) (fate),マルタ（ルーラー／水着）（Fate）,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
