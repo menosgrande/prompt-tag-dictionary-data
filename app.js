@@ -577,7 +577,10 @@
         ? '分類がすべて非表示です。「すべての分類」をオンにするか、表示したい分類にチェックを入れてください。'
         : '条件に一致するタグはありません。') + '</div>';
     })();
-    const start = Math.max(1, state.page - 2), end = Math.min(pages, Math.max(5, state.page + 3));
+    const pageWindow = 7;
+    let start = Math.max(1, state.page + 1 - Math.floor(pageWindow / 2));
+    let end = Math.min(pages, start + pageWindow - 1);
+    start = Math.max(1, end - pageWindow + 1);
     let nums = "";
     for (let p = start; p <= end; p++) nums += '<button type="button" class="page-number' + (p - 1 === state.page ? ' active' : '') + '" data-page="' + (p - 1) + '" aria-current="' + (p - 1 === state.page ? 'page' : 'false') + '">' + p + '</button>';
     const rangeStart = rows.length ? state.page * PAGE_SIZE + 1 : 0;
