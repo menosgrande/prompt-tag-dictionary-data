@@ -1396,8 +1396,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5742,mahou sensei negima!,魔法先生ネギま！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5743,mahou shoujo lyrical nanoha,魔法少女リリカルなのは,キャラクター・作品,タイトル（作品名）,,"[""lyrical nanoha""]",verified,0,verified,verified,normal
 5744,mahou shoujo lyrical nanoha strikers,魔法少女リリカルなのは StrikerS,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-5745,mahou shoujo madoka magica,魔法少女まどか☆マギカ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-5746,mahou shoujo madoka magica (anime),魔法少女まどか☆マギカ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+5745,mahou shoujo madoka magica,魔法少女まどか☆マギカ,キャラクター・作品,タイトル（作品名）,,"[""mahou shoujo madoka magica (anime)""]",verified,0,verified,verified,normal
 5747,mahou shoujo ni akogarete,魔法少女にあこがれて,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5748,mahou tsukai no yoru,魔法使いの夜,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5754,makaino ririmu,魔界ノりりむ(にじさんじ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1689,7 +1688,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6421,naruto,NARUTO,キャラクター・作品,タイトル（作品名）,,"[""ナルト""]",verified,0,verified,verified,normal
 6422,naruto (series),NARUTOシリーズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6423,naruto shippuuden,NARUTO -ナルト- 疾風伝,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-6427,natori sana,名取さな(VTuber),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+6427,natori sana,名取さな(VTuber),キャラクター・作品,キャラクター,,"[""sana channel""]",verified,0,verified,verified,normal
 6428,natsu (blue archive),柚鳥ナツ(ブルーアーカイブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6429,natsuiro matsuri,夏色まつり(ホロライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6430,natsuki subaru,ナツキ・スバル(Re:ゼロから始める異世界生活),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2054,7 +2053,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8210,samneco,サムネコ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 8213,samurai spirits,サムライスピリッツ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 8214,samus aran,サムス・アラン(メトロイド),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-8215,sana channel,名取さな(VTuber),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 8222,sangonomiya kokomi,珊瑚宮心海(原神),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8223,sangvis ferri,鉄血工造(少女前線),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 8224,sanji (one piece),サンジ(ワンピース),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4599,7 +4597,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 14241,kotonomiya yuki,琴乃宮雪(水月),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14242,kotori (blue archive),豊見コトリ(ブルーアーカイブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14243,kotori (cheer squad) (blue archive),豊見コトリ(応援団)(ブルーアーカイブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-14244,kotori (takanashi kiara),小鳥遊キアラ(ホロライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+14244,kotori (takanashi kiara),コトリ(ホロライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14245,kotozume yukari,琴爪ゆかり(キラキラ☆プリキュアアラモード),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14247,kousaka kyousuke,高坂京介(俺の妹がこんなに可愛いわけがない),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 14250,kousaka umi,高坂海美(アイドルマスター ミリオンライブ！),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -5575,7 +5573,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 15564,reines el-melloi archisorte,ライネス・エルメロイ・アーチゾルテ(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15565,reinforce,リインフォース(魔法少女リリカルなのは),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15566,reinforce zwei,リインフォースII(魔法少女リリカルなのは),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-15569,reisen (touhou bougetsushou),鈴仙・優曇華院・イナバ(東方Project),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+15569,reisen (touhou bougetsushou),レイセン(東方Project),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15575,rena erindel,レナ(エルソード),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15576,rena lanford,レナ・ランフォード(スターオーシャン セカンドストーリー),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 15577,renamon,レナモン(デジモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -5897,7 +5895,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 16023,shirley fenette,シャーリー・フェネット(コードギアス 反逆のルルーシュ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16024,shiro (no game no life),白(ノーゲーム・ノーライフ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16025,shiro (sewayaki kitsune no senko-san),シロ(世話やきキツネの仙狐さん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-16026,shirogane kei,四宮かぐや(かぐや様は告らせたい),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+16026,shirogane kei,白銀圭(かぐや様は告らせたい),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16029,shirogane noel (casual),白銀ノエル(カジュアル衣装)(ホロライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16030,shirogane noel (summer 2020),白銀ノエル(ホロライブ・サマー2020)(ホロライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16031,shirogane tsumugi,白銀つむぎ(ニューダンガンロンパV3),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
