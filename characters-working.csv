@@ -285,7 +285,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1537,byleth (male) (fire emblem),ベレト(ファイアーエムブレム 風花雪月),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1539,c.c. (Code Geass),C.C.(コードギアス),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1547,caelus (honkai: star rail),開拓者(男性主人公／崩壊：スターレイル),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-1548,caesar anthonio zeppeli (JoJo's Bizarre Adventure),シーザー・A・ツェペリ,キャラクター・作品,キャラクター,,"[""caesar anthonio zeppeli""]",verified,0,verified,verified,normal
+1548,caesar anthonio zeppeli (JoJo's Bizarre Adventure),シーザー・A・ツェペリ(ジョジョの奇妙な冒険),キャラクター・作品,キャラクター,,"[""caesar anthonio zeppeli""]",verified,0,verified,verified,normal
 1551,cait aron,Cait Aron(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 1556,caliburn (fate),カリバーン(Fate),キャラクター・作品,武器・装備,,[],verified,0,verified,verified,normal
 1558,call of duty,コール オブ デューティ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -479,7 +479,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2717,elden ring,エルデンリング,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2728,elesa (pokemon),カミツレ(ポケモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2730,elezen,エレゼン(ファイナルファンタジーXIV),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-2732,elf (stroll in the woods),森を散策するエルフ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
+2732,elf (stroll in the woods),えるふ(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 2733,elio (pokemon),ヨウ(ポケモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2734,elira pendora (Nijisanji),エリーラ・ペンドラ(にじさんじ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2735,elizabeth bathory (fate),エリザベート・バートリー(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -912,7 +912,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4665,i-58 (kancolle),伊58(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4666,i-8 (kancolle),伊8(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4668,ia (vocaloid),IA(ボーカロイド),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4669,ib (kouri),イヴ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+4669,ib (kouri),Ib(ゲームタイトル),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4670,ibaraki douji (fate),イバラキ・ドゥジ(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4671,ibaraki kasen (Touhou Project),茨木華扇(東方Project),キャラクター・作品,キャラクター,,"[""ibaraki kasen""]",verified,0,verified,verified,normal
 4672,ibuki (blue archive),イブキ(ブルーアーカイブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1021,7 +1021,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4895,japari bun,ジャパリまん(けものフレンズ),キャラクター・作品,道具・アイテム,,[],verified,0,verified,verified,normal
 4898,javelin (azur lane),ジャベリン(アズールレーン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4900,jean (genshin impact),ジン(原神),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4901,jean pierre polnareff (JoJo's Bizarre Adventure),ジャン＝ピエール・ポルナレフ,キャラクター・作品,キャラクター,,"[""jean pierre polnareff""]",verified,0,verified,verified,normal
+4901,jean pierre polnareff (JoJo's Bizarre Adventure),ジャン＝ピエール・ポルナレフ(ジョジョの奇妙な冒険),キャラクター・作品,キャラクター,,"[""jean pierre polnareff""]",verified,0,verified,verified,normal
 4906,jervis (kancolle),ジャーヴィス(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4907,jessie (pokemon),ムサシ(ポケモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4912,jeweled branch of hourai,蓬莱の玉の枝,キャラクター・作品,道具・アイテム,,[],verified,0,verified,verified,normal
@@ -1928,7 +1928,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 7722,pyonta,ピョンタ(東方Project),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 7723,pyra (xenoblade),ホムラ(ゼノブレイド),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 7728,qiqi (genshin impact),七七(原神),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-7745,rabbit hole (vocaloid),ラビットホール,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+7745,rabbit hole (vocaloid),ラビットホール(VOCALOID楽曲),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 7767,ragho no erika,らぐほのえりか(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 7769,ragnarok online,ラグナロクオンライン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 7770,raiden mei,雷電芽衣(崩壊3rd),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
