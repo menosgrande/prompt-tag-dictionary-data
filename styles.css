@@ -744,3 +744,76 @@ body{font-size:14px;line-height:1.65}
 }
 /* Use the app's own search-clear button instead of the browser's native one. */
 .searchbox input[type="search"]::-webkit-search-cancel-button{ -webkit-appearance:none; appearance:none; display:none; }
+
+
+/* Prompt editor hierarchy: Positive is primary, Negative and output options are compact. */
+.editor-builder-panel .builder-options{
+  margin:0 12px 10px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#171e26;
+}
+.editor-builder-panel .builder-options>summary{
+  min-height:34px;
+  padding:7px 10px;
+  color:var(--muted);
+  font-size:11px;
+  cursor:pointer;
+  list-style-position:inside;
+}
+.editor-builder-panel .builder-options[open]>summary{
+  border-bottom:1px solid var(--line-soft);
+  color:var(--text);
+}
+.editor-builder-panel .builder-options .builder-controls{
+  padding:10px;
+  gap:12px 18px;
+}
+.editor-builder-panel .negative-output-card{
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#171e26;
+}
+.editor-builder-panel .negative-output-card>.output-header{
+  display:flex;
+  min-height:38px;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:7px 11px;
+  border:0;
+  color:#e5a0a8;
+  cursor:pointer;
+  list-style:none;
+}
+.editor-builder-panel .negative-output-card>.output-header::-webkit-details-marker{display:none}
+.editor-builder-panel .negative-output-card>.output-header::before{
+  content:"＋";
+  flex:0 0 auto;
+  color:var(--muted);
+  font-size:12px;
+}
+.editor-builder-panel .negative-output-card[open]>.output-header::before{content:"−"}
+.editor-builder-panel .negative-output-card>.output-header>span:first-of-type{
+  flex:1;
+  font-size:12px;
+  font-weight:600;
+}
+.editor-builder-panel .negative-output-card>.output-header>span:last-of-type{
+  color:var(--muted);
+  font:10px var(--mono);
+}
+.editor-builder-panel .negative-output-card[open]>.prompt-bubble-editor{
+  padding:12px;
+}
+.editor-builder-panel .negative-output-card[open]>.prompt-metrics{
+  margin:0 12px 8px;
+}
+.editor-builder-panel .negative-output-card[open]>.output-actions{
+  padding:8px 11px;
+}
+@media(max-width:760px){
+  .editor-builder-panel .builder-options{margin:0 8px 8px}
+  .editor-builder-panel .negative-output-card>.output-header{min-height:42px;padding:8px 10px}
+}
