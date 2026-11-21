@@ -925,8 +925,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4688,identity v,第五人格,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4689,ido (teketeke),いど(イラストレーター・漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4692,idolmaster,アイドルマスター(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-4693,idolmaster (classic),アイドルマスター(アーケード版),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-4694,idolmaster 1,アイドルマスター(初代),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+4693,idolmaster (classic),アイドルマスター(765プロ系作品),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+4694,idolmaster 1,アイドルマスター(初代ゲーム),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4695,idolmaster 2,アイドルマスター2,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4696,idolmaster cinderella girls,アイドルマスター シンデレラガールズ,キャラクター・作品,タイトル（作品名）,,"[""The Idolmaster Cinderella Girls"",""cinderella series""]",verified,0,verified,verified,normal
 4697,idolmaster cinderella girls starlight stage,アイドルマスター シンデレラガールズ スターライトステージ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -1780,7 +1780,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6710,ohisashiburi,お久しぶり,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6711,ohtsuki yui (The Idolmaster Cinderella Girls),大槻唯(アイドルマスター シンデレラガールズ),キャラクター・作品,キャラクター,,"[""ohtsuki yui""]",verified,0,verified,verified,normal
 6714,ojipon,オジポン,キャラクター・作品,作者・配信者,,"[""Ojipon""]",verified,0,verified,verified,normal
-6717,okamisty (Touhou Project),おかみすちー(東方Project),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+6717,okamisty (Touhou Project),おかみすちー(東方Projectの衣装・二次設定),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 6718,okita souji (fate),沖田総司(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6719,okita souji (koha-ace),沖田総司(桜セイバー／コハエース),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6725,oma kokichi,王馬小吉(ニューダンガンロンパV3 みんなのコロシアイ新学期),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1934,7 +1934,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 7770,raiden mei,雷電芽衣(崩壊3rd),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 7771,raiden shogun,雷電将軍(原神),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 7772,raihan (pokemon),キバナ(ポケモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-7776,raimon (Inazuma Eleven),雷門中(イナズマイレブン),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+7776,raimon (Inazuma Eleven),雷門中(イナズマイレブンの学校),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 7777,raimon soccer uniform,雷門中のサッカーユニフォーム(イナズマイレブン),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 7789,raising heart,レイジングハート(魔法少女リリカルなのはの杖),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 7790,ram (re:zero),ラム(Re：ゼロ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2279,7 +2279,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9161,star wars,スター・ウォーズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9164,stardust crusaders,スターダストクルセイダース(ジョジョの奇妙な冒険 第3部),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9168,stark (sousou no frieren),シュタルク(葬送のフリーレン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-9172,starter pokemon trio,ポケモンの御三家,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+9172,starter pokemon trio,ポケモンの御三家(3匹組),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9183,steel ball run,スティール・ボール・ラン(ジョジョの奇妙な冒険 第7部),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9186,steins;gate,シュタインズ・ゲート,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9187,stelle (honkai: star rail),星(崩壊：スターレイル),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
