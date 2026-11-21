@@ -1633,7 +1633,6 @@
     if (!range || !query) { hidePromptAutocomplete(target); return; }
     const candidates = state.all.map(row => {
       const fields = row._bubbleSearchFields || [];
-      const tag = normalizeSearchText(row.tag || "");
       const tagWords = String(row.tag || "").split(/[\s\p{P}\p{S}]+/u)
         .map(normalizeSearchText).filter(Boolean);
       const rank = fields.some(value => value === query) ? 0
