@@ -212,7 +212,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 736,basil (faraway) (omori),バジル(遠い町／OMORI),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 737,basil (omori),バジル(OMORI),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 758,batman (series),バットマン(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-764,battle tendency,ジョジョの奇妙な冒険 第2部 戦闘潮流(漫画タイトル),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+764,battle tendency,戦闘潮流(ジョジョの奇妙な冒険 第2部),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 766,battleship princess (Kantai Collection),戦艦棲姫(艦隊これくしょん),キャラクター・作品,キャラクター,,"[""battleship princess""]",verified,0,verified,verified,normal
 768,bayonetta (Bayonetta),ベヨネッタ(ベヨネッタ),キャラクター・作品,キャラクター,,"[""bayonetta""]",verified,0,verified,verified,normal
 769,bayonetta (series),ベヨネッタ(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -296,7 +296,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1604,cardcaptor sakura,カードキャプターさくら,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 1605,cardfight!! vanguard,カードファイト!! ヴァンガード,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 1610,carmine (pokemon),ゼイユ(ポケットモンスター),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-1633,castlevania (series),悪魔城ドラキュラ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+1633,castlevania (series),悪魔城ドラキュラ(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 1662,cato (monocatienus),Cato(Monocatienus)(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 1663,catstudioinc (punepuni),catstudioinc(punepuni)(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 1689,ceres fauna (Hololive),セレス・ファウナ(ホロライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -412,7 +412,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2416,devil fruit power,悪魔の実の能力,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 2417,devil may cry (series),デビル メイ クライ(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2418,di gi charat,デ・ジ・キャラット,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-2433,diamond wa kudakenai,ダイヤモンドは砕けない,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+2433,diamond wa kudakenai,ダイヤモンドは砕けない(ジョジョの奇妙な冒険 第4部),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2436,diarmuid ua duibhne (lancer) (fate),ディルムッド・オディナ(ランサー／Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2442,digimon,デジモン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2443,digimon (creature),デジモン(種族),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -441,7 +441,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2523,doraemon (Doraemon),ドラえもん(ドラえもん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2524,doremy sweet (Touhou Project),ドレミー・スイート(東方Project),キャラクター・作品,キャラクター,,"[""doremy sweet""]",verified,0,verified,verified,normal
 2525,dorohedoro,ドロヘドロ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-2546,doukyuusei (series),同級生,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+2546,doukyuusei (series),同級生(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2552,dr rex,レックス博士,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 2553,dr. ratio (honkai: star rail),Dr.レイシオ(崩壊：スターレイル),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2554,dragalia lost,ドラガリアロスト,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -514,7 +514,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2796,ethan (pokemon),ヒビキ(ポケモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2797,etna (disgaea),エトナ(ディスガイア),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2798,eula (genshin impact),エウルア(原神),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-2799,eureka seven (series),交響詩篇エウレカセブン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+2799,eureka seven (series),交響詩篇エウレカセブン(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2800,evangelion (mecha),エヴァンゲリオン(メカ),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 2801,evangelion: 2.0 you can (not) advance,ヱヴァンゲリヲン新劇場版：破,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2802,evangelion: 3.0 you can (not) redo,ヱヴァンゲリヲン新劇場版：Q,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -1032,8 +1032,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4922,jintsuu (kancolle),神通(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4923,jinx (league of legends),ジンクス(リーグオブレジェンド),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4928,johnny joestar (JoJo's Bizarre Adventure: Steel Ball Run),ジョニィ・ジョースター(ジョジョの奇妙な冒険 Part7 スティール・ボール・ラン),キャラクター・作品,キャラクター,,"[""johnny joestar""]",verified,0,verified,verified,normal
-4930,jojo no kimyou na bouken,ジョジョの奇妙な冒険,キャラクター・作品,タイトル（作品名）,,"[""JoJo's Bizarre Adventure""]",verified,0,verified,verified,normal
-4932,jojolion,ジョジョリオン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+4930,jojo no kimyou na bouken,ジョジョの奇妙な冒険(シリーズ),キャラクター・作品,タイトル（作品名）,,"[""JoJo's Bizarre Adventure""]",verified,0,verified,verified,normal
+4932,jojolion,ジョジョリオン(ジョジョの奇妙な冒険 第8部),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4933,jokanhiyou,jokanhiyou(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4935,jonathan joestar (JoJo's Bizarre Adventure),ジョナサン・ジョースター(ジョジョの奇妙な冒険),キャラクター・作品,キャラクター,,"[""jonathan joestar""]",verified,0,verified,verified,normal
 4936,joseph joestar (JoJo's Bizarre Adventure),ジョセフ・ジョースター(ジョジョの奇妙な冒険),キャラクター・作品,キャラクター,,"[""joseph joestar""]",verified,0,verified,verified,normal
@@ -1183,7 +1183,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5144,kinugasa (kancolle),衣笠(艦これ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5145,kirakira precure a la mode,キラキラ☆プリキュアアラモード,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5146,kirby (Kirby),カービィ(星のカービィ),キャラクター・作品,キャラクター,,"[""kirby""]",verified,0,verified,verified,normal
-5147,kirby (series),星のカービィ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+5147,kirby (series),星のカービィ(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5148,kirigaya suguha (Sword Art Online),桐ヶ谷直葉(ソードアート・オンライン),キャラクター・作品,キャラクター,,"[""kirigaya suguha""]",verified,0,verified,verified,normal
 5149,kirigiri kyoko (Danganronpa: Trigger Happy Havoc),霧切響子(ダンガンロンパ 希望の学園と絶望の高校生),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5150,kirijou mitsuru (Persona 3),桐条美鶴(ペルソナ3),キャラクター・作品,キャラクター,,"[""kirijou mitsuru""]",verified,0,verified,verified,normal
@@ -1285,7 +1285,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5291,kunikida hanamaru (love live! sunshine!!),国木田花丸(ラブライブ！サンシャイン!!),キャラクター・作品,キャラクター,,"[""kunikida hanamaru""]",verified,0,verified,verified,normal
 5292,kureiji ollie,クレイジー・オリー(ホロライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5293,kuro kosyou,九六胡椒(3Dモデラー・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-5294,kuro no kiseki (series),黎の軌跡,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+5294,kuro no kiseki (series),黎の軌跡(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5295,kurodani yamame (touhou),黒谷ヤマメ(東方Project),キャラクター・作品,キャラクター,,"[""kurodani yamame""]",verified,0,verified,verified,normal
 5296,kuroki tomoko (watamote),黒木智子(私がモテないのはどう考えてもお前らが悪い!),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5297,kurokoma saki (touhou),驪駒早鬼(東方Project),キャラクター・作品,キャラクター,,"[""kurokoma saki""]",verified,0,verified,verified,normal
@@ -1705,7 +1705,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6474,neocoill,Neocoill(ネオコイル),キャラクター・作品,作者・配信者,,"[""Neocoill"",""ネオコイル""]",verified,0,verified,verified,normal
 6475,neon genesis evangelion,新世紀エヴァンゲリオン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6479,neptune (neptunia),ネプテューヌ(超次元ゲイム ネプテューヌ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-6480,neptune (series),超次元ゲイムネプテューヌ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+6480,neptune (series),超次元ゲイムネプテューヌ(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6481,nerissa ravencroft (hololive),ネリッサ・レイヴンクロフト(ホロライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6482,nero claudius (bride) (fate),ネロ・クラウディウス(花嫁)(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6483,nero claudius (fate),ネロ・クラウディウス(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1860,7 +1860,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 7154,personal ami,パーソナルアミ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 7169,phantasy star,ファンタシースター,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 7170,phantasy star online 2,ファンタシースターオンライン2,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-7171,phantom blood,ファントムブラッド,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+7171,phantom blood,ファントムブラッド(ジョジョの奇妙な冒険 第1部),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 7172,phantom ix row,ファントムIXロウ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 7173,phantom of the kill,ファントム オブ キル,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 7174,phase connect,Phase Connect,キャラクター・作品,作者・配信者,,"[""フェーズコネクト""]",verified,0,verified,verified,normal
@@ -2080,7 +2080,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8304,schwarz (arknights),シュワルツ(アークナイツ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8307,scissor blade (kill la kill),片太刀バサミ(キルラキル),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 8312,scorbunny,ヒバニー(ポケットモンスター),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-8313,scott pilgrim (series),スコット・ピルグリム,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+8313,scott pilgrim (series),スコット・ピルグリム(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 8314,scottie (phantom2),スコッティ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 8335,seaport princess,港湾棲姫(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8356,seele vollerei,ゼーレ・ヴォレライ(崩壊3rd),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2219,7 +2219,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8820,skullgirls,スカルガールズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 8824,sky-freedom,sky-freedom,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 8825,skyla (pokemon),フウロ(ポケットモンスター),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-8828,slam dunk (series),SLAM DUNK(漫画タイトル),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+8828,slam dunk (series),SLAM DUNK(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 8865,slime (genshin impact),スライム(原神),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 8872,slugbox,スラッグボックス,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 8882,smile precure!,スマイルプリキュア！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -2278,10 +2278,10 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9155,star sapphire,スターサファイア(東方Project),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9159,star twinkle precure,スター☆トゥインクルプリキュア,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9161,star wars,スター・ウォーズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-9164,stardust crusaders,スターダストクルセイダース(ジョジョの奇妙な冒険),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+9164,stardust crusaders,スターダストクルセイダース(ジョジョの奇妙な冒険 第3部),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9168,stark (sousou no frieren),シュタルク(葬送のフリーレン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9172,starter pokemon trio,ポケモンの御三家,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-9183,steel ball run,スティール・ボール・ラン(ジョジョの奇妙な冒険),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+9183,steel ball run,スティール・ボール・ラン(ジョジョの奇妙な冒険 第7部),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9186,steins;gate,シュタインズ・ゲート,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9187,stelle (honkai: star rail),星(崩壊：スターレイル),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9205,stocking (psg),ストッキング(Panty & Stocking with Garterbelt),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2572,7 +2572,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 10290,varia suit,バリアスーツ(メトロイド),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 10295,vegeta,ベジータ(ドラゴンボール),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10306,venti (genshin impact),ウェンティ(原神),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-10307,vento aureo,黄金の風(ジョジョの奇妙な冒険),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+10307,vento aureo,黄金の風(ジョジョの奇妙な冒険 第5部),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 10310,verniy (kancolle),ヴェールヌイ(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10327,vertin (reverse:1999),ヴェルティ(リバース：1999),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10343,viera,ヴィエラ(ファイナルファンタジー),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
