@@ -329,13 +329,15 @@ body > .prompt-bubble.is-dragging .prompt-bubble-action {
 
   .editor-builder-panel .prompt-bubble-menu {
     position: fixed;
-    left: 12px;
-    right: 12px;
+    left: 50%;
+    right: auto;
     top: auto;
     bottom: 12px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: auto;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    width: min(320px, calc(100vw - 24px));
     min-width: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .editor-builder-panel .prompt-bubble-menu-item {
