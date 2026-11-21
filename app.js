@@ -1851,6 +1851,11 @@
     $('[data-action="save-positive"]').disabled = !positive?.value;
     $('[data-action="copy-negative"]').disabled = !negative?.value;
     $('[data-action="save-negative"]').disabled = !negative?.value;
+    const negativeSummary = $("#negative-summary-count");
+    if (negativeSummary) {
+      const negativeTagCount = parsePromptTokens(negative?.value || "").length;
+      negativeSummary.textContent = negativeTagCount ? `${negativeTagCount}タグ` : "未設定";
+    }
     renderPromptMetrics();
     renderPromptConflictWarning();
     updateUndoButtons();
