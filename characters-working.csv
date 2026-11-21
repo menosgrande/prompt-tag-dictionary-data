@@ -2410,7 +2410,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9637,tengen toppa gurren lagann,天元突破グレンラガン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9641,tenka hyakken,天華百剣,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9642,tenma tsukasa,天馬司(プロジェクトセカイ カラフルステージ！ feat. 初音ミク),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-9646,tennoji rina,天王寺璃奈(ラブライブ！虹ヶ咲学園スクールアイドル同好会),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+9646,tennoji rina,天王寺璃奈(ラブライブ！虹ヶ咲学園スクールアイドル同好会),キャラクター・作品,キャラクター,,"[""tennouji rina (love live!)""]",verified,0,verified,verified,normal
 9647,tenryuu (kancolle),天龍(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9648,tensei shitara slime datta ken,転生したらスライムだった件,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9651,tera online,TERA(ゲームタイトル),キャラクター・作品,タイトル（作品名）,,"[""テラ""]",verified,0,verified,verified,normal
@@ -2701,7 +2701,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 10913,yuigaoka school uniform,結ヶ丘女子高等学校の制服(ラブライブ！スーパースター!!),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 10915,yuki judai (yu-gi-oh! gx),遊城十代(遊☆戯☆王GX),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10916,yuki miku (vocaloid),雪ミク(ボーカロイド),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-10917,yuki setsuna,優木せつ菜(ラブライブ！虹ヶ咲学園スクールアイドル同好会),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+10917,yuki setsuna,優木せつ菜(ラブライブ！虹ヶ咲学園スクールアイドル同好会),キャラクター・作品,キャラクター,,"[""yuuki setsuna (love live!)""]",verified,0,verified,verified,normal
 10918,yukie (kusaka shi),yukie(kusaka shi),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 10919,yukihana lamy,雪花ラミィ(ホロライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10920,yukihana lamy (1st costume),雪花ラミィ(1st衣装),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -6154,7 +6154,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 16397,tenkyuu chimata,天弓千亦(東方Project),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16398,tenma saki,天馬咲希(プロジェクトセカイ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16400,tennouboshi uzume,天王星うずめ(超次元ゲイム ネプテューヌ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-16401,tennouji rina (love live!),天王寺璃奈(ラブライブ！虹ヶ咲学園スクールアイドル同好会),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16402,tenochtitlan (fate),テノチティトラン(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16403,tenochtitlan (second ascension) (fate),テノチティトラン(第二再臨)(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 16405,tenryuu (swimsuit) (kancolle),天龍(水着)(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -6608,7 +6607,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 17005,yuuki (sao),紺野木綿季(ソードアート・オンライン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 17006,yuuki haru,結城晴(アイドルマスター シンデレラガールズ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 17008,yuuki mikan,結城美柑(To LOVEる -とらぶる-),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-17009,yuuki setsuna (love live!),優木せつ菜(ラブライブ！虹ヶ咲学園スクールアイドル同好会),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 17010,yuuki yuuna,結城友奈(結城友奈は勇者である),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 17011,yuuri (shoujo shuumatsu ryokou),ユーリ(少女終末旅行),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 17013,yuzuhara konomi,柚原このみ(いちご100%),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
