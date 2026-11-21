@@ -1122,6 +1122,23 @@
           other.closest(".prompt-bubble")?.querySelector(".prompt-bubble-menu-toggle")?.setAttribute("aria-expanded", "false");
         });
         menu.hidden=!opening;
+        if(opening && window.matchMedia("(max-width: 600px)").matches){
+          const viewportHeight=window.visualViewport?.height||window.innerHeight;
+          const rect=chip.getBoundingClientRect();
+          const menuHeight=menu.getBoundingClientRect().height;
+          const gap=8,edge=12;
+          const belowSpace=viewportHeight-rect.bottom-gap-edge;
+          const aboveSpace=rect.top-gap-edge;
+          let top;
+          if(belowSpace>=menuHeight)top=rect.bottom+gap;
+          else if(aboveSpace>=menuHeight)top=rect.top-menuHeight-gap;
+          else top=Math.max(edge,Math.min(rect.bottom+gap,viewportHeight-menuHeight-edge));
+          menu.style.top=top+"px";
+          menu.style.bottom="auto";
+        }else{
+          menu.style.removeProperty("top");
+          menu.style.removeProperty("bottom");
+        }
         menuToggle.setAttribute("aria-expanded", String(opening));
       });
       chip.addEventListener("focusout",event=>{
