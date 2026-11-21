@@ -285,7 +285,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1537,byleth (male) (fire emblem),ベレト(ファイアーエムブレム 風花雪月),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1539,c.c. (Code Geass),C.C.(コードギアス),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1547,caelus (honkai: star rail),開拓者(男性主人公／崩壊：スターレイル),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-1548,caesar anthonio zeppeli (JoJo's Bizarre Adventure),シーザー・A・ツェペリ(ジョジョの奇妙な冒険),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+1548,caesar anthonio zeppeli (JoJo's Bizarre Adventure),シーザー・A・ツェペリ,キャラクター・作品,キャラクター,,"[""caesar anthonio zeppeli""]",verified,0,verified,verified,normal
 1551,cait aron,Cait Aron(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 1556,caliburn (fate),カリバーン(Fate),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 1558,call of duty,コール オブ デューティ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -1022,7 +1022,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4895,japari bun,ジャパリまん(けものフレンズ),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 4898,javelin (azur lane),ジャベリン(アズールレーン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4900,jean (genshin impact),ジン(原神),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4901,jean pierre polnareff (JoJo's Bizarre Adventure),ジャン・ピエール・ポルナレフ(ジョジョの奇妙な冒険),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+4901,jean pierre polnareff (JoJo's Bizarre Adventure),ジャン＝ピエール・ポルナレフ,キャラクター・作品,キャラクター,,"[""jean pierre polnareff""]",verified,0,verified,verified,normal
 4906,jervis (kancolle),ジャーヴィス(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4907,jessie (pokemon),ムサシ(ポケモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4912,jeweled branch of hourai,蓬莱の玉の枝,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
@@ -1031,7 +1031,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4921,jinguu (4839ms),Jinguu(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4922,jintsuu (kancolle),神通(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4923,jinx (league of legends),ジンクス(リーグオブレジェンド),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4928,johnny joestar (JoJo's Bizarre Adventure: Steel Ball Run),ジョニィ・ジョースター(ジョジョの奇妙な冒険 Part7 スティール・ボール・ラン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
+4928,johnny joestar (JoJo's Bizarre Adventure: Steel Ball Run),ジョニィ・ジョースター(ジョジョの奇妙な冒険 Part7 スティール・ボール・ラン),キャラクター・作品,キャラクター,,"[""johnny joestar""]",verified,0,verified,verified,normal
 4930,jojo no kimyou na bouken,ジョジョの奇妙な冒険,キャラクター・作品,タイトル（作品名）,,"[""JoJo's Bizarre Adventure""]",verified,0,verified,verified,normal
 4932,jojolion,ジョジョリオン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4933,jokanhiyou,jokanhiyou(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
@@ -3298,7 +3298,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 12493,byleth (female) (summer) (fire emblem),ベレス(水着／女性／ファイアーエムブレム 風花雪月),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12495,c.c.,C.C.(コードギアス 反逆のルルーシュ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12497,caenis (fate),カイニス(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-12498,caesar anthonio zeppeli,シーザー・アントニオ・ツェペリ(ジョジョの奇妙な冒険),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12499,caesar king (zenless zone zero),シーザー・キング(ゼンレスゾーンゼロ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12500,cagalli yula athha,カガリ・ユラ・アスハ(機動戦士ガンダムSEED),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 12501,cagliostro (granblue fantasy),カリオストロ(グランブルーファンタジー),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4299,7 +4298,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13807,jaune arc,ジョーン・アーク(RWBY),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13810,jean (sea breeze dandelion) (genshin impact),ジン(海風の夢)(原神),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13811,jean bart (azur lane),ジャン・バール(アズールレーン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-13812,jean pierre polnareff,ジャン＝ピエール・ポルナレフ(ジョジョの奇妙な冒険),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13813,jeanne d'arc (fate),ジャンヌ・ダルク(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13814,jeanne d'arc (granblue fantasy),ジャンヌ・ダルク(グランブルーファンタジー),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13815,jeanne d'arc (swimsuit archer) (fate),ジャンヌ・ダルク(アーチャー／水着)(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -4326,7 +4324,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 13842,jirachi,ジラーチ(ポケモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13843,jiraiya (naruto),自来也(NARUTO),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13844,jirou kyouka,耳郎響香(僕のヒーローアカデミア),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-13845,johnny joestar,ジョニィ・ジョースター(ジョジョの奇妙な冒険),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13846,johnston (kancolle),ジョンストン(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13847,jolteon,サンダース(ポケモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 13849,jonouchi katsuya,城之内克也(遊☆戯☆王),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
