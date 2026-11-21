@@ -387,7 +387,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2327,darjeeling (girls und panzer),ダージリン(ガールズ＆パンツァー),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2337,dark magician girl,ブラック・マジシャン・ガール(遊☆戯☆王),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2341,dark souls (series),ダークソウル(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-2342,dark souls i,ダークソウル,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+2342,dark souls i,ダークソウル(第1作),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2343,dark souls iii,ダークソウルIII,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2346,darker than black,DARKER THAN BLACK,キャラクター・作品,タイトル（作品名）,,"[""ダーカーザンブラック""]",verified,0,verified,verified,normal
 2348,darkness (konosuba),ダクネス(この素晴らしい世界に祝福を！),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -445,7 +445,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2552,dr rex,レックス博士,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 2553,dr. ratio (honkai: star rail),Dr.レイシオ(崩壊：スターレイル),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2554,dragalia lost,ドラガリアロスト,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-2557,dragon ball,ドラゴンボール,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+2557,dragon ball,ドラゴンボール(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2558,dragon ball (classic),ドラゴンボール(クラシック),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2559,dragon ball fighterz,ドラゴンボールファイターズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2560,dragon ball gt,ドラゴンボールGT,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -925,7 +925,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4685,icho private high school uniform,イチョ私立高校のユニフォーム,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 4688,identity v,第五人格,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4689,ido (teketeke),いど(イラストレーター・漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-4692,idolmaster,アイドルマスター,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+4692,idolmaster,アイドルマスター(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4693,idolmaster (classic),アイドルマスター(アーケード版),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4694,idolmaster 1,アイドルマスター(初代),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4695,idolmaster 2,アイドルマスター2,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -1818,7 +1818,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6904,oshi no ko,推しの子,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6905,oshida (girls und panzer),オシダ(ガールズ＆パンツァー),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6907,oshiro project:re,御城プロジェクト:RE,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-6908,osomatsu (series),おそ松さん/くん,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+6908,osomatsu (series),おそ松くん・おそ松さん(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6909,osomatsu-kun,おそ松くん,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6910,osomatsu-san,おそ松さん,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6914,otokuyou,オトクヨウ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
@@ -2259,7 +2259,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9020,spider-man (series),スパイダーマン(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9021,spider-verse,スパイダーバース,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9046,splatoon (series),スプラトゥーン(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-9047,splatoon 1,スプラトゥーン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
+9047,splatoon 1,スプラトゥーン(初代),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9048,splatoon 2,スプラトゥーン2,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9049,splatoon 3,スプラトゥーン3,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9051,splattershot (splatoon),スプラシューター(スプラトゥーン),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
