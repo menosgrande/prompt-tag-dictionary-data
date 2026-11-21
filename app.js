@@ -1633,9 +1633,12 @@
     if (!range || !query) { hidePromptAutocomplete(target); return; }
     const candidates = state.all.map(row => {
       const fields = row._bubbleSearchFields || [];
+      const tag = normalizeSearchText(row.tag || "");
+      const tagWords = String(row.tag || "").split(/[\s\p{P}\p{S}]+/u)
+        .map(normalizeSearchText).filter(Boolean);
       const rank = fields.some(value => value === query) ? 0
         : fields.some(value => value.startsWith(query)) ? 1
-        : fields.some(value => value.includes(query)) ? 2 : 9;
+        : tagWords.some(word => word.startsWith(query)) ? 2 : 9;
       return { row, rank };
     }).filter(item => item.rank < 9)
       .sort((a, b) => a.rank - b.rank || String(a.row.tag).localeCompare(String(b.row.tag), "en"))
