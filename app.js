@@ -4,7 +4,7 @@
     { url: "./dictionary-working.csv", source: "dictionary-working.csv", label: "一般" },
     { url: "./characters-working.csv", source: "characters-working.csv", label: "作品・人物" }
   ];
-  const PAGE_SIZE = 150;
+  const PAGE_SIZE = 100;
   const HEADERS = ["index","tag","ja","major","minor","detail","aliases_json","translation_status","ero_level","ero_review_status","classification_review_status","age_safety"];
   const MAJOR_CATEGORY_ORDER = [
     "品質・ネガティブ", "人数・人物構成", "人物の特徴", "顔・表情", "髪・頭部",
@@ -2179,10 +2179,16 @@
     $(".pagination").addEventListener("click", event => {
       const button = event.target.closest("[data-page]");
       if (!button || button.disabled) return;
+      const pagination = $(".pagination");
+      const previousTop = pagination.getBoundingClientRect().top;
       if (button.dataset.page === "prev") state.page--;
       else if (button.dataset.page === "next") state.page++;
       else state.page = Number(button.dataset.page);
       renderRows();
+      requestAnimationFrame(() => {
+        const currentTop = pagination.getBoundingClientRect().top;
+        window.scrollBy(0, currentTop - previousTop);
+      });
     });
     $(".tag-results").addEventListener("click", event => {
       const favorite = event.target.closest("[data-favorite]");
