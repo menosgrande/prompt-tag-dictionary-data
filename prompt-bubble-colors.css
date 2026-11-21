@@ -332,11 +332,15 @@ body > .prompt-bubble.is-dragging .prompt-bubble-action {
     left: 50%;
     right: auto;
     top: auto;
-    bottom: 12px;
+    bottom: max(12px, env(safe-area-inset-bottom));
     transform: translateX(-50%);
     box-sizing: border-box;
     width: min(320px, calc(100vw - 24px));
     min-width: 0;
+    max-height: calc(100vh - 24px);
+    max-height: calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    overflow-y: auto;
+    overscroll-behavior: contain;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
