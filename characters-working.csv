@@ -6,7 +6,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 45,6 (yuchae),6 (Yuchae)(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 50,7th dragon (series),セブンスドラゴン(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 52,9s (nier:automata),ヨルハ九号S型(ニーア オートマタ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-53,a certain high school uniform,とある高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+53,a certain high school uniform,とある高校の制服 (とあるシリーズ),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 55,a1 (initial-g),A1(Initial-G)(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 56,aaaa (quad-a),AAAA(Quad-A)(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 58,abigail williams (fate),アビゲイル・ウィリアムズ(Fate/Grand Order),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -112,7 +112,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 349,anya (spy x family),アーニャ・フォージャー(SPY×FAMILY),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 350,anyoji hime (hasunosora jogakuin school idol club),安養寺姫芽(蓮ノ空女学院スクールアイドルクラブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 351,anzio military uniform,アンツィオ高校の軍服(ガールズ＆パンツァー),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
-352,anzio school uniform,アンツィオ高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+352,anzio school uniform,アンツィオ高校の制服 (ガールズ＆パンツァー),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 354,ao isami (Brave Bang Bravern!),イサミ・アオ(勇気爆発バーンブレイバーン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 355,aoba (kancolle),青葉(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 356,aoki (fumomo),Aoki(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
@@ -220,7 +220,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 771,bb (fate),BB(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 772,bb (fate/extra),BB(Fate/EXTRA),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 773,bb (swimsuit mooncancer) (fate),BB〔水着／ムーンキャンサー〕(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-774,bc freedom military uniform,BC自由学園の軍服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+774,bc freedom military uniform,BC自由学園の軍服 (ガールズ＆パンツァー),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 775,bea (pokemon),サイトウ(ポケモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 803,beatmania (series),beatmania(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 804,beatmania iidx,beatmania IIDX,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -303,7 +303,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1690,cerise bouquet (Love Live! Hasunosora Girls' High School Idol Club),スリーズブーケ(ラブライブ！蓮ノ空女学院スクールアイドルクラブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1693,cevio,CeVIO,キャラクター・作品,タイトル（作品名）,,"[""チェビオ""]",verified,0,verified,verified,normal
 1703,chainsaw man,チェンソーマン(漫画タイトル),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-1707,chaldea uniform,カルデアの制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+1707,chaldea uniform,カルデアの制服 (Fate/Grand Order),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 1714,chan co,ちゃんこ(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 1716,chando (ado),チャンド(Ado),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1717,changli (wuthering waves),長離(鳴潮),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -314,7 +314,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1767,chen (Touhou Project),橙(チェン／東方Project),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1785,cheval grand (umamusume),シュヴァルグラン(ウマ娘),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1788,chi-chi (dragon ball),チチ(ドラゴンボール),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-1789,chi-hatan military uniform,知波単学園の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+1789,chi-hatan military uniform,知波単学園の軍服 (ガールズ＆パンツァー),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 1793,chibi usa,ちびうさ(美少女戦士セーラームーン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 1797,chigusa minori,千種みのり(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 1799,chihaya anon (BanG Dream! It's MyGO!!!!!),千早愛音(BanG Dream! It's MyGO!!!!!),キャラクター・作品,キャラクター,,"[""chihaya anon""]",verified,0,verified,verified,normal
@@ -405,7 +405,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2381,dehya (genshin impact),ディシア(原神),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2382,dei shirou,Dei Shirou(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 2383,delicious party precure,デリシャスパーティ♡プリキュア,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-2389,demon slayer uniform,鬼殺隊隊服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+2389,demon slayer uniform,鬼殺隊の隊服 (鬼滅の刃),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 2392,dengeki moeoh,電撃萌王,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 2397,denji (chainsaw man),デンジ(チェンソーマン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2415,deviantart username,DeviantArtのユーザー名,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
@@ -469,7 +469,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2690,ebifurya,えびふりゃ(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 2691,echo (circa),エコー(頃)(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 2692,edelgard von hresvelg (Fire Emblem: Three Houses),エーデルガルト＝フォン＝フレスベルグ(ファイアーエムブレム 風花雪月),キャラクター・作品,キャラクター,,"[""edelgard von hresvelg""]",verified,0,verified,verified,normal
-2693,eden academy school uniform,イーデン校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+2693,eden academy school uniform,イーデン校の制服 (SPY×FAMILY),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 2694,edward elric (Fullmetal Alchemist),エドワード・エルリック(鋼の錬金術師),キャラクター・作品,キャラクター,,"[""edward elric""]",verified,0,verified,verified,normal
 2696,eevee (Pokémon),イーブイ(ポケモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2705,eila ilmatar juutilainen (Strike Witches),エイラ・イルマタル・ユーティライネン(ストライクウィッチーズ),キャラクター・作品,キャラクター,,"[""eila ilmatar juutilainen""]",verified,0,verified,verified,normal
@@ -544,7 +544,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2945,fate/samurai remnant,Fate/Samurai Remnant,キャラクター・作品,タイトル（作品名）,,"[""フェイト／サムライレムナント""]",verified,0,verified,verified,normal
 2946,fate/stay night,Fate/stay night,キャラクター・作品,タイトル（作品名）,,"[""フェイト／ステイナイト""]",verified,0,verified,verified,normal
 2947,fate/zero,Fate/Zero,キャラクター・作品,タイトル（作品名）,,"[""フェイト／ゼロ""]",verified,0,verified,verified,normal
-2950,fatui coat,ファデュイのコート,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+2950,fatui coat,ファデュイのコート (原神),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 2953,faust (project moon),ファウスト(Project Moon),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 2969,felicia (darkstalkers),フェリシア(ヴァンパイア),キャラクター・作品,キャラクター,,"[""felicia (vampire)""]",verified,0,verified,verified,normal
 2970,female admiral (kancolle),女性提督(艦これ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -588,13 +588,13 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3085,fkey,fkey(エフキー)(イラストレーター),キャラクター・作品,作者・配信者,,"[""fkey"",""エフキー""]",verified,0,verified,verified,normal
 3098,flandre scarlet (Touhou Project),フランドール・スカーレット(東方Project),キャラクター・作品,キャラクター,,"[""flandre scarlet""]",verified,0,verified,verified,normal
 3111,fletcher (kancolle),フレッチャー(艦これ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-3112,fleur de lapin uniform,フルール・ド・ラパンの制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+3112,fleur de lapin uniform,フルール・ド・ラパンの制服 (ご注文はうさぎですか？),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 3140,florence nightingale (fate),フローレンス・ナイチンゲール(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 3141,florian (pokemon),ハルト(ポケモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 3151,flower knight girl,フラワーナイトガール,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 3224,formidable (azur lane),フォーミダブル(アズールレーン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 3226,fou (fate),fou(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-3230,fourth east high school uniform,第四東高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+3230,fourth east high school uniform,第四東高校の制服 (魔法科高校の劣等生),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 3240,francesca lucchini (strike witches),フランチェスカ・ルッキーニ(ストライクウィッチーズ),キャラクター・作品,キャラクター,,"[""francesca lucchini""]",verified,0,verified,verified,normal
 3241,frapowa,フラポワ(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 3243,free!,Free!(作品),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -643,7 +643,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3414,gakuen idolmaster,学園アイドルマスター,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 3416,galaga,ギャラガ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 3418,galaxy angel,ギャラクシーエンジェル,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-3419,galaxy expedition team survey corps uniform,銀河探検隊・調査隊の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+3419,galaxy expedition team survey corps uniform,ギンガ団調査隊の制服 (ポケットモンスター LEGENDS アルセウス),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 3420,gamagoori ira (Kill la Kill),蟇郡苛(キルラキル),キャラクター・作品,キャラクター,,"[""gamagoori ira""]",verified,0,verified,verified,normal
 3421,gambier bay (kancolle),ガンビア・ベイ(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 3429,ganaha hibiki (The Idolmaster),我那覇響(アイドルマスター),キャラクター・作品,キャラクター,,"[""ganaha hibiki""]",verified,0,verified,verified,normal
@@ -652,12 +652,12 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3434,gaoo (frpjx283),がおー(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 3435,gap (touhou),ギャップ(touhou),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 3438,gardevoir (Pokémon),サーナイト(ポケモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-3439,garreg mach monastery uniform,ガルグ＝マク大修道院の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+3439,garreg mach monastery uniform,ガルグ＝マク大修道院の制服 (ファイアーエムブレム 風花雪月),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 3450,gawr gura (Hololive),がうる・ぐら(ホロライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 3451,gawr gura (1st costume),がうる・ぐら(1着目の衣装),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 3453,gegege no kitarou,ゲゲゲの鬼太郎,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-3454,gekkoukan high school uniform,月光館学園の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
-3457,gem uniform (houseki no kuni),宝石の国の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+3454,gekkoukan high school uniform,月光館学園の制服 (ペルソナ3),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+3457,gem uniform (houseki no kuni),宝石たちの制服 (宝石の国),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 3462,gengar (Pokémon),ゲンガー(ポケモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 3463,genshin impact,原神,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 3464,gensou suikoden,幻想水滸伝,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -700,7 +700,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3619,grass wonder (umamusume),グラスワンダー(ウマ娘),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 3767,grey wolf (kemono friends),タイリクオオカミ(けものフレンズ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 3773,gridman universe,グリッドマン ユニバース,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-3774,griffin & kryuger military uniform,グリフィン＆クルーガーの軍服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+3774,griffin & kryuger military uniform,グリフィン＆クルーガーの軍服 (ドールズフロントライン),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 3779,grimoire of alice,アリスのグリモア(東方怪綺談),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 3796,guilty crown,ギルティクラウン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 3797,guilty gear,ギルティギア,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -744,9 +744,9 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3940,hanako (swimsuit) (blue archive),浦和ハナコ(水着),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 3942,hanamura yousuke (persona 4),花村陽介(ペルソナ4),キャラクター・作品,キャラクター,,"[""hanamura yousuke""]",verified,0,verified,verified,normal
 3943,hanasaki tsubomi (HeartCatch PreCure!),花咲つぼみ(ハートキャッチプリキュア！),キャラクター・作品,キャラクター,,"[""hanasaki tsubomi""]",verified,0,verified,verified,normal
-3944,hanasakigawa school uniform,花咲川女子学園の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+3944,hanasakigawa school uniform,花咲川女子学園の制服 (BanG Dream!),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 4026,hanekawa tsubasa (Monogatari),羽川翼(〈物語〉シリーズ),キャラクター・作品,キャラクター,,"[""hanekawa tsubasa""]",verified,0,verified,verified,normal
-4027,haneoka school uniform,羽丘女子学園の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+4027,haneoka school uniform,羽丘女子学園の制服 (BanG Dream!),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 4035,haniyasushin keiki (Touhou Project),埴安神袿姫(東方Project),キャラクター・作品,キャラクター,,"[""haniyasushin keiki""]",verified,0,verified,verified,normal
 4037,hanyuu (Higurashi When They Cry),羽入(ひぐらしのなく頃に),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4040,happinesscharge precure!,ハピネスチャージプリキュア！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -766,13 +766,13 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4070,haruyama kazunori,春山和則(アニメーター・キャラクターデザイナー),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4071,harvin (Granblue Fantasy),ハーヴィン族(グランブルーファンタジー),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4073,hassan of serenity (fate),セレニティのハッサン(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4074,hasu no sora school uniform,蓮ノ空女学院の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+4074,hasu no sora school uniform,蓮ノ空女学院の制服 (ラブライブ！蓮ノ空女学院スクールアイドルクラブ),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 4075,hasumi (blue archive),ハスミ(ブルーアーカイブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4076,hasumi (track) (blue archive),羽川ハスミ(体操服),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4089,hata no kokoro (Touhou Project),秦こころ(東方Project),キャラクター・作品,キャラクター,,"[""hata no kokoro""]",verified,0,verified,verified,normal
 4090,hataraku saibou,はたらく細胞,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4092,hatoba tsugu,鳩羽つぐ(枝の上),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4093,hatsuboshi gakuen school uniform,初星学園の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+4093,hatsuboshi gakuen school uniform,初星学園の制服 (学園アイドルマスター),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 4094,hatsune miku (Vocaloid),初音ミク(ボーカロイド),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4095,hatsune miku (append),初音ミク(Append),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4096,hatsune miku (cosplay),初音ミクのコスプレ,キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -814,7 +814,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4252,hiiragi tsukasa (Lucky Star),柊つかさ(らき☆すた),キャラクター・作品,キャラクター,,"[""hiiragi tsukasa""]",verified,0,verified,verified,normal
 4253,hijiri byakuren (Touhou Project),聖白蓮(東方Project),キャラクター・作品,キャラクター,,"[""hijiri byakuren""]",verified,0,verified,verified,normal
 4254,hikari (blue archive),橘ヒカリ(ブルーアーカイブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-4255,hikarizaka private high school uniform,光坂高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+4255,hikarizaka private high school uniform,光坂高校の制服 (CLANNAD),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 4256,hikawa hina (BanG Dream!),氷川日菜(BanG Dream!),キャラクター・作品,キャラクター,,"[""hikawa hina""]",verified,0,verified,verified,normal
 4257,hikawa sayo (BanG Dream!),氷川紗夜(BanG Dream!),キャラクター・作品,キャラクター,,"[""hikawa sayo""]",verified,0,verified,verified,normal
 4259,hilbert (pokemon),トウヤ(ポケモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -849,7 +849,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4300,hizaka,ヒザカ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4301,hizuki yayoi,ひづき夜宵(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4302,ho-kago tea time,放課後ティータイム,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-4304,hogwarts school uniform,ホグワーツ学校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+4304,hogwarts school uniform,ホグワーツの制服 (ハリー・ポッター),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 4305,hojo karen (The Idolmaster Cinderella Girls),北条加蓮(アイドルマスター シンデレラガールズ),キャラクター・作品,キャラクター,,"[""hojo karen""]",verified,0,verified,verified,normal
 4513,holo (Spice and Wolf),ホロ(狼と香辛料),キャラクター・作品,キャラクター,,"[""holo""]",verified,0,verified,verified,normal
 4518,hololive,ホロライブ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
@@ -860,7 +860,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4523,holomyth,ホロライブEnglish Myth,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4524,holostars,ホロスターズ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4525,holostars english,ホロスターズEnglish,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-4528,homurabara academy school uniform,穂群原学園の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+4528,homurabara academy school uniform,穂群原学園の制服 (Fate/stay night),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 4530,honda mio (the idolmaster cinderella girls),本田未央(アイドルマスター シンデレラガールズ),キャラクター・作品,キャラクター,,"[""honda mio""]",verified,0,verified,verified,normal
 4534,hong lu (project moon),ホンル(Project Moon),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4535,hong meiling (Touhou Project),紅美鈴(東方Project),キャラクター・作品,キャラクター,,"[""hong meiling""]",verified,0,verified,verified,normal
@@ -921,7 +921,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4682,ichikawa feesu,Ichikawa Feesu(イチカワ・フィース),キャラクター・作品,作者・配信者,,"[""ichikawa feesu"",""イチカワフィース""]",verified,0,verified,verified,normal
 4683,ichimi,イチミ,キャラクター・作品,作者・配信者,,"[""Ichimi""]",verified,0,verified,verified,normal
 4684,ichinose shiki (The Idolmaster Cinderella Girls),一ノ瀬志希(アイドルマスター シンデレラガールズ),キャラクター・作品,キャラクター,,"[""ichinose shiki""]",verified,0,verified,verified,normal
-4685,icho private high school uniform,イチョ私立高校のユニフォーム,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+4685,icho private high school uniform,私立銀杏学園の制服 (中二病でも恋がしたい！),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 4688,identity v,第五人格,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4689,ido (teketeke),いど(イラストレーター・漫画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 4692,idolmaster,アイドルマスター(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -1040,7 +1040,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4939,jougasaki mika (The Idolmaster Cinderella Girls),城ヶ崎美嘉(アイドルマスター シンデレラガールズ),キャラクター・作品,キャラクター,,"[""jougasaki mika""]",verified,0,verified,verified,normal
 4940,jougasaki rika (The Idolmaster Cinderella Girls),城ヶ崎莉嘉(アイドルマスター シンデレラガールズ),キャラクター・作品,キャラクター,,"[""jougasaki rika""]",verified,0,verified,verified,normal
 4946,jujutsu kaisen,呪術廻戦,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-4947,jujutsu tech uniform,東京都立呪術高等専門学校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+4947,jujutsu tech uniform,東京都立呪術高等専門学校の制服 (呪術廻戦),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 4948,juliana (pokemon),アオイ(ポケモン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 4953,jumpy dumpty (Genshin Impact),ボンボン爆弾(原神),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 4955,junketsu (Kill la Kill),純潔(キルラキル),キャラクター・作品,キャラクター,,"[""junketsu""]",verified,0,verified,verified,normal
@@ -1092,7 +1092,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5013,kamui gakupo (Vocaloid),神威がくぽ(ボーカロイド),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5015,kaname madoka (Puella Magi Madoka Magica),鹿目まどか(魔法少女まどか☆マギカ),キャラクター・作品,キャラクター,,"[""kaname madoka""]",verified,0,verified,verified,normal
 5016,kaname madoka (magical girl),鹿目まどか(魔法少女),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5018,kanba girls high school uniform,神庭女子藝術高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+5018,kanba girls high school uniform,神庭女子藝術高校の制服 (アサルトリリィ),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5019,kani biimu,かにビーム(イラストレーター・原画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5021,kankan33333,ポテトルス(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5022,kanna (blue archive),尾刃カンナ(ブルーアーカイブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1146,8 +1146,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5081,kazami yuuka (Touhou Project),風見幽香(東方Project),キャラクター・作品,キャラクター,,"[""kazami yuuka""]",verified,0,verified,verified,normal
 5082,kazenokaze,Kazenokaze(イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5083,kazusa (blue archive),杏山カズサ(ブルーアーカイブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5085,keizoku military uniform,継続高校の軍服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
-5086,keizoku school uniform,継続高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+5085,keizoku military uniform,継続高校の軍服 (ガールズ＆パンツァー),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+5086,keizoku school uniform,継続高校の制服 (ガールズ＆パンツァー),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5087,kel (omori),ケル(OMORI),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5088,kemachiku,Kemachiku(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5089,kemomimi-chan (naga u),ケモミミちゃん(naga u),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1161,7 +1161,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5100,keroro gunsou,ケロロ軍曹,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5102,kessoku band,結束バンド(ぼっち・ざ・ろっく！),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5112,kiana kaslana (Honkai Impact 3rd),キアナ・カスラナ(崩壊3rd),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5113,kibito high school uniform,キビト高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+5113,kibito high school uniform,輝日東高校の制服 (アマガミ),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5114,kicchou yachie (Touhou Project),吉弔八千慧(東方Project),キャラクター・作品,キャラクター,,"[""kicchou yachie""]",verified,0,verified,verified,normal
 5115,kichihachi,キチハチ(イラストレーター),キャラクター・作品,作者・配信者,,"[""Kichihachi""]",verified,0,verified,verified,normal
 5118,kid icarus,パルテナの鏡,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -1204,12 +1204,12 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5169,kishin sagume (Touhou Project),稀神サグメ(東方Project),キャラクター・作品,キャラクター,,"[""kishin sagume""]",verified,0,verified,verified,normal
 5170,kiso (kancolle),木曾(艦これ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5177,kisume (Touhou Project),キスメ(東方Project),キャラクター・作品,キャラクター,,"[""kisume""]",verified,0,verified,verified,normal
-5178,kita high school uniform,キタ高校のユニフォーム,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+5178,kita high school uniform,県立北高校の制服 (涼宮ハルヒの憂鬱),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5179,kita ikuyo (Bocchi the Rock!),喜多郁代(ぼっち・ざ・ろっく！),キャラクター・作品,キャラクター,,"[""kita ikuyo""]",verified,0,verified,verified,normal
 5180,kitagawa marin (My Dress-Up Darling),喜多川海夢(その着せ替え人形は恋をする),キャラクター・作品,キャラクター,,"[""kitagawa marin""]",verified,0,verified,verified,normal
 5181,kitakami (kancolle),北上(艦これ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5182,kitasan black (umamusume),キタサンブラック(ウマ娘),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-5183,kitauji high school uniform,北宇治高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+5183,kitauji high school uniform,北宇治高校の制服 (響け！ユーフォニアム),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5187,kitsunerider,キツネライダー,キャラクター・作品,作者・配信者,,"[""Kitsunerider""]",verified,0,verified,verified,normal
 5190,kiyohime (fate),清姫(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5191,kiyoshimo (kancolle),清霜(艦これ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1241,7 +1241,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5238,kongou (kancolle),金剛(艦これ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5239,konjiki no yami (To Love-Ru),金色の闇(To LOVEる),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5241,kono subarashii sekai ni shukufuku wo!,この素晴らしい世界に祝福を！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-5242,konohagakure shinobi uniform,木ノ葉隠れの忍者服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+5242,konohagakure shinobi uniform,木ノ葉隠れの忍者服 (NARUTO),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5244,konoshige (ryuun),コノシゲ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5245,konpaku youmu (Touhou Project),魂魄妖夢(東方Project),キャラクター・作品,キャラクター,,"[""konpaku youmu""]",verified,0,verified,verified,normal
 5246,konpaku youmu (ghost),魂魄妖夢(半人半霊),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1333,7 +1333,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5530,lio fotia,リオ・フォーティア(プロメア),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5544,lisa (genshin impact),リサ(原神),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5546,little busters!,リトルバスターズ！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-5547,little busters! school uniform,リトルバスターズ！の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+5547,little busters! school uniform,制服 (リトルバスターズ！),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5548,little nuns (diva),リトル・ナンズ(Diva作品),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5549,little red riding hood (Fairy Tale),赤ずきん(童話),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 5550,little red riding hood (grimm),赤ずきん(グリム童話),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1491,7 +1491,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5949,merunyaa,Merunyaa(絵師・アニメーター),キャラクター・作品,作者・配信者,,"[""Merunyaa"",""メルニャー""]",verified,0,verified,verified,normal
 5950,mery (yangmalgage),Mery(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 5958,metal gear (series),メタルギアシリーズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-5961,metamoran vest,メタモル星人のベスト,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+5961,metamoran vest,メタモル星人のベスト (ドラゴンボール),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 5963,metroid,メトロイド,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 5964,meyoco,Meyoco(イラストレーター),キャラクター・作品,作者・配信者,,"[""Meyoco"",""メヨコ""]",verified,0,verified,verified,normal
 5966,michishio (kancolle),満潮(艦これ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1612,7 +1612,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6201,mother (series),MOTHERシリーズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6202,mother 2,MOTHER2,キャラクター・作品,タイトル（作品名）,,"[""マザー2"",""MOTHER2 ギーグの逆襲""]",verified,0,verified,verified,normal
 6208,motoori kosuzu,本居小鈴(東方Project),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-6212,motosu school uniform,本栖の学校制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+6212,motosu school uniform,本栖高校の制服 (ゆるキャン△),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 6215,mountain (arknights),マウンテン(アークナイツ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6229,mr. c.b. (umamusume),ミスターシービー(ウマ娘),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6232,mudrock (arknights),マドロック(アークナイツ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1665,11 +1665,11 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6391,nakiri ayame (Hololive),百鬼あやめ(ホロライブ),キャラクター・作品,キャラクター,,"[""nakiri ayame""]",verified,0,verified,verified,normal
 6394,nami (one piece),ナミ(ONE PIECE),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6395,namori,なもり(漫画家・イラストレーター),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
-6396,nanairogaoka middle school uniform,七色ヶ丘中学校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+6396,nanairogaoka middle school uniform,七色ヶ丘中学校の制服 (スマイルプリキュア！),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 6397,nanakusa suzuna,Nanakusa Suzuna(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6398,nanami chiaki,七海千秋(スーパーダンガンロンパ2 さよなら絶望学園),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6399,nanami kento,七海建人(呪術廻戦),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-6400,nanamori school uniform,七森中学校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+6400,nanamori school uniform,七森中学校の制服 (ゆるゆり),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 6401,nanao naru,七尾奈留(イラストレーター・原画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6402,nanasaki ai,七咲逢(アマガミ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6403,nanase nao,ナナセ・ナオ,キャラクター・作品,作者・配信者,,"[""Nanase Nao""]",verified,0,verified,verified,normal
@@ -1677,9 +1677,9 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6405,nanashi inc.,ななしいんく,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6406,nanashi mumei,七詩ムメイ(ホロライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6407,nanashi mumei (1st costume),七詩ムメイ(初期衣装),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-6409,naoetsu high school uniform,直江津高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+6409,naoetsu high school uniform,直江津高校の制服 (〈物語〉シリーズ),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 6412,napoleon bonaparte (fate),ナポレオン(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-6413,naranja academy school uniform,オレンジアカデミーの制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+6413,naranja academy school uniform,オレンジアカデミーの制服 (ポケットモンスター スカーレット・バイオレット),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 6414,narita brian (umamusume),ナリタブライアン(ウマ娘),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6415,narita taishin (umamusume),ナリタタイシン(ウマ娘),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6416,narmaya (granblue fantasy),ナルメア(グランブルーファンタジー),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1724,7 +1724,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6508,nicole demara,ニコール・デマラ(ゼンレスゾーンゼロ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6509,nier (series),NieRシリーズ(ニーア),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6510,nier:automata,ニーア オートマタ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-6512,night raven college uniform,ナイトレイブンカレッジの制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+6512,night raven college uniform,ナイトレイブンカレッジの制服 (ディズニー ツイステッドワンダーランド),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 6518,niijima makoto,新島真(ペルソナ5),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6519,niiko (gonnzou),にいこ(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6521,nijisanji,にじさんじ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
@@ -1771,7 +1771,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6673,octoling player character,タコのプレイヤーキャラクター(スプラトゥーン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6675,oda nobunaga (fate),織田信長(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6676,oda nobunaga (koha-ace),織田信長(コハエース),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-6678,odaiba girls high school uniform,お台場女子高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+6678,odaiba girls high school uniform,お台場女子高校の制服 (アサルトリリィ),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 6679,odawara hakone,小田原箱根,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6682,oekakizuki,西海,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6707,ogami kazuki,小川小辞,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
@@ -1793,9 +1793,9 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6776,onii-chan wa oshimai!,お兄ちゃんはおしまい！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 6778,onikobe rin,鬼首りん,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6782,onozuka komachi (Touhou Project),小野塚小町(東方Project),キャラクター・作品,キャラクター,,"[""onozuka komachi""]",verified,0,verified,verified,normal
-6785,ooarai military uniform,大洗の軍服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
-6786,ooarai school uniform,大洗女子学園の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
-6787,oohashi high school uniform,大橋高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+6785,ooarai military uniform,大洗女子学園の軍服 (ガールズ＆パンツァー),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+6786,ooarai school uniform,大洗女子学園の制服 (ガールズ＆パンツァー),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+6787,oohashi high school uniform,大橋高校の制服 (とらドラ！),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 6788,ooi (kancolle),大井(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6789,ookami mio,大神ミオ(ホロライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6792,ootori emu (Project Sekai),鳳えむ(プロジェクトセカイ カラフルステージ！ feat. 初音ミク),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1823,7 +1823,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6914,otokuyou,オトクヨウ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 6915,otomune kozue (Love Live! Hasunosora),乙宗梢(ラブライブ！蓮ノ空女学院スクールアイドルクラブ),キャラクター・作品,キャラクター,,"[""otomune kozue""]",verified,0,verified,verified,normal
 6916,otonashi kotori,音無小鳥(アイドルマスター),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-6917,otonokizaka school uniform,音ノ木坂学院の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+6917,otonokizaka school uniform,音ノ木坂学院の制服 (ラブライブ！),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 6922,oumae kumiko,黄前久美子(響け！ユーフォニアム),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6923,ouro kronii,オーロ・クロニー(ホロライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 6924,ouro kronii (1st costume),オーロ・クロニー(1st衣装),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -1901,8 +1901,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 7505,potara earrings,ポタラ(ドラゴンボール),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 7508,pote (ptkan),ぽて(作者),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 7520,power (chainsaw man),パワー(チェーンソーマン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-7529,pravda military uniform,プラヴダ軍服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
-7530,pravda school uniform,プラウダ高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+7529,pravda military uniform,プラウダ高校の軍服 (ガールズ＆パンツァー),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+7530,pravda school uniform,プラウダ高校の制服 (ガールズ＆パンツァー),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 7535,precure,プリキュア,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 7544,pretty series,プリティーシリーズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 7549,princess connect!,プリンセスコネクト！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -1988,7 +1988,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8082,rosa (pokemon),メイ(ポケモンBW2),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8083,rosalina,ロゼッタ(スーパーマリオシリーズ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8087,rosehip (girls und panzer),ローズヒップ(ガールズ＆パンツァー),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-8088,roswaal mansion maid uniform,ローズ,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+8088,roswaal mansion maid uniform,ロズワール邸のメイド服 (Re:ゼロから始める異世界生活),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 8091,rotom,ロトム(ポケットモンスター),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8102,rowlet,モクロー(ポケットモンスター),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8103,roxy migurdia,ロキシー・ミグルディア(無職転生 ～異世界行ったら本気だす～),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2016,13 +2016,13 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8153,saigyouji yuyuko,西行寺幽々子(東方Project),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8154,saihara shuichi,最原終一(ニューダンガンロンパV3 みんなのコロシアイ新学期),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8160,sailor moon,セーラームーン,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-8163,sailor senshi uniform,セーラー戦士服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+8163,sailor senshi uniform,セーラー戦士の衣装 (美少女戦士セーラームーン),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 8165,sailor swimsuit (idolmaster),セーラー水着(アイドルマスター),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 8167,sainan high school uniform,彩南高校の制服(To LOVE-Ru),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 8168,saint quartz (fate),聖晶石(Fate/Grand Order),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8169,saint seiya,聖闘士星矢,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 8170,saiyan,サイヤ人(ドラゴンボール),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-8171,saiyan armor,サイヤ人の戦闘服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+8171,saiyan armor,サイヤ人の戦闘服 (ドラゴンボール),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 8172,sakamata chloe,沙花叉クロヱ(ホロライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8173,sakamata chloe (1st costume),沙花叉クロヱ(1st衣装),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8174,sakamoto mio,坂本美緒(ストライクウィッチーズ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2068,8 +2068,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8250,satou kazuma,佐藤和真(この素晴らしい世界に祝福を！),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8252,satou yuuki,サトウ・ユウキ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 8253,satsuki (kancolle),皐月(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-8257,saunders military uniform,サンダース軍服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
-8258,saunders school uniform,サンダース大学附属高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+8257,saunders military uniform,サンダース大学附属高校の軍服 (ガールズ＆パンツァー),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+8258,saunders school uniform,サンダース大学附属高校の制服 (ガールズ＆パンツァー),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 8263,sayonara zetsubou sensei,さよなら絶望先生,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 8264,sayori (neko works),さより(イラストレーター・原画家),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 8265,sazanami (kancolle),漣(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2196,7 +2196,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8615,shoukaku (kancolle),翔鶴(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8635,show by rock!!,SHOW BY ROCK!!,キャラクター・作品,タイトル（作品名）,,"[""ショウバイロック""]",verified,0,verified,verified,normal
 8645,shu (arknights),シュウ(アークナイツ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-8646,shuka high school uniform,秀華高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+8646,shuka high school uniform,秀華高校の制服 (ぼっち・ざ・ろっく！),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 8647,shun (blue archive),シュン(ブルーアーカイブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8648,shun (small) (blue archive),シュン(幼少期)(ブルーアーカイブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8651,shuten douji (fate),酒呑童子(Fate),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2225,7 +2225,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8905,snivy,ツタージャ(ポケットモンスター),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8906,snk,SNK(エス・エヌ・ケイ),キャラクター・作品,タイトル（作品名）,,"[""SNK"",""エスエヌケイ""]",verified,0,verified,verified,normal
 8926,sobble,メッソン(ポケットモンスター),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-8927,sobu high school uniform,総武高校の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+8927,sobu high school uniform,総武高校の制服 (やはり俺の青春ラブコメはまちがっている。),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 8937,sofra,ソフラ,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 8940,soga no tojiko,蘇我屠自古(東方Project),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 8949,son gohan,孫悟飯(ドラゴンボール),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2268,7 +2268,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9106,squidbeak splatoon,カラストンビ隊(スプラトゥーン),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 9113,squirtle,ゼニガメ(ポケットモンスター),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9114,ssss.gridman,SSSS.GRIDMAN,キャラクター・作品,タイトル（作品名）,,"[""グリッドマン""]",verified,0,verified,verified,normal
-9115,st. chronica academy school uniform,聖クロニカ学園の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+9115,st. chronica academy school uniform,聖クロニカ学園の制服 (僕は友達が少ない),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 9116,st. louis (azur lane),セントルイス(アズールレーン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9129,stakes of purgatory,煉獄の七姉妹(うみねこのなく頃に),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9131,stand (jojo),スタンド(ジョジョの奇妙な冒険),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
@@ -2346,7 +2346,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9489,taihou (azur lane),大鳳(アズールレーン),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9490,taihou (kancolle),大鳳(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9507,taimanin (series),対魔忍(シリーズ),キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
-9508,taimanin suit,対魔忍スーツ,キャラクター・作品,作品固有の衣装・要素,,[],verified,2,verified,verified,normal
+9508,taimanin suit,対魔忍スーツ (対魔忍シリーズ),キャラクター・作品,作品固有の衣装・要素,,[],verified,2,verified,verified,normal
 9509,tainaka ritsu,田井中律(けいおん！),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9510,taisa (kari),taisa(kari),キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
 9512,takafumi,takafumi,キャラクター・作品,作者・配信者,,[],verified,0,verified,verified,normal
@@ -2399,7 +2399,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9595,tatsuta (kancolle),龍田(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9608,team 9 (touhou),バカルテット(東方Project),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9609,team rocket,ロケット団(ポケットモンスター),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-9610,team rocket uniform,ロケット団の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+9610,team rocket uniform,ロケット団の制服 (ポケットモンスター),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 9620,tears of themis,未定事件簿,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 9623,tedeza rize,天々座理世(ご注文はうさぎですか？),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9624,teen titans,ティーン・タイタンズ,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
@@ -2451,7 +2451,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9811,tokisadame school uniform,時定高校の制服(日常),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 9812,tokisaki kurumi,時崎狂三(デート・ア・ライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9813,tokitsukaze (kancolle),時津風(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
-9814,tokiwadai school uniform,常盤台中学の制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+9814,tokiwadai school uniform,常盤台中学の制服 (とあるシリーズ),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 9816,tokoyami towa,常闇トワ(ホロライブ),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9817,tokoyami towa (1st costume),常闇トワ(通常衣装),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 9818,tokoyami towa (jirai kei),常闇トワ(地雷系衣装),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
@@ -2561,7 +2561,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 10256,utau,UTAU,キャラクター・作品,タイトル（作品名）,,"[""ウタウ""]",verified,0,verified,verified,normal
 10257,utawarerumono,うたわれるもの,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 10262,utsugi noriyuki (Saibou Shinkyoku),宇津木徳幸(細胞神曲),キャラクター・作品,キャラクター,,"[""utsugi noriyuki""]",verified,0,verified,verified,normal
-10263,uva academy school uniform,グレープアカデミーの制服,キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
+10263,uva academy school uniform,グレープアカデミーの制服 (ポケットモンスター スカーレット・バイオレット),キャラクター・作品,作品固有の衣装・要素,,[],verified,0,verified,verified,normal
 10266,uzaki-chan wa asobitai!,宇崎ちゃんは遊びたい！,キャラクター・作品,タイトル（作品名）,,[],verified,0,verified,verified,normal
 10267,uzuki (kancolle),卯月(艦隊これくしょん),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
 10268,uzumaki naruto,うずまきナルト(NARUTO),キャラクター・作品,キャラクター,,[],verified,0,verified,verified,normal
