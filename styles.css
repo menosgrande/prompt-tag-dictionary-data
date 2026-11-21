@@ -742,3 +742,5 @@ body{font-size:14px;line-height:1.65}
   .pagination-pages .page-number{min-width:22px;height:27px;padding:0 2px}
   .pagination-pages .page-ellipsis{padding:0 1px}
 }
+/* Use the app's own search-clear button instead of the browser's native one. */
+.searchbox input[type="search"]::-webkit-search-cancel-button{ -webkit-appearance:none; appearance:none; display:none; }
