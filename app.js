@@ -2236,6 +2236,8 @@
       }
       const add = event.target.closest("[data-add]");
       if (add) {
+        // Text selection in the tag/translation buttons must not be treated as a tag-add click.
+        if (window.getSelection()?.toString()) return;
         const row = state.all.find(item => keyOf(item) === add.dataset.add);
         if (row) {
           toggleRow(row);
