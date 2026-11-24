@@ -817,3 +817,24 @@ body{font-size:14px;line-height:1.65}
   .editor-builder-panel .builder-options{margin:0 8px 8px}
   .editor-builder-panel .negative-output-card>.output-header{min-height:42px;padding:8px 10px}
 }
+
+
+/* Reflect the selected prompt polarity across the entire tag row. */
+.tag-results .tag-row.is-selected.state-positive,
+.tag-results .tag-row.is-selected.state-positive:hover{
+  background:rgba(75,116,99,.16);
+}
+.tag-results .tag-row.is-selected.state-negative,
+.tag-results .tag-row.is-selected.state-negative:hover{
+  background:rgba(184,91,100,.18);
+}
+.tag-results .tag-row.is-selected.state-positive .tag-state-button.state-positive:hover{
+  border-color:#6fa58f;
+  background:#315448;
+  color:#a5ebc5;
+}
+.tag-results .tag-row.is-selected.state-negative .tag-state-button.state-negative:hover{
+  border-color:#b86d76;
+  background:#633940;
+  color:#ffb0b6;
+}
