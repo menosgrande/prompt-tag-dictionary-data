@@ -94,7 +94,7 @@
   function saveExpressionLevels() {
     writeUserDataV2({ expressionLevels: [...state.expressionLevels.entries()] });
   }
-  const DICTIONARY_SORT_FIELDS = new Set(["index", "tag", "ja", "major", "minor", "level", "favorites"]);
+  const DICTIONARY_SORT_FIELDS = new Set(["index", "tag", "ja", "major", "minor", "favorites"]);
   const DICTIONARY_FILTER_GROUPS = ["major", "level", "translation", "classification"];
   function saveDictionaryViewState() {
     writeUserDataV2({
@@ -497,7 +497,7 @@
         (state.columnFilters[key].has(value) ? ' checked' : '') + '> ' + escapeHTML(labelMap(value)) + '</label>'
       ).join("") + '</div><button type="button" class="column-filter-clear" data-filter-clear="' + key + '">この列の絞り込みを解除</button></fieldset>';
     const sortOptions = field => {
-      const labels = { tag: ["A → Z", "Z → A"], ja: ["あ → ん", "ん → あ"], major: ["分類順（昇順）", "分類順（降順）"], minor: ["あ → ん", "ん → あ"], level: ["低い順（0 → 4）", "高い順（4 → 0）"] };
+      const labels = { tag: ["A → Z", "Z → A"], ja: ["あ → ん", "ん → あ"], major: ["分類順（昇順）", "分類順（降順）"], minor: ["あ → ん", "ん → あ"] };
       return '<div class="column-sort-options"><strong>並び替え</strong>' +
         labels[field].map((label, index) => '<button type="button" data-sort-field="' + field + '" data-sort-direction="' + (index === 0 ? 'asc' : 'desc') + '"' +
           (state.sort === field && state.sortDirection === (index === 0 ? "asc" : "desc") ? ' aria-pressed="true"' : '') + '>' + label + '</button>').join("") +
@@ -510,7 +510,7 @@
       cells.major.innerHTML = sortOptions("major") + checkboxGroup("major", majors);
     }
     if (cells.level) cells.level.innerHTML =
-      sortOptions("level") + checkboxGroup("level", ["0","1","2","3","4","未設定"], value => value === "未設定" ? "未設定" : "レベル " + value);
+      checkboxGroup("level", ["0","1","2","3","4","未設定"], value => value === "未設定" ? "未設定" : "レベル " + value);
   }
   function searchMatchReasons(row) {
     if (!state.queryTerms.length) return [];
@@ -615,10 +615,6 @@
     else if (state.sort === "ja") state.filtered.sort((a,b) => direction * compareText(a.ja, b.ja));
     else if (state.sort === "major") state.filtered.sort((a,b) => direction * (compareMajorCategories(a.major || "", b.major || "") || compareText(a.tag, b.tag, "en")));
     else if (state.sort === "minor") state.filtered.sort((a,b) => direction * (compareText(a.minor, b.minor) || compareText(a.tag, b.tag, "en")));
-    else if (state.sort === "level") state.filtered.sort((a,b) => {
-      const left = expressionLevelFor(a), right = expressionLevelFor(b);
-      return direction * ((left === null ? 99 : left) - (right === null ? 99 : right));
-    });
     else if (state.sort === "favorites") state.filtered.sort((a,b) => direction * (Number(state.favorites.has(keyOf(b))) - Number(state.favorites.has(keyOf(a)))));
     // 元の順は読み込み時のindex順を維持する。
     state.page = 0;
