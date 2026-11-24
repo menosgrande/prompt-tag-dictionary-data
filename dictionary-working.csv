@@ -161,13 +161,13 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 255,amplifier,増幅器,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 256,amputee,四肢欠損,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 257,amulet,お守り,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
-258,amusement park,遊園地,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
+258,amusement park,遊園地,背景・場所,場所・室内外,,[],verified,0,verified,verified,normal
 260,analog clock,アナログ時計,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 261,analogous colors,類似色,光・演出,色調・色彩,,[],verified,0,verified,verified,normal
 264,anchor,アンカー,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 265,anchor choker,アンカーチョーカー,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 266,anchor hair ornament,錨の髪飾り,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
-267,anchor necklace,アンカーネックレス,服装・装飾,衣服,,[],verified,0,verified,verified,normal
+267,anchor necklace,アンカーネックレス,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 268,anchor ornament,錨の飾り,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 269,anchor print,アンカープリント,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 270,anchor symbol,アンカー記号,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
@@ -2916,7 +2916,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3611,graduation,卒業,状態・状況,時間・前後関係,,[],verified,0,verified,verified,normal
 3613,graffiti,落書きアート（グラフィティ）,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 3616,grand piano,グランドピアノ,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
-3617,grapes,ブドウ,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
+3617,grapes,ブドウ,生物・動植物,植物,,[],verified,0,verified,verified,normal
 3618,grass,草,生物・動植物,植物,,[],verified,0,verified,verified,normal
 3620,grave,墓,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
 3621,graveyard,墓地,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
@@ -8940,7 +8940,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11731,mirror sex,鏡の前での性行為,状態・状況,状態・変化,,[],verified,4,verified,verified,normal
 11732,virtual reality,VR,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 11733,dream sex,夢の中での性行為,状態・状況,状態・変化,,[],verified,4,verified,verified,normal
-11735,prison sex,,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+11735,prison sex,,動作・接触,性的行為・接触,,[],needs-review,4,verified,verified,normal
 11736,cinema,映画館,背景・場所,場所・室内外,,[],verified,0,verified,verified,normal
 11737,dark alley,路地裏,背景・場所,場所・室内外,,[],verified,0,verified,verified,normal
 11738,spaceship,宇宙船,背景・場所,場所・室内外,,[],verified,0,verified,verified,normal
