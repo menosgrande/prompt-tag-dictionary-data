@@ -957,7 +957,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1217,body armor,ボディアーマー,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
 1218,body blush,身体の赤面表現,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 1219,body freckles,身体のそばかす,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
-1220,body fur,体毛,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
+1220,body fur,体毛（獣毛）,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 1221,body hair,体毛,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
 1222,body horror,ボディホラー,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 1223,body markings,身体の模様,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
@@ -1080,7 +1080,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1350,breast strap,胸を支えるストラップ,服装・装飾,下着,,[],verified,0,verified,verified,normal
 1351,breast sucking,胸を吸う,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 1352,breast suppress,胸を押さえて目立たなくする,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
-1353,breast tattoo,胸のタトゥー,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
+1353,breast tattoo,乳房のタトゥー,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 1354,breastfeeding,授乳,動作・接触,対人接触・動作,,[],verified,0,verified,verified,normal
 1355,breastless clothes,胸部分を覆わない衣服,服装・装飾,衣服,,[],verified,3,verified,verified,normal
 1356,breastplate,胸当て,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
@@ -1298,7 +1298,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1590,canteen,水筒,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 1591,canvas (object),画布,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 1592,cap,キャップ,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
-1593,cape,マント,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
+1593,cape,ケープ,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 1594,capelet,ケープレット,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 1595,capri pants,カプリパンツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 1596,captured,捕らえられた状態,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
@@ -1468,7 +1468,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1779,chest of drawers,チェスト（引き出し収納）,家具・設備・物品,家具,,[],verified,0,verified,verified,normal
 1780,chest sarashi,胸に巻いたさらし,服装・装飾,下着,,[],verified,0,verified,verified,normal
 1781,chest strap,胸部ストラップ,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
-1782,chest tattoo,胸のタトゥー,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
+1782,chest tattoo,胸の上部のタトゥー,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 1783,chest tuft,胸元の毛束,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 1784,chestnut mouth,栗形の口,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 1786,chewing,噛む,動作・接触,身体動作,,[],verified,0,verified,verified,normal
@@ -1536,7 +1536,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1871,claw pose,爪を立てたポーズ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 1872,claw ring,爪型の指輪,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 1873,clawed gauntlets,爪付きガントレット,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
-1874,claws,爪,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
+1874,claws,鉤爪,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 1875,claymation,クレイアニメ,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 1877,cleaning,掃除,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 1878,cleaning rag,ぞうきん,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
@@ -1553,7 +1553,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1890,clipboard,クリップボード,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 1891,clitoral hood,クリトリス包皮,人物の特徴,身体部位・身体状態,,[],verified,4,verified,verified,normal
 1892,clitoral stimulation,クリトリス刺激,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-1893,cloak,マント,服装・装飾,衣服,,[],verified,0,verified,verified,normal
+1893,cloak,全身を覆うマント,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 1894,clock,時計,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 1895,clock eyes,時計の目,顔・表情,目,,[],verified,0,verified,verified,normal
 1896,clock tower,時計塔,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
@@ -2223,8 +2223,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2688,eating,食べる動作,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 2695,eel,うなぎ,生物・動植物,動物,,[],verified,0,verified,verified,normal
 2697,egasumi,ヱ霞,画風・描写,描画技法,,[],verified,0,verified,verified,normal
-2698,egg,卵,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
-2699,egg (food),卵,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
+2698,egg,殻付き卵,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
+2699,egg (food),食用の卵,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 2700,egg hair ornament,卵の髪の飾り,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 2701,egg laying,産卵,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 2702,eggplant,ナス,生物・動植物,植物,,[],verified,0,verified,verified,normal
@@ -2462,7 +2462,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3029,fingering through clothes,服の上から指で刺激する,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 3030,fingering through panties,パンティー越しに指で刺激する,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 3031,fingerless gloves,指なし手袋,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-3032,fingernails,爪,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
+3032,fingernails,手の爪,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 3033,fingersmile,指で口角を持ち上げた笑顔,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 3034,fins,ひれ,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 3035,fire,火,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
