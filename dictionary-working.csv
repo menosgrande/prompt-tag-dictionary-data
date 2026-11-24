@@ -246,7 +246,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 366,apron lift,エプロンを持ち上げる,動作・接触,衣服への接触,,[],verified,2,verified,verified,normal
 368,aqua background,水色の背景,背景・場所,空間・環境表現,,[],verified,0,verified,verified,normal
 369,aqua bikini,水色のビキニ,服装・装飾,水着,,[],verified,1,verified,verified,normal
-370,aqua bow,水色のリボン,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
+370,aqua bow,青緑色の蝶結び,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 371,aqua bowtie,水色の蝶ネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 372,aqua bra,水色のブラジャー,服装・装飾,下着,,[],verified,3,verified,verified,normal
 373,aqua dress,水色のドレス,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -255,7 +255,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 376,aqua footwear,水色の靴・履物,服装・装飾,靴・履物,,[],verified,0,verified,verified,normal
 377,aqua gemstone,水色の宝石,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 378,aqua gloves,水色の手袋,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-379,aqua hair,水色の髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
+379,aqua hair,青緑色の髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
 380,aqua hairband,水色のヘアバンド,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 381,aqua halo,水色の光輪,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 382,aqua hat,水色の帽子,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -266,7 +266,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 387,aqua neckerchief,水色のネッカチーフ,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 388,aqua necktie,水色のネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 389,aqua panties,水色のパンティー,服装・装飾,下着,,[],verified,3,verified,verified,normal
-390,aqua ribbon,水色のリボン,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
+390,aqua ribbon,青緑色のリボン,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 391,aqua shirt,水色のシャツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 392,aqua shorts,水色のショートパンツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 393,aqua skin,水色の肌,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
@@ -1769,7 +1769,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2122,cowboy shot,腰から上を写した構図,構図・カメラ,構図・配置,,[],verified,0,verified,verified,normal
 2123,cowboy western,西部劇風,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 2124,cowgirl position,騎乗位（女性上位）,ポーズ・姿勢,身体の配置,,[],verified,4,verified,verified,normal
-2125,cowlick,アホ毛,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
+2125,cowlick,跳ねた毛束,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
 2126,crab,カニ,生物・動植物,動物,,[],verified,0,verified,verified,normal
 2127,crack,ひび割れ,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 2128,cracked floor,ひび割れた床,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
@@ -4162,7 +4162,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5489,lifting own clothes,服をたくし上げる,動作・接触,衣服への接触,,[],verified,0,verified,verified,normal
 5490,lifting person,人を持ち上げる,動作・接触,対人接触・動作,,[],verified,0,verified,verified,normal
 5491,light areolae,薄い乳輪,人物の特徴,身体部位・身体状態,,[],verified,1,verified,verified,normal
-5492,light blue hair,水色の髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
+5492,light blue hair,淡い青色の髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
 5493,light blush,薄い赤面,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 5494,light bulb,電球,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 5495,light censor,軽い検閲,光・演出,演出効果,,[],verified,0,verified,verified,normal
