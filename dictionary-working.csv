@@ -6578,7 +6578,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8802,skirt basket,スカートをたくし上げて物を載せる・入れる,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 8803,skirt flip,スカートめくり,動作・接触,衣服への接触,,[],verified,2,verified,verified,normal
 8804,skirt hold,スカートを押さえる,動作・接触,衣服への接触,,[],verified,1,verified,verified,normal
-8805,skirt lift,スカートをたくし上げる,動作・接触,衣服への接触,,[],verified,1,verified,verified,normal
+8805,skirt lift,スカートをたくし上げる,動作・接触,衣服への接触,,[],verified,2,verified,verified,normal
 8806,skirt pull,スカートを引っ張る,動作・接触,衣服への接触,,[],verified,1,verified,verified,normal
 8807,skirt set,スカートとトップスのセット,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 8808,skirt suit,スカートスーツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
