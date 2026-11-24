@@ -961,7 +961,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1223,body markings,身体の模様,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 1224,body switch,身体の入れ替わり,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 1225,body writing,身体に書かれた文字,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
-1226,bodypaint,ボディペイント,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 1227,bodystocking,全身タイツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 1228,bodysuit,ボディスーツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 1229,bodysuit under clothes,服の下にボディスーツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -1829,7 +1828,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2188,cross print,十字柄,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 2189,cross scar,十字傷,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 2190,cross tie,クロスタイ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-2191,cross-eyed,寄り目,顔・表情,目,,[],verified,0,verified,verified,normal
+2191,cross-eyed,寄り目,顔・表情,目,,"[""crossed eyes""]",verified,0,verified,verified,normal
 2192,cross-laced clothes,編み上げの服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 2193,cross-laced cutout,編み上げ状のカットアウト,服装・装飾,肌の露出,,[],verified,2,verified,verified,normal
 2194,cross-laced dress,編み上げドレス,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -4750,7 +4749,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6453,neck tattoo,首のタトゥー,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 6454,neckerchief,ネッカチーフ,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 6455,necklace,ネックレス,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
-6456,necktie,ネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
+6456,necktie,ネクタイ,服装・装飾,装飾品,,"[""tie""]",verified,0,verified,verified,normal
 6457,necktie between breasts,胸の間に挟んだネクタイ,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 6458,necktie grab,ネクタイをつかむ,動作・接触,衣服への接触,,[],verified,0,verified,verified,normal
 6459,neckwear grab,首元の衣服をつかむ,動作・接触,衣服への接触,,[],verified,0,verified,verified,normal
@@ -6212,8 +6211,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8301,school swimsuit,スクール水着,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 8302,school uniform,制服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 8303,schoolgirl,女子生徒,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
-8305,sci-fi,SF,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
-8306,science fiction,SF,画風・描写,画風・表現様式,,"[""SF"",""サイエンスフィクション""]",verified,0,verified,verified,normal
+8305,sci-fi,SF,画風・描写,画風・表現様式,,"[""science fiction"",""SF"",""サイエンスフィクション""]",verified,0,verified,verified,normal
 8308,scissors,はさみ,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 8309,scoop neck,スクープネック,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 8310,scooter,スクーター,乗り物,陸上の乗り物,,[],verified,0,verified,verified,normal
@@ -6360,9 +6358,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8561,shirt lift,シャツを持ち上げる,動作・接触,衣服への接触,,[],verified,2,verified,verified,normal
 8562,shirt overhang,乳カーテン,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 8563,shirt partially tucked in,シャツの裾を半分だけインした状態,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-8564,shirt pull,シャツを引っ張る,動作・接触,衣服への接触,,[],verified,2,verified,verified,normal
+8564,shirt pull,シャツを引っ張る,動作・接触,衣服への接触,,"[""shirt tug""]",verified,2,verified,verified,normal
 8565,shirt tucked in,シャツをボトムスにインした状態,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-8566,shirt tug,シャツを引っ張る,動作・接触,衣服への接触,,[],verified,0,verified,verified,normal
 8567,shirt under shirt,シャツの重ね着,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 8572,shoe dangle,靴をぶら下げる,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 8573,shoe soles,靴底,服装・装飾,靴・履物,,[],verified,0,verified,verified,normal
@@ -6572,10 +6569,9 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8803,skirt flip,スカートめくり,動作・接触,衣服への接触,,[],verified,2,verified,verified,normal
 8804,skirt hold,スカートを押さえる,動作・接触,衣服への接触,,[],verified,1,verified,verified,normal
 8805,skirt lift,スカートをたくし上げる,動作・接触,衣服への接触,,[],verified,2,verified,verified,normal
-8806,skirt pull,スカートを引っ張る,動作・接触,衣服への接触,,[],verified,1,verified,verified,normal
+8806,skirt pull,スカートを引っ張る,動作・接触,衣服への接触,,"[""skirt tug""]",verified,1,verified,verified,normal
 8807,skirt set,スカートとトップスのセット,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 8808,skirt suit,スカートスーツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-8809,skirt tug,スカートを引っ張る,動作・接触,衣服への接触,,[],verified,1,verified,verified,normal
 8810,skirt under dress,ドレスの下に重ねたスカート,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 8811,skull,頭蓋骨,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 8812,skull and crossbones,ドクロと交差した骨,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
@@ -7295,7 +7291,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9737,tickling,くすぐる,動作・接触,対人接触・動作,,[],verified,0,verified,verified,normal
 9738,tickling armpits,脇をくすぐる,動作・接触,対人接触・動作,,[],verified,1,verified,verified,normal
 9739,tickling feet,足裏をくすぐる,動作・接触,身体への接触,,[],verified,1,verified,verified,normal
-9740,tie,ネクタイ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 9741,tie clip,ネクタイピン,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 9742,tied jacket,裾を結んだジャケット,服装・装飾,衣服の状態,,[],verified,1,verified,verified,normal
 9743,tied shirt,裾を結んだシャツ,服装・装飾,衣服の状態,,[],verified,1,verified,verified,normal
@@ -8749,7 +8744,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11549,dominant glare,威圧的な鋭い視線,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 11550,submissive gaze,従順な視線,顔・表情,顔・表情,,[],verified,2,verified,verified,normal
 11551,side eye,横目,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
-11552,crossed eyes,寄り目,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 11553,spiral eyes,ぐるぐる目,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 11554,sweat drop face,汗を浮かべた顔,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 11555,vein pop angry,怒りで青筋を立てた顔,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
@@ -8802,7 +8796,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11603,garter belt set,ガーターベルトセット,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 11604,lingerie set,ランジェリーセット,服装・装飾,衣服,,[],verified,3,verified,verified,normal
 11605,collar and leash,首輪とリード,服装・装飾,装飾品,,[],verified,3,verified,verified,normal
-11606,body paint,ボディペイント,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
+11606,body paint,ボディペイント,人物の特徴,身体部位・身体状態,,"[""bodypaint""]",verified,2,verified,verified,normal
 11608,micro skirt,極小スカート,服装・装飾,衣服,,[],verified,3,verified,verified,normal
 11609,no bra shirt,ノーブラのシャツ,服装・装飾,衣服,,[],verified,3,verified,verified,normal
 11610,no panties skirt,ノーパンのスカート,服装・装飾,衣服,,[],verified,3,verified,verified,normal
