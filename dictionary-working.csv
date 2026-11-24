@@ -297,7 +297,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 431,arm across waist,腰の前を横切る腕,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 432,arm armor,腕用装甲,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
 433,arm around back,背中に腕を回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
-434,arm around neck,首に腕を回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
+434,arm around neck,片腕を相手の首に回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
 435,arm around shoulder,肩に腕を回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
 436,arm around waist,腰に腕を回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
 437,arm at side,体の横に下ろした腕,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
@@ -341,7 +341,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 475,armpit peek,脇チラ,人物の特徴,身体部位・身体状態,,[],verified,1,verified,verified,normal
 476,armpit sex,脇の下のセックス,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 477,armpits,脇の下,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
-478,arms around neck,首に腕を回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
+478,arms around neck,両腕を相手の首に回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
 479,arms around waist,腰に腕を回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
 480,arms at sides,体の横に下ろした両腕,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 481,arms behind back,背中に回した両腕,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
