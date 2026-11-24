@@ -2212,6 +2212,32 @@
         window.scrollBy(0, currentTop - previousTop);
       });
     });
+    // Track text-selection drags explicitly. Some browsers report an empty
+    // Selection for a reverse drag before the delegated click handler runs.
+    let tagTextDragDetected = false;
+    let tagTextPointerStart = null;
+    $(".tag-results").addEventListener("pointerdown", event => {
+      tagTextDragDetected = false;
+      const textTarget = event.target.closest(".tag-english, .tag-japanese");
+      tagTextPointerStart = textTarget
+        ? { pointerId: event.pointerId, x: event.clientX, y: event.clientY }
+        : null;
+    });
+    document.addEventListener("pointermove", event => {
+      if (!tagTextPointerStart || event.pointerId !== tagTextPointerStart.pointerId) return;
+      const dx = event.clientX - tagTextPointerStart.x;
+      const dy = event.clientY - tagTextPointerStart.y;
+      if (Math.hypot(dx, dy) >= 4) tagTextDragDetected = true;
+    });
+    document.addEventListener("pointerup", event => {
+      if (tagTextPointerStart?.pointerId === event.pointerId) tagTextPointerStart = null;
+    });
+    document.addEventListener("pointercancel", event => {
+      if (tagTextPointerStart?.pointerId === event.pointerId) {
+        tagTextPointerStart = null;
+        tagTextDragDetected = false;
+      }
+    });
     $(".tag-results").addEventListener("click", event => {
       const favorite = event.target.closest("[data-favorite]");
       if (favorite) {
@@ -2236,8 +2262,10 @@
       }
       const add = event.target.closest("[data-add]");
       if (add) {
-        // Text selection in the tag/translation buttons must not be treated as a tag-add click.
-        if (window.getSelection()?.toString()) return;
+        // A drag in either direction is text selection, not a tag-add click.
+        const wasTextDrag = tagTextDragDetected;
+        tagTextDragDetected = false;
+        if (wasTextDrag || window.getSelection()?.toString()) return;
         const row = state.all.find(item => keyOf(item) === add.dataset.add);
         if (row) {
           toggleRow(row);
