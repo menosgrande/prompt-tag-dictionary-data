@@ -324,7 +324,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 457,arm support,腕で体を支える,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 458,arm tattoo,腕のタトゥー,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 459,arm under breasts,胸の下に差し入れた腕,ポーズ・姿勢,手足の配置,,[],verified,2,verified,verified,normal
-460,arm up,腕を上げる,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
+460,arm up,片腕を上げる,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 461,arm warmers,アームウォーマー,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 462,arm wrap,腕に巻く装飾の布,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 463,armband,腕章,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
@@ -349,7 +349,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 482,arms behind head,頭の後ろに回した両腕,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 483,arms between legs,脚の間にある両腕,ポーズ・姿勢,身体の配置,,[],verified,0,verified,verified,normal
 484,arms under breasts,胸の下に差し入れた両腕,ポーズ・姿勢,手足の配置,,[],verified,2,verified,verified,normal
-485,arms up,腕を上げる,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
+485,arms up,両腕を上げる,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 486,army,軍,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 488,aroused,興奮した,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
 490,arrow (projectile),矢（飛び道具）,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
@@ -4556,7 +4556,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6132,mole under each eye,両目の下のほくろ,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 6133,mole under eye,目の下のほくろ,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 6134,mole under mouth,口の下のほくろ,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
-6135,molestation,虐待,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
+6135,molestation,性的な身体接触（痴漢）,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
 6144,money,お金,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 6146,monitor,モニター,家具・設備・物品,機械・装置,,[],verified,0,verified,verified,normal
 6147,monk,僧侶,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
