@@ -8912,12 +8912,12 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11702,train molestation,電車内での痴漢行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11703,school classroom,学校の教室,背景・場所,場所・室内外,,[],verified,0,verified,verified,minor-related
 11704,love hotel,ラブホ,背景・場所,場所・室内外,,[],verified,2,verified,verified,normal
-11705,bath sex,入浴中の性行為,,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11706,shower sex,シャワー中の性行為,,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11707,car sex,車内での性行為,,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11708,beach sex,ビーチでの性行為,,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11709,pool sex,プールでの性行為,,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11710,tent sex,テント内での性行為,,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+11705,bath sex,入浴中の性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+11706,shower sex,シャワー中の性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+11707,car sex,車内での性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+11708,beach sex,ビーチでの性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+11709,pool sex,プールでの性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+11710,tent sex,テント内での性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11712,blackmail,脅迫,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
 11713,maid service,メイド奉仕,状態・状況,状況・関係性,,[],verified,2,verified,verified,normal
 11714,nurse night shift,夜勤中の看護師,状態・状況,時間・前後関係,,[],verified,0,verified,verified,normal
@@ -8940,7 +8940,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11731,mirror sex,鏡の前での性行為,状態・状況,状態・変化,,[],verified,4,verified,verified,normal
 11732,virtual reality,VR,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 11733,dream sex,夢の中での性行為,状態・状況,状態・変化,,[],verified,4,verified,verified,normal
-11735,prison sex,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+11735,prison sex,,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11736,cinema,映画館,背景・場所,場所・室内外,,[],verified,0,verified,verified,normal
 11737,dark alley,路地裏,背景・場所,場所・室内外,,[],verified,0,verified,verified,normal
 11738,spaceship,宇宙船,背景・場所,場所・室内外,,[],verified,0,verified,verified,normal
