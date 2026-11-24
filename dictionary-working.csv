@@ -3858,7 +3858,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4872,jackal ears,ジャッカルイヤー,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 4873,jacket,ジャケット,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 4874,jacket around waist,腰に巻いたジャケット,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-4875,jacket lift,ジャケットめくり,動作・接触,衣服への接触,,[],verified,0,verified,verified,normal
+4875,jacket lift,ジャケットめくり,動作・接触,衣服への接触,,[],verified,2,verified,verified,normal
 4876,jacket on shoulders,肩に掛けたジャケット,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 4877,jacket over swimsuit,水着の上にジャケット,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 4878,jacket partially removed,ジャケットを半分脱いだ状態,服装・装飾,衣服の状態,,[],verified,0,verified,verified,normal
@@ -3953,7 +3953,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5121,kigurumi,着ぐるみ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 5124,kikumon,菊紋,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
 5130,kimono,着物,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-5131,kimono lift,着物をめくる,動作・接触,衣服への接触,,[],verified,0,verified,verified,normal
+5131,kimono lift,着物をめくる,動作・接触,衣服への接触,,[],verified,2,verified,verified,normal
 5132,kimono pull,着物を引っ張る,動作・接触,衣服への接触,,[],verified,0,verified,verified,normal
 5133,kimono skirt,着物風スカート,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 5135,kinchaku,巾着,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
