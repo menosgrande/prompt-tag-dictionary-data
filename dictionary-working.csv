@@ -643,7 +643,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 880,bikini bottom only,ビキニボトムのみ,服装・装飾,水着,,[],verified,3,verified,verified,normal
 881,bikini bottom pull,ビキニボトムを引き下げる,動作・接触,衣服への接触,,[],verified,3,verified,verified,normal
 882,bikini pull,ビキニを引っ張る,動作・接触,衣服への接触,,[],verified,3,verified,verified,normal
-883,bikini shorts,ビキニショーツ,服装・装飾,水着,,[],verified,1,verified,verified,normal
+883,bikini shorts,ビキニに合わせたショートパンツ,服装・装飾,水着,,[],verified,1,verified,verified,normal
 884,bikini skirt,ビキニスカート,服装・装飾,水着,,[],verified,1,verified,verified,normal
 885,bikini tan,水着跡,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 886,bikini top lift,ビキニトップを持ち上げる,動作・接触,衣服への接触,,[],verified,3,verified,verified,normal
@@ -2385,10 +2385,10 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2914,family,家族,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
 2915,family crest,家紋,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
 2916,fanbox username,Fanboxのユーザー名,文字・記号,文字,,[],verified,0,verified,verified,normal
-2917,fang,牙,顔・表情,顔の特徴,,[],verified,0,verified,verified,normal
+2917,fang,一本の牙（犬歯）,顔・表情,顔の特徴,,[],verified,0,verified,verified,normal
 2918,fang out,牙を見せる,顔・表情,顔の特徴,,[],verified,0,verified,verified,normal
 2919,fanged bangs,牙のように尖った前髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
-2920,fangs,牙,顔・表情,顔の特徴,,[],verified,0,verified,verified,normal
+2920,fangs,複数の牙（犬歯）,顔・表情,顔の特徴,,[],verified,0,verified,verified,normal
 2921,fangs out,牙をむき出す,顔・表情,顔の特徴,,[],verified,0,verified,verified,normal
 2922,fanning self,自分を扇ぐ,動作・接触,日常動作,,[],verified,0,verified,verified,normal
 2923,fanny pack,ウエストポーチ,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
@@ -7509,7 +7509,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 10037,turtleneck leotard,タートルネックレオタード,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 10038,turtleneck shirt,タートルネックシャツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 10039,turtleneck sweater,タートルネックセーター,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-10040,tusks,牙,生物・動植物,動物,,[],verified,0,verified,verified,normal
+10040,tusks,大きく突き出た牙,生物・動植物,動物,,[],verified,0,verified,verified,normal
 10041,tutu,チュチュ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 10042,tuxedo,タキシード,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 10043,tweaking own nipple,自分の乳首をいじる,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
@@ -8625,7 +8625,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11409,leather panties,レザーショーツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11410,latex panties,ラテックスのパンツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11411,maid panties,メイド風ショーツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
-11412,bikini panties,ビキニショーツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
+11412,bikini panties,ビキニ型のパンティー,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11413,boyshorts,ボーイショーツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11414,high waist panties,ハイウエストパンツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11415,low rise panties,ローライズパンツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
