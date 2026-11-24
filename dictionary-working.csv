@@ -417,7 +417,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 612,back-print panties,バックプリントパンティー,服装・装飾,下着,,[],verified,3,verified,verified,normal
 613,back-seamed legwear,後ろ縫い目入りのレッグウェア,服装・装飾,靴・履物,,[],verified,0,verified,verified,normal
 614,back-to-back,背中合わせ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
-616,backboob,裏乳,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
+616,backboob,裏乳,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
 617,backless dress,背中の開いたドレス,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 618,backless leotard,背中の開いたレオタード,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 619,backless outfit,背中の開いた服装,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -994,7 +994,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1259,borrowed clothes,借りた服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 1260,borrowed design,他の作者が考案した非公式デザインのファンアート,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
 1262,bottle,瓶,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
-1263,bottomless,下半身裸,服装・装飾,裸体・露出,,[],verified,0,verified,verified,normal
+1263,bottomless,下半身裸,服装・装飾,裸体・露出,,[],verified,3,verified,verified,normal
 1264,bouncing breasts,胸が揺れる,動作・接触,身体動作,,[],verified,2,verified,verified,normal
 1265,bound,緊縛,動作・接触,性的行為・接触,,[],verified,0,verified,verified,normal
 1266,bound ankles,縛られた足首,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
@@ -1863,7 +1863,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2219,crotch rub,股間をこする,動作・接触,身体への接触,,[],verified,4,verified,verified,normal
 2220,crotch seam,股の縫い目,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 2221,crotch zipper,股部分のファスナー,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-2222,crotchless,クロッチレス,服装・装飾,衣服,,[],verified,2,verified,verified,normal
+2222,crotchless,クロッチレス,服装・装飾,衣服,,[],verified,3,verified,verified,normal
 2223,crotchless panties,クロッチレスショーツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 2224,crotchless pantyhose,クロッチレスパンスト,服装・装飾,靴・履物,,[],verified,3,verified,verified,normal
 2225,crow,カラス,生物・動植物,動物,,[],verified,0,verified,verified,normal
@@ -3321,7 +3321,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4101,hawaiian shirt,アロハシャツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 4102,hawk,タカ,生物・動植物,動物,,[],verified,0,verified,verified,normal
 4109,head back,頭を後ろに反らす,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
-4110,head between breasts,胸の間に頭をうずめる,動作・接触,対人接触・動作,,[],verified,1,verified,verified,normal
+4110,head between breasts,胸の間に頭をうずめる,動作・接触,対人接触・動作,,[],verified,2,verified,verified,normal
 4111,head bump,頭突き,動作・接触,対人接触・動作,,[],verified,0,verified,verified,normal
 4112,head chain,ヘッドチェーン,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 4113,head down,うつむく,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
@@ -3574,7 +3574,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4426,holding own hair,自分の髪を持つ,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 4427,holding own tail,自分の尻尾を持つ,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 4428,holding paintbrush,絵筆を持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
-4429,holding panties,パンティーを持つ,動作・接触,手の動作,,[],verified,1,verified,verified,normal
+4429,holding panties,パンティーを持つ,動作・接触,手の動作,,[],verified,2,verified,verified,normal
 4430,holding paper,紙を持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 4431,holding pen,ペンを持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 4432,holding pencil,鉛筆を持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
@@ -3638,7 +3638,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4490,holding tray,トレイを持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 4491,holding trident,三叉槍を持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 4492,holding umbrella,傘を持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
-4493,holding underwear,下着を持つ,動作・接触,手の動作,,[],verified,1,verified,verified,normal
+4493,holding underwear,下着を持つ,動作・接触,手の動作,,[],verified,2,verified,verified,normal
 4494,holding unworn clothes,未着用の服を持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 4495,holding vegetable,野菜を持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 4496,holding violin,バイオリンを持つ,動作・接触,身体動作,,[],verified,0,verified,verified,normal
@@ -3726,7 +3726,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4627,hug from behind,後ろから抱きつく,動作・接触,対人接触・動作,,[],verified,0,verified,verified,normal
 4628,huge ahoge,大きなアホ毛,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
 4629,huge bow,大きなリボン,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
-4630,huge breasts,巨乳,人物の特徴,身体部位・身体状態,,[],verified,1,verified,verified,normal
+4630,huge breasts,巨乳,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
 4631,huge eyebrows,太い眉,顔・表情,顔の特徴,,[],verified,0,verified,verified,normal
 4632,huge moon,大きな月,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
 4633,huge nipples,大きな乳首,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
@@ -4153,7 +4153,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5479,licking,舐める,動作・接触,対人接触・動作,,[],verified,1,verified,verified,normal
 5480,licking armpit,脇の下を舐める,動作・接触,対人接触・動作,,[],verified,2,verified,verified,normal
 5481,licking breast,胸を舐める,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-5482,licking ear,耳を舐める,動作・接触,対人接触・動作,,[],verified,1,verified,verified,normal
+5482,licking ear,耳を舐める,動作・接触,対人接触・動作,,[],verified,2,verified,verified,normal
 5483,licking finger,指を舐める,動作・接触,身体への接触,,[],verified,1,verified,verified,normal
 5484,licking foot,足を舐める,動作・接触,対人接触・動作,,[],verified,2,verified,verified,normal
 5485,licking lips,唇を舐める,顔・表情,顔・表情,,[],verified,1,verified,verified,normal
@@ -4262,7 +4262,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5607,looking ahead,前方を見る,構図・カメラ,視点・視線,,[],verified,0,verified,verified,normal
 5608,looking at animal,動物を見る,構図・カメラ,視点・視線,,[],verified,0,verified,verified,normal
 5609,looking at another,他の人物を見る,構図・カメラ,視点・視線,,[],verified,0,verified,verified,normal
-5610,looking at breasts,胸を見ている,構図・カメラ,視点・視線,,[],verified,1,verified,verified,normal
+5610,looking at breasts,胸を見ている,構図・カメラ,視点・視線,,[],verified,2,verified,verified,normal
 5611,looking at food,食べ物を見る,構図・カメラ,視点・視線,,[],verified,0,verified,verified,normal
 5612,looking at hand,手を見る,構図・カメラ,視点・視線,,[],verified,0,verified,verified,normal
 5613,looking at mirror,鏡を見る,構図・カメラ,視点・視線,,[],verified,0,verified,verified,normal
@@ -4830,7 +4830,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6580,no mouth,口なし,顔・表情,顔の特徴,,[],verified,0,verified,verified,normal
 6581,no nipples,乳首なし,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 6582,no nose,鼻なし,顔・表情,顔の特徴,,[],verified,0,verified,verified,normal
-6583,no panties,パンツなし,服装・装飾,衣服の状態,,[],verified,2,verified,verified,normal
+6583,no panties,パンツなし,服装・装飾,衣服の状態,,[],verified,3,verified,verified,normal
 6584,no pants,ズボンなし,服装・装飾,衣服の状態,,[],verified,0,verified,verified,normal
 6585,no pupils,瞳孔なし,顔・表情,目,,[],verified,0,verified,verified,normal
 6586,no sclera,強膜なし,顔・表情,目,,[],verified,0,verified,verified,normal
@@ -4866,7 +4866,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6628,novelty censor,ユニークな局部隠し,光・演出,演出効果,,[],verified,2,verified,verified,normal
 6630,nsfw,成人向け,品質・ネガティブ,高品質・傑作,,[],verified,3,verified,needs-review,normal
 6631,nude,ヌード,服装・装飾,裸体・露出,,[],verified,3,verified,verified,normal
-6632,nude cover,裸体で局部を隠す,ポーズ・姿勢,手足の配置,,[],verified,2,verified,verified,normal
+6632,nude cover,裸体で局部を隠す,ポーズ・姿勢,手足の配置,,[],verified,3,verified,verified,normal
 6633,nudist,ヌーディスト,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 6635,number print,数字柄,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 6636,number tattoo,数字のタトゥー,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
@@ -5178,7 +5178,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 7021,pants under skirt,スカートの下のズボン,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 7024,panty lift,パンティーを引き上げる,動作・接触,衣服への接触,,[],verified,2,verified,verified,normal
 7025,panty peek,パンチラ,服装・装飾,衣服の状態,,[],verified,2,verified,verified,normal
-7026,panty pull,パンティーを引き下げる,動作・接触,衣服への接触,,[],verified,0,verified,verified,normal
+7026,panty pull,パンティーを引き下げる,動作・接触,衣服への接触,,[],verified,3,verified,verified,normal
 7027,panty straps,見せハイレグパンツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 7028,pantyhose,パンティストッキング,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 7029,pantyhose pull,パンティストッキングを引っ張る,動作・接触,衣服への接触,,[],verified,1,verified,verified,normal
@@ -5254,7 +5254,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 7103,pearl hair ornament,真珠の髪の飾り,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 7104,pearl necklace,真珠のネックレス,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 7105,pearl thong,パールのTバック,服装・装飾,下着,,[],verified,3,verified,verified,normal
-7107,pectoral cleavage,胸の谷間,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
+7107,pectoral cleavage,胸の谷間,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
 7108,pectoral focus,胸の焦点,構図・カメラ,構図・配置,,[],verified,0,verified,verified,normal
 7109,pectoral grab,胸をつかむ,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 7110,pectoral press,胸を押し付ける,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
@@ -5610,7 +5610,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 7514,pout,ふくれっ面,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 7515,pov,主観視点,構図・カメラ,カメラアングル,,[],verified,0,verified,verified,normal
 7516,pov across table,テーブル越しの主観視点,構図・カメラ,構図・配置,,[],verified,2,verified,verified,normal
-7517,pov crotch,股間視点,構図・カメラ,構図・配置,,[],verified,1,verified,verified,normal
+7517,pov crotch,股間視点,構図・カメラ,構図・配置,,[],verified,2,verified,verified,normal
 7518,pov doorway,戸口からの主観視点,構図・カメラ,構図・配置,,[],verified,0,verified,verified,normal
 7519,pov hands,手元の主観視点,構図・カメラ,構図・配置,,[],verified,0,verified,verified,normal
 7521,power armor,パワーアーマー,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
@@ -6291,7 +6291,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8418,sex toy,性具,家具・設備・物品,その他の物品,,[],verified,3,verified,verified,normal
 8419,sextuplets,六つ子,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified,normal
 8420,sexual coaching,性的な指導,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-8421,sexually suggestive,性的な示唆を含む,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
+8421,sexually suggestive,性的な示唆を含む,状態・状況,状況・関係性,,[],verified,2,verified,verified,normal
 8422,shackles,手枷・足枷,服装・装飾,装備・防具,,[],verified,1,verified,verified,normal
 8423,shade,陰影,光・演出,影・陰影,,[],verified,0,verified,verified,normal
 8424,shaded face,顔に影が差している,光・演出,影・陰影,,[],verified,0,verified,verified,normal
@@ -7175,7 +7175,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9574,tanzaku,短冊,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 9575,tape,テープ,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 9576,tape measure,巻尺,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
-9577,tape on nipples,乳首に貼られたテープ,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
+9577,tape on nipples,乳首に貼られたテープ,人物の特徴,身体部位・身体状態,,[],verified,3,verified,verified,normal
 9578,tapir tail,バクの尻尾,生物・動植物,動物,,[],verified,0,verified,verified,normal
 9579,tareme,垂れ目,顔・表情,目,,[],verified,0,verified,verified,normal
 9580,tarot,タロットカード,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
@@ -7376,8 +7376,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9856,top hat,シルクハット,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 9857,top-down bottom-up,上体を伏せて尻を上げる体位（トップダウン・ボトムアップ）,ポーズ・姿勢,身体の配置,,[],verified,4,verified,verified,normal
 9858,topknot,ちょんまげ,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
-9859,topless,上半身裸,服装・装飾,衣服の状態,,[],verified,2,verified,verified,normal
-9860,topless male,上半身裸の男性,服装・装飾,衣服の状態,,[],verified,1,verified,verified,normal
+9859,topless,上半身裸,服装・装飾,衣服の状態,,[],verified,3,verified,verified,normal
+9860,topless male,上半身裸の男性,服装・装飾,衣服の状態,,[],verified,3,verified,verified,normal
 9864,torch,松明,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 9865,torii,鳥居,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
 9866,torii gate,鳥居,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
@@ -7609,7 +7609,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 10155,undersized clothes,小さめの服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 10157,underwater,水中,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
 10158,underwear,下着,服装・装飾,下着,,[],verified,3,verified,verified,normal
-10159,underwear only,下着のみ,服装・装飾,衣服の状態,,[],verified,2,verified,verified,normal
+10159,underwear only,下着のみ,服装・装飾,衣服の状態,,[],verified,3,verified,verified,normal
 10160,undone neck ribbon,外れたネックリボン,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 10161,undone necktie,緩んだネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 10162,undressing,服を脱ぐ,動作・接触,衣服への接触,,[],verified,2,verified,verified,normal
@@ -8751,7 +8751,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11539,crying tears of joy,嬉し涙を流す,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 11540,glassy eyes,潤んだ目,顔・表情,顔・表情,,[],verified,1,verified,verified,normal
 11541,drooling mouth,よだれを垂らした口,顔・表情,顔・表情,,[],verified,1,verified,verified,normal
-11542,smiling seductively,誘惑するような笑み,顔・表情,顔・表情,,[],verified,1,verified,verified,normal
+11542,smiling seductively,誘惑するような笑み,顔・表情,顔・表情,,[],verified,2,verified,verified,normal
 11543,shocked orgasm,驚いた絶頂時の表情,顔・表情,顔・表情,,[],verified,4,verified,verified,normal
 11544,embarrassed blush,恥ずかしそうな赤面,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 11545,angry tease,怒りを含んだ誘惑的な表情,顔・表情,顔・表情,,[],verified,1,verified,verified,normal
