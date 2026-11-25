@@ -1056,7 +1056,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1331,bread slice,食パンの一切れ,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 1333,breaking,破壊する動作,動作・接触,物への接触,,[],verified,0,verified,verified,normal
 1334,breast conscious,胸元を気にする仕草,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
-1335,breast curtain,胸を覆う布,服装・装飾,衣服,,"[""breast curtains""]",verified,0,verified,verified,normal
+1335,breast curtain,胸を覆う布,服装・装飾,衣服,,[],verified,0,verified,verified,normal
+1336,breast curtains,胸を覆う布,服装・装飾,衣服,,[],verified,2,verified,verified,normal
 1337,breast cutout,胸元のカットアウト,服装・装飾,衣服,,[],verified,2,verified,verified,normal
 1338,breast envy,他人の胸を羨む,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 1339,breast expansion,胸の増大,人物の特徴,体型・身体的特徴,,[],verified,2,verified,verified,normal
