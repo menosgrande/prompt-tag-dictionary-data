@@ -1546,7 +1546,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1889,climbing,クライミング,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 1890,clipboard,クリップボード,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 1891,clitoral hood,クリトリス包皮,人物の特徴,身体部位・身体状態,,[],verified,4,verified,verified,normal
-1892,clitoral stimulation,クリトリス刺激,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+1892,clitoral stimulation,クリトリス刺激,動作・接触,性的行為・接触,,["clitoris stimulation"],verified,4,verified,verified,normal
 1893,cloak,全身を覆うマント,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 1894,clock,時計,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 1895,clock eyes,時計の目,顔・表情,目,,[],verified,0,verified,verified,normal
@@ -8381,7 +8381,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11182,neck kiss,首筋へのキス,動作・接触,性的行為・接触,,"[""neck kissing""]",verified,2,verified,verified,normal
 11183,nipple licking,乳首舐め,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11184,breast massage,胸揉み,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11185,clitoris stimulation,クリトリスへの刺激,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11186,deep throat fellatio,喉奥まで含むフェラチオ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11187,thighjob,太ももコキ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11188,anal rimming,アナル舐め,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
