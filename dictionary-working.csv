@@ -4146,7 +4146,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5483,licking finger,指を舐める,動作・接触,身体への接触,,[],verified,1,verified,verified,normal
 5484,licking foot,足を舐める,動作・接触,対人接触・動作,,[],verified,2,verified,verified,normal
 5485,licking lips,唇を舐める,顔・表情,顔・表情,,[],verified,1,verified,verified,normal
-5486,licking nipple,乳首を舐める,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+5486,licking nipple,乳首を舐める,動作・接触,性的行為・接触,,["nipple licking","nipple lick"],verified,4,verified,verified,normal
 5487,lifebuoy,救命浮輪,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 5488,lifebuoy ornament,救命浮輪の飾り,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 5489,lifting own clothes,服をたくし上げる,動作・接触,衣服への接触,,[],verified,0,verified,verified,normal
@@ -8379,7 +8379,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11180,mirror pose,鏡の前でのポーズ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 11181,ear licking,耳舐め,動作・接触,性的行為・接触,,[],verified,2,verified,verified,normal
 11182,neck kiss,首筋へのキス,動作・接触,性的行為・接触,,"[""neck kissing""]",verified,2,verified,verified,normal
-11183,nipple licking,乳首舐め,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11184,breast massage,胸揉み,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11186,deep throat fellatio,喉奥まで含むフェラチオ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11187,thighjob,太ももコキ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
@@ -8467,7 +8466,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11275,erect nipples,勃起した乳首,人物の特徴,身体部位・身体状態,,[],verified,3,verified,verified,normal
 11276,pink nipples,ピンク色の乳首,人物の特徴,身体部位・身体状態,,[],verified,3,verified,verified,normal
 11277,large areola,大きな乳輪,人物の特徴,身体部位・身体状態,,[],verified,3,verified,verified,normal
-11278,nipple lick,乳首舐め,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11279,breast grab,胸をつかむ,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
 11280,breast milk spray,母乳の噴射,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
 11281,nipple suck,乳首を吸う,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
