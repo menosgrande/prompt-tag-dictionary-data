@@ -1203,7 +1203,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1487,bulletproof vest,防弾チョッキ,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
 1488,bullpup,ブルパップ方式,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 1489,bullying,虐め,動作・接触,対人接触・動作,,[],verified,0,verified,verified,normal
-1490,bulma,ブルマ,服装・装飾,下着,,[],verified,0,verified,verified,normal
 1491,bun,お団子ヘア,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
 1492,bun cover,お団子ヘアカバー,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
 1493,bun with braided base,編み込みベースのお団子ヘア,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
@@ -1215,7 +1214,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1499,burning,燃えている,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 1500,burnt clothes,焦げた服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 1501,bursting breasts,胸が服からはみ出しそうな状態,服装・装飾,衣服の状態,,[],verified,2,verified,verified,normal
-1502,buruma,ブルマ,服装・装飾,下着,,[],verified,0,verified,verified,normal
+1502,buruma,ブルマ,服装・装飾,下着,,["bulma"],verified,0,verified,verified,normal
 1503,buruma aside,ずらしたブルマ,服装・装飾,衣服の状態,,[],verified,2,verified,verified,normal
 1504,buruma pull,ブルマを引っ張る,動作・接触,衣服への接触,,[],verified,2,verified,verified,normal
 1505,bus,バス,乗り物,陸上の乗り物,,[],verified,0,verified,verified,normal
