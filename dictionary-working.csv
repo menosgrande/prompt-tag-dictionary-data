@@ -674,7 +674,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 913,bishoujo senshi sailor moon,美少女戦士セーラームーン,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
 914,bishoujo senshi sailor moon s,美少女戦士セーラームーンスーパー,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
 915,bishounen,美少年,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
-917,bite mark,噛み跡,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 918,biting,噛む,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 919,biting ear,耳噛み,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 920,biting glove,手袋をくわえる,動作・接触,身体動作,,[],verified,0,verified,verified,normal
@@ -1057,8 +1056,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1331,bread slice,食パンの一切れ,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 1333,breaking,破壊する動作,動作・接触,物への接触,,[],verified,0,verified,verified,normal
 1334,breast conscious,胸元を気にする仕草,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
-1335,breast curtain,胸を覆う布,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-1336,breast curtains,胸を覆う布,服装・装飾,衣服,,[],verified,2,verified,verified,normal
+1335,breast curtain,胸を覆う布,服装・装飾,衣服,,"[""breast curtains""]",verified,0,verified,verified,normal
 1337,breast cutout,胸元のカットアウト,服装・装飾,衣服,,[],verified,2,verified,verified,normal
 1338,breast envy,他人の胸を羨む,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 1339,breast expansion,胸の増大,人物の特徴,体型・身体的特徴,,[],verified,2,verified,verified,normal
@@ -1583,9 +1581,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1927,clothesline,物干しロープ,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 1928,clothing aside,ずらされた衣服,服装・装飾,衣服の状態,,[],verified,2,verified,verified,normal
 1929,clothing cutout,服のカットアウト,服装・装飾,肌の露出,,[],verified,2,verified,verified,normal
-1930,cloud,雲,背景・場所,場所・室内外,,[],verified,0,verified,verified,normal
+1930,cloud,雲,背景・場所,場所・室内外,,"[""clouds""]",verified,0,verified,verified,normal
 1931,cloud print,雲柄,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-1933,clouds,雲,背景・場所,場所・室内外,,[],verified,0,verified,verified,normal
 1934,cloudy,曇り,背景・場所,天候・時間帯,,[],verified,0,verified,verified,normal
 1935,cloudy sky,曇り空,背景・場所,場所・室内外,,[],verified,0,verified,verified,normal
 1936,clover,クローバー,生物・動植物,植物,,[],verified,0,verified,verified,normal
@@ -2842,8 +2839,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3522,gloves,手袋,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 3523,glowing,発光,光・演出,演出効果,,[],verified,0,verified,verified,normal
 3524,glowing butterfly,光る蝶,生物・動植物,動物,,[],verified,0,verified,verified,normal
-3525,glowing eye,光る目,顔・表情,目,,[],verified,0,verified,verified,normal
-3526,glowing eyes,光る目,顔・表情,目,,[],verified,0,verified,verified,normal
+3526,glowing eyes,光る目,顔・表情,目,,"[""glowing eye""]",verified,0,verified,verified,normal
 3527,glowing flower,光る花,生物・動植物,植物,,[],verified,0,verified,verified,normal
 3528,glowing hair,光る髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
 3529,glowing hand,光る手,光・演出,演出効果,,[],verified,0,verified,verified,normal
@@ -6435,8 +6431,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8656,sick,病気,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 8657,sickle,鎌,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 8658,side ahoge,サイドのアホ毛,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
-8659,side braid,サイド三つ編み,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
-8660,side braids,サイド三つ編み,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
+8659,side braid,サイド三つ編み,髪・頭部,髪・頭部,,"[""side braids""]",verified,0,verified,verified,normal
 8661,side cape,サイドケープ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 8662,side cutout,サイドカットアウト,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 8663,side drill,サイドドリル,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
@@ -8842,7 +8837,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11651,full body rope,全身の縄拘束,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
 11652,suspension harness,吊り下げ用ハーネス,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
 11653,whipping marks,鞭の痕,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
-11654,bite marks,噛み跡,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
+11654,bite marks,噛み跡,人物の特徴,身体部位・身体状態,,"[""bite mark""]",verified,2,verified,verified,normal
 11655,rope burn,縄による擦過傷,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
 11656,aftercare,アフターケア,動作・接触,性的行為・接触,,[],verified,0,verified,verified,normal
 11657,sadist smile,サディストの笑み,顔・表情,顔・表情,,[],verified,2,verified,verified,normal
