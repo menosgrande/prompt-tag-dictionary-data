@@ -1538,7 +1538,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1881,cleavage,谷間,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
 1882,cleavage cutout,胸元の開き・カットアウト,服装・装飾,衣服,,[],verified,2,verified,verified,normal
 1883,cleaver,肉切り包丁,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
-1884,cleft of venus,ヴィーナスのえくぼ,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
+1884,cleft of venus,ヴィーナスのえくぼ,人物の特徴,身体部位・身体状態,,"[""dimples of venus""]",verified,0,verified,verified,normal
 1885,clenched hand,握りこぶし,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 1886,clenched hands,握りしめた両手,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 1887,clenched teeth,歯を食いしばった表情,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
@@ -2024,7 +2024,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2448,digital painting,デジタルペイント,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 2449,digitigrade,趾行性,人物の特徴,体型・身体的特徴,,[],verified,0,verified,verified,normal
 2451,dilation tape,拡張テープ,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
-2454,dimples of venus,ヴィーナスのえくぼ,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 2455,dinosaur,恐竜,生物・動植物,動物,,[],verified,0,verified,verified,normal
 2457,diorama,ジオラマ,背景・場所,空間・環境表現,,[],verified,0,verified,verified,normal
 2458,dirndl,ディアンドル（アルプス地方の民族衣装）,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -2694,7 +2693,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3302,from side,横から見た構図,構図・カメラ,視点・視線,,[],verified,0,verified,verified,normal
 3303,front ponytail,前方に垂らしたポニーテール,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
 3304,front slit,フロントスリット,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-3305,front-hook bra,フロントホックブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
+3305,front-hook bra,フロントホックブラ,服装・装飾,下着,,"[""front clasp bra""]",verified,3,verified,verified,normal
 3306,front-tie bikini top,前結びのビキニトップ,服装・装飾,下着,,[],verified,1,verified,verified,normal
 3307,front-tie top,前結びトップス,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 3308,frontless outfit,前面が大きく開いた衣装,服装・装飾,衣服,,[],verified,2,verified,verified,normal
@@ -6128,7 +6127,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8161,sailor moon redraw challenge (meme),セーラームーン描き直しチャレンジ（ミーム）,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 8162,sailor senshi,セーラー戦士,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 8164,sailor shirt,セーラーシャツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-8166,sailor uniform,セーラー服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
+8166,sailor uniform,セーラー服,服装・装飾,衣服,,"[""serafuku""]",verified,0,verified,verified,normal
 8178,sake,日本酒,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 8179,sake bottle,酒瓶,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 8184,saku usako (rabbit),サク・ウサコ（ウサギ）,生物・動植物,動物,,[],verified,0,verified,verified,normal
@@ -6264,7 +6263,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8377,semi-rimless eyewear,ハーフリム眼鏡,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 8398,sepia,セピア調,画風・描写,描画技法,,[],verified,0,verified,verified,normal
 8399,sequential,連続した構成,構図・カメラ,構図・配置,,[],verified,0,verified,verified,normal
-8400,serafuku,セーラー服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 8405,serious,真剣な表情,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 8408,serval print,サーバル柄,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 8410,setsubun,節分,状態・状況,時間・前後関係,,[],verified,0,verified,verified,normal
@@ -8272,7 +8270,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11061,ejaculation,射精,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11062,bukkake,ぶっかけ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11063,double handjob,両手コキ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11064,double fellatio,ダブルフェラ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11065,threesome,3P,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11066,mmf threesome,男男女の3P,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11067,ffm threesome,女女男の3P,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
@@ -8435,7 +8432,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11233,facial gangbang,顔射輪姦,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11234,lesbian threesome,レズビアン3P,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11235,daisy chain,複数人が連なって行う性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11237,double blowjob,ダブルフェラ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+11237,double blowjob,ダブルフェラ,動作・接触,性的行為・接触,,"[""double fellatio""]",verified,4,verified,verified,normal
 11238,sandwich position,サンドイッチ体位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11240,reverse train,逆列車プレイ,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11241,public gangbang,公共の場での複数人による性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
@@ -8633,7 +8630,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11440,squirt soaked,潮吹きで濡れた下着,服装・装飾,下着,,[],verified,4,verified,verified,normal
 11442,push-up bra,プッシュアップブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11443,open cup bra,オープンカップブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
-11444,front clasp bra,フロントホックブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11445,back clasp bra,バックホックブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11446,sheer bra,透けるブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11447,satin bra,サテンブラ,服装・装飾,下着,,[],verified,3,verified,verified,normal
