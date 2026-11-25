@@ -1214,7 +1214,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1499,burning,燃えている,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 1500,burnt clothes,焦げた服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 1501,bursting breasts,胸が服からはみ出しそうな状態,服装・装飾,衣服の状態,,[],verified,2,verified,verified,normal
-1502,buruma,ブルマ,服装・装飾,下着,,["bulma"],verified,0,verified,verified,normal
+1502,buruma,ブルマ,服装・装飾,下着,,[bulma],verified,0,verified,verified,normal
 1503,buruma aside,ずらしたブルマ,服装・装飾,衣服の状態,,[],verified,2,verified,verified,normal
 1504,buruma pull,ブルマを引っ張る,動作・接触,衣服への接触,,[],verified,2,verified,verified,normal
 1505,bus,バス,乗り物,陸上の乗り物,,[],verified,0,verified,verified,normal
@@ -1480,7 +1480,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1806,chimera,キメラ,生物・動植物,動物,,[],verified,0,verified,verified,normal
 1807,chimney,煙突,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
 1808,chin strap,あご紐,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
-1809,china dress,チャイナドレス,服装・装飾,衣服,,[],verified,0,verified,verified,normal
+1809,china dress,チャイナドレス,服装・装飾,衣服,,"[""chinese dress""]",verified,0,verified,verified,normal
 1810,chinese clothes,中国風の服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 1811,chinese hairpin,中国風のかんざし,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 1812,chinese knot,中国結び,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
@@ -1545,7 +1545,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1889,climbing,クライミング,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 1890,clipboard,クリップボード,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 1891,clitoral hood,クリトリス包皮,人物の特徴,身体部位・身体状態,,[],verified,4,verified,verified,normal
-1892,clitoral stimulation,クリトリス刺激,動作・接触,性的行為・接触,,["clitoris stimulation"],verified,4,verified,verified,normal
+1892,clitoral stimulation,クリトリス刺激,動作・接触,性的行為・接触,,[clitoris stimulation],verified,4,verified,verified,normal
 1893,cloak,全身を覆うマント,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 1894,clock,時計,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 1895,clock eyes,時計の目,顔・表情,目,,[],verified,0,verified,verified,normal
@@ -4145,7 +4145,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5483,licking finger,指を舐める,動作・接触,身体への接触,,[],verified,1,verified,verified,normal
 5484,licking foot,足を舐める,動作・接触,対人接触・動作,,[],verified,2,verified,verified,normal
 5485,licking lips,唇を舐める,顔・表情,顔・表情,,[],verified,1,verified,verified,normal
-5486,licking nipple,乳首を舐める,動作・接触,性的行為・接触,,["nipple licking","nipple lick"],verified,4,verified,verified,normal
+5486,licking nipple,乳首を舐める,動作・接触,性的行為・接触,,[nipple licking,nipple lick],verified,4,verified,verified,normal
 5487,lifebuoy,救命浮輪,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 5488,lifebuoy ornament,救命浮輪の飾り,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 5489,lifting own clothes,服をたくし上げる,動作・接触,衣服への接触,,[],verified,0,verified,verified,normal
@@ -6223,7 +6223,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8325,screwdriver,ドライバー,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 8326,scribble censor,落書きで隠す,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
 8327,scroll,巻物,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
-8328,scrunchie,シュシュ,服装・装飾,装飾品,,["hair scrunchie"],verified,0,verified,verified,normal
+8328,scrunchie,シュシュ,服装・装飾,装飾品,,[hair scrunchie],verified,0,verified,verified,normal
 8329,scylla,スキュラ,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified,normal
 8330,scythe,鎌,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 8331,sea,海,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
@@ -8771,7 +8771,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11590,office lady suit,OLスーツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 11591,teacher outfit,教師風の衣装,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 11592,doctor coat,白衣,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-11594,chinese dress,チャイナドレス,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 11595,halloween witch,ハロウィンの魔女衣装,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 11596,cat ears tail,猫耳と尻尾,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 11597,devil horns,悪魔の角,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
