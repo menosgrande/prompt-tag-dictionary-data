@@ -299,7 +299,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 433,arm around back,背中に腕を回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
 434,arm around neck,片腕を相手の首に回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
 435,arm around shoulder,肩に腕を回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
-436,arm around waist,腰に腕を回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
+436,arm around waist,片腕を相手の腰に回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
 437,arm at side,体の横に下ろした腕,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 438,arm behind back,背中に回した腕,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 439,arm behind head,頭の後ろに回した腕,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
@@ -342,7 +342,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 476,armpit sex,脇の下のセックス,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 477,armpits,脇の下,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 478,arms around neck,両腕を相手の首に回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
-479,arms around waist,腰に腕を回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
+479,arms around waist,両腕を相手の腰に回す,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
 480,arms at sides,体の横に下ろした両腕,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 481,arms behind back,背中に回した両腕,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 482,arms behind head,頭の後ろに回した両腕,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
@@ -354,7 +354,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 490,arrow (projectile),矢（飛び道具）,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 491,arrow (symbol),矢印記号,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
 492,arrow through heart,ハートを貫く矢,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
-493,art brush,絵筆,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
+493,art brush,美術制作に使う筆,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 494,art nouveau,アール・ヌーヴォー,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 495,art program in frame,画面内に表示されたペイントソフト,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 496,art tools in frame,画面内に表示された画材,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
@@ -2060,7 +2060,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2500,dog tags,ドッグタグ,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 2501,dog tail,犬の尻尾,生物・動植物,動物,,[],verified,0,verified,verified,normal
 2502,dogeza,土下座,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
-2503,doggystyle,後背位,ポーズ・姿勢,身体の配置,,[],verified,4,verified,verified,normal
+2503,doggystyle,四つん這いの後背位,ポーズ・姿勢,身体の配置,,[],verified,4,verified,verified,normal
 2504,doily,ドイリー,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 2505,doitsuken,ドイツ犬,生物・動植物,動物,,[],verified,0,verified,verified,normal
 2509,doll,人形,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
@@ -3164,8 +3164,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3910,half mask,ハーフマスク,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 3911,half up braid,三つ編みハーフアップ,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
 3912,half updo,ハーフアップ,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
-3913,half-closed eye,半目,顔・表情,目,,[],verified,0,verified,verified,normal
-3914,half-closed eyes,半目,顔・表情,目,,[],verified,0,verified,verified,normal
+3913,half-closed eye,片目を半分閉じた状態,顔・表情,目,,[],verified,0,verified,verified,normal
+3914,half-closed eyes,両目を半分閉じた状態,顔・表情,目,,[],verified,0,verified,verified,normal
 3915,half-erect,半勃起,人物の特徴,身体部位・身体状態,,[],verified,4,verified,verified,normal
 3916,half-skirt,ハーフスカート,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 3917,halfling,ハーフリング,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
@@ -3270,7 +3270,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4028,hanetsuki,羽突き,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 4029,hanfu,漢服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 4030,hanging,ぶら下がる,動作・接触,身体動作,,[],verified,0,verified,verified,normal
-4031,hanging breasts,垂れた胸,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
+4031,hanging breasts,前傾時などに垂れ下がる胸,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
 4032,hanging light,吊り下げ照明,家具・設備・物品,設備,,[],verified,0,verified,verified,normal
 4033,hanging plant,ぶら下がっている植物,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 4034,haniwa (statue),埴輪（はにわ）,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
@@ -5128,7 +5128,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6981,paint on clothes,服にペイント,服装・装飾,衣服の状態,,[],verified,0,verified,verified,normal
 6982,paint splatter,絵の具の飛び散り,画風・描写,描画技法,,[],verified,0,verified,verified,normal
 6983,paint splatter on face,顔に付いた絵の具の飛び散り,顔・表情,顔の特徴,,[],verified,0,verified,verified,normal
-6984,paintbrush,絵筆,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
+6984,paintbrush,絵の具を塗る筆,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 6985,painterly,絵画的な,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 6986,painting (action),絵を描く,動作・接触,日常動作,,[],verified,0,verified,verified,normal
 6987,painting (object),絵画,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
@@ -5655,7 +5655,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 7588,profile,横顔,構図・カメラ,構図・配置,,[],verified,0,verified,verified,normal
 7593,projected inset,投影されたはめ込み画像,構図・カメラ,フレーミング,,[],verified,0,verified,verified,normal
 7594,projectile lactation,母乳の飛散,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
-7596,prone bone,後背位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+7596,prone bone,うつ伏せの後背位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 7597,propaganda poster,プロパガンダポスター,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 7598,propeller,プロペラ,家具・設備・物品,機械・装置,,[],verified,0,verified,verified,normal
 7599,propeller fighter,プロペラ戦闘機,乗り物,航空機,,[],verified,0,verified,verified,normal
@@ -6118,7 +6118,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8144,sadism,サディズム,状態・状況,状況・関係性,,[],verified,2,verified,verified,normal
 8146,safety glasses,保護眼鏡,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 8147,safety pin,安全ピン,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
-8149,sagging breasts,垂れた胸,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
+8149,sagging breasts,垂れ下がった形状の胸,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
 8155,sailor,船乗り,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 8156,sailor bikini,セーラービキニ,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 8157,sailor collar,セーラー襟,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -6271,7 +6271,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8413,sewing,裁縫,動作・接触,日常動作,,[],verified,0,verified,verified,normal
 8414,sewing needle,縫い針,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 8415,sex,性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-8416,sex from behind,後背位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
+8416,sex from behind,後ろからの性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 8417,sex machine,性行為用機械,家具・設備・物品,機械・装置,,[],verified,3,verified,verified,normal
 8418,sex toy,性具,家具・設備・物品,その他の物品,,[],verified,3,verified,verified,normal
 8419,sextuplets,六つ子,人数・人物構成,人数・人物構成,,[],verified,0,verified,verified,normal
@@ -8239,7 +8239,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11030,bubble butt,丸く盛り上がったお尻,人物の特徴,体型・身体的特徴,,[],verified,1,verified,verified,normal
 11031,huge ass,大きなお尻,人物の特徴,体型・身体的特徴,,[],verified,1,verified,verified,normal
 11032,large feet,大きな足,人物の特徴,体型・身体的特徴,,[],verified,0,verified,verified,normal
-11033,saggy breasts,垂れた胸,人物の特徴,体型・身体的特徴,,[],verified,2,verified,verified,normal
+11033,saggy breasts,垂れ下がった形状の胸,人物の特徴,体型・身体的特徴,,[],verified,2,verified,verified,normal
 11034,asymmetrical breasts,左右非対称の胸,人物の特徴,体型・身体的特徴,,[],verified,2,verified,verified,normal
 11035,bodybuilder,ボディビルダー体型,人物の特徴,体型・身体的特徴,,[],verified,0,verified,verified,normal
 11036,adam's apple,喉仏,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
@@ -8718,7 +8718,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11535,heart shaped pupils,ハート形の瞳孔,顔・表情,顔・表情,,[],verified,2,verified,verified,normal
 11536,biting lip,唇を噛む,顔・表情,顔・表情,,[],verified,2,verified,verified,normal
 11537,seductive eyes,誘惑的な目つき,顔・表情,顔・表情,,[],verified,2,verified,verified,normal
-11538,half closed eyes,半目,顔・表情,顔・表情,,[],verified,1,verified,verified,normal
+11538,half closed eyes,両目を半分閉じた状態,顔・表情,顔・表情,,[],verified,1,verified,verified,normal
 11539,crying tears of joy,嬉し涙を流す,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 11540,glassy eyes,潤んだ目,顔・表情,顔・表情,,[],verified,1,verified,verified,normal
 11541,drooling mouth,よだれを垂らした口,顔・表情,顔・表情,,[],verified,1,verified,verified,normal
