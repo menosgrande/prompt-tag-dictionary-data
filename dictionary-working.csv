@@ -113,7 +113,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 154,airplane,飛行機,乗り物,航空機,,[],verified,0,verified,verified,normal
 155,airship,飛行船,乗り物,航空機,,[],verified,0,verified,verified,normal
 157,ajirogasa,網代笠,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
-158,ak-47,AK-47（エーケー・フォーティーセブン）,家具・設備・物品,武器,,"[""AK-47"",""エーケー47"",""エーケーフォーティーセブン""]",verified,0,verified,verified,normal
+158,AK-47,AK-47（エーケー・フォーティーセブン）,家具・設備・物品,武器,,"[""エーケー47"",""エーケーフォーティーセブン""]",verified,0,verified,verified,normal
 165,akanbe,あかんべえ,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 175,akeome,あけおめ,背景・場所,空間・環境表現,,[],verified,0,verified,verified,normal
 189,alarm clock,目覚まし時計,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
@@ -276,7 +276,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 397,aqua thighhighs,水色のニーハイソックス,服装・装飾,靴・履物,,[],verified,0,verified,verified,normal
 398,aqua trim,水色の縁取り,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 399,aquarium,水族館,背景・場所,場所・室内外,,[],verified,0,verified,verified,normal
-401,ar-15,AR-15（エーアール・フィフティーン）,家具・設備・物品,その他の物品,,"[""AR-15"",""エーアール15"",""エーアールフィフティーン""]",verified,0,verified,verified,normal
+401,AR-15,AR-15（エーアール・フィフティーン）,家具・設備・物品,その他の物品,,"[""エーアール15"",""エーアールフィフティーン""]",verified,0,verified,verified,normal
 402,arabian clothes,アラビアの服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 403,arachne,アラクネ,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 405,aran sweater,アランセーター,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -1214,7 +1214,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1499,burning,燃えている,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
 1500,burnt clothes,焦げた服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 1501,bursting breasts,胸が服からはみ出しそうな状態,服装・装飾,衣服の状態,,[],verified,2,verified,verified,normal
-1502,buruma,ブルマ,服装・装飾,下着,,"[""bulma""]",verified,0,verified,verified,normal
+1502,buruma,ブルマ,服装・装飾,下着,,"[]",verified,0,verified,verified,normal
 1503,buruma aside,ずらしたブルマ,服装・装飾,衣服の状態,,[],verified,2,verified,verified,normal
 1504,buruma pull,ブルマを引っ張る,動作・接触,衣服への接触,,[],verified,2,verified,verified,normal
 1505,bus,バス,乗り物,陸上の乗り物,,[],verified,0,verified,verified,normal
@@ -3097,8 +3097,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3830,gym storeroom,体育倉庫,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
 3831,gym uniform,体操服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 3832,gymnastics,体操競技,動作・接触,身体動作,,[],verified,0,verified,verified,normal
-3833,h&k hk416,HK416（H&K製アサルトライフル）,家具・設備・物品,武器,,"[""H&K HK416"",""HK416""]",verified,0,verified,verified,normal
-3834,h&k ump,UMP（H&K製サブマシンガン）,家具・設備・物品,武器,,"[""H&K UMP"",""UMP""]",verified,0,verified,verified,normal
+3833,H&K HK416,HK416（H&K製アサルトライフル）,家具・設備・物品,武器,,"[""HK416""]",verified,0,verified,verified,normal
+3834,H&K UMP,UMP（H&K製サブマシンガン）,家具・設備・物品,武器,,"[""UMP""]",verified,0,verified,verified,normal
 3836,habit,癖,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
 3838,hachimaki,はちまき,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 3840,hadanugi dousa,片肌を脱いだ着こなし,服装・装飾,衣服の状態,,[],verified,0,verified,verified,normal
@@ -5116,7 +5116,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6963,owl girl,フクロウの女の子,生物・動植物,種族,,[],verified,0,verified,verified,normal
 6964,own hands clasped,自分の両手を組む,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 6965,own hands together,自分の両手を合わせる,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
-6970,p90,P90（ピー・ナインティー）,家具・設備・物品,武器,,"[""P90"",""ピー90"",""ピー・ナインティー""]",verified,0,verified,verified,normal
+6970,P90,P90（ピー・ナインティー）,家具・設備・物品,武器,,"[""ピー90"",""ピー・ナインティー""]",verified,0,verified,verified,normal
 6971,pacifier,おしゃぶり,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 6972,paddle,パドル,家具・設備・物品,道具,,[],verified,0,verified,verified,normal
 6973,padlock,南京錠,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
@@ -6462,7 +6462,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8690,sideways glance,横目で見る,顔・表情,目,,[],verified,0,verified,verified,normal
 8691,sideways hat,横向きの帽子,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 8692,sideways mouth,横顔の側面に描かれた口,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
-8693,sig sauer,SIG Sauer（シグ・ザウエル）,家具・設備・物品,武器,,"[""SIG Sauer"",""シグザウエル"",""シグ・ザウアー""]",verified,0,verified,verified,normal
+8693,SIG Sauer,SIG Sauer（シグ・ザウエル）,家具・設備・物品,武器,,"[""シグザウエル"",""シグ・ザウアー""]",verified,0,verified,verified,normal
 8694,sigh,ため息,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 8695,sign,看板,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 8696,signature,署名,品質・ネガティブ,ネガティブ・除外指定,,[],verified,0,verified,verified,normal
