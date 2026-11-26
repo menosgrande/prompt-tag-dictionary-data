@@ -2273,18 +2273,21 @@
     window.addEventListener("keydown", event => {
       const target = event.target;
       const isTyping = target instanceof HTMLElement && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName));
+      const isPromptEditor = target instanceof HTMLTextAreaElement &&
+        (target.id === "positive-output" || target.id === "negative-output");
+      const canHandlePromptHistory = !isTyping || isPromptEditor;
       const hasCommandModifier = event.ctrlKey || event.metaKey;
       const key = event.key.toLowerCase();
       const isUndoShortcut = hasCommandModifier && !event.shiftKey && !event.altKey && key === "z";
       const isRedoShortcut = hasCommandModifier && !event.altKey && (
         (event.shiftKey && key === "z") || (!event.shiftKey && key === "y")
       );
-      if (!isTyping && isRedoShortcut && state.redoHistory.length) {
+      if (canHandlePromptHistory && isRedoShortcut && state.redoHistory.length) {
         event.preventDefault();
         redoPromptChange();
         return;
       }
-      if (!isTyping && isUndoShortcut && state.undoHistory.length) {
+      if (canHandlePromptHistory && isUndoShortcut && state.undoHistory.length) {
         event.preventDefault();
         undoPromptChange();
         return;
@@ -2296,7 +2299,7 @@
       if (event.key === "Escape") {
         const dialog = $("#tag-detail-dialog");
         if (dialog?.open) dialog.close();
-        $$(".column-menu[open]").forEach(menu => { menu.open = false; });
+        $(".column-menu[open]").forEach(menu => { menu.open = false; });
       }
     });
     $(".screen-nav").addEventListener("click", event => {
