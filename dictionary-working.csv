@@ -594,7 +594,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 821,behind-the-head headphones,後頭部装着型ヘッドホン,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 823,beige,ベージュ,光・演出,色調・色彩,,[],verified,0,verified,verified,normal
 826,bell,ベル,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
-828,belly,腹部,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
+828,belly,ふっくらした腹部,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 829,belly chain,ウエストチェーン,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 830,belly grab,腹部をつかむ,動作・接触,対人接触・動作,,[],verified,0,verified,verified,normal
 831,belt,ベルト,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -789,7 +789,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1038,black wrist cuffs,黒いリストカフ,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 1039,black-framed eyewear,黒縁眼鏡,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 1044,blank censor,無地の検閲帯,光・演出,演出効果,,[],verified,0,verified,verified,normal
-1045,blank eyes,虚ろな目,顔・表情,目,,[],verified,0,verified,verified,normal
+1045,blank eyes,白目（虹彩・瞳孔なし）,顔・表情,目,,[],verified,0,verified,verified,normal
 1046,blank speech bubble,空白の吹き出し,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
 1047,blank stare,呆然とした表情,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 1048,blanket,毛布,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
@@ -1036,7 +1036,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1309,bra strap,ブラストラップ,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 1310,bra visible through clothes,服から透けるブラジャー,服装・装飾,衣服の状態,,[],verified,3,verified,verified,normal
 1311,bracelet,ブレスレット,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
-1312,bracer,腕甲,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
+1312,bracer,手首を守る腕甲,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
 1313,braces,歯列矯正器具,顔・表情,顔の特徴,,[],verified,0,verified,verified,normal
 1314,braid,三つ編み,髪・頭部,髪・頭部,,"[""braids""]",verified,0,verified,verified,normal
 1315,braided bangs,編み込み前髪,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
@@ -1640,7 +1640,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1991,colored nipples,色付きの乳首,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
 1992,colored sclera,強膜に色を付けた表現,顔・表情,目,,[],verified,0,verified,verified,normal
 1993,colored shadow,色付きの影,光・演出,照明・光源,,[],verified,0,verified,verified,normal
-1994,colored shoe soles,靴底,服装・装飾,靴・履物,,[],verified,0,verified,verified,normal
+1994,colored shoe soles,靴本体と異なる色の靴底,服装・装飾,靴・履物,,[],verified,0,verified,verified,normal
 1995,colored skin,色付きの肌,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 1996,colored speech bubble,色付きの吹き出し,文字・記号,吹き出し,,[],verified,0,verified,verified,normal
 1997,colored tips,毛先の色,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
@@ -2254,7 +2254,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2758,emotionless sex,無表情のまま行う性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 2759,emphasis lines,強調線,光・演出,演出効果,,[],verified,0,verified,verified,normal
 2760,employee uniform,従業員の制服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-2761,empty eyes,虚ろな目,顔・表情,目,,[],verified,0,verified,verified,normal
+2761,empty eyes,ハイライトのない目,顔・表情,目,,[],verified,0,verified,verified,normal
 2763,energy,エネルギー,光・演出,演出効果,,[],verified,0,verified,verified,normal
 2764,energy ball,エネルギー弾,光・演出,演出効果,,[],verified,0,verified,verified,normal
 2765,energy beam,エネルギービーム,光・演出,演出効果,,[],verified,0,verified,verified,normal
@@ -3209,7 +3209,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3965,hand on leg,脚に手を置く,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 3966,hand on own arm,自分の腕に手を置く,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 3967,hand on own cheek,自分の頬に手を添える,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
-3968,hand on own chest,自分の胸に手を置く,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
+3968,hand on own chest,片手を自分の胸に置く,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 3969,hand on own chin,自分のあごに手を添える,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 3970,hand on own crotch,自分の股間に手を当てる,動作・接触,身体への接触,,[],verified,2,verified,verified,normal
 3971,hand on own ear,自分の耳に手を当てる,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
@@ -3253,9 +3253,9 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4009,hands on headwear,頭飾りに手を添える,動作・接触,手の動作,,[],verified,0,verified,verified,normal
 4010,hands on hilt,柄に手をかける,動作・接触,手の動作,,[],verified,0,verified,verified,normal
 4011,hands on lap,膝の上に手,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
-4012,hands on own breasts,自分の胸に手を置く,動作・接触,身体への接触,,[],verified,1,verified,verified,normal
+4012,hands on own breasts,両手を自分の乳房に置く,動作・接触,身体への接触,,[],verified,1,verified,verified,normal
 4013,hands on own cheeks,自分の頬に手を添える,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
-4014,hands on own chest,自分の胸に手を置く,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
+4014,hands on own chest,両手を自分の胸に置く,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 4015,hands on own face,自分の顔に手を添える,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 4016,hands on own head,自分の頭に手を置く,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 4017,hands on own hips,腰に手を当てる,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
@@ -3644,7 +3644,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4507,hole,穴,背景・場所,空間・環境表現,,[],verified,0,verified,verified,normal
 4508,hole on body,体の穴,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 4509,holed coin,穴あき硬貨,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
-4510,hollow eyes,虚ろな目,顔・表情,目,,[],verified,0,verified,verified,normal
+4510,hollow eyes,黒い空洞のような目,顔・表情,目,,[],verified,0,verified,verified,normal
 4511,holly,ヒイラギ,生物・動植物,植物,,[],verified,0,verified,verified,normal
 4512,holly hair ornament,ヒイラギの髪飾り,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 4514,hologram,ホログラム,光・演出,照明・光源,,[],verified,0,verified,verified,normal
@@ -4104,11 +4104,11 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5434,leg grab,脚をつかむ,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 5435,leg hair,脚の毛,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 5436,leg hold,脚を押さえる,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
-5437,leg lift,脚を上げる,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
+5437,leg lift,片脚を横に開いて上げる,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 5438,leg lock,レッグロック,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 5439,leg ribbon,脚のリボン,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 5440,leg tattoo,脚のタトゥー,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
-5441,leg up,脚を上げる,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
+5441,leg up,片脚を上げる,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 5442,leg warmers,レッグウォーマー,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 5443,leg wrap,脚の包帯・布巻き,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 5444,legband,レッグバンド,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -4118,7 +4118,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5448,legs folded,脚を折りたたむ,ポーズ・姿勢,身体の配置,,[],verified,0,verified,verified,normal
 5449,legs over head,頭の上に脚を上げる,ポーズ・姿勢,身体の配置,,[],verified,0,verified,verified,normal
 5450,legs together,脚を揃える,ポーズ・姿勢,身体の配置,,[],verified,0,verified,verified,normal
-5451,legs up,脚を上げる,ポーズ・姿勢,身体の配置,,[],verified,0,verified,verified,normal
+5451,legs up,両脚を上げる,ポーズ・姿勢,身体の配置,,[],verified,0,verified,verified,normal
 5452,legwear garter,ガーター,服装・装飾,下着,,[],verified,1,verified,verified,normal
 5454,lemon,レモン,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 5455,lemon slice,レモンスライス,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
@@ -4467,7 +4467,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 5977,midair,空中,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 5978,middle finger,中指を立てる,ポーズ・姿勢,手足の配置,,[],verified,0,verified,verified,normal
 5979,middle ring,中指の指輪,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
-5984,midriff,腹部,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
+5984,midriff,衣服から露出した腹部,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 5985,midriff peek,腹チラ,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 5986,midriff sarashi,腹部のさらし,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 5988,mihoyo,miHoYo,文字・記号,ロゴ・ブランド表記,,"[""ミホヨ""]",verified,0,verified,verified,normal
@@ -4491,11 +4491,11 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 6032,minecraft youtube,Minecraft実況動画,文字・記号,ロゴ・ブランド表記,,[],verified,0,verified,verified,normal
 6033,mini crown,ミニクラウン,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 6034,mini hat,ミニハット,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-6035,mini person,小人,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
+6035,mini person,周囲より極端に小さい人物,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 6036,mini top hat,ミニトップハット,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 6037,mini wings,小さな翼,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
-6039,miniboy,小人,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
-6040,minigirl,小人,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
+6039,miniboy,周囲より極端に小さい男の子,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
+6040,minigirl,周囲より極端に小さい女の子,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 6041,minigun,ミニガン,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 6042,minimalist,ミニマル,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 6043,miniskirt,ミニスカート,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -5984,7 +5984,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 7962,remote control,リモコン,家具・設備・物品,機械・装置,,[],verified,0,verified,verified,normal
 7963,removing jacket,ジャケットを脱ぐ,動作・接触,衣服への接触,,[],verified,1,verified,verified,normal
 7966,reptile girl,爬虫類の少女,生物・動植物,種族,,[],verified,0,verified,verified,normal
-7967,rerebrace,腕甲,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
+7967,rerebrace,上腕を守る腕甲,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
 7970,respirator,呼吸保護マスク,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
 7971,restaurant,レストラン,背景・場所,場所・室内外,,[],verified,0,verified,verified,normal
 7972,restrained,拘束された,状態・状況,状態・変化,,[],verified,2,verified,verified,normal
@@ -6684,7 +6684,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8938,soft lighting,柔らかな照明,光・演出,照明・光源,,[],verified,0,verified,verified,normal
 8939,soft serve,ソフトクリーム,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 8941,soldier,兵士,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
-8942,soles,靴底,服装・装飾,靴・履物,,[],verified,0,verified,verified,normal
+8942,soles,足裏,服装・装飾,靴・履物,,[],verified,0,verified,verified,normal
 8943,solid circle eyes,塗りつぶされた丸い目,顔・表情,目,,[],verified,0,verified,verified,normal
 8944,solid circle pupils,塗りつぶされた丸い瞳孔,顔・表情,目,,[],verified,0,verified,verified,normal
 8945,solid eyes,塗りつぶされた目,顔・表情,目,,[],verified,0,verified,verified,normal
@@ -6894,7 +6894,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9204,stitches,縫い目,服装・装飾,衣服の状態,,[],verified,0,verified,verified,normal
 9206,stockings,ストッキング,服装・装飾,下着,,[],verified,1,verified,verified,normal
 9207,stole,ストール,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-9208,stomach,腹部,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
+9208,stomach,へそ周辺の腹部,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 9209,stomach bulge,腹部の膨らみ,人物の特徴,身体部位・身体状態,,[],verified,3,verified,verified,normal
 9210,stomach cutout,腹部開きの服,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 9211,stomach tattoo,腹部のタトゥー,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
@@ -7682,7 +7682,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 10280,vaginal object insertion,膣への異物挿入,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 10281,valentine,バレンタインデー,背景・場所,天候・時間帯,,[],verified,0,verified,verified,normal
 10282,valkyrie,ヴァルキリー,生物・動植物,架空生物・モンスター,,[],verified,0,verified,verified,normal
-10283,vambraces,腕甲,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
+10283,vambraces,前腕を守る腕甲,服装・装飾,装備・防具,,[],verified,0,verified,verified,normal
 10284,vampire,吸血鬼,生物・動植物,種族,,[],verified,0,verified,verified,normal
 10285,vampire costume,吸血鬼の仮装,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 10286,van,バン（貨物用バン）,乗り物,陸上の乗り物,,[],verified,0,verified,verified,normal
