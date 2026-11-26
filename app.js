@@ -61,7 +61,7 @@
   const state = {
     all: [], filtered: [], page: 0, major: "", minor: "", query: "", queryTerms: [],
     classification: "all", sort: "index", searchTarget: "all", favoritesOnly: false, favorites: new Set(), polarity: new Map(),
-    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", undoHistory: [], redoHistory: [], restoringUndo: false, textEditUndoPending: { positive: false, negative: false }, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, escapeParentheses: false, spacesToUnderscores: false, showPromptLineBreaks: true, columnWidths: [30, 26, 210, 170, 130, 130, 34, 26], columnWidthMode: "desktop"
+    selected: new Map(), expressionLevels: new Map(), promptPositive: "", promptNegative: "", undoHistory: [], redoHistory: [], restoringUndo: false, textEditUndoPending: { positive: false, negative: false }, selectionRestored: false, columnFilters: { major: new Set(), level: new Set(), translation: new Set(), classification: new Set() }, sortDirection: "asc", activeScreen: "dictionary-screen", excludedMajorCategories: new Set(), excludedMinorCategories: new Set(), expandedMajorCategories: new Set(), editorModes: { positive: "bubble", negative: "bubble" }, escapeParentheses: false, spacesToUnderscores: false, showPromptLineBreaks: true, removeOutputLineBreaks: false, columnWidths: [30, 26, 210, 170, 130, 130, 34, 26], columnWidthMode: "desktop"
   };
   let skipLocationWrite = false;
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -915,7 +915,10 @@
       if (state.spacesToUnderscores) tag = tag.replace(/ +/g, "_");
       return { ...item, tag };
     });
-    return serializePromptTokens(tokens);
+    const output = serializePromptTokens(tokens);
+    return state.removeOutputLineBreaks
+      ? output.replace(/\s*,?\s*[\r\n]+\s*,?\s*/g, ", ").replace(/(?:,\s*)+$/, "")
+      : output;
   }
   let promptBubbleMenuRestore = null;
   let promptBubbleFocusRestore = null;
@@ -1795,7 +1798,8 @@
       selected: [...state.selected.keys()], polarity: [...state.polarity.entries()],
       promptPositive: state.promptPositive, promptNegative: state.promptNegative, editorModes: state.editorModes,
       escapeParentheses: state.escapeParentheses, spacesToUnderscores: state.spacesToUnderscores,
-      showPromptLineBreaks: state.showPromptLineBreaks
+      showPromptLineBreaks: state.showPromptLineBreaks,
+      removeOutputLineBreaks: state.removeOutputLineBreaks
     } });
   }
   function restoreBuilderState() {
@@ -1807,6 +1811,7 @@
         if (typeof saved.escapeParentheses === "boolean") state.escapeParentheses = saved.escapeParentheses;
         if (typeof saved.spacesToUnderscores === "boolean") state.spacesToUnderscores = saved.spacesToUnderscores;
         if (typeof saved.showPromptLineBreaks === "boolean") state.showPromptLineBreaks = saved.showPromptLineBreaks;
+        if (typeof saved.removeOutputLineBreaks === "boolean") state.removeOutputLineBreaks = saved.removeOutputLineBreaks;
         const rowsByKey = new Map(state.all.map(row => [keyOf(row), row]));
         if (Array.isArray(saved.selected)) saved.selected.forEach(key => {
           const row = rowsByKey.get(key);
@@ -1834,6 +1839,8 @@
     if (escapeParenthesesBox) escapeParenthesesBox.checked = state.escapeParentheses;
     const spacesToUnderscoresBox = $("#spaces-to-underscores");
     if (spacesToUnderscoresBox) spacesToUnderscoresBox.checked = state.spacesToUnderscores;
+    const removeOutputLineBreaksBox = $("#remove-output-line-breaks");
+    if (removeOutputLineBreaksBox) removeOutputLineBreaksBox.checked = state.removeOutputLineBreaks;
     const showPromptLineBreaksBox = $("#show-prompt-line-breaks");
     if (showPromptLineBreaksBox) showPromptLineBreaksBox.checked = state.showPromptLineBreaks;
     $("#positive-output").value = state.promptPositive;
@@ -2054,6 +2061,14 @@
         state.spacesToUnderscores = spacesToUnderscores.checked;
         saveBuilderState();
         renderEditor();
+      });
+    }
+    const removeOutputLineBreaks = $("#remove-output-line-breaks");
+    if (removeOutputLineBreaks) {
+      removeOutputLineBreaks.checked = state.removeOutputLineBreaks;
+      removeOutputLineBreaks.addEventListener("change", () => {
+        state.removeOutputLineBreaks = removeOutputLineBreaks.checked;
+        saveBuilderState();
       });
     }
     const showPromptLineBreaks = $("#show-prompt-line-breaks");
