@@ -91,7 +91,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 121,against glass,ガラスにもたれる,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 122,against railing,手すりにもたれる,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 123,against tree,木にもたれる,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
-124,against wall,壁にもたれる,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
+124,against wall,壁にもたれる,ポーズ・姿勢,基本姿勢,,[""wall lean""],verified,0,verified,verified,normal
 127,age comparison,年齢比較,構図・カメラ,構図・配置,,[],verified,0,verified,verified,normal
 128,age difference,年齢差,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
 129,age progression,加齢・成長後の姿,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
@@ -8372,7 +8372,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11173,ahegao spread,あへ顔で開脚するポーズ,ポーズ・姿勢,基本姿勢,,[],verified,4,verified,verified,normal
 11174,afterglow lying,余韻に浸って横たわるポーズ,ポーズ・姿勢,基本姿勢,,[],verified,3,verified,verified,normal
 11175,seductive kneel,誘惑的な膝立ち,ポーズ・姿勢,基本姿勢,,[],verified,2,verified,verified,normal
-11176,wall lean,壁にもたれる,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 11177,table sit spread,テーブルに座って開脚するポーズ,ポーズ・姿勢,基本姿勢,,[],verified,3,verified,verified,normal
 11178,chair reverse straddle,椅子に逆向きにまたがるポーズ,ポーズ・姿勢,基本姿勢,,[],verified,3,verified,verified,normal
 11179,bed edge hang,ベッドの端から垂れ下がるポーズ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
