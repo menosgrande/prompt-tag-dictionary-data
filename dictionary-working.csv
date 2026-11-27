@@ -606,7 +606,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 838,belt skirt,ベルトスカート,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 840,bench,ベンチ,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
 841,bendy straw,ベンディーストロー,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
-844,bent over,前かがみ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
+844,bent over,深く前屈み,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 845,bent over furniture,家具に手をついて前かがみになる,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 846,bento,お弁当,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 847,beret,ベレー帽,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
@@ -673,7 +673,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 913,bishoujo senshi sailor moon,美少女戦士セーラームーン,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
 914,bishoujo senshi sailor moon s,美少女戦士セーラームーンスーパー,背景・場所,自然・風景,,[],verified,0,verified,verified,normal
 915,bishounen,美少年,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
-918,biting,噛む,動作・接触,身体動作,,[],verified,0,verified,verified,normal
+918,biting,噛みつく,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 919,biting ear,耳噛み,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 920,biting glove,手袋をくわえる,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 921,biting own lip,唇を噛む,人物の特徴,人物属性,,"[""lip biting"",""biting lip""]",verified,0,verified,verified,normal
@@ -1462,7 +1462,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1782,chest tattoo,胸の上部のタトゥー,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 1783,chest tuft,胸元の毛束,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 1784,chestnut mouth,栗形の口,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
-1786,chewing,噛む,動作・接触,身体動作,,[],verified,0,verified,verified,normal
+1786,chewing,咀嚼する,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 1787,chewing gum,風船ガム,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 1790,chibi,ちびキャラ,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 1791,chibi inset,ちびキャラの小窓表示,構図・カメラ,構図・配置,,[],verified,0,verified,verified,normal
@@ -1586,7 +1586,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1936,clover,クローバー,生物・動植物,植物,,[],verified,0,verified,verified,normal
 1937,clover hair ornament,クローバーの髪飾り,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 1938,clover print,クローバープリント,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-1939,clown,道化師,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
+1939,clown,サーカスの道化師,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 1940,clown nose,ピエロの付け鼻,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 1941,clownfish,クマノミ,生物・動植物,動物,,[],verified,0,verified,verified,normal
 1943,club (shape),クラブ形（トランプのスート）,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
@@ -3731,7 +3731,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4646,humanoid robot,人型ロボット,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 4647,humiliation,屈辱,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
 4648,humping,腰を押し付ける,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-4649,hunched over,前かがみ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
+4649,hunched over,背中を丸めて前屈み,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 4650,hungry,空腹,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 4653,husband and wife,夫婦,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
 4654,hydrangea,アジサイ,生物・動植物,植物,,[],verified,0,verified,verified,normal
@@ -3867,7 +3867,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4903,jellyfish,クラゲ,生物・動植物,動物,,[],verified,0,verified,verified,normal
 4904,jersey,ジャージ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 4905,jersey maid,ジャージメイド,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-4908,jester,道化師,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
+4908,jester,宮廷道化師,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 4909,jester cap,道化師の帽子,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 4910,jetpack,ジェットパック,家具・設備・物品,機械・装置,,[],verified,0,verified,verified,normal
 4911,jewel under eye,目の下の宝石,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
