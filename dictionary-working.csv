@@ -2685,7 +2685,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3296,frog print,カエル柄,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 3297,frogtie,蛙縛り（フロッグタイ）,ポーズ・姿勢,身体の配置,,[],verified,0,verified,verified,normal
 3298,from above,上から見た構図,構図・カメラ,カメラアングル,,[],verified,0,verified,verified,normal
-3299,from behind,後ろから見た構図,構図・カメラ,視点・視線,,[],verified,0,verified,verified,normal
+3299,from behind,後ろから見た構図,構図・カメラ,視点・視線,,"[""back view""]",verified,0,verified,verified,normal
 3300,from below,下から見上げた構図,構図・カメラ,カメラアングル,,[],verified,0,verified,verified,normal
 3301,from outside,外側から見た構図,構図・カメラ,視点・視線,,[],verified,0,verified,verified,normal
 3302,from side,横から見た構図,構図・カメラ,視点・視線,,[],verified,0,verified,verified,normal
@@ -7384,8 +7384,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9891,torn wings,破れた翼,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 9892,torogao,恍惚とした表情（とろ顔）,顔・表情,顔・表情,,[],verified,2,verified,verified,normal
 9894,torpedo,魚雷,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
-9895,torpedo launcher,魚雷発射管,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
-9896,torpedo tubes,魚雷発射管,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
+9896,torpedo tubes,魚雷発射管,家具・設備・物品,武器,,"[""torpedo launcher""]",verified,0,verified,verified,normal
 9897,torso grab,胴体をつかむ,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 9898,torture,拷問,動作・接触,対人接触・動作,,[],verified,0,verified,verified,normal
 9908,towel,タオル,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
@@ -8910,7 +8909,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11741,office after hours,業務時間外のオフィス,状態・状況,時間・前後関係,,[],verified,0,verified,verified,normal
 11743,apocalypse survival sex,終末世界でのサバイバル中の性行為,状態・状況,状況・関係性,,[],verified,4,verified,verified,normal
 11744,front view,正面から,構図・カメラ,カメラアングル,,[],verified,0,verified,verified,normal
-11745,back view,後ろから見た構図,構図・カメラ,カメラアングル,,[],verified,0,verified,verified,normal
 11746,top view,真上から見た構図,構図・カメラ,カメラアングル,,[],verified,0,verified,verified,normal
 11747,overhead view,頭上から見下ろす視点,構図・カメラ,カメラアングル,,[],verified,0,verified,verified,normal
 11748,cross section,断面図,構図・カメラ,構図・配置,,[],verified,0,verified,verified,normal
