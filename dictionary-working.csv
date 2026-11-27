@@ -676,7 +676,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 918,biting,噛む,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 919,biting ear,耳噛み,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 920,biting glove,手袋をくわえる,動作・接触,身体動作,,[],verified,0,verified,verified,normal
-921,biting own lip,唇を噛む,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
+921,biting own lip,唇を噛む,人物の特徴,人物属性,,"[""lip biting"",""biting lip""]",verified,0,verified,verified,normal
 922,biwa lute,琵琶,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 924,black,黒,光・演出,色調・色彩,,[],verified,0,verified,verified,normal
 925,black apron,黒いエプロン,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -8206,7 +8206,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 10999,tired,疲れた顔,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 11000,dazed,放心した顔,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 11001,gasp,はっと息をのむ,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
-11002,lip biting,唇を噛む,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 11003,crying with eyes closed,目を閉じて泣く,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 11004,:d,笑顔の顔文字（:D）,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 11005,:o,驚きの顔文字（:O）,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
@@ -8713,7 +8712,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11533,orgasm face,絶頂時の表情,顔・表情,顔・表情,,[],verified,4,verified,verified,normal
 11534,rolled eyes,白目をむく,顔・表情,顔・表情,,[],verified,2,verified,verified,normal
 11535,heart shaped pupils,ハート形の瞳孔,顔・表情,顔・表情,,[],verified,2,verified,verified,normal
-11536,biting lip,唇を噛む,顔・表情,顔・表情,,[],verified,2,verified,verified,normal
 11537,seductive eyes,誘惑的な目つき,顔・表情,顔・表情,,[],verified,2,verified,verified,normal
 11538,half closed eyes,両目を半分閉じた状態,顔・表情,顔・表情,,[],verified,1,verified,verified,normal
 11539,crying tears of joy,嬉し涙を流す,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
