@@ -421,8 +421,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 618,backless leotard,背中の開いたレオタード,服装・装飾,衣服,,[],verified,1,verified,verified,normal
 619,backless outfit,背中の開いた服装,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 620,backless swimsuit,背中の開いた水着,服装・装飾,水着,,[],verified,1,verified,verified,normal
-621,backlight,逆光,光・演出,照明・光源,,[],verified,0,verified,verified,normal
-622,backlighting,逆光,光・演出,照明・光源,,[],verified,0,verified,verified,normal
+622,backlighting,逆光,光・演出,照明・光源,,"[""backlight""]",verified,0,verified,verified,normal
 623,backpack,リュック,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 624,backwards hat,後ろ向きにかぶった帽子,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 625,bacon,ベーコン,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
