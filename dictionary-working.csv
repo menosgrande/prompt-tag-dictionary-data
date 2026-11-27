@@ -575,7 +575,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 799,bear print,クマのプリント,生物・動植物,動物,,[],verified,0,verified,verified,normal
 800,bear tail,クマの尻尾,生物・動植物,動物,,[],verified,0,verified,verified,normal
 801,beard,ひげ,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
-802,beard stubble,無精ひげ,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
+802,beard stubble,ひげの剃り跡,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
 806,beautiful detailed eyes,繊細で美しい瞳,品質・ネガティブ,高品質・傑作,,[],verified,0,verified,verified,normal
 807,beckoning,手招き,動作・接触,手の動作,,[],verified,0,verified,verified,normal
 808,bed,ベッド,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
@@ -694,7 +694,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 937,black blindfold,黒い目隠し,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 938,black bodysuit,黒いボディスーツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 939,black border,黒枠,構図・カメラ,フレーミング,,[],verified,0,verified,verified,normal
-940,black bow,黒いリボン,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
+940,black bow,黒い蝶結び,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 941,black bowtie,黒い蝶ネクタイ,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 942,black bra,黒ブラジャー,服装・装飾,下着,,[],verified,3,verified,verified,normal
 943,black bridal gauntlets,黒いブライダルガントレット,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
@@ -808,8 +808,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1066,blood in hair,髪に付着した血,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
 1067,blood on arm,腕に付着した血,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 1068,blood on bandages,包帯に付着した血,服装・装飾,衣服の状態,,[],verified,0,verified,verified,normal
-1069,blood on breasts,胸に付着した血,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
-1070,blood on chest,胸に付着した血,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
+1069,blood on breasts,乳房に付着した血,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
+1070,blood on chest,胸部に付着した血,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 1071,blood on clothes,服に付着した血,服装・装飾,衣服の状態,,[],verified,0,verified,verified,normal
 1072,blood on face,顔に付着した血,顔・表情,顔の特徴,,[],verified,0,verified,verified,normal
 1073,blood on ground,地面に広がる血,背景・場所,空間・環境表現,,[],verified,0,verified,verified,normal
@@ -988,10 +988,10 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 1258,borrowed character,他の作者のオリジナルキャラクターを描く,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
 1259,borrowed clothes,借りた服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 1260,borrowed design,他の作者が考案した非公式デザインのファンアート,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
-1262,bottle,瓶,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
+1262,bottle,細口の瓶,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 1263,bottomless,下半身裸,服装・装飾,裸体・露出,,[],verified,3,verified,verified,normal
 1264,bouncing breasts,胸が揺れる,動作・接触,身体動作,,[],verified,2,verified,verified,normal
-1265,bound,緊縛,動作・接触,性的行為・接触,,[],verified,0,verified,verified,normal
+1265,bound,拘束された状態,動作・接触,性的行為・接触,,[],verified,0,verified,verified,normal
 1266,bound ankles,縛られた足首,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 1267,bound arms,腕を縛られた状態,状態・状況,状態・変化,,[],verified,2,verified,verified,normal
 1268,bound legs,拘束された脚,状態・状況,状態・変化,,[],verified,2,verified,verified,normal
@@ -3861,7 +3861,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4892,japanese clothes,和服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 4894,japanese flag,日本国旗,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
 4896,japari symbol,ジャパリパークのシンボル,文字・記号,記号・図形,,[],verified,0,verified,verified,normal
-4897,jar,瓶,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
+4897,jar,広口の瓶,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 4899,jealous,嫉妬,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 4902,jeans,ジーンズ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 4903,jellyfish,クラゲ,生物・動植物,動物,,[],verified,0,verified,verified,normal
@@ -6985,7 +6985,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9307,stroking own chin,自分の顎を撫でる,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 9308,strongman waist,たくましい腰,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 9309,struggling,もがく,動作・接触,身体動作,,[],verified,0,verified,verified,normal
-9310,stubble,無精ひげ,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
+9310,stubble,伸びかけのひげ,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 9311,stuck,身動きが取れない,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
 9312,stud earrings,スタッドピアス,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 9313,studded belt,スタッズベルト,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -8285,7 +8285,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11080,dildo,ディルド,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
 11081,anal beads,アナルビーズ,家具・設備・物品,道具,,[],verified,3,verified,verified,normal
 11082,egg vibrator,ローター,家具・設備・物品,機械・装置,,[],verified,3,verified,verified,normal
-11083,shibari,緊縛,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
+11083,shibari,縄を使った緊縛,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
 11084,bondage,拘束プレイ,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
 11085,maledom,男性優位プレイ,動作・接触,性的行為・接触,,[],verified,2,verified,verified,normal
 11086,cfnm,着衣の人物と裸の男性,動作・接触,性的行為・接触,,[],verified,3,verified,verified,normal
