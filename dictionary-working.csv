@@ -5501,12 +5501,12 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 7407,pokemon (anime),ポケモン（アニメ）,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 7408,pokemon (classic anime),ポケットモンスター（アニポケ第1シリーズ）,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 7409,pokemon (creature),ポケモン（クリーチャー）,生物・動植物,動物,,[],verified,0,verified,verified,normal
-7414,pokemon dppt (anime),ポケモンDPPT（アニメ）,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
+7414,pokemon the series: diamond and pearl,ポケモンDPPT（アニメ）,画風・描写,画風・表現様式,,"[""pokemon dppt (anime)""]",verified,0,verified,verified,normal
 7415,pokemon focus,ポケモン中心の構図,構図・カメラ,構図・配置,,[],verified,0,verified,verified,normal
 7425,pokemon on head,頭にポケモンを乗せる,ポーズ・姿勢,身体の配置,,[],verified,0,verified,verified,normal
 7426,pokemon on shoulder,肩に乗ったポケモン,ポーズ・姿勢,身体の配置,,[],verified,0,verified,verified,normal
-7432,pokemon sm (anime),ポケモンSM（アニメ）,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
-7436,pokemon xy (anime),ポケモンxy（アニメ）,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
+7432,pokemon the series: sun & moon,ポケモンSM（アニメ）,画風・描写,画風・表現様式,,"[""pokemon sm (anime)""]",verified,0,verified,verified,normal
+7436,pokemon the series: xy,ポケモンxy（アニメ）,画風・描写,画風・表現様式,,"[""pokemon xy (anime)""]",verified,0,verified,verified,normal
 7437,pokephilia,ポケモン性愛,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 7438,poker chip,ポーカーチップ,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 7439,poking,つつく,動作・接触,手の動作,,[],verified,0,verified,verified,normal
