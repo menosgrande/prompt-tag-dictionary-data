@@ -113,7 +113,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 154,airplane,飛行機,乗り物,航空機,,[],verified,0,verified,verified,normal
 155,airship,飛行船,乗り物,航空機,,[],verified,0,verified,verified,normal
 157,ajirogasa,網代笠,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
-158,AK-47,AK-47（エーケー・フォーティーセブン）,家具・設備・物品,武器,,"[""エーケー47"",""エーケーフォーティーセブン""]",verified,0,verified,verified,normal
+158,ak-47,AK-47（エーケー・フォーティーセブン）,家具・設備・物品,武器,,"[""エーケー47"",""エーケーフォーティーセブン"",""AK-47""]",verified,0,verified,verified,normal
 165,akanbe,あかんべえ,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 175,akeome,あけおめ,背景・場所,空間・環境表現,,[],verified,0,verified,verified,normal
 189,alarm clock,目覚まし時計,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
@@ -276,7 +276,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 397,aqua thighhighs,水色のニーハイソックス,服装・装飾,靴・履物,,[],verified,0,verified,verified,normal
 398,aqua trim,水色の縁取り,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 399,aquarium,水族館,背景・場所,場所・室内外,,[],verified,0,verified,verified,normal
-401,AR-15,AR-15（エーアール・フィフティーン）,家具・設備・物品,その他の物品,,"[""エーアール15"",""エーアールフィフティーン""]",verified,0,verified,verified,normal
+401,ar-15,AR-15（エーアール・フィフティーン）,家具・設備・物品,その他の物品,,"[""エーアール15"",""エーアールフィフティーン"",""AR-15""]",verified,0,verified,verified,normal
 402,arabian clothes,アラビアの服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 403,arachne,アラクネ,人物の特徴,人物属性,,[],verified,0,verified,verified,normal
 405,aran sweater,アランセーター,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -1832,7 +1832,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2198,cross-laced sleeves,編み上げ袖,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 2199,cross-laced slit,編み上げスリット,服装・装飾,肌の露出,,[],verified,2,verified,verified,normal
 2200,cross-laced top,編み上げトップス,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-2201,cross-section,断面,構図・カメラ,構図・配置,,[],verified,0,verified,verified,normal
+2201,cross-section,断面,構図・カメラ,構図・配置,,"[""cross section""]",verified,0,verified,verified,normal
 2202,cross-shaped pupils,十字形の瞳孔,顔・表情,目,,[],verified,0,verified,verified,normal
 2203,crossbow,クロスボウ,家具・設備・物品,武器,,[],verified,0,verified,verified,normal
 2204,crossdressing,異性装,服装・装飾,衣服,,[],verified,0,verified,verified,normal
@@ -3091,8 +3091,8 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 3830,gym storeroom,体育倉庫,背景・場所,建築・構造物,,[],verified,0,verified,verified,normal
 3831,gym uniform,体操服,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 3832,gymnastics,体操競技,動作・接触,身体動作,,[],verified,0,verified,verified,normal
-3833,H&K HK416,HK416（H&K製アサルトライフル）,家具・設備・物品,武器,,"[""HK416""]",verified,0,verified,verified,normal
-3834,H&K UMP,UMP（H&K製サブマシンガン）,家具・設備・物品,武器,,"[""UMP""]",verified,0,verified,verified,normal
+3833,h&k hk416,HK416（H&K製アサルトライフル）,家具・設備・物品,武器,,"[""HK416"",""H&K HK416""]",verified,0,verified,verified,normal
+3834,h&k ump,UMP（H&K製サブマシンガン）,家具・設備・物品,武器,,"[""UMP"",""H&K UMP""]",verified,0,verified,verified,normal
 3836,habit,癖,状態・状況,状況・関係性,,[],verified,0,verified,verified,normal
 3838,hachimaki,はちまき,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 3840,hadanugi dousa,片肌を脱いだ着こなし,服装・装飾,衣服の状態,,[],verified,0,verified,verified,normal
@@ -3373,7 +3373,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 4178,heart-shaped gem,ハート型の宝石,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 4179,heart-shaped lock,ハート型の錠前,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
 4180,heart-shaped pillow,ハート型の枕,家具・設備・物品,その他の物品,,[],verified,0,verified,verified,normal
-4181,heart-shaped pupils,ハート型の瞳孔,顔・表情,目,,[],verified,0,verified,verified,normal
+4181,heart-shaped pupils,ハート型の瞳孔,顔・表情,目,,"[""heart shaped pupils""]",verified,0,verified,verified,normal
 4182,heartbeat,鼓動,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 4185,heavy breathing,荒い息遣い,顔・表情,顔・表情,,"[""heavy breath""]",verified,0,verified,verified,normal
 4187,heckler & koch,ヘッケラー＆コッホ,文字・記号,ロゴ・ブランド表記,,[],verified,0,verified,verified,normal
@@ -6424,7 +6424,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8669,side-by-side,横並び,ポーズ・姿勢,対人配置,,[],verified,0,verified,verified,normal
 8670,side-tie bikini bottom,サイドリボンのビキニボトム,服装・装飾,水着,,[],verified,1,verified,verified,normal
 8671,side-tie leotard,サイドリボン付きレオタード,服装・装飾,衣服,,[],verified,1,verified,verified,normal
-8672,side-tie panties,サイド結びのパンティー,服装・装飾,下着,,[],verified,3,verified,verified,normal
+8672,side-tie panties,サイド結びのパンティー,服装・装飾,下着,,"[""side tie panties""]",verified,3,verified,verified,normal
 8673,side-tie peek,見せ紐（サイドの結び紐がのぞく）,服装・装飾,衣服,,[],verified,2,verified,verified,normal
 8674,side-tie shirt,サイドで結んだシャツ,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 8675,sideboob,横乳,人物の特徴,身体部位・身体状態,,[],verified,2,verified,verified,normal
@@ -6445,7 +6445,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8690,sideways glance,横目で見る,顔・表情,目,,[],verified,0,verified,verified,normal
 8691,sideways hat,横向きの帽子,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 8692,sideways mouth,横顔の側面に描かれた口,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
-8693,SIG Sauer,SIG Sauer（シグ・ザウエル）,家具・設備・物品,武器,,"[""シグザウエル"",""シグ・ザウアー""]",verified,0,verified,verified,normal
+8693,sig sauer,SIG Sauer（シグ・ザウエル）,家具・設備・物品,武器,,"[""シグザウエル"",""シグ・ザウアー"",""SIG Sauer""]",verified,0,verified,verified,normal
 8694,sigh,ため息,動作・接触,身体動作,,[],verified,0,verified,verified,normal
 8695,sign,看板,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 8696,signature,署名,品質・ネガティブ,ネガティブ・除外指定,,[],verified,0,verified,verified,normal
@@ -7334,7 +7334,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 9854,tooth necklace,歯のネックレス,服装・装飾,装飾品,,[],verified,0,verified,verified,normal
 9855,toothbrush,歯ブラシ,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 9856,top hat,シルクハット,服装・装飾,衣服,,[],verified,0,verified,verified,normal
-9857,top-down bottom-up,上体を伏せて尻を上げる体位（トップダウン・ボトムアップ）,ポーズ・姿勢,身体の配置,,"[""face down ass up"",""lying on stomach ass up""]",verified,4,verified,verified,normal
+9857,top-down bottom-up,上体を伏せて尻を上げる体位（トップダウン・ボトムアップ）,ポーズ・姿勢,身体の配置,,"[""face down ass up"",""lying on stomach ass up"",""top down bottom up""]",verified,4,verified,verified,normal
 9858,topknot,ちょんまげ,髪・頭部,髪・頭部,,[],verified,0,verified,verified,normal
 9859,topless,上半身裸,服装・装飾,衣服の状態,,[],verified,3,verified,verified,normal
 9860,topless male,上半身裸の男性,服装・装飾,衣服の状態,,[],verified,3,verified,verified,normal
@@ -8305,7 +8305,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11130,rapid piston missionary,高速ピストン正常位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11131,anal spooning,アナルセックスのスプーニング体位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11133,overhead leg press,頭上まで脚を押し上げる体位,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
-11134,top down bottom up,上半身を下げて尻を上げるポーズ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 11135,hands behind back,背中側に回した手,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 11136,arms raised,腕を上げたポーズ,ポーズ・姿勢,基本姿勢,,[],verified,0,verified,verified,normal
 11137,hand bra,手ブラ,ポーズ・姿勢,基本姿勢,,[],verified,3,verified,verified,normal
@@ -8560,7 +8559,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11419,chastity panties,貞操パンツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11420,open crotch,クロッチオープン,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11421,backless panties,バックレスパンツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
-11422,side tie panties,サイド紐パンツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
 11423,cum stained,精液で汚れた下着,服装・装飾,下着,,[],verified,4,verified,verified,normal
 11424,pussy juice soaked,愛液で濡れた下着,服装・装飾,下着,,[],verified,4,verified,verified,normal
 11425,bite mark panties,噛み跡のあるパンツ,服装・装飾,下着,,[],verified,3,verified,verified,normal
@@ -8662,7 +8660,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11531,tears and cum,涙と精液,人物の特徴,身体部位・身体状態,,[],verified,4,verified,verified,normal
 11532,full body fluids,全身に体液が付着した状態,人物の特徴,身体部位・身体状態,,[],verified,4,verified,verified,normal
 11533,orgasm face,絶頂時の表情,顔・表情,顔・表情,,[],verified,4,verified,verified,normal
-11535,heart shaped pupils,ハート形の瞳孔,顔・表情,顔・表情,,[],verified,2,verified,verified,normal
 11537,seductive eyes,誘惑的な目つき,顔・表情,顔・表情,,[],verified,2,verified,verified,normal
 11539,crying tears of joy,嬉し涙を流す,顔・表情,顔・表情,,[],verified,0,verified,verified,normal
 11540,glassy eyes,潤んだ目,顔・表情,顔・表情,,[],verified,1,verified,verified,normal
@@ -8850,7 +8847,6 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11744,front view,正面から,構図・カメラ,カメラアングル,,[],verified,0,verified,verified,normal
 11746,top view,真上から見た構図,構図・カメラ,カメラアングル,,[],verified,0,verified,verified,normal
 11747,overhead view,頭上から見下ろす視点,構図・カメラ,カメラアングル,,[],verified,0,verified,verified,normal
-11748,cross section,断面図,構図・カメラ,構図・配置,,[],verified,0,verified,verified,normal
 11749,internal,内部構造,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 11750,ovaries,卵巣,人物の特徴,身体部位・身体状態,,[],verified,0,verified,verified,normal
 11752,bubble filter,泡による隠し表現,光・演出,演出効果,,[],verified,0,verified,verified,normal
@@ -8908,4 +8904,4 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 11807,pre-ejaculate,射精前液,人物の特徴,身体部位・身体状態,,[],verified,4,verified,verified,normal
 11808,outdoor sex,屋外での性行為,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
 11809,office sex,オフィスでの性行為,背景・場所,場所・室内外,,[],verified,4,verified,verified,normal
-11662,onahole,人工膣,家具・設備・物品,道具,,"[""fleshlight"",""onahole"",""artificial vagina""]",verified,3,verified,verified,normal
+11662,onahole,人工膣,家具・設備・物品,道具,,"[""fleshlight"",""artificial vagina""]",verified,3,verified,verified,normal
