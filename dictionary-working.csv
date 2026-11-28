@@ -1951,7 +1951,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 2356,dawn,夜明け,背景・場所,天候・時間帯,,[],verified,0,verified,verified,normal
 2358,day,昼,背景・場所,天候・時間帯,,[],verified,0,verified,verified,normal
 2364,death,死,状態・状況,状態・変化,,[],verified,0,verified,verified,normal
-2366,debris,瓦礫,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
+2366,debris,飛散した破片,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 2367,decapitation,斬首,動作・接触,身体への接触,,[],verified,0,verified,verified,normal
 2369,decora,デコラ,画風・描写,画風・表現様式,,[],verified,0,verified,verified,normal
 2370,deep penetration,深い挿入,動作・接触,性的行為・接触,,[],verified,4,verified,verified,normal
@@ -6089,7 +6089,7 @@ index,tag,ja,major,minor,detail,aliases_json,translation_status,ero_level,ero_re
 8106,rubber duck,ラバーダック,家具・設備・物品,日用品,,[],verified,0,verified,verified,normal
 8107,rubber gloves,ゴム手袋,服装・装飾,衣服,,[],verified,0,verified,verified,normal
 8108,rubbing eyes,目をこする,顔・表情,目,,[],verified,0,verified,verified,normal
-8109,rubble,瓦礫,背景・場所,空間・環境表現,,[],verified,0,verified,verified,normal
+8109,rubble,地面に散乱した瓦礫,背景・場所,空間・環境表現,,[],verified,0,verified,verified,normal
 8111,rudder footwear,舵付き靴,服装・装飾,靴・履物,,[],verified,0,verified,verified,normal
 8112,ruffling hair,髪をくしゃくしゃにする,動作・接触,手の動作,,[],verified,0,verified,verified,normal
 8113,rug,ラグ,家具・設備・物品,家具,,[],verified,0,verified,verified,normal
